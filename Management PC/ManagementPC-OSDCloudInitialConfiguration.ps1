@@ -90,7 +90,7 @@ Import-Module -Name OSDeploy -Force
 
 Write-Host "Installation and Import process of neccessary PowerShell Modules Completed." -ForegroundColor Green
 
-Write-Host "Accessing GitHub Repo from OSDCloudCline to download User Profile Backup and Restore utility, Windows SDK, ADK and PE ADK Add-On files..." -ForegroundColor Cyan
+Write-Host "Accessing OSD Cloud\User Profile Backup Restore GitHub Repo from OSDCloudCline to download User Profile Backup and Restore utility..." -ForegroundColor Cyan
 Write-Host
 Write-Host 
 Write-Host "Processing and Downloading: User Profile Backup and Restpre..." -ForegroundColor Cyan
@@ -100,6 +100,7 @@ $UPBROrgFile = "C:\downloads\User%20Profile%20Backup%20and%20Restore.exe"
 $UPBRNewName = "C:\downloads\UPBR.exe"
 Rename-Item -Path $UPBROrgFile -NewName $UPBRNewName
 
+Write-Host "Accessing OSD Cloud\OS Kits GitHub Repo from OSDCloudCline to download Windows SDK, ADK and PE ADK Add-On files..." -ForegroundColor Cyan
 Write-Host "Processing and Downloading: Windows 11 22H2 SDK Setup File..." -ForegroundColor Cyan
 $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
 Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe' -DestinationDirectory "C:\downloads"
