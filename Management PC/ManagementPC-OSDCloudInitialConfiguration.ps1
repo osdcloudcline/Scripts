@@ -99,6 +99,7 @@ Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%
 $UPBROrgFile = "C:\downloads\User%20Profile%20Backup%20and%20Restore.exe"
 $UPBRNewName = "C:\downloads\UPBR.exe"
 Rename-Item -Path $UPBROrgFile -NewName $UPBRNewName
+Copy-Item -Path $UPBRNewName -Destination "$env:username\Desktop"
 
 Write-Host "Accessing OSD Cloud\OS Kits GitHub Repo from OSDCloudCline to download Windows SDK, ADK and PE ADK Add-On files..." -ForegroundColor Cyan
 Write-Host "Processing and Downloading: Windows 11 22H2 SDK Setup File..." -ForegroundColor Cyan
