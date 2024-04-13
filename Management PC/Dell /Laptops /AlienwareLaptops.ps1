@@ -229,6 +229,11 @@ Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\Dell\Alienware\Storage"
 Write-Host "Integrating VMWare ESXI Drivers into OSDCloud..." -ForegroundColor Green
 Edit-OSDCloudWinPE -DriverPath "C:\Drivers\OSDCloud\VMWare\ESXI"
 
+Write-Host "Changing OSDCloud wallpaper..." -ForegroundColor Green
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Wallpaper/winre-osdcloud.jpg"
+Save-WebFile -SourceUrl $OSDCloudWallpaperURL -DestinationDirectory $OSDCloudGHdownloads
+Edit-OSDCloudWinPE -Wallpaper "$OSDCloudGHdownloads\winre-osdcloud.jpg"
+
 Write-Host "Integrating VBS Scripting Support into OSDCloud..." -ForegroundColor Green
 $VBSName1 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~~.cab"
 $VBSName2 = "Microsoft-Windows-VBSCRIPT-FoD-Package~31bf3856ad364e35~amd64~en-us~.cab"
@@ -255,6 +260,8 @@ Write-Host "Processing Item: $VBSName4..."
 Add-WindowsPackage -Path $mountdir -PackagePath $VBS4
 
 Get-OSDCloudDismount
+
+New-OSDCloudISO
 
 Stop-Transcript
 
