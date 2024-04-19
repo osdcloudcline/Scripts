@@ -18,7 +18,8 @@ Write-Host " 5. OSD Cloud - Initial Setup and Custimizations - ASUS Laptops"
 Write-Host " 6. OSD Cloud - Initial Setup and Custimizations - Acer Laptops"
 Write-Host " 7. OSD Cloud - Initial Setup and Custimizations - Lenovo Laptops"
 Write-Host " 8. OSD Cloud - Initial Setup and Custimizations - ESXI VMs"
-Write-Host " 9. Exit PowerShell"
+Write-Host " 9. OSD Cloud - Initial Setup and Custimizations - MS Surface Devices"
+Write-Host " 10. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -29,3 +30,42 @@ do
         $DellLaptopsOSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1"
         Invoke-Expression $($DellLaptopsOSDCloudConfigScript.Content)
         }
+  '2' { cls
+        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($DellDesktopsOSDCloudConfigScript.Content)
+        }
+  '3' { cls
+        $CustomPCOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($CustomPCOSDCloudConfigScript.Content)
+        }
+  '4' { cls
+        $HPLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($HPLaptopsOSDCloudConfigScript.Content)
+        }
+  '5' { cls
+        $ASUSLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($ASUSLaptopsOSDCloudConfigScript.Content)
+        }
+  '6' { cls
+        $AcerLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($AcerLaptopsOSDCloudConfigScript.Content)
+        }
+  '7' { cls
+        $LenovoLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($LenovoLaptopsOSDCloudConfigScript.Content)
+        }
+  '8' { cls
+         $ESXIVMOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($ESXIVMOSDCloudConfigScript.Content)
+        }
+  '9' { cls
+        $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
+        }
+   '10'{exit}
+    }
+    }
+    until ($selection -eq '10'){}
+    }
+
+    Show-MainMenu
