@@ -18,3 +18,22 @@ $mountdir = Read-Host -Prompt 'Please provide mount directory'
 Dismount-WindowsImage -Path $mountdir -Save
 
 }
+
+
+#######################################################################################
+####               VBS SCRIPT SUPPORT URL                             #################
+#######################################################################################
+
+$VBSScriptSupport_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Scripting%20Support/VBScriptCABFiles.zip"
+
+#######################################################################################
+###########         OSDCloud VBS Script EXTRACTION LOCATION            ################
+#######################################################################################
+
+$OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
+
+#######################################################################################
+###########         OSDCloud ESXI Drivers EXTRACTION LOCATION            ##############
+#######################################################################################
+
+$OSDCloudESXI_Extract = "C:\Drivers\OSDCloud\ESXI"
