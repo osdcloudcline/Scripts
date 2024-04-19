@@ -23,35 +23,35 @@ Dismount-WindowsImage -Path $mountdir -Save
 #### DELL G-SERIES NETWORK DRIVER EXTRACTION LOCATIONS ################################
 #######################################################################################
 
-$GSeriesOSDCloudAPM_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Dell Airplane Mode"
+$GSeriesOSDCloudAPM_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Dell Airplane Mode"
 
-$GSeriesOSDCloudIntelDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Intel\NIC1"
-
-
-$GSeriesOSDCloudKillerNICDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\NIC1"
-$GSeriesOSDCloudKillerNICDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\NIC2"
-
-$GSeriesOSDCloudKillerBTDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\BT1"
-$GSeriesOSDCloudKillerBTDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\BT2"
+$GSeriesOSDCloudIntelDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Intel\NIC1"
 
 
-$GSeriesOSDCloudKillerWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\WiFi1"
-$GSeriesOSDCloudKillerWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\WiFi2"
-$GSeriesOSDCloudKillerWiFiDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\WiFi3"
-$GSeriesOSDCloudKillerWiFiDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Killer\WiFi4"
+$GSeriesOSDCloudKillerNICDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\NIC1"
+$GSeriesOSDCloudKillerNICDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\NIC2"
 
-$GSeriesOSDCloudMediaTekBTDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\MediaTek\BT"
-$GSeriesOSDCloudMediaTekWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\MediaTek\WiFi"
+$GSeriesOSDCloudKillerBTDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\BT1"
+$GSeriesOSDCloudKillerBTDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\BT2"
 
-$GSeriesOSDCloudQualcommWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Qualcomm\BTWiFi1"
 
-$GSeriesOSDCloudRealtekDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Network\Realtek\NIC1"
+$GSeriesOSDCloudKillerWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\WiFi1"
+$GSeriesOSDCloudKillerWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\WiFi2"
+$GSeriesOSDCloudKillerWiFiDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\WiFi3"
+$GSeriesOSDCloudKillerWiFiDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Killer\WiFi4"
+
+$GSeriesOSDCloudMediaTekBTDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\MediaTek\BT"
+$GSeriesOSDCloudMediaTekWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\MediaTek\WiFi"
+
+$GSeriesOSDCloudQualcommWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Qualcomm\BTWiFi1"
+
+$GSeriesOSDCloudRealtekDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Network\Realtek\NIC1"
 
 #######################################################################################
 #### DELL G-SERIES STORAGE DRIVER EXTRACTION LOCATIONS ###############################
 #######################################################################################
 
-$GSeriesOSDCloudIRSTDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\G-Series\Storage\IRST"
+$GSeriesOSDCloudIRSTDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\Storage\IRST"
 
 #######################################################################################
 ####               VBS SCRIPT SUPPORT URL                             #################
