@@ -31,7 +31,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 
 
 #######################################################################################
-#### DELL INSPIRON 7000 SERIES NETWORK DRIVER DL URLLOCATIONS      ####################
+#### DELL INSPIRON 7000 SERIES NETWORK DRIVER DL URL LOCATIONS      ###################
 #######################################################################################
 
 
@@ -46,7 +46,7 @@ Dismount-WindowsImage -Path $mountdir -Save
 
 
 #######################################################################################
-#### DELL INSPIRON 7000 SERIES STORAGE DRIVER DL URLLOCATIONS      ####################
+#### DELL INSPIRON 7000 SERIES STORAGE DRIVER DL URL LOCATIONS      ###################
 #######################################################################################
 
 
