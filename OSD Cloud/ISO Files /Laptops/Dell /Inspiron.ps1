@@ -35,12 +35,25 @@ $Inspiron3000SeriesRealtekWiFiURL = ""
 #### DELL INSPIRON 5000 SERIES NETWORK DRIVER DL URL LOCATIONS     ####################
 #######################################################################################
 
+$Inspiron5000SeriesIntelWiFiURL = ""
 
+$Inspiron5000SeriesKillerBTURL = ""
+
+$Inspiron5000SeriesQualcommWiFiURL = ""
+
+$Inspiron5000SeriesRealtekWiFiURL = ""
 
 #######################################################################################
 #### DELL INSPIRON 7000 SERIES NETWORK DRIVER DL URL LOCATIONS      ###################
 #######################################################################################
 
+$Inspiron7000SeriesIntelWiFiURL = ""
+
+$Inspiron7000SeriesKillerBTURL = ""
+
+$Inspiron7000SeriesQualcommWiFiURL = ""
+
+$Inspiron7000SeriesRealtekWiFiURL = ""
 
 
 #######################################################################################
@@ -53,38 +66,65 @@ $Inspiron3000SeriesStorageURL = ""
 #### DELL INSPIRON 5000 SERIES STORAGE DRIVER DL URL LOCATIONS     ####################
 #######################################################################################
 
+$Inspiron5000SeriesStorageURL = ""
 
 #######################################################################################
 #### DELL INSPIRON 7000 SERIES STORAGE DRIVER DL URL LOCATIONS      ###################
 #######################################################################################
 
+$Inspiron7000SeriesStorageURL = ""
 
 #######################################################################################
 #### DELL INSPIRON 3000 SERIES NETWORK DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
 
+$Inspiron3000SeriesIntelWiFiExtract = ""
+
+$Inspiron3000SeriesKillerBTExtract = ""
+
+$Inspiron3000SeriesQualcommWiFiExtract = ""
+
+$Inspiron3000SeriesRealtekWiFiExtract = ""
 
 #######################################################################################
 #### DELL INSPIRON 5000 SERIES NETWORK DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
 
+$Inspiron5000SeriesIntelWiFiExtract = ""
+
+$Inspiron5000SeriesKillerBTExtract = ""
+
+$Inspiron5000SeriesQualcommWiFiExtract = ""
+
+$Inspiron5000SeriesRealtekWiFiExtract = ""
 
 
 #######################################################################################
 #### DELL INSPIRON 7000 SERIES NETWORK DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
 
+$Inspiron7000SeriesIntelWiFiExtract = ""
+
+$Inspiron7000SeriesKillerBTExtract = ""
+
+$Inspiron7000SeriesQualcommWiFiExtract = ""
+
+$Inspiron7000SeriesRealtekWiFiExtract = ""
 
 #######################################################################################
 #### DELL INSPIRON 3000 SERIES STORAGE DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
 
+$Inspiron3000SeriesStorageURL = ""
 
 #######################################################################################
 #### DELL INSPIRON 5000 SERIES STORAGE DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
 
+$Inspiron5000SeriesStorageURL = ""
 
 #######################################################################################
 #### DELL INSPIRON 7000 SERIES STORAGE DRIVER EXTRACTION LOCATIONS ####################
 #######################################################################################
+
+$Inspiron7000SeriesStorageURL = ""
