@@ -37,3 +37,24 @@ $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
 #######################################################################################
 
 $OSDCloudESXI_Extract = "C:\Drivers\OSDCloud\ESXI"
+
+#######################################################################################
+####               VMWare ESXI DRIVER URLS                            #################
+#######################################################################################
+
+$OSDCloudESXIURL = "https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/Network%20and%20Storage%20/VMWare/ESXIDrivers.zip"
+
+#######################################################################################
+####               OSDCloud PE Wallpaper URL                            #################
+#######################################################################################
+
+$OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Wallpaper/winre-osdcloud.jpg"
+
+
+#######################################################################################
+####            OSDCloud Downloads, ESXI and DELL GITHUB DOWNLOADS      ######
+#######################################################################################
+
+$GHGSeriesdownloads = "C:\Drivers\OSDCloud\Dell\G-Series\GitHub\downloads"
+$VMGHdownloads = "C:\Drivers\OSDCloud\VMWare\ESXI\GitHub\downloads"
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
