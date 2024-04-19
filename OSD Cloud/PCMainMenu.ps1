@@ -19,7 +19,8 @@ Write-Host " 6. OSD Cloud - Initial Setup and Custimizations - Acer Laptops"
 Write-Host " 7. OSD Cloud - Initial Setup and Custimizations - Lenovo Laptops"
 Write-Host " 8. OSD Cloud - Initial Setup and Custimizations - ESXI VMs"
 Write-Host " 9. OSD Cloud - Initial Setup and Custimizations - MS Surface Devices"
-Write-Host " 10. Exit PowerShell"
+Write-Host " 10. OSD Cloud Downloads"
+Write-Host " 11. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -62,7 +63,11 @@ do
         $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
-   '10'{exit}
+  '10' { cls
+        $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
+        Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
+        }
+   '11'{exit}
     }
     }
     until ($selection -eq '10'){}
