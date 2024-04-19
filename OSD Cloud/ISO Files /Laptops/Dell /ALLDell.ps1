@@ -45,16 +45,23 @@ $OSDCloudESXI_Extract = "C:\Drivers\OSDCloud\ESXI"
 $OSDCloudESXIURL = "https://github.com/osdcloudcline/OSDCloudDrivers/raw/main/Network%20and%20Storage%20/VMWare/ESXIDrivers.zip"
 
 #######################################################################################
-####               OSDCloud PE Wallpaper URL                            #################
+####               OSDCloud PE Wallpaper URL                            ###############
 #######################################################################################
 
 $OSDCloudWallpaperURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Wallpaper/winre-osdcloud.jpg"
 
 
 #######################################################################################
-####            OSDCloud Downloads, ESXI and DELL GITHUB DOWNLOADS      ######
+####            OSDCloud Downloads, ESXI and DELL GITHUB DOWNLOADS               ######
 #######################################################################################
 
-$GHGSeriesdownloads = "C:\Drivers\OSDCloud\Dell\G-Series\GitHub\downloads"
+$GHAlienwaredownloads = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\GitHub\downloads"
+$GHGSeriesdownloads = "C:\Drivers\OSDCloud\Dell\Laptops\G-Series\GitHub\downloads"
+$GHInspirondownloads = "C:\Drivers\OSDCloud\Dell\Laptops\Inspiron\GitHub\downloads"
+$GHVostrodownloads = "C:\Drivers\OSDCloud\Dell\Laptops\Vostro\GitHub\downloads"
+$GHGLatitudedownloads = "C:\Drivers\OSDCloud\Dell\Laptops\Latitude\GitHub\downloads"
+$GHXPSdownloads = "C:\Drivers\OSDCloud\Dell\Laptops\XPS\GitHub\downloads"
+
 $VMGHdownloads = "C:\Drivers\OSDCloud\VMWare\ESXI\GitHub\downloads"
+
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
