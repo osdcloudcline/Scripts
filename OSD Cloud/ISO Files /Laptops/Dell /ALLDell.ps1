@@ -65,3 +65,40 @@ $GHXPSdownloads = "C:\Drivers\OSDCloud\Dell\Laptops\XPS\GitHub\downloads"
 $VMGHdownloads = "C:\Drivers\OSDCloud\VMWare\ESXI\GitHub\downloads"
 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+
+#######################################################################################
+#### DELL ALIENWARE NETWORK DRIVER EXTRACTION LOCATIONS ###############################
+#######################################################################################
+
+$AWOSDCloudAPM_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Dell Airplane Mode"
+
+$AWOSDCloudIntelDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Intel\NIC1"
+$AWOSDCloudIntelDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Intel\NIC2"
+$AWOSDCloudIntelDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Intel\NIC3"
+
+$AWOSDCloudKillerNICDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\NIC1"
+$AWOSDCloudKillerNICDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\NIC2"
+$AWOSDCloudKillerNICDrivers3A_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\NIC3A"
+$AWOSDCloudKillerNICDrivers3B_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\NIC3B"
+$AWOSDCloudKillerNICDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\NIC4"
+
+$AWOSDCloudKillerWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\WiFi1"
+$AWOSDCloudKillerWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\WiFi2"
+$AWOSDCloudKillerWiFiDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\WiFi3"
+$AWOSDCloudKillerWiFiDrivers4_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\WiFi4"
+$AWOSDCloudKillerWiFiDrivers5_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Killer\WiFi5"
+
+$AWOSDCloudMediaTekNICDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\MediaTek\NIC1"
+$AWOSDCloudMediaTekNICDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\MediaTek\NIC2"
+
+$AWOSDCloudQualcommWiFiDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Qualcomm\WiFi1"
+$AWOSDCloudQualcommWiFiDrivers2_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Qualcomm\WiFi2"
+$AWOSDCloudQualcommWiFiDrivers3_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Qualcomm\WiFi3"
+
+$AWOSDCloudRealtekDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Network\Realtek\NIC1"
+
+#######################################################################################
+#### DELL ALIENWARE STORAGE DRIVER EXTRACTION LOCATIONS ###############################
+#######################################################################################
+
+$AWOSDCloudIRSTDrivers1_Extract = "C:\Drivers\OSDCloud\Dell\Laptops\Alienware\Storage\IRST"
