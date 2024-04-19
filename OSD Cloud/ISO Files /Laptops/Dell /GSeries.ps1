@@ -66,7 +66,7 @@ $VBSScriptSupport_URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Scri
 $OSDCloudVBS_Extract = "C:\OSDCloud\GitHub\downloads\VBSScript"
 
 #######################################################################################
-###########         OSDCloud ESXI Drivers EXTRACTION LOCATION            ################
+###########         OSDCloud ESXI Drivers EXTRACTION LOCATION            ##############
 #######################################################################################
 
 $OSDCloudESXI_Extract = "C:\Drivers\OSDCloud\ESXI"
