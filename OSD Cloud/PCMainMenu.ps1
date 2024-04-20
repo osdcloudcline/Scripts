@@ -71,7 +71,7 @@ do
 '11' {cls
       $sfc = "C:\Windows\System32\sfc.exe"
       Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-      Start-Process -Path $sfc -ArgumentList "/scannow"
+      Start-Process -FilePath $sfc -ArgumentList "/scannow"
       pause
     }
    '11'{exit}
