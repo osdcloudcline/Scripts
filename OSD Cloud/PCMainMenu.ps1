@@ -75,6 +75,10 @@ do
       Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
       Start-Process -FilePath $sfc -ArgumentList "/scannow"
       pause
+      $dism = "C:\Windows\System32\dism.exe"
+      Write-Host "Repairing computer ..." -ForegroundColor Cyan
+      Start-Process -FilePath $dism -ArgumentList "/online, /restorehealth"
+      exit
     }
 '12'{exit}
     }
