@@ -19,6 +19,11 @@ Dismount-WindowsImage -Path $mountdir -Save
 
 }
 
+Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck 
+Import-Module -Name OSD -Force
+
 #######################################################################################
 #### DELL G-SERIES NETWORK DRIVER EXTRACTION LOCATIONS ################################
 #######################################################################################
