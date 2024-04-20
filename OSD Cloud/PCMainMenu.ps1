@@ -67,7 +67,7 @@ do
   '10' { cls
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
-        Show-MainMenu
+        
         }
 '11' {cls
       $sfc = "C:\Windows\System32\sfc.exe"
