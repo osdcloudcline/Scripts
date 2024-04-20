@@ -65,7 +65,7 @@ do
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
   '10' { cls
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest ""
+        $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
 '11' {cls
