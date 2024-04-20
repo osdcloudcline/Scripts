@@ -74,10 +74,10 @@ do
       Start-Process -FilePath "sfc.exe" -ArgumentList "/scannow"
       pause
     }
-   '11'{exit}
+   '12'{exit}
     }
     }
-    until ($selection -eq '10'){}
+    until ($selection -eq '12'){}
     }
 
     Show-MainMenu
