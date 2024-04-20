@@ -20,7 +20,8 @@ Write-Host " 7. OSD Cloud - Initial Setup and Custimizations - Lenovo Laptops"
 Write-Host " 8. OSD Cloud - Initial Setup and Custimizations - Virtual Machines"
 Write-Host " 9. OSD Cloud - Initial Setup and Custimizations - MS Surface Devices"
 Write-Host " 10. OSD Cloud Downloads"
-Write-Host " 11. Exit PowerShell"
+Write-Host " 11. System Maintenance"
+Write-Host " 12. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -67,6 +68,11 @@ do
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest ""
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
+'11' {cls
+      $sfc = "C:\Windows\System32\sfc.exe"
+      Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
+      Start-Process -Path $sfc -ArgumentList "/scannow"
+    }
    '11'{exit}
     }
     }
