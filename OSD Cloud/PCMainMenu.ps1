@@ -65,10 +65,10 @@ do
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
   '10' { cls
-        Start-Transcript "C:\Logs\OSDCloudDL.log"
+        
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
-        Stop-Transcript
+        Show-MainMenu
         }
 '11' {cls
       $sfc = "C:\Windows\System32\sfc.exe"
