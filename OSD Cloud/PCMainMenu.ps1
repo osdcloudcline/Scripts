@@ -75,10 +75,7 @@ do
       Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
       Start-Process -FilePath $sfc -ArgumentList "/scannow"
       pause
-      $dism = "C:\Windows\System32\dism.exe"
-      Write-Host "Repairing computer ..." -ForegroundColor Cyan
-      Start-Process -FilePath $dism -ArgumentList "/online, /restorehealth"
-      exit
+      Get-RepairHealth
     }
 '12'{exit}
     }
@@ -86,4 +83,12 @@ do
     until ($selection -eq '12'){}
     }
 
+Function Get-RepairHealth(){
+
+  $dism = "C:\Windows\System32\dism.exe"
+      Write-Host "Repairing computer ..." -ForegroundColor Cyan
+      Start-Process -FilePath $dism -ArgumentList "/online, /restorehealth"
+      exit
+      }
+      
     Show-MainMenu
