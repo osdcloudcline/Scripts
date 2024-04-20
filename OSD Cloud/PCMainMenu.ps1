@@ -71,10 +71,10 @@ do
 '11' {cls
       $sfc = "C:\Windows\System32\sfc.exe"
       Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-      Start-Process -FilePath "sfc.exe" -ArgumentList "/scannow"
+      Start-Process -FilePath $sfc -ArgumentList "/scannow"
       pause
     }
-   '12'{exit}
+'12'{exit}
     }
     }
     until ($selection -eq '12'){}
