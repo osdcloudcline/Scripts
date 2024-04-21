@@ -364,6 +364,7 @@ $app53 = "Driver Booster"
 $app54 = "Windows 22H2 SDK"
 $app55 = "Windows 22H2 ADK"
 $app56 = "Windows 22H2 PE Add-On"
+$app57 = "Microsoft Office 2021 LTSC"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -506,4 +507,14 @@ Write-Host "Installing $app56 on $env:computername
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
-
+Write-Host "Acquiring $app57 from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
+$Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+$Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+$Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+$Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
