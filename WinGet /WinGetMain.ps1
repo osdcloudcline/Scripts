@@ -11,15 +11,16 @@ Function Show-MainMenu{
 Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. WinGet - Install System Software"
-Write-Host " 2. Winget - Install Standard Software Configuration"
-Write-Host " 3. Winget - Install Advanced Software Configuration"
-Write-Host " 4. Winget - Install Corporate Software Configuration"
-Write-Host " 5. Winget - Install VDI Software Configuration"
-Write-Host " 6. Winget - Install Management PC Software Configuration"
-Write-Host " 7. Winget - Install Honeypot Configuration"
-Write-Host " 8. Winget - Upgrade Installed Software" 
+Write-Host " 2. WinGet - Install Standard Software Configuration"
+Write-Host " 3. WinGet - Install Advanced Software Configuration"
+Write-Host " 4. WinGet - Install Corporate Software Configuration"
+Write-Host " 5. WinGet - Install VDI Software Configuration"
+Write-Host " 6. WinGet - Install Management PC Software Configuration"
+Write-Host " 7. WinGet - Install Honeypot Configuration"
+Write-Host " 8. WinGet - Individual Install Scripts"
+Write-Host " 9. WinGet - Upgrade Software" 
 
-Write-Host " 9. Exit PowerShell"
+Write-Host " 10. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
