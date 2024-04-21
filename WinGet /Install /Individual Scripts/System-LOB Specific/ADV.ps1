@@ -55,6 +55,10 @@ $app25ver = "Version: 1.19.10302.0"
 $app26 = "Microsoft Windows Powershell"
 $app26ver = "Version: 7.4.1.0"	
 
+Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
 
 Write-Host "Installing: $app1, $app1ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id  Microsoft.DotNet.Runtime.3_1 --exact --accept-source-agreements --accept-source-agreements --force
@@ -142,11 +146,32 @@ Write-Host "Finished Installing System related software..." -ForegroundColor Yel
 
 $app27 = "Google Chrome for Enterprise"
 $app28 = "Mozilla Firefox"
+$app29 = "Google Drive"
+$app30 = "Nextcloud Desktop Client"
+$app31 = "DropBox"
+$app32 = "Microsoft OneDrive"
+$app33 = "User Profile Backup and Restore"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing Web Browser Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app27 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing: $app28 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app30 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app31 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Nextcloud.NextcloudDesktop --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app32 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app33 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
