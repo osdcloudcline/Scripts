@@ -60,7 +60,7 @@ do
         }
   '9' { cls
         $WinGetMainMenuScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1"
-        Invoke-Expression $($WinGetMainMenuScript.Content)
+        
         }
 '10'{exit}
     }
