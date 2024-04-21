@@ -516,7 +516,7 @@ Write-Host "Installing $app56 on $env:computername -ForegroundColor Cyan
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
-Write-Host "Acquiring $app57 setup and configuration files from OSDCloudCline GitHub OSDCloud\Software repository...." -ForegroundColor Cyan 
+Write-Host "Acquiring $app57 setup and configuration files - OSDCloudCline GitHub OSDCloud\Software repository...." -ForegroundColor Cyan 
 $OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
 $Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml'
 $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe'
@@ -528,10 +528,10 @@ Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGH
 Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 
-Write-Host "Downloading $app57 off of Microsoft Office CDN...." -ForegroundColor Cyan 
+Write-Host "Downloading $app57 - Microsoft Office CDN...." -ForegroundColor Cyan 
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd'
 Invoke-Expression $($Office2021SetupDLCMDUrl.Content)
 
-Write-Host "Installing $app57 off of Microsoft Office CDN...." -ForegroundColor Cyan 
+Write-Host "Installing $app57 -  Microsoft Office CDN...." -ForegroundColor Cyan 
 $Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
 Invoke-Expression $($Office2021SetupCMDUrl.Content)
