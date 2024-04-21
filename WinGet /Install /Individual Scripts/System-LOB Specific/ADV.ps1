@@ -139,3 +139,14 @@ Write-Host "Finished Installing System related software..." -ForegroundColor Yel
 ####################################################################
 ### ADVANCED SYSTEM SOFTWARE VARIABLES AND INSTALL             #####
 ####################################################################
+
+$app27 = "Google Chrome for Enterprise"
+$app28 = "Mozilla Firefox"
+
+Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app27 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app28 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
