@@ -154,7 +154,7 @@ $app33 = "User Profile Backup and Restore"
 $app34 = "FileZilla"
 $app35 = "PuTTy"
 $app36 = "WinSCP"
-
+$app37 = "Steam"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -196,3 +196,10 @@ winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architectur
 
 Write-Host "Installing: $app36 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
+
+
+# Gaming Software
+Write-Host "Installing Gaming Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app37 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
