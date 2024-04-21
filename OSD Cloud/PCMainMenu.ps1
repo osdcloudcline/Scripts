@@ -21,7 +21,8 @@ Write-Host " 8. OSD Cloud - Initial Setup and Custimizations - Virtual Machines"
 Write-Host " 9. OSD Cloud - Initial Setup and Custimizations - MS Surface Devices"
 Write-Host " 10. OSD Cloud Downloads"
 Write-Host " 11. System Maintenance"
-Write-Host " 12. Exit PowerShell"
+Write-Host " 12. Software Installation"
+Write-Host " 13. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -76,10 +77,15 @@ do
       Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
       
     }
-'12'{exit}
+'12' {cls
+      $WinGetConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
+      Invoke-Expression $($WinGetConfigScript.Content)
+      
+    }
+'13'{exit}
     }
     }
-    until ($selection -eq '12'){}
+    until ($selection -eq '13'){}
     }
 
 Function Get-RepairHealth(){
