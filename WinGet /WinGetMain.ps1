@@ -43,7 +43,7 @@ do
         Invoke-Expression $($WinGetVDISoftwareScript.Content)
         }
   '5' { cls
-        $WinGetManagementPCSoftwareScript = Invoke-WebRequest ""
+        $WinGetManagementPCSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1"
         Invoke-Expression $($WinGetManagementPCSoftwareScript.Content)
         }
   '6' { cls
