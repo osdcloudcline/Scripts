@@ -454,7 +454,7 @@ winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreement
 Write-Host "Installing $app48 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
 
-# Utilities
+# Utilities Software
 Write-Host "Installing Utility Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app49 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
@@ -468,18 +468,35 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 
 Write-Host "Acquiring $app52 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
 $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
 Write-Host "Processing and Downloading: $app52 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Acquiring $app53 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 $Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
 Write-Host "Processing and Downloading: $app53 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
 $Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Installing $app52 on $env:computername
+Start-Process -FilePath $Win11_22H2SDK
+pause
+
+Write-Host "Installing $app53 on $env:computername
+Start-Process -FilePath $Win11_22H2ADK
+pause
+
+Write-Host "Installing $app54 on $env:computername
+Start-Process -FilePath $Win11_22H2PEADK
+pause
+
+# Security Software
