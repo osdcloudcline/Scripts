@@ -31,7 +31,7 @@ do
         Invoke-Expression $($WinGetSTDSoftwareScript.Content)
         }
   '2' { cls
-        $WinGetADVSoftwareScript = Invoke-WebRequest ""
+        $WinGetADVSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1"
         Invoke-Expression $($WinGetADVSoftwareScript.Content)
         }
   '3' { cls
