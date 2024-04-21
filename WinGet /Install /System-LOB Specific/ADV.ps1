@@ -511,10 +511,10 @@ Write-Host "Acquiring $app57 files from OSDCloudCline GitHub OSDCloud\Software r
 $OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
 $Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml'
 $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe'
-$Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+$Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
