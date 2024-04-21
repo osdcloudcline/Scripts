@@ -55,7 +55,7 @@ do
         Invoke-Expression $($WinGetITTechSoftwareScript.Content)
         }
   '8' { cls
-        $WinGetIndividualScripts = Invoke-WebRequest ""
+        $WinGetIndividualScripts = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1"
         Invoke-Expression $($WinGetIndividualScripts.Content)
         }
   '9' { cls
