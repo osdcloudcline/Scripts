@@ -474,6 +474,12 @@ Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownl
 
 Write-Host "Acquiring $app53 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-
+$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
 Write-Host "Processing and Downloading: $app53 Setup File..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
+Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
+Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
