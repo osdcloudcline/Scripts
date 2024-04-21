@@ -474,47 +474,47 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 Write-Host "Installing: $app53 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
 $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
 Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Write-Host "Acquiring $app55 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+Write-Host "Acquiring $app55 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 $Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
 Write-Host "Processing and Downloading: $app55 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
 $Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Write-Host "Installing $app54 on $env:computername
+Write-Host "Installing $app54 on $env:computername -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2SDK
 pause
 
-Write-Host "Installing $app55 on $env:computername
+Write-Host "Installing $app55 on $env:computername -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2ADK
 pause
 
-Write-Host "Installing $app56 on $env:computername
+Write-Host "Installing $app56 on $env:computername -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
-Write-Host "Acquiring $app57 from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+Write-Host "Acquiring $app57 from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
-$Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+$Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml'
 $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 $Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHOfficedownloads
