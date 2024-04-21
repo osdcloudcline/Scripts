@@ -155,6 +155,16 @@ $app34 = "FileZilla"
 $app35 = "PuTTy"
 $app36 = "WinSCP"
 $app37 = "Steam"
+$app38 = "VLC Media Player"
+$app39 = "MediaInfo"
+$app40 = "MakeMKV"
+$app41 = "Handbrake"
+$app42 = "PowerISO"
+$app43 = "Audacity and FFMPEG"
+$app44 = "Logitech MyHarmony"
+$app45 = "MKVToolNix"
+$app46 = "Apple iTunes"
+
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -203,3 +213,36 @@ Write-Host "Installing Gaming Applications on $env:computername..." -ForegroundC
 
 Write-Host "Installing: $app37 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
+
+
+
+# Media-related software
+Write-Host "Installing Media Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app38 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app39 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id MediaArea.MediaInfo.GUI --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app40 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app41 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app42 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id PowerSoftware.PowerISO --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app43 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id Audacity.Audacity --exact --accept-source-agreements  --accept-source-agreements --force
+choco install audacity-ffmpeg -y
+
+Write-Host "Installing: $app44 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app45 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app46 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
