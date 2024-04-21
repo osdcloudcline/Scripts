@@ -468,3 +468,12 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 
 Write-Host "Acquiring $app52 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
+Write-Host "Processing and Downloading: $app52 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Acquiring $app53 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+
+Write-Host "Processing and Downloading: $app53 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
