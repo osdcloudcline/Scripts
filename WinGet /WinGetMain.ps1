@@ -27,39 +27,39 @@ do
   {
 
   '1' { cls
-        $WinGetSTDSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1"
+        $WinGetSTDSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
         Invoke-Expression $($WinGetSTDSoftwareScript.Content)
         }
   '2' { cls
-        $WinGetADVSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1"
+        $WinGetADVSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
         Invoke-Expression $($WinGetADVSoftwareScript.Content)
         }
   '3' { cls
-        $WinGetCORPSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1"
+        $WinGetCORPSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
         Invoke-Expression $($WinGetCORPSoftwareScript.Content)
         }
   '4' { cls
-        $WinGetVDISoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1"
+        $WinGetVDISoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
         Invoke-Expression $($WinGetVDISoftwareScript.Content)
         }
   '5' { cls
-        $WinGetManagementPCSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1"
+        $WinGetManagementPCSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
         Invoke-Expression $($WinGetManagementPCSoftwareScript.Content)
         }
   '6' { cls
-        $WinGetHoneypotSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1"
+        $WinGetHoneypotSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
         Invoke-Expression $($WinGetHoneypotSoftwareScript.Content)
         }
   '7' { cls
-        $WinGetITTechSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1"
+        $WinGetITTechSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
         Invoke-Expression $($WinGetITTechSoftwareScript.Content)
         }
   '8' { cls
-        $WinGetIndividualScripts = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1"
+        $WinGetIndividualScripts = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
         Invoke-Expression $($WinGetIndividualScripts.Content)
         }
   '9' { cls
-        $WinGetUpgradeScripts = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1"
+        $WinGetUpgradeScripts = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
         Invoke-Expression $($WinGetUpgradeScripts.Content)
         }
 '10'{exit}
