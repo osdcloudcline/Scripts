@@ -4,6 +4,11 @@ $app3 = "DropBox"
 $app4 = "Microsoft OneDrive"
 $app5 = "User Profile Backup and Restore"
 
+Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
+Import-Module -Name OSD -Force
+
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
 # Cloud Backup software
