@@ -520,16 +520,15 @@ Write-Host "Acquiring $app57 setup and configuration files - OSDCloudCline GitHu
 $OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
 $Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml'
 $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe'
-$Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
-$Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd'
+$Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.ps1'
+$Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.ps1'
 Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 
-
-$Office2021SetupDLCMDUrl = ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd')
-Invoke-Expression $($Office2021SetupDLCMDUrl.Content)
-$Office2021SetupCMDUrl = ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd')
-Invoke-Expression $($Office2021SetupCMDUrl.Content)
+Write-Host "Downloading and Installing: $app57 off of Office CDN..." -ForegroundColor Cyan
+Start-Process -FilePath "$OSDCloudGHOfficedownloads\setup.exe" -ArgumentList "/download" "$OSDCloudGHOfficedownloads\Configuration-Office2021.xml"
+pause
+Start-Process -FilePath "$OSDCloudGHOfficedownloads\setup.exe" -ArgumentList "/configure" "$OSDCloudGHOfficedownloads\Configuration-Office2021.xml"
