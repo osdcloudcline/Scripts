@@ -1,3 +1,15 @@
+Write-Host
+Write-Host
+Write-Host
+Write-Host "This is an automated installation script that installs:" 
+Write-Host "System Pre-Reqs, PowerShell Modules, Web Browsers, Media"
+Write-Host "software, System Utilities, Cloud Backup software,"
+Write-Host "Programming software, File Transfer software, "
+Write-Host "Office 2021 Suite, and debloats the PC"
+Write-Host
+
+pause
+
 ####################################################################
 ### SYSTEM SOFTWARE VARIABLES AND INSTALL                      #####
 ####################################################################
