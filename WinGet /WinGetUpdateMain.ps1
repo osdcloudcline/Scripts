@@ -59,8 +59,8 @@ do
         Invoke-Expression $($WinGetIndividualScripts.Content)
         }
   '9' { cls
-        $WinGetUpgradeScripts = Invoke-WebRequest ""
-        Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
+        $WinGetMainMenuScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1"
+        Invoke-Expression $($WinGetMainMenuScript.Content)
         }
 '10'{exit}
     }
