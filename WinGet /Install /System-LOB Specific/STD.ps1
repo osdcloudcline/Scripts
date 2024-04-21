@@ -529,6 +529,6 @@ Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGH
 Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 
 Write-Host "Downloading and Installing: $app57 off of Office CDN..." -ForegroundColor Cyan
-Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Office\setup.exe" -ArgumentList "/download", "C:\OSDCloud\GitHub\downloads\Office\Configuration-Office2021.xml"
+Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Office\setup.exe", -ArgumentList "/download C:\OSDCloud\GitHub\downloads\Office\Configuration-Office2021.xml"
 pause
-Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Office\setup.exe" -ArgumentList "/configure", "C:\OSDCloud\GitHub\downloads\Office\Configuration-Office2021.xml"
+Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Office\setup.exe", -ArgumentList "/configure C:\OSDCloud\GitHub\downloads\Office\Configuration-Office2021.xml"
