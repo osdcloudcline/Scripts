@@ -354,14 +354,16 @@ $app43 = "Audacity and FFMPEG"
 $app44 = "Logitech MyHarmony"
 $app45 = "MKVToolNix"
 $app46 = "Apple iTunes"
-$app47 = "VS Code"
-$app48 = "Visual Studio 2022 Enterprise"
-$app49 = "Notepad ++"
-$app50 = "CCleaner"
-$app51 = "7-Zip"
-$app52 = "Windows 22H2 SDK"
-$app53 = "Windows 22H2 ADK"
-$app53 = "Windows 22H2 PE Add-On"
+$app47 = "GIMP"
+$app48 = "VS Code"
+$app49 = "Visual Studio 2022 Enterprise"
+$app50 = "Notepad ++"
+$app51 = "CCleaner"
+$app52 = "7-Zip"
+$app53 = "Driver Booster"
+$app54 = "Windows 22H2 SDK"
+$app55 = "Windows 22H2 ADK"
+$app56 = "Windows 22H2 PE Add-On"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -444,59 +446,64 @@ winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  
 Write-Host "Installing: $app46 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Host "Installing: $app47 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id GIMP.GIMP --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Programming Software
 Write-Host "Installing Programming Applications on $env:computername..." -ForegroundColor Green
 
-Write-Host "Installing $app47 on $env:computername ..." -ForegroundColor Yellow
+Write-Host "Installing $app48 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing $app48 on $env:computername ..." -ForegroundColor Yellow
+Write-Host "Installing $app49 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Utilities Software
 Write-Host "Installing Utility Applications on $env:computername..." -ForegroundColor Green
 
-Write-Host "Installing: $app49 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Host "Installing: $app50 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing: $app50 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Host "Installing: $app51 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Notepad++.Notepad++ --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing: $app51 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Host "Installing: $app52 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Acquiring $app52 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
-$Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
-Write-Host "Processing and Downloading: $app52 Setup File..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
-
-Write-Host "Acquiring $app53 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
-$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
-Write-Host "Processing and Downloading: $app53 Setup File..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
+Write-Host "Installing: $app53 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
+$Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
+Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Acquiring $app55 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
+$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
+Write-Host "Processing and Downloading: $app55 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
+
+Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
 $Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
-Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
+Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Write-Host "Installing $app52 on $env:computername
+Write-Host "Installing $app54 on $env:computername
 Start-Process -FilePath $Win11_22H2SDK
 pause
 
-Write-Host "Installing $app53 on $env:computername
+Write-Host "Installing $app55 on $env:computername
 Start-Process -FilePath $Win11_22H2ADK
 pause
 
-Write-Host "Installing $app54 on $env:computername
+Write-Host "Installing $app56 on $env:computername
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
-# Security Software
+
