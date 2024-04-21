@@ -47,7 +47,7 @@ do
         Invoke-Expression $($WinGetManagementPCSoftwareScript.Content)
         }
   '6' { cls
-        $WinGetHoneypotSoftwareScript = Invoke-WebRequest ""
+        $WinGetHoneypotSoftwareScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1"
         Invoke-Expression $($WinGetHoneypotSoftwareScript.Content)
         }
   '7' { cls
