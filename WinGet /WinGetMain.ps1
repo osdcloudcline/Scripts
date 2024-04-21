@@ -60,7 +60,7 @@ do
         }
   '9' { cls
         $WinGetUpgradeScripts = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1"
-        Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
+        Invoke-Expression $($WinGetUpgradeScripts.Content)
         }
 '10'{exit}
     }
