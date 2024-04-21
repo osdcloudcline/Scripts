@@ -5,9 +5,8 @@ $app4 = "Handbrake"
 $app5 = "PowerISO"
 $app6 = "Audacity and FFMPEG"
 $app7 = "Logitech MyHarmony"
-$app8 = "VMWare Workstation Professional"
-$app9 = "MKVToolNix"
-$app10 = "Apple iTunes"
+$app8 = "MKVToolNix"
+$app9 = "Apple iTunes"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
