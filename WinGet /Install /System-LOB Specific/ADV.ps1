@@ -359,6 +359,9 @@ $app48 = "Visual Studio 2022 Enterprise"
 $app49 = "Notepad ++"
 $app50 = "CCleaner"
 $app51 = "7-Zip"
+$app52 = "Windows 22H2 SDK"
+$app53 = "Windows 22H2 ADK"
+$app53 = "Windows 22H2 PE Add-On"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -462,3 +465,6 @@ winget install --id Notepad++.Notepad++ --exact --accept-source-agreements  --ac
 
 Write-Host "Installing: $app51 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
+
+Write-Host "Acquiring $app52 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...."
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
