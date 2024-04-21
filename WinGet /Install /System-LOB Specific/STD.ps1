@@ -532,6 +532,6 @@ Write-Host "Downloading $app57 - Microsoft Office CDN...." -ForegroundColor Cyan
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd'
 Invoke-Expression $($Office2021SetupDLCMDUrl.Content)
 
-
+Write-Host "Installing $app57 -  Microsoft Office CDN...." -ForegroundColor Cyan 
 $Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
 Invoke-Expression $($Office2021SetupCMDUrl.Content)
