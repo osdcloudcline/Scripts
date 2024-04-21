@@ -507,7 +507,7 @@ Write-Host "Installing $app56 on $env:computername -ForegroundColor Cyan
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
-Write-Host "Acquiring $app57 from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Host "Acquiring $app57 files from OSDCloudCline GitHub OSDCloud\Software repository...." -ForegroundColor Cyan 
 $OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
 $Office2021ConfigUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml'
 $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe'
