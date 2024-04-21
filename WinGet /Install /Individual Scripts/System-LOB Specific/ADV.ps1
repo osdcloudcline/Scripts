@@ -151,9 +151,15 @@ $app30 = "Nextcloud Desktop Client"
 $app31 = "DropBox"
 $app32 = "Microsoft OneDrive"
 $app33 = "User Profile Backup and Restore"
+$app34 = "FileZilla"
+$app35 = "PuTTy"
+$app36 = "WinSCP"
+
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
+
+# Web Browsers
 Write-Host "Installing Web Browser Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app27 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
@@ -162,6 +168,8 @@ winget install --id Google.Chrome --exact --accept-source-agreements  --accept-s
 Write-Host "Installing: $app28 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
 
+
+# Cloud Backup Software
 Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app30 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
@@ -175,3 +183,16 @@ winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept
 
 Write-Host "Installing: $app33 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
+
+
+# File Transfer Software
+Write-Host "Installing File Transfer Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app34 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+choco install filezilla  -y
+
+Write-Host "Installing: $app35 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architecture x64  --accept-source-agreements --force
+
+Write-Host "Installing: $app36 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
