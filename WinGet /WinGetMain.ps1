@@ -10,16 +10,15 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. WinGet - Install System Software"
-Write-Host " 2. WinGet - Install Standard Software Configuration"
-Write-Host " 3. WinGet - Install Advanced Software Configuration"
-Write-Host " 4. WinGet - Install Corporate Software Configuration"
-Write-Host " 5. WinGet - Install VDI Software Configuration"
-Write-Host " 6. WinGet - Install Management PC Software Configuration"
-Write-Host " 7. WinGet - Install Honeypot Configuration"
-Write-Host " 8. WinGet - Individual Install Scripts"
+Write-Host " 1. WinGet - Install Standard Software Configuration"
+Write-Host " 2. WinGet - Install Advanced Software Configuration"
+Write-Host " 3. WinGet - Install Corporate Software Configuration"
+Write-Host " 4. WinGet - Install VDI Software Configuration"
+Write-Host " 5. WinGet - Install Management PC Software Configuration"
+Write-Host " 6. WinGet - Install Honeypot Configuration"
+Write-Host " 7. WinGet - Install IT Tech Configuration"
+Write-Host " 8. WinGet - Individual Install and Update Scripts"
 Write-Host " 9. WinGet - Upgrade Software" 
-
 Write-Host " 10. Exit PowerShell"
 do 
 {
@@ -28,70 +27,47 @@ do
   {
 
   '1' { cls
-        $WinGetSystemScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1"
-        Invoke-Expression $($WinGetSystemScript.Content)
+        $WinGetSTDSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetSTDSoftwareScript.Content)
         }
   '2' { cls
-        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($DellDesktopsOSDCloudConfigScript.Content)
+        $WinGetADVSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetADVSoftwareScript.Content)
         }
   '3' { cls
-        $CustomPCOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($CustomPCOSDCloudConfigScript.Content)
+        $WinGetCORPSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetCORPSoftwareScript.Content)
         }
   '4' { cls
-        $HPLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($HPLaptopsOSDCloudConfigScript.Content)
+        $WinGetVDISoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetVDISoftwareScript.Content)
         }
   '5' { cls
-        $ASUSLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($ASUSLaptopsOSDCloudConfigScript.Content)
+        $WinGetManagementPCSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetManagementPCSoftwareScript.Content)
         }
   '6' { cls
-        $AcerLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($AcerLaptopsOSDCloudConfigScript.Content)
+        $WinGetHoneypotSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetHoneypotSoftwareScript.Content)
         }
   '7' { cls
-        $LenovoLaptopsOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($LenovoLaptopsOSDCloudConfigScript.Content)
+        $WinGetITTechSoftwareScript = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetITTechSoftwareScript.Content)
         }
   '8' { cls
-         $ESXIVMOSDCloudConfigScript = Invoke-WebRequest ""
-        Invoke-Expression $($ESXIVMOSDCloudConfigScript.Content)
+        $WinGetIndividualScripts = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetIndividualScripts.Content)
         }
   '9' { cls
-        $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
+        $WinGetUpgradeScripts = Invoke-WebRequest ""
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
-  '10' { cls
-        
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
-        Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
-       
-        }
-'11' {cls
-      $sfc = "C:\Windows\System32\sfc.exe"
-      Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-      Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
-      
-    }
-'12' {cls
-      $WinGetConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1"
-      Invoke-Expression $($WinGetConfigScript.Content)
-      
-    }
-'13'{exit}
+'10'{exit}
     }
     }
-    until ($selection -eq '13'){}
+    until ($selection -eq '10'){}
     }
 
-Function Get-RepairHealth(){
 
-  $dism = "C:\Windows\System32\dism.exe"
-      Write-Host "Repairing computer ..." -ForegroundColor Cyan
-      Start-Process -FilePath $dism -ArgumentList "/online, /restorehealth"
-      exit
-      }
       
     Show-MainMenu
