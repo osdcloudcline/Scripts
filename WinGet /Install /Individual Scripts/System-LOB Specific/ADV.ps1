@@ -243,6 +243,12 @@ Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
+Stop-Transcript 
+
+
+Start-Transcript -Path "C:\Logs\Powershell\ADVSoftwareInstall.log"
+
+Write-Host "Beginning System Software Installation on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app1, $app1ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id  Microsoft.DotNet.Runtime.3_1 --exact --accept-source-agreements --accept-source-agreements --force
