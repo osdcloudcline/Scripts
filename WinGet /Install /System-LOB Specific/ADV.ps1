@@ -356,6 +356,9 @@ $app45 = "MKVToolNix"
 $app46 = "Apple iTunes"
 $app47 = "VS Code"
 $app48 = "Visual Studio 2022 Enterprise"
+$app49 = "Notepad ++"
+$app50 = "CCleaner"
+$app51 = "7-Zip"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -439,7 +442,6 @@ Write-Host "Installing: $app46 on $env:computername ..." -ErrorAction SilentlyCo
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
 
-
 # Programming Software
 Write-Host "Installing Programming Applications on $env:computername..." -ForegroundColor Green
 
@@ -448,3 +450,15 @@ winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreement
 
 Write-Host "Installing $app48 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
+
+# Utilities
+Write-Host "Installing Utility Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing: $app49 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app50 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Notepad++.Notepad++ --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing: $app51 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
