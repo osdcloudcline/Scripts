@@ -27,8 +27,8 @@ do
   {
 
   '1' { cls
-        $WinGetSTDSoftwareScript = Invoke-WebRequest ("")
-        
+        $WinGetSTDSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
+        Invoke-Expression $($WinGetSTDSoftwareScript.Content)
         }
   '2' { cls
         $WinGetADVSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
