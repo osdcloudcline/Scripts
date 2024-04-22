@@ -363,7 +363,7 @@ $app53 = "Driver Booster"
 $app54 = "Windows 22H2 SDK"
 $app55 = "Windows 22H2 ADK"
 $app56 = "Windows 22H2 PE Add-On"
-$app57 = "Microsoft Office 2021 LTSC"
+
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
@@ -502,18 +502,8 @@ pause
 
 Write-Host "Installing $app56 on $env:computername -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2PEADK
-pause
 
-Write-Host "Acquiring $app57 setup and configuration files - OSDCloudCline GitHub OSDCloud\Software repository...." -ForegroundColor Cyan 
-$OSDCloudGHOfficedownloads = "C:\Office"
-$Office2021ConfigUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml')
-$Office2021SetupEXEUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe')
-$Office2021SetupCMDUrl =  Invoke-WebRequest('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd')
-$Office2021SetupDLCMDUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd')
 
-Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
+
 
 
