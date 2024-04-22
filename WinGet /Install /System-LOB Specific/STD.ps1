@@ -367,6 +367,9 @@ $app56 = "Windows 22H2 PE Add-On"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
+Write-Host "Processing: Microsoft Office 2021 LTSC..." -ForegroundColor Cyan 
+$Office = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
+Invoke-Expression $($Office.Content)
 
 # Web Browsers
 Write-Host "Installing Web Browser Applications on $env:computername..." -ForegroundColor Green
