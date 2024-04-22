@@ -522,7 +522,7 @@ $Office2021ConfigUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDC
 $Office2021SetupEXEUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe')
 $Office2021SetupCMDUrl =  Invoke-WebRequest('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd')
 $Office2021SetupDLCMDUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd')
-Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
+
 Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
