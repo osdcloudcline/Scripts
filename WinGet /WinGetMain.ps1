@@ -21,7 +21,6 @@ Write-Host " 8. WinGet - Individual Install and Update Scripts"
 Write-Host " 9. WinGet - Upgrade Software" 
 Write-Host " 10. Exit PowerShell"
 do
-
 {
 $selection = Read-Host 'Please choose an option'
   switch($selection)
@@ -29,18 +28,40 @@ $selection = Read-Host 'Please choose an option'
   '1' {cls
        $StandardSoftwareScript = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%Specific/STD.ps1)
        Invoke-Expression $($StandardSoftwareSCript.Content)
+       }
  '2'{cls
      $AdvancedSoftwareScript = Invoke-WebRequest("")
      Invoke-Expression $($AdvancedSoftwareScript.Content)
      }
- '3'{}
- '4'{}
- '5'{}
- '6'{}
- '7'{}
- '8'{}
- '9'{}
- '10'{}
+ '3'{cls
+        $CORPSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+        Invoke-Expression $($CORPSoftwareScript.Content)
+    }
+ '4'{cls
+        $VDISoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+        Invoke-Expression $($VDISoftwareScript.Content)
+    }
+ '5'{cls
+        $ManagementPCSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+        Invoke-Expression $($ManagementPCSoftwareScript.Content)
+ }
+ '6'{cls
+        $HoneypotSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
+        Invoke-Expression $($HoneypotSoftwareScript.Content)
+    }
+ '7'{cls
+        $ITTechSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
+        Invoke-Expression $($ITTechSoftwareScript.Content)
+    }
+ '8'{cls
+        $IndividualScripts = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
+        Invoke-Expression $($IndividualScripts.Content)
+    }
+ '9'{cls
+        $UpgradeScripts = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
+        Invoke-Expression $($UpgradeScripts.Content)
+  }
+ '10'{exit}
  }
  }
  until ($selection -eq '10'){exit}
