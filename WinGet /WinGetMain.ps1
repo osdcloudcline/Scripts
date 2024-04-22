@@ -26,11 +26,11 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       $StandardSoftwareScript = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%Specific/STD.ps1)
+       $StandardSoftwareScript = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%Specific/STD.ps1")
        Invoke-Expression $($StandardSoftwareSCript.Content)
        }
  '2'{cls
-     $AdvancedSoftwareScript = Invoke-WebRequest("")
+     $AdvancedSoftwareScript = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
      Invoke-Expression $($AdvancedSoftwareScript.Content)
      }
  '3'{cls
