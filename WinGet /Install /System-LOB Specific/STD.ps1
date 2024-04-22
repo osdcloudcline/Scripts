@@ -517,7 +517,7 @@ Start-Process -FilePath $Win11_22H2PEADK
 pause
 
 Write-Host "Acquiring $app57 setup and configuration files - OSDCloudCline GitHub OSDCloud\Software repository...." -ForegroundColor Cyan 
-$OSDCloudGHOfficedownloads = "C:\OSDCloud\GitHub\downloads\Office"
+
 $Office2021ConfigUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/Configuration-Office2021.xml')
 $Office2021SetupEXEUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/setup.exe')
 $Office2021SetupCMDUrl =  Invoke-WebRequest('https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd')
