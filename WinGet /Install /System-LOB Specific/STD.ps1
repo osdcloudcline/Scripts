@@ -1,3 +1,5 @@
+Start-Transcript -Path "C:\Logs\Powershell\Standard\PreReqInstall.log"
+
 ####################################################################
 ### SYSTEM SOFTWARE VARIABLES AND INSTALL                      #####
 ####################################################################
@@ -55,15 +57,17 @@ $app25ver = "Version: 1.19.10302.0"
 $app26 = "Microsoft Windows Powershell"
 $app26ver = "Version: 7.4.1.0"	
 
+
+
 # WinGet Mandatory Software Install
 
-Write-Host "Processing Step 1 of 3: System Pre-Requisities, including PowerShell Package Management Modules..." -Foreground Color Yellow
+Write-Host "Processing Step 1 of 4: System Pre-Requisities, including PowerShell Package Management Modules..." -Foreground Color Yellow
 Write-Host
 Write-Host
 Write-Host
 Set-ExecutionPolicy unrestricted -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-Start-Transcript -Path "C:\Logs\Powershell\PreReqSoftwareInstall.log"
+
 Set-ExecutionPolicy -Scope LocalMachine unrestricted -Force -ErrorAction SilentlyContinue
 Set-ExecutionPolicy -Scope CurrentUser unrestricted -Force -ErrorAction SilentlyContinue
 
@@ -106,11 +110,14 @@ Write-Host
 Write-Host "Importing: $PSModule12..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name ProgramManagement -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
+Stop-Transcript
+
+Start-Transcript -Path "C:\Logs\Powershell\Standard\OSDPowerShellModules.log"
 Write-Host
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Processing Step 2 of 3: OSD PowerShell Modules..." -Foreground Color Yellow
+Write-Host "Processing Step 2 of 4: OSD PowerShell Modules..." -Foreground Color Yellow
 Write-Host
 
 
@@ -299,9 +306,9 @@ Write-Host
 Stop-Transcript 
 
 
-Start-Transcript -Path "C:\Logs\Powershell\StandardSoftwareInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\SoftwareInstall.log"
 
-Write-Host "Processing Step 3 of 3: Software Installation..." -Foreground Color Yellow  
+Write-Host "Processing Step 3 of 4: Software Installation..." -Foreground Color Yellow  
 Write-Host
 Write-Host
 Write-Host "Processing: Mandatory System Software Pre-Requisites" -ForegroundColor Yellow
@@ -667,5 +674,184 @@ Write-Host
 
 Write-Host "Processing: $app59..." -ForegroundColor Cyan 
 winget install --id Malwarebytes.Malwarebytes --exact --accept-source-agreements --accept-source-agreements --force
-
 Stop-Transcript
+
+
+
+Start-Transcript -Path "C:\Logs\Powershell\Standard\RegistryImports.log"
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing Step 4 of 4: System Customizations..." -Foreground Color Yellow 
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Importing Registry entries..." -ForegroundColor Cyan
+
+$Regedit = "$env:windir\regedit.exe"
+
+$OSDRegLocalPath = "C:\OSDCloud\GitHub\downloads\Registry"
+
+$OSDRegPath1 = "$OSDRegLocalPath\AcrobatDisableCloudServices.reg"
+$OSDRegPath2 = "$OSDRegLocalPath\AdobeCC2019.reg"
+$OSDRegPath3 = "$OSDRegLocalPath\AdobeCC2019-AcrobatREGEntries.reg"
+$OSDRegPath4 = "$OSDRegLocalPath\AdobeReg1.reg"
+$OSDRegPath5 = "$OSDRegLocalPath\AdobeReg2.reg"
+$OSDRegPath6 = "$OSDRegLocalPath\PCMark10.reg"
+$OSDRegPath7 = "$OSDRegLocalPath\AddCopyToMoveTo.reg"
+$OSDRegPath8 = "$OSDRegLocalPath\AddSafeMode.reg"
+$OSDRegPath9 = "$OSDRegLocalPath\CheckForUpdates.reg"
+$OSDRegPath10 = "$OSDRegLocalPath"
+
+$OSDRegFileName1 = "AcrobatDisableCloudServices.reg"
+$OSDRegFileName2 = "AdobeCC2019.reg"
+$OSDRegFileName3 = "AdobeCC2019-AcrobatREGEntries.reg"
+$OSDRegFileName4 = "AdobeReg1.reg"
+$OSDRegFileName5 = "AdobeReg2.reg"
+$OSDRegFileName6 = "PCMark10.reg"
+$OSDRegFileName7 = "AddCopyToMoveTo.reg"
+$OSDRegFileName8 = "AddSafeMode.reg"
+$OSDRegFileName9 = "CheckForUpdates.reg"
+$OSDRegFileName10 = ""
+
+$OSDRegType1 = "SYSTEM"
+$OSDRegType2 = "SOFTWARE"
+
+$SYSOSDREGUrl = ""
+$SOFTOSDRegUrl = ""
+
+$ArgsList1 = '/s{0}'-f$OSDRegPath1
+$ArgsList2 = '/s{0}'-f$OSDRegPath2
+$ArgsList3 = '/s{0}'-f$OSDRegPath3
+$ArgsList4 = '/s{0}'-f$OSDRegPath4
+$ArgsList5 = '/s{0}'-f$OSDRegPath5
+$ArgsList6 = '/s{0}'-f$OSDRegPath6
+$ArgsList7 = '/s{0}'-f$OSDRegPath7
+$ArgsList8 = '/s{0}'-f$OSDRegPath8
+$ArgsList9 = '/s{0}'-f$OSDRegPath9
+$ArgsList10 = '/s{0}'-f$OSDRegPath10
+
+Write Host "Processing Registry Entry 1 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName1" -Verbose
+Write-Output "Registry File: $OSDRegPath1" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList1" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList1
+
+Write Host "Processing Registry Entry 2 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName2" -Verbose
+Write-Output "Registry File: $OSDRegPath2" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList2" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList2
+
+Write Host "Processing Registry Entry 3 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName3" -Verbose
+Write-Output "Registry File: $OSDRegPath4" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList3" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList3
+
+Write Host "Processing Registry Entry 4 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName4" -Verbose
+Write-Output "Registry File: $OSDRegPath4" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList4" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList4
+
+Write Host "Processing Registry Entry 5 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName5" -Verbose
+Write-Output "Registry File: $OSDRegPath5" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList5" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList5
+
+Write Host "Processing Registry Entry 6 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $SOFTOSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName6" -Verbose
+Write-Output "Registry File: $OSDRegPath6" -Verbose
+Write-Output "Registry Import Type: SOFTWARE" -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList6" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList6
+
+Write Host "Processing Registry Entry 7 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $OSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName7" -Verbose
+Write-Output "Registry File: $OSDRegPath7" -Verbose
+Write-Output "Registry Import Type: " -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList7" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList7
+
+Write Host "Processing Registry Entry 8 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $OSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName8" -Verbose
+Write-Output "Registry File: $OSDRegPath8" -Verbose
+Write-Output "Registry Import Type: " -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList8" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList8
+
+Write Host "Processing Registry Entry 9 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $OSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName9" -Verbose
+Write-Output "Registry File: $OSDRegPath9" -Verbose
+Write-Output "Registry Import Type: " -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList9" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList9
+
+Write Host "Processing Registry Entry 10 of 10..." -ForegroundColor Yellow 
+Write-Output "Download URL: $OSDRegUrl" -Verbose
+Write-Output "Registry File Name: $OSDRegFileName10" -Verbose
+Write-Output "Registry File: $OSDRegPath10" -Verbose
+Write-Output "Registry Import Type: " -Verbose
+Write-Output "Local Path: $OSDRegLocalPath" -Verbose
+Write-Output "Args Applied: $ArgsList10" -Verbose
+Start-Process -FilePath $Regedit -ArgumentList $ArgsList10
+Write-Host
+Write-Host
+Write-Host "Registry Imports completed..." -ForegroundColor Green
+Stop-Transcript
+
+Start-Transcript -Path "C:\Logs\Powershell\Standard\StartMenuBINFile.log"
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing Step 4 of 4: System Customizations..." -Foreground Color Yellow 
+Write-Host
+Write-Host
+Write-Host
+$os = Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
+If(($os -eq "Microsoft Windows 11 Core") -or ($os -eq "Microsoft Windows 11 Home") -or ($os -eq "Microsoft Windows 11 Pro") -or ($os -eq "Microsoft Windows 11 Pro for Workstations") -or ($os -eq "Microsoft Windows 11 Enterprise")){
+Write-Host "Customizing Windows 11 Start Menu..." -ForegroundColor Cyan
+$Win11StandardSMBINFileUrl = ""
+$OSDdownloadsSMBINFile = "C:\OSDCloud\GitHub\downloads\OS\Windows11\StartMenu\Standard"
+$StandardSMBINFilePath = ""
+$Destination = ""
+Copy-Item -Path $StandardSMBINFilePath -Destination $Destination
+}
+ElseIf(($os -eq "Microsoft Windows 10 Core") -or ($os -eq "Microsoft Windows 10 Home") -or ($os -eq "Microsoft Windows 10 Pro") -or ($os -eq "Microsoft Windows 10 Pro for Workstations") -or ($os -eq "Microsoft Windows 10 Enterprise"))
+Write-Host "Skipping Start Menu Custimizations..." -ForegroundColor Yellow
+Stop-Transcript
+
+Start-Transcript -Path "C:\Logs\Powershell\Standard\WindowsFeatures-RSAT.log"
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing Step 4 of 4: System Customizations..." -Foreground Color Yellow 
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Installing Windows RSAT Tools..." -ForegroundColor Cyan
