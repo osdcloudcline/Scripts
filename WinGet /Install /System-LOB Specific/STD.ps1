@@ -424,13 +424,15 @@ $app50 = "Notepad ++"
 $app51 = "CCleaner"
 $app52 = "7-Zip"
 $app53 = "Driver Booster"
-$app54 = "Windows 22H2 SDK"
-$app55 = "Windows 22H2 ADK"
-$app56 = "Windows 22H2 PE Add-On"
-$app57 = "Microsoft Office 2021 LTSC"
-$app58 = "Adobe Acrobat Reader DC 64-Bit"
-$app59 = "Malwarebytes Anti-Malware"
-$app60 = "CMTrace"
+$app54 = "VMWare Horizon Remote Desktop Connection Client"
+$app55 = "AnyDesk"
+$app56 = "Windows 22H2 SDK"
+$app57 = "Windows 22H2 ADK"
+$app58 = "Windows 22H2 PE Add-On"
+$app59 = "Microsoft Office 2021 LTSC"
+$app60 = "Adobe Acrobat Reader DC 64-Bit"
+$app61 = "Malwarebytes Anti-Malware"
+$app62 = "CMTrace"
 
 
 # Web Browsers
@@ -574,6 +576,24 @@ winget install --id IObit.DriverBooster --exact --accept-source-agreements --acc
 Write-Host
 Write-Host
 Write-Host
+Write-Host "Processing: Remote Desktop Access Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
+
+# Remote Desktop Software
+Write-Host "Installing: $app54 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id VMware.HorizonClient --exact --accept-source-agreements --accept-source-agreements --force
+choco install vmware-horizon-client -y
+
+Write-Host "Installing: $app55 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id AnyDeskSoftwareGmbH.AnyDesk --exact --accept-source-agreements --accept-source-agreements --force
+
+# Utilities Software
+
+Write-Host
+Write-Host
+Write-Host
 Write-Host "Processing: Downloading Files" -ForegroundColor Yellow
 Write-Host
 Write-Host
@@ -600,13 +620,13 @@ Copy-Item -Path $UPBRNewName -Destination "$env:username\Desktop"
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
 $Win11_22H2SDKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe"
 
 
-Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
+Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
 
 Write-Output "Download URL: $Win11_22H2SDKUrl" -Verbose
 Write-Output "Local Folder: $OSDCloudGHdownloads" -Verbose
@@ -616,13 +636,13 @@ Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownl
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Acquiring $app55 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Host "Acquiring $app57 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 $Win11_22H2ADKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe"
 
-Write-Host "Processing and Downloading: $app55 Setup File..." -ForegroundColor Cyan
+Write-Host "Processing and Downloading: $app57 Setup File..." -ForegroundColor Cyan
 
 Write-Output "Download URL: $Win11_22H2ADKUrl" -Verbose
 Write-Output "Local Folder: $OSDCloudGHdownloads" -Verbose
@@ -632,13 +652,13 @@ Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownl
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Host "Acquiring $app58 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
 $Win11_22H2PEADKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe"
 
-Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
+Write-Host "Processing and Downloading: $app58 Setup File..." -ForegroundColor Cyan
 
 Write-Output "Download URL: $Win11_22H2PEADKUrl" -Verbose
 Write-Output "Local Folder: $OSDCloudGHdownloads" -Verbose
@@ -649,14 +669,14 @@ Write-Host
 Write-Host
 Write-Host
 
-Write-Host "Acquiring: $app57..." -ForegroundColor Cyan 
+Write-Host "Acquiring: $app59..." -ForegroundColor Cyan 
 $Office = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
 Invoke-Expression $($Office.Content)
 
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Processing: $app60..." -ForegroundColor Cyan 
+Write-Host "Processing: $app62..." -ForegroundColor Cyan 
 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $CMTraceUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/CMTrace.exe"
@@ -692,19 +712,19 @@ Write-Host
 Write-Host
 Write-Host
 
-Write-Host "Processing: $app57..." -ForegroundColor Cyan 
+Write-Host "Processing: $app59..." -ForegroundColor Cyan 
 $OfficeExtract = "C:\OSDCloud\GitHub\downloads\Office"
 $OfficeSetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
 $Office2021DL = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNDownload.cmd"
 
-Write-Host "Downloading $app57 installation files..." -ForegroundColor Cyan
+Write-Host "Downloading $app59 installation files..." -ForegroundColor Cyan
 Start-Process -FilePath $Office2021DL
 pause
-Write-Host "Installing $app57..." -ForegroundColor Cyan 
+Write-Host "Installing $app59..." -ForegroundColor Cyan 
 Start-Process -FilePath $OfficeSetupCMD
 pause
 
-Write-Host "Processing: $app58..." -ForegroundColor Cyan 
+Write-Host "Processing: $app60..." -ForegroundColor Cyan 
 winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements --accept-source-agreements --force
 Write-Host
 Write-Host
@@ -712,7 +732,7 @@ Write-Host "Processing: Security Software" -ForegroundColor Yellow
 Write-Host
 Write-Host
 
-Write-Host "Processing: $app59..." -ForegroundColor Cyan 
+Write-Host "Processing: $app61..." -ForegroundColor Cyan 
 winget install --id Malwarebytes.Malwarebytes --exact --accept-source-agreements --accept-source-agreements --force
 Stop-Transcript
 
@@ -894,4 +914,8 @@ Write-Host "Processing Step 4 of 4: System Customizations..." -Foreground Color 
 Write-Host
 Write-Host
 Write-Host
-Write-Host "Installing Windows RSAT Tools..." -ForegroundColor Cyan
+
+$OSFeature1 = "Windows RSAT Tools"
+Write-Host "Processing: $OSFeature1..." -ForegroundColor Cyan
+Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
+Start-Process ms-settings:optionalfeatures
