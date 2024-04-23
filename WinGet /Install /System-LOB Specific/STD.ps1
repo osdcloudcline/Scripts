@@ -885,27 +885,6 @@ Write-Host
 Write-Host "Registry Imports completed..." -ForegroundColor Green
 Stop-Transcript
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-StartMenuBINFile.log"
-Write-Host
-Write-Host
-Write-Host
-Write-Host "Processing Step 4 of 4: System Customizations..." -Foreground Color Yellow 
-Write-Host
-Write-Host
-Write-Host
-$os = Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
-If(($os -eq "Microsoft Windows 11 Core") -or ($os -eq "Microsoft Windows 11 Home") -or ($os -eq "Microsoft Windows 11 Pro") -or ($os -eq "Microsoft Windows 11 Pro for Workstations") -or ($os -eq "Microsoft Windows 11 Enterprise")){
-Write-Host "Customizing Windows 11 Start Menu..." -ForegroundColor Cyan
-$Win11StandardSMBINFileUrl = ""
-$OSDdownloadsSMBINFile = "C:\OSDCloud\GitHub\downloads\OS\Windows11\StartMenu\Standard"
-$StandardSMBINFilePath = ""
-$Destination = ""
-Copy-Item -Path $StandardSMBINFilePath -Destination $Destination
-}
-ElseIf(($os -eq "Microsoft Windows 10 Core") -or ($os -eq "Microsoft Windows 10 Home") -or ($os -eq "Microsoft Windows 10 Pro") -or ($os -eq "Microsoft Windows 10 Pro for Workstations") -or ($os -eq "Microsoft Windows 10 Enterprise"))
-Write-Host "Skipping Start Menu Custimizations..." -ForegroundColor Yellow
-Stop-Transcript
-
 Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-WindowsFeatures-RSAT.log"
 Write-Host
 Write-Host
@@ -920,4 +899,6 @@ Write-Host "Processing: $OSFeature1..." -ForegroundColor Cyan
 Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 Start-Process ms-settings:optionalfeatures
 Stop-Transcript
+
+
 exit
