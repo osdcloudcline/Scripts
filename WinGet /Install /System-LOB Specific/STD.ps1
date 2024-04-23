@@ -423,7 +423,7 @@ $app56 = "Windows 22H2 PE Add-On"
 $app57 = "Microsoft Office 2021 LTSC"
 $app58 = "Adobe Acrobat Reader DC 64-Bit"
 $app59 = "Malwarebytes Anti-Malware"
-
+$app60 = "CMTrace"
 
 
 # Web Browsers
@@ -615,6 +615,11 @@ Write-Host "Processing: $app57..." -ForegroundColor Cyan
 $Office = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
 Invoke-Expression $($Office.Content)
 Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: $app60..." -ForegroundColor Cyan 
+$CMTraceUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/CMTrace.exe"
+Save-WebFile -SourceUrl $CMTraceUrl -DestinationDirectory $OSDCloudGHdownloads
 Write-Host
 Write-Host
 Write-Host "Processing: Installing Windows 11 22H2 SDK, ADK, and PE ADK Add-On" -ForegroundColor Yellow
