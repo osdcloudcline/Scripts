@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Standard\PreReqInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-PreReqInstall.log"
 
 ####################################################################
 ### SYSTEM SOFTWARE VARIABLES AND INSTALL                      #####
@@ -112,7 +112,7 @@ Import-Module -Name ProgramManagement -Force -ErrorAction SilentlyContinue -Warn
 Start-Sleep -Seconds 5
 Stop-Transcript
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\OSDPowerShellModules.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-OSDPowerShellModules.log"
 Write-Host
 Write-Host
 Write-Host
@@ -306,7 +306,7 @@ Write-Host
 Stop-Transcript 
 
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\SoftwareInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-SoftwareInstall.log"
 
 Write-Host "Processing Step 3 of 4: Software Installation..." -Foreground Color Yellow  
 Write-Host
@@ -738,7 +738,7 @@ Stop-Transcript
 
 
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\RegistryImports.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-RegistryImports.log"
 Write-Host
 Write-Host
 Write-Host
@@ -885,7 +885,7 @@ Write-Host
 Write-Host "Registry Imports completed..." -ForegroundColor Green
 Stop-Transcript
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\StartMenuBINFile.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-StartMenuBINFile.log"
 Write-Host
 Write-Host
 Write-Host
@@ -906,7 +906,7 @@ ElseIf(($os -eq "Microsoft Windows 10 Core") -or ($os -eq "Microsoft Windows 10 
 Write-Host "Skipping Start Menu Custimizations..." -ForegroundColor Yellow
 Stop-Transcript
 
-Start-Transcript -Path "C:\Logs\Powershell\Standard\WindowsFeatures-RSAT.log"
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-WindowsFeatures-RSAT.log"
 Write-Host
 Write-Host
 Write-Host
@@ -919,3 +919,5 @@ $OSFeature1 = "Windows RSAT Tools"
 Write-Host "Processing: $OSFeature1..." -ForegroundColor Cyan
 Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 Start-Process ms-settings:optionalfeatures
+Stop-Transcript
+exit
