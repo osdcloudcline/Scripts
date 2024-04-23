@@ -57,13 +57,15 @@ $app26ver = "Version: 7.4.1.0"
 
 # WinGet Mandatory Software Install
 
-Write-Host "Configuring Pre-Requisities for Software Installation..." -ForegroundColor Green
+Write-Host "Processing Step 1 of 3: System Pre-Requisities, including PowerShell Package Management Modules..." -Foreground Color Yellow
+Write-Host
+Write-Host
+Write-Host
 Set-ExecutionPolicy unrestricted -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 Start-Transcript -Path "C:\Logs\Powershell\PreReqSoftwareInstall.log"
 Set-ExecutionPolicy -Scope LocalMachine unrestricted -Force -ErrorAction SilentlyContinue
 Set-ExecutionPolicy -Scope CurrentUser unrestricted -Force -ErrorAction SilentlyContinue
-
 
 $PSModule9 = "NuGet"
 $PSModule10 = "OneGet"
@@ -105,6 +107,12 @@ Write-Host "Importing: $PSModule12..." -ErrorAction SilentlyContinue -WarningAct
 Import-Module -Name ProgramManagement -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing Step 2 of 3: OSD PowerShell Modules..." -Foreground Color Yellow
+Write-Host
+
 
 $PSModule1 = "OSD Module"
 $PSModule2 = "OSD SUS Module"
@@ -116,6 +124,9 @@ $PSModule7 = "OSD Software Module"
 $PSModule8 = "OSD Deploy Module"
 $PSModule13 = "Windows Update Module"
 
+
+Write-Host
+Write-Host
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
 Write-Host
 Write-Host
@@ -290,7 +301,7 @@ Stop-Transcript
 
 Start-Transcript -Path "C:\Logs\Powershell\ADVSoftwareInstall.log"
 
-Write-Host "Beginning System Software Installation on $env:computername..." -ForegroundColor Green
+Write-Host "Processing Step 3 of 3: Software Installation..." -Foreground Color Yellow  
 
 Write-Host "Installing: $app1, $app1ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id  Microsoft.DotNet.Runtime.3_1 --exact --accept-source-agreements --accept-source-agreements --force
