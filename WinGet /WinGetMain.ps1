@@ -19,7 +19,8 @@ Write-Host " 6. WinGet - Install Honeypot Configuration"
 Write-Host " 7. WinGet - Install IT Tech Configuration"
 Write-Host " 8. WinGet - Individual Install and Update Scripts"
 Write-Host " 9. WinGet - Upgrade Software" 
-Write-Host " 10. Exit PowerShell"
+Write-Host " 10. Post Install Configuration"
+Write-Host " 11. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -61,9 +62,13 @@ $selection = Read-Host 'Please choose an option'
         $Upgrade = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
         Invoke-Expression $($Upgrade.Content)
   }
- '10'{exit}
+'10'{cls
+       $PostInstall = Invoke-WebRequest("")
+       Invoke-Expression $($PostInstall.Content)
+ }
+ '11'{exit}
  }
  }
- until ($selection -eq '10'){exit}
+ until ($selection -eq '11'){exit}
 }
 Show-MainMenu 
