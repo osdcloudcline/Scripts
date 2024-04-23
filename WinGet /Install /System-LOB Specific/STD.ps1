@@ -299,10 +299,14 @@ Write-Host
 Stop-Transcript 
 
 
-Start-Transcript -Path "C:\Logs\Powershell\ADVSoftwareInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\StandardSoftwareInstall.log"
 
 Write-Host "Processing Step 3 of 3: Software Installation..." -Foreground Color Yellow  
-
+Write-Host
+Write-Host
+Write-Host "Processing: Mandatory System Software Pre-Requisites" -ForegroundColor Yellow
+Write-Host
+Write-Host
 Write-Host "Installing: $app1, $app1ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id  Microsoft.DotNet.Runtime.3_1 --exact --accept-source-agreements --accept-source-agreements --force
 
@@ -371,7 +375,7 @@ choco install dotnetfx -y
 		
 Write-Host "Installing: $app23, $app23ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 choco install openal -y
-		
+	
 Write-Host "Installing: $app24, $app24ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Microsoft.Edge --exact --accept-source-agreements --accept-source-agreements --force
 		
@@ -416,26 +420,34 @@ $app53 = "Driver Booster"
 $app54 = "Windows 22H2 SDK"
 $app55 = "Windows 22H2 ADK"
 $app56 = "Windows 22H2 PE Add-On"
+$app57 = "Microsoft Office 2021 LTSC"
+$app58 = "Adobe Acrobat Reader DC 64-Bit"
+$app59 = "Malwarebytes Anti-Malware"
 
 
-Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
-
-Write-Host "Processing: Microsoft Office 2021 LTSC..." -ForegroundColor Cyan 
-$Office = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
-Invoke-Expression $($Office.Content)
 
 # Web Browsers
-Write-Host "Installing Web Browser Applications on $env:computername..." -ForegroundColor Green
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Web Browsers" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host	
 Write-Host "Installing: $app27 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing: $app28 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Cloud Backup Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 # Cloud Backup Software
-Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app30 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
@@ -448,10 +460,15 @@ winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept
 
 Write-Host "Installing: $app33 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: File Transfer Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 # File Transfer Software 
-Write-Host "Installing File Transfer Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app34 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 choco install filezilla  -y
@@ -461,18 +478,28 @@ winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architectur
 
 Write-Host "Installing: $app36 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Gaming Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 # Gaming Software
-Write-Host "Installing Gaming Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app37 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Media Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 
 # Media-related software
-Write-Host "Installing Media Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app38 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
@@ -504,16 +531,27 @@ winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-so
 
 Write-Host "Installing: $app47 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
 winget install --id GIMP.GIMP --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Programming Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 # Programming Software
-Write-Host "Installing Programming Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing $app48 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreements  --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: System Utilities Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
 # Utilities Software
-Write-Host "Installing Utility Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing: $app50 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
@@ -526,29 +564,63 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 
 Write-Host "Installing: $app53 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Downloading Files" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Accessing OSD Cloud\User Profile Backup Restore GitHub Repo from OSDCloudCline to download User Profile Backup and Restore utility..." -ForegroundColor Cyan
+Write-Host
+Write-Host 
+Write-Host "Processing and Downloading: User Profile Backup and Restpre..." -ForegroundColor Cyan
+$UPBRUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/User%20Profile%20Backup%20and%20Restore.exe'
+Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/User%20Profile%20Backup%20and%20Restore.exe' -DestinationDirectory "C:\downloads"
+$UPBROrgFile = "C:\downloads\User%20Profile%20Backup%20and%20Restore.exe"
+$UPBRNewName = "C:\downloads\UPBR.exe"
+Rename-Item -Path $UPBROrgFile -NewName $UPBRNewName
+Copy-Item -Path $UPBRNewName -Destination "$env:username\Desktop"
+Write-Host
+Write-Host
+Write-Host
 Write-Host "Acquiring $app54 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
-$Win11_22H2SDKUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe')
+$Win11_22H2SDKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe"
 Write-Host "Processing and Downloading: $app54 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
-
+Write-Host
+Write-Host
+Write-Host
 Write-Host "Acquiring $app55 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
-$Win11_22H2ADKUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe')
+$Win11_22H2ADKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe"
 Write-Host "Processing and Downloading: $app55 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
-
+Write-Host
+Write-Host
+Write-Host
 Write-Host "Acquiring $app56 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
-$Win11_22H2PEADKUrl = Invoke-WebRequest ('https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe')
+$Win11_22H2PEADKUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe"
 Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
-
-
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: $app57..." -ForegroundColor Cyan 
+$Office = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
+Invoke-Expression $($Office.Content)
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Installing Windows 11 22H2 SDK, ADK, and PE ADK Add-On" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 Start-Process -FilePath $Win11_22H2SDK
 pause
 
@@ -558,8 +630,37 @@ pause
 
 
 Start-Process -FilePath $Win11_22H2PEADK
+pause
 
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Processing: Productivity Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
+Write-Host
 
+Write-Host "Processing: $app57..." -ForegroundColor Cyan 
+$OfficeExtract = "C:\OSDCloud\GitHub\downloads\Office"
+$OfficeSetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
+$Office2021DL = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNDownload.cmd"
 
+Write-Host "Downloading $app57 installation files..." -ForegroundColor Cyan
+Start-Process -FilePath $Office2021DL
+pause
+Write-Host "Installing $app57..." -ForegroundColor Cyan 
+Start-Process -FilePath $OfficeSetupCMD
+pause
 
+Write-Host "Processing: $app58..." -ForegroundColor Cyan 
+winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements --accept-source-agreements --force
+Write-Host
+Write-Host
+Write-Host "Processing: Security Software" -ForegroundColor Yellow
+Write-Host
+Write-Host
 
+Write-Host "Processing: $app59..." -ForegroundColor Cyan 
+winget install --id Malwarebytes.Malwarebytes --exact --accept-source-agreements --accept-source-agreements --force
+
+Stop-Transcript
