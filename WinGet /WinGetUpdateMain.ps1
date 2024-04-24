@@ -17,7 +17,7 @@ Write-Host " 4. Update VDI Software Configuration"
 Write-Host " 5. Update Management PC Software Configuration"
 Write-Host " 6. Update Honeypot Configuration"
 Write-Host " 7. Update IT Tech Configuration"
-Write-Host " 8. Update Install and Update Scripts"
+Write-Host " 8. Individual Install and Update Scripts"
 Write-Host " 9. Return to Main Menu" 
 Write-Host " 10. Exit PowerShell"
 do 
