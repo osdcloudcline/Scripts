@@ -1,12 +1,12 @@
 Write-Host
 Write-Host "This is an automated installation script that installs:" 
-Write-Host "System Pre-Reqs:   Media"
+Write-Host "System Pre-Reqs:  "
 Write-Host
 Write-Host "NuGet, OneGet, WinGet and Program Management Pacage Management Modules "
 Write-Host
 Write-Host "PowerShell Modules:"
 Write-Host
-Write-Host  "OSD Module"
+Write-Host "OSD Module"
 Write-Host "OSD SUS Module"
 Write-Host "OSD Builder Module"
 Write-Host "OSD Update & Update Catalog Module"
@@ -28,10 +28,41 @@ Write-Host "Windows PowerShell 7.0 - Latest Version"
 Write-Host
 Write-Host " Software:"
 Write-Host 
-Write-Host ""
-Write-Host "software, System Utilities, Cloud Backup software,"
-Write-Host "Programming software, File Transfer software, "
-Write-Host "Office 2021 Suite, and debloats the PC"
+Write-Host "Google Chrome for Enterprise"
+Write-Host "Mozilla Firefox"
+Write-Host "Google Drive"
+Write-Host "Nextcloud Desktop Client"
+Write-Host "DropBox"
+Write-Host "Microsoft OneDrive"
+Write-Host "User Profile Backup and Restore"
+Write-Host "FileZilla"
+Write-Host "PuTTy"
+Write-Host "WinSCP"
+Write-Host "Steam"
+Write-Host "VLC Media Player"
+Write-Host "MediaInfo"
+Write-Host "MakeMKV"
+Write-Host "Handbrake"
+Write-Host "PowerISO"
+Write-Host "Audacity and FFMPEG"
+Write-Host "Logitech MyHarmony"
+Write-Host "MKVToolNix"
+Write-Host "Apple iTunes"
+Write-Host "GIMP"
+Write-Host "VS Code"
+Write-Host "Visual Studio 2022 Enterprise"
+Write-Host "Notepad ++"
+Write-Host "CCleaner"
+Write-Host "7-Zip"
+Write-Host "Driver Booster"
+Write-Host "Windows 22H2 SDK"
+Write-Host "Windows 22H2 ADK"
+Write-Host "Windows 22H2 PE Add-On"
+Write-Host "Microsoft Office 2021 LTSC"
+Write-Host "Windows 365 Azure Virtual Desktop"
+Write-Host "VMWare Horizon VDI Client"
+Write-Host "VMWare Workstation Professional"
+
 Write-Host
 
 pause
@@ -467,6 +498,9 @@ $app54 = "Windows 22H2 SDK"
 $app55 = "Windows 22H2 ADK"
 $app56 = "Windows 22H2 PE Add-On"
 $app57 = "Microsoft Office 2021 LTSC"
+$app58 = "Windows 365 Azure Virtual Desktop"
+$app59 = "VMWare Horizon VDI Client"
+$app60 = "VMWare Workstation Professional"
 
 Write-Host "Beginning Application Installation on $env:computername..." -ForegroundColor Green
 
