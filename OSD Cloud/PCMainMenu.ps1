@@ -33,12 +33,12 @@ do
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
   '3' { cls
-        $WinGetConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-        Invoke-Expression $($WinGetConfigScript.Content)
+        $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+        Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
-        $WinGetConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-        Invoke-Expression $($WinGetConfigScript.Content)
+        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
+        Invoke-Expression $($WinGetUpdateMain.Content)
         }
   '5' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
