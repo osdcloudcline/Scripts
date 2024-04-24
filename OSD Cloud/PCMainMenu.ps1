@@ -41,15 +41,16 @@ do
         Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
         }
   '5' { cls
+        
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
-        $UPBR = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe")
+        $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
         Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHdownloads
         $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
-        Start-Process -FilePath $UPBRNewName
+        Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         
         }
   '6' { exit
