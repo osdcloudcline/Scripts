@@ -22,8 +22,8 @@ do
   {
 
   '1' { cls
-        $OSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1"
-        Invoke-Expression $($OSDCloudConfigScript.Content)
+        $OSDCloudMainScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1"
+        Invoke-Expression $($OSDCloudMainScript.Content)
         }
   '2' { cls
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
