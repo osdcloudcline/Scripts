@@ -8,7 +8,6 @@ Function Show-MainMenu{
     [string]$Question = 'What type of action do you want to perform?'
 )
 
-
 Write-Host " 1. Dell Laptops"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + ASUS AMD/Intel Motherboards"
@@ -62,8 +61,10 @@ do
         $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
-   '10'{}
-     }
+   '10'{
+    
+       }
+    }
     }
     until ($selection -eq '10'){}
     }
