@@ -62,3 +62,8 @@ do
         $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
+   '10'{}
+     }
+    }
+    until ($selection -eq '10'){}
+    }
