@@ -66,8 +66,8 @@ do
         Invoke-Expression $($PCMain.Content)
        }
     }
+     until ($selection -eq '10'){Invoke-Expression $($PCMain.Content)}
     }
-    until ($selection -eq '10'){Invoke-Expression $($PCMain.Content)}
-    }
+
     
 Show-MainMenu
