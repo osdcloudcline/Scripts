@@ -14,7 +14,8 @@ Write-Host " 1. OSD Cloud Configuration"
 Write-Host " 2. OSD Cloud Downloads"
 Write-Host " 3. Software Installation"
 Write-Host " 4. System Maintenance"
-Write-Host " 5. Exit PowerShell"
+Write-Host " 5. Backup/Restore User Profile Data"
+Write-Host " 6. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -38,12 +39,16 @@ do
         Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
         Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
         }
-  '5' { exit
+  '5' { cls
+        $UPBR = Invoke-WebRequest("")
+        Show-MainMenu
+        }
+  '6' { exit
         }
   
     }
     }
-    until ($selection -eq '5'){}
+    until ($selection -eq '6'){}
     }
 
 Function Get-RepairHealth(){
