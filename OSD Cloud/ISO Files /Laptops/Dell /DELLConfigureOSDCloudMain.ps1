@@ -10,14 +10,15 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. OSD Cloud - Initial Setup and Custimizations - Dell Alienware Laptops"
-Write-Host " 2. OSD Cloud - Initial Setup and Custimizations - Dell G-Series Laptops"
-Write-Host " 3. OSD Cloud - Initial Setup and Custimizations - Dell Inspiron Laptops"
-Write-Host " 4. OSD Cloud - Initial Setup and Custimizations - Dell Latitude Laptops"
-Write-Host " 5. OSD Cloud - Initial Setup and Custimizations - Dell Vostro Laptops"
-Write-Host " 6. OSD Cloud - Initial Setup and Custimizations - Dell XPS Laptops"
-Write-Host " 7. OSD Cloud - Initial Setup and Custimizations - ALL DELL Laptops"
-Write-Host " 8. Exit PowerShell"
+Write-Host " 1. Dell Alienware Laptops"
+Write-Host " 2. Dell G-Series Laptops"
+Write-Host " 3. Dell Inspiron Laptops"
+Write-Host " 4. Dell Latitude Laptops"
+Write-Host " 5. Dell Vostro Laptops"
+Write-Host " 6. Dell XPS Laptops"
+Write-Host " 7. ALL DELL Laptops"
+Write-Host " 8. Return to Main Menu"
+Write-Host " 9. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -52,10 +53,11 @@ do
         $ALLDellOSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/ALLDell.ps1"
         Invoke-Expression $($ALLDellOSDCloudConfigScript.Content)
         }
-   '8'{exit}
+   '8'{}
+   '9'{exit}
     }
     }
-    until ($selection -eq '8'){}
+    until ($selection -eq '9'){}
     }
 
     Show-MainMenu
