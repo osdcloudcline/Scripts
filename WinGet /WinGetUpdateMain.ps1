@@ -4,20 +4,20 @@
 Function Show-MainMenu{
     [CmdletBinding()]
     param(
-    [string]$Title = 'WinGet -  Software Update Main Menu',
+    [string]$Title = 'Software Update -  Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. WinGet - Update Standard Software Configuration"
-Write-Host " 2. WinGet - Update Advanced Software Configuration"
-Write-Host " 3. WinGet - Update Corporate Software Configuration"
-Write-Host " 4. WinGet - Update VDI Software Configuration"
-Write-Host " 5. WinGet - Update Management PC Software Configuration"
-Write-Host " 6. WinGet - Update Honeypot Configuration"
-Write-Host " 7. WinGet - Update IT Tech Configuration"
-Write-Host " 8. WinGet - Update Install and Update Scripts"
+Write-Host " 1. Update Standard Software Configuration"
+Write-Host " 2. Update Advanced Software Configuration"
+Write-Host " 3. Update Corporate Software Configuration"
+Write-Host " 4. Update VDI Software Configuration"
+Write-Host " 5. Update Management PC Software Configuration"
+Write-Host " 6. Update Honeypot Configuration"
+Write-Host " 7. Update IT Tech Configuration"
+Write-Host " 8. Update Install and Update Scripts"
 Write-Host " 9. Return to Main Menu" 
 Write-Host " 10. Exit PowerShell"
 do 
