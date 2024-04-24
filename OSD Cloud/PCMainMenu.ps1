@@ -22,15 +22,15 @@ do
   {
 
   '1' { cls
-        $OSDCloud = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1"
+        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
         Invoke-Expression $($OSDCloud.Content)
         }
   '2' { cls
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1"
+        $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
   '3' { cls
-        $WinGetConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1"
+        $WinGetConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
         Invoke-Expression $($WinGetConfigScript.Content)
         }
   '4' { cls
