@@ -1,8 +1,34 @@
 Write-Host
-Write-Host
-Write-Host
 Write-Host "This is an automated installation script that installs:" 
-Write-Host "System Pre-Reqs, PowerShell Modules, Web Browsers, Media"
+Write-Host "System Pre-Reqs:   Media"
+Write-Host
+Write-Host "NuGet, OneGet, WinGet and Program Management Pacage Management Modules "
+Write-Host
+Write-Host "PowerShell Modules:"
+Write-Host
+Write-Host  "OSD Module"
+Write-Host "OSD SUS Module"
+Write-Host "OSD Builder Module"
+Write-Host "OSD Update & Update Catalog Module"
+Write-Host "OSD Drivers Module"
+Write-Host "OSD Cloud Modules"
+Write-Host "OSD Software Module"
+Write-Host "OSD Deploy Module"
+Write-Host "Windows Update Module"
+Write-Host
+Write-Host "Mandated System Software:"
+Write-Host
+Write-Host ".NET Runtime 3.1, 5.0, 6.0, 7.0 and 8.0"
+Write-Host "Visual C++ Redistrib 2005, 2008, 2010, 2012, 2013, 2015, 2017 and 2002 x64/x86"
+Write-Host "XNA Redistribtable Framework 4.0"
+Write-Host "Open AL Framework 1.1"
+Write-Host "Microsoft Edge - Latest Version"
+Write-Host "Windows Terminal - Latest Version"
+Write-Host "Windows PowerShell 7.0 - Latest Version"
+Write-Host
+Write-Host " Software:"
+Write-Host 
+Write-Host ""
 Write-Host "software, System Utilities, Cloud Backup software,"
 Write-Host "Programming software, File Transfer software, "
 Write-Host "Office 2021 Suite, and debloats the PC"
