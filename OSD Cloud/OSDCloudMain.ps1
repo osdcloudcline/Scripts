@@ -65,8 +65,7 @@ do
     
        }
     }
-    }
     until ($selection -eq '10'){}
     }
-
+    
 Show-MainMenu
