@@ -7,7 +7,7 @@ Function Show-MainMenu{
     [string]$Title = 'OSD Cloud Initial Setup and Custimizations - Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
-}
+
 Write-Host " 1. Dell Laptops"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + ASUS AMD/Intel Motherboards"
@@ -65,6 +65,7 @@ do
         $PCMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/PCMainMenu.ps1")
         Invoke-Expression $($PCMain.Content)
        }
+    }
     }
      until ($selection -eq '10'){Invoke-Expression $($PCMain.Content)}
     }
