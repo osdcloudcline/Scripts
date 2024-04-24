@@ -51,7 +51,7 @@ do
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
-        
+        Show-MainMenu
         }
   '6' { exit
         }
