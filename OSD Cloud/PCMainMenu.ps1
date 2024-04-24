@@ -14,9 +14,10 @@ Write-Host "======= $Title ======"
 Write-Host " 1. OSD Cloud Configuration"
 Write-Host " 2. OSD Cloud Downloads"
 Write-Host " 3. Software Installation"
-Write-Host " 4. System Maintenance"
-Write-Host " 5. Backup/Restore User Profile Data"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 4. Software Updates/Upgrades"
+Write-Host " 5. System Maintenance"
+Write-Host " 6. Backup/Restore User Profile Data"
+Write-Host " 7. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -36,11 +37,15 @@ do
         Invoke-Expression $($WinGetConfigScript.Content)
         }
   '4' { cls
+        $WinGetConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+        Invoke-Expression $($WinGetConfigScript.Content)
+        }
+  '5' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
         Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
         Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
         }
-  '5' { cls
+  '6' { cls
         
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
@@ -53,12 +58,12 @@ do
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
-  '6' { exit
+  '7' { exit
         }
   
     }
     }
-    until ($selection -eq '6'){}
+    until ($selection -eq '7'){}
     }
 
 Function Get-RepairHealth(){
