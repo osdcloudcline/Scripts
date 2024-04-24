@@ -61,11 +61,13 @@ do
         $MSSurfaceOSDCloudConfigScript = Invoke-WebRequest ""
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
-   '10'{
-    
+   '10'{cls
+        $PCMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/PCMainMenu.ps1")
+        Invoke-Expression $($PCMain.Content)
        }
     }
-    until ($selection -eq '10'){}
+    }
+    until ($selection -eq '10'){Invoke-Expression $($PCMain.Content)}
     }
     
 Show-MainMenu
