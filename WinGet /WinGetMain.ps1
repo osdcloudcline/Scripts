@@ -4,7 +4,7 @@
 Function Show-MainMenu{
     [CmdletBinding()]
     param(
-    [string]$Title = 'WinGet -  Software Installation Main Menu',
+    [string]$Title = 'Software Installation Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 
