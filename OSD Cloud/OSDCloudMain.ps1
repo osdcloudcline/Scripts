@@ -8,6 +8,8 @@ Function Show-MainMenu{
     [string]$Question = 'What type of action do you want to perform?'
 )
 
+Clear-Host
+Write-Host "======= $Title ======"
 Write-Host " 1. Dell Laptops"
 Write-Host " 2. Dell Desktops"
 Write-Host " 3. Custom Built Desktops + ASUS AMD/Intel Motherboards"
