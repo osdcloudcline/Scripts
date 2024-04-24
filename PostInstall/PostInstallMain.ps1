@@ -22,7 +22,7 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       $W11StartMenu = Invoke-WebRequest("")
+       $W11StartMenu = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
        Invoke-Expression $($W11StartMenu.Content)
        }
  '2'{cls
