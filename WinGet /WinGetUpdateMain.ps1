@@ -17,9 +17,10 @@ Write-Host " 4. Update VDI Software Configuration"
 Write-Host " 5. Update Management PC Software Configuration"
 Write-Host " 6. Update Honeypot Configuration"
 Write-Host " 7. Update IT Tech Configuration"
-Write-Host " 8. Individual Update Scripts"
-Write-Host " 9. Return to Main Menu" 
-Write-Host " 10. Exit PowerShell"
+Write-Host " 8. Individual Computer Update Scripts"
+Write-Host " 9. Individual Software Update Scripts"
+Write-Host " 10. Return to Main Menu" 
+Write-Host " 11. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -55,17 +56,21 @@ do
         Invoke-Expression $($WinGetITTechSoftwareScript.Content)
         }
   '8' { cls
-        $WinGetIndividualScripts = Invoke-WebRequest ""
-        Invoke-Expression $($WinGetIndividualScripts.Content)
+        $WinGetIndividualPCScripts = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetIndividualPCScripts.Content)
         }
-  '9' { cls
+ '9' { cls
+        $WinGetIndividualSoftwareScripts = Invoke-WebRequest ""
+        Invoke-Expression $($WinGetIndividualSoftwareScripts.Content)
+        }
+  '10' { cls
         $WinGetMainMenuScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1"
         Invoke-Expression $($WinGetMainMenuScript.Content)
         }
-'10'{exit}
+'11'{exit}
     }
     }
-    until ($selection -eq '10'){}
+    until ($selection -eq '11'){}
     }
 
 
