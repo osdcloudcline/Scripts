@@ -49,7 +49,7 @@ do
         Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHdownloads
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
         Start-Process -FilePath $UPBRNewName
-        Show-MainMenu
+        
         }
   '6' { exit
         }
