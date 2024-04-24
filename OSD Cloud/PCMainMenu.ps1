@@ -10,6 +10,10 @@ Function Show-MainMenu{
 
 Clear-Host
 Write-Host "======= $Title ======"
+Write-Host " 1. OSD Cloud Configuration"
+Write-Host " 2. OSD Cloud Downloads"
+Write-Host " 3. Software Installation"
+Write-Host " 4. System Maintenance"
 Write-Host " 1. OSD Cloud - Initial Setup and Custimizations - Dell Laptops"
 Write-Host " 2. OSD Cloud - Initial Setup and Custimizations - Dell Desktops"
 Write-Host " 3. OSD Cloud - Initial Setup and Custimizations - Custom Built Desktops + ASUS AMD/Intel Motherboards"
