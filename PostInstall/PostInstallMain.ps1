@@ -26,7 +26,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($W11StartMenu.Content)
        }
  '2'{cls
-      $Debloat = Invoke-WebRequest("")
+      $Debloat = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/OSDebloatMain.ps1")
       Invoke-Expression $($Debloat.Content)
      }
  '3'{cls
