@@ -17,7 +17,7 @@ Write-Host " 3. Software Installation"
 Write-Host " 4. Software Updates/Upgrades"
 Write-Host " 5. System Maintenance"
 Write-Host " 6. Backup/Restore User Profile Data"
-Write-Host " 7. OSD Builder "
+Write-Host " 7. OSD Builder"
 Write-Host " 8. Exit PowerShell"
 do 
 {
