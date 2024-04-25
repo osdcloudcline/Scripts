@@ -17,6 +17,7 @@ Write-Host " 3. Software Installation"
 Write-Host " 4. Software Updates/Upgrades"
 Write-Host " 5. System Maintenance"
 Write-Host " 6. Backup/Restore User Profile Data"
+Write-Host " 7. OSD Builder "
 Write-Host " 7. Exit PowerShell"
 do 
 {
@@ -49,21 +50,28 @@ do
         
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
+        $UPBROrgName1 = (Test-Path -Path "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe")
+        $UPBRNewName1 = (Test-Path -Path "C:\OSDCloud\GitHub\downloads\UPBR.exe")
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
         $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
+        If($UPBROrgName1 -eq $false){
         Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHdownloads
+        }
+        ElseIf($UPBROrgName1 -eq $true){
         $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
+        }
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
-  '7' { exit
+  '7'{}
+  '8' { exit
         }
   
     }
     }
-    until ($selection -eq '7'){}
+    until ($selection -eq '8'){}
     }
 
 Function Get-RepairHealth(){
