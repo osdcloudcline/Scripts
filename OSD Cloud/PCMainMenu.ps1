@@ -59,7 +59,7 @@ do
         $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
-        
+        pause
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
