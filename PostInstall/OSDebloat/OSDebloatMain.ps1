@@ -36,9 +36,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
        Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
        $W11StartMenu = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
        Invoke-Expression $($W11StartMenu.Content)
        }
@@ -50,9 +58,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose 
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
        $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
        Invoke-Expression $($DebloatOS.Content)
      }
@@ -64,9 +80,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
        $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
        Invoke-Expression $($ClientFeatures.Content)
     }
@@ -78,9 +102,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
        $ServerRolesFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
        Invoke-Expression $($ServerRolesFeatures.Content)
     }
@@ -92,9 +124,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
        $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
       Invoke-Expression $($ChangePCName.Content)
  '6' {cls
@@ -105,9 +145,17 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
        $W11StartMenu = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
        Invoke-Expression $($W11StartMenu.Content)
        }
@@ -119,12 +167,19 @@ $selection = Read-Host 'Please choose an option'
        $FullOS = $($os.Caption)
        $OSBuild = $($os.Version) + "." + $UBR
        $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $EditionID = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name EditionID).EditionID
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
+       $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
        Write-Verbose "System Hostname: $PCName" -Verbose
-       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
-      
-      $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
-      Invoke-Expression $($DebloatOS.Content)
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
+       Write-Verbose "Operating System: $FullOS" -Verbose 
+       Write-Verbose "Build Number: $OSBuild" -Verbose 
+       Write-Verbose "Display Version: $DisplayVersion" -Verbose
+       Write-Verbose "OS Edition: $EditionID" -Verbose 
+       Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
+       Invoke-Expression $($DebloatOS.Content)
      }
  '8'{cls
       $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
