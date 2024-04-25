@@ -50,18 +50,16 @@ do
         
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
-        $UPBROrgName1 = (Test-Path -Path "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe")
-        $UPBRNewName1 = (Test-Path -Path "C:\OSDCloud\GitHub\downloads\UPBR.exe")
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
         $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
-        If($UPBROrgName1 -eq $false){
-        Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHdownloads
-        }
-        ElseIf($UPBROrgName1 -eq $true){
+        Write-Host "Downloading User Profile Backup and Restore..." -ForegroundColor Yellow
+        Write-Output "Download URL: $UPBR"
+        Write-Output "Download Location: $OSDCloudGHDownloads"
+        Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHDownloads
         $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
-        }
+        
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
