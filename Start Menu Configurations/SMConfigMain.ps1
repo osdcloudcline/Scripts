@@ -32,7 +32,7 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($AdvancedSM.Content)
      }
  '3'{cls
-      $CorporateSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+      $CorporateSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/CorporateSM.ps1")
       Invoke-Expression $($CorporateSM.Content)
     }
  '4'{cls
