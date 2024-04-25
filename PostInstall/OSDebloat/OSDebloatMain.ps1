@@ -29,29 +29,100 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose  
        $W11StartMenu = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
        Invoke-Expression $($W11StartMenu.Content)
        }
  '2'{cls
-      $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
-      Invoke-Expression $($DebloatOS.Content)
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose 
+       $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
+       Invoke-Expression $($DebloatOS.Content)
      }
  '3'{cls
-      $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
-      Invoke-Expression $($ClientFeatures.Content)
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+       Invoke-Expression $($ClientFeatures.Content)
     }
  '4'{cls
-      $ServerRolesFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
-      Invoke-Expression $($ServerRolesFeatures.Content)
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       $ServerRolesFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+       Invoke-Expression $($ServerRolesFeatures.Content)
     }
  '5'{cls
-      $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+       $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
       Invoke-Expression $($ChangePCName.Content)
  '6' {cls
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
        $W11StartMenu = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
        Invoke-Expression $($W11StartMenu.Content)
        }
  '7'{cls
+       $os = Get-CimInstance -ClassName Win32_OperatingSystem
+       $PCName = "$env:computername"
+       $OSVerison = $($os.Version)
+       $UBR = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+       $FullOS = $($os.Caption)
+       $OSBuild = $($os.Version) + "." + $UBR
+       $DisplayVersion = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name DisplayVersion).DisplayVersion
+       $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "Running Operating System: $CompleteOSInfo" -Verbose
+      
       $DebloatOS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
       Invoke-Expression $($DebloatOS.Content)
      }
