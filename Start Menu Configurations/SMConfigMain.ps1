@@ -15,7 +15,9 @@ Write-Host " 2. Advanced Configuration Start Menu"
 Write-Host " 3. Corporate Configuration Start Menu"
 Write-Host " 4. VDI Configuration Start Menu"
 Write-Host " 5. Management PC Configuration Start Menu"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 6. IT Tech Configuration Start Menu"
+Write-Host " 7. Honeypot Configuration Start Menu"
+Write-Host " 8. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -41,7 +43,14 @@ $selection = Read-Host 'Please choose an option'
       $ManagementPCSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
       Invoke-Expression $($ManagementPCSM.Content)
  }
- '6'{exit}
+ '6'{cls
+      $ITTechSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+      Invoke-Expression $($ITTechSM.Content)
+    }
+ '7'{cls
+      $HoneypotSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+      Invoke-Expression $($HoneypotSM.Content)
+ '8'{exit}
  }
  }
  until ($selection -eq '6'){exit}
