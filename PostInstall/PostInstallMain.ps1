@@ -11,7 +11,7 @@ Function Show-MainMenu{
 Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Windows 11 Start Menu Customization"
-Write-Host " 2. DeBloat Operating System"
+Write-Host " 2. Debloat Operating System"
 Write-Host " 3. Add Client OS Features"
 Write-Host " 4. Configure Server OS Roles and Features"
 Write-Host " 5. Change Computer Name"
