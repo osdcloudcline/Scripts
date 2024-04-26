@@ -37,7 +37,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSD Cloud Configuration"
 Write-Host " 2. OSD Cloud Downloads"
-Write-Host " 3. Software Installation"
+Write-Host " 3. Software Installation & Post-Install Configurations"
 Write-Host " 4. Software Updates/Upgrades"
 Write-Host " 5. System Maintenance"
 Write-Host " 6. Backup/Restore User Profile Data"
