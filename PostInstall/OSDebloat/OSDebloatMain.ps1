@@ -45,6 +45,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
        $W1022H2 = InvokeWebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/Windows%2010%20/DebloatWin10.ps1")
        Invoke-Expression $($W1022H2.Content)
       }
@@ -67,7 +69,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
-       
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
      }
  '3'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -88,6 +91,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
        
     }
  '4'{cls
@@ -109,7 +114,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
-      
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
     }
  '5'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -130,6 +136,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
     }   
  '6' {cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -150,7 +158,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
-       
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
        }
  '7'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -171,7 +180,8 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
-       
+       Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Import-Module -Name OSD -Force
      }
  '8'{cls
       
