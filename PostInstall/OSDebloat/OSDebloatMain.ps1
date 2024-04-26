@@ -45,7 +45,7 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
-       $W1022H2 = InvokeWebRequest("")
+       $W1022H2 = InvokeWebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/Windows%2010%20/DebloatWin10.ps1")
        Invoke-Expression $($W1022H2.Content)
       }
  '2'{cls
