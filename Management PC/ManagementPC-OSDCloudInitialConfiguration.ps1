@@ -123,21 +123,21 @@ Get-Win11ADK
 Get-Win11PEADK
 
 Function Get-Win11SDK(){
-$SDKSetup = "C:\downloads\winsdksetup.exe"
+$SDKSetup = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
 Write-Host "Installing Windows 11 SDK 22H2 10.0.22621" -ForegroundColor Green
 Start-Process -FilePath $SDKSetup
 Write-Host "Windows 11 SDK 22H2 10.0.22621 installed successfully" -ForegroundColor Green
 }
 
 Function Get-Win11ADK(){
-$ADKSetup = "C:\downloads\adksetup.exe"
+$ADKSetup = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 Write-Host "Installing Windows 11 ADK 22H2 10.0.22621" -ForegroundColor Green
 Start-Process -FilePath $ADKSetup
 Write-Host "Windows 11 ADK 22H2 10.0.22621 installed successfully" -ForegroundColor Green
 }
 
 Function Get-Win11PEADK(){
-$ADKPESetup = "C:\downloads\adkwinpesetup.exe"
+$ADKPESetup = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
 Write-Host "Installing Windows 11 ADK PE Add-On 22H2 10.0.22621" -ForegroundColor Green
 Start-Process -FilePath $ADKPESetup
 Write-Host "Windows 11 ADK PE Add-On 22H2 10.0.22621 installed successfully" -ForegroundColor Green
