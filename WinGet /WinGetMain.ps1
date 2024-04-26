@@ -18,9 +18,10 @@ Write-Host " 5. Install Management PC Software Configuration"
 Write-Host " 6. Install Honeypot Configuration"
 Write-Host " 7. Install IT Tech Configuration"
 Write-Host " 8. Individual Install Scripts"
-Write-Host " 9. Upgrade Software" 
-Write-Host " 10. Post Install Configuration"
-Write-Host " 11. Exit PowerShell"
+Write-Host " 9. Manufacturer Specific Scripts
+Write-Host " 10. Upgrade Software" 
+Write-Host " 11. Post Install Configuration"
+Write-Host " 12. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -58,17 +59,21 @@ $selection = Read-Host 'Please choose an option'
        $Individual = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
        Invoke-Expression $($Individual.Content)
     }
- '9'{cls
+'9'{cls
+       $Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
+       Invoke-Expression $($Manufacturer.Content)
+    } 
+ '10'{cls
        $Upgrade = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
        Invoke-Expression $($Upgrade.Content)
   }
-'10'{cls
+'11'{cls
        $PostInstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PostInstallMain.ps1")
        Invoke-Expression $($PostInstall.Content)
  }
- '11'{exit}
+ '12'{exit}
  }
  }
- until ($selection -eq '11'){exit}
+ until ($selection -eq '12'){exit}
 }
 Show-MainMenu 
