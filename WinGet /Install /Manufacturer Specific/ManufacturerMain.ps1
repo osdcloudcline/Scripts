@@ -54,7 +54,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($LianLi.Content)
     }
  '8'{cls
-       $Lenovo = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
+       $Lenovo = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Lenovo%20/Lenovo.ps1")
        Invoke-Expression $($Lenovo.Content)
     }
 '9'{cls
