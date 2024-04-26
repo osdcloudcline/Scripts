@@ -86,7 +86,10 @@ do
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
-  '7'{}
+  '7'{Write-Verbose "Installing and Importing OSDBuilder PowerShell Module..." -Verbose
+      Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
+      Import-Module -Name OSDBuilder -Force
+  }
   '8' { exit
         }
   
