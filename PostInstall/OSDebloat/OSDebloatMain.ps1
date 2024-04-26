@@ -130,7 +130,7 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
-       
+    }   
  '6' {cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
        $PCName = "$env:computername"
