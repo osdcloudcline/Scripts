@@ -28,15 +28,15 @@ do
   {
 
   '1' { cls
-        $DellLaptopsOSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1"
+        $DellLaptopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Laptops/Dell%20/DELLConfigureOSDCloudMain.ps1")
         Invoke-Expression $($DellLaptopsOSDCloudConfigScript.Content)
         }
   '2' { cls
-        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1"
+        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1")
         Invoke-Expression $($DellDesktopsOSDCloudConfigScript.Content)
         }
   '3' { cls
-        $CustomPCOSDCloudConfigScript = Invoke-WebRequest ""
+        $CustomPCOSDCloudConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Custom%20Build%20/CustomBuildConfigureOSDCloudMain.ps1")
         Invoke-Expression $($CustomPCOSDCloudConfigScript.Content)
         }
   '4' { cls
