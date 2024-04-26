@@ -32,7 +32,7 @@ do
         Invoke-Expression $($DellLaptopsOSDCloudConfigScript.Content)
         }
   '2' { cls
-        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest ""
+        $DellDesktopsOSDCloudConfigScript = Invoke-WebRequest "https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/ISO%20Files%20/Desktops/Dell%20/DellDesktopsConfigureOSDCloudMain.ps1"
         Invoke-Expression $($DellDesktopsOSDCloudConfigScript.Content)
         }
   '3' { cls
