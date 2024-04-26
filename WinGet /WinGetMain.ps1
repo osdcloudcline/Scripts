@@ -18,7 +18,7 @@ Write-Host " 5. Install Management PC Software Configuration"
 Write-Host " 6. Install Honeypot Configuration"
 Write-Host " 7. Install IT Tech Configuration"
 Write-Host " 8. Individual Install Scripts"
-Write-Host " 9. Manufacturer Specific Scripts
+Write-Host " 9. Manufacturer Specific Scripts"
 Write-Host " 10. Upgrade Software" 
 Write-Host " 11. Post Install Configuration"
 Write-Host " 12. Exit PowerShell"
