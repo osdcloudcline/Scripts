@@ -46,7 +46,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($HP.Content)
  }
  '6'{cls
-       $Intel = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
+       $Intel = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Intel/Intel.ps1")
        Invoke-Expression $($Intel.Content)
     }
  '7'{cls
