@@ -20,4 +20,44 @@ Write-Host " 7. Lian-Li Software"
 Write-Host " 8. Lenovo Computers"
 Write-Host " 9. Return to Main"
 
-
+do
+{
+$selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+  '1' {cls
+       $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
+       Invoke-Expression $($AMD.Content)
+       }
+ '2'{cls
+       $ASUS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
+       Invoke-Expression $($ASUS.Content)
+     }
+ '3'{cls
+       $Acer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+       Invoke-Expression $($Acer.Content)
+    }
+ '4'{cls
+       $Dell = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+       Invoke-Expression $($Dell.Content)
+    }
+ '5'{cls
+       $HP = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+       Invoke-Expression $($HP.Content)
+ }
+ '6'{cls
+       $Intel = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
+       Invoke-Expression $($Intel.Content)
+    }
+ '7'{cls
+       $LianLi = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
+       Invoke-Expression $($LianLi.Content)
+    }
+ '8'{cls
+       $Lenovo = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
+       Invoke-Expression $($Lenovo.Content)
+    }
+'9'{cls
+       $Main = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
+       Invoke-Expression $($Main.Content)
+    }
