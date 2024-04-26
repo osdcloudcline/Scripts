@@ -38,7 +38,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Acer.Content)
     }
  '4'{cls
-       $Dell = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+       $Dell = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Dell.ps1")
        Invoke-Expression $($Dell.Content)
     }
  '5'{cls
