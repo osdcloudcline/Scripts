@@ -26,7 +26,7 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
+       $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/AMD%20/AMD.ps1")
        Invoke-Expression $($AMD.Content)
        }
  '2'{cls
