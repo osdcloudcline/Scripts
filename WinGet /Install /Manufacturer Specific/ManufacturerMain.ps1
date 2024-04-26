@@ -61,3 +61,8 @@ $selection = Read-Host 'Please choose an option'
        $Main = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
        Invoke-Expression $($Main.Content)
     }
+}
+ }
+ until ($selection -eq '9'){Invoke-Expression $($Main.Content)}
+}
+Show-MainMenu 
