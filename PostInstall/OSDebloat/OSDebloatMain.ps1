@@ -174,12 +174,10 @@ $selection = Read-Host 'Please choose an option'
        
      }
  '8'{cls
-      $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
-      Invoke-Expression $($ClientFeatures.Content)
+      
     }
  '9'{cls
-      $ServerRolesFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
-      Invoke-Expression $($ServerRolesFeatures.Content)
+      
     }
  '10'{exit}
  }
