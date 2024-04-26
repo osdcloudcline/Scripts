@@ -26,7 +26,7 @@ do
 $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
-  '1' {cls
+ '1' {cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
        $PCName = "$env:computername"
        $OSVerison = $($os.Version)
@@ -47,7 +47,7 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
        $W1022H2 = InvokeWebRequest("")
        Invoke-Expression $($W1022H2.Content)
-       }
+      }
  '2'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
        $PCName = "$env:computername"
