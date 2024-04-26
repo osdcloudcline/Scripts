@@ -15,7 +15,7 @@ Write-Host " 1. Windows 10"
 Write-Host " 2. Windows 11 23H2"
 Write-Host " 3. Windows 11 24H1"
 Write-Host " 4. Windows 11 24H2"
-Write-Host " 5. Windows 11 25H1
+Write-Host " 5. Windows 11 25H1"
 Write-Host " 6. Windows 11 25H2"
 Write-Host " 7. Windows 12 RTM"
 Write-Host " 8. Return to Post-Install Main Menu"
