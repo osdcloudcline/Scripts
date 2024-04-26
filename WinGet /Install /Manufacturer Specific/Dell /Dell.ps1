@@ -53,3 +53,6 @@ Write-Host "Installing $OSDGroup3 Modules..." -ForegroundColor Cyan
 Write-Verbose "Installing: $OSDModule4..." -Verbose
 Install-Module -Name OSDCloudCLI -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDCloudCLI -Force
+Write-Verbose "Installing: $OSDModule5..." -Verbose
+Install-Module -Name OSDCloudGUI -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDCloudGUI -Force
