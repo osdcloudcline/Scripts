@@ -54,7 +54,6 @@ $selection = Read-Host 'Please choose an option'
  '8'{exit}
  }
  }
- }
  until ($selection -eq '8'){exit}
 }
 
