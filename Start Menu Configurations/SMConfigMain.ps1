@@ -50,7 +50,9 @@ $selection = Read-Host 'Please choose an option'
  '7'{cls
       $HoneypotSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/HoneypotSM.ps1")
       Invoke-Expression $($HoneypotSM.Content)
+    }
  '8'{exit}
+ }
  }
  }
  until ($selection -eq '8'){exit}
