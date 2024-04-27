@@ -16,7 +16,8 @@ Write-Host " 3. Debloat Operating System"
 Write-Host " 4. Add Client OS Features"
 Write-Host " 5. Configure Server OS Roles and Features"
 Write-Host " 6. Change Computer Name"
-Write-Host " 7. Exit PowerShell"
+Write-Host " 7. Install OEM Manufacturer Specific Software"
+Write-Host " 8. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -46,10 +47,13 @@ $selection = Read-Host 'Please choose an option'
       $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
       Invoke-Expression $($ChangePCName.Content)
  }
- '7'{exit}
+ '7'{$Manufacturer = Invoke-WebRequest ("")
+     Invoke-Expression $($Manufacturer.Content)
+    }
+ '8'{exit}
  }
  }
- until ($selection -eq '7'){exit}
+ until ($selection -eq '8'){exit}
 }
 
 Show-MainMenu 
