@@ -9,15 +9,19 @@ $DellModule8 = "Dell Power Max"
 $DellModule9 = "Dell BIOS"
 $DellModule10 = "Set BIOS"
 $DellModule11 = "Dell Warranty"
-$DellModule12 = "Dell EMC"
+$DellModule12 = "Dell Support Info"
 $DellModule13 = "Get Dell Driver Packs"
 $DellModule14 = "Dell BIOS Driver"
+
+$SYSGroup1 = "Package Managers"
 
 $OSDGroup1 = "OSD"
 $OSDGroup2 = "OSD: Configuration"
 $OSDGroup3 = "OSD: Cloud"
 $OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
 
+$MfrGroup1 = "Dell PowerShell"
+$MfrGroup2 = "VMWare PowerShell"
 
 $OSDModule1 = "OSD"
 $OSDModule2 = "OSD Builder"
@@ -51,21 +55,34 @@ $CloudModule15 = "Azure Batch"
 $CloudModule16 = "Azure Monitor"
 $CloudModule17 = "Windows 365 Cloud PC"
 
+$VMModule1 = "ESXI Windows Image Builder"
+
+$SYSModule1 = "Package Management"
+$SYSModule2 = "Chocolatey"
+
 Write-Host "Installing PowerShell Modules...." -ForegroundColor Cyan
 Write-Host
 Write-Host
+Write-Host "Installing $SYSGroup1 Modules..." -ForegroundColor Cyan
+Write-Verbose "Installing: $SYSModule1...Module No: 1 of 2" -Verbose
+Install-Module -Name PackageManagement -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name PackageManagement -Force
+Write-Verbose "Installing: $SYSModule2...Module No: 2 of 2" -Verbose
+Install-Module -Name Choco -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Choco -Force
+
 Write-Host "Installing $OSDGroup1 Modules..." -ForegroundColor Cyan
-Write-Verbose "Installing: $OSDModule1..." -Verbose
+Write-Verbose "Installing: $OSDModule1...Module No: 1 of 1" -Verbose
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
 
 Write-Host "Installing $OSDGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
-Write-Verbose "Installing: $OSDModule2..." -Verbose
+Write-Verbose "Installing: $OSDModule2...Module No: 1 of 2" -Verbose
 Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDBuilder -Force
-Write-Verbose "Installing: $OSDModule3..." -Verbose
+Write-Verbose "Installing: $OSDModule3...Module No: 2 of 2" -Verbose
 Install-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDSUS -Force
 
@@ -137,8 +154,102 @@ Write-Verbose "Installing: $CloudModule17...Module No: 20 of 20" -Verbose
 Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name PSCloudPC -Force
 
-
-
 Write-Host "Installing $OSDGroup4 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
+Write-Verbose "Installing: $OSDModule7...Module No: 1 of 7" -Verbose
+Install-Module -Name OSDUpdate -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDUpdate -Force
+Write-Verbose "Installing: $OSDModule8...Module No: 2 of 7" -Verbose
+Install-Module -Name AutopilotOOBE -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name AutopilotOOBE -Force
+Write-Verbose "Installing: $OSDModule9...Module No: 3 of 7" -Verbose
+Install-Module -Name OSDDrivers -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDDrivers -Force
+Write-Verbose "Installing: $OSDModule10...Module No: 4 of 7" -Verbose
+Install-Module -Name OSDeploy -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDeploy -Force
+Write-Verbose "Installing: $OSDModule11...Module No: 5 of 7" -Verbose
+Install-Module -Name OSDSoftware -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDSoftware -Force
+Write-Verbose "Installing: $OSDModule12...Module No: 6 of 7" -Verbose
+Install-Module -Name OSDCatalog -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDCatalog -Force
+Write-Verbose "Installing: $OSDModule13...Module No: 7 of 7" -Verbose
+Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDProgress -Force
+
+Write-Host "Installing $MfrGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $DellModule1...Module No: 1 of 14" -Verbose
+Install-Module -Name DellBIOSProvider -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name DellBIOSProvider -Force
+Write-Verbose "Installing: $DellModule2...Module No: 2 of 14" -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name GetBIOS -Force
+Write-Verbose "Installing: $DellModule3...Module No: 3 of 14" -Verbose
+Install-Module -Name Get-DellWarranty -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Get-DellWarranty -Force
+Write-Verbose "Installing: $DellModule4...Module No: 4 of 14" -Verbose
+Install-Module -Name Dell.PowerStore -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Dell.PowerStore -Force
+Write-Verbose "Installing: $DellModule5...Module No: 5 of 14" -Verbose
+Install-Module -Name DellOpenManage -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name DellOpenManage -Force
+Write-Verbose "Installing: $DellModule6...Module No: 6 of 14" -Verbose
+Install-Module -Name DellWarrantyServiceTag -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name DellWarrantyServiceTag -Force
+Write-Verbose "Installing: $DellModule7...Module No: 7 of 14" -Verbose
+Install-Module -Name Dell.Unity -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Dell.Unity -Force
+Write-Verbose "Installing: $DellModule8...Module No: 8 of 14" -Verbose
+Install-Module -Name Dell.PowerMax -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Dell.PowerMax -Force
+Write-Verbose "Installing: $DellModule9...Module No: 9 of 14" -Verbose
+Install-Module -Name DellBios -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name DellBios -Force
+Write-Verbose "Installing: $DellModule10...Module No: 10 of 14" -Verbose
+Install-Module -Name SetBIOS -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name SetBIOS -Force
+Write-Verbose "Installing: $DellModule11...Module No: 11 of 14" -Verbose
+Install-Module -Name DellWarranty -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name DellWarranty -Force
+Write-Verbose "Installing: $DellModule12...Module No: 12 of 14" -Verbose
+Install-Module -Name Get-DellSupportInfo -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Get-DellSupportInfo -Force
+Write-Verbose "Installing: $DellModule13...Module No: 13 of 14" -Verbose
+Install-Module -Name Get-DriversPackFromDell -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Get-DriversPackFromDell -Force
+Write-Verbose "Installing: $DellModule14...Module No: 14 of 14" -Verbose
+Install-Module -Name Dell-BIOSDriver -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Dell-BIOSDriver -Force
+
+Write-Host "Installing $MfrGroup2 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $VMModule1...Module No: 1 of 1" -Verbose
+Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name WindowsImageBuilder -Force
+
+$DellSoftware1 = "Dell Command | Update for Windows Universal Application"
+$DellSoftware2 = "Dell Command | Update"
+$DellSoftware3 = "Dell Display Manager"
+$DellSoftware4 = "Dell Command | Configure"
+$DellSoftware5 = "Dell Digital Delivery"
+
+$MfrSoftwareGroup1 = "Dell OEM"
+
+Write-Host "Installing $MfrSoftwareGroup1 Software..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $DellSoftware1...OEM Software No: 1 of 5" -Verbose
+winget install --id Dell.CommandUpdate.Universal --accept-source-agreements  --accept-source-agreements --force
+Write-Verbose "Installing: $DellSoftware2...OEM Software No: 2 of 5" -Verbose
+winget install --id Dell.CommandUpdate --accept-source-agreements  --accept-source-agreements --force
+Write-Verbose "Installing: $DellSoftware3...OEM Software No: 3 of 5" -Verbose
+winget install --id Dell.DisplayManager --accept-source-agreements  --accept-source-agreements --force
+Write-Verbose "Installing: $DellSoftware4...OEM Software No: 4 of 5" -Verbose
+winget install --id Dell.CommandConfigure --accept-source-agreements  --accept-source-agreements --force
+Write-Verbose "Installing: $DellSoftware5...OEM Software No: 4 of 5" -Verbose
+winget install --id 9PPRLNT023WC --accept-source-agreements  --accept-source-agreements --force
