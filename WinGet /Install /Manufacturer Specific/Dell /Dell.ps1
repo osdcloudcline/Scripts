@@ -23,10 +23,10 @@ $OSDModule2 = "OSD Builder"
 $OSDModule3 = "OSD SUS"
 $OSDModule4 = "OSD CloudCLI"
 $OSDModule5 = "OSD CloudGUI"
-$OSDModule6 = "OSD Update"
-$OSDModule7 = "Autopilot OOBE"
-$OSDModule8 = "OSD Drivers"
-$OSDModule9 = "OSD CloudAzure"
+$OSDModule6 = "OSD CloudAzure"
+$OSDModule7 = "OSD Update"
+$OSDModule8 = "Autopilot OOBE"
+$OSDModule9 = "OSD Drivers"
 $OSDModule10 ="OSD Deploy"
 $OSDModule11 = "OSD Software"
 $OSDModule12 = "OSD Catalog"
@@ -34,6 +34,20 @@ $OSDModule13 = "OSD Progress"
 
 $CloudModule1 = "Azure"
 $CloudModule2 = "Azure Accounts"
+$CloudModule3 = "Azure Storage"
+$CloudModule4 = "Azure Resources"
+$CloudModule5 = "Azure Key Vault"
+$CloudModule6 = "Azure Compute"
+$CloudModule7 = "Azure Automation"
+$CloudModule8 = "Azure Network"
+$CloudModule9 = "Azure Api Management"
+$CloudModule10 = "Azure Advisor"
+$CloudModule11 = "Azure Analysis Services"
+$CloudModule12 = "Azure Billing"
+$CloudModule13 = "Azure Application Insights"
+$CloudModule14 = "Azure CDN"
+$CloudModule15 = "Azure Batch"
+$CloudModule16 = "Azure Monitor"
 
 Write-Host "Installing PowerShell Modules...." -ForegroundColor Cyan
 Write-Host "Installing $OSDGroup1 Modules..." -ForegroundColor Cyan
@@ -56,3 +70,36 @@ Import-Module -Name OSDCloudCLI -Force
 Write-Verbose "Installing: $OSDModule5..." -Verbose
 Install-Module -Name OSDCloudGUI -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDCloudGUI -Force
+Write-Verbose "Installing: $OSDModule6..." -Verbose
+Install-Module -Name OSDCloudAzure -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSDCloudAzure -Force
+Write-Verbose "Installing: $CloudModule1..." -Verbose
+Install-Module -Name Azure -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Azure -Force
+Write-Verbose "Installing: $CloudModule2..." -Verbose
+Install-Module -Name Az.Accounts -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Az.Accounts -Force
+Write-Verbose "Installing: $CloudModule3..." -Verbose
+Install-Module -Name Azure.Storage -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Azure.Storage -Force
+Write-Verbose "Installing: $CloudModule4..." -Verbose
+Install-Module -Name Az.Resources -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Az.Resources -Force
+
+Write-Verbose "Installing: $CloudModule5..." -Verbose
+Install-Module -Name Azure -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Azure -Force
+Write-Verbose "Installing: $CloudModule6..." -Verbose
+Install-Module -Name Az.Accounts -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Az.Accounts -Force
+Write-Verbose "Installing: $CloudModule7..." -Verbose
+Install-Module -Name Azure.Storage -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Azure.Storage -Force
+Write-Verbose "Installing: $CloudModule8..." -Verbose
+Install-Module -Name Az.Resources -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Az.Resources -Force
+
+
+
+
+
