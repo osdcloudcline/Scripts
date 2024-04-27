@@ -655,10 +655,13 @@ Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGH
 Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 
-Write-Host "Downloading $app57 from Microsoft Office CDN...." -ForegroundColor Cyan 
+Write-Host "Downloading $app57 - Download Source: Microsoft Office CDN...." -ForegroundColor Cyan 
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd'
 Invoke-Expression $($Office2021SetupDLCMDUrl.Content)
 
-Write-Host "Installing $app57 from Microsoft Office CDN...." -ForegroundColor Cyan 
+Write-Host "Installing $app57 - Microsoft Office CDN...." -ForegroundColor Cyan 
 $Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
 Invoke-Expression $($Office2021SetupCMDUrl.Content)
+
+$Manufacturer = Invoke-WebRequest("")
+Invoke-Expression $($Manufacturer.Content)
