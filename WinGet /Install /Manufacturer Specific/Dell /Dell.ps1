@@ -72,6 +72,8 @@ Install-Module -Name Choco -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name Choco -Force
 
 Write-Host "Installing $OSDGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
 Write-Verbose "Installing: $OSDModule1...Module No: 1 of 1" -Verbose
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
