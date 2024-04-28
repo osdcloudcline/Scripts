@@ -48,6 +48,13 @@ $LenovoModule5 = "Lenovo bATTERY"
 $LenovoModule6 = "Get Lenovo Warranty Info"
 $LenovoModule7 = "Lenovo BIOS
 
+$OSDGroup1 = "OSD"
+$OSDGroup2 = "OSD: Configuration"
+$OSDGroup3 = "OSD: Cloud"
+$OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
+
+$MfrGroup1 = "Lenovo PowerShell"
+
 $VMModule1 = "ESXI Windows Image Builder"
 
 $SYSModule1 = "Package Management"
