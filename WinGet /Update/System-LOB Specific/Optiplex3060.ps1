@@ -64,6 +64,11 @@ Start-Transcript -Path "C:\Logs\Powershell\PreReqSoftwareInstall.log"
 Set-ExecutionPolicy -Scope LocalMachine unrestricted -Force -ErrorAction SilentlyContinue
 Set-ExecutionPolicy -Scope CurrentUser unrestricted -Force -ErrorAction SilentlyContinue
 
+$OSDGroup1 = "OSD"
+$OSDGroup2 = "OSD: Configuration"
+$OSDGroup3 = "OSD: Cloud"
+$OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
+$OSDGroup5 = "OSD: Microsoft Graph"
 
 $PSModule9 = "NuGet"
 $PSModule10 = "OneGet"
@@ -107,68 +112,30 @@ $PSModule8 = "OSD Deploy Module"
 $PSModule13 = "Windows Update Module"
 
 Write-Host "Accessing www.powershellgallery.com package database to update Powershell Modules..." -ForegroundColor Cyan 
-		
-Write-Host "Updating: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+
+Write-Host "Updating: $OSDGroup1 Modules..."
+Write-Verbose "Updating: $PSModule1..." -Verbose 
 Update-Module -Name OSD -Repository PSGallery -Force
 Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Verbose "Importing: $PSModule1..." -Verbose 
 Import-Module -Name OSD -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 	
-Write-Host "Updating: $PSModule2..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Verbose "Updating: $PSModule2..." -Verbose  
 Update-Module -Name OSDSUS -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule2..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Verbose "Importing: $PSModule2..." -Verbose 
 Import-Module -Name OSDSUS -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
-Write-Host "Updating: $PSModule3..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Verbose  "Updating: $PSModule3..." -Verbose 
 Update-Module -Name OSDBuilder -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule3..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Write-Verbose  "Importing: $PSModule3..." -Verbose 
 Import-Module -Name OSDBuilder -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
-Write-Host "Updating: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDUpdate -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-Write-Host "Updating: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 		
-Update-Module -Name OSDCatalog -Repository PSGallery -Force
-Start-Sleep -Seconds 5		
-Write-Host "Importing: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDCatalog -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
 
-Write-Host "Updating: $PSModule5..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDDrivers -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule5..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDDrivers -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-
-Write-Host "Updating: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDSoftware -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDSoftware -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-		
-Write-Host "Updating: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDeploy -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDeploy -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-		
-Write-Host "Updating: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
 
 $CloudModule1 = "Azure"
 $CloudModule2 = "Azure Accounts"
@@ -273,6 +240,46 @@ Write-Verbose "Updating: $CloudModule17...Module No: 20 of 20" -Verbose
 Update-Module -Name PSCloudPC -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
+
+Write-Host "Updating $OSDGroup4 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose  "Updating: $PSModule4..." -Verbose 
+Update-Module -Name OSDUpdate -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Verbose  "Importing: $PSModule4..." -Verbose 
+Import-Module -Name OSDUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+Write-Verbose  "Updating: $PSModule4..." -Verbose 		
+Update-Module -Name OSDCatalog -Repository PSGallery -Force
+Start-Sleep -Seconds 5		
+Write-Verbose  "Importing: $PSModule4..." -Verbose 
+Import-Module -Name OSDCatalog -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+Write-Verbose  "Updating: $PSModule5..." -Verbose 
+Update-Module -Name OSDDrivers -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Verbose  "Importing: $PSModule5..." -Verbose 
+Import-Module -Name OSDDrivers -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+Write-Verbose  "Updating: $PSModule7..." -Verbose 
+Update-Module -Name OSDSoftware -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Verbose  "Importing: $PSModule7..." -Verbose 
+Import-Module -Name OSDSoftware -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+Write-Verbose  "Updating: $PSModule8..." -Verbose 
+Update-Module -Name OSDeploy -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Verbose  "Importing: $PSModule8..." -Verbose 
+Import-Module -Name OSDeploy -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5		
+Write-Verbose  "Updating: $PSModule13..." -Verbose 
+Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Verbose  "Importing: $PSModule13..." -Verbose 
+Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
 		
 $MSGraphModule1 = "MS Graph"
 $MSGraphModule2 = "MS Graph Intune"
@@ -283,6 +290,7 @@ $MSGraphModule6 = "MS Graph Mail"
 $MSGraphModule7 = "MS Graph Identity Directory Management"
 $MSGraphModule8 = "MS Graph Teams"
 $MSGraphModule9 = "MS Graph Device Management"
+
 
 
 
