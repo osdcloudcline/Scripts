@@ -64,6 +64,8 @@ Write-Host
 Write-Verbose "Installing: $OSDModule1..." Verbose
 Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
+Import-Module -Name OSD -Force
+Start-Sleep -Seconds 5
 Write-Host
 
 Write-Host "Installing $OSDGroup2 Modules..." -ForegroundColor Cyan
@@ -72,9 +74,16 @@ Write-Host
 Write-Verbose "Installing: $OSDModule2..." -Verbose 
 Install-Module -Name OSDBuilder -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
+Import-Module -Name OSDBuilder -Force
+Start-Sleep -Seconds 5
 Write-Host
 
-
+Write-Verbose "Installing: $OSDModule3...Module No: 2 of 2" -Verbose
+Install-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDSUS -Force
+Start-Sleep -Seconds 5
+Write-Host
 
 # Cloud PowerShell Modules
 
