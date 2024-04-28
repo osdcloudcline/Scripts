@@ -30,6 +30,9 @@ $CloudModule15 = "Azure Batch"
 $CloudModule16 = "Azure Monitor"
 $CloudModule17 = "Windows 365 Cloud PC"
 
+$MSGraphModule1 = "MS Graph"
+
+
 $VMModule1 = "ESXI Windows Image Builder"
 
 $SYSModule1 = "Package Management"
