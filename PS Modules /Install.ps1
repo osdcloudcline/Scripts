@@ -50,6 +50,8 @@ $CloudModule16 = "Azure Batch"
 $CloudModule17 = "Azure Monitor"
 $CloudModule18 = "Windows 365 Cloud PC"
 
+$VMModules
+
 Write-Host
 Write-Host
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
