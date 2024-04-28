@@ -274,6 +274,16 @@ Update-Module -Name PSCloudPC -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
 		
+$MSGraphModule1 = "MS Graph"
+$MSGraphModule2 = "MS Graph Intune"
+$MSGraphModule3 = "MS Graph Groups"
+$MSGraphModule4 = "MS Graph Users"
+$MSGraphModule5 = "MS Graph Sites"
+$MSGraphModule6 = "MS Graph Mail"
+$MSGraphModule7 = "MS Graph Identity Directory Management"
+$MSGraphModule8 = "MS Graph Teams"
+$MSGraphModule9 = "MS Graph Device Management"
+
 
 
 $DellModule1 = "Dell BIOS Provider"
