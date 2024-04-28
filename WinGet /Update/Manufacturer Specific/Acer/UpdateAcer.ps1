@@ -147,8 +147,30 @@ Write-Verbose "Updating: $CloudModule17...Module No: 20 of 20" -Verbose
 Update-Module -Name PSCloudPC -Force
 Import-Module -Name PSCloudPC -Force
 
-
-
+Write-Host "Updating $OSDGroup4 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Updating: $OSDModule7...Module No: 1 of 7" -Verbose
+Update-Module -Name OSDUpdate -Force -
+Import-Module -Name OSDUpdate -Force
+Write-Verbose "Updating: $OSDModule8...Module No: 2 of 7" -Verbose
+Update-Module -Name AutopilotOOBE -Force 
+Import-Module -Name AutopilotOOBE -Force
+Write-Verbose "Updating: $OSDModule9...Module No: 3 of 7" -Verbose
+Update-Module -Name OSDDrivers -Force 
+Import-Module -Name OSDDrivers -Force
+Write-Verbose "Updating: $OSDModule10...Module No: 4 of 7" -Verbose
+Update-Module -Name OSDeploy -Force 
+Import-Module -Name OSDeploy -Force
+Write-Verbose "Updating: $OSDModule11...Module No: 5 of 7" -Verbose
+Update-Module -Name OSDSoftware -Force 
+Import-Module -Name OSDSoftware -Force
+Write-Verbose "Updating: $OSDModule12...Module No: 6 of 7" -Verbose
+Update-Module -Name OSDCatalog -Force 
+Import-Module -Name OSDCatalog -Force
+Write-Verbose "Updating: $OSDModule13...Module No: 7 of 7" -Verbose
+Update-Module -Name OSDProgress -Force 
+Import-Module -Name OSDProgress -Force
 
 Write-Host "Updating $OSDGroup5 Modules..." -ForegroundColor Cyan
 Write-Host
@@ -180,32 +202,6 @@ Import-Module -Name Microsoft.Graph.Teams -Force
 Write-Verbose "Updating: $MSGraphModule9...Module No: 9 of 9" -Verbose
 Update-Module -Name Microsoft.Graph.DeviceManagement -Force 
 Import-Module -Name Microsoft.Graph.DeviceManagement -Force
-
-Write-Host "Updating $OSDGroup4 Modules..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-Write-Verbose "Updating: $OSDModule7...Module No: 1 of 7" -Verbose
-Update-Module -Name OSDUpdate -Force -
-Import-Module -Name OSDUpdate -Force
-Write-Verbose "Updating: $OSDModule8...Module No: 2 of 7" -Verbose
-Update-Module -Name AutopilotOOBE -Force 
-Import-Module -Name AutopilotOOBE -Force
-Write-Verbose "Updating: $OSDModule9...Module No: 3 of 7" -Verbose
-Update-Module -Name OSDDrivers -Force 
-Import-Module -Name OSDDrivers -Force
-Write-Verbose "Updating: $OSDModule10...Module No: 4 of 7" -Verbose
-Update-Module -Name OSDeploy -Force 
-Import-Module -Name OSDeploy -Force
-Write-Verbose "Updating: $OSDModule11...Module No: 5 of 7" -Verbose
-Update-Module -Name OSDSoftware -Force 
-Import-Module -Name OSDSoftware -Force
-Write-Verbose "Updating: $OSDModule12...Module No: 6 of 7" -Verbose
-Update-Module -Name OSDCatalog -Force 
-Import-Module -Name OSDCatalog -Force
-Write-Verbose "Updating: $OSDModule13...Module No: 7 of 7" -Verbose
-Update-Module -Name OSDProgress -Force 
-Import-Module -Name OSDProgress -Force
-
 
 Write-Host "Updating $MfrGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
