@@ -7,6 +7,10 @@ $OSDGroup2 = "OSD: Configuration"
 $OSDGroup3 = "OSD: Cloud"
 $OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
 $OSDGroup5 = "OSD: Microsoft Graph"
+$VMGroup1 = "VMWare ESXI"
+$VMGroup2 = "VMWare Workstation Pro"
+$VMGroup3 = "Microsoft Hyper-V"
+
 
 #################################
 ## PS Modules to be installed ###
