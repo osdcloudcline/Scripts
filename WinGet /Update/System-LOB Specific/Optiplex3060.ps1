@@ -106,6 +106,25 @@ $PSModule7 = "OSD Software Module"
 $PSModule8 = "OSD Deploy Module"
 $PSModule13 = "Windows Update Module"
 
+
+$CloudModule1 = "Azure"
+$CloudModule2 = "Azure Accounts"
+$CloudModule3 = "Azure Storage"
+$CloudModule4 = "Azure Resources"
+$CloudModule5 = "Azure Key Vault"
+$CloudModule6 = "Azure Compute"
+$CloudModule7 = "Azure Automation"
+$CloudModule8 = "Azure Network"
+$CloudModule9 = "Azure Api Management"
+$CloudModule10 = "Azure Advisor"
+$CloudModule11 = "Azure Analysis Services"
+$CloudModule12 = "Azure Billing"
+$CloudModule13 = "Azure Application Insights"
+$CloudModule14 = "Azure CDN"
+$CloudModule15 = "Azure Batch"
+$CloudModule16 = "Azure Monitor"
+$CloudModule17 = "Windows 365 Cloud PC"
+
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Cyan 
 		
 Write-Host "Updating: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
