@@ -156,6 +156,13 @@ Write-Verbose "Installing: $OSDModule13...Module No: 7 of 7" -Verbose
 Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDProgress -Force
 
+Write-Host "Installing $MfrGroup2 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $VMModule1...Module No: 1 of 1" -Verbose
+Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name WindowsImageBuilder -Force
+
 
 
 
