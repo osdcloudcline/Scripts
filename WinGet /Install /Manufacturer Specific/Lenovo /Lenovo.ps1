@@ -163,4 +163,11 @@ Write-Verbose "Installing: $VMModule1...Module No: 1 of 1" -Verbose
 Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name WindowsImageBuilder -Force
 
+$MfrGroup1 = "Lenovo"
+
+$LenovoSoftware1 = "Lenovo Update Retriever"
+$LenovoSoftware2 = "Lenovo Thin Installer"
+$LenovoSoftware3 = "Lenovo System Update"
+$LenovoSoftware4 = "Lenovo Dock Manager"
+
 
