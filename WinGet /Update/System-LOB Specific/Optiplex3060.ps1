@@ -243,6 +243,28 @@ Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
+
+$DellModule1 = "Dell BIOS Provider"
+$DellModule2 = "Get BIOS"
+$DellModule3 = "Dell Warranty"
+$DellModule4 = "Dell Power Store"
+$DellModule5 = "Dell Open Manage"
+$DellModule6 = "Dell Warranty Service Tag"
+$DellModule7 = "Dell Unity"
+$DellModule8 = "Dell Power Max"
+$DellModule9 = "Dell BIOS"
+$DellModule10 = "Set BIOS"
+$DellModule11 = "Dell Warranty"
+$DellModule12 = "Dell Support Info"
+$DellModule13 = "Get Dell Driver Packs"
+$DellModule14 = "Dell BIOS Driver"
+
+
+
+
+
+
+
 Stop-Transcript 
 
 
