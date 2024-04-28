@@ -253,5 +253,5 @@ Write-Verbose "Installing: $DellSoftware3...OEM Software No: 3 of 5" -Verbose
 winget install --id Dell.DisplayManager --accept-source-agreements  --accept-source-agreements --force
 Write-Verbose "Installing: $DellSoftware4...OEM Software No: 4 of 5" -Verbose
 winget install --id Dell.CommandConfigure --accept-source-agreements  --accept-source-agreements --force
-Write-Verbose "Installing: $DellSoftware5...OEM Software No: 4 of 5" -Verbose
+Write-Verbose "Installing: $DellSoftware5...OEM Software No: 5 of 5" -Verbose
 winget install --id 9PPRLNT023WC --accept-source-agreements  --accept-source-agreements --force
