@@ -128,41 +128,41 @@ $CloudModule17 = "Windows 365 Cloud PC"
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Cyan 
 		
 Write-Host "Updating: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSD -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSD -Repository PSGallery -Force
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSD -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 	
 Write-Host "Updating: $PSModule2..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDSUS -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDSUS -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule2..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDSUS -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
 Write-Host "Updating: $PSModule3..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDBuilder -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDBuilder -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule3..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDBuilder -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
 Write-Host "Updating: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDUpdate -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDUpdate -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 Write-Host "Updating: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 		
-Update-Module -Name OSDCatalog -Repository PSGallery -Force -AllowClobber 
+Update-Module -Name OSDCatalog -Repository PSGallery -Force
 Start-Sleep -Seconds 5		
 Write-Host "Importing: $PSModule4..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDCatalog -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 
 Write-Host "Updating: $PSModule5..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDDrivers -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDDrivers -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule5..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDDrivers -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
@@ -172,102 +172,102 @@ Write-Host "Updating $OSDGroup3 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $OSDModule4...Module No: 1 of 20" -Verbose
-Update-Module -Name OSDCloudCLI -Force 
+Update-Module -Name OSDCloudCLI -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name OSDCloudCLI -Force
 Write-Verbose "Updating: $OSDModule5...Module No: 2 of 20" -Verbose
-Update-Module -Name OSDCloudGUI -Force 
+Update-Module -Name OSDCloudGUI -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name OSDCloudGUI -Force
 Write-Verbose "Updating: $OSDModule6...Module No: 3 of 20" -Verbose
-Update-Module -Name OSDCloudAzure -Force 
+Update-Module -Name OSDCloudAzure -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name OSDCloudAzure -Force
 Write-Verbose "Updating: $CloudModule1...Module No: 4 of 20" -Verbose
-Update-Module -Name Azure -Force 
+Update-Module -Name Azure -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Azure -Force
 Write-Verbose "Updating: $CloudModule2...Module No: 5 of 20" -Verbose
-Update-Module -Name Az.Accounts -Force
+Update-Module -Name Az.Accounts -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Accounts -Force
 Write-Verbose "Updating: $CloudModule3...Module No: 6 of 20" -Verbose
-Update-Module -Name Azure.Storage -Force 
+Update-Module -Name Azure.Storage -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Azure.Storage -Force
 Write-Verbose "Updating: $CloudModule4...Module No: 7 of 20" -Verbose
-Update-Module -Name Az.Resources -Force 
+Update-Module -Name Az.Resources -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Resources -Force
 Write-Verbose "Updating: $CloudModule5...Module No: 8 of 20" -Verbose
-Update-Module -Name Az.KeyVault -Force 
+Update-Module -Name Az.KeyVault -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.KeyVault -Force
 Write-Verbose "Updating: $CloudModule6...Module No: 9 of 20" -Verbose
-Update-Module -Name Az.Compute -Force
+Update-Module -Name Az.Compute -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Compute -Force
 Write-Verbose "Updating: $CloudModule7...Module No: 10 of 20" -Verbose
-Update-Module -Name Az.Automation -Force 
+Update-Module -Name Az.Automation -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Automation -Force
 Write-Verbose "Updating: $CloudModule8...Module No: 11 of 20" -Verbose
-Update-Module -Name Az.Network -Force 
+Update-Module -Name Az.Network -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Network -Force
 Write-Verbose "Updating: $CloudModule9...Module No: 12 of 20" -Verbose
-Update-Module -Name Az.ApiManagement -Force 
+Update-Module -Name Az.ApiManagement -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.ApiManagement -Force
 Write-Verbose "Updating: $CloudModule10...Module No: 13 of 20" -Verbose
-Update-Module -Name Az.Advisor -Force 
+Update-Module -Name Az.Advisor -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Advisor -Force
 Write-Verbose "Updating: $CloudModule11...Module No: 14 of 20" -Verbose
-Update-Module -Name Az.AnalysisServices -Force 
+Update-Module -Name Az.AnalysisServices -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.AnalysisServices -Force
 Write-Verbose "Updating: $CloudModule12...Module No: 15 of 20" -Verbose
-Update-Module -Name Az.Billing -Force 
+Update-Module -Name Az.Billing -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Billing -Force
 Write-Verbose "Updating: $CloudModule13...Module No: 16 of 20" -Verbose
-Update-Module -Name Az.ApplicationInsights -Force
+Update-Module -Name Az.ApplicationInsights -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.ApplicationInsights -Force
 Write-Verbose "Updating: $CloudModule14...Module No: 17 of 20" -Verbose
-Update-Module -Name Az.Cdn -Force
+Update-Module -Name Az.Cdn -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Cdn -Force
 Write-Verbose "Updating: $CloudModule15...Module No: 18 of 20" -Verbose
-Update-Module -Name Az.Batch -Force
+Update-Module -Name Az.Batch -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Batch -Force
 Write-Verbose "Updating: $CloudModule16...Module No: 19 of 20" -Verbose
-Update-Module -Name Az.Monitor -Force
+Update-Module -Name Az.Monitor -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Monitor -Force
 Write-Verbose "Updating: $CloudModule17...Module No: 20 of 20" -Verbose
-Update-Module -Name PSCloudPC -Force
+Update-Module -Name PSCloudPC -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
 		
 Write-Host "Updating: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDSoftware -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDSoftware -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDSoftware -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
 Write-Host "Updating: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDeploy -Repository PSGallery -Force -AllowClobber
+Update-Module -Name OSDeploy -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDeploy -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
 		
 Write-Host "Updating: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force -AllowClobber
+Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force 
 Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
