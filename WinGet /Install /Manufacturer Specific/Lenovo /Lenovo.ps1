@@ -40,6 +40,14 @@ $MSGraphModule7 = "MS Graph Identity Directory Management"
 $MSGraphModule8 = "MS Graph Teams"
 $MSGraphModule9 = "MS Graph Device Management"
 
+$LenovoModule1 = "Get BIOS"
+$LenovoModule2 = "LSU Client"
+$LenovoModule3 = "Lenovo Info"
+$LenovoModule4 = "Set BIOS"
+$LenovoModule5 = "Lenovo bATTERY"
+$LenovoModule6 = "Get Lenovo Warranty Info"
+$LenovoModule7 = "Lenovo BIOS
+
 $VMModule1 = "ESXI Windows Image Builder"
 
 $SYSModule1 = "Package Management"
