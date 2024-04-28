@@ -56,6 +56,8 @@ Write-Host "Accessing www.powershellgallery.com package database to install Powe
 Write-Host
 Write-Host
 
+# MAIN OSD PowerShell Modules
+
 Write-Host "Installing $OSDGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
@@ -101,7 +103,61 @@ Write-Verbose "Installing: $CloudModule6..." -Verbose
 Install-Module -Name Az.KeyVault -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Write-Host
-Write-Verbose "Installing: $CloudModule7...Module No: 9 of 20" -Verbose
+Write-Verbose "Installing: $CloudModule7..." -Verbose
 Install-Module -Name Az.Compute -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Write-Host
+Write-Verbose "Installing: $CloudModule8..." -Verbose
+Install-Module -Name Az.Automation -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Automation -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule9..." -Verbose
+Install-Module -Name Az.Network -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Network -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule10..." -Verbose
+Install-Module -Name Az.ApiManagement -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.ApiManagement -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule11..." -Verbose
+Install-Module -Name Az.Advisor -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Advisor -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule12..." -Verbose
+Install-Module -Name Az.AnalysisServices -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.AnalysisServices -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule13..." -Verbose
+Install-Module -Name Az.Billing -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Billing -Force
+Write-Verbose "Installing: $CloudModule14..." -Verbose
+Install-Module -Name Az.ApplicationInsights -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.ApplicationInsights -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule15..." -Verbose
+Install-Module -Name Az.Cdn -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Cdn -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule16..." -Verbose
+Install-Module -Name Az.Batch -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Batch -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule17..." -Verbose
+Install-Module -Name Az.Monitor -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Az.Monitor -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $CloudModule18..." -Verbose
+Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name PSCloudPC -Force
+Start-Sleep -Seconds 5
