@@ -44,7 +44,7 @@ $LenovoModule1 = "Get BIOS"
 $LenovoModule2 = "LSU Client"
 $LenovoModule3 = "Lenovo Info"
 $LenovoModule4 = "Set BIOS"
-$LenovoModule5 = "Lenovo bATTERY"
+$LenovoModule5 = "Lenovo Battery"
 $LenovoModule6 = "Get Lenovo Warranty Info"
 $LenovoModule7 = "Lenovo BIOS
 
@@ -212,6 +212,33 @@ Import-Module -Name Microsoft.Graph.Teams -Force
 Write-Verbose "Installing: $MSGraphModule9...Module No: 9 of 9" -Verbose
 Install-Module -Name Microsoft.Graph.DeviceManagement -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name Microsoft.Graph.DeviceManagement -Force
+
+Write-Host "Installing $MfrGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $LenovoModule1...Module No: 1 of 7" -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name GetBIOS -Force
+Write-Verbose "Installing: $LenovoModule2...Module No: 2 of 7" -Verbose
+Install-Module -Name LSUClient -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name LSUClient -Force
+Write-Verbose "Installing: $LenovohModule3...Module No: 3 of 7" -Verbose
+Install-Module -Name LenovoInfo -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name LenovoInfo -Force
+Write-Verbose "Installing: $LenovohModule4...Module No: 4 of 7" -Verbose
+Install-Module -Name SetBIOS -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name SetBIOS -Force
+Write-Verbose "Installing: $LenovohModule5...Module No: 5 of 7" -Verbose
+Install-Module -Name LenovoBattery -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name LenovoBattery -Force
+Write-Verbose "Installing: $LenovoModule6...Module No: 6 of 7" -Verbose
+Install-Module -Name Get-LenovoWarrantyinfo -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Get-LenovoWarrantyinfo -Force
+Write-Verbose "Installing: $LenovoModule7...Module No: 7 of 7" -Verbose
+Install-Module -Name LenovoBIOS -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name LenovoBIOS -Force
+
+
 
 Write-Host "Installing $MfrGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
