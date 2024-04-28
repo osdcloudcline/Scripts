@@ -76,173 +76,188 @@ Write-Host
 Write-Host
 Write-Host "Updating $SYSGroup1 Modules..." -ForegroundColor Cyan
 Write-Verbose "Updating: $SYSModule1...Module No: 1 of 2" -Verbose
-Update-Module -Name PackageManagement -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name PackageManagement -Force 
 Import-Module -Name PackageManagement -Force
 Write-Verbose "Updating: $SYSModule2...Module No: 2 of 2" -Verbose
-Update-Module -Name Choco -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Choco -Force 
 Import-Module -Name Choco -Force
 
 Write-Host "Updating $OSDGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $OSDModule1...Module No: 1 of 1" -Verbose
-Update-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSD -Force 
 Import-Module -Name OSD -Force
 
 Write-Host "Updating $OSDGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $OSDModule2...Module No: 1 of 2" -Verbose
-Update-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDBuilder -Force 
 Import-Module -Name OSDBuilder -Force
 Write-Verbose "Updating: $OSDModule3...Module No: 2 of 2" -Verbose
-Update-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDSUS -Force 
 Import-Module -Name OSDSUS -Force
 
 Write-Host "Updating $OSDGroup3 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $OSDModule4...Module No: 1 of 20" -Verbose
-Update-Module -Name OSDCloudCLI -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDCloudCLI -Force 
 Import-Module -Name OSDCloudCLI -Force
 Write-Verbose "Updating: $OSDModule5...Module No: 2 of 20" -Verbose
-Update-Module -Name OSDCloudGUI -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDCloudGUI -Force 
 Import-Module -Name OSDCloudGUI -Force
 Write-Verbose "Updating: $OSDModule6...Module No: 3 of 20" -Verbose
-Update-Module -Name OSDCloudAzure -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDCloudAzure -Force 
 Import-Module -Name OSDCloudAzure -Force
 
 Write-Verbose "Updating: $CloudModule1...Module No: 4 of 20" -Verbose
-Update-Module -Name Azure -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Azure -Force 
 Import-Module -Name Azure -Force
 Write-Verbose "Updating: $CloudModule2...Module No: 5 of 20" -Verbose
-Update-Module -Name Az.Accounts -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Accounts -Force 
 Import-Module -Name Az.Accounts -Force
 Write-Verbose "Updating: $CloudModule3...Module No: 6 of 20" -Verbose
-Update-Module -Name Azure.Storage -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Azure.Storage -Force 
 Import-Module -Name Azure.Storage -Force
 Write-Verbose "Updating: $CloudModule4...Module No: 7 of 20" -Verbose
-Update-Module -Name Az.Resources -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Resources -Force 
 Import-Module -Name Az.Resources -Force
 
 Write-Verbose "Updating: $CloudModule5...Module No: 8 of 20" -Verbose
-Update-Module -Name Az.KeyVault -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.KeyVault -Force 
 Import-Module -Name Az.KeyVault -Force
 Write-Verbose "Updating: $CloudModule6...Module No: 9 of 20" -Verbose
-Update-Module -Name Az.Compute -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Compute -Force 
 Import-Module -Name Az.Compute -Force
 Write-Verbose "Updating: $CloudModule7...Module No: 10 of 20" -Verbose
-Update-Module -Name Az.Automation -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Automation -Force 
 Import-Module -Name Az.Automation -Force
 Write-Verbose "Updating: $CloudModule8...Module No: 11 of 20" -Verbose
-Update-Module -Name Az.Network -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Network -Force 
 Import-Module -Name Az.Network -Force
 
 Write-Verbose "Updating: $CloudModule9...Module No: 12 of 20" -Verbose
-Update-Module -Name Az.ApiManagement -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.ApiManagement -Force 
 Import-Module -Name Az.ApiManagement -Force
 Write-Verbose "Updating: $CloudModule10...Module No: 13 of 20" -Verbose
-Update-Module -Name Az.Advisor -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Advisor -Force 
 Import-Module -Name Az.Advisor -Force
 Write-Verbose "Updating: $CloudModule11...Module No: 14 of 20" -Verbose
-Update-Module -Name Az.AnalysisServices -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.AnalysisServices -Force 
 Import-Module -Name Az.AnalysisServices -Force
 Write-Verbose "Updating: $CloudModule12...Module No: 15 of 20" -Verbose
-Update-Module -Name Az.Billing -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Az.Billing -Force 
 Import-Module -Name Az.Billing -Force
 
-Write-Verbose "Updating: $CloudModule13...Module No: 16 of 20" -Verbose
-Update-Module -Name Az.ApplicationInsights -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name Az.ApplicationInsights -Force
-Write-Verbose "Updating: $CloudModule14...Module No: 17 of 20" -Verbose
-Update-Module -Name Az.Cdn -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name Az.Cdn -Force
-Write-Verbose "Updating: $CloudModule15...Module No: 18 of 20" -Verbose
-Update-Module -Name Az.Batch -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name Az.Batch -Force
-Write-Verbose "Updating: $CloudModule16...Module No: 19 of 20" -Verbose
-Update-Module -Name Az.Monitor -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name Az.Monitor -Force
-Write-Verbose "Updating: $CloudModule17...Module No: 20 of 20" -Verbose
-Update-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name PSCloudPC -Force
+Write-Host "Updating $OSDGroup5 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Updating: $MSGraphModule1...Module No: 1 of 9" -Verbose
+Update-Module -Name Microsoft.Graph -Force
+Import-Module -Name Microsoft.Graph -Force
+Write-Verbose "Updating: $MSGraphModule2...Module No: 2 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Intune -Force
+Import-Module -Name Microsoft.Graph.Intune -Force
+Write-Verbose "Updating: $MSGraphModule3...Module No: 3 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Groups -Force
+Import-Module -Name Microsoft.Graph.Groups -Force
+Write-Verbose "Updating: $MSGraphModule4...Module No: 4 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Users -Force
+Import-Module -Name Microsoft.Graph.Users -Force
+Write-Verbose "Updating: $MSGraphModule5...Module No: 5 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Sites -Force
+Import-Module -Name Microsoft.Graph.Sites -Force
+Write-Verbose "Updating: $MSGraphModule6...Module No: 6 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Mail -Force
+Import-Module -Name Microsoft.Graph.Mail -Force
+Write-Verbose "Updating: $MSGraphModule7...Module No: 7 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force 
+Import-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force
+Write-Verbose "Updating: $MSGraphModule8...Module No: 8 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.Teams -Force
+Import-Module -Name Microsoft.Graph.Teams -Force
+Write-Verbose "Updating: $MSGraphModule9...Module No: 9 of 9" -Verbose
+Update-Module -Name Microsoft.Graph.DeviceManagement -Force 
+Import-Module -Name Microsoft.Graph.DeviceManagement -Force
 
 Write-Host "Updating $OSDGroup4 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $OSDModule7...Module No: 1 of 7" -Verbose
-Update-Module -Name OSDUpdate -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDUpdate -Force -
 Import-Module -Name OSDUpdate -Force
 Write-Verbose "Updating: $OSDModule8...Module No: 2 of 7" -Verbose
-Update-Module -Name AutopilotOOBE -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name AutopilotOOBE -Force 
 Import-Module -Name AutopilotOOBE -Force
 Write-Verbose "Updating: $OSDModule9...Module No: 3 of 7" -Verbose
-Update-Module -Name OSDDrivers -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDDrivers -Force 
 Import-Module -Name OSDDrivers -Force
 Write-Verbose "Updating: $OSDModule10...Module No: 4 of 7" -Verbose
-Update-Module -Name OSDeploy -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDeploy -Force 
 Import-Module -Name OSDeploy -Force
 Write-Verbose "Updating: $OSDModule11...Module No: 5 of 7" -Verbose
-Update-Module -Name OSDSoftware -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDSoftware -Force 
 Import-Module -Name OSDSoftware -Force
 Write-Verbose "Updating: $OSDModule12...Module No: 6 of 7" -Verbose
-Update-Module -Name OSDCatalog -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDCatalog -Force 
 Import-Module -Name OSDCatalog -Force
 Write-Verbose "Updating: $OSDModule13...Module No: 7 of 7" -Verbose
-Update-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name OSDProgress -Force 
 Import-Module -Name OSDProgress -Force
 
 Write-Host "Updating $MfrGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $DellModule1...Module No: 1 of 14" -Verbose
-Update-Module -Name DellBIOSProvider -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name DellBIOSProvider -Force 
 Import-Module -Name DellBIOSProvider -Force
 Write-Verbose "Updating: $DellModule2...Module No: 2 of 14" -Verbose
-Update-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name GetBIOS -Force 
 Import-Module -Name GetBIOS -Force
 Write-Verbose "Updating: $DellModule3...Module No: 3 of 14" -Verbose
-Update-Module -Name Get-DellWarranty -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Get-DellWarranty -Force 
 Import-Module -Name Get-DellWarranty -Force
 Write-Verbose "Updating: $DellModule4...Module No: 4 of 14" -Verbose
-Update-Module -Name Dell.PowerStore -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Dell.PowerStore -Force 
 Import-Module -Name Dell.PowerStore -Force
 Write-Verbose "Updating: $DellModule5...Module No: 5 of 14" -Verbose
-Update-Module -Name DellOpenManage -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name DellOpenManage -Force 
 Import-Module -Name DellOpenManage -Force
 Write-Verbose "Updating: $DellModule6...Module No: 6 of 14" -Verbose
-Update-Module -Name DellWarrantyServiceTag -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name DellWarrantyServiceTag -Force 
 Import-Module -Name DellWarrantyServiceTag -Force
 Write-Verbose "Updating: $DellModule7...Module No: 7 of 14" -Verbose
-Update-Module -Name Dell.Unity -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Dell.Unity -Force 
 Import-Module -Name Dell.Unity -Force
 Write-Verbose "Updating: $DellModule8...Module No: 8 of 14" -Verbose
-Update-Module -Name Dell.PowerMax -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Dell.PowerMax -Force 
 Import-Module -Name Dell.PowerMax -Force
 Write-Verbose "Updating: $DellModule9...Module No: 9 of 14" -Verbose
-Update-Module -Name DellBios -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name DellBios -Force 
 Import-Module -Name DellBios -Force
 Write-Verbose "Updating: $DellModule10...Module No: 10 of 14" -Verbose
-Update-Module -Name SetBIOS -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name SetBIOS -Force 
 Import-Module -Name SetBIOS -Force
 Write-Verbose "Updating: $DellModule11...Module No: 11 of 14" -Verbose
-Update-Module -Name DellWarranty -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name DellWarranty -Force 
 Import-Module -Name DellWarranty -Force
 Write-Verbose "Updating: $DellModule12...Module No: 12 of 14" -Verbose
-Update-Module -Name Get-DellSupportInfo -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Get-DellSupportInfo -Force 
 Import-Module -Name Get-DellSupportInfo -Force
 Write-Verbose "Updating: $DellModule13...Module No: 13 of 14" -Verbose
-Update-Module -Name Get-DriversPackFromDell -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Get-DriversPackFromDell -Force 
 Import-Module -Name Get-DriversPackFromDell -Force
 Write-Verbose "Updating: $DellModule14...Module No: 14 of 14" -Verbose
-Update-Module -Name Dell-BIOSDriver -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name Dell-BIOSDriver -Force 
 Import-Module -Name Dell-BIOSDriver -Force
 
 Write-Host "Updating $MfrGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $VMModule1...Module No: 1 of 1" -Verbose
-Update-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
+Update-Module -Name WindowsImageBuilder -Force 
 Import-Module -Name WindowsImageBuilder -Force
 
 $DellSoftware1 = "Dell Command | Update for Windows Universal Application"
