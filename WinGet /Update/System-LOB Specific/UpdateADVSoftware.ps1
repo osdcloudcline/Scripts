@@ -328,7 +328,7 @@ winget upgrade --id Microsoft.WindowsTerminal --exact --accept-source-agreements
 Write-Host "Updating: $app26, $app26ver on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget upgrade --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
 	
-Write-Host "Finished Installing System related software..." -ForegroundColor Yellow
+Write-Host "Finished updating System related software..." -ForegroundColor Yellow
 
 ####################################################################
 ### ADVANCED SYSTEM SOFTWARE VARIABLES AND INSTALL             #####
