@@ -382,9 +382,6 @@ winget upgrade --id Nextcloud.NextcloudDesktop --exact --accept-source-agreement
 Write-Host "Updating: $app32 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget upgrade --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Updating: $app33 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-winget upgrade --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
-
 
 # File Transfer Software
 Write-Host "Updating File Transfer Applications on $env:computername..." -ForegroundColor Green
