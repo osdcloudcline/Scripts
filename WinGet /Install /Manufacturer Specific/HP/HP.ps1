@@ -30,6 +30,17 @@ $CloudModule15 = "Azure Batch"
 $CloudModule16 = "Azure Monitor"
 $CloudModule17 = "Windows 365 Cloud PC"
 
+$MSGraphModule1 = "MS Graph"
+$MSGraphModule2 = "MS Graph Intune"
+$MSGraphModule3 = "MS Graph Groups"
+$MSGraphModule4 = "MS Graph Users"
+$MSGraphModule5 = "MS Graph Sites"
+$MSGraphModule6 = "MS Graph Mail"
+$MSGraphModule7 = "MS Graph Identity Directory Management"
+$MSGraphModule8 = "MS Graph Teams"
+$MSGraphModule9 = "MS Graph Device Management"
+
+
 $VMModule1 = "ESXI Windows Image Builder"
 
 $SYSModule1 = "Package Management"
