@@ -1,3 +1,10 @@
+$OSDGroup1 = "OSD"
+$OSDGroup2 = "OSD: Configuration"
+$OSDGroup3 = "OSD: Cloud"
+$OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
+$OSDGroup5 = "OSD: Microsoft Graph"
+
+
 $OSDModule1 = "OSD"
 $OSDModule2 = "OSD Builder"
 $OSDModule3 = "OSD SUS"
