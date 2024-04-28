@@ -101,3 +101,7 @@ Write-Verbose "Installing: $CloudModule6..." -Verbose
 Install-Module -Name Az.KeyVault -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Write-Host
+Write-Verbose "Installing: $CloudModule7...Module No: 9 of 20" -Verbose
+Install-Module -Name Az.Compute -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Write-Host
