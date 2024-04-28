@@ -111,7 +111,6 @@ Import-Module -Name OSDCloudGUI -Force
 Write-Verbose "Updating: $OSDModule6...Module No: 3 of 20" -Verbose
 Update-Module -Name OSDCloudAzure -Force 
 Import-Module -Name OSDCloudAzure -Force
-
 Write-Verbose "Updating: $CloudModule1...Module No: 4 of 20" -Verbose
 Update-Module -Name Azure -Force 
 Import-Module -Name Azure -Force
@@ -124,7 +123,6 @@ Import-Module -Name Azure.Storage -Force
 Write-Verbose "Updating: $CloudModule4...Module No: 7 of 20" -Verbose
 Update-Module -Name Az.Resources -Force 
 Import-Module -Name Az.Resources -Force
-
 Write-Verbose "Updating: $CloudModule5...Module No: 8 of 20" -Verbose
 Update-Module -Name Az.KeyVault -Force 
 Import-Module -Name Az.KeyVault -Force
@@ -137,7 +135,6 @@ Import-Module -Name Az.Automation -Force
 Write-Verbose "Updating: $CloudModule8...Module No: 11 of 20" -Verbose
 Update-Module -Name Az.Network -Force 
 Import-Module -Name Az.Network -Force
-
 Write-Verbose "Updating: $CloudModule9...Module No: 12 of 20" -Verbose
 Update-Module -Name Az.ApiManagement -Force 
 Import-Module -Name Az.ApiManagement -Force
@@ -150,6 +147,24 @@ Import-Module -Name Az.AnalysisServices -Force
 Write-Verbose "Updating: $CloudModule12...Module No: 15 of 20" -Verbose
 Update-Module -Name Az.Billing -Force 
 Import-Module -Name Az.Billing -Force
+Write-Verbose "Updating: $CloudModule13...Module No: 16 of 20" -Verbose
+Update-Module -Name Az.ApplicationInsights -Force
+Import-Module -Name Az.ApplicationInsights -Force
+Write-Verbose "Updating: $CloudModule14...Module No: 17 of 20" -Verbose
+Update-Module -Name Az.Cdn -Force
+Import-Module -Name Az.Cdn -Force
+Write-Verbose "Updating: $CloudModule15...Module No: 18 of 20" -Verbose
+Update-Module -Name Az.Batch -Force
+Import-Module -Name Az.Batch -Force
+Write-Verbose "Updating: $CloudModule16...Module No: 19 of 20" -Verbose
+Update-Module -Name Az.Monitor -Force
+Import-Module -Name Az.Monitor -Force
+Write-Verbose "Updating: $CloudModule17...Module No: 20 of 20" -Verbose
+Update-Module -Name PSCloudPC -Force
+Import-Module -Name PSCloudPC -Force
+
+
+
 
 Write-Host "Updating $OSDGroup5 Modules..." -ForegroundColor Cyan
 Write-Host
