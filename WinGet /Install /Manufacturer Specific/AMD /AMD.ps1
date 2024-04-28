@@ -163,23 +163,18 @@ Write-Verbose "Installing: $VMModule1...Module No: 1 of 1" -Verbose
 Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name WindowsImageBuilder -Force
 
+$AMDSoftware1 = "AMD Ryzen Chi[set Drivers"
+$AMDSoftware2 = "AMD Ryzen Master Software"
 
 
+$MfrSoftwareGroup1 = "AMD"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Write-Host "Installing $MfrSoftwareGroup1 Software..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $AMDSoftware1...OEM Software No: 1 of 2" -Verbose
 choco.exe install amd-ryzen-chipset -y
-
+Write-Verbose "Installing: $AMDSoftware2...OEM Software No: 2 of 2" -Verbose
 choco.exe install amd-ryzen-master -y
+
+
