@@ -1,3 +1,10 @@
+$OSDGroup1 = "OSD"
+$OSDGroup2 = "OSD: Configuration"
+$OSDGroup3 = "OSD: Cloud"
+$OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
+$OSDGroup5 = "OSD: Microsoft Graph"
+
+
 $OSDModule1 = "OSD"
 $OSDModule2 = "OSD Builder"
 $OSDModule3 = "OSD SUS"
@@ -31,7 +38,14 @@ $CloudModule16 = "Azure Monitor"
 $CloudModule17 = "Windows 365 Cloud PC"
 
 $MSGraphModule1 = "MS Graph"
-
+$MSGraphModule2 = "MS Graph Intune"
+$MSGraphModule3 = "MS Graph Groups"
+$MSGraphModule4 = "MS Graph Users"
+$MSGraphModule5 = "MS Graph Sites"
+$MSGraphModule6 = "MS Graph Mail"
+$MSGraphModule7 = "MS Graph Identity Directory Management"
+$MSGraphModule8 = "MS Graph Teams"
+$MSGraphModule9 = "MS Graph Device Management"
 
 $VMModule1 = "ESXI Windows Image Builder"
 
@@ -158,6 +172,37 @@ Import-Module -Name OSDCatalog -Force
 Write-Verbose "Installing: $OSDModule13...Module No: 7 of 7" -Verbose
 Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSDProgress -Force
+
+Write-Host "Installing $OSDGroup5 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $MSGraphModule1...Module No: 1 of 9" -Verbose
+Install-Module -Name Microsoft.Graph -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph -Force
+Write-Verbose "Installing: $MSGraphModule2...Module No: 2 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Intune -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Intune -Force
+Write-Verbose "Installing: $MSGraphModule3...Module No: 3 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Groups -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Groups -Force
+Write-Verbose "Installing: $MSGraphModule4...Module No: 4 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Users -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Users -Force
+Write-Verbose "Installing: $MSGraphModule5...Module No: 5 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Sites -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Sites -Force
+Write-Verbose "Installing: $MSGraphModule6...Module No: 6 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Mail -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Mail -Force
+Write-Verbose "Installing: $MSGraphModule7...Module No: 7 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Identity.DirectoryManagement -Force
+Write-Verbose "Installing: $MSGraphModule8...Module No: 8 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.Teams -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.Teams -Force
+Write-Verbose "Installing: $MSGraphModule9...Module No: 9 of 9" -Verbose
+Install-Module -Name Microsoft.Graph.DeviceManagement -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name Microsoft.Graph.DeviceManagement -Force
 
 Write-Host "Installing $MfrGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
