@@ -106,26 +106,7 @@ $PSModule7 = "OSD Software Module"
 $PSModule8 = "OSD Deploy Module"
 $PSModule13 = "Windows Update Module"
 
-
-$CloudModule1 = "Azure"
-$CloudModule2 = "Azure Accounts"
-$CloudModule3 = "Azure Storage"
-$CloudModule4 = "Azure Resources"
-$CloudModule5 = "Azure Key Vault"
-$CloudModule6 = "Azure Compute"
-$CloudModule7 = "Azure Automation"
-$CloudModule8 = "Azure Network"
-$CloudModule9 = "Azure Api Management"
-$CloudModule10 = "Azure Advisor"
-$CloudModule11 = "Azure Analysis Services"
-$CloudModule12 = "Azure Billing"
-$CloudModule13 = "Azure Application Insights"
-$CloudModule14 = "Azure CDN"
-$CloudModule15 = "Azure Batch"
-$CloudModule16 = "Azure Monitor"
-$CloudModule17 = "Windows 365 Cloud PC"
-
-Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Cyan 
+Write-Host "Accessing www.powershellgallery.com package database to update Powershell Modules..." -ForegroundColor Cyan 
 		
 Write-Host "Updating: $PSModule1..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Update-Module -Name OSD -Repository PSGallery -Force
@@ -167,6 +148,47 @@ Start-Sleep -Seconds 5
 Write-Host "Importing: $PSModule5..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 Import-Module -Name OSDDrivers -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
 Start-Sleep -Seconds 5
+
+Write-Host "Updating: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Update-Module -Name OSDSoftware -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Host "Importing: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Import-Module -Name OSDSoftware -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+		
+Write-Host "Updating: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Update-Module -Name OSDeploy -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Host "Importing: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Import-Module -Name OSDeploy -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+		
+Write-Host "Updating: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force 
+Start-Sleep -Seconds 5
+Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
+Start-Sleep -Seconds 5
+
+$CloudModule1 = "Azure"
+$CloudModule2 = "Azure Accounts"
+$CloudModule3 = "Azure Storage"
+$CloudModule4 = "Azure Resources"
+$CloudModule5 = "Azure Key Vault"
+$CloudModule6 = "Azure Compute"
+$CloudModule7 = "Azure Automation"
+$CloudModule8 = "Azure Network"
+$CloudModule9 = "Azure Api Management"
+$CloudModule10 = "Azure Advisor"
+$CloudModule11 = "Azure Analysis Services"
+$CloudModule12 = "Azure Billing"
+$CloudModule13 = "Azure Application Insights"
+$CloudModule14 = "Azure CDN"
+$CloudModule15 = "Azure Batch"
+$CloudModule16 = "Azure Monitor"
+$CloudModule17 = "Windows 365 Cloud PC"
+
+
 		
 Write-Host "Updating $OSDGroup3 Modules..." -ForegroundColor Cyan
 Write-Host
@@ -252,26 +274,7 @@ Update-Module -Name PSCloudPC -Force -Repository PSGallery
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
 		
-Write-Host "Updating: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDSoftware -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule7..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDSoftware -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-		
-Write-Host "Updating: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name OSDeploy -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule8..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name OSDeploy -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
-		
-Write-Host "Updating: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Update-Module -Name PSWindowsUpdate -Repository PSGallery -Force 
-Start-Sleep -Seconds 5
-Write-Host "Importing: $PSModule13..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-Import-Module -Name PSWindowsUpdate -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue
-Start-Sleep -Seconds 5
+
 
 $DellModule1 = "Dell BIOS Provider"
 $DellModule2 = "Get BIOS"
