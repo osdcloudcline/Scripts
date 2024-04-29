@@ -431,8 +431,13 @@ $REG8PATH = "$RegFileDirectory\CheckForUpdates.reg"
 $REG9PATH = "$RegFileDirectory\PCMark10.reg"
 
 
+Write-Host "Downloading REGFiles.zip from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host
+$RegFilesUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/RegFiles.zip"
+Save-WebFile -SourceUrl $RegFilesUrl -DestinationDirectory $REGFilesDirectorty
+Expand-Archive -Path "$REGFileDirectory\REGFiles.zip" -DestinationPath $REGFileDirectory
 
-Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Yellow
+Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Merging $REG1 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG1PATH
