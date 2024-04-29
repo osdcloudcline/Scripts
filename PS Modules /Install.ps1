@@ -54,7 +54,11 @@ $CloudModule16 = "Azure Batch"
 $CloudModule17 = "Azure Monitor"
 $CloudModule18 = "Windows 365 Cloud PC"
 
-$VMModules
+$ESXIModules
+
+$WorkstationProModules
+
+$HyperVModule1 = "Lab Builder"
 
 Write-Host
 Write-Host
@@ -199,3 +203,8 @@ Write-Host
 Write-Host "Installing $VMGroup3 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
+Write-Verbose "Installing: $HyperVModule1..." -Verbose
+Install-Module -Name LabBuilder -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name LabBuilder -Force
+Start-Sleep -Seconds 5
