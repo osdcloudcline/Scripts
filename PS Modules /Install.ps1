@@ -178,3 +178,24 @@ Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
 Start-Sleep -Seconds 5
+
+
+# VM Modules - ESXI
+
+Write-Host "Installing $VMGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+
+
+# VM Modules - VMWare Workstation Pro
+
+Write-Host "Installing $VMGroup2 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+# VM Modules - Hyper-V
+
+Write-Host "Installing $VMGroup3 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
