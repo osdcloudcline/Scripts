@@ -10,7 +10,7 @@ $OSDGroup5 = "OSD: Microsoft Graph"
 $VMGroup1 = "VMWare ESXI"
 $VMGroup2 = "VMWare Workstation Pro"
 $VMGroup3 = "Microsoft Hyper-V"
-
+$NetworkingGroup1 = "Ubiquiti"
 
 #################################
 ## PS Modules to be installed ###
