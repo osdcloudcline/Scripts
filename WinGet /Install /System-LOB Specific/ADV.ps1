@@ -384,17 +384,16 @@ $Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20K
 Write-Host "Processing and Downloading: $app56 Setup File..." -ForegroundColor Cyan
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Write-Host "Installing $app54 on $env:computername -ForegroundColor Cyan 
+Write-Host "Installing $app54 on $env:computername..." -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2SDK
 pause
 
-Write-Host "Installing $app55 on $env:computername -ForegroundColor Cyan 
+Write-Host "Installing $app55 on $env:computername..." -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2ADK
 pause
 
-Write-Host "Installing $app56 on $env:computername -ForegroundColor Cyan 
+Write-Host "Installing $app56 on $env:computername..." -ForegroundColor Cyan 
 Start-Process -FilePath $Win11_22H2PEADK
 pause
-
 
 
