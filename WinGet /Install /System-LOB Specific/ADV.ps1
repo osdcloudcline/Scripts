@@ -396,4 +396,10 @@ Write-Host "Installing $app56 on $env:computername..." -ForegroundColor Cyan
 Start-Process -FilePath $Win11_22H2PEADK
 pause
 
+$Office2021 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Office2021.ps1")
+Invoke-Expression $($Office2021.Content)
+$cmd = "C:\Windows\System32\cmd.exe"
+Start-Process -FilePath $cmd
+cd "C:\OSDCloud\GitHub\downloads\Office"
+
 
