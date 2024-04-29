@@ -471,11 +471,8 @@ $Office2021SetupEXEUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Sof
 $Office2021SetupCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNSetup.cmd'
 $Office2021SetupDLCMDUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OfficeCDNDownload.cmd'
 Write-Host "Processing and Downloading: $app57 Files..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Office2021ConfigUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
-
- 
-
+mkdir $OfficeGHdownloads
+$Office2021FilesUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OSDCloud-Office2021.zip"
+Save-WebFile -SourceUrl $Office2021FilesUrl -DestinationDirectory $OfficeGHdownloads
+Expand-Archive -Path "$OfficeGHdownloads\OSDCloud-Office2021.zip" -DestinationPath $OfficeGHdownloads
 
