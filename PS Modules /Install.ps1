@@ -54,11 +54,22 @@ $CloudModule16 = "Azure Batch"
 $CloudModule17 = "Azure Monitor"
 $CloudModule18 = "Windows 365 Cloud PC"
 
-$ESXIModules
+$ESXIModule1 = "ESXI Report Generator"
+$ESXIModule2 = "ESXI Inventory Tools"
+$ESXIModule3 = "VMWare ESXI Baseline Check"
+$ESXIModule4 = "Windows Image Builder"
+$ESXIModule5 = "vDocumentation"
 
 $WorkstationProModules
 
 $HyperVModule1 = "Lab Builder"
+$HyperVModule2 = "Hyper-V Backup"
+$HyperVModule3 = "Hyper-V Tools"
+$HyperVModule4 = "Image Factory"
+$HyperVModule5 = "Hyper-V Lab"
+$HyperVModule6 = "Automated Lab"
+$HyperVModule7 = "Hyper-V Administration"
+$HyperVModule8 = "Windows Image Converter"
 
 Write-Host
 Write-Host
@@ -189,8 +200,31 @@ Start-Sleep -Seconds 5
 Write-Host "Installing $VMGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
-
-
+Write-Verbose "Installing: $ESXIVModule1..." -Verbose
+Install-Module -Name AsBuiltReport.VMware.ESXi -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name AsBuiltReport.VMware.ESXi -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $ESXIVModule2..." -Verbose
+Install-Module -Name EsxiInventoryTools -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name EsxiInventoryTools -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $ESXIVModule3..." -Verbose
+Install-Module -Name VMwareBaselineCheck -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name VMwareBaselineCheck -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $ESXIVModule4..." -Verbose
+Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name WindowsImageBuilder -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $ESXIVModule5..." -Verbose
+Install-Module -Name vDocumentation -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name vDocumentation -Force
+Start-Sleep -Seconds 5
 
 # VM Modules - VMWare Workstation Pro
 
@@ -207,4 +241,39 @@ Write-Verbose "Installing: $HyperVModule1..." -Verbose
 Install-Module -Name LabBuilder -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name LabBuilder -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule2..." -Verbose
+Install-Module -Name Hyper-V-Backup -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Hyper-V-Backup -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule3..." -Verbose
+Install-Module -Name Hyper-V.Tools -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Hyper-V.Tools -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule4..." -Verbose
+Install-Module -Name Image-Factory -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Image-Factory -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule5..." -Verbose
+Install-Module -Name HyperVLab -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HyperVLab -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule6..." -Verbose
+Install-Module -Name AutomatedLab -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name AutomatedLab -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule7..." -Verbose
+Install-Module -Name Hyper-VAdministration -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Hyper-VAdministration -Force
+Start-Sleep -Seconds 5
+Write-Verbose "Installing: $HyperVModule8..." -Verbose
+Install-Module -Name WindowsImageConverter -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name WindowsImageConverter -Force
 Start-Sleep -Seconds 5
