@@ -476,12 +476,6 @@ Save-WebFile -SourceUrl $Office2021SetupEXEUrl -DestinationDirectory $OSDCloudGH
 Save-WebFile -SourceUrl $Office2021SetupCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 Save-WebFile -SourceUrl $Office2021SetupDLCMDUrl -DestinationDirectory $OSDCloudGHOfficedownloads
 
-Write-Host "Downloading $app57 - Download Source: Microsoft Office CDN...." -ForegroundColor Cyan 
-Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Offices\OfficeCDNDownload.cmd"
-pause
-
-Write-Host "Installing $app57 - Microsoft Office CDN...." -ForegroundColor Cyan 
-Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
-pause 
+ 
 
 
