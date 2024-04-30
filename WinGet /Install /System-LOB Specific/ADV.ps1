@@ -77,6 +77,9 @@ $PSModule10 = "OneGet"
 $PSModule11 = "WinGet"
 $PSModule12 = "Program Management Module"
 
+Install-PackageProvider -Name "NuGet" -Force
+Install-PackageProvider -Name "ChocoOneGet" -Force
+Install-PackageProvider -Name "chocolatey" -Force
 
 Write-Host
 Write-Host 
