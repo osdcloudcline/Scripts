@@ -419,7 +419,7 @@ $REG8 = "Context Menu: Check For Updates"
 $REG9 = "PC Mark"
 
 $REG1PATH = "$RegFileDirectory\Adobe.reg"
-$REG1PATH = "$RegFileDirectory\AddCopyToMoveTo.reg"
+$REG2PATH = "$RegFileDirectory\Windows11-OSModifications.reg"
 $REG2PATH = "$RegFileDirectory\AddSafeMode.reg"
 
 
@@ -430,10 +430,13 @@ $REG9PATH = "$RegFileDirectory\PCMark10.reg"
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 $AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
-$W11OSModificationRegFileUrl 
+$W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
+
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
 
+Write-Verbose "Obtaining $REG2 ..." -Verbose
+Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
 Write-Host
