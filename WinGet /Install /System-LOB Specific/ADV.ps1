@@ -420,7 +420,7 @@ $REG9 = "PC Mark"
 
 $REG1PATH = "$RegFileDirectory\Adobe.reg"
 $REG2PATH = "$RegFileDirectory\Windows11-OSModifications.reg"
-$REG2PATH = "$RegFileDirectory\AddSafeMode.reg"
+
 
 
 $REG8PATH = "$RegFileDirectory\CheckForUpdates.reg"
@@ -445,8 +445,7 @@ regedit /s $REG1PATH
 Write-Host
 Write-Verbose "Merging $REG2 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG2PATH
-Write-Host "Merging $REG3 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG3PATH
+
 Write-Host
 Write-Verbose "Merging $REG8 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG8PATH
