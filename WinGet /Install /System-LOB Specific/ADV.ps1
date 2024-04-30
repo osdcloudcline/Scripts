@@ -412,21 +412,15 @@ $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
 $REG1 = "Copy To and Move To"
 $REG2 = "Safe Mode" 
-$REG3 = "Acrobat Disable Cloud Services"
-$REG4 = "Adobe MC Suite Registry Entries"
-$REG5 = "Adobe MC Suite Acrobat-specific registry entries"
-$REG6 = "Adobe MC Suite Entries Part 3"
-$REG7 = "Adobe MC Suite Entries Part 4"
+$REG3 = "Adobe MC Suite Registry Entries"
+
 $REG8 = "Context Menu: Check For Updates"
 $REG9 = "PC Mark"
 
 $REG1PATH = "$RegFileDirectory\AddCopyToMoveTo.reg"
 $REG2PATH = "$RegFileDirectory\AddSafeMode.reg"
-$REG3PATH = "$RegFileDirectory\AcrobatDisableCloudServices.reg"
-$REG4PATH = "$RegFileDirectory\AdobeCC2019.reg"
-$REG5PATH = "$RegFileDirectory\AdobeCC2019-AcrobatREGEntries.reg"
-$REG6PATH = "$RegFileDirectory\AdobeReg1.reg"
-$REG7PATH = "$RegFileDirectory\AdobeReg2.reg"
+$REG3PATH = "$RegFileDirectory\Adobe.reg"
+
 $REG8PATH = "$RegFileDirectory\CheckForUpdates.reg"
 $REG9PATH = "$RegFileDirectory\PCMark10.reg"
 
@@ -447,15 +441,6 @@ regedit /s $REG2PATH
 Write-Host "Merging $REG3 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG3PATH
 Write-Host
-Write-Verbose "Merging $REG4 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG4PATH
-Write-Verbose "Merging $REG5 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG5PATH
-Write-Verbose "Merging $REG6 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG6PATH
-Write-Host
-Write-Verbose "Merging $REG7 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG7PATH
 Write-Verbose "Merging $REG8 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG8PATH
 Write-Verbose "Merging $REG9 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
