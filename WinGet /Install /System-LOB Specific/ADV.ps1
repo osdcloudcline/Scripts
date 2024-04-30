@@ -406,6 +406,9 @@ cd "C:\OSDCloud\GitHub\downloads\Office"
 # Registry Files 
 ##################################
 
+$RegistryFiles = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1")
+Invoke-Expression $($RegistryFiles.Content)
+
 $REGFileDirectory = "C:\OSDCloud\GitHub\downloads\Registry"
 $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
