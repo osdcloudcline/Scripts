@@ -410,26 +410,29 @@ $REGFileDirectory = "C:\OSDCloud\GitHub\downloads\Registry"
 $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
+$REG1 = "Adobe Master Collection Suite Registry Entries"
 $REG1 = "Copy To and Move To"
 $REG2 = "Safe Mode" 
-$REG3 = "Adobe MC Suite Registry Entries"
+
 
 $REG8 = "Context Menu: Check For Updates"
 $REG9 = "PC Mark"
 
+$REG1PATH = "$RegFileDirectory\Adobe.reg"
 $REG1PATH = "$RegFileDirectory\AddCopyToMoveTo.reg"
 $REG2PATH = "$RegFileDirectory\AddSafeMode.reg"
-$REG3PATH = "$RegFileDirectory\Adobe.reg"
+
 
 $REG8PATH = "$RegFileDirectory\CheckForUpdates.reg"
 $REG9PATH = "$RegFileDirectory\PCMark10.reg"
 
 
-Write-Host "Downloading REGFiles.zip from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
-$RegFilesUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/RegFiles.zip"
-Save-WebFile -SourceUrl $RegFilesUrl -DestinationDirectory $REGFilesDirectorty
-Expand-Archive -Path "$REGFileDirectory\REGFiles.zip" -DestinationPath $REGFileDirectory
+$AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
+Write-Verbose "Obtaining $REG1 ..." -Verbose
+Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
+
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
 Write-Host
