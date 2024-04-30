@@ -411,8 +411,8 @@ $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
 $REG1 = "Adobe Master Collection Suite Registry Entries"
-$REG1 = "Copy To and Move To"
-$REG2 = "Safe Mode" 
+$REG2 = "Windows 11 OS Modifications"
+ 
 
 
 $REG8 = "Context Menu: Check For Updates"
@@ -430,6 +430,7 @@ $REG9PATH = "$RegFileDirectory\PCMark10.reg"
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 $AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
+$W11OSModificationRegFileUrl 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
 
