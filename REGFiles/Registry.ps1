@@ -22,7 +22,7 @@ Write-Host
 $AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
 $W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
-$PCMark10RegFileUrl = ""
+$PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
@@ -48,7 +48,7 @@ regedit /s $REG3PATH
 }
 
 Write-Verbose "Obtaining $REG4 ..." -Verbose
-Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFilesDirectorty
 
 Write-Verbose "Merging $REG4 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
-regedit /s $REG9PATH
+regedit /s $REG4PATH
