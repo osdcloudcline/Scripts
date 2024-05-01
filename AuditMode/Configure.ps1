@@ -1,4 +1,4 @@
-Write-Host "Beginning Installation of Mandatory system software and PowerShell Modules..." -ForegroundColor Cyan
+Write-Host "Beginning System Configuration..." -ForegroundColor Cyan
 
 
 Write-Verbose "Step 1 - PowerShell Modules..." -Verbose
@@ -8,4 +8,7 @@ Invoke-Expression $($PSModules.Content)
 
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
 
-$Registry 
+$Registry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1")
+Invoke-Expression $($Registry.Content)
+
+
