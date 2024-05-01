@@ -7,17 +7,14 @@ $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
 $REG1 = "Adobe Master Collection Suite Registry Entries"
-$REG2 = "Windows 11 OS Modifications"
-$REG3 = "Windows 10 OS Modifications" 
-
-
-$REG8 = "Context Menu: Check For Updates"
-$REG9 = "PC Mark"
+$REG2 = "Windows 11 OS Modifications Registry Entries"
+$REG3 = "Windows 10 OS Modifications Registry Entries" 
+$REG4 = "PC Mark 10 Registry Entries"
 
 $REG1PATH = "$RegFileDirectory\Adobe.reg"
 $REG2PATH = "$RegFileDirectory\Windows11-OSModifications.reg"
 $REG3PATH = "$REGFilesDirectory\Windows10-OSModifications.reg"
-$REG9PATH = "$RegFileDirectory\PCMark10.reg"
+$REG4PATH = "$RegFileDirectory\PCMark10.reg"
 
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
@@ -25,6 +22,7 @@ Write-Host
 $AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
 $W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
+
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
@@ -49,5 +47,8 @@ Write-Verbose "Merging $REG3 into $OSInfo1 $OSInfo2 on $env:computername..." -Ve
 regedit /s $REG3PATH
 }
 
-Write-Verbose "Merging $REG9 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+Write-Verbose "Obtaining $REG4 ..." -Verbose
+Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
+
+Write-Verbose "Merging $REG4 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG9PATH
