@@ -22,7 +22,7 @@ Write-Host
 $AdobeRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
 $W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
-
+$PCMark10RegFileUrl = ""
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
