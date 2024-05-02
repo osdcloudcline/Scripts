@@ -26,8 +26,8 @@ do
   {
 
   '1' { cls
-        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
-        Invoke-Expression $($OSDCloud.Content)
+        $SystemPreReqs = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1")
+        Invoke-Expression $($SystemPreReqs.Content)
         }
   '2' { cls
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
@@ -73,3 +73,5 @@ do
     }
     until ($selection -eq '8'){}
     }
+
+
