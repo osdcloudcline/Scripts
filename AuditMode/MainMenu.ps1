@@ -122,11 +122,11 @@ do
         $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
         Invoke-Expression $($ManagementPC.Content)
         }
-  '7'{Write-Verbose "Installing and Importing OSDBuilder PowerShell Module..." -Verbose
-      Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
-      Import-Module -Name OSDBuilder -Force
+  '7'{ cls
+       $Honeypot = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
+       Invoke-Expression $($Honeypot.Content)
   }
-  '8' { exit
+  '8' { Show-MainMenu
         }
   
     }
