@@ -99,8 +99,8 @@ do
   {
 
   '1' { cls
-        $SystemPreReqs = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1")
-        Invoke-Expression $($SystemPreReqs.Content)
+        $Standard = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
+        Invoke-Expression $($Standard.Content)
         }
   '2' { cls
         Show-SoftwareMainMenu
