@@ -77,31 +77,31 @@ do
   {
 
   '1' { cls
-        $Standard = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/STD.ps1")
+        $Standard = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/STD.ps1")
         Invoke-Expression $($Standard.Content)
         }
   '2' { cls
-        $Advanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
+        $Advanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/ADV.ps1")
         Invoke-Expression $($Advanced.Content)
         }
   '3' { cls
-        $Corporate = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+        $Corporate = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/Corporate.ps1")
         Invoke-Expression $($Corporate.Content)
         }
   '4' { cls
-        $VDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+        $VDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/VDI.ps1")
         Invoke-Expression $($VDI.Content)
         }
   '5' { cls
-        $ITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
+        $ITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/ITTech.ps1")
         Invoke-Expression $($ITTech.Content)
         }
   '6' { cls
-        $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+        $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/ManagementPC.ps1")
         Invoke-Expression $($ManagementPC.Content)
         }
   '7'{ cls
-       $Honeypot = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/Honeypot.ps1")
+       $Honeypot = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Audit%20Mode%20Install/Honeypot.ps1")
        Invoke-Expression $($Honeypot.Content)
   }
   '8' { Show-MainMenu
