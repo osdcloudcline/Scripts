@@ -111,8 +111,8 @@ do
         Invoke-Expression $($Corporate.Content)
         }
   '4' { cls
-        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-        Invoke-Expression $($WinGetUpdateMain.Content)
+        $VDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+        Invoke-Expression $($VDI.Content)
         }
   '5' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
