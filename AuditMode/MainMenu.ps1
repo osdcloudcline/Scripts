@@ -119,20 +119,8 @@ do
         Invoke-Expression $($ITTech.Content)
         }
   '6' { cls
-        
-        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
-        Import-Module -Name OSD -Force
-        $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
-        $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
-        Write-Host "Downloading User Profile Backup and Restore..." -ForegroundColor Yellow
-        Write-Output "Download URL: $UPBR" -Verbose
-        Write-Output "Download Location: $OSDCloudGHDownloads" -Verbose
-        Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHDownloads
-        $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
-        $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
-        Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
-        Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
-        Show-MainMenu
+        $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+        Invoke-Expression $($ManagementPC.Content)
         }
   '7'{Write-Verbose "Installing and Importing OSDBuilder PowerShell Module..." -Verbose
       Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
