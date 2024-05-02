@@ -30,8 +30,7 @@ do
         Invoke-Expression $($SystemPreReqs.Content)
         }
   '2' { cls
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
-        Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
+        Show-SoftwareMainMenu
         }
   '3' { cls
         $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
@@ -74,4 +73,4 @@ do
     until ($selection -eq '8'){}
     }
 
-
+ Function Show-SoftwareMainMenu(){}
