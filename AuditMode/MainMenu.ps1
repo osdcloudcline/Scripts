@@ -103,7 +103,8 @@ do
         Invoke-Expression $($Standard.Content)
         }
   '2' { cls
-        Show-SoftwareMainMenu
+        $Advanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
+        Invoke-Expression $($Advanced.Content)
         }
   '3' { cls
         $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
