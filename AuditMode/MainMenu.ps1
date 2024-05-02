@@ -33,8 +33,8 @@ do
         Show-SoftwareMainMenu
         }
   '3' { cls
-        $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-        Invoke-Expression $($WinGetMain.Content)
+        $OSUpdate = "ms-settings:windowsupdate"
+        Start-Process $OSUpdate
         }
   '4' { cls
         $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
