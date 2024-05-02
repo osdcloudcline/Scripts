@@ -115,9 +115,8 @@ do
         Invoke-Expression $($VDI.Content)
         }
   '5' { cls
-        $sfc = "C:\Windows\System32\sfc.exe"
-        Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-        Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
+        $ITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
+        Invoke-Expression $($ITTech.Content)
         }
   '6' { cls
         
