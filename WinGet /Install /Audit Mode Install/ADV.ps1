@@ -32,7 +32,7 @@ winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --ac
 
 Write-Verbose "Installing Media Software 5 of 9..." -Verbose
 Write-Verbose "Installing $app5 on $env:computername..." -Verbose
-winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id PowerSoftware.PowerISO --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Installing Media Software 6 of 9..." -Verbose
 Write-Verbose "Installing $app6 on $env:computername..." -Verbose
