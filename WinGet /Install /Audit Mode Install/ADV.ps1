@@ -63,7 +63,7 @@ $Browsingapp2 = "Mozilla Firefox"
 
 Write-Verbose "Installing Web Browsing Software 1 of 2..." -Verbose
 Write-Verbose "Installing $Browsingapp1 on $env:computername..." -Verbose
-winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Installing Web Browsing Software 2 of 2..." -Verbose
 Write-Verbose "Installing $Browsingapp2 on $env:computername..." -Verbose
