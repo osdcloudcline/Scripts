@@ -82,9 +82,16 @@ Write-Host
 Write-Host
 
 $Utilitiesapp1 = "AIDA64 Engineer"
+$Utilitiesapp2 = "7-Zip"
+$utilitiesapp3 = "CCleaner"
+
 
 Write-Verbose "Installing System Utilities Software 1 of 9..." -Verbose
 Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
+winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing System Utilities Software 2 of 9..." -Verbose
+Write-Verbose "Installing $Utilitiesapp2 on $env:computername..." -Verbose
 winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Programming software
