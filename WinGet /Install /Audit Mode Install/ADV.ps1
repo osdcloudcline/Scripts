@@ -20,6 +20,8 @@ $Mediaapp8 = "MKVToolNix"
 $Mediaapp9 = "Apple iTunes"
 $Mediaapp10 = "Kodi"
 
+Write-Host "ATTN: $env:username - 43 pieces of software will be installed. Please be patient" -ForegroundColor Red
+
 Write-Host "Installing Media Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Media Software 1 of 10..." -ForegroundColor Cyan
