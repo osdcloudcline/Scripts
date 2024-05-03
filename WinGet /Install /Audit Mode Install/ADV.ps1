@@ -101,7 +101,7 @@ winget install --id Piriform.CCleaner --exact --accept-source-agreements  --acce
 
 Write-Verbose "Installing System Utilities Software 4 of 9..." -Verbose
 Write-Verbose "Installing $Utilitiesapp4 on $env:computername..." -Verbose
-winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
 # Programming software
 
