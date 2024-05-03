@@ -3,7 +3,7 @@ Write-Host
 Write-Host "Step 1 : Media Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
-
+Write-Verbose "Installing Media Software 1 of ..." -Verbose
 
 
 
