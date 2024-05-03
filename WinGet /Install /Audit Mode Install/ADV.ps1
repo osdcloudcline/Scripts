@@ -92,7 +92,11 @@ winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements
 
 Write-Verbose "Installing System Utilities Software 2 of 9..." -Verbose
 Write-Verbose "Installing $Utilitiesapp2 on $env:computername..." -Verbose
-winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
+
+Write-Verbose "Installing System Utilities Software 3 of 9..." -Verbose
+Write-Verbose "Installing $Utilitiesapp3 on $env:computername..." -Verbose
+winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
 # Programming software
 
