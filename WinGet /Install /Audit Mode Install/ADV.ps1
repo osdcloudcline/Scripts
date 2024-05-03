@@ -112,6 +112,28 @@ $RDCapp3 = "AnyDesk"
 $RDCapp4 = "VMWare Workstation Professional"
 $RDCapp5 = "Windows 365 Azure Virtual Desktop"
 
+# Virtualization related software
+
+Write-Verbose "Installing Remote Desktop/Virtualization Software 1 of 5..." -Verbose
+Write-Host "Installing $RDCapp1 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Microsoft.RemoteDesktopClient --exact --accept-source-agreements --accept-source-agreements --force
+
+Write-Verbose "Installing Remote Desktop/Virtualization Software 2 of 5..." -Verbose
+Write-Host "Installing: $RDCapp2 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id VMware.HorizonClient --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Remote Desktop/Virtualization Software 3 of 5..." -Verbose
+Write-Host "Installing: $RDCapp3 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id AnyDeskSoftwareGmbH.AnyDesk --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Remote Desktop/Virtualization Software 4 of 5..." -Verbose
+Write-Host "Installing: $RDCapp4 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+choco install vmwareworkstation --params='"/SERIALNUMBER=VV7RA-0YZ0N-M89EP-JFN7C-P62RF"' -y
+
+Write-Verbose "Installing Remote Desktop/Virtualization Software 5 of 5..." -Verbose
+Write-Host "Installing: $RDCapp5 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
+winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-source-agreements --force
+
 Write-Host
 Write-Host
 Write-Host "Step 7 : Gaming Software" -ForegroundColor Cyan
