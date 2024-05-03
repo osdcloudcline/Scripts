@@ -91,7 +91,7 @@ winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreement
 
 Write-Verbose "Installing Programming Software 2 of 2..." -Verbose
 Write-Verbose "Installing $Programmingapp2 on $env:computername..." -Verbose
-winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host
 Write-Host
