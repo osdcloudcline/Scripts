@@ -151,3 +151,22 @@ Write-Host
 Write-Host "Step 8 : Security Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
+
+
+Write-Host
+Write-Host
+Write-Host "Step 9 : File Transfer Software" -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+Write-Host
+Write-Host
+Write-Host "Step 10 : Cloud Backup Software" -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+Write-Host
+Write-Host
+Write-Host "Step 11 : NAS and Networking Software" -ForegroundColor Cyan
+Write-Host
+Write-Host
