@@ -20,7 +20,7 @@ winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-so
 
 Write-Verbose "Installing Media Software 2 of 9..." -Verbose
 Write-Verbose "Installing $app2 on $env:computername..." -Verbose
-
+winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Installing Media Software 3 of 9..." -Verbose
 Write-Verbose "Installing $app3 on $env:computername..." -Verbose
