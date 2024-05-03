@@ -14,10 +14,20 @@ $app7 = "Logitech MyHarmony"
 $app8 = "MKVToolNix"
 $app9 = "Apple iTunes"
 
-Write-Verbose "Installing Media Software 1 of ..." -Verbose
+Write-Verbose "Installing Media Software 1 of 9..." -Verbose
+Write-Verbose "Installing $app1 on $env:computername..." -Verbose
+winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Media Software 2 of 9..." -Verbose
+Write-Verbose "Installing $app2 on $env:computername..." -Verbose
 
 
+Write-Verbose "Installing Media Software 3 of 9..." -Verbose
+Write-Verbose "Installing $app3 on $env:computername..." -Verbose
 
+
+Write-Verbose "Installing Media Software 4 of 9..." -Verbose
+Write-Verbose "Installing $app4 on $env:computername..." -Verbose
 Write-Host
 Write-Host
 Write-Host "Step 2 : Web Browsing Software" -ForegroundColor Cyan
