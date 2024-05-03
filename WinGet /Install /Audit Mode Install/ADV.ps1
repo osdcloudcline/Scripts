@@ -140,6 +140,9 @@ Write-Host "Step 7 : Gaming Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$Gamingapp1 = "Steam"
+
+
 
 Write-Host
 Write-Host
