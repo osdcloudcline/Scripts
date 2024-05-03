@@ -95,10 +95,10 @@ $Utilitiesapp3 = "CCleaner"
 $Utilitiesapp4 = "IObit Driver Booster"
 $Utilitiesapp5 = "Wise Registry Cleaner"
 $Utilitiesapp6 = "Windows Admin Center"
-$Utilitiesapp7 = "Starwind V2V Converter"
-$Utilitiesapp8 = "Windows 11 22H2 SDK"
-$Utilitiesapp9 = "Windows 11 22H2 ADK"
-$Utilitiesapp10 = "Windows 11 22H2 ADK PE Add-On"
+$Utilitiesapp7 = "Windows 11 22H2 SDK"
+$Utilitiesapp8 = "Windows 11 22H2 ADK"
+$Utilitiesapp9 = "Windows 11 22H2 ADK PE Add-On"
+$Utilitiesapp10 = "Starwind V2V Converter"
 
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
@@ -129,34 +129,37 @@ winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreeme
 Write-Host "Installing System Utilities Software 7 of 10..." -ForegroundColor Cyan
 Write-Host
 Write-Host
-Write-Host "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
 $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
-Write-Host "Processing and Downloading: $Utilitiesapp7 Setup File..." -ForegroundColor Cyan
+Write-Verbose "Processing and Downloading: $Utilitiesapp7 Setup File..." -Verbose
 Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 
 Write-Host "Installing System Utilities Software 8 of 10..." -ForegroundColor Cyan
 Write-Host
 Write-Host
-Write-Host "Acquiring $Utilitiesapp8 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+Write-Verbose "Acquiring $Utilitiesapp8 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 $Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
-Write-Host "Processing and Downloading: $Utilitiesapp8 Setup File..." -ForegroundColor Cyan
+Write-Verbose "Processing and Downloading: $Utilitiesapp8 Setup File..." -Verbose
 Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Installing System Utilities Software 9 of 10..." -ForegroundColor Cyan
-Write-Verbose "Installing $Utilitiesapp9..." -Verbose
+Write-Host
+Write-Host
+Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
-$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
-Write-Host "Processing and Downloading: $Utilitiesapp8 Setup File..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
+$Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
+$Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+Write-Verbose "Processing and Downloading: $Utilitiesapp9 Setup File..." -Verbose
+Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Installing System Utilities Software 10 of 10..." -ForegroundColor Cyan
 Write-Verbose "Installing $Utilitiesapp10..." -Verbose
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 
 
 # Programming software
