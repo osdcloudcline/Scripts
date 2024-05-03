@@ -28,9 +28,23 @@ winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --ac
 
 Write-Verbose "Installing Media Software 4 of 9..." -Verbose
 Write-Verbose "Installing $app4 on $env:computername..." -Verbose
+winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Installing Media Software 5 of 9..." -Verbose
+Write-Verbose "Installing $app5 on $env:computername..." -Verbose
+winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Installing Media Software 6 of 9..." -Verbose
+Write-Verbose "Installing $app6 on $env:computername..." -Verbose
+winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Installing Media Software 7 of 9..." -Verbose
+Write-Verbose "Installing $app7 on $env:computername..." -Verbose
+winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Media Software 8 of 9..." -Verbose
+Write-Verbose "Installing $app8 on $env:computername..." -Verbose
+winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
 Write-Host
 Write-Host
 Write-Host "Step 2 : Web Browsing Software" -ForegroundColor Cyan
