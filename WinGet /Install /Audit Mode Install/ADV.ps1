@@ -41,7 +41,7 @@ choco install audacity-ffmpeg -y
 
 Write-Verbose "Installing Media Software 7 of 9..." -Verbose
 Write-Verbose "Installing $app7 on $env:computername..." -Verbose
-winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Installing Media Software 8 of 9..." -Verbose
 Write-Verbose "Installing $app8 on $env:computername..." -Verbose
