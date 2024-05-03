@@ -145,15 +145,19 @@ $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
 $Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
 Write-Host "Processing and Downloading: $Utilitiesapp8 Setup File..." -ForegroundColor Cyan
-Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
+Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Installing System Utilities Software 9 of 10..." -ForegroundColor Cyan
 Write-Verbose "Installing $Utilitiesapp9..." -Verbose
-winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
+$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
+Write-Host "Processing and Downloading: $Utilitiesapp8 Setup File..." -ForegroundColor Cyan
+Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Installing System Utilities Software 10 of 10..." -ForegroundColor Cyan
 Write-Verbose "Installing $Utilitiesapp10..." -Verbose
-winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
+
 
 # Programming software
 
