@@ -102,6 +102,7 @@ $Utilitiesapp7 = "Windows 11 22H2 SDK"
 $Utilitiesapp8 = "Windows 11 22H2 ADK"
 $Utilitiesapp9 = "Windows 11 22H2 ADK PE Add-On"
 $Utilitiesapp10 = "Starwind V2V Converter"
+$Utilitiesapp11 = "Cinebench 2024"
 
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
@@ -164,6 +165,9 @@ Write-Host "Installing System Utilities Software 10 of 10..." -ForegroundColor C
 Write-Verbose "Installing $Utilitiesapp10..." -Verbose
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 
+Write-Host "Installing System Utilities Software 11 of 10..." -ForegroundColor Cyan
+Write-Verbose "Installing $Utilitiesapp11..." -Verbose
+choco install cinebench -y
 
 # Programming software
 
