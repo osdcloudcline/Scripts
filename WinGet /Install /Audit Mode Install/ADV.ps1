@@ -3,6 +3,17 @@ Write-Host
 Write-Host "Step 1 : Media Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
+
+$app1 = "VLC Media Player"
+$app2 = "MediaInfo"
+$app3 = "MakeMKV"
+$app4 = "Handbrake"
+$app5 = "PowerISO"
+$app6 = "Audacity and FFMPEG"
+$app7 = "Logitech MyHarmony"
+$app8 = "MKVToolNix"
+$app9 = "Apple iTunes"
+
 Write-Verbose "Installing Media Software 1 of ..." -Verbose
 
 
