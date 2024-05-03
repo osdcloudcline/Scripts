@@ -159,9 +159,25 @@ Write-Host "Step 9 : File Transfer Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
-$FileTRansferapp1 = "FileZilla"
-$FileTRansferapp2 = "PuTTy"
-$FileTRansferapp3 = "WinSCP"
+$FileTransferapp1 = "FileZilla"
+$FileTransferapp2 = "PuTTy"
+$FileTransferapp3 = "WinSCP"
+
+
+# File Transfer Software
+Write-Host "Installing File Transfer Applications on $env:computername..." -ForegroundColor Green
+
+Write-Verbose "Installing File Transfer Software 1 of 3..." -Verbose
+Write-Host "Installing $FileTransferapp1 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+choco install filezilla  -y
+
+Write-Verbose "Installing File Transfer Software 2 of 3..." -Verbose
+Write-Host "Installing: $FileTransferapp2 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architecture x64  --accept-source-agreements --force
+
+Write-Verbose "Installing File Transfer Software 3 of 3..." -Verbose
+Write-Host "Installing: $FileTransferapp3 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host
 Write-Host
