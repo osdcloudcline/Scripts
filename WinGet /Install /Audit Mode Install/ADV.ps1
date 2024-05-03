@@ -82,6 +82,11 @@ Write-Host "Step 4 : Programming Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$Programmingapp1 = "VS Code"
+$Programmingapp2 = "Visual Studio 2022 Enterprise"
+
+
+
 Write-Host
 Write-Host
 Write-Host "Step 5 : Productivity Software" -ForegroundColor Cyan
