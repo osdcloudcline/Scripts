@@ -45,7 +45,11 @@ winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --acc
 
 Write-Verbose "Installing Media Software 8 of 9..." -Verbose
 Write-Verbose "Installing $app8 on $env:computername..." -Verbose
-winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Media Software 9 of 9..." -Verbose
+Write-Verbose "Installing $app9 on $env:computername..." -Verbose
+winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  --accept-source-agreements --force
 Write-Host
 Write-Host
 Write-Host "Step 2 : Web Browsing Software" -ForegroundColor Cyan
