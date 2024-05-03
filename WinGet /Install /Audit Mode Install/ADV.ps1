@@ -96,7 +96,7 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 
 Write-Verbose "Installing System Utilities Software 3 of 9..." -Verbose
 Write-Verbose "Installing $Utilitiesapp3 on $env:computername..." -Verbose
-winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
+winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Programming software
 
