@@ -36,7 +36,8 @@ winget install --id PowerSoftware.PowerISO --exact --accept-source-agreements  -
 
 Write-Verbose "Installing Media Software 6 of 9..." -Verbose
 Write-Verbose "Installing $app6 on $env:computername..." -Verbose
-winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Audacity.Audacity --exact --accept-source-agreements  --accept-source-agreements --force
+choco install audacity-ffmpeg -y
 
 Write-Verbose "Installing Media Software 7 of 9..." -Verbose
 Write-Verbose "Installing $app7 on $env:computername..." -Verbose
