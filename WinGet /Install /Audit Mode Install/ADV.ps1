@@ -67,7 +67,7 @@ winget install --id Google.Chrome --exact --accept-source-agreements  --accept-s
 
 Write-Verbose "Installing Web Browsing Software 2 of 2..." -Verbose
 Write-Verbose "Installing $Browsingapp2 on $env:computername..." -Verbose
-winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host
 Write-Host
