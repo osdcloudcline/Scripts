@@ -127,8 +127,12 @@ Write-Verbose "Installing $Utilitiesapp6..." -Verbose
 winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 7 of 10..." -ForegroundColor Cyan
-Write-Verbose "Installing $Utilitiesapp7..." -Verbose
-winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
+Write-Host
+Write-Host
+Write-Host "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -ForegroundColor Cyan 
+$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
+$Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
+$Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
 
 Write-Host "Installing System Utilities Software 8 of 10..." -ForegroundColor Cyan
 Write-Verbose "Installing $Utilitiesapp8..." -Verbose
