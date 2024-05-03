@@ -81,6 +81,11 @@ Write-Host "Step 3 : Sytem Utilities Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$Utilitiesapp1 = "AIDA64 Engineer"
+
+Write-Verbose "Installing System Utilities Software 1 of 9..." -Verbose
+Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
+winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Programming software
 
