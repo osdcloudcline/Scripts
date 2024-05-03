@@ -83,7 +83,8 @@ Write-Host
 
 $Utilitiesapp1 = "AIDA64 Engineer"
 $Utilitiesapp2 = "7-Zip"
-$utilitiesapp3 = "CCleaner"
+$Utilitiesapp3 = "CCleaner"
+$Utilitiesapp4 = "IObit Driver Booster"
 
 
 Write-Verbose "Installing System Utilities Software 1 of 9..." -Verbose
@@ -96,6 +97,10 @@ winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source
 
 Write-Verbose "Installing System Utilities Software 3 of 9..." -Verbose
 Write-Verbose "Installing $Utilitiesapp3 on $env:computername..." -Verbose
+winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing System Utilities Software 4 of 9..." -Verbose
+Write-Verbose "Installing $Utilitiesapp4 on $env:computername..." -Verbose
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
 # Programming software
