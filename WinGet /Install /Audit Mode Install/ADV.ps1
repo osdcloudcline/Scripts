@@ -159,6 +159,10 @@ Write-Host "Step 9 : File Transfer Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$FileTRansferapp1 = "FileZilla"
+$FileTRansferapp2 = "PuTTy"
+$FileTRansferapp3 = "WinSCP"
+
 Write-Host
 Write-Host
 Write-Host "Step 10 : Cloud Backup Software" -ForegroundColor Cyan
