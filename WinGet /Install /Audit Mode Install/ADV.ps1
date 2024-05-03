@@ -142,7 +142,9 @@ Write-Host
 
 $Gamingapp1 = "Steam"
 
-
+Write-Verbose "Installing Gaming Software 1 of 1..." -Verbose
+Write-Host "Installing $Gamingapp1 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Microsoft.RemoteDesktopClient --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host
 Write-Host
