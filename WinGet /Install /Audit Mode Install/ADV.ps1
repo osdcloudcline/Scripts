@@ -1,3 +1,5 @@
+# Media Software
+
 Write-Host
 Write-Host
 Write-Host "Step 1 : Media Software" -ForegroundColor Cyan
@@ -52,6 +54,8 @@ Write-Verbose "Installing $Mediaapp9 on $env:computername..." -Verbose
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
 
+# Web Browsing Software
+
 Write-Host
 Write-Host
 Write-Host "Step 2 : Web Browsing Software" -ForegroundColor Cyan
@@ -69,12 +73,16 @@ Write-Verbose "Installing Web Browsing Software 2 of 2..." -Verbose
 Write-Verbose "Installing $Browsingapp2 on $env:computername..." -Verbose
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
 
+# Utilities Software
+
 Write-Host
 Write-Host
 Write-Host "Step 3 : Sytem Utilities Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+
+# Programming software
 
 Write-Host
 Write-Host
@@ -93,12 +101,21 @@ Write-Verbose "Installing Programming Software 2 of 2..." -Verbose
 Write-Verbose "Installing $Programmingapp2 on $env:computername..." -Verbose
 winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
 
+# Productivity software
+
 Write-Host
 Write-Host
 Write-Host "Step 5 : Productivity Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$Prodapp1 = "Adobe Acrobat Reader DC 64-bit"
+
+Write-Verbose "Installing Productivity Software 1 of 2..." -Verbose
+Write-Verbose "Installing $Prodapp1 on $env:computername..." -Verbose
+winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements  --accept-source-agreements --force
+
+# Virtualization Remote Desktop related software
 
 Write-Host
 Write-Host
@@ -112,7 +129,6 @@ $RDCapp3 = "AnyDesk"
 $RDCapp4 = "VMWare Workstation Professional"
 $RDCapp5 = "Windows 365 Azure Virtual Desktop"
 
-# Virtualization related software
 
 Write-Verbose "Installing Remote Desktop/Virtualization Software 1 of 5..." -Verbose
 Write-Host "Installing $RDCapp1 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
@@ -134,6 +150,9 @@ Write-Verbose "Installing Remote Desktop/Virtualization Software 5 of 5..." -Ver
 Write-Host "Installing: $RDCapp5 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
 winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-source-agreements --force
 
+
+# Gaming software
+
 Write-Host
 Write-Host
 Write-Host "Step 7 : Gaming Software" -ForegroundColor Cyan
@@ -142,9 +161,12 @@ Write-Host
 
 $Gamingapp1 = "Steam"
 
+
 Write-Verbose "Installing Gaming Software 1 of 1..." -Verbose
 Write-Host "Installing $Gamingapp1 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
+
+# Security Software
 
 Write-Host
 Write-Host
@@ -152,6 +174,8 @@ Write-Host "Step 8 : Security Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+
+# File Transfer Software
 
 Write-Host
 Write-Host
@@ -164,7 +188,7 @@ $FileTransferapp2 = "PuTTy"
 $FileTransferapp3 = "WinSCP"
 
 
-# File Transfer Software
+
 Write-Host "Installing File Transfer Applications on $env:computername..." -ForegroundColor Green
 
 Write-Verbose "Installing File Transfer Software 1 of 3..." -Verbose
@@ -179,6 +203,9 @@ Write-Verbose "Installing File Transfer Software 3 of 3..." -Verbose
 Write-Host "Installing: $FileTransferapp3 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
 
+
+# Cloud Backup software
+
 Write-Host
 Write-Host
 Write-Host "Step 10 : Cloud Backup Software" -ForegroundColor Cyan
@@ -190,10 +217,37 @@ $CloudBackupapp2 = "Nextcloud Desktop Client"
 $CloudBackupapp3 = "DropBox"
 $CloudBackupapp4 = "Microsoft OneDrive"
 
+Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
 
+Write-Verbose "Installing Cloud Backup Software 1 of 4..." -Verbose
+Write-Host "Installing: $CloudBackupapp1 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Cloud Backup Software 2 of 4..." -Verbose
+Write-Host "Installing: $CloudBackupapp2 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Nextcloud.NextcloudDesktop --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Cloud Backup Software 3 of 4..." -Verbose
+Write-Host "Installing: $CloudBackupapp3 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Installing Cloud Backup Software 4 of 4..." -Verbose
+Write-Host "Installing: $CloudBackupapp4 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
+
+
+# NAS and Networking software
 
 Write-Host
 Write-Host
 Write-Host "Step 11 : NAS and Networking Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
+
+$NASapp1 = "Synology Assistant"
+
+Write-Host "Installing NAS and Networking Applications on $env:computername..." -ForegroundColor Green
+
+Write-Verbose "Installing NAS and Networking Software 1 of 1..." -Verbose
+Write-Host "Installing: $NASapp1 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget install --id Synology.Assistant --exact --accept-source-agreements  --accept-source-agreements --force
