@@ -85,7 +85,13 @@ Write-Host
 $Programmingapp1 = "VS Code"
 $Programmingapp2 = "Visual Studio 2022 Enterprise"
 
+Write-Verbose "Installing Programming Software 1 of 2..." -Verbose
+Write-Verbose "Installing $Programmingapp1 on $env:computername..." -Verbose
+winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Installing Programming Software 2 of 2..." -Verbose
+Write-Verbose "Installing $Programmingapp2 on $env:computername..." -Verbose
+winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host
 Write-Host
