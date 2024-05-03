@@ -106,6 +106,12 @@ Write-Host "Step 6 : Remote Desktop / IT Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$RDCapp1 = "Microsoft Remote Desktop Client"
+$RDCapp2 = "VMWare Horizon Remote Desktop Connection Client"
+$RDCapp3 = "AnyDesk"
+$RDCapp4 = "VMWare Workstation Professional"
+$RDCapp5 = "Windows 365 Azure Virtual Desktop"
+
 Write-Host
 Write-Host
 Write-Host "Step 7 : Gaming Software" -ForegroundColor Cyan
