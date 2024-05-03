@@ -185,6 +185,13 @@ Write-Host "Step 10 : Cloud Backup Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$CloudBackupapp1 = "Google Drive"
+$CloudBackupapp2 = "Nextcloud Desktop Client"
+$CloudBackupapp3 = "DropBox"
+$CloudBackupapp4 = "Microsoft OneDrive"
+
+
+
 Write-Host
 Write-Host
 Write-Host "Step 11 : NAS and Networking Software" -ForegroundColor Cyan
