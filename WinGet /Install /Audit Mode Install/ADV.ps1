@@ -190,7 +190,7 @@ winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreement
 
 Write-Host "Installing Programming Software 2 of 2..." -ForegroundColor Cyan
 Write-Verbose "Installing $Programmingapp2..." -Verbose
-winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
+choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
 
 # Productivity software
 
