@@ -40,7 +40,7 @@ winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-so
 Write-Host "Installing Media Software 2 of 10..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Mediaapp2..." -Verbose
-winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id MediaArea.MediaInfo.GUI --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 3 of 10..." -ForegroundColor Cyan
 Write-Host
