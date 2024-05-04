@@ -269,6 +269,27 @@ Write-Host "Step 8 : Security Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
+$Securityapp1 = "MalwareBytes Anti-Malware"
+$Securityapp2 = "BitDefender Total Security"
+$Securityapp3 = "Norton 360"
+
+Write-Host "Downloading Security Software 1 of 3..." -ForegroundColor Cyan
+Write-Verbose "Downloading $Securityapp1..."  -Verbose
+$MalwarebytesURL = "https://data-cdn.mbamupdates.com/web/mb4-setup-consumer/offline/MBSetup.exe"
+$OSDDownloads = "C:\OSDCloud\downloads"
+Save-WebFile $MalwarebytesURL -DestinationDirectory $OSDDownloads
+
+Write-Host "Downloading Security Software 2 of 3..." -ForegroundColor Cyan
+Write-Verbose "Downloading $Securityapp2..."  -Verbose
+$BitdefenderURL = "https://download.bitdefender.com/windows/desktop/connect/cl/2022/all/bitdefender_ts_26_64b.exe"
+$OSDDownloads = "C:\OSDCloud\downloads"
+Save-WebFile $BitdefenderURL -DestinationDirectory $OSDDownloads
+
+Write-Host "Downloading Security Software 3 of 3..." -ForegroundColor Cyan
+Write-Verbose "Downloading $Securityapp3..."  -Verbose
+$Norton360URL = ""
+$OSDDownloads = "C:\OSDCloud\downloads"
+Save-WebFile $Norton360URL -DestinationDirectory $OSDDownloads
 
 # File Transfer Software
 
