@@ -201,12 +201,31 @@ Write-Host
 Write-Host
 
 $Prodapp1 = "Adobe Acrobat Reader DC 64-bit"
+$Prodapp2 = "Microsoft Office 2021 LTSC"
 
 Write-Host "Installing Productivity Applications on $env:computername..." -ForegroundColor Green
 
-Write-Verbose "Installing Productivity Software 1 of 2..." -Verbose
+Write-Host "Installing Productivity Software 1 of 2..." -ForegroundColor Cyan
 Write-Verbose "Installing $Prodapp1..." -Verbose
-winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements  --accept-source-agreements --force --source winget
+
+Write-Host "Installing Productivity Software 2 of 2..." -ForegroundColor Cyan
+Write-Verbose "Installing $Prodapp2..." -Verbose
+$OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
+mkdir $OfficeGHdownloads
+$Office2021FilesUrl = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Office2021/OSDCloud-Office2021.zip"
+Save-WebFile -SourceUrl $Office2021FilesUrl -DestinationDirectory $OfficeGHdownloads
+Expand-Archive -Path "$OfficeGHdownloads\OSDCloud-Office2021.zip" -DestinationPath $OfficeGHdownloads
+$Office2021DownloadFile = "$OfficeGHdownloads\OfficeCDNDownload.cmd"
+$Office2021SetupFile = "$OfficeGHdownloads\OfficeCDNSetup.cmd"
+$Office2021DownloadPath = Join-Path -Path $OfficeGHdownloads -ChildPath "OfficeCDNDownload.cmd"
+$Office2021SetupPath = Join-Path -Path $OfficeGHdownloads -ChildPath "OfficeCDNSetup.cmd"
+$Office2021ConfigPath = Join-Path -Path $OfficeGHdownloads -ChildPath "config.xml"
+cd $OfficeGHdownloads
+Start-Process -FilePath $Office2021DownloadFile
+pause
+Start-Process -FilePath $Office2021SetupFile
+
 
 # Virtualization Remote Desktop related software
 
