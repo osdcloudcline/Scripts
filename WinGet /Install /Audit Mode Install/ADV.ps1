@@ -225,7 +225,7 @@ cd $OfficeGHdownloads
 Start-Process -FilePath $Office2021DownloadFile
 pause
 Start-Process -FilePath $Office2021SetupFile
-
+pause
 
 # Virtualization Remote Desktop related software
 
