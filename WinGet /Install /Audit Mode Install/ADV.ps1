@@ -1,5 +1,13 @@
+$OSDModuleLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSModule.log"
+Start-Transcript -Path $OSDModuleLogs
+
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
+
+Stop-Transcript
+
+$OSDMediaSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDMediaSoftware.log"
+Start-Transcript -Path $OSDMediaSoftwareLogs
 
 # Media Software
 
@@ -75,6 +83,11 @@ Write-Host
 Write-Verbose "Installing $Mediaapp10..." -Verbose
 winget install --id XBMCFoundation.Kodi --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDBrowserSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDWebBrowserSoftware.log"
+Start-Transcript -Path $OSDBrowserSoftwareLogs
+
 # Web Browsing Software
 
 Write-Host
@@ -97,6 +110,11 @@ Write-Host "Installing Web Browsing Software 2 of 2..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Browsingapp2..." -Verbose
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
+
+$OSDUtilitiesSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDUtilitiesSoftware.log"
+Start-Transcript -Path $OSDUtilitiesSoftwareLogs
 
 # Utilities Software
 
@@ -160,6 +178,9 @@ $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kit
 Write-Verbose "Processing and Downloading: $Utilitiesapp7 Setup File..." -Verbose
 Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
 
+Start-Process -FilePath $Win11_22H2SDK
+
+pause
 
 Write-Host "Installing System Utilities Software 8 of 10..." -ForegroundColor Cyan
 Write-Host
@@ -171,6 +192,10 @@ $Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kit
 Write-Verbose "Processing and Downloading: $Utilitiesapp8 Setup File..." -Verbose
 Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
+Start-Process -FilePath $Win11_22H2ADK
+
+pause
+
 Write-Host "Installing System Utilities Software 9 of 10..." -ForegroundColor Cyan
 Write-Host
 Write-Host
@@ -181,6 +206,10 @@ $Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20K
 Write-Verbose "Processing and Downloading: $Utilitiesapp9 Setup File..." -Verbose
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
+Start-Process -FilePath $Win11_22H2PEADK 
+
+pause
+
 Write-Host "Installing System Utilities Software 10 of 10..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp10..." -Verbose
@@ -190,6 +219,11 @@ Write-Host "Installing System Utilities Software 11 of 10..." -ForegroundColor C
 Write-Host
 Write-Verbose "Installing $Utilitiesapp11..." -Verbose
 choco install cinebench -y
+
+Stop-Transcript
+
+$OSDProgrammingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDProgrammingSoftware.log"
+Start-Transcript -Path $OSDProgrammingSoftwareLogs
 
 # Programming software
 
@@ -213,6 +247,11 @@ Write-Host "Installing Programming Software 2 of 2..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Programmingapp2..." -Verbose
 choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
+
+Stop-Transcript
+
+$OSDProductivitySoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDProductivitySoftware.log"
+Start-Transcript -Path $OSDProductivitySoftwareLogs
 
 # Productivity software
 
@@ -250,6 +289,11 @@ Start-Process -FilePath $Office2021DownloadFile
 pause
 Start-Process -FilePath $Office2021SetupFile
 pause
+
+Stop-Transcript
+
+$OSDVDIRDCITSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDVDIRDCITSoftware.log"
+Start-Transcript -Path $OSDVDIRDCITSoftwareLogs
 
 # Virtualization Remote Desktop related software
 
@@ -292,6 +336,10 @@ Write-Host
 Write-Verbose "Installing $RDCapp5..." -Verbose 
 winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDGamingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDGamingSoftware.log"
+Start-Transcript -Path $OSDGamingSoftwareLogs
 
 # Gaming software
 
@@ -309,6 +357,11 @@ Write-Host "Installing Gaming Software 1 of 1..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Gamingapp1..."  -Verbose
 winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
+
+$OSDSecuritySoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDSecuritySoftware.log"
+Start-Transcript -Path $OSDSecuritySoftwareLogs
 
 # Security Software
 
@@ -343,6 +396,11 @@ $Norton360URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Nor
 $OSDDownloads = "C:\OSDCloud\downloads"
 Save-WebFile $Norton360URL -DestinationDirectory $OSDDownloads
 
+Stop-Transcript
+
+$OSDFileTransferSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDFileTransferSoftware.log"
+Start-Transcript -Path $OSDFileTransferSoftwareLogs
+
 # File Transfer Software
 
 Write-Host
@@ -374,6 +432,10 @@ Write-Host
 Write-Verbose "Installing: $FileTransferapp3..." -Verbose
 winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDCloudBackupSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDCloudBackupSoftware.log"
+Start-Transcript -Path $OSDCloudBackupSoftwareLogs
 
 # Cloud Backup software
 
@@ -410,6 +472,10 @@ Write-Host
 Write-Verbose "Installing $CloudBackupapp4..." -Verbose 
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDNASNetworkingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDNASNetworkingSoftware.log"
+Start-Transcript -Path $OSDNASNetworkingSoftwareLogs
 
 # NAS and Networking software
 
@@ -427,6 +493,11 @@ Write-Host "Installing NAS and Networking Software 1 of 1..." -ForegroundColor C
 Write-Host
 Write-Verbose "Installing $NASapp1..." -Verbose
 winget install --id Synology.Assistant --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
+
+$OSDMessagingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDMessagingSoftware.log"
+Start-Transcript -Path $OSDMessagingSoftwareLogs
 
 # Messaging software
 
@@ -475,5 +546,70 @@ Write-Host
 Write-Verbose "Installing $Messagingapp7..." -Verbose
 winget install --id Zoom.ZoomOutlookPlugin --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDFeaturesLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSD-OSFeatures.log"
+Start-Transcript -Path $OSDFeaturesLogs
+
+# OS Features
+
+Write-Host
+Write-Host
+Write-Host "Step 13 : OS Features" -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+$OSFeatures1 = "Windows RSAT - Remote Server Administration Tools"
+$OSFeatures2 = "Services For NFS - Infrastructure"
+$OSFeatures3 = "Services For NFS - Client"
+$OSFeatures4 = "NFS Administration"
+$OSFeatures5 = "Microsoft Hyper-V"
 
 
+Write-Host "ATTN: $OSFeature5, OS Feature 5 of 5,  WILL ONLY INSTALL IF USER ANSWERS: YES, yes, Y or y" -ForegroundColor Red
+Write-Host
+Write-Host "Installing OS Features on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing OS Features 1 of 5..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $OSFeatures1..." -Verbose
+Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
+
+Write-Host "Installing OS Features 2 of 5..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $OSFeatures2..." -Verbose
+Get-WindowsOptionalFeature -FeatureName ServicesForNFS-ClientOnly -Online -Verbose
+
+Write-Host "Installing OS Features 3 of 5..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $OSFeatures3..." -Verbose
+Get-WindowsOptionalFeature -FeatureName ClientForNFS-Infrastructure -Online -Verbose
+
+Write-Host "Installing OS Features 4 of 5..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $OSFeatures4..." -Verbose
+Get-WindowsOptionalFeature -FeatureName NFS-Administration -Online -Verbose
+
+Stop-Transcript
+
+
+$HyperV = Read-Host -Prompt 'Do you need Hyper-V?'
+If($HyperV -eq "Y") -or ($HyperV -eq "y") -or ($HyperV -eq "YES") -or ($HyperV -eq "yes") {
+$OSDHyperVFeaturesLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSD-HyperVOSFeatures.log"
+Start-Transcript -Path $OSDHyperVFeaturesLogs
+Write-Host "Installing OS Features 5 of 5..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $OSFeatures5..." -Verbose
+Get-WindowsOptionalFeature -FeatureName HyperVisorPlatform -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName VirtualMachinePlatform -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName Containers -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName Containers-HNS -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName Containers-SDN -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName Containers-DisposableClientVM -Online -Verbose
+Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online -Verbose
+Stop-Transcript
+}
+ElseIf($HyperV -eq "N") -or ($HyperV -eq "n") -or ($HyperV -eq "NO") -or ($HyperV -eq "no") {
+Write-Host "$env:computername has completed Operating System Deployment"
+Restart-Computer
+}
