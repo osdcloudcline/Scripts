@@ -339,7 +339,7 @@ Save-WebFile $BitdefenderURL -DestinationDirectory $OSDDownloads
 Write-Host "Downloading Security Software 3 of 3..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Downloading $Securityapp3..."  -Verbose
-$Norton360URL = ""
+$Norton360URL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/Norton/N360Downloader.exe"
 $OSDDownloads = "C:\OSDCloud\downloads"
 Save-WebFile $Norton360URL -DestinationDirectory $OSDDownloads
 
