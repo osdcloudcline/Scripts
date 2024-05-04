@@ -1,3 +1,7 @@
+#####################################################################
+####                 SOFTWARE VARIABLES                    ##########
+#####################################################################
+
 $NETapp1 = ".NET Runtime 3.1"
 $NETapp1ver = "Version: 3.1.32"
 
@@ -80,95 +84,131 @@ $SYSGroup4 = "Microsoft XNA Framework"
 $SYSGroup5 = "Creative Technology Open AL"
 $SYSGroup6 = "OS Software"
 
+################################################################
+
+
+# NET Region
+
 Write-Host "Installing $SYSGroup1...." -ForegroundColor Cyan
 Write-Host
+Write-Host "Installing $SYSGroup1....1 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp1, $NETapp1ver..." -Verbose
 winget install --id  Microsoft.DotNet.Runtime.3_1 --exact --accept-source-agreements --accept-source-agreements --force
 
+Write-Host "Installing $SYSGroup1....2 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp2, $NETapp2ver..." -Verbose
 winget install --id Microsoft.DotNet.Runtime.5 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup1....3 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp3, $NETapp3ver..." -Verbose
 winget install --id Microsoft.DotNet.Runtime.6 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup1....4 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp4, $NETapp4ver..." -Verbose
 winget install --id Microsoft.DotNet.Runtime.7 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup1....5 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp5, $NETapp5ver..." -Verbose
 winget install --id Microsoft.DotNet.Runtime.8 --accept-source-agreements --accept-source-agreements --force
 
+Write-Host "Installing $SYSGroup1....6 of 6" -ForegroundColor Cyan
 Write-Verbose "Installing $NETapp6, $NETapp6ver..." -Verbose 
 choco install dotnetfx -y
 
+# Visual C Redistributable region 
 
 Write-Host "Installing $SYSGroup2...." -ForegroundColor Cyan
 Write-Host
+Write-Host "Installing $SYSGroup2....1 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp1, $VCRedistributableapp1ver..." -Verbose
 winget install --id Microsoft.VCRedist.2005.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....2 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp2, $VCRedistributableapp2ver..." -Verbose
 winget install --id Microsoft.VCRedist.2005.x86 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....3 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp3, $VCRedistributableapp3ver..." -Verbose
 winget install --id Microsoft.VCRedist.2008.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....4 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp4, $VCRedistributableapp4ver..." -Verbose
 winget install --id Microsoft.VCRedist.2008.x86 --exact --accept-source-agreements --accept-source-agreements  --force
-		
+
+Write-Host "Installing $SYSGroup2....5 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp5, $VCRedistributableapp5ver..." -Verbose
 winget install --id Microsoft.VCRedist.2010.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....6 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp6, $VCRedistributableapp6ver..." -Verbose
 winget install --id Microsoft.VCRedist.2010.x86 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....7 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp7, $VCRedistributableapp7ver..." -Verbose
 winget install --id Microsoft.VCRedist.2012.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....8 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp8, $VCRedistributableapp8ver..." -Verbose
 winget install --id Microsoft.VCRedist.2012.x86 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....9 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp9, $VCRedistributableapp9ver..." -Verbose
 winget install --id Microsoft.VCRedist.2013.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....10 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp10, $VCRedistributableapp10ver..." -Verbose
 winget install --id Microsoft.VCRedist.2013.x86 --exact --accept-source-agreements --accept-source-agreements --force
-				
+
+Write-Host "Installing $SYSGroup2....11 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp11, $VCRedistributableapp12ver..." -Verbose
 winget install --id Microsoft.VCRedist.2015+.x64 --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup2....12 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp12, $VCRedistributableapp12ver..." -Verbose
 winget install --id Microsoft.VCRedist.2015+.x86 --exact --accept-source-agreements --accept-source-agreements --force
 
+Write-Host "Installing $SYSGroup2....13 of 13" -ForegroundColor Cyan
 Write-Verbose "Installing $VCRedistributableapp13, $VCRedistributableapp13ver..." -Verbose
 choco install vcredist2017 -y
 
+# Oracle JAVA region 
 
 Write-Host "Installing $SYSGroup3...." -ForegroundColor Cyan
 Write-Host
+Write-Host "Installing $SYSGroup3....1 of 1" -ForegroundColor Cyan
 Write-Verbose "Installing $JAVAapp1, $JAVAapp1ver..." -Verbose
 winget install --id Oracle.JavaRuntimeEnvironment --exact --accept-source-agreements --accept-source-agreements --force
 		
 
+# XNA region
+
 Write-Host "Installing $SYSGroup4...." -ForegroundColor Cyan
-Write-Host		
+Write-Host
+Write-Host "Installing $SYSGroup4....1 of 1" -ForegroundColor Cyan
 Write-Verbose "Installing $XNAapp1, $XNAapp1ver..." -Verbose
 winget install --id Microsoft.XNARedist --exact --accept-source-agreements --accept-source-agreements --force
 		
+# Open AL region
 
 Write-Host "Installing $SYSGroup5...." -ForegroundColor Cyan
-Write-Host		
+Write-Host
+Write-Host "Installing $SYSGroup5....1 of 1" -ForegroundColor Cyan
 Write-Verbose "Installing $OpenALapp1, $OpenALapp1ver..." -Verbose
 choco install openal -y
 
+# OS Software region
 
 Write-Host "Installing $SYSGroup6...." -ForegroundColor Cyan
 Write-Host
+Write-Host "Installing $SYSGroup6....1 of 3" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp1, $OSapp1ver..." -Verbose
 winget install --id Microsoft.Edge --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup6....2 of 3" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp2, $OSapp2ver..." -Verbose
 winget install --id Microsoft.WindowsTerminal --exact --accept-source-agreements --accept-source-agreements --force
-		
+
+Write-Host "Installing $SYSGroup6....3 of 3" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp3, $OSapp3ver..." -Verbose
 winget install --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
 	
