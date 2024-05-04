@@ -232,7 +232,7 @@ choco install cinebench -y
 Write-Host "Installing System Utilities Software 12 of 13..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp12..." -Verbose
-
+winget.exe install --id LianLi.LConnect3 --exact --accept-source-agreements  --accept-package-agreements --force
 
 Write-Host "Installing System Utilities Software 13 of 13..." -ForegroundColor Cyan
 Write-Host
