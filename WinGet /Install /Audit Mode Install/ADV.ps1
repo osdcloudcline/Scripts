@@ -25,43 +25,53 @@ Write-Host "ATTN: $env:username - 43 pieces of software will be installed. Pleas
 Write-Host "Installing Media Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Media Software 1 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp1..." -Verbose
 winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 2 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp2..." -Verbose
 winget install --id VideoLAN.VLC --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 3 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp3..." -Verbose
 winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 4 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp4..." -Verbose
 winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 5 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp5..." -Verbose
 winget install --id PowerSoftware.PowerISO --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 6 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp6..." -Verbose
 winget install --id Audacity.Audacity --exact --accept-source-agreements  --accept-source-agreements --force
 choco install audacity-ffmpeg -y
 
 Write-Host "Installing Media Software 7 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp7..." -Verbose
 winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 8 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp8..." -Verbose
 winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 9 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp9..." -Verbose
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Media Software 10 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Mediaapp10..." -Verbose
 winget install --id XBMCFoundation.Kodi --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -79,10 +89,12 @@ $Browsingapp2 = "Mozilla Firefox"
 Write-Host "Installing Web Browsing Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Web Browsing Software 1 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Browsingapp1..." -Verbose
 winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Web Browsing Software 2 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Browsingapp2..." -Verbose
 winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -109,26 +121,32 @@ $Utilitiesapp11 = "Cinebench 2024"
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing System Utilities Software 1 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
 winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 2 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp2..." -Verbose
 winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 3 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp3..." -Verbose
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 4 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp4..." -Verbose
 winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 5 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp5..." -Verbose
 winget install --id XPDLS1XBTXVPP4 --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing System Utilities Software 6 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp6..." -Verbose
 winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
 
@@ -164,10 +182,12 @@ Write-Verbose "Processing and Downloading: $Utilitiesapp9 Setup File..." -Verbos
 Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
 
 Write-Host "Installing System Utilities Software 10 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp10..." -Verbose
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 
 Write-Host "Installing System Utilities Software 11 of 10..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Utilitiesapp11..." -Verbose
 choco install cinebench -y
 
@@ -185,10 +205,12 @@ $Programmingapp2 = "Visual Studio 2022 Enterprise"
 Write-Host "Installing Programming Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Programming Software 1 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Programmingapp1..." -Verbose
 winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Programming Software 2 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Programmingapp2..." -Verbose
 choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
 
@@ -206,10 +228,12 @@ $Prodapp2 = "Microsoft Office 2021 LTSC"
 Write-Host "Installing Productivity Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Productivity Software 1 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Prodapp1..." -Verbose
 winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements  --accept-source-agreements --force --source winget
 
 Write-Host "Installing Productivity Software 2 of 2..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Prodapp2..." -Verbose
 $OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
 mkdir $OfficeGHdownloads
@@ -244,22 +268,27 @@ $RDCapp5 = "Windows 365 Azure Virtual Desktop"
 Write-Host "Installing Virtualization, Remote Desktop and VDI Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Remote Desktop/Virtualization Software 1 of 5..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $RDCapp1..."  -Verbose
 winget install --id Microsoft.RemoteDesktopClient --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing Remote Desktop/Virtualization Software 2 of 5..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $RDCapp2..." -Verbose
 winget install --id VMware.HorizonClient --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Remote Desktop/Virtualization Software 3 of 5..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $RDCapp3..."  -Verbose
 winget install --id AnyDeskSoftwareGmbH.AnyDesk --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Remote Desktop/Virtualization Software 4 of 5..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $RDCapp4 ..." -Verbose  
 choco install vmwareworkstation --params='"/SERIALNUMBER=VV7RA-0YZ0N-M89EP-JFN7C-P62RF"' -y
 
 Write-Host "Installing Remote Desktop/Virtualization Software 5 of 5..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $RDCapp5..." -Verbose 
 winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -277,6 +306,7 @@ $Gamingapp1 = "Steam"
 Write-Host "Installing Gaming Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Gaming Software 1 of 1..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $Gamingapp1..."  -Verbose
 winget install --id Valve.Steam --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -293,18 +323,21 @@ $Securityapp2 = "BitDefender Total Security"
 $Securityapp3 = "Norton 360"
 
 Write-Host "Downloading Security Software 1 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Downloading $Securityapp1..."  -Verbose
 $MalwarebytesURL = "https://data-cdn.mbamupdates.com/web/mb4-setup-consumer/offline/MBSetup.exe"
 $OSDDownloads = "C:\OSDCloud\downloads"
 Save-WebFile $MalwarebytesURL -DestinationDirectory $OSDDownloads
 
 Write-Host "Downloading Security Software 2 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Downloading $Securityapp2..."  -Verbose
 $BitdefenderURL = "https://download.bitdefender.com/windows/desktop/connect/cl/2022/all/bitdefender_ts_26_64b.exe"
 $OSDDownloads = "C:\OSDCloud\downloads"
 Save-WebFile $BitdefenderURL -DestinationDirectory $OSDDownloads
 
 Write-Host "Downloading Security Software 3 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Downloading $Securityapp3..."  -Verbose
 $Norton360URL = ""
 $OSDDownloads = "C:\OSDCloud\downloads"
@@ -327,14 +360,17 @@ $FileTransferapp3 = "WinSCP"
 Write-Host "Installing File Transfer Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing File Transfer Software 1 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing $FileTransferapp1..."  -Verbose
 choco install filezilla  -y
 
 Write-Host "Installing File Transfer Software 2 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing: $FileTransferapp2..." -Verbose
 winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architecture x64  --accept-source-agreements --force
 
 Write-Host "Installing File Transfer Software 3 of 3..." -ForegroundColor Cyan
+Write-Host
 Write-Verbose "Installing: $FileTransferapp3..." -Verbose
 winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -355,18 +391,22 @@ $CloudBackupapp4 = "Microsoft OneDrive"
 Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing Cloud Backup Software 1 of 4..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $CloudBackupapp1..." -Verbose 
 winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Cloud Backup Software 2 of 4..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $CloudBackupapp2..." -Verbose
 winget install --id Nextcloud.NextcloudDesktop --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Cloud Backup Software 3 of 4..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $CloudBackupapp3..." -Verbose 
 winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing Cloud Backup Software 4 of 4..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $CloudBackupapp4..." -Verbose 
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
@@ -384,5 +424,56 @@ $NASapp1 = "Synology Assistant"
 Write-Host "Installing NAS and Networking Applications on $env:computername..." -ForegroundColor Green
 
 Write-Host "Installing NAS and Networking Software 1 of 1..." -ForegroundColor Cyan 
+Write-Host
 Write-Verbose "Installing $NASapp1..." -Verbose
 winget install --id Synology.Assistant --exact --accept-source-agreements  --accept-source-agreements --force
+
+# Messaging software
+
+Write-Host
+Write-Host
+Write-Host "Step 12 : Messaging Software" -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+$Messagingapp1 = "Cisco WebEx"
+$Messagingapp2 = "Cisco WebEx Teams"
+$Messagingapp3 = "Cisco WebEx Meetings"
+$Messagingapp4 = "Cisco WebEx Outlook Plug-in"
+$Messagingapp5 = "Microsoft Teams"
+$Messagingapp6 = "Zoom"
+$Messagingapp7 = "Zoom Outlook Plug-in"
+
+Write-Host "Installing Messaging Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing Messaging Software 1 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp1..." -Verbose
+winget install --id Cisco.Webex --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host "Installing Messaging Software 2 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp2..." -Verbose
+choco install webex-teams -y
+Write-Host "Installing Messaging Software 3 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp3..." -Verbose
+winget install --id Cisco.CiscoWebexMeetings --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host "Installing Messaging Software 4 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp4..." -Verbose
+winget install --id Cisco.webex-outlook-plugin --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host "Installing Messaging Software 5 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp5..." -Verbose
+winget install --id Microsoft.Teams --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host "Installing Messaging Software 6 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp6..." -Verbose
+winget install --id Zoom.Zoom --exact --accept-source-agreements  --accept-source-agreements --force
+Write-Host "Installing Messaging Software 7 of 7..." -ForegroundColor Cyan 
+Write-Host
+Write-Verbose "Installing $Messagingapp7..." -Verbose
+winget install --id Zoom.ZoomOutlookPlugin --exact --accept-source-agreements  --accept-source-agreements --force
+
+
+
