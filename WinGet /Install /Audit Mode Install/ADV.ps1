@@ -137,40 +137,43 @@ $Utilitiesapp10 = "Starwind V2V Converter"
 $Utilitiesapp11 = "Cinebench 2024"
 $Utilitiesapp12 = "Lian Li L-Connect 3"
 $Utilitiesapp13 = "Fan Control"
+$Utilitiesapp14 = "Samsung Magician"
+$Utilitiesapp15 = "3DMark Professional"
+$Utilitiesapp16 = "PCMark 10"
 
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
-Write-Host "Installing System Utilities Software 1 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 1 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
 winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 2 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 2 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp2..." -Verbose
 winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 3 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 3 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp3..." -Verbose
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 4 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 4 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp4..." -Verbose
 winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 5 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 5 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp5..." -Verbose
 winget install --id XPDLS1XBTXVPP4 --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 6 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 6 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp6..." -Verbose
 winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 7 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 7 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
@@ -184,7 +187,7 @@ Start-Process -FilePath $Win11_22H2SDK
 
 pause
 
-Write-Host "Installing System Utilities Software 8 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 8 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp8 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
@@ -198,7 +201,7 @@ Start-Process -FilePath $Win11_22H2ADK
 
 pause
 
-Write-Host "Installing System Utilities Software 9 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 9 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose
@@ -212,7 +215,7 @@ Start-Process -FilePath $Win11_22H2PEADK
 
 pause
 
-Write-Host "Installing System Utilities Software 10 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 10 of 16..." -ForegroundColor Cyan
 Write-Host
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $StarwindV2VConverterURL = "https://www.starwindsoftware.com/tmplink/starwindconverter.exe"
@@ -224,20 +227,41 @@ Start-Process -FilePath $V2VConverter
 
 pause
 
-Write-Host "Installing System Utilities Software 11 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 11 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp11..." -Verbose
 choco install cinebench -y
 
-Write-Host "Installing System Utilities Software 12 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 12 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp12..." -Verbose
 winget install --id LianLi.LConnect3 --exact --accept-source-agreements  --accept-package-agreements --force
 
-Write-Host "Installing System Utilities Software 13 of 13..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 13 of 16..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp13..." -Verbose
 winget install --id Rem0o.FanControl --exact --accept-source-agreements  --accept-package-agreements --force
+
+Write-Host "Installing System Utilities Software 14 of 16..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Utilitiesapp14..." -Verbose
+winget install --id Samsung.SamsungMagician --exact --accept-source-agreements  --accept-package-agreements --force
+
+Write-Host "Installing System Utilities Software 15 of 16..." -ForegroundColor Cyan
+Write-Host
+$3DMarkLocation = "C:\OSDCloud\downloads\3DMark\3dmark-setup.exe"
+Write-Verbose "Installing $Utilitiesapp15..." -Verbose
+Start-Process -FilePath $3DMarkLocation
+
+pause
+
+Write-Host "Installing System Utilities Software 16 of 16..." -ForegroundColor Cyan
+Write-Host
+$PCMarkLocation = "C:\OSDCloud\downloads\PCMark10\INSTALL.exe"
+Write-Verbose "Installing $Utilitiesapp15..." -Verbose
+Start-Process -FilePath $PCMarkLocation
+
+pause
 
 Stop-Transcript
 
