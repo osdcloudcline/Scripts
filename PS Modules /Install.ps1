@@ -82,7 +82,7 @@ Write-Host
 Write-Host "Installing $OSDGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
-Write-Verbose "Installing: $OSDModule1..." Verbose
+Write-Verbose "Installing: $OSDModule1..." -Verbose
 Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name OSD -Force
