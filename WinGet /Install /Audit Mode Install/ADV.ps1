@@ -724,29 +724,25 @@ $OSFeatures1 = "Windows RSAT - Remote Server Administration Tools"
 $OSFeatures2 = "Services For NFS - Infrastructure"
 $OSFeatures3 = "Services For NFS - Client"
 $OSFeatures4 = "NFS Administration"
-$OSFeatures5 = "Microsoft Hyper-V"
 
-
-Write-Host "ATTN: $OSFeature5, OS Feature 5 of 5,  WILL ONLY INSTALL IF USER ANSWERS: YES, yes, Y or y" -ForegroundColor Red
-Write-Host
 Write-Host "Installing OS Features on $env:computername..." -ForegroundColor Green
 
-Write-Host "Installing OS Features 1 of 5..." -ForegroundColor Cyan 
+Write-Host "Installing OS Features 1 of 4..." -ForegroundColor Cyan 
 Write-Host
 Write-Verbose "Installing $OSFeatures1..." -Verbose
 Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 
-Write-Host "Installing OS Features 2 of 5..." -ForegroundColor Cyan 
+Write-Host "Installing OS Features 2 of 4..." -ForegroundColor Cyan 
 Write-Host
 Write-Verbose "Installing $OSFeatures2..." -Verbose
 Get-WindowsOptionalFeature -FeatureName ServicesForNFS-ClientOnly -Online -Verbose
 
-Write-Host "Installing OS Features 3 of 5..." -ForegroundColor Cyan 
+Write-Host "Installing OS Features 3 of 4..." -ForegroundColor Cyan 
 Write-Host
 Write-Verbose "Installing $OSFeatures3..." -Verbose
 Get-WindowsOptionalFeature -FeatureName ClientForNFS-Infrastructure -Online -Verbose
 
-Write-Host "Installing OS Features 4 of 5..." -ForegroundColor Cyan 
+Write-Host "Installing OS Features 4 of 4..." -ForegroundColor Cyan 
 Write-Host
 Write-Verbose "Installing $OSFeatures4..." -Verbose
 Get-WindowsOptionalFeature -FeatureName NFS-Administration -Online -Verbose
@@ -754,23 +750,4 @@ Get-WindowsOptionalFeature -FeatureName NFS-Administration -Online -Verbose
 Stop-Transcript
 
 
-$HyperV = Read-Host -Prompt 'Do you need Hyper-V?'
-If($HyperV -eq "Y") -or ($HyperV -eq "y") -or ($HyperV -eq "YES") -or ($HyperV -eq "yes") {
-$OSDHyperVFeaturesLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSD-HyperVOSFeatures.log"
-Start-Transcript -Path $OSDHyperVFeaturesLogs
-Write-Host "Installing OS Features 5 of 5..." -ForegroundColor Cyan 
-Write-Host
-Write-Verbose "Installing $OSFeatures5..." -Verbose
-Get-WindowsOptionalFeature -FeatureName HyperVisorPlatform -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName VirtualMachinePlatform -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName Containers -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName Containers-HNS -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName Containers-SDN -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName Containers-DisposableClientVM -Online -Verbose
-Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online -Verbose
-Stop-Transcript
-}
-ElseIf($HyperV -eq "N") -or ($HyperV -eq "n") -or ($HyperV -eq "NO") -or ($HyperV -eq "no") {
-Write-Host "$env:computername has completed Operating System Deployment"
-Restart-Computer
-}
+
