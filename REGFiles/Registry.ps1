@@ -6,6 +6,7 @@ $REGLog = "C:\OSD\Logs\$env:computername-Registry.log"
 Start-Transcript -Path $REGLog
 
 $REGFileDirectory = "C:\OSDCloud\GitHub\downloads\Registry"
+mkdir $REGFileDirectory
 $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
