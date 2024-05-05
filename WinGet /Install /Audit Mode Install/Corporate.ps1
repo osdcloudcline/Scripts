@@ -1,4 +1,4 @@
-$OSDModuleLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSModule.log"
+$OSDModuleLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSModule.log"
 Start-Transcript -Path $OSDModuleLogs
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
@@ -6,7 +6,7 @@ Import-Module -Name OSD -Force
 
 Stop-Transcript
 
-$OSDMediaSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDMediaSoftware.log"
+$OSDMediaSoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDMediaSoftware.log"
 Start-Transcript -Path $OSDMediaSoftwareLogs
 
 # Media Software
@@ -37,7 +37,7 @@ winget install --id MediaArea.MediaInfo.GUI --exact --accept-source-agreements  
 
 Stop-Transcript
 
-$OSDBrowserSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDWebBrowserSoftware.log"
+$OSDBrowserSoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDWebBrowserSoftware.log"
 Start-Transcript -Path $OSDBrowserSoftwareLogs
 
 # Web Browsing Software
@@ -60,7 +60,7 @@ winget install --id Google.Chrome --exact --accept-source-agreements  --accept-s
 
 Stop-Transcript
 
-$OSDUtilitiesSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDUtilitiesSoftware.log"
+$OSDUtilitiesSoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDUtilitiesSoftware.log"
 Start-Transcript -Path $OSDUtilitiesSoftwareLogs
 
 # Utilities Software
@@ -180,7 +180,7 @@ Write-Host "All System Utility software successfully installed" -ForegroundColor
 
 Stop-Transcript
 
-$OSDProductivitySoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDProductivitySoftware.log"
+$OSDProductivitySoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDProductivitySoftware.log"
 Start-Transcript -Path $OSDProductivitySoftwareLogs
 
 # Productivity software
@@ -222,7 +222,7 @@ pause
 
 Stop-Transcript
 
-$OSDVDIRDCITSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDVDIRDCITSoftware.log"
+$OSDVDIRDCITSoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDVDIRDCITSoftware.log"
 Start-Transcript -Path $OSDVDIRDCITSoftwareLogs
 
 # Virtualization Remote Desktop related software
@@ -262,7 +262,7 @@ winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-so
 
 Stop-Transcript
 
-$OSDSecuritySoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDSecuritySoftware.log"
+$OSDSecuritySoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDSecuritySoftware.log"
 Start-Transcript -Path $OSDSecuritySoftwareLogs
 
 # Security Software
@@ -285,10 +285,7 @@ Save-WebFile $MalwarebytesURL -DestinationDirectory $OSDDownloads
 
 Stop-Transcript
 
-
-
-
-$OSDMessagingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDMessagingSoftware.log"
+$OSDMessagingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSDMessagingSoftware.log"
 Start-Transcript -Path $OSDMessagingSoftwareLogs
 
 # Messaging software
@@ -340,7 +337,7 @@ winget install --id Zoom.ZoomOutlookPlugin --exact --accept-source-agreements  -
 
 Stop-Transcript
 
-$OSDFeaturesLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSD-OSFeatures.log"
+$OSDFeaturesLogs = "C:\OSDCloud\DeploymentLogs\Corporate\$env:computername-OSD-OSFeatures.log"
 Start-Transcript -Path $OSDFeaturesLogs
 
 # OS Features
