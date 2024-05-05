@@ -140,40 +140,44 @@ $Utilitiesapp13 = "Fan Control"
 $Utilitiesapp14 = "Samsung Magician"
 $Utilitiesapp15 = "3DMark Professional"
 $Utilitiesapp16 = "PCMark 10"
+$Utilitiesapp17 = "Elgato Stream Deck"
+$Utilitiesapp18 = "G.Skill WigiDash"
+$Utilitiesapp19 = "G.Skill Trident Z and Z5 Lighting Control Software"
+$Utilitiesapp20 = "Sapphire TriXX Video Card Software"
 
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
-Write-Host "Installing System Utilities Software 1 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 1 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
 winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 2 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 2 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp2..." -Verbose
 winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 3 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 3 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp3..." -Verbose
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 4 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 4 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp4..." -Verbose
 winget install --id IObit.DriverBooster --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 5 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 5 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp5..." -Verbose
 winget install --id XPDLS1XBTXVPP4 --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 6 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 6 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp6..." -Verbose
 winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 7 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 7 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
@@ -187,7 +191,7 @@ Start-Process -FilePath $Win11_22H2SDK
 
 pause
 
-Write-Host "Installing System Utilities Software 8 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 8 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp8 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
@@ -201,7 +205,7 @@ Start-Process -FilePath $Win11_22H2ADK
 
 pause
 
-Write-Host "Installing System Utilities Software 9 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 9 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose
@@ -215,7 +219,7 @@ Start-Process -FilePath $Win11_22H2PEADK
 
 pause
 
-Write-Host "Installing System Utilities Software 10 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 10 of 20..." -ForegroundColor Cyan
 Write-Host
 $OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
 $StarwindV2VConverterURL = "https://www.starwindsoftware.com/tmplink/starwindconverter.exe"
@@ -227,27 +231,27 @@ Start-Process -FilePath $V2VConverter
 
 pause
 
-Write-Host "Installing System Utilities Software 11 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 11 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp11..." -Verbose
 choco install cinebench -y
 
-Write-Host "Installing System Utilities Software 12 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 12 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp12..." -Verbose
 winget install --id LianLi.LConnect3 --exact --accept-source-agreements  --accept-package-agreements --force
 
-Write-Host "Installing System Utilities Software 13 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 13 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp13..." -Verbose
 winget install --id Rem0o.FanControl --exact --accept-source-agreements  --accept-package-agreements --force
 
-Write-Host "Installing System Utilities Software 14 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 14 of 20..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp14..." -Verbose
 winget install --id Samsung.SamsungMagician --exact --accept-source-agreements  --accept-package-agreements --force
 
-Write-Host "Installing System Utilities Software 15 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 15 of 20..." -ForegroundColor Cyan
 Write-Host
 $3DMarkLocation = "C:\OSDCloud\downloads\3DMark\3dmark-setup.exe"
 Write-Verbose "Installing $Utilitiesapp15..." -Verbose
@@ -255,14 +259,69 @@ Start-Process -FilePath $3DMarkLocation
 
 pause
 
-Write-Host "Installing System Utilities Software 16 of 16..." -ForegroundColor Cyan
+Write-Host "Installing System Utilities Software 16 of 20..." -ForegroundColor Cyan
 Write-Host
 $PCMarkLocation = "C:\OSDCloud\downloads\PCMark10\INSTALL.exe"
-Write-Verbose "Installing $Utilitiesapp15..." -Verbose
+Write-Verbose "Installing $Utilitiesapp16..." -Verbose
 Start-Process -FilePath $PCMarkLocation
 
 pause
 
+Write-Host "Installing System Utilities Software 17 of 20..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Utilitiesapp17..." -Verbose
+winget install --id Elgato.StreamDeck --exact --accept-source-agreements  --accept-package-agreements --force
+
+Write-Host "Installing System Utilities Software 18 of 20..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Utilitiesapp18..." -Verbose
+$GSkillWigiDashSoftwareURL = "https://www.gskill.com/gskill-device/wigidash/WigiDash_Manager_Setup_v10883138720.zip"
+$WigiDashAIDA64ThemeURL = "https://www.gskill.com/gskill-device/wigidash/gskill_wigidash_aida64_sensorpanel_theme_v1.4.zip"
+$WigiDashPDFURL = "https://www.gskill.com/wigidash-tutorial/pdf/wigidash-pc-command-panel-tutorial-guide-v2024.04.02i-eng.pdf"
+$OSDCloudGSkillWigiDashSWdownloads = "C:\OSDCloud\downloads\GSkill\WigiDash\Software"
+$WigiDashAIDA64Themedownloads = "C:\OSDCloud\downloads\GSkill\WigiDash\AIDA64\Theme"
+$WigiDashPDF = "C:\OSDCloud\downloads\GSkill\WigiDash"
+Write-Host "Downloading $Utilitiesapp18 Files from www.gskill.com..." -ForegroundColor Cyan
+Write-Verbose "Downloading WigiDash Software..." -Verbose
+Save-WebFile -SourceUrl $GSkillWigiDashSoftwareURL -DestinationDirectory $OSDCloudGSkillWigiDashSWdownloads
+Write-Verbose "Downloading WigiDash AIDA64 Theme..." -Verbose
+Save-WebFile -SourceUrl $WigiDashAIDA64ThemeURL -DestinationDirectory $WigiDashAIDA64Themedownloads
+Write-Verbose "Downloading WigiDash en-US PDF Manual..." -Verbose
+Save-WebFile -SourceUrl $WigiDashPDFURL -DestinationDirectory $WigiDashPDF
+Write-Host
+Write-Verbose "Expanding WigiDash Software ZIP file..." -Verbose
+Expand-Archive -Path "$OSDCloudGSkillWigiDashSWdownloads\WigiDash_Manager_Setup_v10883138720.zip" -Destination $OSDCloudGSkillWigiDashSWdownloads
+Write-Verbose "Expanding WigiDash AIDA64 Theme ZIP file..." -Verbose
+Expand-Archive -Path "$WigiDashAIDA64Themedownloads\gskill_wigidash_aida64_sensorpanel_theme_v1.4.zip" -Destination $OSDCloudGSkillWigiDashSWdownloads
+
+
+Write-Host "Installing System Utilities Software 19 of 20..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Utilitiesapp19..." -Verbose
+$GSkillRAMLightingSoftwareURL = "https://www.gskill.com/gskill-device/memory/G.SKILL-Trident-Z-Lighting-Control-v1.00.35.zip"
+$GSkillRAMLightingPDFURL = "https://www.gskill.com/gskill-device/memory/guides/Trident_Z_Lighting_Control_Software_Guide_1.19g.pdf"
+$OSDCloudGSkillRAMLightingSWdownloads = "C:\OSDCloud\downloads\GSkill\RAM Lighting\Software"
+$RAMLightinghPDF = "C:\OSDCloud\downloads\GSkill\RAM Lighting"
+Write-Host "Downloading $Utilitiesapp19 Files from www.gskill.com..." -ForegroundColor Cyan
+Write-Verbose "Downloading $Utilitiesapp19..." -Verbose
+Save-WebFile -SourceUrl $GSkillRAMLightingSoftwareURL -DestinationDirectory $OSDCloudGSkillRAMLightingSWdownloads
+Write-Verbose "Downloading $Utilitiesapp19 en-US PDF Manual..." -Verbose
+Save-WebFile -SourceUrl $GSkillRAMLightingPDFURL -DestinationDirectory $RAMLightinghPDF
+Write-Host
+Write-Verbose "Expanding $Utilitiesapp19 ZIP file..." -Verbose
+Expand-Archive -Path "$OSDCloudGSkillRAMLightingSWdownloads\G.SKILL-Trident-Z-Lighting-Control-v1.00.35.zip" -Destination $OSDCloudGSkillRAMLightingSWdownloads
+
+Write-Host "Installing System Utilities Software 20 of 20..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Utilitiesapp20..." -Verbose
+$SapphireTRIXXURL = "https://cdn.sapphiretech.global/assets/software/TRIXX_9.7.0.zip"
+$OSDCloudSapphiredownloads = "C:\OSDCloud\downloads\Sapphire\VideoCards"
+Write-Host "Downloading $Utilitiesapp20 Files from www.sapphiretech.com/en/software..." -ForegroundColor Cyan
+Write-Verbose "Downloading $Utilitiesapp20..." -Verbose
+Save-WebFile -SourceUrl $SapphireTRIXXURL -DestinationDirectory $OSDCloudSapphiredownloads
+Write-Host
+Write-Verbose "Expanding $Utilitiesapp20 ZIP file..." -Verbose
+Expand-Archive -Path "$OSDCloudSapphiredownloads\TRIXX_9.7.0.zip" -Destination $OSDCloudSapphiredownloads
 Stop-Transcript
 
 $OSDProgrammingSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDProgrammingSoftware.log"
