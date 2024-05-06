@@ -23,6 +23,12 @@ $DomainDeploymentGroup1 = "Microsoft Endpoint Configuration Manager"
 
 $PSUtilitiesGroup1 = "File Archiving"
 
+$OEMManufacturer1 = "DELL"
+$OEMManufacturer2 = "HP"
+$OEMManufacturer3 = "Hewlett Packard"
+$OEMManufacturer4 = "Lenovo"
+$OEMManufacturer5 = "VMWare, Inc"
+
 #################################
 ## PS Modules to be installed ###
 #################################
@@ -501,4 +507,206 @@ Import-Module -Name 7Zip4Powershell -Force
 Start-Sleep -Seconds 5
 Write-Host
 
+
+$pcmodel = (Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer
+Switch -wildcard ($pcmodel)
+{
+  "*Dell*"{
+
+$DellModule1 = "Dell BIOS Provider"
+$DellModule2 = "Get BIOS"
+$DellModule3 = "Get Dell Warranty"
+$DellModule4 = "Dell Warranty Service Tag"
+$DellModule5 = "Get Dell Warranty/Service Tag Info" 
+$DellModule6 = "Get Dell Support Info" 
+
+Write-Host "Installing $OEMManufacturer1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $DellModule1..." -Verbose
+Install-Module -Name DellBIOSProvider -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name DellBIOSProvider -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $DellModule2..." -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name GetBIOS -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $DellModule3..." -Verbose
+Install-Module -Name Get-DellWarranty -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Get-DellWarranty -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $DellModule4..." -Verbose
+Install-Module -Name DellWarrantyServiceTag -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name DellWarrantyServiceTag -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $DellModule5..." -Verbose
+Install-Module -Name Get-DellWarrantyInfo -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Get-DellWarrantyInfo -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $DellModule6..." -Verbose
+Install-Module -Name Get-DellSupportInfo -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Get-DellSupportInfo -Force
+Start-Sleep -Seconds 5
+Write-Host
+  }
+
+  "*HP*"{
+
+$HPModule1 = "HP Client Management Script Library"
+$HPModule2 = "Get BIOS"
+$HPModule3 = "Hewlett Packard Warranty"
+$HPModule4 = "HP Drivers"
+$HPModule5 = "Uninstall HP Bloatware" 
+
+
+Write-Host "Installing $OEMManufacturer2 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $HPModule1..." -Verbose
+Install-Module -Name HPCMSL -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPCMSL -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule2..." -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name GetBIOS -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule3..." -Verbose
+Install-Module -Name HPWarranty -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPWarranty -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule4..." -Verbose
+Install-Module -Name HPDrivers -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPDrivers -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule5..." -Verbose
+Install-Module -Name Uninstall-HPBloat -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Uninstall-HPBloat -Force
+Start-Sleep -Seconds 5
+Write-Host
+  }
+
+  "*Hewlett Packard*"{
+
+$HPModule1 = "HP Client Management Script Library"
+$HPModule2 = "Get BIOS"
+$HPModule3 = "Hewlett Packard Warranty"
+$HPModule4 = "HP Drivers"
+$HPModule5 = "Uninstall HP Bloatware" 
+
+
+Write-Host "Installing $OEMManufacturer3 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $HPModule1..." -Verbose
+Install-Module -Name HPCMSL -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPCMSL -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule2..." -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name GetBIOS -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule3..." -Verbose
+Install-Module -Name HPWarranty -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPWarranty -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule4..." -Verbose
+Install-Module -Name HPDrivers -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name HPDrivers -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $HPModule5..." -Verbose
+Install-Module -Name Uninstall-HPBloat -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Uninstall-HPBloat -Force
+Start-Sleep -Seconds 5
+Write-Host
+  }
+
+  "*Lenovo*"{
+
+$LenovoModule1 = "LSU Client"
+$LenovoModule2 = "Get BIOS"
+$LenovoModule3 = "Lenovo Info"
+$LenovoModule4 = "Lenovo Battery"
+$LenovoModule5 = "Lenovo Warranty Info" 
+
+
+Write-Host "Installing $OEMManufacturer4 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $LenovoModule1..." -Verbose
+Install-Module -Name LSUClient -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name LSUClient -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $LenovoModule2..." -Verbose
+Install-Module -Name GetBIOS -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name GetBIOS -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $LenovoModule3..." -Verbose
+Install-Module -Name LenovoInfo -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name LenovoInfo -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $LenovoModule4..." -Verbose
+Install-Module -Name LenovoBattery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name LenovoBattery -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $LenovoModule5..." -Verbose
+Install-Module -Name Get-LenovoWarrantyinfo -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Get-LenovoWarrantyinfo -Force
+Start-Sleep -Seconds 5
+Write-Host
+  }
+
+  "*VMWare*"{
+
+$VirtualModule1 = "SysInfo"
+
+
+
+Write-Host "Installing $OEMManufacturer5 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $VirtualModule1..." -Verbose
+Install-Module -Name SysInfo -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name SysInfo -Force
+Start-Sleep -Seconds 5
+Write-Host
+  }  
 Stop-Transcript 
