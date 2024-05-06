@@ -11,12 +11,16 @@ $OSDGroup2 = "OSD: Configuration"
 $OSDGroup3 = "OSD: Cloud"
 $OSDGroup4 = "OSD: Autopilot, Drivers, Software and Updates"
 $OSDGroup5 = "OSD: Microsoft Graph"
+
 $VMGroup1 = "VMWare ESXI"
 $VMGroup2 = "VMWare Workstation Pro"
 $VMGroup3 = "Microsoft Hyper-V"
+
 $NetworkingGroup1 = "Ubiquiti"
 $NetworkingGroup2 = "WiFi"
+
 $DomainDeploymentGroup1 = "Microsoft Endpoint Configuration Manager" 
+
 $PSUtilitiesGroup1 = "File Archiving"
 
 #################################
