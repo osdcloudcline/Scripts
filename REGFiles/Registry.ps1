@@ -19,11 +19,11 @@ $REG3 = "Windows 10 OS Modifications Registry Entries"
 $REG4 = "PC Mark 10 Registry Entries"
 $REG5 = "3D Mark Registry Entries"
 
-$REG1PATH = "$RegFileDirectory\Adobe.reg"
-$REG2PATH = "$RegFileDirectory\Windows11-OSModifications.reg"
-$REG3PATH = "$REGFilesDirectory\Windows10-OSModifications.reg"
-$REG4PATH = "$RegFileDirectory\PCMark10.reg"
-$REG5PATH = "$RegFilesDirectory\3DMark.reg"
+$REG1PATH = "$REGFileDirectory\Adobe.reg"
+$REG2PATH = "$REFFileDirectory\Windows11-OSModifications.reg"
+$REG3PATH = "$REGFileDirectory\Windows10-OSModifications.reg"
+$REG4PATH = "$REGFileDirectory\PCMark10.reg"
+$REG5PATH = "$REGFileDirectory\3DMark.reg"
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -34,16 +34,16 @@ $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFile
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
-Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectorty
 
 Write-Verbose "Obtaining $REG2 ..." -Verbose
-Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFileDirectorty
 
 Write-Verbose "Obtaining $REG4 ..." -Verbose
-Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFileDirectorty
 
 Write-Verbose "Obtaining $REG5 ..." -Verbose
-Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectorty
 cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
@@ -52,14 +52,14 @@ Write-Verbose "Merging $REG1 into $OSInfo1 $OSInfo2 on $env:computername..." -Ve
 regedit /s $REG1PATH
 Write-Host
 If(($OSInfo1 -eq "Microsoft Windows 11 Home") -or ($OSInfo1 -eq "Microsoft Windows 11 Pro") -or ($OSInfo1 -eq "Microsoft Windows 11 Pro for Workstations") -or ($OSInfo1 -eq "Microsoft Windows 11 Enterprise")){ 
-Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFileDirectorty
 Write-Verbose "Merging $REG2 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG2PATH
 }
 ElseIf(($OSInfo1 -eq "Microsoft Windows 10 Home") -or ($OSInfo1 -eq "Microsoft Windows 10 Pro") -or ($OSInfo1 -eq "Microsoft Windows 10 Pro for Workstations") -or ($OSInfo1 -eq "Microsoft Windows 10 Enterprise")){
 Write-Host "$env:computername is running Windows 10. Please wait while Registry modifications are acquired fromn OSDCloudCline GitHub repo..."
 Write-Verbose "Obtaining $REG3 ..." -Verbose
-Save-WebFile -SourceUrl $W10OSModificationRegFileUrl -DestinationDirectory $REGFilesDirectorty
+Save-WebFile -SourceUrl $W10OSModificationRegFileUrl -DestinationDirectory $REGFileDirectorty
 Write-Verbose "Merging $REG3 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG3PATH
 }
