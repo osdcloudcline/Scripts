@@ -1,4 +1,4 @@
-##################################
+GF##################################
 # Registry Files 
 ##################################
 
@@ -41,6 +41,7 @@ Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFilesDirec
 
 Write-Verbose "Obtaining $REG5 ..." -Verbose
 Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFilesDirectorty
+cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
 Write-Host
