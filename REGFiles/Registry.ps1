@@ -20,7 +20,7 @@ $REG4 = "PC Mark 10 Registry Entries"
 $REG5 = "3D Mark Registry Entries"
 
 $REG1PATH = "$REGFileDirectory\Adobe.reg"
-$REG2PATH = "$REFFileDirectory\Windows11-OSModifications.reg"
+$REG2PATH = "$REGFileDirectory\Windows11-OSModifications.reg"
 $REG3PATH = "$REGFileDirectory\Windows10-OSModifications.reg"
 $REG4PATH = "$REGFileDirectory\PCMark10.reg"
 $REG5PATH = "$REGFileDirectory\3DMark.reg"
@@ -34,16 +34,16 @@ $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFile
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
-Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectorty
+Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectory
 
 Write-Verbose "Obtaining $REG2 ..." -Verbose
-Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFileDirectorty
+Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFileDirectory
 
 Write-Verbose "Obtaining $REG4 ..." -Verbose
-Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFileDirectorty
+Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFileDirectory
 
 Write-Verbose "Obtaining $REG5 ..." -Verbose
-Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectorty
+Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectory
 cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
