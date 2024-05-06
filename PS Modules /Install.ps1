@@ -11,6 +11,9 @@ $VMGroup1 = "VMWare ESXI"
 $VMGroup2 = "VMWare Workstation Pro"
 $VMGroup3 = "Microsoft Hyper-V"
 $NetworkingGroup1 = "Ubiquiti"
+$NetworkingGroup2 = "WiFi"
+$DomainDeploymentGroup1 = "Microsoft Endpoint Configuration Manager" 
+
 
 #################################
 ## PS Modules to be installed ###
@@ -34,6 +37,9 @@ $OSDModule10 ="OSD Deploy"
 $OSDModule11 = "OSD Software"
 $OSDModule12 = "OSD Catalog"
 $OSDModule13 = "OSD Progress"
+
+$MSGraphModule1 = "Microsoft Graph"
+$MSGraphModule2 = "Microsoft Graph Device Management"
 
 $CloudModule1 = "Azure"
 $CloudModule2 = "Azure AD"
@@ -60,7 +66,7 @@ $ESXIModule3 = "VMWare ESXI Baseline Check"
 $ESXIModule4 = "Windows Image Builder"
 $ESXIModule5 = "vDocumentation"
 
-$WorkstationProModules
+$WorkstationProModule1 = "vmxtoolkit"
 
 $HyperVModule1 = "Lab Builder"
 $HyperVModule2 = "Hyper-V Backup"
@@ -70,6 +76,15 @@ $HyperVModule5 = "Hyper-V Lab"
 $HyperVModule6 = "Automated Lab"
 $HyperVModule7 = "Hyper-V Administration"
 $HyperVModule8 = "Windows Image Converter"
+
+$NetworkingModule1 = "UNIFI"
+$NetworkingModule2 = "WiFi Profile Management"
+$NetworkingModule3 = "WiFi Tools"
+
+$MECMModule1 = " System Center Client"
+$MECMModule2 = "System Center Client Actions"
+$MECMModule3 = "SCCM Stuff"
+
 
 
 
@@ -107,7 +122,7 @@ Import-Module -Name OSDBuilder -Force
 Start-Sleep -Seconds 5
 Write-Host
 
-Write-Verbose "Installing: $OSDModule3...Module No: 2 of 2" -Verbose
+Write-Verbose "Installing: $OSDModule3..." -Verbose
 Install-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name OSDSUS -Force
@@ -118,6 +133,24 @@ Write-Host
 
 Write-Host "Installing and Importing: $OSDGroup3 Modules..." -ForegroundColor Cyan
 Write-Host
+Write-Host
+Write-Verbose "Installing: $OSDModule4..." -Verbose
+Install-Module -Name OSDCloudCLI -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDCloudCLI -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule5..." -Verbose
+Install-Module -Name OSDCloudGUI -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDCloudGUI -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule6..." -Verbose
+Install-Module -Name OSDCloudAzure -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDCloudAzure -Force
+Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Installing: $CloudModule1..." -Verbose	
 Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
@@ -152,55 +185,134 @@ Install-Module -Name Az.Automation -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Automation -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule9..." -Verbose
 Install-Module -Name Az.Network -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Network -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule10..." -Verbose
 Install-Module -Name Az.ApiManagement -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.ApiManagement -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule11..." -Verbose
 Install-Module -Name Az.Advisor -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Advisor -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule12..." -Verbose
 Install-Module -Name Az.AnalysisServices -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.AnalysisServices -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule13..." -Verbose
 Install-Module -Name Az.Billing -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Billing -Force
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule14..." -Verbose
 Install-Module -Name Az.ApplicationInsights -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.ApplicationInsights -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule15..." -Verbose
 Install-Module -Name Az.Cdn -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Cdn -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule16..." -Verbose
 Install-Module -Name Az.Batch -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Batch -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule17..." -Verbose
 Install-Module -Name Az.Monitor -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Az.Monitor -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $CloudModule18..." -Verbose
 Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name PSCloudPC -Force
 Start-Sleep -Seconds 5
+Write-Host
+
+
+# OSD Autopilot, Drivers, Software and Updates PowerShell Modules
+
+Write-Host "Installing and Importing: $OSDGroup4 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $OSDModule7..." -Verbose
+Install-Module -Name OSDUpdate -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDUpdate -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule8..." -Verbose
+Install-Module -Name AutopilotOOBE -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name AutopilotOOBE -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule9..." -Verbose
+Install-Module -Name OSDDrivers -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDDrivers -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule10..." -Verbose
+Install-Module -Name OSDeploy -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDeploy -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule11..." -Verbose
+Install-Module -Name OSDSoftware -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDSoftware -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule12..." -Verbose
+Install-Module -Name OSDCatalog -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDCatalog -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule13..." -Verbose
+Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name OSDProgress -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+# Microsoft Graph PowerShell Modules
+
+Write-Host "Installing and Importing: $OSDGroup5 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $MSGraphModule1..." -Verbose
+Install-Module -Name MSGraph -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name MSGraph -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $MSGraphModule2..." -Verbose
+Install-Module -Name Microsoft.Graph.DeviceManagement -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Microsoft.Graph.DeviceManagement -Force
+Start-Sleep -Seconds 5
+Write-Host
 
 
 # VM Modules - ESXI
@@ -213,31 +325,42 @@ Install-Module -Name AsBuiltReport.VMware.ESXi -Force -AllowClobber -SkipPublish
 Start-Sleep -Seconds 5
 Import-Module -Name AsBuiltReport.VMware.ESXi -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $ESXIVModule2..." -Verbose
 Install-Module -Name EsxiInventoryTools -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name EsxiInventoryTools -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $ESXIVModule3..." -Verbose
 Install-Module -Name VMwareBaselineCheck -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name VMwareBaselineCheck -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $ESXIVModule4..." -Verbose
 Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name WindowsImageBuilder -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $ESXIVModule5..." -Verbose
 Install-Module -Name vDocumentation -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name vDocumentation -Force
 Start-Sleep -Seconds 5
+Write-Host
 
 # VM Modules - VMWare Workstation Pro
 
 Write-Host "Installing $VMGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
+Write-Host
+Write-Verbose "Installing: $WorkstationProModule1..." -Verbose
+Install-Module -Name vmxtoolkit -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name vmxtoolkit -Force
+Start-Sleep -Seconds 5
 Write-Host
 
 # VM Modules - Hyper-V
@@ -250,16 +373,19 @@ Install-Module -Name LabBuilder -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name LabBuilder -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule2..." -Verbose
 Install-Module -Name Hyper-V-Backup -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Hyper-V-Backup -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule3..." -Verbose
 Install-Module -Name Hyper-V.Tools -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Hyper-V.Tools -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule4..." -Verbose
 Install-Module -Name Image-Factory -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
@@ -270,18 +396,80 @@ Install-Module -Name HyperVLab -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name HyperVLab -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule6..." -Verbose
 Install-Module -Name AutomatedLab -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name AutomatedLab -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule7..." -Verbose
 Install-Module -Name Hyper-VAdministration -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name Hyper-VAdministration -Force
 Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $HyperVModule8..." -Verbose
 Install-Module -Name WindowsImageConverter -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name WindowsImageConverter -Force
 Start-Sleep -Seconds 5
+Write-Host
+
+# UNIFI Module 
+
+Write-Host "Installing $NetworkingGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $NetworkingModule1..." -Verbose
+Install-Module -Name UNIFI -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name UNIFI -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+# WiFi Modules 
+
+Write-Host "Installing $NetworkingGroup2 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $NetworkingModule2..." -Verbose
+Install-Module -Name wifiprofilemanagement -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name wifiprofilemanagement -Force
+Start-Sleep -Seconds 5
+Install-Module -Name WiFiProfileManagementDsc -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name WiFiProfileManagementDsc -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $NetworkingModule3..." -Verbose
+Install-Module -Name WifiTools -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name WifiTools -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+# MECM Modules
+
+Write-Host "Installing $DomainDeploymentGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $MECMModule1..." -Verbose
+Install-Module -Name SCClient -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name SCClient -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $MECMModule2..." -Verbose
+Install-Module -Name SCCMClientActions -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name SCCMClientActions -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $MECMModule3..." -Verbose
+Install-Module -Name SCCMStuff -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name SCCMStuff -Force
+Start-Sleep -Seconds 5
+Write-Host
