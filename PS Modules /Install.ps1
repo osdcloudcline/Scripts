@@ -1,4 +1,4 @@
-$PSModsLogs = "C:\Logs\OSD\$env:computername-PSModules.log"
+$PSModsLogs = "C:\OSD\Logs\$env:computername-PSModules.log"
 Start-Transcript -Path $PSModsLogs
 Get-Date 
 
