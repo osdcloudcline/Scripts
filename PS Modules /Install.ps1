@@ -1,3 +1,7 @@
+$PSModsLogs = "C:\Logs\OSD\$env:computername-PSModules.log"
+Start-Transcript -Path $PSModsLogs
+Get-Date 
+
 ############################
 ### PS Module Group Names ##
 ############################
@@ -473,3 +477,5 @@ Start-Sleep -Seconds 5
 Import-Module -Name SCCMStuff -Force
 Start-Sleep -Seconds 5
 Write-Host
+
+Stop-Transcript 
