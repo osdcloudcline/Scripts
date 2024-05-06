@@ -41,6 +41,7 @@ $OSDModule10 ="OSD Deploy"
 $OSDModule11 = "OSD Software"
 $OSDModule12 = "OSD Catalog"
 $OSDModule13 = "OSD Progress"
+$OSDModule14 = "PS Windows Update"
 
 $MSGraphModule1 = "Microsoft Graph"
 $MSGraphModule2 = "Microsoft Graph Device Management"
@@ -297,6 +298,12 @@ Write-Verbose "Installing: $OSDModule13..." -Verbose
 Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name OSDProgress -Force
+Start-Sleep -Seconds 5
+Write-Host
+Write-Verbose "Installing: $OSDModule14..." -Verbose
+Install-Module -Name PSWindowsUpdate -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name PSWindowsUpdate -Force
 Start-Sleep -Seconds 5
 Write-Host
 
