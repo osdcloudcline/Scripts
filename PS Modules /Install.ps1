@@ -17,7 +17,7 @@ $VMGroup3 = "Microsoft Hyper-V"
 $NetworkingGroup1 = "Ubiquiti"
 $NetworkingGroup2 = "WiFi"
 $DomainDeploymentGroup1 = "Microsoft Endpoint Configuration Manager" 
-
+$PSUtilitiesGroup1 = "File Archiving"
 
 #################################
 ## PS Modules to be installed ###
@@ -90,7 +90,7 @@ $MECMModule1 = " System Center Client"
 $MECMModule2 = "System Center Client Actions"
 $MECMModule3 = "SCCM Stuff"
 
-
+$UtilityModule1 = "7-Zip"
 
 
 Write-Host
@@ -482,6 +482,18 @@ Write-Verbose "Installing: $MECMModule3..." -Verbose
 Install-Module -Name SCCMStuff -Force -AllowClobber -SkipPublisherCheck
 Start-Sleep -Seconds 5
 Import-Module -Name SCCMStuff -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+# Utility Modules 
+
+Write-Host "Installing $PSUtilitiesGroup1 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $UtilityModule1..." -Verbose
+Install-Module -Name 7Zip4Powershell -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name 7Zip4Powershell -Force
 Start-Sleep -Seconds 5
 Write-Host
 
