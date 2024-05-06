@@ -81,7 +81,7 @@ $ESXIModule3 = "VMWare ESXI Baseline Check"
 $ESXIModule4 = "Windows Image Builder"
 $ESXIModule5 = "vDocumentation"
 
-$WorkstationProModule1 = "vmxtoolkit"
+
 
 $HyperVModule1 = "Lab Builder"
 $HyperVModule2 = "Hyper-V Backup"
