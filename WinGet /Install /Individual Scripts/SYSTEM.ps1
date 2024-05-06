@@ -1,3 +1,6 @@
+$OSSoftLogs = "C:\Logs\OSD\$env:computername-OSDSoftware.log
+Start-Transcript -Path $OSSoftLogs
+
 #####################################################################
 ####                 SOFTWARE VARIABLES                    ##########
 #####################################################################
@@ -213,6 +216,8 @@ Write-Verbose "Installing $OSapp3, $OSapp3ver..." -Verbose
 winget install --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
 	
 Write-Host "Finished Installing System related software..." -ForegroundColor Yellow
+
+Stop-Transcript
 
 $AuditMain = InVoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
 Invoke-Expression $($AuditMain.Content)
