@@ -5,6 +5,8 @@
 $REGLog = "C:\OSD\Logs\$env:computername-Registry.log"
 Start-Transcript -Path $REGLog
 
+Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+
 $REGFileDirectory = "C:\OSDCloud\GitHub\downloads\Registry"
 mkdir $REGFileDirectory
 $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
