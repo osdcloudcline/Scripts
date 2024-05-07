@@ -12,3 +12,5 @@ $OSDGroup3 = "OSD: Cloud"
 ## PS Modules to be installed ###
 #################################
 
+$CloudModule18 = "Windows 365 Cloud PC"
+
