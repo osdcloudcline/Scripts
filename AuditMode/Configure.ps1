@@ -6,9 +6,6 @@ Write-Verbose "Step 1 - PowerShell Modules..." -Verbose
 $PSModules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1")
 Invoke-Expression $($PSModules.Content)
 
-$PSModules7 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/InstallPS7.ps1")
-Invoke-Expression $($PSModules7.Content)
-
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
 
 $Registry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1")
