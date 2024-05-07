@@ -2,7 +2,7 @@
 # Registry Files 
 ##################################
 
-$REGLog = "C:\OSD\Logs\$env:computername-Registry.log"
+$REGLog = "C:\OSDCloud\DeploymentLogs\Registry\$env:computername-Registry.log"
 Start-Transcript -Path $REGLog
 
 Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
