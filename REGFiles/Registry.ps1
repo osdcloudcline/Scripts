@@ -37,7 +37,7 @@ $W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/mai
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
 $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
-
+$SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
 
 
 
@@ -52,6 +52,10 @@ Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFileDirect
 
 Write-Verbose "Obtaining $REG5 ..." -Verbose
 Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectory
+
+Write-Verbose "Obtaining $REG6 ..." -Verbose
+Save-WebFile -SourceUrl $SYSTEMDesktopIconsRegFileUrl -DestinationDirectory $REGFileDirectory
+
 cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
