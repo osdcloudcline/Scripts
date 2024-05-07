@@ -5,22 +5,22 @@ Start-Transcript -Path $OSSoftLogs
 ####                 SOFTWARE VARIABLES                    ##########
 #####################################################################
 
-$NETapp1 = ".NET Runtime 3.1"
+$NETapp1 = ".NET Runtime"
 $NETapp1ver = "Version: 3.1.32"
 
-$NETapp2 = ".NET Runtime 5.0"
+$NETapp2 = ".NET Runtime"
 $NETapp2ver = "Version: 5.0.17"
 
-$NETapp3 = ".NET Runtime 6.0"
+$NETapp3 = ".NET Runtime"
 $NETapp3ver = "Version: 6.0.26"
 
-$NETapp4 = ".NET Runtime 7.0"
+$NETapp4 = ".NET Runtime"
 $NETapp4ver = "Version: 7.0.15"
 
-$NETapp5 = ".NET Runtime 8.0"
+$NETapp5 = ".NET Runtime"
 $NETapp5ver = "Version: 8.0.1"
 
-$NETapp6 = ".NET Framework 4.8.1"
+$NETapp6 = ".NET Framework"
 $NETapp6ver = "Version: 4.8.1"
 
 $VCRedistributableapp1 = "MS VS C++ Redistributable 2005 x64"
@@ -219,5 +219,4 @@ Write-Host "Finished Installing System related software..." -ForegroundColor Yel
 
 Stop-Transcript
 
-$AuditMain = InVoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
-Invoke-Expression $($AuditMain.Content)
+exit
