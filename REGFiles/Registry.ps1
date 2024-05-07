@@ -18,12 +18,17 @@ $REG2 = "Windows 11 OS Modifications Registry Entries"
 $REG3 = "Windows 10 OS Modifications Registry Entries" 
 $REG4 = "PC Mark 10 Registry Entries"
 $REG5 = "3D Mark Registry Entries"
+$REG6 = "Show SYSTEM Desktop Icons Registry Entries"
+$REG7 = "Show Hidden Files and Folders"
+
 
 $REG1PATH = "$REGFileDirectory\Adobe.reg"
 $REG2PATH = "$REGFileDirectory\Windows11-OSModifications.reg"
 $REG3PATH = "$REGFileDirectory\Windows10-OSModifications.reg"
 $REG4PATH = "$REGFileDirectory\PCMark10.reg"
 $REG5PATH = "$REGFileDirectory\3DMark.reg"
+$REG6PATH = "$REGFileDirectory\SYSTEMDesktopIcons.reg"
+$REG7PATH = "$REGFileDirectory\ShowHiddenFilesFolders.reg"
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -32,6 +37,9 @@ $W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/mai
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
 $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
+
+
+
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectory
