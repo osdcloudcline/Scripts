@@ -1,4 +1,4 @@
-$OSSoftLogs = "C:\Logs\OSD\$env:computername-OSDSoftware.log
+$OSSoftLogs = "C:\Logs\OSD\$env:computername-OSDSoftware.log"
 Start-Transcript -Path $OSSoftLogs
 
 #####################################################################
