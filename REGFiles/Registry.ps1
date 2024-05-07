@@ -38,7 +38,7 @@ $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/mai
 $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
 $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
-
+$HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
 
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
@@ -56,6 +56,8 @@ Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirector
 Write-Verbose "Obtaining $REG6 ..." -Verbose
 Save-WebFile -SourceUrl $SYSTEMDesktopIconsRegFileUrl -DestinationDirectory $REGFileDirectory
 
+Write-Verbose "Obtaining $REG7 ..." -Verbose
+Save-WebFile -SourceUrl $HiddenFilesFoldersRegFileUrl -DestinationDirectory $REGFileDirectory
 cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
@@ -82,4 +84,9 @@ regedit /s $REG4PATH
 Write-Verbose "Merging $REG5 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
 regedit /s $REG5PATH
 
+Write-Verbose "Merging $REG6 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+regedit /s $REG6PATH
+
+Write-Verbose "Merging $REG7 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+regedit /s $REG7PATH
 Stop-Transcript
