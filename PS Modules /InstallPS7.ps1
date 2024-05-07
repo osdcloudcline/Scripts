@@ -6,3 +6,4 @@ Get-Date
 ### PS Module Group Names ##
 ############################
 
+$OSDGroup3 = "OSD: Cloud"
