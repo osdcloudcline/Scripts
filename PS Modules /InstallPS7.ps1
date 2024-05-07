@@ -14,3 +14,8 @@ $OSDGroup3 = "OSD: Cloud"
 
 $CloudModule18 = "Windows 365 Cloud PC"
 
+# Cloud PowerShell Modules
+
+Write-Host "Installing and Importing: $OSDGroup3 Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
