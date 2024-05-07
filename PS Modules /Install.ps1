@@ -73,7 +73,7 @@ $CloudModule14 = "Azure Application Insights"
 $CloudModule15 = "Azure CDN"
 $CloudModule16 = "Azure Batch"
 $CloudModule17 = "Azure Monitor"
-$CloudModule18 = "Windows 365 Cloud PC"
+
 
 $ESXIModule1 = "ESXI Report Generator"
 $ESXIModule2 = "ESXI Inventory Tools"
@@ -255,13 +255,6 @@ Start-Sleep -Seconds 5
 Import-Module -Name Az.Monitor -Force
 Start-Sleep -Seconds 5
 Write-Host
-Write-Verbose "Installing: $CloudModule18..." -Verbose
-Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name PSCloudPC -Force
-Start-Sleep -Seconds 5
-Write-Host
-
 
 # OSD Autopilot, Drivers, Software and Updates PowerShell Modules
 
