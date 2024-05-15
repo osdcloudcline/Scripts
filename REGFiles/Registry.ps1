@@ -41,7 +41,7 @@ $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFile
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
 $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
 $HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
-
+$DisableBitLockerUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectory
@@ -62,6 +62,7 @@ Write-Verbose "Obtaining $REG7 ..." -Verbose
 Save-WebFile -SourceUrl $HiddenFilesFoldersRegFileUrl -DestinationDirectory $REGFileDirectory
 
 Write-Verbose "Obtaining $REG8..." -Verbose
+Save-WebFile -SourceUrl $DisableBitLockerUrl -DestinationDirectory $REGFileDirectory
 
 cd $REGFileDirectory
 
@@ -83,15 +84,21 @@ Write-Verbose "Merging $REG3 into $OSInfo1 $OSInfo2 on $env:computername..." -Ve
 regedit /s $REG3PATH
 }
 
-Write-Verbose "Merging $REG4 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+Write-Host "Merging Registry Files..." -ForegroundColor Cyan
+
+Write-Verbose "Merging $REG4 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $REG4PATH
 
-Write-Verbose "Merging $REG5 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+Write-Verbose "Merging $REG5 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $REG5PATH
 
-Write-Verbose "Merging $REG6 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+Write-Verbose "Merging $REG6 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $REG6PATH
 
-Write-Verbose "Merging $REG7 into $OSInfo1 $OSInfo2 on $env:computername..." -Verbose
+Write-Verbose "Merging $REG7 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $REG7PATH
+
+Write-Verbose "Merging $REG8 into $OSInfo1 $OSInfo2..." -Verbose
+regedit /s $REG8PATH
+
 Stop-Transcript
