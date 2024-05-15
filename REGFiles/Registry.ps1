@@ -20,6 +20,7 @@ $REG4 = "PC Mark 10 Registry Entries"
 $REG5 = "3D Mark Registry Entries"
 $REG6 = "Show SYSTEM Desktop Icons Registry Entries"
 $REG7 = "Show Hidden Files and Folders"
+$REG8 = "Prevent Windows 11 24H2 BitLocker Drive Encryption"
 
 
 $REG1PATH = "$REGFileDirectory\Adobe.reg"
@@ -29,6 +30,7 @@ $REG4PATH = "$REGFileDirectory\PCMark10.reg"
 $REG5PATH = "$REGFileDirectory\3DMark.reg"
 $REG6PATH = "$REGFileDirectory\SYSTEMDesktopIcons.reg"
 $REG7PATH = "$REGFileDirectory\ShowHiddenFilesFolders.reg"
+$REG8PATH = "$REGFileDirectory\DisableBitLockerDeviceEncryption.reg"
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -58,6 +60,9 @@ Save-WebFile -SourceUrl $SYSTEMDesktopIconsRegFileUrl -DestinationDirectory $REG
 
 Write-Verbose "Obtaining $REG7 ..." -Verbose
 Save-WebFile -SourceUrl $HiddenFilesFoldersRegFileUrl -DestinationDirectory $REGFileDirectory
+
+Write-Verbose "Obtaining $REG8..." -Verbose
+
 cd $REGFileDirectory
 
 Write-Host "Merging Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
