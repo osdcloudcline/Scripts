@@ -21,7 +21,7 @@ Write-Verbose "Processing: $app2..." -Verbose
 Write-Host
 Write-Host "Installing $app2..." -ForegroundColor Cyan
 
-
+winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architecture x64  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
