@@ -2,10 +2,10 @@ Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedGa
 
 $Date = Get-Date
 
+$app1 = "Steam"
+
+
 Write-Host "Installed on: $Date"
-
-
-
 
 Write-Host "Installing Gaming Applications..." -ForegroundColor Green
 Write-Host
