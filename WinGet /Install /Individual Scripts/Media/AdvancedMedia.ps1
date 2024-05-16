@@ -43,7 +43,7 @@ Write-Verbose "Processing: $app5..." -Verbose
 Write-Host
 Write-Host "Installing $app5..." -ForegroundColor Cyan
 
-
+winget install --id GuinpinSoft.MakeMKV --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app6..." -Verbose
 Write-Host
