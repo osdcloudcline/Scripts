@@ -58,3 +58,5 @@ $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UPBR.lnk")
 $Shortcut.TargetPath = "C:\downloads\UPBR.exe"
 $Shortcut.Save()
+
+Stop-Transcript
