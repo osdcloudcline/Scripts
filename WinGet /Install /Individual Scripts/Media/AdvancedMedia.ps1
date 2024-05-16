@@ -68,6 +68,6 @@ Write-Verbose "Processing: $app9..." -Verbose
 Write-Host
 Write-Host "Installing $app9..." -ForegroundColor Cyan
 
-
+winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
 
 Stop-Transcript
