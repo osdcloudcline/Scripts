@@ -61,9 +61,13 @@ Write-Verbose "Processing: $app8..." -Verbose
 Write-Host
 Write-Host "Installing $app8..." -ForegroundColor Cyan
 
-
+winget install --id Audacity.Audacity --exact --accept-source-agreements  --accept-source-agreements --force
+choco install audacity-ffmpeg -y
 
 Write-Verbose "Processing: $app9..." -Verbose
 Write-Host
 Write-Host "Installing $app9..." -ForegroundColor Cyan
+
+
+
 Stop-Transcript
