@@ -1,3 +1,5 @@
+Start-Transcript -Path "C:\Logs\Powershell\Standard\$env:computername-StandardMediaInstall.log"
+
 $app1 = "VLC Media Player"
 $app2 = "MediaInfo"
 $app3 = "MKVToolNix"
@@ -30,3 +32,5 @@ Write-Host
 Write-Host "Installing $app4..." -ForegroundColor Cyan
 
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
