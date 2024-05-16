@@ -1,5 +1,9 @@
 Start-Transcript -Path "C:\Logs\Powershell\Corporate\$env:computername-CorporateMediaInstall.log"
 
+$Date = Get-Date
+
+Write-Host "Installed on: $Date"
+
 $app1 = "VLC Media Player"
 $app2 = "MediaInfo"
 
