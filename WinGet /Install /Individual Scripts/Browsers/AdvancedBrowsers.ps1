@@ -13,3 +13,7 @@ winget install --id Google.Chrome --exact --accept-source-agreements  --accept-s
 Write-Verbose "Processing: $app2..." -Verbose
 Write-Host
 Write-Host "Installing $app2..." -ForegroundColor Cyan
+
+winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
