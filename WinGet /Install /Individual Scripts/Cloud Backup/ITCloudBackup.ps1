@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedCloudBackupInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\IT\$env:computername-ITCloudBackupInstall.log"
 
 $Date = Get-Date
 
@@ -58,3 +58,5 @@ $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UPBR.lnk")
 $Shortcut.TargetPath = "C:\downloads\UPBR.exe"
 $Shortcut.Save()
+
+Stop-Transcript
