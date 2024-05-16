@@ -17,7 +17,7 @@ Import-Module -Name OSD -Force
 
 
 # Cloud Backup software
-Write-Host "Installing Cloud Backup Applications on $env:computername..." -ForegroundColor Green
+Write-Host "Installing Cloud Backup Applications..." -ForegroundColor Green
 Write-Host
 Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
