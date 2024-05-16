@@ -4,6 +4,7 @@ $app1 = "VLC Media Player"
 $app2 = "MediaInfo"
 $app3 = "MKVToolNix"
 $app4 = "Apple iTunes"
+$app5 = "Kodi"
 
 # Media-related software
 Write-Host "Installing Media Applications..." -ForegroundColor Green
