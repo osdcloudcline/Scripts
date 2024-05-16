@@ -26,3 +26,7 @@ winget install --id PuTTY.PuTTY --exact --accept-source-agreements --architectur
 Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
+
+winget install --id WinSCP.WinSCP --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
