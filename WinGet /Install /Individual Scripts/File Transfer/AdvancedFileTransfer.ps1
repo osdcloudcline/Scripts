@@ -9,7 +9,7 @@ $app2 = "PuTTy"
 $app3 = "WinSCP"
 
 
-
+Write-Host "Installing File Transfer Applications..." -ForegroundColor Green
 Write-Host
 Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
