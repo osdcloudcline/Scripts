@@ -8,7 +8,7 @@ Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
 Write-Host "Installing $app1..." -ForegroundColor Cyan
 
-
+winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app2..." -Verbose
 Write-Host
