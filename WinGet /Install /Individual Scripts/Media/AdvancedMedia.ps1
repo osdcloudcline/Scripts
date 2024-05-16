@@ -49,7 +49,7 @@ Write-Verbose "Processing: $app6..." -Verbose
 Write-Host
 Write-Host "Installing $app6..." -ForegroundColor Cyan
 
-
+winget install --id HandBrake.HandBrake --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app7..." -Verbose
 Write-Host
