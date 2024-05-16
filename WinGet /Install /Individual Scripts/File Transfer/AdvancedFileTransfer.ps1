@@ -15,3 +15,14 @@ Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
 Write-Host "Installing $app1..." -ForegroundColor Cyan
 
+choco install filezilla  -y
+
+Write-Verbose "Processing: $app2..." -Verbose
+Write-Host
+Write-Host "Installing $app2..." -ForegroundColor Cyan
+
+
+
+Write-Verbose "Processing: $app3..." -Verbose
+Write-Host
+Write-Host "Installing $app3..." -ForegroundColor Cyan
