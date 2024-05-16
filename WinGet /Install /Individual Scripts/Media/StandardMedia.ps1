@@ -29,3 +29,4 @@ Write-Verbose "Processing: $app4..." -Verbose
 Write-Host
 Write-Host "Installing $app4..." -ForegroundColor Cyan
 
+winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
