@@ -23,6 +23,7 @@ Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
 
+winget install --id MoritzBunkus.MKVToolNix --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app4..." -Verbose
 Write-Host
