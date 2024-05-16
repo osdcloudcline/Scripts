@@ -3,3 +3,12 @@ Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedGa
 $Date = Get-Date
 
 Write-Host "Installed on: $Date"
+
+
+
+
+Write-Host "Installing Gaming Applications..." -ForegroundColor Green
+Write-Host
+Write-Verbose "Processing: $app1..." -Verbose
+Write-Host
+Write-Host "Installing $app1..." -ForegroundColor Cyan
