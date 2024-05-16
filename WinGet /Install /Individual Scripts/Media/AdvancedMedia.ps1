@@ -55,6 +55,7 @@ Write-Verbose "Processing: $app7..." -Verbose
 Write-Host
 Write-Host "Installing $app7..." -ForegroundColor Cyan
 
+winget install --id PowerSoftware.PowerISO --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app8..." -Verbose
 Write-Host
