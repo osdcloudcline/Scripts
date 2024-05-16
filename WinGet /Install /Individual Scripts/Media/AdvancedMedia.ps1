@@ -4,6 +4,12 @@ $app1 = "VLC Media Player"
 $app2 = "MediaInfo"
 $app3 = "MKVToolNix"
 $app4 = "Apple iTunes"
+$app5 = "MakeMKV"
+$app6 = "Handbrake"
+$app7 = "PowerISO"
+$app8 = "Audacity and FFMPEG"
+$app9 = "Logitech MyHarmony"
+
 
 # Media-related software
 Write-Host "Installing Media Applications..." -ForegroundColor Green
@@ -33,4 +39,30 @@ Write-Host "Installing $app4..." -ForegroundColor Cyan
 
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Processing: $app5..." -Verbose
+Write-Host
+Write-Host "Installing $app5..." -ForegroundColor Cyan
+
+
+
+Write-Verbose "Processing: $app6..." -Verbose
+Write-Host
+Write-Host "Installing $app6..." -ForegroundColor Cyan
+
+
+
+Write-Verbose "Processing: $app7..." -Verbose
+Write-Host
+Write-Host "Installing $app7..." -ForegroundColor Cyan
+
+
+Write-Verbose "Processing: $app8..." -Verbose
+Write-Host
+Write-Host "Installing $app8..." -ForegroundColor Cyan
+
+
+
+Write-Verbose "Processing: $app9..." -Verbose
+Write-Host
+Write-Host "Installing $app9..." -ForegroundColor Cyan
 Stop-Transcript
