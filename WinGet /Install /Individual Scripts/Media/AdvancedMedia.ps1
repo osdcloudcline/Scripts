@@ -75,11 +75,11 @@ Write-Verbose "Processing: $app10..." -Verbose
 Write-Host
 Write-Host "Installing $app10..." -ForegroundColor Cyan
 
-winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id GIMP.GIMP --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app11..." -Verbose
 Write-Host
 Write-Host "Installing $app11..." -ForegroundColor Cyan
 
-winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
+winget install --id XBMCFoundation.Kodi --exact --accept-source-agreements  --accept-source-agreements --force
 Stop-Transcript
