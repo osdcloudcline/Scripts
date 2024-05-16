@@ -9,7 +9,8 @@ $app6 = "Handbrake"
 $app7 = "PowerISO"
 $app8 = "Audacity and FFMPEG"
 $app9 = "Logitech MyHarmony"
-
+$app10 = "GIMP"
+$app11 = "Kodi"
 
 # Media-related software
 Write-Host "Installing Media Applications..." -ForegroundColor Green
@@ -70,4 +71,15 @@ Write-Host "Installing $app9..." -ForegroundColor Cyan
 
 winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Processing: $app10..." -Verbose
+Write-Host
+Write-Host "Installing $app10..." -ForegroundColor Cyan
+
+winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Processing: $app11..." -Verbose
+Write-Host
+Write-Host "Installing $app11..." -ForegroundColor Cyan
+
+winget install --id Logitech.MyHarmony --exact --accept-source-agreements  --accept-source-agreements --force
 Stop-Transcript
