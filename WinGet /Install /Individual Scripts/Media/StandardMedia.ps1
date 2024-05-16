@@ -34,4 +34,10 @@ Write-Host "Installing $app4..." -ForegroundColor Cyan
 
 winget install --id Apple.iTunes --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Processing: $app5..." -Verbose
+Write-Host
+Write-Host "Installing $app5..." -ForegroundColor Cyan
+
+winget install --id XBMCFoundation.Kodi --exact --accept-source-agreements  --accept-source-agreements --force
+
 Stop-Transcript
