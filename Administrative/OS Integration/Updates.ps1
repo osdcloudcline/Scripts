@@ -95,8 +95,8 @@ pause
 # Delete possible old log files from previous runs
 ##########################################################
 
-if (Test-Path C:\WUSuccess.log) {Remove-Item C:\WUSuccess.log}
-if (Test-Path C:\WUFail.log) {Remove-Item C:\WUFail.log}
+if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUSuccess.log) {Remove-Item C:\OSDCloud\Logs\OSUpdates\WUSuccess.log}
+if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUFail.log) {Remove-Item C:\OSDCloud\Logs\OSUpdates\WUFail.log}
 
 ##########################################################
 # Prompt user for path to install media (USB drive) or 
@@ -319,7 +319,7 @@ cls
 # Show updates added to Windows image
 ##########################################################
 
-if (Test-Path C:\WUSuccess.log)
+if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUSuccess.log)
     {
     Write-Host
     Write-Host ' Following updates successfully added to Windows image: '
@@ -342,7 +342,7 @@ if (Test-Path C:\WUSuccess.log)
 # Show failed updates
 ##########################################################
 
-if (Test-Path C:\WUFail.log)
+if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUFail.log)
     {
     Write-Host
     Write-Host ' Following updates could not be added to Windows image: '
