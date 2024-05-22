@@ -86,7 +86,9 @@ do
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
-  '7'{
+  '7'{ cls
+       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
+       Invoke-Expression $($AdminMain.Content)
   }
   '8' { exit
         }
