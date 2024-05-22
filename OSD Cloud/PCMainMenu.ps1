@@ -41,7 +41,7 @@ Write-Host " 3. Software Installation & Post-Install Configurations"
 Write-Host " 4. Software Updates/Upgrades"
 Write-Host " 5. System Maintenance"
 Write-Host " 6. Backup/Restore User Profile Data"
-Write-Host " 7. OSD Builder"
+Write-Host " 7. Administrative System Tasks"
 Write-Host " 8. Exit PowerShell"
 do 
 {
@@ -86,9 +86,7 @@ do
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
         }
-  '7'{Write-Verbose "Installing and Importing OSDBuilder PowerShell Module..." -Verbose
-      Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
-      Import-Module -Name OSDBuilder -Force
+  '7'{
   }
   '8' { exit
         }
