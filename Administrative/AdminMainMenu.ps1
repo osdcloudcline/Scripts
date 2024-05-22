@@ -47,7 +47,8 @@ do
   {
 
   '1' { cls
-        
+        $Updates = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Updates.ps1")
+        Invoke-Expression $($Updates.Content)
         }
   '2' { cls
         
