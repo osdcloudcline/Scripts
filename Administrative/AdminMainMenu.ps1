@@ -51,7 +51,8 @@ do
         Invoke-Expression $($Updates.Content)
         }
   '2' { cls
-        
+        $Drivers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1")
+        Invoke-Expression $($Drivers.Content)
         }
   '3' { cls
        
