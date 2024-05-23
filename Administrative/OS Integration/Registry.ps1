@@ -97,3 +97,87 @@ pause
 
 if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUSuccess.log) {Remove-Item C:\OSDCloud\Logs\OSRegistry\RegistrySuccess.log}
 if (Test-Path C:\OSDCloud\Logs\OSUpdates\WUFail.log) {Remove-Item C:\OSDCloud\Logs\OSRegistry\RegistryFail.log}
+
+##########################################################
+# Prompt user for path to install media (USB drive) or 
+# folder where ISO content was copied to.
+#
+# Using 'while' loop to check that source given by user 
+# contains a Windows image, if not user is asked to chek
+# path and try again
+##########################################################
+
+$WimCount = 0
+while ($WimCount -eq 0) {
+cls
+Write-Host 
+Write-Host ' Enter source path. In case you are using a plugged in USB flash'
+Write-Host ' drive, simply enter its drive letter followed by : (colon).'
+Write-Host
+Write-Host ' If the source you are using is a Windows 10 ISO or DVD, enter.'
+Write-Host ' path to folder where you copied ISO / DVD content.'
+Write-Host 
+Write-Host ' Notice please: If your source contains both 32 (x86) and 64 (x64)'
+Write-Host ' bit versions, add \x86 or \x64 to source depending on which'
+Write-Host ' bit version you want to update.'
+Write-Host 
+Write-Host ' Examples:'
+Write-Host ' - A USB drive, enter its drive letter with colon (D: or F:)'
+Write-Host ' - A USB drive with both bit versions, enter D:\x86 or D:\x64'
+Write-Host ' - ISO files copied to folder, enter path (D:\ISO_Files)'
+Write-Host ' - Dual bit version ISO copied to folder, enter path with bit version'
+Write-Host '   (W:\MyISOFolder\x86 or W:\MyISOFolder\x64)' 
+Write-Host
+
+$ISOFolder = Read-Host -Prompt ' Enter source, press Enter'
+$WimFolder = $ISOFolder
+   
+    if (Test-Path $WimFolder\Sources\install.wim)
+        {
+        $WimCount = 1
+            if (($WIMFolder -match "x86") -or ($WIMFolder -match "x64"))
+            {
+            $ISOFolder = $ISOFolder -replace "....$" 
+            }
+        }
+    elseif (Test-Path $WimFolder)
+        {
+        $WimCount = 0
+        cls
+        Write-Host
+        Write-Host ' No Windows image (install.wim file) found'
+        Write-Host ' Please check path and try again.'
+        Write-Host
+        Pause
+        }
+    else
+        {
+        $FileCount = 0
+        cls
+        Write-Host
+        Write-Host ' Path'$ISOFolder 'does not exist.'
+        Write-Host
+        Write-Host ' ' -NoNewline
+        Pause
+        }
+    }
+
+$WimFile = Join-Path $WimFolder '\Sources\install.wim'
+
+##########################################################
+# List Windows editions on image, prompt user for
+# edition to be updated
+##########################################################
+
+cls
+Get-WindowsImage -ImagePath $WimFile | Format-Table ImageIndex, ImageName
+Write-Host 
+Write-Host ' The install.wim file contains above listed Windows editions.'
+Write-Host ' Which edition should be updated?'
+Write-Host  
+Write-Host ' Enter the ImageIndex number of correct edition and press Enter.'
+Write-Host ' If this is a single edition Windows image, enter 1.'                                                                     
+Write-Host
+$Index = Read-Host -Prompt ' Select edition'
+
+
