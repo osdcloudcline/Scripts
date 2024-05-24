@@ -181,6 +181,12 @@ Write-Host
 $Index = Read-Host -Prompt ' Select edition'
 
 ##########################################################
+# Download Registry Files from GitHub OSDCloud Cline Repo
+##########################################################
+
+
+
+##########################################################
 # Prompt user for folder containing downloaded registry files
 # (*.reg). Again, a 'while' loop is used to
 # check folder contains registry files, if not user
