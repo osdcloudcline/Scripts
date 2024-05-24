@@ -296,6 +296,14 @@ Write-Host
 # if failed add to 'RegistryFail.log'
 ##########################################################
 
+$HKCRREG1 = "Add Copy To Move To"
+
+Write-Host "Importing $HKCRREG1...." -ForegroundColor Cyan
+Write-Verbose "Adding $HKCRREG1..." -Verbose
+if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Classes\OFFLINE\AllFilesystemObjects\shellex\ContextMenuHandlers\{C2FBB630-2971-11D1-A18C-00C04FD75D13}") -ne $true) {  New-Item "HKLM:\SOFTWARE\Classes\OFFLINE\AllFilesystemObjects\shellex\ContextMenuHandlers\{C2FBB630-2971-11D1-A18C-00C04FD75D13}" -force -ea SilentlyContinue };
+
+
+
 ForEach ($File in $RegFiles)
     {
     Write-Host ' Applying'$File
