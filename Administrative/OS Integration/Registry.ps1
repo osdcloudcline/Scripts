@@ -284,3 +284,20 @@ Write-Host
 Write-Host ' Image mounted.'
 Write-Host
 
+##########################################################
+# Write registry entries one by one to Windows image. If OK, add
+# registry entry name  to 'RegistrySuccess.log' file,
+# if failed add to 'RegistryFail.log'
+##########################################################
+
+ForEach ($File in $RegFiles)
+    {
+    Write-Host ' Applying'$File
+    $regedit = "C:\Windows\regedit.exe"
+    
+    Add-WindowsPackage -Path $Mount -PackagePath $File.FullName 
+    if ($? -eq $TRUE)
+        {$File.Name | Out-File -FilePath C:\OSDCloud\Logs\OSUpdates\WUSuccess.log -Append}
+     else     
+        {$File.Name | Out-File -FilePath C:\OSDCloud\Logs\OSUpdates\WUFail.log -Append}
+    }
