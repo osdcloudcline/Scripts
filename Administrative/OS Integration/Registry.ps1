@@ -181,65 +181,6 @@ Write-Host
 $Index = Read-Host -Prompt ' Select edition'
 
 ##########################################################
-# Download Registry Files from GitHub OSDCloud Cline Repo
-##########################################################
-
-
-
-##########################################################
-# Prompt user for folder containing downloaded registry files
-# (*.reg). Again, a 'while' loop is used to
-# check folder contains registry files, if not user
-# is asked to check path and try again
-##########################################################
-
-$FileCount = 0
-while ($FileCount -eq 0) {
-cls
-Write-Host 
-Write-Host '  Enter path to folder containing downloaded Registry'
-Write-Host '  *.reg files.'
-Write-Host 
-Write-Host '  Be sure to enter correct path / folder!'
-Write-Host                                                                       
-
-$REGFileFolder = Read-Host -Prompt ' Path to folder containing downloaded Registry files'
-
-if (Test-Path $WUFolder)
-    {
-    $FileCount = (Get-ChildItem $REGFileFolder\* -Include *.reg).Count
-    if ($FileCount -eq 0)
-        {
-        Write-Host
-        Write-Host ' No Registry files found in given folder.' 
-        Write-Host ' Check the path and try again.'
-        Write-Host
-        Write-Host ' ' -NoNewline
-        pause
-        }
-    }
-    else
-        {
-        $FileCount = 0
-        cls
-        Write-Host
-        Write-Host ' Path'$REGFileFolder 'does not exist.'
-        Write-Host
-        Write-Host ' ' -NoNewline
-        Pause
-        }
-  }
-$WUFiles = Get-ChildItem -Path "$REGFileFolder" -Recurse -Include *.reg | Sort LastWriteTime 
-Write-Host
-Write-Host ' Found following' $FileCount 'Registry files:'
-Write-Host
-ForEach ($File in $WUFiles)
-    {Write-Host ' '$File}
-Write-Host
-Write-Host ' ' -NoNewline
-pause    
-
-##########################################################
 # Ask user which drive should be used for temporary 
 # working folder 'Mount'. If 'Mount' exists on selected
 # drive, delete and recreate it.
@@ -291,14 +232,13 @@ Write-Host ' Image mounted.'
 Write-Host
 
 ##########################################################
-# Write registry entries one by one to Windows image. If OK, add
-# registry entry name  to 'RegistrySuccess.log' file,
-# if failed add to 'RegistryFail.log'
+# Write registry entries one by one to Windows image.
+
 ##########################################################
 
 $HKCRREG1 = "Add Copy To Move To"
 
-reg load HKLM\OFFLINE $Mount\Windows\System32\Config\Software
+reg load HKLM\OFFLINE C:\WIMImages\Offline\Windows\System32\Config\Software
 
 Write-Host "Importing $HKCRREG1...." -ForegroundColor Cyan
 Write-Host
@@ -447,3 +387,15 @@ New-ItemProperty -LiteralPath 'HKLM:\OFFLINE\SOFTWARE\Policies\Adobe\Adobe Acrob
 
 reg unload HKLM\OFFLINE
 
+reg load HKLM\OFFLINE C:\WIMImages\Offline\Windows\System32\Config\System
+
+$HKSYSTEMREG1 = "Disable BitLocker Device Encryption"
+
+
+Write-Host "Importing $HKSYSTEMREG1...." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Adding $HKSYSTEMREG1..." -Verbose
+if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\BitLocker") -ne $true) {  New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\BitLocker" -force -ea SilentlyContinue };
+New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\BitLocker' -Name 'PreventDeviceEncryption' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+
+reg unload HKLM\OFFLINE
