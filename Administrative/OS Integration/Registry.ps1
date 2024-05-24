@@ -180,4 +180,107 @@ Write-Host ' If this is a single edition Windows image, enter 1.'
 Write-Host
 $Index = Read-Host -Prompt ' Select edition'
 
+##########################################################
+# Prompt user for folder containing downloaded registry files
+# (*.reg). Again, a 'while' loop is used to
+# check folder contains registry files, if not user
+# is asked to check path and try again
+##########################################################
+
+$FileCount = 0
+while ($FileCount -eq 0) {
+cls
+Write-Host 
+Write-Host '  Enter path to folder containing downloaded Registry'
+Write-Host '  *.reg files.'
+Write-Host 
+Write-Host '  Be sure to enter correct path / folder!'
+Write-Host                                                                       
+
+$REGFileFolder = Read-Host -Prompt ' Path to folder containing downloaded Registry files'
+
+if (Test-Path $WUFolder)
+    {
+    $FileCount = (Get-ChildItem $REGFileFolder\* -Include *.reg).Count
+    if ($FileCount -eq 0)
+        {
+        Write-Host
+        Write-Host ' No Registry files found in given folder.' 
+        Write-Host ' Check the path and try again.'
+        Write-Host
+        Write-Host ' ' -NoNewline
+        pause
+        }
+    }
+    else
+        {
+        $FileCount = 0
+        cls
+        Write-Host
+        Write-Host ' Path'$REGFileFolder 'does not exist.'
+        Write-Host
+        Write-Host ' ' -NoNewline
+        Pause
+        }
+  }
+$WUFiles = Get-ChildItem -Path "$REGFileFolder" -Recurse -Include *.reg | Sort LastWriteTime 
+Write-Host
+Write-Host ' Found following' $FileCount 'Registry files:'
+Write-Host
+ForEach ($File in $WUFiles)
+    {Write-Host ' '$File}
+Write-Host
+Write-Host ' ' -NoNewline
+pause    
+
+##########################################################
+# Ask user which drive should be used for temporary 
+# working folder 'Mount'. If 'Mount' exists on selected
+# drive, delete and recreate it.
+##########################################################
+
+cls
+Write-Host
+[System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
+Write-Host
+Write-Host ' Above is a list of all hard disk partitions showing available'
+Write-Host ' free space on each of them. Select a partition for temporary'
+Write-Host ' folder to mount Windows image. Selected partition must have at'
+Write-Host ' least 15 GB available free space. Folder will be removed when'
+Write-Host ' image has been updated.'
+Write-Host
+$Drive = Read-Host -Prompt ' Enter drive letter and press Enter'
+$Mount = $Drive.SubString(0,1) + ':\Mount'
+
+if (Test-Path $Mount) {Remove-Item $Mount}
+$Mount = New-Item -ItemType Directory -Path $Mount
+
+##########################################################
+# Mount Windows image in temporary mount folder.
+#
+# Adding eight empty lines to $EmptySpace variable to be
+# used as placeholder to push output below PowerShell
+# progressbar which is shown on top. Five empty lines would
+# be enough for PowerShell ISE but standard PowerShell will
+# need eight lines, otherwise output remains hidden
+##########################################################
+
+cls
+$EmptySpace = @"
+
+
+
+  
+ 
+
+
+
+"@
+
+Write-Host $EmptySpace
+Write-Host ' Mounting Windows image. This will take a few minutes.'
+Mount-WindowsImage -ImagePath $WimFolder\Sources\install.wim -Index $Index -Path $Mount | Out-Null
+Write-Host
+Write-Host ' Image mounted.'
+Write-Host
 
