@@ -37,9 +37,10 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Integrate Updates into Offline/Mounted OS Image"
 Write-Host " 2. Integrate Drivers into Offline/Mounted OS Image"
 Write-Host " 3. Integrate Registry Entries into Offline/Mounted OS Image"
-Write-Host " 4. Start OSD Builder"
-Write-Host " 5. Return to Main Menu"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 4. Remove Built-In Apps from Offline/Mounted OS Image"
+Write-Host " 5. Start OSD Builder"
+Write-Host " 6. Return to Main Menu"
+Write-Host " 7. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -65,13 +66,16 @@ do
         }
   '6' { cls
         
+        }
+  '7' { cls
+        
         exit
         }
 
   
     }
     }
-    until ($selection -eq '5'){}
+    until ($selection -eq '6'){}
     }
 
 Show-MainMenu
