@@ -129,7 +129,7 @@ do
   {
 
   '1' { cls
-       $Win1022H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/Win10.ps1")
+       $Win1022H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/22H2.ps1")
        Invoke-Expression $($Win1022H2.Content)
         }
   '2' { cls
