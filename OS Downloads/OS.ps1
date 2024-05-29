@@ -204,7 +204,7 @@ do
         Invoke-Expression $($Win1123H2.Content)
         }
   '4' { cls
-        $Win1124H2 = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
+        $Win1124H2 = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/24H2.ps1")
         Invoke-Expression $($Win1124H2.Content)
         }
   '5' { cls
