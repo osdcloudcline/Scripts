@@ -61,7 +61,7 @@ do
     }
 
 
-Function Show-ClientOSMain(){
+
 
 ##########################################################
 # Main Menu
@@ -114,7 +114,6 @@ do
   '8' { exit
         }
   
-    }
     }
     until ($selection -eq '8'){}
     }
