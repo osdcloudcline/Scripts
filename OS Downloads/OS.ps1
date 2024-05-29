@@ -94,22 +94,22 @@ do
        Invoke-Expression $($Win1022H2.Content)
         }
   '2' { cls
-        Show-Windows11OSMain
+        Show-Windows11MainMenu
         }
   '3' { cls
-       Show-Windows12OSMain
+       Show-Windows12MainMenu
         }
   '4' { cls
-        Show-Windows13OSMain
+        Show-Windows13MainMenu
         }
   '5' { cls
-       Show-Windows14OSMain
+       Show-Windows14MainMenu
         }
   '6' { cls
-        Show-Windows15OSMain
+        Show-Windows15MainMenu
         }
   '7'{ cls
-       Show-Windows16OSMain
+       Show-Windows16MainMenu
   }
   '8' { exit
         }
@@ -119,7 +119,7 @@ do
     until ($selection -eq '8'){}
     }
 
-Function Show-Windows11OSMain(){
+
 
 ##########################################################
 # Main Menu
@@ -176,7 +176,7 @@ do
     }
 
 
-Function Show-Windows12OSMain(){
+
 
 ##########################################################
 # Main Menu
@@ -230,10 +230,10 @@ do
     }
     until ($selection -eq '6'){}
     }
-    }
+  
 
 
-Function Show-Windows13OSMain(){
+
 
 ##########################################################
 # Main Menu
@@ -287,9 +287,9 @@ do
     }
     until ($selection -eq '6'){}
     }
-    }
 
-Function Show-Windows14OSMain(){
+
+
 
 ##########################################################
 # Main Menu
@@ -343,9 +343,9 @@ do
     }
     until ($selection -eq '6'){}
     }
-    }
+ 
 
-Function Show-Windows15OSMain(){
+
 
 ##########################################################
 # Main Menu
@@ -399,9 +399,9 @@ do
     }
     until ($selection -eq '6'){}
     }
-    }
 
-Function Show-Windows16OSMain(){
+
+
 
 ##########################################################
 # Main Menu
@@ -455,7 +455,7 @@ do
     }
     until ($selection -eq '6'){}
     }
-    }
-}
+    
+
 
 Show-MainMenu
