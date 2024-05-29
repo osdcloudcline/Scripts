@@ -92,7 +92,7 @@ do
        Invoke-Expression $($AdminMain.Content)
   }
   '8'{cls
-  $OSDownloads = Invoke-WebRequest("")
+  $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
   Invoke-Expression $($OSDownloads.Content)
   }
   '9' { exit
