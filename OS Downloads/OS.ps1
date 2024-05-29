@@ -35,7 +35,7 @@ pause
 Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Download and Create Windows Client Operating System ISO"
-Write-Host " 2. Download and Create Windows Server Operating System  ISO"
+Write-Host " 2. Download and Create Windows Server Operating System ISO"
 Write-Host " 3. Exit PowerShell"
 
 do 
@@ -167,9 +167,8 @@ do
         }
      }
     }
-    until ($selection -eq '6'){}
+    until ($selection -eq '6'){exit}
     }
-    
 
 
 Function Show-Win12MainMenu{
