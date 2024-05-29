@@ -10,7 +10,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\23H2"
 
-$Windows1123H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/22H2/22621.3668_amd64_en-us_multi_354f5027_convert_virtual.zip"
+$Windows1123H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/23H2/22631.3668_amd64_en-us_multi_593f698d_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -24,9 +24,9 @@ Save-WebFile -SourceUrl $Windows1123H2URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows 11 23H2 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\22621.3668_amd64_en-us_multi_354f5027_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\22631.3668_amd64_en-us_multi_593f698d_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
-Write-Host "Downloading Windows 11 23H2..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows 11 23H2 Build: 22631.3668..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
