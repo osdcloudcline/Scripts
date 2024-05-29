@@ -66,7 +66,7 @@ Function Show-ClientOSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-ClientMainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Client Download Main Menu',
@@ -124,7 +124,7 @@ Function Show-Windows11OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win11MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 11 Download Main Menu',
@@ -181,7 +181,7 @@ Function Show-Windows12OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win12MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 12 Download Main Menu',
@@ -238,7 +238,7 @@ Function Show-Windows13OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win13MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 13 Download Main Menu',
@@ -294,7 +294,7 @@ Function Show-Windows14OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win14MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 14 Download Main Menu',
@@ -350,7 +350,7 @@ Function Show-Windows15OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win15MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 15 Download Main Menu',
@@ -406,7 +406,7 @@ Function Show-Windows16OSMain(){
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-MainMenu{
+Function Show-Win16MainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows 16 Download Main Menu',
@@ -457,3 +457,5 @@ do
     }
     }
 }
+
+Show-MainMenu
