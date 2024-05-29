@@ -12,7 +12,7 @@ $ZIPDestination = "$env:userprofile\Downloads\OS\Windows10\22H2"
 
 $Windows10URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
 
-$ExtractLocation = $ZIPDestination
+$ExtractLocation = "$env:userprofile\Downloads\OS\Windows10\22H2"
 
 $Windows10Downloader = "$ZIPDestination\uup_download_windows.cmd"
 
