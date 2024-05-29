@@ -26,7 +26,7 @@ Write-Host "Expanding Windows 11 21H2 ZIP File..." -ForegroundColor Cyan
 
 Expand-Archive -Path "$ZIPDestination\22000.2960_amd64_en-us_multi_1843eef2_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
-Write-Host "Downloading Windows 11 21H2..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows 11 21H2 Build: 22000.2960..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
