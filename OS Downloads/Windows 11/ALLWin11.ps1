@@ -1,4 +1,4 @@
-$Win11ALLLogs = ""
+$Win11ALLLogs = "C:\OSD Cloud\Logs\OS Downloads\Win11ALL.log"
 Start-Transcript $Win11ALLLogs
 
 Get-Date
