@@ -134,8 +134,9 @@ Write-Host " 2. Download and Create Windows 11 22H2 ISO"
 Write-Host " 3. Download and Create Windows 11 23H2 ISO"
 Write-Host " 4. Download and Create Windows 11 24H2 ISO"
 Write-Host " 5. Download and Create Windows 11 25H2 ISO"
-Write-Host " 6. Download and Create ALL Windows 11 ISO"
-Write-Host " 7. Exit PowerShell"
+Write-Host " 6. Local - Download and Create ALL Windows 11 ISO"
+Write-Host " 7. Network - Download and Create ALL Windows 11 ISO"
+Write-Host " 8. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -165,13 +166,18 @@ do
   '6' { cls
         $ALLWin11 = Invoke-WEbRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11.ps1")
         Invoke-Expression $($ALLWin11.Content)
+        }
   '7' { cls
+        $NetworkALLWin11 = Invoke-WEbRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11-Network.ps1")
+        Invoke-Expression $($NetworkALLWin11.Content)
+        }
+  '8' { cls
         exit
     
         }
      }
     }
-    until ($selection -eq '7'){exit}
+    until ($selection -eq '8'){exit}
     }
 
 
