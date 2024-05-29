@@ -192,40 +192,31 @@ do
   {
 
   '1' { cls
-       $Win1121H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/Win10.ps1")
+       $Win1121H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1")
        Invoke-Expression $($Win1121H2.Content)
         }
   '2' { cls
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
-        Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
+        $Win1122H2 = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
+        Invoke-Expression $($Win1122H2.Content)
         }
   '3' { cls
-        $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-        Invoke-Expression $($WinGetMain.Content)
+        $Win1123H2 = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+        Invoke-Expression $($Win1123H2.Content)
         }
   '4' { cls
-        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-        Invoke-Expression $($WinGetUpdateMain.Content)
+        $Win1124H2 = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
+        Invoke-Expression $($Win1124H2.Content)
         }
   '5' { cls
-        $sfc = "C:\Windows\System32\sfc.exe"
-        Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-        Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
+        $Win1125H2 = Invoke-WebRequest("")
+        Invoke-Expression $($Win1125H2.Content)
         }
   '6' { cls
-        
+        exit
         
         }
-  '7'{ cls
-       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
-       Invoke-Expression $($AdminMain.Content)
-  }
-  '8' { exit
-        }
-  
     }
-    }
-    until ($selection -eq '8'){}
+    until ($selection -eq '6'){}
     }
 
 
