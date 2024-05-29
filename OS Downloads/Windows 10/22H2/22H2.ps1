@@ -10,7 +10,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows10\22H2"
 
-$Windows10URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
+$Windows10URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
 
 $ExtractLocation = $ZIPDestination
 
@@ -30,7 +30,7 @@ Write-Host "Downloading Windows 10 22H2..." -ForegroundColor Cyan
 
 Start-Process -FilePath $Windows10Downloader
 
-
+pause
 
 #######    Delete Items Variables region ########################
 
