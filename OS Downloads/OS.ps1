@@ -45,7 +45,7 @@ do
   {
 
   '1' { cls
-       Show-ClientOSMain
+       Show-ClientMainMenu
         }
   '2' { cls
         
