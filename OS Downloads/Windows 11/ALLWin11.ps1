@@ -1,4 +1,12 @@
-Function Get-Win1121H2(){
+$Win11ALLLogs = "C:\OSD Cloud\Logs\OS Downloads\Win11ALL.log"
+Start-Transcript $Win11ALLLogs
+
+Get-Date
+
+Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSD -Force
+
+Write-Host "Processing: Windows 11 21H2 Build 22000.2960...." -ForegroundColor Cyan 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\21H2"
@@ -54,10 +62,10 @@ Write-Host "Excess Files and folders have been successfully deleted..." -Foregro
 
 Write-Host
 Write-Host "Completed Processing: Windows 11 21H2 Build 22000.2960...." -ForegroundColor Green 
-}
+pause
 
-Function Get-Win1122H2(){
-
+Write-Host
+Write-Host "Processing: Windows 11 22H2 Build 22621.3668...." -ForegroundColor Cyan 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\22H2"
@@ -112,10 +120,10 @@ Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
 Write-Host
 Write-Host "Completed Processing: Windows 11 22H2 Build 22621.3668...." -ForegroundColor Green 
-}
+pause
 
-Function Get-Win1123H2(){
-
+Write-Host
+Write-Host "Processing: Windows 11 23H2 Build 22631.3668...." -ForegroundColor Cyan 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\23H2"
@@ -170,10 +178,10 @@ Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
 Write-Host
 Write-Host "Completed Processing: Windows 11 23H2 Build 22631.3668...." -ForegroundColor Green 
-}
+pause
 
-Function Get-Win1124H2(){
-
+Write-Host
+Write-Host "Processing: Windows 11 24H2 Build 26100.712...." -ForegroundColor Cyan 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\24H2"
@@ -228,38 +236,6 @@ Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
 Write-Host
 Write-Host "Completed Processing: Windows 11 24H2 Build 26100.712...." -ForegroundColor Green 
-}
-
-Function Get-Win1125H2(){
-
-}
-
-
-$Win11ALLLogs = "C:\OSD Cloud\Logs\OS Downloads\Win11ALL.log"
-Start-Transcript $Win11ALLLogs
-
-Get-Date
-
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name OSD -Force
-
-Write-Host "Processing: Windows 11 21H2 Build 22000.2960...." -ForegroundColor Cyan 
-Get-Win1121H2
-pause
-
-Write-Host
-Write-Host "Processing: Windows 11 22H2 Build 22621.3668...." -ForegroundColor Cyan 
-Get-Win1122H2
-pause
-
-Write-Host
-Write-Host "Processing: Windows 11 23H2 Build 22631.3668...." -ForegroundColor Cyan 
-Get-Win1123H2
-pause
-
-Write-Host
-Write-Host "Processing: Windows 11 24H2 Build 26100.712...." -ForegroundColor Cyan 
-Get-Win1124H2
 pause
 
 Write-Host
