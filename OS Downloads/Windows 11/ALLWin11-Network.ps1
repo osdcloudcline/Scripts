@@ -6,6 +6,11 @@ Get-Date
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
 
+Write-Host "Mapping Network Drive..." -ForegroundColor Cyan
+Get-LANDrive
+$MapNetDrive = Read-Host -Prompt 'Please Enter the drive letter from the mapped network drive'
+pause
+
 Write-Host "Processing: Windows 11 21H2 Build 22000.2960...." -ForegroundColor Cyan 
 Get-Win1121H2
 pause
@@ -29,9 +34,11 @@ Write-Host
 Write-Host "Processing: Windows 11 25H2 Build ...." -ForegroundColor Cyan 
 
 Function Get-Win1121H2(){
+
+
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
-$ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\21H2"
+$ZIPDestination = $MapNetDrive
 
 $Windows1121H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/22000.2960_amd64_en-us_multi_1843eef2_convert_virtual.zip"
 
@@ -146,6 +153,7 @@ Write-Host "Completed Processing: Windows 11 22H2 Build 22621.3668...." -Foregro
 
 Function Get-Win1123H2(){
 
+
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\23H2"
@@ -203,6 +211,7 @@ Write-Host "Completed Processing: Windows 11 23H2 Build 22631.3668...." -Foregro
 }
 
 Function Get-Win1124H2(){
+
 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
@@ -264,3 +273,9 @@ Function Get-Win1125H2(){
 
 }
 Stop-Transcript
+
+Function Get-LANDrive(){
+$MapNetDrive = rundll32 Shell32.DLL, SHHelpShortcuts_RunDLL Connect
+
+pause
+}
