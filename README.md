@@ -5,4 +5,4 @@
 - Post Installation scripts
 - scripts to merge registry files
 - scripts for Start Menu configurations for Windows 11 Operating System
-- scripts that utilize both chocolatety and winget pacage managers to install, update and uninstall software
+- scripts that utilize both chocolatety and winget package managers to install, update and uninstall software
