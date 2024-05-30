@@ -28,6 +28,10 @@ pause
 Write-Host
 Write-Host "Processing: Windows 11 25H2 Build ...." -ForegroundColor Cyan 
 
+
+Stop-Transcript
+
+
 Function Get-Win1121H2(){
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
@@ -263,4 +267,3 @@ Write-Host "Completed Processing: Windows 11 24H2 Build 26100.712...." -Foregrou
 Function Get-Win1125H2(){
 
 }
-Stop-Transcript
