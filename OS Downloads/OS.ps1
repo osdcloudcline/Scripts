@@ -90,22 +90,22 @@ do
        Invoke-Expression $($Win1022H2.Content)
         }
   '2' { cls
-        
+        Show-Win11MainMenu
         }
   '3' { cls
-       
+       Show-Win12MainMenu
         }
   '4' { cls
-        
+        Show-Win13MainMenu
         }
   '5' { cls
-       
+       Show-Win14MainMenu
         }
   '6' { cls
-        
+        Show-Win15MainMenu
         }
   '7'{ cls
-       
+       Show-Win16MainMenu
   }
   '8' { exit
         }
