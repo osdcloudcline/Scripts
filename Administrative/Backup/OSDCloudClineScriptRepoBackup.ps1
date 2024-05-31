@@ -181,72 +181,159 @@ do
         Save-WebFile -SourceUrl $Win1022H2ZIPURLURL -DestinationDirectory $Win1022H2Destination
         Write-Host
         Write-Host "Windows 10 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 11 21H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1121H2ScriptURL -DestinationDirectory $Win1121H2Destination
         Save-WebFile -SourceUrl $Win1121H2ZIPURL -DestinationDirectory $Win1121H2Destination
         Write-Host
         Write-Host "Windows 11 21H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 11 22H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1122H2ScriptURL -DestinationDirectory $Win1122H2Destination
         Save-WebFile -SourceUrl $Win1122H2ZIPURL -DestinationDirectory $Win1122H2Destination
         Write-Host
         Write-Host "Windows 11 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 11 23H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1123H2ScriptURL -DestinationDirectory $Win1123H2Destination
         Save-WebFile -SourceUrl $Win1123H2ZIPURL -DestinationDirectory $Win1123H2Destination
         Write-Host
         Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 11 24H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1124H2ScriptURL -DestinationDirectory $Win1124H2Destination
         Save-WebFile -SourceUrl $Win1124H2ZIPURL -DestinationDirectory $Win1124H2Destination
         Write-Host
         Write-Host "Windows 11 24H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 11 25H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1125H2ScriptURL -DestinationDirectory $Win1125H2Destination
         Save-WebFile -SourceUrl $Win1125H2ZIPURL -DestinationDirectory $Win1125H2Destination
         Write-Host
         Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
         
         Write-Verbose "Downloading and Saving Windows 11 Master Scripts..." -Verbose
         Save-WebFile -SourceUrl $Win11ALLScriptURL -DestinationDirectory $Win11ALLDestination
         Save-WebFile -SourceUrl $Win11ALLNetworkScriptURL -DestinationDirectory $Win11ALLDestination
         Write-Host
         Write-Host "Windows 11 Master Scripts Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 12 RTM Files..." -Verbose
         Save-WebFile -SourceUrl $Win12RTMScriptURL -DestinationDirectory $Win12RTMDestination
         Save-WebFile -SourceUrl $Win12RTMZIPURL -DestinationDirectory $Win12RTMDestination
         Write-Host
         Write-Host "Windows 12 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 13 RTM Files..." -Verbose
         Save-WebFile -SourceUrl $Win13RTMScriptURL -DestinationDirectory $Win13RTMDestination
         Save-WebFile -SourceUrl $Win13RTMZIPURL -DestinationDirectory $Win13RTMDestination
         Write-Host
         Write-Host "Windows 13 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 14 RTM Files..." -Verbose
         Save-WebFile -SourceUrl $Win14RTMScriptURL -DestinationDirectory $Win14RTMDestination
         Save-WebFile -SourceUrl $Win14RTMZIPURL -DestinationDirectory $Win14RTMDestination
         Write-Host
         Write-Host "Windows 14 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 15 RTM Files..." -Verbose
         Save-WebFile -SourceUrl $Win15RTMScriptURL -DestinationDirectory $Win15RTMDestination
         Save-WebFile -SourceUrl $Win15RTMZIPURL -DestinationDirectory $Win15RTMDestination
         Write-Host
         Write-Host "Windows 15 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
 
         Write-Verbose "Downloading and Saving Windows 16 RTM Files..." -Verbose
         Save-WebFile -SourceUrl $Win16RTMScriptURL -DestinationDirectory $Win16RTMDestination
         Save-WebFile -SourceUrl $Win16RTMZIPURL -DestinationDirectory $Win16RTMDestination
         Write-Host
         Write-Host "Windows 16 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+        
+        Stop-Transcript
+
+        $ServerOSBackupLog = "C:\OSD Cloud\Logs\Script Backups\ServerOS.log"
+        Start-Transcript $ServerOSBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Downloading Server OS PowerShell Scripts and ZIP Files from OSDCloudCline GitHub Repo..." -Verbose
+        Write-Host 
+
+        $WinServer2022ScriptURL = ""
+        $WinServer2022ZIPURL = ""
+        $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2022"
+
+        $WinServer2025ScriptURL = ""
+        $WinServer2025ZIPURL = ""
+        $WinServer2025Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2025"
+
+        $WinServer2028ScriptURL = ""
+        $WinServer2028ZIPURL = ""
+        $WinServer2028Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2028"
+
+        $WinServer2031ScriptURL = ""
+        $WinServer2031ZIPURL = ""
+        $WinServer2031Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2031"
+
+        $WinServer2034ScriptURL = ""
+        $WinServer2034ZIPURL = ""
+        $WinServer2034Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2034"
+
+        $WinServerALLScriptURL = ""
+        $WinServerDestination = "C:\scripts\backup\GitHubRepo\Windows Server"
+
+        Write-Verbose "Downloading and Saving Windows Server 2022 Files..." -Verbose
+        Save-WebFile -SourceUrl $WinServer2022ScriptURL -DestinationDirectory $WinServer2022Destination
+        Save-WebFile -SourceUrl $WinServer2022ZIPURL -DestinationDirectory $WinServer2022Destination
+        Write-Host
+        Write-Host "Windows Server 2022 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Write-Verbose "Downloading and Saving Windows Server 2025 Files..." -Verbose
+        Save-WebFile -SourceUrl $WinServer2025ScriptURL -DestinationDirectory $WinServer2025Destination
+        Save-WebFile -SourceUrl $WinServer2025ZIPURL -DestinationDirectory $WinServer2025Destination
+        Write-Host
+        Write-Host "Windows Server 2025 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Write-Verbose "Downloading and Saving Windows Server 2028 Files..." -Verbose
+        Save-WebFile -SourceUrl $WinServer2028ScriptURL -DestinationDirectory $WinServer2028Destination
+        Save-WebFile -SourceUrl $WinServer2028ZIPURL -DestinationDirectory $WinServer2028Destination
+        Write-Host
+        Write-Host "Windows Server 2028 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Write-Verbose "Downloading and Saving Windows Server 2031 Files..." -Verbose
+        Save-WebFile -SourceUrl $WinServer2031ScriptURL -DestinationDirectory $WinServer2031Destination
+        Save-WebFile -SourceUrl $WinServer2031ZIPURL -DestinationDirectory $WinServer2031Destination
+        Write-Host
+        Write-Host "Windows Server 2031 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Write-Verbose "Downloading and Saving Windows Server 2034 Files..." -Verbose
+        Save-WebFile -SourceUrl $WinServer2034ScriptURL -DestinationDirectory $WinServer2034Destination
+        Save-WebFile -SourceUrl $WinServer2034ZIPURL -DestinationDirectory $WinServer2034Destination
+        Write-Host
+        Write-Host "Windows Server 2034 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Write-Verbose "Downloading and Saving Windows Server Master Script..." -Verbose
+        Save-WebFile -SourceUrl $WinServerALLScriptURL -DestinationDirectory $WinServerDestination
+        Write-Host
+        Write-Host "Windows Server Master Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
         
         Stop-Transcript
         Show-MainMenu
