@@ -62,7 +62,7 @@ do
         Import-Module -Name OSD -Force
         Write-Host 
         Write-Verbose "Downloading OS Integration PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
-        $DRiversScriptURL = ""
+        $DRiversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
         $RegistryScriptURL = ""
         $UpdatesScriptURL = ""
         
