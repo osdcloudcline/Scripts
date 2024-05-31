@@ -24,7 +24,7 @@ Save-WebFile -SourceUrl WinServer2022URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Server 2022 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\26100.712_amd64_en-us_multi_0c393b5f_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\20348.2461_amd64_en-us_multi_b9f1ddc0_convert.zip" -DestinationPath $ExtractionLocation
 Write-Host
 Write-Host "Downloading Windows Server 2022 Build: 20348.2461..." -ForegroundColor Cyan 
 
