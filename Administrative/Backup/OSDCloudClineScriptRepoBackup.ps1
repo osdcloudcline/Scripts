@@ -357,8 +357,18 @@ do
         Write-Host 
         Write-Host  "Processing: Downloading and Saving OSD Builder related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
         Write-Host 
-        $OSDBuilderScriptRepoMainURL = ""
-        
+        $OSDBuilderScriptRepoMainURL = "https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1"
+        $OSDBuilderScriptsDestination = "C:\scripts\backup\GitHubRepo\OSD Builder\Scripts Repo"
+        Save-WebFile -SourceUrl $OSDBuilderScriptRepoMainURL -DestinationDirectory $OSDBuilderScriptsDestination
+        Write-Host 
+        Write-Host  "Processing: Downloading and Saving OSD Builder Client OS-related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
+        Write-Host
+        Write-Verbose "Processing Windows 10 scripts..." -Verbose
+        $Win10ScriptURL = ""
+        $Win10ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win10ScriptURL -DestinationDirectory $Win10ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 11 scripts..." -Verbose
         }
   '7' { cls
         
