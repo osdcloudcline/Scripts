@@ -126,8 +126,9 @@ do
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         Write-Host 
-        Write-Verbose "Downloading Client OS PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
-        $Win1022H2ScriptURL = ""
+        Write-Verbose "Downloading Client OS PowerShell Scripts and ZIP Files from OSDCloudCline GitHub Repo..." -Verbose
+        Write-Host 
+        $Win1022H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/22H2.ps1"
         $Win1022H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
         $Win1022H2Destination = "C:\scripts\backup\GitHubRepo\Windows 10\22H2"
 
