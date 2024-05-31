@@ -351,7 +351,13 @@ do
         Start-Transcript $OSDBuilderBackupLog
         Get-Date
         Write-Host 
-        Write-Host  "Downloading and Saving OSD Builder related scripts..."
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Host  "Processing: Downloading and Saving OSD Builder related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
+        Write-Host 
+        $OSDBuilderScriptRepoMainURL = ""
         
         }
   '7' { cls
