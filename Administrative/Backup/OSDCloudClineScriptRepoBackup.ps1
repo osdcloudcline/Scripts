@@ -63,7 +63,7 @@ do
         Write-Host 
         Write-Verbose "Downloading OS Integration PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $DRiversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
-        $RegistryScriptURL = ""
+        $RegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Registry.ps1"
         $UpdatesScriptURL = ""
         
         }
