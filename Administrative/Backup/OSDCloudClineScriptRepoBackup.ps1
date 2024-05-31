@@ -96,7 +96,7 @@ do
         Show-MainMenu
         }
   '4' { cls
-         $ManagementPCBackupLog = "C:\OSD Cloud\Logs\Script Backups\ManagementPC.log"
+        $ManagementPCBackupLog = "C:\OSD Cloud\Logs\Script Backups\ManagementPC.log"
         Start-Transcript $ManagementPCBackupLog
         Get-Date
         Write-Host 
@@ -116,7 +116,79 @@ do
         Show-MainMenu
         }
   '5' { cls
-       
+        $ClientOSBackupLog = "C:\OSD Cloud\Logs\Script Backups\ClientOS.log"
+        Start-Transcript $ClientOSBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Verbose "Downloading Client OS PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        $Win1022H2ScriptURL = ""
+        $Win1022H2ZIPURL = ""
+        $Win1022H2Destination = "C:\scripts\backup\GitHubRepo\Windows 10\22H2"
+
+        $Win1121H2ScriptURL = ""
+        $Win1121H2ZIPURL = ""
+        $Win1121H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\21H2"
+
+        $Win1122H2ScriptURL = ""
+        $Win1122H2ZIPURL = ""
+        $Win1122H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\22H2"
+
+        $Win1123H2ScriptURL = ""
+        $Win1123H2ZIPURL = ""
+        $Win1123H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\23H2"
+
+        $Win1124H2ScriptURL = ""
+        $Win1124H2ZIPURL = ""
+        $Win1124H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\24H2"
+
+        $Win1125H2ScriptURL = ""
+        $Win1125H2ZIPURL = ""
+        $Win1125H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\25H2"
+
+        
+        Write-Verbose "Downloading and Saving Windows 10 22H2 Files..."
+        Save-WebFile -SourceUrl $Win1022H2ScriptURL -DestinationDirectory $Win1022H2Destination
+        Save-WebFile -SourceUrl $Win1022H2ZIPURLURL -DestinationDirectory $Win1022H2Destination
+        Write-Host
+        Write-Host "Windows 10 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 11 21H2 Files..."
+        Save-WebFile -SourceUrl $Win1121H2ScriptURL -DestinationDirectory $Win1121H2Destination
+        Save-WebFile -SourceUrl $Win1121H2ZIPURL -DestinationDirectory $Win1121H2Destination
+        Write-Host
+        Write-Host "Windows 11 21H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 11 22H2 Files..."
+        Save-WebFile -SourceUrl $Win1122H2ScriptURL -DestinationDirectory $Win1122H2Destination
+        Save-WebFile -SourceUrl $Win1122H2ZIPURL -DestinationDirectory $Win1122H2Destination
+        Write-Host
+        Write-Host "Windows 11 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 11 23H2 Files..."
+        Save-WebFile -SourceUrl $Win1123H2ScriptURL -DestinationDirectory $Win1123H2Destination
+        Save-WebFile -SourceUrl $Win1123H2ZIPURL -DestinationDirectory $Win1123H2Destination
+        Write-Host
+        Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 11 24H2 Files..."
+        Save-WebFile -SourceUrl $Win1124H2ScriptURL -DestinationDirectory $Win1124H2Destination
+        Save-WebFile -SourceUrl $Win1124H2ZIPURL -DestinationDirectory $Win1124H2Destination
+        Write-Host
+        Write-Host "Windows 11 24H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 11 25H2 Files..."
+        Save-WebFile -SourceUrl $Win1125H2ScriptURL -DestinationDirectory $Win1125H2Destination
+        Save-WebFile -SourceUrl $Win1125H2ZIPURL -DestinationDirectory $Win1125H2Destination
+        Write-Host
+        Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Stop-Transcript
+        Show-MainMenu
         }
   '6' { cls
         
