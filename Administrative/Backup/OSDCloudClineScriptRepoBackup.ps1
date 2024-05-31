@@ -272,7 +272,7 @@ do
         Write-Host 
 
         $WinServer2022ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/2022.ps1"
-        $WinServer2022ZIPURL = ""
+        $WinServer2022ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/20348.2461_amd64_en-us_multi_b9f1ddc0_convert.zip"
         $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2022"
 
         $WinServer2025ScriptURL = ""
