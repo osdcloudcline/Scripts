@@ -271,7 +271,7 @@ do
         Write-Verbose "Downloading Server OS PowerShell Scripts and ZIP Files from OSDCloudCline GitHub Repo..." -Verbose
         Write-Host 
 
-        $WinServer2022ScriptURL = ""
+        $WinServer2022ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/2022.ps1"
         $WinServer2022ZIPURL = ""
         $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2022"
 
