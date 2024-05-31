@@ -156,7 +156,25 @@ do
         $Win11ALLNetworkScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11-Network.ps1"
         $Win11ALLDestination = "C:\scripts\backup\GitHubRepo\Windows 11"
 
-        
+        $Win12RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2012/RTM/RTM.ps1"
+        $Win12RTMZIPURL = ""
+        $Win12RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 12\RTM"
+
+        $Win13RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2013/RTM/RTM.ps1"
+        $Win13RTMZIPURL = ""
+        $Win13RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 13\RTM"
+
+        $Win14RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2014/RTM/RTM.ps1"
+        $Win14RTMZIPURL = ""
+        $Win14RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 14\RTM"
+
+        $Win15RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2015/RTM/RTM.ps1"
+        $Win15RTMZIPURL = ""
+        $Win15RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 15\RTM"
+
+        $Win16RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2016/RTM/RTM.ps1"
+        $Win16RTMZIPURL = ""
+        $Win16RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 16\RTM"
         
         Write-Verbose "Downloading and Saving Windows 10 22H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1022H2ScriptURL -DestinationDirectory $Win1022H2Destination
@@ -200,6 +218,35 @@ do
         Write-Host
         Write-Host "Windows 11 Master Scripts Backup is Successful..." -ForegroundColor Green
 
+        Write-Verbose "Downloading and Saving Windows 12 RTM Files..." -Verbose
+        Save-WebFile -SourceUrl $Win12RTMScriptURL -DestinationDirectory $Win12RTMDestination
+        Save-WebFile -SourceUrl $Win12RTMZIPURL -DestinationDirectory $Win12RTMDestination
+        Write-Host
+        Write-Host "Windows 12 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 13 RTM Files..." -Verbose
+        Save-WebFile -SourceUrl $Win13RTMScriptURL -DestinationDirectory $Win13RTMDestination
+        Save-WebFile -SourceUrl $Win13RTMZIPURL -DestinationDirectory $Win13RTMDestination
+        Write-Host
+        Write-Host "Windows 13 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 14 RTM Files..." -Verbose
+        Save-WebFile -SourceUrl $Win14RTMScriptURL -DestinationDirectory $Win14RTMDestination
+        Save-WebFile -SourceUrl $Win14RTMZIPURL -DestinationDirectory $Win14RTMDestination
+        Write-Host
+        Write-Host "Windows 14 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 15 RTM Files..." -Verbose
+        Save-WebFile -SourceUrl $Win15RTMScriptURL -DestinationDirectory $Win15RTMDestination
+        Save-WebFile -SourceUrl $Win15RTMZIPURL -DestinationDirectory $Win15RTMDestination
+        Write-Host
+        Write-Host "Windows 15 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+
+        Write-Verbose "Downloading and Saving Windows 16 RTM Files..." -Verbose
+        Save-WebFile -SourceUrl $Win16RTMScriptURL -DestinationDirectory $Win16RTMDestination
+        Save-WebFile -SourceUrl $Win16RTMZIPURL -DestinationDirectory $Win16RTMDestination
+        Write-Host
+        Write-Host "Windows 16 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
         
         Stop-Transcript
         Show-MainMenu
