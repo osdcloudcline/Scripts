@@ -86,7 +86,7 @@ do
         Write-Host 
         Write-Verbose "Downloading Audit Mode PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $ConfigureScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1"
-        $MainMenuScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Registry.ps1"
+        $MainMenuScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1"
         $AuditModeDestination = "C:\scripts\backup\GitHubRepo\Audit Mode"
         Save-WebFile -SourceUrl $ConfigureScriptURL -DestinationDirectory $AuditModeDestination
         Save-WebFile -SourceUrl $MainMenuScriptURL -DestinationDirectory $AuditModeDestination
