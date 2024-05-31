@@ -96,7 +96,24 @@ do
         Show-MainMenu
         }
   '4' { cls
-        
+         $ManagementPCBackupLog = "C:\OSD Cloud\Logs\Script Backups\ManagementPC.log"
+        Start-Transcript $ManagementPCBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Verbose "Downloading Management PC PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        $ManagementPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1"
+        $ManagementPCDestination = "C:\scripts\backup\GitHubRepo\Administrative"
+        Save-WebFile -SourceUrl $ManagementPCScriptURL -DestinationDirectory $ManagementPCBackupDestination
+        Write-Host
+        Write-Host "Script Backup Successfully..." -ForegroundColor Green
+        Stop-Transcript
+        Show-MainMenu
         }
   '5' { cls
        
