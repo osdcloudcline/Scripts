@@ -176,7 +176,7 @@ do
         $Win16RTMZIPURL = ""
         $Win16RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 16\RTM"
 
-        $OSScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2016/RTM/RTM.ps1"
+        $OSScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1"
         $OSScriptDestination = "C:\scripts\backup\GitHubRepo\OS"
         
         Write-Verbose "Downloading and Saving Windows 10 22H2 Files..." -Verbose
