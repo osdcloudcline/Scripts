@@ -32,7 +32,7 @@ do
   {
 
   '1' { cls
-        $AdminBackupLog = "C:\OSD Cloud\Logs\Script Backups\Administrative"
+        $AdminBackupLog = "C:\OSD Cloud\Logs\Script Backups\Administrative.log"
         Start-Transcript $AdminBackupLog
         Get-Date
         Write-Host 
@@ -52,7 +52,7 @@ do
         Show-MainMenu
         }
   '2' { cls
-        $OSIntegrationLog = "C:\OSD Cloud\Logs\Script Backups\OS Integration"
+        $OSIntegrationLog = "C:\OSD Cloud\Logs\Script Backups\OSIntegration.log"
         Start-Transcript $OSIntegrationLog
         Write-Host 
         Write-Host "Preparing script backup..." -ForegroundColor Cyan 
@@ -62,13 +62,38 @@ do
         Import-Module -Name OSD -Force
         Write-Host 
         Write-Verbose "Downloading OS Integration PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
-        $DRiversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
+        $DriversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
         $RegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Registry.ps1"
-        $UpdatesScriptURL = ""
-        
+        $UpdatesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Updates.ps1"
+        $OSIntegrationDestination = "C:\scripts\backup\GitHubRepo\OS Integration"
+        Save-WebFile -SourceUrl $DriversScriptURL -DestinationDirectory $OSIntegrationDestination
+        Save-WebFile -SourceUrl $RegistryScriptURL -DestinationDirectory $OSIntegrationDestination
+        Save-WebFile -SourceUrl $UpdatesScriptURL -DestinationDirectory $OSIntegrationDestination
+        Write-Host
+        Write-Host "Script Backup Successfully..." -ForegroundColor Green
+        Stop-Transcript
+        Show-MainMenu
         }
   '3' { cls
-       
+        $AuditModeLog = "C:\OSD Cloud\Logs\Script Backups\AuditMode.log
+        Start-Transcript $AuditModeLog
+        Write-Host 
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Verbose "Downloading Audit Mode PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        $ConfigureScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
+        $MainMenuScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Registry.ps1"
+        $AuditModeDestination = "C:\scripts\backup\GitHubRepo\Audit Mode"
+        Save-WebFile -SourceUrl $ConfigureScriptURL -DestinationDirectory $AuditModeDestination
+        Save-WebFile -SourceUrl $MainMenuScriptURL -DestinationDirectory $AuditModeDestination
+        Write-Host
+        Write-Host "Script Backup Successfully..." -ForegroundColor Green
+        Stop-Transcript
+        Show-MainMenu
         }
   '4' { cls
         
