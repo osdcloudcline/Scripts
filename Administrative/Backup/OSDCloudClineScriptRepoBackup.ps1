@@ -128,7 +128,7 @@ do
         Write-Host 
         Write-Verbose "Downloading Client OS PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $Win1022H2ScriptURL = ""
-        $Win1022H2ZIPURL = ""
+        $Win1022H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
         $Win1022H2Destination = "C:\scripts\backup\GitHubRepo\Windows 10\22H2"
 
         $Win1121H2ScriptURL = ""
