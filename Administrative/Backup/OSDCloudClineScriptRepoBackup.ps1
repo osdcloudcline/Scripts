@@ -130,51 +130,54 @@ do
         Write-Host 
         $Win1022H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/22H2.ps1"
         $Win1022H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
-        $Win1022H2Destination = "C:\scripts\backup\GitHubRepo\Windows 10\22H2"
+        $Win1022H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 10\22H2"
 
         $Win1121H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1"
         $Win1121H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/22000.2960_amd64_en-us_multi_1843eef2_convert_virtual.zip"
-        $Win1121H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\21H2"
+        $Win1121H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11\21H2"
 
         $Win1122H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/22H2/22H2.ps1"
         $Win1122H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/22H2/22621.3668_amd64_en-us_multi_354f5027_convert_virtual.zip"
-        $Win1122H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\22H2"
+        $Win1122H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11\22H2"
 
         $Win1123H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/23H2/23H2.ps1"
         $Win1123H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/23H2/22631.3668_amd64_en-us_multi_593f698d_convert_virtual.zip"
-        $Win1123H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\23H2"
+        $Win1123H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11\23H2"
 
         $Win1124H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/24H2.ps1"
         $Win1124H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.712_amd64_en-us_multi_0c393b5f_convert_virtual.zip"
-        $Win1124H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\24H2"
+        $Win1124H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11\24H2"
 
         $Win1125H2ScriptURL = ""
         $Win1125H2ZIPURL = ""
-        $Win1125H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\25H2"
+        $Win1125H2Destination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11\25H2"
 
         $Win11ALLScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11.ps1"
         $Win11ALLNetworkScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11-Network.ps1"
-        $Win11ALLDestination = "C:\scripts\backup\GitHubRepo\Windows 11"
+        $Win11ALLDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 11"
 
         $Win12RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2012/RTM/RTM.ps1"
         $Win12RTMZIPURL = ""
-        $Win12RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 12\RTM"
+        $Win12RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 12\RTM"
 
         $Win13RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2013/RTM/RTM.ps1"
         $Win13RTMZIPURL = ""
-        $Win13RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 13\RTM"
+        $Win13RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 13\RTM"
 
         $Win14RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2014/RTM/RTM.ps1"
         $Win14RTMZIPURL = ""
-        $Win14RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 14\RTM"
+        $Win14RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 14\RTM"
 
         $Win15RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2015/RTM/RTM.ps1"
         $Win15RTMZIPURL = ""
-        $Win15RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 15\RTM"
+        $Win15RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 15\RTM"
 
         $Win16RTMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2016/RTM/RTM.ps1"
         $Win16RTMZIPURL = ""
-        $Win16RTMDestination = "C:\scripts\backup\GitHubRepo\Windows 16\RTM"
+        $Win16RTMDestination = "C:\scripts\backup\GitHubRepo\OS\Client\Windows 16\RTM"
+
+        $OSScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2016/RTM/RTM.ps1"
+        $OSScriptDestination = "C:\scripts\backup\GitHubRepo\OS"
         
         Write-Verbose "Downloading and Saving Windows 10 22H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1022H2ScriptURL -DestinationDirectory $Win1022H2Destination
@@ -259,7 +262,12 @@ do
         Write-Host
         Write-Host "Windows 16 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
         Write-Host 
-        
+
+        Write-Verbose "Downloading and Saving OS Main Menu Script..." -Verbose
+        Save-WebFile -SourceUrl $OSScriptURL -DestinationDirectory $OSScriptDestination
+        Write-Host
+        Write-Host "Windows 16 RTM ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
         Stop-Transcript
 
         $ServerOSBackupLog = "C:\OSD Cloud\Logs\Script Backups\ServerOS.log"
@@ -273,26 +281,26 @@ do
 
         $WinServer2022ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/2022.ps1"
         $WinServer2022ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/20348.2461_amd64_en-us_multi_b9f1ddc0_convert.zip"
-        $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2022"
+        $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2022"
 
         $WinServer2025ScriptURL = ""
         $WinServer2025ZIPURL = ""
-        $WinServer2025Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2025"
+        $WinServer2025Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2025"
 
         $WinServer2028ScriptURL = ""
         $WinServer2028ZIPURL = ""
-        $WinServer2028Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2028"
+        $WinServer2028Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2028"
 
         $WinServer2031ScriptURL = ""
         $WinServer2031ZIPURL = ""
-        $WinServer2031Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2031"
+        $WinServer2031Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2031"
 
         $WinServer2034ScriptURL = ""
         $WinServer2034ZIPURL = ""
-        $WinServer2034Destination = "C:\scripts\backup\GitHubRepo\Windows Server\2034"
+        $WinServer2034Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2034"
 
         $WinServerALLScriptURL = ""
-        $WinServerDestination = "C:\scripts\backup\GitHubRepo\Windows Server"
+        $WinServerDestination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server"
 
         Write-Verbose "Downloading and Saving Windows Server 2022 Files..." -Verbose
         Save-WebFile -SourceUrl $WinServer2022ScriptURL -DestinationDirectory $WinServer2022Destination
@@ -339,6 +347,11 @@ do
         Show-MainMenu
         }
   '6' { cls
+        $OSDBuilderBackupLog = "C:\OSD Cloud\Logs\Script Backups\OSDBuilder.log"
+        Start-Transcript $OSDBuilderBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host  "Downloading and Saving OSD Builder related scripts..."
         
         }
   '7' { cls
