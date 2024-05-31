@@ -107,7 +107,7 @@ do
         Import-Module -Name OSD -Force
         Write-Host 
         Write-Verbose "Downloading Management PC PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
-        $ManagementPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1"
+        $ManagementPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Management%20PC/ManagementPC-OSDCloudInitialConfiguration.ps1"
         $ManagementPCDestination = "C:\scripts\backup\GitHubRepo\Administrative"
         Save-WebFile -SourceUrl $ManagementPCScriptURL -DestinationDirectory $ManagementPCBackupDestination
         Write-Host
