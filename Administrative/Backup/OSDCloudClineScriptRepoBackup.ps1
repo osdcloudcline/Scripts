@@ -347,6 +347,9 @@ do
         Show-MainMenu
         }
   '6' { cls
+        
+        }
+  '7' { cls
         $OSDBuilderBackupLog = "C:\OSD Cloud\Logs\Script Backups\OSDBuilder.log"
         Start-Transcript $OSDBuilderBackupLog
         Get-Date
@@ -440,9 +443,6 @@ do
 
         Stop-Transcript
         Show-MainMenu
-        }
-  '7' { cls
-        
         }
   '8' { cls
         
