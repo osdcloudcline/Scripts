@@ -145,7 +145,7 @@ do
         $Win1123H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\23H2"
 
         $Win1124H2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/24H2.ps1"
-        $Win1124H2ZIPURL = ""
+        $Win1124H2ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.712_amd64_en-us_multi_0c393b5f_convert_virtual.zip"
         $Win1124H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\24H2"
 
         $Win1125H2ScriptURL = ""
