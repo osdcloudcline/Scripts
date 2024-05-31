@@ -34,7 +34,7 @@ cls
 pause
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. OSD Builder - Set and Create Working Directory Paths"
+Write-Host " 1. OSD Builder - Set Working Directory Path"
 Write-Host " 2. New OSD Builder Build - Import OS Media"
 Write-Host " 3. Create New OSD Builder Task"
 Write-Host " 4. Execute OSD Builder Task"
@@ -50,7 +50,27 @@ do
   {
 
   '1' { cls
-        
+        Write-Host "Checking if OSDBuilder Module is installed..." -ForegroundColor Cyan 
+        $OSDBuilderCheck = Get-InstalledModule | Where-Object -Property Name -eq "OSDBuilder"
+        If($OSDBuilderCheck -eq $false){
+        Set-ExecutionPolicy Bypass -Force
+        Write-Verbose "Installing OSD Builder PowerShell Module..." -Verbose
+        Install-Module -Name OSDBuilder -AllowClobber -SkipPublisherCheck
+        Write-Verbose "Importing OSD Builder PowerShell Module..." -Verbose
+        Import-Module -Name OSDBuilder -Force
+        $OSDBuilderPath = Read-Host -Prompt 'Please specify the working directory for OSDBuilder' 
+        Write-Verbose "Setting OSDBuilder working directory..." -Verbose
+        Get-OSDBuilder -SetPath $OSDBuilderPath
+        cls
+        Show-MainMenu
+        }
+        ElseIf($OSDBuilderCheck -eq $true){
+        Set-ExecutionPolicy Bypass -Force
+        Write-Verbose "Setting OSDBuilder working directory..." -Verbose
+        Get-OSDBuilder -SetPath $OSDBuilderPath
+        cls
+        Show-MainMenu
+        }
         }
   '2' { cls
         
