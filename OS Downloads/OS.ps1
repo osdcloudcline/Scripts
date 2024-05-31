@@ -48,7 +48,7 @@ do
        Show-ClientMainMenu
         }
   '2' { cls
-        
+        Show-ServerMainMenu
         }
   '3' { cls
        exit
@@ -440,7 +440,7 @@ Function Show-ServerMenu(){}
 ##########################################################
 # Main Menu
 ##########################################################
-Function Show-WinServerMainMenu{
+Function Show-ServerMainMenu{
     [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  OS Windows Server Download Main Menu',
