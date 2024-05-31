@@ -152,45 +152,55 @@ do
         $Win1125H2ZIPURL = ""
         $Win1125H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\25H2"
 
-        $Win11ALLScriptURL = ""
-        $Win11ALLNetworkScriptURL = ""
+        $Win11ALLScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11.ps1"
+        $Win11ALLNetworkScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/ALLWin11-Network.ps1"
         $Win11ALLDestination = "C:\scripts\backup\GitHubRepo\Windows 11"
+
         
-        Write-Verbose "Downloading and Saving Windows 10 22H2 Files..."
+        
+        Write-Verbose "Downloading and Saving Windows 10 22H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1022H2ScriptURL -DestinationDirectory $Win1022H2Destination
         Save-WebFile -SourceUrl $Win1022H2ZIPURLURL -DestinationDirectory $Win1022H2Destination
         Write-Host
         Write-Host "Windows 10 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
 
-        Write-Verbose "Downloading and Saving Windows 11 21H2 Files..."
+        Write-Verbose "Downloading and Saving Windows 11 21H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1121H2ScriptURL -DestinationDirectory $Win1121H2Destination
         Save-WebFile -SourceUrl $Win1121H2ZIPURL -DestinationDirectory $Win1121H2Destination
         Write-Host
         Write-Host "Windows 11 21H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
 
-        Write-Verbose "Downloading and Saving Windows 11 22H2 Files..."
+        Write-Verbose "Downloading and Saving Windows 11 22H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1122H2ScriptURL -DestinationDirectory $Win1122H2Destination
         Save-WebFile -SourceUrl $Win1122H2ZIPURL -DestinationDirectory $Win1122H2Destination
         Write-Host
         Write-Host "Windows 11 22H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
 
-        Write-Verbose "Downloading and Saving Windows 11 23H2 Files..."
+        Write-Verbose "Downloading and Saving Windows 11 23H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1123H2ScriptURL -DestinationDirectory $Win1123H2Destination
         Save-WebFile -SourceUrl $Win1123H2ZIPURL -DestinationDirectory $Win1123H2Destination
         Write-Host
         Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
 
-        Write-Verbose "Downloading and Saving Windows 11 24H2 Files..."
+        Write-Verbose "Downloading and Saving Windows 11 24H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1124H2ScriptURL -DestinationDirectory $Win1124H2Destination
         Save-WebFile -SourceUrl $Win1124H2ZIPURL -DestinationDirectory $Win1124H2Destination
         Write-Host
         Write-Host "Windows 11 24H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
 
-        Write-Verbose "Downloading and Saving Windows 11 25H2 Files..."
+        Write-Verbose "Downloading and Saving Windows 11 25H2 Files..." -Verbose
         Save-WebFile -SourceUrl $Win1125H2ScriptURL -DestinationDirectory $Win1125H2Destination
         Save-WebFile -SourceUrl $Win1125H2ZIPURL -DestinationDirectory $Win1125H2Destination
         Write-Host
         Write-Host "Windows 11 23H2 ZIP File and Script Backup is Successful..." -ForegroundColor Green
+        
+        Write-Verbose "Downloading and Saving Windows 11 Master Scripts..." -Verbose
+        Save-WebFile -SourceUrl $Win11ALLScriptURL -DestinationDirectory $Win11ALLDestination
+        Save-WebFile -SourceUrl $Win11ALLNetworkScriptURL -DestinationDirectory $Win11ALLDestination
+        Write-Host
+        Write-Host "Windows 11 Master Scripts Backup is Successful..." -ForegroundColor Green
+
+        
         Stop-Transcript
         Show-MainMenu
         }
