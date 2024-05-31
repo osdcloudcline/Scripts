@@ -28,7 +28,7 @@ Expand-Archive -Path "$ZIPDestination\20348.2461_amd64_en-us_multi_b9f1ddc0_conv
 Write-Host
 Write-Host "Downloading Windows Server 2022 Build: 20348.2461..." -ForegroundColor Cyan 
 
-Start-Process -FilePath $Windows11Downloader
+Start-Process -FilePath $WindowsServerDownloader
 
 pause
 
