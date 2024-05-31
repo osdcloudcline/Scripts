@@ -437,4 +437,66 @@ do
     
 Function Show-ServerMenu(){}
 
+##########################################################
+# Main Menu
+##########################################################
+Function Show-WinServerMainMenu{
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  OS Windows Server Download Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Download and Create Windows Server 2022 ISO"
+Write-Host " 2. Download and Create Windows Server 2025 ISO"
+Write-Host " 3. Download and Create Windows Server 2028 ISO"
+Write-Host " 4. Download and Create Windows Server 2031 ISO"
+Write-Host " 5. Download and Create Windows Server 2034 ISO"
+Write-Host " 6. Local - Download and Create ALL Windows Server ISO"
+Write-Host " 7. Network - Download and Create ALL Windows Server ISO"
+Write-Host " 8. Exit PowerShell"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+       $WinServer2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1")
+       Invoke-Expression $($WinServer2022.Content)
+        }
+  '2' { cls
+        $WinServer2025 = Invoke-WebRequest ("")
+        Invoke-Expression $($WinServer2025.Content)
+        }
+  '3' { cls
+        $WinServer2028 = Invoke-WebRequest ("")
+        Invoke-Expression $($WinServer2028.Content)
+        }
+  '4' { cls
+        $WinServer2031 = Invoke-WebRequest ("")
+        Invoke-Expression $($WinServer2031.Content)
+        }
+  '5' { cls
+        $WinServer2034 = Invoke-WebRequest("")
+        Invoke-Expression $($WinServer2034.Content)
+        }
+  '6' { cls
+        $ALLWinServer = Invoke-WEbRequest("")
+        Invoke-Expression $($ALLWinServer.Content)
+        }
+  '7' { cls
+        $NetworkALLWinServer = Invoke-WEbRequest("")
+        Invoke-Expression $($NetworkALLWinServer.Content)
+        }
+  '8' { cls
+        exit
+    
+        }
+     }
+    }
+    until ($selection -eq '8'){exit}
+    }
 Show-MainMenu
