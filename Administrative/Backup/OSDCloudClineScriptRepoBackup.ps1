@@ -152,6 +152,9 @@ do
         $Win1125H2ZIPURL = ""
         $Win1125H2Destination = "C:\scripts\backup\GitHubRepo\Windows 11\25H2"
 
+        $Win11ALLScriptURL = ""
+        $Win11ALLNetworkScriptURL = ""
+        $Win11ALLDestination = "C:\scripts\backup\GitHubRepo\Windows 11"
         
         Write-Verbose "Downloading and Saving Windows 10 22H2 Files..."
         Save-WebFile -SourceUrl $Win1022H2ScriptURL -DestinationDirectory $Win1022H2Destination
