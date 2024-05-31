@@ -464,7 +464,7 @@ do
   {
 
   '1' { cls
-       $WinServer2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1")
+       $WinServer2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/2022.ps1")
        Invoke-Expression $($WinServer2022.Content)
         }
   '2' { cls
