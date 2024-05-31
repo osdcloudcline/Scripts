@@ -19,7 +19,7 @@ $WindowsServerDownloader = "$ZIPDestination\uup_download_windows.cmd"
 ########################################################################################
 
 Write-Host "Downloading Windows Server 2022 ZIP File..." -ForegroundColor Cyan 
-
+Write-Host
 Save-WebFile -SourceUrl WinServer2022URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Server 2022 ZIP File..." -ForegroundColor Cyan 
