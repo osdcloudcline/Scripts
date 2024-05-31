@@ -32,12 +32,21 @@ do
   {
 
   '1' { cls
-        $Updates = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Updates.ps1")
-        Invoke-Expression $($Updates.Content)
+        $AdminBackupLog = "C:\OSD Cloud\Logs\Script Backups\Administrative"
+        Start-Transcript $AdminBackupLog
+        Get-Date
+
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Verbose "Downloading Administratives PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        $AdminScriptURL = ""
+        
         }
   '2' { cls
-        $Drivers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1")
-        Invoke-Expression $($Drivers.Content)
+        
         }
   '3' { cls
        
@@ -46,17 +55,36 @@ do
         
         }
   '5' { cls
-        $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
-        Invoke-Expression $($OSDBuilder.Content)
+       
         }
   '6' { cls
         
         }
   '7' { cls
         
+        }
+  '8' { cls
+        
+        }
+  '9' { cls
+        
+        }
+  '10' { cls
+       
+        }
+  '11' { cls
+        
+        }
+  '12' { cls
+       
+        }
+  '13' { cls
+        
+        }
+  '14' { cls
+        
         exit
         }
-
   
     }
     }
