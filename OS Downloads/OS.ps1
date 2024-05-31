@@ -435,6 +435,6 @@ do
     until ($selection -eq '6'){}
     }
     
-
+Function Show-ServerMenu(){}
 
 Show-MainMenu
