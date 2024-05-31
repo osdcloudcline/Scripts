@@ -42,7 +42,7 @@ do
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         Write-Host 
-        Write-Verbose "Downloading Administratives PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        Write-Verbose "Downloading Administrative PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $AdminScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1"
         $AdminBackupDestination = "C:\scripts\backup\GitHubRepo\Administrative"
         Save-WebFile -SourceUrl $AdminScriptURL -DestinationDirectory $AdminBackupDestination
@@ -52,6 +52,19 @@ do
         Show-MainMenu
         }
   '2' { cls
+        $OSIntegrationLog = "C:\OSD Cloud\Logs\Script Backups\OS Integration"
+        Start-Transcript $OSIntegrationLog
+        Write-Host 
+        Write-Host "Preparing script backup..." -ForegroundColor Cyan 
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Verbose "Downloading OS Integration PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        $DRiversScriptURL = ""
+        $RegistryScriptURL = ""
+        $UpdatesScriptURL = ""
         
         }
   '3' { cls
