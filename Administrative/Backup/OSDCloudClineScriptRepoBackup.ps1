@@ -369,6 +369,77 @@ do
         Save-WebFile -SourceUrl $Win10ScriptURL -DestinationDirectory $Win10ScriptDestination
         Write-Host 
         Write-Verbose "Processing Windows 11 scripts..." -Verbose
+        $Win1121H2ScriptURL = ""
+        $Win1122H2ScriptURL = ""
+        $Win1123H2ScriptURL = ""
+        $Win1124H2ScriptURL = ""
+        $Win1125H2ScriptURL = ""
+        $Win11ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win1121H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1122H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1123H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1124H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1125H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 12 scripts..." -Verbose
+        $Win12RTMScriptURL = ""
+        $Win12ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win12RTMScriptURL -DestinationDirectory $Win12ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 13 scripts..." -Verbose
+        $Win13RTMScriptURL = ""
+        $Win13ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win13RTMScriptURL -DestinationDirectory $Win13ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 14 scripts..." -Verbose
+        $Win14RTMScriptURL = ""
+        $Win14ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win14RTMScriptURL -DestinationDirectory $Win14ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 15 scripts..." -Verbose
+        $Win15RTMScriptURL = ""
+        $Win15ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win15RTMScriptURL -DestinationDirectory $Win15ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 16 scripts..." -Verbose
+        $Win16RTMScriptURL = ""
+        $Win16ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win16RTMScriptURL -DestinationDirectory $Win16ScriptDestination
+        Write-Host
+        Write-Host "Windows Client OS OSD Builder Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+        Write-Host  "Processing: Downloading and Saving OSD Builder Server OS-related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
+        Write-Host
+        Write-Verbose "Processing Windows Server 2022 scripts..." -Verbose
+        $WinServer2022ScriptURL = ""
+        $WinServer2022ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2022ScriptUR -DestinationDirectory $WinServer2022ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2025 scripts..." -Verbose
+        $WinServer2025ScriptURL = ""
+        $WinServer2025ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2025ScriptUR -DestinationDirectory $WinServer2025ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2028 scripts..." -Verbose
+        $WinServer2028ScriptURL = ""
+        $WinServer2028ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2028ScriptUR -DestinationDirectory $WinServer2028ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2031 scripts..." -Verbose
+        $WinServer2031ScriptURL = ""
+        $WinServer2031ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2031ScriptUR -DestinationDirectory $WinServer2031ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2034 scripts..." -Verbose
+        $WinServer2034ScriptURL = ""
+        $WinServer2034ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2034ScriptUR -DestinationDirectory $WinServer2034ScriptDestination
+        Write-Host
+        Write-Host "Windows Server OS OSD Builder Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+
+        Stop-Transcript
+        Show-MainMenu
         }
   '7' { cls
         
