@@ -468,7 +468,7 @@ do
        Invoke-Expression $($WinServer2022.Content)
         }
   '2' { cls
-        $WinServer2025 = Invoke-WebRequest ("")
+        $WinServer2025 = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2025/2025.ps1")
         Invoke-Expression $($WinServer2025.Content)
         }
   '3' { cls
