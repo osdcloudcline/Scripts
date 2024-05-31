@@ -35,12 +35,13 @@ do
         $AdminBackupLog = "C:\OSD Cloud\Logs\Script Backups\Administrative"
         Start-Transcript $AdminBackupLog
         Get-Date
-
+        Write-Host 
         Write-Host "Preparing script backup..." -ForegroundColor Cyan 
         Write-Host 
         Write-Verbose "Installing and Importing OSD Module..." -Verbose
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
+        Write-Host 
         Write-Verbose "Downloading Administratives PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $AdminScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1"
         $AdminBackupDestination = "C:\scripts\backup\GitHubRepo\Administrative"
@@ -48,7 +49,6 @@ do
         Write-Host
         Write-Host "Script Backup Successfully..." -ForegroundColor Green
         Stop-Transcript
-        pause
         Show-MainMenu
         }
   '2' { cls
