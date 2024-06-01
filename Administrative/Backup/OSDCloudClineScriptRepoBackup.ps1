@@ -516,7 +516,7 @@ do
         $OfflineHKCRREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddCopyToMoveTo.reg"
         $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
         $OfflineHKLMREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AcrobatDisableCloudServices.reg"
-        $OfflineHKLMREG2URL = ""
+        $OfflineHKLMREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019-AcrobatREGEntries.reg"
         $OfflineHKLMREG3URL = ""
         $OfflineHKLMREG4URL = ""
         $OfflineHKLMREG5URL = ""
