@@ -134,7 +134,7 @@ do
       
       }
 '3' { cls
-      
+      Show-MainMenu
       }
 '4' { cls
       exit 
