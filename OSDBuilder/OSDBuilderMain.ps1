@@ -75,7 +75,7 @@ do
         }
         }
   '2' { cls
-     
+        Show-OSDBuildMainMenu
         }
   '3' { cls
         
@@ -106,7 +106,7 @@ do
 
 
 
-Function Show-NewOSDBuilderMenu(){
+Function Show-OSDBuildMainMenu(){
 
 [CmdletBinding()]
     param(
