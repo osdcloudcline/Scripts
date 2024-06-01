@@ -485,7 +485,7 @@ do
         Write-Host
         $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
         $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
-        $BitLockerREGURL = ""
+        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
         $PCMark10REGURL = ""
         $SYSTEMDesktopREGURL = ""
         $ShowHiddenFilesREGURL = ""
