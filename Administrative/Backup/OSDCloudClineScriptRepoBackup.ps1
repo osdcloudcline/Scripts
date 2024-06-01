@@ -456,8 +456,8 @@ do
         Write-Host  "Processing: Downloading and Saving PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
         Write-Host
         $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1"
-        $PS7ModulesScriptURL = ""
-        $PSModulesScriptsDestination = ""
+        $PS7ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/InstallPS7.ps1"
+        $PSModulesScriptsDestination = "C:\scripts\backup\GitHubRepo\PS Modules"
         Save-WebFile -SourceUrl $PS5ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
         Save-WebFile -SourceUrl $PS7ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
         Write-Host
