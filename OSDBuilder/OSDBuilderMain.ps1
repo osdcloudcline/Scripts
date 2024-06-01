@@ -104,6 +104,8 @@ do
     until ($selection -eq '9'){exit}
     }
 
+Show-MainMenu
+
 Function Show-NewOSDBuilderMenu(){
 
 [CmdletBinding()]
@@ -229,4 +231,4 @@ do
     }
     until ($selection -eq '9'){exit}
     }
-Show-MainMenu
+
