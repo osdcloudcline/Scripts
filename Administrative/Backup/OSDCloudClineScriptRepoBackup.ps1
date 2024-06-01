@@ -546,7 +546,7 @@ do
         Start-Transcript $AdminBackupLog
         Get-Date
         Write-Host 
-        Write-Host  "Processing 1 of 13: Administrative installation scripts from OSDCloudCline\Scripts\Administrative repo..." -ForegroundColor Cyan
+        Write-Host  "Processing 1 of 12: Administrative installation scripts from OSDCloudCline\Scripts\Administrative repo..." -ForegroundColor Cyan
         Write-Host 
         Write-Verbose "Installing and Importing OSD Module..." -Verbose
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
@@ -563,7 +563,7 @@ do
         $OSIntegrationLog = "C:\OSD Cloud\Logs\Script Backups\OSIntegration.log"
         Start-Transcript $OSIntegrationLog
         Write-Host 
-        Write-Host  "Processing 2 of 13: OS Integration scripts from OSDCloudCline\Scripts\OS Integration repo..." -ForegroundColor Cyan
+        Write-Host  "Processing 2 of 12: OS Integration scripts from OSDCloudCline\Scripts\OS Integration repo..." -ForegroundColor Cyan
         Write-Host 
         Write-Verbose "Downloading OS Integration PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $DriversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/Drivers.ps1"
@@ -580,7 +580,7 @@ do
         $AuditModeLog = "C:\OSD Cloud\Logs\Script Backups\AuditMode.log"
         Start-Transcript $AuditModeLog
         Write-Host 
-        Write-Host  "Processing 3 of 13: Audit Mode scripts from OSDCloudCline\Scripts\Audit Mode repo..." -ForegroundColor Cyan
+        Write-Host  "Processing 3 of 12: Audit Mode scripts from OSDCloudCline\Scripts\Audit Mode repo..." -ForegroundColor Cyan
         Write-Host 
         Write-Verbose "Downloading Audit Mode PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $ConfigureScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1"
@@ -596,7 +596,7 @@ do
         Start-Transcript $ManagementPCBackupLog
         Get-Date
         Write-Host 
-        Write-Host  "Processing 4 of 13: Management PC scripts from OSDCloudCline\Scripts\Management PC repo..." -ForegroundColor Cyan
+        Write-Host  "Processing 4 of 12: Management PC scripts from OSDCloudCline\Scripts\Management PC repo..." -ForegroundColor Cyan
         Write-Host  
         Write-Verbose "Downloading Management PC PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
         $ManagementPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Management%20PC/ManagementPC-OSDCloudInitialConfiguration.ps1"
@@ -610,7 +610,7 @@ do
         Start-Transcript $ClientOSBackupLog
         Get-Date
         Write-Host 
-        Write-Host  "Processing 5 of 13: Client OS Download scripts from OSDCloudCline\Scripts\OS Downloads repo..." -ForegroundColor Cyan 
+        Write-Host  "Processing 5 of 12: Client OS Download scripts from OSDCloudCline\Scripts\OS Downloads repo..." -ForegroundColor Cyan 
         Write-Host  
         Write-Verbose "Downloading Client OS PowerShell Scripts and ZIP Files from OSDCloudCline GitHub Repo..." -Verbose
         Write-Host 
@@ -773,7 +773,7 @@ do
         Start-Transcript $ServerOSBackupLog
         Get-Date
         Write-Host 
-        Write-Host  "Processing 5 of 13: Server OS Download scripts from OSDCloudCline\Scripts\OS Downloads repo..." -ForegroundColor Cyan 
+        Write-Host  "Processing 5 of 12: Server OS Download scripts from OSDCloudCline\Scripts\OS Downloads repo..." -ForegroundColor Cyan 
         Write-Host 
         Write-Verbose "Downloading Server OS PowerShell Scripts and ZIP Files from OSDCloudCline GitHub Repo..." -Verbose
         Write-Host 
@@ -853,8 +853,170 @@ do
 
         # NUMBER 6 GOES HERE
 
-        
-        
+        $OSDBuilderBackupLog = "C:\OSD Cloud\Logs\Script Backups\OSDBuilder.log"
+        Start-Transcript $OSDBuilderBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host  "Processing 7 of 12: OSD Builder related scripts from OSDCloudCline\Scripts\OS Builder repo..." -ForegroundColor Cyan 
+        Write-Host 
+        $OSDBuilderScriptRepoMainURL = "https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1"
+        $OSDBuilderScriptsDestination = "C:\scripts\backup\GitHubRepo\OSD Builder\Scripts Repo"
+        Save-WebFile -SourceUrl $OSDBuilderScriptRepoMainURL -DestinationDirectory $OSDBuilderScriptsDestination
+        Write-Host 
+        Write-Host  "Processing 7 of 12: Downloading and Saving OSD Builder Client OS-related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
+        Write-Host
+        Write-Verbose "Processing Windows 10 scripts..." -Verbose
+        $Win10ScriptURL = ""
+        $Win10ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win10ScriptURL -DestinationDirectory $Win10ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 11 scripts..." -Verbose
+        $Win1121H2ScriptURL = ""
+        $Win1122H2ScriptURL = ""
+        $Win1123H2ScriptURL = ""
+        $Win1124H2ScriptURL = ""
+        $Win1125H2ScriptURL = ""
+        $Win11ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win1121H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1122H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1123H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1124H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Save-WebFile -SourceUrl $Win1125H2ScriptURL -DestinationDirectory $Win11ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 12 scripts..." -Verbose
+        $Win12RTMScriptURL = ""
+        $Win12ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win12RTMScriptURL -DestinationDirectory $Win12ScriptDestination
+        Write-Host 
+        Write-Verbose "Processing Windows 13 scripts..." -Verbose
+        $Win13RTMScriptURL = ""
+        $Win13ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win13RTMScriptURL -DestinationDirectory $Win13ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 14 scripts..." -Verbose
+        $Win14RTMScriptURL = ""
+        $Win14ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win14RTMScriptURL -DestinationDirectory $Win14ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 15 scripts..." -Verbose
+        $Win15RTMScriptURL = ""
+        $Win15ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win15RTMScriptURL -DestinationDirectory $Win15ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows 16 scripts..." -Verbose
+        $Win16RTMScriptURL = ""
+        $Win16ScriptDestination = ""
+        Save-WebFile -SourceUrl $Win16RTMScriptURL -DestinationDirectory $Win16ScriptDestination
+        Write-Host
+        Write-Host "Windows Client OS OSD Builder Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+        Write-Host  "Processing 7 of 12: Downloading and Saving OSD Builder Server OS-related scripts from OSDCloudCline\Scripts\OSDBuilder repo..." -ForegroundColor Cyan
+        Write-Host
+        Write-Verbose "Processing Windows Server 2022 scripts..." -Verbose
+        $WinServer2022ScriptURL = ""
+        $WinServer2022ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2022ScriptUR -DestinationDirectory $WinServer2022ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2025 scripts..." -Verbose
+        $WinServer2025ScriptURL = ""
+        $WinServer2025ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2025ScriptUR -DestinationDirectory $WinServer2025ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2028 scripts..." -Verbose
+        $WinServer2028ScriptURL = ""
+        $WinServer2028ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2028ScriptUR -DestinationDirectory $WinServer2028ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2031 scripts..." -Verbose
+        $WinServer2031ScriptURL = ""
+        $WinServer2031ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2031ScriptUR -DestinationDirectory $WinServer2031ScriptDestination
+        Write-Host
+        Write-Verbose "Processing Windows Server 2034 scripts..." -Verbose
+        $WinServer2034ScriptURL = ""
+        $WinServer2034ScriptDestination = ""
+        Save-WebFile -SourceUrl $WinServer2034ScriptUR -DestinationDirectory $WinServer2034ScriptDestination
+        Write-Host
+        Write-Host "Windows Server OS OSD Builder Script Backup is Successful..." -ForegroundColor Green
+        Write-Host 
+        Write-Host "OSD Builder Script Backup is Successful..." -ForegroundColor Green
+        Stop-Transcript
+
+        $PSModulesBackupLog = "C:\OSD Cloud\Logs\Script Backups\PSModules.log"
+        Start-Transcript $PSModulesBackupLog
+        Get-Date
+        Write-Host  
+        Write-Host  "Processing 8 of 12: PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
+        Write-Host
+        $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1"
+        $PS7ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/InstallPS7.ps1"
+        $PSModulesScriptsDestination = "C:\scripts\backup\GitHubRepo\PS Modules"
+        Write-Host
+        Write-Verbose "Downloading and Saving PowerShell 5.1 and 7.x Module scripts..." -Verbose
+        Save-WebFile -SourceUrl $PS5ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
+        Save-WebFile -SourceUrl $PS7ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
+        Write-Host
+        Write-Host "PowerShell Module Script Backup is Successful..." -ForegroundColor Green
+        Write-Host
+
+        Stop-Transcript
+
+        $RegistryBackupLog = "C:\OSD Cloud\Logs\Script Backups\Registry.log"
+        Start-Transcript $PSModulesBackupLog
+        Get-Date
+        Write-Host 
+        Write-Host  "Processing 9 of 12: Registry Files and installation scripts from OSDCloudCline\Scripts\REG Files repo..." -ForegroundColor Cyan
+        Write-Host
+        $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
+        $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
+        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
+        $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
+        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
+        $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
+        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
+        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
+        $REGFilesZIPURL = ""
+        $REGFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1"
+        $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
+        Write-Host
+        Write-Verbose "Downloading and Saving Registry Files..." -Verbose
+        Save-WebFile -SourceUrl $3DMarkREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREGURL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $BitLockerREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $PCMark10REGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $SYSTEMDesktopREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $ShowHiddenFilesREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $Win10OSModificationsREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $Win11OSModificationsREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host
+        Write-Verbose "Downloading and Saving Registry ZIP File..." -Verbose
+        Save-WebFile -SourceUrl $REGFilesZIPURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host 
+        Write-Verbose "Downloading and Saving Registry Script File..." -Verbose
+        Save-WebFile -SourceUrl $REGFilesScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host
+        Write-Host
+        Write-Verbose "Downloading and Saving OFFLINE Registry Files..." -Verbose
+        $OfflineHKCRREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddCopyToMoveTo.reg"
+        $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
+        $OfflineHKLMREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AcrobatDisableCloudServices.reg"
+        $OfflineHKLMREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019-AcrobatREGEntries.reg"
+        $OfflineHKLMREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019.reg"
+        $OfflineHKLMREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg1.reg"
+        $OfflineHKLMREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg2.reg"
+        $OfflineREGDestination = "C:\scripts\backup\GitHubRepo\Registry Files\Offline"
+        Save-WebFile -SourceUrl $OfflineHKCRREG1URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKCRREG2URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG1URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG2URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG3URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG4URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG5URL -DestinationDirectory $OfflineREGDestination
+        Write-Host
+        Write-Host "Registry Files and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host
+
+        Stop-Transcript
         }
   '14' { cls
         
@@ -863,7 +1025,7 @@ do
   
     }
     }
-    until ($selection -eq '6'){}
+    until ($selection -eq '14'){}
     }
 
 Show-MainMenu
