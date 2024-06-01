@@ -445,7 +445,24 @@ do
         Show-MainMenu
         }
   '8' { cls
-        
+        $PSModulesBackupLog = "C:\OSD Cloud\Logs\Script Backups\PSModules.log"
+        Start-Transcript $PSModulesBackupLog
+        Get-Date
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Host  "Processing: Downloading and Saving PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
+        Write-Host
+        $PS5ModulesScriptURL = ""
+        $PS7ModulesScriptURL = ""
+        $PSModulesScriptsDestination = ""
+        Save-WebFile -SourceUrl $PS5ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
+        Save-WebFile -SourceUrl $PS7ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
+        Write-Host
+        Write-Host "PowerShell Module Script Backup is Successful..." -ForegroundColor Green
+        Write-Host
         }
   '9' { cls
         
