@@ -128,7 +128,7 @@ do
   {
 
   '1' { cls
-       Show-NewClientOSDBuilderMenu
+       Show-NewClientOSD
       }
  '2' { cls
       
@@ -144,7 +144,7 @@ do
     until ($selection -eq '4'){exit}
     }
 
-Function Show-NewClientOSDBuilderMenu(){
+Function Show-NewClientOSD(){
 
 [CmdletBinding()]
     param(
