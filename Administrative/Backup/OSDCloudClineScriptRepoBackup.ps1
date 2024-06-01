@@ -511,6 +511,24 @@ do
         Write-Verbose "Downloading and Saving Registry Script File..." -Verbose
         Save-WebFile -SourceUrl $REGFilesScriptURL -DestinationDirectory $REGFilesScriptsDestination
         Write-Host
+        Write-Host
+        Write-Verbose "Downloading and Saving OFFLINE Registry Files..." -Verbose
+        $OfflineHKCRREG1URL = ""
+        $OfflineHKCRREG2URL = ""
+        $OfflineHKLMREG1URL = ""
+        $OfflineHKLMREG2URL = ""
+        $OfflineHKLMREG3URL = ""
+        $OfflineHKLMREG4URL = ""
+        $OfflineHKLMREG5URL = ""
+        $OfflineREGDestination = "C:\scripts\backup\GitHubRepo\Registry Files\Offline"
+        Save-WebFile -SourceUrl $OfflineHKCRREG1URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKCRREG2URL  -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG1URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG2URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG3URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG4URL -DestinationDirectory $OfflineREGDestination
+        Save-WebFile -SourceUrl $OfflineHKLMREG5URL -DestinationDirectory $OfflineREGDestination
+        Write-Host
         Write-Host "Registry Files and Script Backup is Successful..." -ForegroundColor Green
         Write-Host
 
