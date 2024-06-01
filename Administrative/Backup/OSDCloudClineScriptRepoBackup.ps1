@@ -490,7 +490,7 @@ do
         $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
         $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
         $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
-        $Win11OSModificationsREGURL = ""
+        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
         $REGFilesZIPURL = ""
         $REGFilesScriptURL = ""
         $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
