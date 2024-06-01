@@ -75,7 +75,41 @@ do
         }
         }
   '2' { cls
-        Show-NewOSDBuilderMenu
+        [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Windows Client OS"
+Write-Host " 2. Windows Server OS"
+Write-Host " 3. Return to Main Menu"
+Write-Host " 4. Exit PowerShell"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+       Show-NewClientOSDBuilderMenu
+      }
+ '2' { cls
+      
+      }
+'3' { cls
+      Show-MainMenu
+      }
+'4' { cls
+      exit 
+      }
+}
+    }
+    until ($selection -eq '4'){exit}
+    }
         }
   '3' { cls
         
