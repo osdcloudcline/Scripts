@@ -126,7 +126,7 @@ do
   {
 
   '1' { cls
-      
+       Show-NewClientOSDBuilderMenu
       }
  '2' { cls
       
