@@ -492,7 +492,7 @@ do
         $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
         $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
         $REGFilesZIPURL = ""
-        $REGFilesScriptURL = ""
+        $REGFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1"
         $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
         Write-Host
         Write-Verbose "Downloading and Saving Registry Files..." -Verbose
