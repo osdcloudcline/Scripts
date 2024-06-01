@@ -174,7 +174,7 @@ do
  '2' { cls
       $W11Ver = Read-Host 'What Version of Windows 11 do you want to create a new OSD Builder Configuration for?(Please enter: 21H2, 22H2, 23H2, 24H2 or 25H2)' 
       If($W11Ver -eq "21H2"){}
-      ElseIf($W11Ver -eq "22H2){}
+      ElseIf($W11Ver -eq "22H2"){}
       ElseIf($W11Ver -eq "23H2"){}
       ElseIf($W11Ver -eq "24H2"){}
       ElseIf($W11Ver -eq "25H2"){}
@@ -182,7 +182,7 @@ do
 '3' { cls
       $W12Ver = Read-Host 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W12Ver -eq "RTM"){}
-      ElseIf($W12Ver -eq "22H2){}
+      ElseIf($W12Ver -eq "22H2"){}
       ElseIf($W12Ver -eq "23H2"){}
       ElseIf($W12Ver -eq "24H2"){}
       ElseIf($W12Ver -eq "25H2"){}
@@ -190,7 +190,7 @@ do
 '4' { cls
       $W13Ver = Read-Host 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W13Ver -eq "RTM"){}
-      ElseIf($W13Ver -eq "22H2){}
+      ElseIf($W13Ver -eq "22H2"){}
       ElseIf($W13Ver -eq "23H2"){}
       ElseIf($W13Ver -eq "24H2"){}
       ElseIf($W13Ver -eq "25H2"){}
@@ -198,7 +198,7 @@ do
 '5' { cls
       $W14Ver = Read-Host 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W14Ver -eq "RTM"){}
-      ElseIf($W14Ver -eq "22H2){}
+      ElseIf($W14Ver -eq "22H2"){}
       ElseIf($W14Ver -eq "23H2"){}
       ElseIf($W14Ver -eq "24H2"){}
       ElseIf($W14Ver -eq "25H2"){}
@@ -206,7 +206,7 @@ do
 '6' { cls
       $W15Ver = Read-Host 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W15Ver -eq "RTM"){}
-      ElseIf($W15Ver -eq "22H2){}
+      ElseIf($W15Ver -eq "22H2"){}
       ElseIf($W15Ver -eq "23H2"){}
       ElseIf($W15Ver -eq "24H2"){}
       ElseIf($W15Ver -eq "25H2"){}
@@ -214,7 +214,7 @@ do
 '7' { cls
       $W16Ver = Read-Host 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W16Ver -eq "RTM"){}
-      ElseIf($W16Ver -eq "22H2){}
+      ElseIf($W16Ver -eq "22H2"){}
       ElseIf($W16Ver -eq "23H2"){}
       ElseIf($W16Ver -eq "24H2"){}
       ElseIf($W16Ver -eq "25H2"){}
@@ -227,6 +227,5 @@ do
       }
 }
     }
-    until ($selection -eq '4'){exit}
+    until ($selection -eq '9'){exit}
     }
-}
