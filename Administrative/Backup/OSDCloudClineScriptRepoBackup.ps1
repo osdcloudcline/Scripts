@@ -453,11 +453,13 @@ do
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         Write-Host 
-        Write-Host  "Processing: Downloading and Saving PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
+        Write-Host  "Processing: PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
         Write-Host
         $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1"
         $PS7ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/InstallPS7.ps1"
         $PSModulesScriptsDestination = "C:\scripts\backup\GitHubRepo\PS Modules"
+        Write-Host
+        Write-Verbose "Downloading and Saving PowerShell 5.1 and 7.x Module scripts..." -Verbose
         Save-WebFile -SourceUrl $PS5ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
         Save-WebFile -SourceUrl $PS7ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
         Write-Host
@@ -471,7 +473,49 @@ do
         
         }
   '10' { cls
-       
+        $RegistryBackupLog = "C:\OSD Cloud\Logs\Script Backups\Registry.log"
+        Start-Transcript $PSModulesBackupLog
+        Get-Date
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+        Write-Host  "Processing: Registry Files and installation scripts from OSDCloudCline\Scripts\REG Files repo..." -ForegroundColor Cyan
+        Write-Host
+        $3DMarkREGURL = ""
+        $AdobeREGURL = ""
+        $BitLockerREGURL = ""
+        $PCMark10REGURL = ""
+        $SYSTEMDesktopREGURL = ""
+        $ShowHiddenFilesREGURL = ""
+        $Win10OSModificationsREGURL = ""
+        $Win11OSModificationsREGURL = ""
+        $REGFilesZIPURL = ""
+        $REGFilesScriptURL = ""
+        $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
+        Write-Host
+        Write-Verbose "Downloading and Saving Registry Files..." -Verbose
+        Save-WebFile -SourceUrl $3DMarkREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREGURL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $BitLockerREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $PCMark10REGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $SYSTEMDesktopREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $ShowHiddenFilesREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $Win10OSModificationsREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $Win11OSModificationsREGURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host
+        Write-Verbose "Downloading and Saving Registry ZIP File..." -Verbose
+        Save-WebFile -SourceUrl $REGFilesZIPURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host 
+        Write-Verbose "Downloading and Saving Registry Script File..." -Verbose
+        Save-WebFile -SourceUrl $REGFilesScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Host
+        Write-Host "Registry Files and Script Backup is Successful..." -ForegroundColor Green
+        Write-Host
+
+        Stop-Transcript
+        Show-MainMenu
         }
   '11' { cls
         
