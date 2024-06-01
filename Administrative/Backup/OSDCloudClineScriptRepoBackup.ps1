@@ -487,7 +487,7 @@ do
         $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
         $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
         $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
-        $SYSTEMDesktopREGURL = ""
+        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
         $ShowHiddenFilesREGURL = ""
         $Win10OSModificationsREGURL = ""
         $Win11OSModificationsREGURL = ""
