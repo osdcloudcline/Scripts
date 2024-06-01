@@ -455,7 +455,7 @@ do
         Write-Host 
         Write-Host  "Processing: Downloading and Saving PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
         Write-Host
-        $PS5ModulesScriptURL = ""
+        $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1"
         $PS7ModulesScriptURL = ""
         $PSModulesScriptsDestination = ""
         Save-WebFile -SourceUrl $PS5ModulesScriptURL -DestinationDirectory $PSModuleScriptsDestination
@@ -463,6 +463,9 @@ do
         Write-Host
         Write-Host "PowerShell Module Script Backup is Successful..." -ForegroundColor Green
         Write-Host
+
+        Stop-Transcript
+        Show-MainMenu
         }
   '9' { cls
         
