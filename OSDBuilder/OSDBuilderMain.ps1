@@ -131,7 +131,7 @@ do
        Show-NewClientOSD
       }
  '2' { cls
-      Show-NewServerOSD
+      Show-NewSVROSD
       }
 '3' { cls
       Show-MainMenu
@@ -232,7 +232,7 @@ do
     until ($selection -eq '9'){exit}
     }
 
-Function Show-NewServerOSD(){
+Function Show-NewSVROSD(){
 
 [CmdletBinding()]
     param(
