@@ -232,4 +232,54 @@ do
     until ($selection -eq '9'){exit}
     }
 
+Function Show-NewServerOSD(){
+
+[CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Windows Server 2022"
+Write-Host " 2. Windows Server 2025"
+Write-Host " 3. Windows Server 2028"
+Write-Host " 4. Windows Server 2031"
+Write-Host " 5. Windows Server 2034"
+Write-Host " 6. Return to Main Menu"
+Write-Host " 7. Exit PowerShell"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+      
+      }
+ '2' { cls
+      
+      }
+'3' { cls
+      
+      }
+'4' { cls
+      
+      }
+'5' { cls
+      
+      }
+'6' { cls
+      Show-MainMenu
+      }
+'7' { cls
+      exit 
+      }
+}
+    }
+    until ($selection -eq '7'){exit}
+    }
+
 Show-MainMenu
