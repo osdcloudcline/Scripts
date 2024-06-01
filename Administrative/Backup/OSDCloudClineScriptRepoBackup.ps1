@@ -484,7 +484,7 @@ do
         Write-Host  "Processing: Registry Files and installation scripts from OSDCloudCline\Scripts\REG Files repo..." -ForegroundColor Cyan
         Write-Host
         $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
-        $AdobeREGURL = ""
+        $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
         $BitLockerREGURL = ""
         $PCMark10REGURL = ""
         $SYSTEMDesktopREGURL = ""
