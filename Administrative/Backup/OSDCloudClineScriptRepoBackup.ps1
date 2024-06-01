@@ -84,7 +84,7 @@ do
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         Write-Host 
-        Write-Verbose "Downloading Audit Mode PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
+        Write-Verbose "Downloading Audit Mode PowerShell Scripts - OSDCloudCline GitHub Repo..." -Verbose
         $ConfigureScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1"
         $MainMenuScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1"
         $AuditModeDestination = "C:\scripts\backup\GitHubRepo\Audit Mode"
