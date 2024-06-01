@@ -148,7 +148,7 @@ Function Show-NewClientOSD(){
 
 [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Title = 'OSD Builder - New Client OSD Build Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
@@ -236,7 +236,7 @@ Function Show-NewServerOSD(){
 
 [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Title = 'OSD Builder - New Server OSD Build Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
