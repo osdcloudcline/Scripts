@@ -75,7 +75,7 @@ do
         }
         }
   '2' { cls
-        
+        Show-NewOSDBuilderMenu
         }
   '3' { cls
         
@@ -229,3 +229,4 @@ do
     }
     until ($selection -eq '9'){exit}
     }
+Show-MainMenu
