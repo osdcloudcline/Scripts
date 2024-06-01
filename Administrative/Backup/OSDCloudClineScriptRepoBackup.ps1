@@ -489,7 +489,7 @@ do
         $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
         $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
         $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
-        $Win10OSModificationsREGURL = ""
+        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
         $Win11OSModificationsREGURL = ""
         $REGFilesZIPURL = ""
         $REGFilesScriptURL = ""
