@@ -131,7 +131,7 @@ do
        Show-NewClientOSD
       }
  '2' { cls
-      
+      Show-NewServerOSD
       }
 '3' { cls
       Show-MainMenu
