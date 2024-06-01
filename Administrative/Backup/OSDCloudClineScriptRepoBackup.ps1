@@ -517,9 +517,9 @@ do
         $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
         $OfflineHKLMREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AcrobatDisableCloudServices.reg"
         $OfflineHKLMREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019-AcrobatREGEntries.reg"
-        $OfflineHKLMREG3URL = ""
-        $OfflineHKLMREG4URL = ""
-        $OfflineHKLMREG5URL = ""
+        $OfflineHKLMREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019.reg"
+        $OfflineHKLMREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg1.reg"
+        $OfflineHKLMREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg2.reg"
         $OfflineREGDestination = "C:\scripts\backup\GitHubRepo\Registry Files\Offline"
         Save-WebFile -SourceUrl $OfflineHKCRREG1URL -DestinationDirectory $OfflineREGDestination
         Save-WebFile -SourceUrl $OfflineHKCRREG2URL  -DestinationDirectory $OfflineREGDestination
