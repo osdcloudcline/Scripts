@@ -61,6 +61,7 @@ do
         $OSDBuilderPath = Read-Host -Prompt 'Please specify the working directory for OSDBuilder' 
         Write-Verbose "Setting OSDBuilder working directory..." -Verbose
         Get-OSDBuilder -SetPath $OSDBuilderPath
+        Get-OSDBuilder -CreatePath
         cls
         Show-MainMenu
         }
@@ -68,6 +69,7 @@ do
         Set-ExecutionPolicy Bypass -Force
         Write-Verbose "Setting OSDBuilder working directory..." -Verbose
         Get-OSDBuilder -SetPath $OSDBuilderPath
+        Get-OSDBuilder -CreatePath
         cls
         Show-MainMenu
         }
@@ -101,3 +103,130 @@ do
     }
     until ($selection -eq '9'){exit}
     }
+
+Function Show-NewOSDBuilderMenu(){
+
+[CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Windows Client OS"
+Write-Host " 2. Windows Server OS"
+Write-Host " 3. Return to Main Menu"
+Write-Host " 4. Exit PowerShell"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+      
+      }
+ '2' { cls
+      
+      }
+'3' { cls
+      
+      }
+'4' { cls
+      exit 
+      }
+}
+    }
+    until ($selection -eq '4'){exit}
+    }
+
+Function Show-NewClientOSDBuilderMenu(){
+
+[CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Builder - New OSD Build Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Windows 10"
+Write-Host " 2. Windows 11"
+Write-Host " 3. Windows 12"
+Write-Host " 4. Windows 13"
+Write-Host " 5. Windows 14"
+Write-Host " 6. Windows 15"
+Write-Host " 7. Windows 16"
+Write-Host " 8. Return to Main Menu"
+Write-Host " 9. Exit PowerShell"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+      
+      }
+ '2' { cls
+      $W11Ver = Read-Host 'What Version of Windows 11 do you want to create a new OSD Builder Configuration for?(Please enter: 21H2, 22H2, 23H2, 24H2 or 25H2)' 
+      If($W11Ver -eq "21H2"){}
+      ElseIf($W11Ver -eq "22H2){}
+      ElseIf($W11Ver -eq "23H2"){}
+      ElseIf($W11Ver -eq "24H2"){}
+      ElseIf($W11Ver -eq "25H2"){}
+      }
+'3' { cls
+      $W12Ver = Read-Host 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      If($W12Ver -eq "RTM"){}
+      ElseIf($W12Ver -eq "22H2){}
+      ElseIf($W12Ver -eq "23H2"){}
+      ElseIf($W12Ver -eq "24H2"){}
+      ElseIf($W12Ver -eq "25H2"){}
+      }
+'4' { cls
+      $W13Ver = Read-Host 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      If($W13Ver -eq "RTM"){}
+      ElseIf($W13Ver -eq "22H2){}
+      ElseIf($W13Ver -eq "23H2"){}
+      ElseIf($W13Ver -eq "24H2"){}
+      ElseIf($W13Ver -eq "25H2"){}
+      }
+'5' { cls
+      $W14Ver = Read-Host 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      If($W14Ver -eq "RTM"){}
+      ElseIf($W14Ver -eq "22H2){}
+      ElseIf($W14Ver -eq "23H2"){}
+      ElseIf($W14Ver -eq "24H2"){}
+      ElseIf($W14Ver -eq "25H2"){}
+      }
+'6' { cls
+      $W15Ver = Read-Host 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      If($W15Ver -eq "RTM"){}
+      ElseIf($W15Ver -eq "22H2){}
+      ElseIf($W15Ver -eq "23H2"){}
+      ElseIf($W15Ver -eq "24H2"){}
+      ElseIf($W15Ver -eq "25H2"){}
+      }
+'7' { cls
+      $W16Ver = Read-Host 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      If($W16Ver -eq "RTM"){}
+      ElseIf($W16Ver -eq "22H2){}
+      ElseIf($W16Ver -eq "23H2"){}
+      ElseIf($W16Ver -eq "24H2"){}
+      ElseIf($W16Ver -eq "25H2"){}
+      }
+'8' { cls
+       Show-MainMenu
+      }
+'9' { cls
+      exit 
+      }
+}
+    }
+    until ($selection -eq '4'){exit}
+    }
+}
