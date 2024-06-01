@@ -514,7 +514,7 @@ do
         Write-Host
         Write-Verbose "Downloading and Saving OFFLINE Registry Files..." -Verbose
         $OfflineHKCRREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddCopyToMoveTo.reg"
-        $OfflineHKCRREG2URL = ""
+        $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
         $OfflineHKLMREG1URL = ""
         $OfflineHKLMREG2URL = ""
         $OfflineHKLMREG3URL = ""
