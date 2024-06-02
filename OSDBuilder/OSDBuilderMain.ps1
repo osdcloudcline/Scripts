@@ -171,7 +171,8 @@ do
   {
 
   '1' { cls
-      
+      $Win10OSDBuilder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/Client/Windows10/22H2.ps1")
+      Invoke-Expression $($Win10OSDBuilder.Content)
       }
  '2' { cls
       $W11Ver = Read-Host 'What Version of Windows 11 do you want to create a new OSD Builder Configuration for?(Please enter: 21H2, 22H2, 23H2, 24H2 or 25H2)' 
