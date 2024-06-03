@@ -38,11 +38,8 @@ Write-Host " 1. OSD Builder - Set Working Directory Path"
 Write-Host " 2. New OSD Builder Build - Import OS Media"
 Write-Host " 3. Create New OSD Builder Task"
 Write-Host " 4. Execute OSD Builder Task"
-Write-Host " 5. "
-Write-Host " 6. "
-Write-Host " 7. "
-Write-Host " 8. Return to Main Menu" 
-Write-Host " 9. Exit PowerShell"
+Write-Host " 5. Return to Main Menu" 
+Write-Host " 6. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -72,25 +69,15 @@ do
   '4' { cls
         
         }
-  '5' { cls
-        
-        }
-  '6' { cls
-        
-        
-        }
-  '7'{ cls
-       
-  }
-  '8'{cls
+  '5'{cls
   
   }
-  '9' { exit
+  '6' { exit
         }
   
     }
     }
-    until ($selection -eq '9'){exit}
+    until ($selection -eq '6'){exit}
     }
 
 
