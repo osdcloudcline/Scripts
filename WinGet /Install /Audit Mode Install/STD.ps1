@@ -16,3 +16,6 @@ Write-Host
 Write-Host "Step 1 : Media Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
+
+$Mediaapp1 = "VLC Media Player"
+$Mediaapp2 = "MediaInfo"
