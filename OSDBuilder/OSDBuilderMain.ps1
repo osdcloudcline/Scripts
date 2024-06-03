@@ -51,11 +51,11 @@ do
 
   '1' { cls
         Write-Host "Checking if OSDBuilder Module is installed..." -ForegroundColor Cyan 
-        $OSDBuilderCheck = Get-InstalledModule | Where-Object -Property Name -eq "OSDBuilder"
-        If($OSDBuilderCheck -eq $false){
+        $OSDBuilderCheck = Get-Module -ListAvailable | Where-Object -Property Name -eq "OSDBuilder"
+        If(-not($OSDBuilderCheck)){
         Set-ExecutionPolicy Bypass -Force
         Write-Verbose "Installing OSD Builder PowerShell Module..." -Verbose
-        Install-Module -Name OSDBuilder -AllowClobber -SkipPublisherCheck
+        Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
         Write-Verbose "Importing OSD Builder PowerShell Module..." -Verbose
         Import-Module -Name OSDBuilder -Force
         $OSDBuilderPath = Read-Host -Prompt 'Please specify the working directory for OSDBuilder' 
