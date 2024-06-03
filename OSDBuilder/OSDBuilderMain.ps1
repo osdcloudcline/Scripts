@@ -62,8 +62,7 @@ do
         Write-Verbose "Setting OSDBuilder working directory..." -Verbose
         Get-OSDBuilder -SetPath $OSDBuilderPath
         Get-OSDBuilder -CreatePath
-        cls
-        Show-MainMenu
+        
         }
         ElseIf($OSDBuilderCheck -eq $true){
         Set-ExecutionPolicy Bypass -Force
@@ -71,8 +70,7 @@ do
         Write-Verbose "Setting OSDBuilder working directory..." -Verbose
         Get-OSDBuilder -SetPath $OSDBuilderPath
         Get-OSDBuilder -CreatePath
-        cls
-        Show-MainMenu
+        
         }
         }
   '2' { cls
