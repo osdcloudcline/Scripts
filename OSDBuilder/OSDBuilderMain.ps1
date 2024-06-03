@@ -152,7 +152,33 @@ do
       }
  '2' { cls
       $W11Ver = Read-Host 'What Version of Windows 11 do you want to create a new OSD Builder Configuration for?(Please enter: 21H2, 22H2, 23H2, 24H2 or 25H2)' 
-      If($W11Ver -eq "21H2"){}
+      If($W11Ver -eq "21H2"){
+      # OSDBuilder Task name region
+      
+      $W11Home21H2 = "Windows 11 Home 21H2"
+      $W11Pro21H2 = "Windows 11 Professional 21H2"
+      $W11ProWorkstation21H2 = "Windows 11 21H2"
+      $W11VDI21H2 = "Windows 11 Enterprise VDI 21H2"
+      $W11Enterprise21H2 = "Windows 11 Enterprise 21H2"
+
+      # end region
+
+      $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
+      If($OSVersion -eq "Home"){
+      New-OSDBuildTask -TaskName $W11Home21H2
+      }
+      ElseIf($OSVersion -eq "Pro"){
+      New-OSDBuildTask -TaskName $W11Pro21H2
+      }
+      ElseIf($OSVersion -eq "ProWorkstation"){
+      New-OSDBuildTask -TaskName $W11ProWorkstation21H2
+      }
+      ElseIf($OSVersion -eq "VDI"){
+      New-OSDBuildTask -TaskName $W11VDI21H2
+      }
+      ElseIf($OSVersion -eq "Enterprise"){
+      New-OSDBuildTask -TaskName $W11Enterprise21H2
+      }
       ElseIf($W11Ver -eq "22H2"){}
       ElseIf($W11Ver -eq "23H2"){}
       ElseIf($W11Ver -eq "24H2"){}
