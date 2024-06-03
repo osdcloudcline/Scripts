@@ -34,3 +34,33 @@ Write-Host
 Write-Verbose "Installing $Mediaapp2..." -Verbose
 winget install --id MediaArea.MediaInfo.GUI --exact --accept-source-agreements  --accept-source-agreements --force
 
+Stop-Transcript
+
+$OSDBrowserSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDWebBrowserSoftware.log"
+Start-Transcript -Path $OSDBrowserSoftwareLogs
+
+# Web Browsing Software
+
+Write-Host
+Write-Host
+Write-Host "Step 2 : Web Browsing Software" -ForegroundColor Cyan
+Write-Host
+Write-Host
+
+$Browsingapp1 = "Google Chrome for Enterprise"
+$Browsingapp2 = "Mozilla Firefox"
+
+Write-Host "Installing Web Browsing Applications on $env:computername..." -ForegroundColor Green
+
+Write-Host "Installing Web Browsing Software 1 of 2..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Browsingapp1..." -Verbose
+winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing Web Browsing Software 2 of 2..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Browsingapp2..." -Verbose
+winget install --id Mozilla.Firefox --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
+
