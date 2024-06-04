@@ -168,31 +168,31 @@ do
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
       Write-Host "Processing: $W11Home21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
+      New-OSBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
       pause
       Write-Host "Processing: $W11Home21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Home21H2 -EnableFeature
+      New-OSBuildTask -TaskName $W11Home21H2 -EnableFeature
       pause
       Write-Host "Processing: $W11Home21H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Home21H2 -RemoveAppx
       pause
       Write-Host "Processing: $W11Home21H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Home21H2 -RemoveCapability
+      New-OSBuildTask -TaskName $W11Home21H2 -RemoveCapability
       pause
       }
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
       Write-Host "Processing: $W11Pro21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Pro21H2
+      New-OSBuildTask -TaskName $W11Pro21H2
       Write-Host "Processing: $W11Pro21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Pro21H2 -EnableFeature
+      New-OSBuildTask -TaskName $W11Pro21H2 -EnableFeature
       pause
       Write-Host "Processing: $W11Pro21H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Pro21H2 -RemoveAppx
+      New-OSBuildTask -TaskName $W11Pro21H2 -RemoveAppx
       pause
       Write-Host "Processing: $W11Pro21H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Pro21H2 -RemoveCapability
+      New-OSBuildTask -TaskName $W11Pro21H2 -RemoveCapability
       pause
       }
       ElseIf($OSVersion -eq "ProWorkstation"){
