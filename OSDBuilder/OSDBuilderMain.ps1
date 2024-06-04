@@ -170,6 +170,9 @@ do
       Write-Host "Processing: $W11Home21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
       pause
+      Write-Host "Processing: $W11Home21H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
+      New-OSBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
+      pause
       Write-Host "Processing: $W11Home21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Home21H2 -EnableFeature
       pause
