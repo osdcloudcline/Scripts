@@ -165,18 +165,41 @@ do
 
       $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
       If($OSVersion -eq "Home"){
-      New-OSDBuildTask -TaskName $W11Home21H2
+      Write-Host "Processing: $W11Home21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
+      Write-Host "Processing: $W11Home21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Home21H2 -EnableFeature
+      pause
+      Write-Host "Processing: $W11Home21H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Home21H2 -RemoveAppx
+      pause
+      Write-Host "Processing: $W11Home21H2 Operating System Capability Removal..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Home21H2 -RemoveCapability
+      pause
       }
       ElseIf($OSVersion -eq "Pro"){
+      Write-Host "Processing: $W11Pro21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Pro21H2
+      Write-Host "Processing: $W11Pro21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Pro21H2 -EnableFeature
+      pause
+      Write-Host "Processing: $W11Pro21H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Pro21H2 -RemoveAppx
+      pause
+      Write-Host "Processing: $W11Pro21H2 Operating System Capability Removal..." -ForegroundColor Yellow
+      New-OSDBuildTask -TaskName $W11Pro21H2 -RemoveCapability
+      pause
       }
       ElseIf($OSVersion -eq "ProWorkstation"){
+      
       New-OSDBuildTask -TaskName $W11ProWorkstation21H2
       }
       ElseIf($OSVersion -eq "VDI"){
+      
       New-OSDBuildTask -TaskName $W11VDI21H2
       }
       ElseIf($OSVersion -eq "Enterprise"){
+      
       New-OSDBuildTask -TaskName $W11Enterprise21H2
       }
       ElseIf($W11Ver -eq "22H2"){}
