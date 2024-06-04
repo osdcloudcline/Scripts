@@ -165,8 +165,11 @@ do
 
       $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
       If($OSVersion -eq "Home"){
+      Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
+      Import-Module -Name OSDBuilder -Force
       Write-Host "Processing: $W11Home21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Home21H2 -EnableNetFX3 
+      pause
       Write-Host "Processing: $W11Home21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Home21H2 -EnableFeature
       pause
@@ -178,6 +181,8 @@ do
       pause
       }
       ElseIf($OSVersion -eq "Pro"){
+      Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
+      Import-Module -Name OSDBuilder -Force
       Write-Host "Processing: $W11Pro21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Pro21H2
       Write-Host "Processing: $W11Pro21H2 Operating System Feature Enablement..." -ForegroundColor Yellow
