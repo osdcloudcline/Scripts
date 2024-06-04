@@ -202,10 +202,12 @@ do
       
       New-OSDBuildTask -TaskName $W11Enterprise21H2
       }
+      
       ElseIf($W11Ver -eq "22H2"){}
       ElseIf($W11Ver -eq "23H2"){}
       ElseIf($W11Ver -eq "24H2"){}
       ElseIf($W11Ver -eq "25H2"){}
+      }
       }
 '3' { cls
       $W12Ver = Read-Host 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
@@ -215,6 +217,7 @@ do
       ElseIf($W12Ver -eq "24H2"){}
       ElseIf($W12Ver -eq "25H2"){}
       }
+      
 '4' { cls
       $W13Ver = Read-Host 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W13Ver -eq "RTM"){}
@@ -223,6 +226,7 @@ do
       ElseIf($W13Ver -eq "24H2"){}
       ElseIf($W13Ver -eq "25H2"){}
       }
+     
 '5' { cls
       $W14Ver = Read-Host 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W14Ver -eq "RTM"){}
