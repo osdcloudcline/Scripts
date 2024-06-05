@@ -267,7 +267,7 @@ do
 
       # end region
 
-            $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
+      $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
       If($OSVersion -eq "Home"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -473,7 +473,7 @@ do
 
       # end region
 
-            $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
+      $OSVersion = Read-Host -Prompt 'What OS Edition do you want to choose?(Please enter: Home, Pro, ProWorkstation, VDI or Enterprise)'
       If($OSVersion -eq "Home"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -670,44 +670,30 @@ do
 '3' { cls
       $W12Ver = Read-Host 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W12Ver -eq "RTM"){}
-      ElseIf($W12Ver -eq "22H2"){}
-      ElseIf($W12Ver -eq "23H2"){}
-      ElseIf($W12Ver -eq "24H2"){}
-      ElseIf($W12Ver -eq "25H2"){}
+     
       }
       
 '4' { cls
       $W13Ver = Read-Host 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W13Ver -eq "RTM"){}
-      ElseIf($W13Ver -eq "22H2"){}
-      ElseIf($W13Ver -eq "23H2"){}
-      ElseIf($W13Ver -eq "24H2"){}
-      ElseIf($W13Ver -eq "25H2"){}
+      
+     
       }
      
 '5' { cls
       $W14Ver = Read-Host 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W14Ver -eq "RTM"){}
-      ElseIf($W14Ver -eq "22H2"){}
-      ElseIf($W14Ver -eq "23H2"){}
-      ElseIf($W14Ver -eq "24H2"){}
-      ElseIf($W14Ver -eq "25H2"){}
+      
       }
 '6' { cls
       $W15Ver = Read-Host 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W15Ver -eq "RTM"){}
-      ElseIf($W15Ver -eq "22H2"){}
-      ElseIf($W15Ver -eq "23H2"){}
-      ElseIf($W15Ver -eq "24H2"){}
-      ElseIf($W15Ver -eq "25H2"){}
+      
       }
 '7' { cls
       $W16Ver = Read-Host 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W16Ver -eq "RTM"){}
-      ElseIf($W16Ver -eq "22H2"){}
-      ElseIf($W16Ver -eq "23H2"){}
-      ElseIf($W16Ver -eq "24H2"){}
-      ElseIf($W16Ver -eq "25H2"){}
+      
       }
 '8' { cls
        Show-MainMenu
