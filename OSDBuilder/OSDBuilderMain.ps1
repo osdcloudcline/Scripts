@@ -50,6 +50,7 @@ do
         Write-Host "Checking if OSDBuilder Module is installed..." -ForegroundColor Cyan 
         Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
         Write-Verbose "Installing OSD Builder PowerShell Module..." -Verbose
+        Write-Host
         Install-Module -Name OSDBuilder -Force -AllowClobber -SkipPublisherCheck
         Write-Verbose "Importing OSD Builder PowerShell Module..." -Verbose
         Import-Module -Name OSDBuilder -Force  
