@@ -45,7 +45,7 @@ $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/ma
 $HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
 $DisableBitLockerUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
 $DisableWindowsAI = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Disable%EF%BB%BFWindowsRecall.reg"
-$DisableWindowsCopilot = ""
+$DisableWindowsCopilot = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Disable%EF%BB%BFWindowsCopilot.reg"
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectory
