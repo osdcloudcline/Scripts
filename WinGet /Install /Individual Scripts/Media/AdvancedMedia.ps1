@@ -15,6 +15,7 @@ $app8 = "Audacity and FFMPEG"
 $app9 = "Logitech MyHarmony"
 $app10 = "GIMP"
 $app11 = "Kodi"
+$app12 = "HD Video Converter Factory Pro"
 
 # Media-related software
 Write-Host "Installing Media Applications..." -ForegroundColor Green
@@ -86,4 +87,14 @@ Write-Host
 Write-Host "Installing $app11..." -ForegroundColor Cyan
 
 winget install --id XBMCFoundation.Kodi --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Verbose "Processing: $app12..." -Verbose
+Write-Host 
+Write-Host "Acquiring $app12 from vendor website..." -ForegroundColor Cyan
+$HDVideoSource = "https://us.videoconverterfactory.com/download/hd-video-converter-pro.exe"
+$HDVideoDestination = "C:\OSDCloud\GitHub\downloads"
+$HDVideoSetup = "C:\OSDCloud\GitHub\downloads\hd-video-converter-pro.exe"
+Save-WebFile -SourceUrl $HDVideoSource  -DestinationDirectory $HDVideoDestination
+Write-Host "Installing $app12..." -ForegroundColor Cyan
+Start-Process -FilePath $HDVideoSetup
 Stop-Transcript
