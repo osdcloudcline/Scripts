@@ -44,7 +44,7 @@ $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/
 $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
 $HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
 $DisableBitLockerUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
-$DisableWindowsAI = ""
+$DisableWindowsAI = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Disable%EF%BB%BFWindowsRecall.reg"
 $DisableWindowsCopilot = ""
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
