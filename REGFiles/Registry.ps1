@@ -22,7 +22,7 @@ $REG6 = "Show SYSTEM Desktop Icons Registry Entries"
 $REG7 = "Show Hidden Files and Folders"
 $REG8 = "Prevent Windows 11 24H2 BitLocker Drive Encryption"
 $REG9 = "Disable Windows AI: Windows Recall"
-
+$REG10 = "Disable Windows Copilot"
 
 $REG1PATH = "$REGFileDirectory\Adobe.reg"
 $REG2PATH = "$REGFileDirectory\Windows11-OSModifications.reg"
@@ -33,6 +33,7 @@ $REG6PATH = "$REGFileDirectory\SYSTEMDesktopIcons.reg"
 $REG7PATH = "$REGFileDirectory\ShowHiddenFilesFolders.reg"
 $REG8PATH = "$REGFileDirectory\DisableBitLockerDeviceEncryption.reg"
 $REG9PATH = "$REGFileDirectory\Disable﻿WindowsRecall.reg"
+$REG10PATH = "$REGFileDirectory\Disable﻿WindowsCopilot.reg"
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -67,6 +68,12 @@ Save-WebFile -SourceUrl $HiddenFilesFoldersRegFileUrl -DestinationDirectory $REG
 
 Write-Verbose "Obtaining $REG8..." -Verbose
 Save-WebFile -SourceUrl $DisableBitLockerUrl -DestinationDirectory $REGFileDirectory
+
+Write-Verbose "Obtaining $REG9 ..." -Verbose
+Save-WebFile -SourceUrl $DisableWindowsAI -DestinationDirectory $REGFileDirectory
+
+Write-Verbose "Obtaining $REG10..." -Verbose
+Save-WebFile -SourceUrl $DisableWindowsCopilot -DestinationDirectory $REGFileDirectory
 
 cd $REGFileDirectory
 
@@ -104,5 +111,11 @@ regedit /s $REG7PATH
 
 Write-Verbose "Merging $REG8 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $REG8PATH
+
+Write-Verbose "Merging $REG9 into $OSInfo1 $OSInfo2..." -Verbose
+regedit /s $REG9PATH
+
+Write-Verbose "Merging $REG10 into $OSInfo1 $OSInfo2..." -Verbose
+regedit /s $REG10PATH
 
 Stop-Transcript
