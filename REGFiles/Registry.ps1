@@ -21,6 +21,7 @@ $REG5 = "3D Mark Registry Entries"
 $REG6 = "Show SYSTEM Desktop Icons Registry Entries"
 $REG7 = "Show Hidden Files and Folders"
 $REG8 = "Prevent Windows 11 24H2 BitLocker Drive Encryption"
+$REG9 = "Disable Windows AI: Windows Recall"
 
 
 $REG1PATH = "$REGFileDirectory\Adobe.reg"
@@ -31,6 +32,7 @@ $REG5PATH = "$REGFileDirectory\3DMark.reg"
 $REG6PATH = "$REGFileDirectory\SYSTEMDesktopIcons.reg"
 $REG7PATH = "$REGFileDirectory\ShowHiddenFilesFolders.reg"
 $REG8PATH = "$REGFileDirectory\DisableBitLockerDeviceEncryption.reg"
+$REG9PATH = "$REGFileDirectory\Disable﻿WindowsRecall.reg"
 
 Write-Host "Downloading Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -42,6 +44,8 @@ $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/
 $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
 $HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
 $DisableBitLockerUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
+$DisableWindowsAI = ""
+$DisableWindowsCopilot = ""
 
 Write-Verbose "Obtaining $REG1 ..." -Verbose
 Save-WebFile -SourceUrl $AdobeRegFileUrl -DestinationDirectory $REGFileDirectory
