@@ -80,6 +80,9 @@ $OSapp2ver = "Version: 1.19.10302.0"
 $OSapp3 = "Microsoft Windows Powershell"
 $OSapp3ver = "Version: 7.4.1.0"	
 
+$OSapp4 = "Microsoft PowerToys"
+$OSapp4ver = "Version 0.81.1"
+
 $SYSGroup1 = "Microsoft .NET Framework"
 $SYSGroup2 = "Microsoft C++ Redistributables"
 $SYSGroup3 = "Oracle Java Runtime Environments"
@@ -207,18 +210,22 @@ choco install openal -y
 
 Write-Host "Installing $SYSGroup6...." -ForegroundColor Cyan
 Write-Host
-Write-Host "Installing $SYSGroup6....1 of 3" -ForegroundColor Cyan
+Write-Host "Installing $SYSGroup6....1 of 4" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp1, $OSapp1ver..." -Verbose
 winget install --id Microsoft.Edge --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing $SYSGroup6....2 of 3" -ForegroundColor Cyan
+Write-Host "Installing $SYSGroup6....2 of 4" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp2, $OSapp2ver..." -Verbose
 winget install --id Microsoft.WindowsTerminal --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing $SYSGroup6....3 of 3" -ForegroundColor Cyan
+Write-Host "Installing $SYSGroup6....3 of 4" -ForegroundColor Cyan
 Write-Verbose "Installing $OSapp3, $OSapp3ver..." -Verbose
 winget install --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
-	
+
+Write-Host "Installing $SYSGroup6....4 of 4" -ForegroundColor Cyan
+Write-Verbose "Installing $OSapp4, $OSapp4ver..." -Verbose
+winget install --id Microsoft.PowerToys --exact --accept-source-agreements --accept-package-agreements --force
+
 Write-Host "Finished Installing System related software..." -ForegroundColor Yellow
 
 Stop-Transcript
