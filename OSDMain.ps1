@@ -47,11 +47,11 @@ Write-Host '     - Install PowerShell 5.1 and 7.x Modules                       
 Write-Host '     - Scripted Install of multiple types of software configurations  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Import of Registry Entries                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Set-up Custom Windows 11 ONLY based Start Menu                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Configure an OSDCloud bootable USB Stick or ISO File           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Run OSD Builder to create an up to date OS ISO file            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Debloat the OS                                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Install Client and Server OS Roles                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Download Windows Client and Server ISO files                   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Configure an OSDCloud bootable USB Stick or ISO File           ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - Run OSD Builder to create an up to date OS ISO file            '-ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                      ' -BackgroundColor White
 pause
 Clear-Host
@@ -60,8 +60,10 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Windows Domain Administration Tasks"
 Write-Host " 2. Local Computer Administration Tasks"
 Write-Host " 3. Software Installation"
-Write-Host " 4. Software Updates/Upgrades"
-Write-Host " 5. Debloat Operating System"
+Write-Host " 4. OSD Cloud"
+Write-Host " 5. OSD Builder"
+Write-Host " 6. Software Updates/Upgrades"
+Write-Host " 7. Debloat Operating System"
 Write-Host " 6. Backup/Restore User Profile Data"
 Write-Host " 7. Administrative System Tasks"
 Write-Host " 8. Operating System Downloads and ISO Creation" 
@@ -73,6 +75,8 @@ do
   {
 
   '1' { cls
+        $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
+        Invoke-Expression $($Domain.Content)
         $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
         Invoke-Expression $($OSDCloud.Content)
         }
