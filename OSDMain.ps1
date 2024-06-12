@@ -36,7 +36,22 @@ pause
 Write-Host 
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
+Write-Host
 Write-Host 
+Write-Host                                                                -BackgroundColor White
+Write-Host ' This Git Hub-based deployment scripting solution allows the user to:' -BackgroundColor White
+Write-Host '     - Domain User and Computer Administration' -BackgroundColor White
+Write-Host '     - Local PC User Administration' -BackgroundColor White
+Write-Host '     - Install OS MandatorySystem Software and PowerShell 5.1 and 7.x Modules' -BackgroundColor White
+Write-Host '     - Scripted Install of multiple types of software configurations' -BackgroundColor White
+Write-Host '     - Import of Registry Entries'  -BackgroundColor White
+Write-Host '     - Set-up Custom Windows 11 ONLY based Start Menu' -BackgroundColor White
+Write-Host '     - Debloat the OS' -BackgroundColor White
+Write-Host '     - Install Client and Server OS Roles' -BackgroundColor White
+Write-Host '     - Download Windows Client and Server ISO files' -BackgroundColor White
+Write-Host '     - Configure an OSDCloud bootable USB Stick or ISO File' -BackgroundColor White
+Write-Host '     - Run OSD Builder to create an up to date OS ISO file'-BackgroundColor White
+Write-Host                                                             -BackgroundColor White
 pause
 Clear-Host
 }
