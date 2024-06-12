@@ -34,7 +34,7 @@ cls
 Write-Host 
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
-Write-Host "Today is: Get-Date"
+Write-Host "Today is:" Get-Date
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
