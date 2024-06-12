@@ -21,6 +21,9 @@ cls
        $CompleteOSInfo = "$FullOS" + " $OSBuild" + " $DisplayVersion"
        $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
        $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
+
+       $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet 2"}).IPAddress
+       
        Write-Host
        Write-Host         "Running Computer Info:" -ForegroundColor Green 
        Write-Verbose "System Hostname: $PCName" -Verbose
