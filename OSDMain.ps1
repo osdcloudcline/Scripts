@@ -5,7 +5,7 @@
 Function Show-SystemMainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'Operating System Administration and Deployment - Main Menu'
+   [string]$Title = 'Operating System Administration and Deployment - Main Menu',
    [string]$Question = 'What type of action do you need to do?'
    )
 cls
