@@ -36,6 +36,7 @@ Write-Host "Hello, $env:username..." -ForegroundColor Cyan
 Write-Host
 $Date = Get-Date
 Write-Host "Today is:" "$Date"
+Write-Host
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
