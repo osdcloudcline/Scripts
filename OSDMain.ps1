@@ -35,6 +35,7 @@ pause
 
 Write-Host 
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
+Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host 
 pause
 Clear-Host
