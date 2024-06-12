@@ -41,3 +41,5 @@ Clear-Host
 
 
 }
+
+Show-MainMenu
