@@ -30,8 +30,6 @@ cls
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
-pause
-
 
 Write-Host 
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
