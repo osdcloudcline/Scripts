@@ -81,6 +81,8 @@ do
         Invoke-Expression $($OSDCloud.Content)
         }
   '2' { cls
+        $Local = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Local%20Computer/LocalPCMain.ps1")
+        Invoke-Expression $($Local.Content)
         $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
         Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
