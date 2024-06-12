@@ -124,5 +124,4 @@ do
     }
     until ($selection -eq '9'){}
     }
-}
 Show-MainMenu
