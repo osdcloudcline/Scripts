@@ -36,7 +36,8 @@ pause
 
 Write-Host 
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
-Write-Host 
+Write-Host
+pause
 Clear-Host
 
 
