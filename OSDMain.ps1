@@ -59,7 +59,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Windows Domain Administration Tasks"
 Write-Host " 2. Local Computer Administration Tasks"
-Write-Host " 3. Software Installation"
+Write-Host " 3. Software Installation/Updates/Upgrades"
 Write-Host " 4. OSD Cloud"
 Write-Host " 5. OSD Builder"
 Write-Host " 6. Software Updates/Upgrades"
@@ -77,20 +77,18 @@ do
   '1' { cls
         $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
         Invoke-Expression $($Domain.Content)
-        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
-        Invoke-Expression $($OSDCloud.Content)
         }
   '2' { cls
         $Local = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Local%20Computer/LocalPCMain.ps1")
         Invoke-Expression $($Local.Content)
-        $OSDCloudDownloadsConfigScript = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/OSKitsDL.ps1")
-        Invoke-Expression $($OSDCloudDownloadsConfigScript.Content)
         }
   '3' { cls
         $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
         Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
+        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
+        Invoke-Expression $($OSDCloud.Content)
         $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
         Invoke-Expression $($WinGetUpdateMain.Content)
         }
