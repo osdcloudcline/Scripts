@@ -38,19 +38,20 @@ Write-Host "Hello, $env:username..." -ForegroundColor Cyan
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
-Write-Host                                                                -BackgroundColor White
-Write-Host ' This Git Hub-based deployment scripting solution allows the user to:' -BackgroundColor White
-Write-Host '     - Domain User and Computer Administration' -BackgroundColor White
-Write-Host '     - Local PC User Administration' -BackgroundColor White
-Write-Host '     - Install OS MandatorySystem Software and PowerShell 5.1 and 7.x Modules' -BackgroundColor White
-Write-Host '     - Scripted Install of multiple types of software configurations' -BackgroundColor White
-Write-Host '     - Import of Registry Entries'  -BackgroundColor White
-Write-Host '     - Set-up Custom Windows 11 ONLY based Start Menu' -BackgroundColor White
-Write-Host '     - Debloat the OS' -BackgroundColor White
-Write-Host '     - Install Client and Server OS Roles' -BackgroundColor White
-Write-Host '     - Download Windows Client and Server ISO files' -BackgroundColor White
-Write-Host '     - Configure an OSDCloud bootable USB Stick or ISO File' -BackgroundColor White
-Write-Host '     - Run OSD Builder to create an up to date OS ISO file'-BackgroundColor White
+Write-Host                                                                
+Write-Host ' This Git Hub-based deployment scripting solution allows the user to:' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Domain User and Computer Administration                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Local PC User Administration                                  ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Install OS Mandatory System Software                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Install PowerShell 5.1 and 7.x Modules                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Scripted Install of multiple types of software configurations ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Import of Registry Entries                                   '  -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Set-up Custom Windows 11 ONLY based Start Menu                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Debloat the OS                                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Install Client and Server OS Roles                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Download Windows Client and Server ISO files                  ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Configure an OSDCloud bootable USB Stick or ISO File          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Run OSD Builder to create an up to date OS ISO file           '-ForegroundColor DarkBlue -BackgroundColor White
 Write-Host                                                             -BackgroundColor White
 pause
 Clear-Host
