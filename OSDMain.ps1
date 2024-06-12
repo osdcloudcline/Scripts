@@ -2,10 +2,10 @@
 # Main Menu
 #################################################################
 
-Function Show-SystemMainMenu{
+Function Show-MainMenu{
    [CmdletBinding()]
    param(
-   [string]$Title = 'Operating System Administration and Deployment - Main Menu',
+   [string]$Title = 'Operating System Administration & Deployment - Main Menu',
    [string]$Question = 'What type of action do you need to do?'
    )
 cls
@@ -40,4 +40,4 @@ Write-Host
 pause
 Clear-Host
 }
-Show-SystemMainMenu
+Show-MainMenu
