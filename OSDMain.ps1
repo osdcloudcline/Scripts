@@ -22,7 +22,9 @@ cls
        $EdgeEXE = Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\msedge.exe' "(default)"
        $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
 
-       $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet 2"}).IPAddress
+       $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet"}).IPAddress
+       $IP2 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet"}).IPAddress
+       $DNS = (Get-CimInstance -ClassName Win32_networkAdapterConfiguration | Where-Object { $_.IPEnabled })
        
        Write-Host
        Write-Host         "Running Computer Info:" -ForegroundColor Green 
@@ -35,6 +37,13 @@ cls
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
 
 Write-Host 
+      Write-Host
+      Write-Host         "Network Connection Info:" -ForegroundColor Green 
+      Write-Verbose "System Hostname: $PCName" -Verbose
+      Write-Verbose "System IP Address 1: $IP1" -Verbose
+      Write-Verbose "System IP Address 2: $IP2" -Verbose
+      Write-Verbose "System Gateway/DNS Server: $DNS" -Verbose
+      
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
 $Date = Get-Date
