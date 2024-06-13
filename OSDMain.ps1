@@ -25,6 +25,7 @@ cls
        $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet"}).IPAddress
        $IP2 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet 2"}).IPAddress
        $DNS = (Get-CimInstance -ClassName Win32_networkAdapterConfiguration | Where-Object { $_.IPEnabled })
+       $ExternalIP = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
 
        $Baseboard1 = (Get-CimInstance -ClassName Win32_Baseboard).Manufacturer
        $Baseboard2 = (Get-CimInstance -ClassName Win32_Baseboard).Product
@@ -48,6 +49,7 @@ cls
       Write-Verbose "System IP Address 1: $IP1" -Verbose
       Write-Verbose "System IP Address 2: $IP2" -Verbose
       Write-Verbose "System Gateway/DNS Server: $DNS" -Verbose
+      Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
 
       Write-Host 
       Write-Host         "System Hardware Info:" -ForegroundColor Green 
