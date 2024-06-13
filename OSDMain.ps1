@@ -28,8 +28,8 @@ cls
 
        $Baseboard1 = (Get-CimInstance -ClassName Win32_Baseboard).Manufacturer
        $Baseboard2 = (Get-CimInstance -ClassName Win32_Baseboard).Product
-	    $PCManufacturer = (Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer
-	    $BIOS1 = (Get-CimInstance -ClassName Win32_BIOS).Manufacturer
+       $PCManufacturer = (Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer
+       $BIOS1 = (Get-CimInstance -ClassName Win32_BIOS).Manufacturer
        $BIOS2 = (Get-CimInstance -ClassName Win32_BIOS).SMBIOSBIOSVersion
  
        Write-Host
@@ -43,7 +43,6 @@ cls
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
 
       Write-Host 
-      Write-Host
       Write-Host         "Network Connection Info:" -ForegroundColor Green 
       Write-Verbose "System Hostname: $PCName" -Verbose
       Write-Verbose "System IP Address 1: $IP1" -Verbose
@@ -51,13 +50,13 @@ cls
       Write-Verbose "System Gateway/DNS Server: $DNS" -Verbose
 
       Write-Host 
-      Write-Host
       Write-Host         "System Hardware Info:" -ForegroundColor Green 
       Write-Verbose "System Hostname: $PCName" -Verbose
       Write-Verbose "Motherboard: $Baseboard1 $Baseboard2" -Verbose
       Write-Verbose "Manufacturer: $PCManufacturer" -Verbose
       Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
-      
+
+Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
 Write-Host
 $Date = Get-Date
