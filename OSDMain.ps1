@@ -23,7 +23,7 @@ cls
        $EdgeBrowser = (Get-Item $EdgeEXE).VersionInfo.ProductVersion
 
        $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet"}).IPAddress
-       $IP2 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet"}).IPAddress
+       $IP2 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet 2"}).IPAddress
        $DNS = (Get-CimInstance -ClassName Win32_networkAdapterConfiguration | Where-Object { $_.IPEnabled })
        
        Write-Host
