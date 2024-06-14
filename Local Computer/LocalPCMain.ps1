@@ -74,9 +74,9 @@ Write-Host " 4. Set Network/Internet Info: TCP/IP, DNS, Subnet and Gateway Addre
 Write-Host " 5. OS Settings"
 Write-Host " 6. System Maintenance"
 Write-Host " 7. Debloat Operating System"
-Write-Host " 6. Backup/Restore User Profile Data"
-Write-Host " 8. Return to Main Menu" 
-Write-Host " 9. Exit PowerShell"
+Write-Host " 8. Backup/Restore User Profile Data"
+Write-Host " 9. Return to Main Menu" 
+Write-Host " 10. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -108,6 +108,13 @@ do
         }
   '6' { cls
         
+        
+        }
+  '7'{ cls
+       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
+       Invoke-Expression $($AdminMain.Content)
+  }
+  '8'{cls
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
@@ -121,16 +128,11 @@ do
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Show-MainMenu
-        }
-  '7'{ cls
-       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
-       Invoke-Expression $($AdminMain.Content)
   }
-  '8'{cls
-  $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
-  Invoke-Expression $($OSDownloads.Content)
-  }
-  '9' { exit
+  '9'{cls
+      $OSDMain = Invoke-WebRrequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+      Invoke-Expression $($OSDMain.Content)
+  '10' { exit
         }
   
     }
