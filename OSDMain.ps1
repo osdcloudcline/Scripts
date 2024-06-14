@@ -124,9 +124,8 @@ do
         Invoke-Expression $($OSDCloud.Content)
         }
   '5' { cls
-        $sfc = "C:\Windows\System32\sfc.exe"
-        Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-        Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
+        $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
+        Invoke-Expression $($OSDBuilder.Content)
         }
   '6' { cls
         
