@@ -67,9 +67,8 @@ $selection = Read-Host 'Please choose an option'
        $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/edit/main/WinGet%20/WinGetMain.ps1")
        Invoke-Expression $($WinGetMain.Content)
   }
-'11'{exit
+'11'{exit}
  }
- 
  }
  until ($selection -eq '11'){exit}
 }
