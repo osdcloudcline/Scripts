@@ -63,3 +63,78 @@ cls
       Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
 
 Write-Host
+pause
+Clear-Host
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Rename Computer"
+Write-Host " 2. Update Operating System"
+Write-Host " 3. Software Installation/Updates/Upgrades"
+Write-Host " 4. Set Network/Internet Info: TCP/IP, DNS, Subnet and Gateway Addresses"
+Write-Host " 5. OS Settings"
+Write-Host " 6. System Maintenance"
+Write-Host " 7. Debloat Operating System"
+Write-Host " 6. Backup/Restore User Profile Data"
+Write-Host " 8. Return to Main Menu" 
+Write-Host " 9. Exit PowerShell"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+        $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
+        Invoke-Expression $($Domain.Content)
+        }
+  '2' { cls
+        $Local = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Local%20Computer/LocalPCMain.ps1")
+        Invoke-Expression $($Local.Content)
+        }
+  '3' { cls
+        $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+        Invoke-Expression $($WinGetMain.Content)
+        }
+  '4' { cls
+        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
+        Invoke-Expression $($OSDCloud.Content)
+        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
+        Invoke-Expression $($WinGetUpdateMain.Content)
+        }
+  '5' { cls
+        $sfc = "C:\Windows\System32\sfc.exe"
+        Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
+        Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
+        }
+  '6' { cls
+        
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
+        $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
+        Write-Host "Downloading User Profile Backup and Restore..." -ForegroundColor Yellow
+        Write-Output "Download URL: $UPBR" -Verbose
+        Write-Output "Download Location: $OSDCloudGHDownloads" -Verbose
+        Save-WebFile -SourceUrl $UPBR -DestinationDirectory $OSDCloudGHDownloads
+        $UPBROrgName = "C:\OSDCloud\GitHub\downloads\UserProfileBackupRestore.exe"
+        $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
+        Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
+        Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
+        Show-MainMenu
+        }
+  '7'{ cls
+       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
+       Invoke-Expression $($AdminMain.Content)
+  }
+  '8'{cls
+  $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
+  Invoke-Expression $($OSDownloads.Content)
+  }
+  '9' { exit
+        }
+  
+    }
+    }
+    until ($selection -eq '9'){}
+    }
+Show-MainMenu
