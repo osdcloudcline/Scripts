@@ -29,8 +29,8 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($Update.Content)
      }
  '3'{cls
-       $Corporate = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
-       Invoke-Expression $($Corporate.Content)
+       $Uninstall = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
+       Invoke-Expression $($Uninstall.Content)
     }
 '4'{cls
        $PostInstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PostInstallMain.ps1")
