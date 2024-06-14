@@ -33,8 +33,8 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Uninstall.Content)
     }
 '4'{cls
-       $PostInstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PostInstallMain.ps1")
-       Invoke-Expression $($PostInstall.Content)
+       $Main = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+       Invoke-Expression $($Main.Content)
  }
  '5'{exit}
  }
