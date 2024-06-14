@@ -64,16 +64,13 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Manufacturer.Content)
     } 
  '10'{cls
-       $Upgrade = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-       Invoke-Expression $($Upgrade.Content)
+       $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/edit/main/WinGet%20/WinGetMain.ps1")
+       Invoke-Expression $($WinGetMain.Content)
   }
-'11'{cls
-       $PostInstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PostInstallMain.ps1")
-       Invoke-Expression $($PostInstall.Content)
+'11'{exit
  }
- '12'{exit}
+ 
  }
- }
- until ($selection -eq '12'){exit}
+ until ($selection -eq '11'){exit}
 }
 Show-MainMenu 
