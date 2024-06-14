@@ -30,6 +30,7 @@ cls
        $Baseboard1 = (Get-CimInstance -ClassName Win32_Baseboard).Manufacturer
        $Baseboard2 = (Get-CimInstance -ClassName Win32_Baseboard).Product
        $CPU = (Get-CimInstance -Class Win32_Processor -ComputerName "$env:computername").Name
+       $RAM = (Get-CimInstance -Class Win32_PhysicalMemory | Measure-Object -Property Capacity -Sum).sum/1gb
        $PCManufacturer = (Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer
        $BIOS1 = (Get-CimInstance -ClassName Win32_BIOS).Manufacturer
        $BIOS2 = (Get-CimInstance -ClassName Win32_BIOS).SMBIOSBIOSVersion
@@ -56,6 +57,7 @@ cls
       Write-Host         "System Hardware Info:" -ForegroundColor Green 
       Write-Verbose "System Hostname: $PCName" -Verbose
       Write-Verbose "Processor: $CPU" -Verbose
+      Write-Verbose "System Memory: $RAM GB" -Verbose
       Write-Verbose "Motherboard: $Baseboard1 $Baseboard2" -Verbose
       Write-Verbose "Manufacturer: $PCManufacturer" -Verbose
       Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
