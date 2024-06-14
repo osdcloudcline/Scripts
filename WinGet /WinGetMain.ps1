@@ -25,8 +25,8 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Install.Content)
        }
  '2'{cls
-      $Advanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ADV.ps1")
-      Invoke-Expression $($Advanced.Content)
+      $Update = Invoke-WebRequest("")
+      
      }
  '3'{cls
        $Corporate = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
