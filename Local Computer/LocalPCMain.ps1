@@ -84,30 +84,32 @@ do
   {
 
   '1' { cls
-        $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
-        Invoke-Expression $($Domain.Content)
+        $CurrentPCName = "$env:computername"
+        $NewPCName = Read-Host -Prompt 'Please Enter the New PC Name'
+        Write-Verbose "Renaming PC. Changes WILL be in effect upon the next system restart" -Verbose
+        Rename-Computer -ComputerName $CurrentPCName -NewName $NewPCName
+        Write-Host "Restarting your PC..." -ForegroundColor Cyan
+        Restart-Computer
         }
   '2' { cls
-        $Local = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Local%20Computer/LocalPCMain.ps1")
-        Invoke-Expression $($Local.Content)
+        $mssettingsupdate = "ms-settings:windowsupdate"
+        Start-Process -FilePath $mssettingsupdate
         }
   '3' { cls
         $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
         Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
-        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
-        Invoke-Expression $($OSDCloud.Content)
-        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-        Invoke-Expression $($WinGetUpdateMain.Content)
+        
         }
   '5' { cls
+        $mssettings = "ms-settings:"
+        Start-Process -FilePath $mssettings
+        }
+  '6' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
         Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
         Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
-        }
-  '6' { cls
-        
         
         }
   '7'{ cls
