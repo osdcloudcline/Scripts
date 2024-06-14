@@ -24,7 +24,7 @@ cls
 
        $IP1 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet" -and $_.PrefixLength -eq "24"}).IPAddress
        $IP2 = (Get-NetIpaddress | Where-Object { $_.AddressFamily -eq "IPv4" -and $_.InterfaceAlias -eq "Ethernet 2" -and $_.PrefixLength -eq "24"}).IPAddress
-       $GatewayDNS = (Get-CimInstance -ClassName Win32_networkAdapterConfiguration | Where-Object { $_.IPEnabled })
+       $GatewayDNS = (Get-CimInstance -ClassName Win32_networkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName $env:computername | Select-Object -Property DefaultIPGateway})
        $ExternalIP = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
 
        $Baseboard1 = (Get-CimInstance -ClassName Win32_Baseboard).Manufacturer
