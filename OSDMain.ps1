@@ -95,7 +95,7 @@ Write-Host " 2. Local Computer Administration Tasks"
 Write-Host " 3. Software Installation/Updates/Upgrades"
 Write-Host " 4. OSD Cloud"
 Write-Host " 5. OSD Builder"
-Write-Host " 6. Software Updates/Upgrades"
+Write-Host " 6. Audit Mode Configuration Tasks"
 Write-Host " 7. Debloat Operating System"
 Write-Host " 6. Backup/Restore User Profile Data"
 Write-Host " 7. Administrative System Tasks"
@@ -122,8 +122,6 @@ do
   '4' { cls
         $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
         Invoke-Expression $($OSDCloud.Content)
-        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-        Invoke-Expression $($WinGetUpdateMain.Content)
         }
   '5' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
