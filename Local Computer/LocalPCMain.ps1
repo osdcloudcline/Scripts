@@ -113,8 +113,8 @@ do
         
         }
   '7'{ cls
-       $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
-       Invoke-Expression $($AdminMain.Content)
+       $OSDebloat = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/OSDebloatMain.ps1")
+       Invoke-Expression $($OSDebloat.Content)
   }
   '8'{cls
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
