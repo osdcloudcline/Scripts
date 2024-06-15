@@ -66,7 +66,8 @@ do
         Invoke-Expression $($OSDBuilder.Content)
         }
   '6' { cls
-        
+        $OSDMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+        Invoke-Expression $($OSDMain.Content)
         }
   '7' { cls
         exit
