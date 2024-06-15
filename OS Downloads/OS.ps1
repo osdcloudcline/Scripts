@@ -78,7 +78,8 @@ Write-Host " 4. Download and Create Windows 13 ISO"
 Write-Host " 5. Download and Create Windows 14 ISO"
 Write-Host " 6. Download and Create Windows 15 ISO"
 Write-Host " 7. Download and Create Windows 16 ISO"
-Write-Host " 8. Exit PowerShell"
+Write-Host " 8. Download and Create Insider Preview Build ISOs"
+Write-Host " 9. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -107,12 +108,15 @@ do
   '7'{ cls
        Show-Win16MainMenu
   }
-  '8' { exit
+  '8'{cls
+
+      }
+  '9' { exit
         }
   
     }
     }
-    until ($selection -eq '8'){}
+    until ($selection -eq '9'){exit}
     }
 
 
