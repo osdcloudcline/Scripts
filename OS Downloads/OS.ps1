@@ -109,7 +109,7 @@ do
        Show-Win16MainMenu
   }
   '8'{cls
-
+      Show-PreviewsMainMenu
       }
   '9' { exit
         }
