@@ -132,7 +132,8 @@ do
       Invoke-Expression $($AuditMode.Content)
      }
   '7'{cls
-     
+      $DebloatOS = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/OSDebloatMain.ps1")
+      Invoke-Expression $($DebloatOS.Content)
      }
   '8'{
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
