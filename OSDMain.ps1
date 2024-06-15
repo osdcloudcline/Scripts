@@ -127,7 +127,7 @@ do
         $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
         Invoke-Expression $($OSDBuilder.Content)
         }
-  '6'{cls
+  '6' {cls
       $AuditMode = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
       Invoke-Expression $($AuditMode.Content)
      }
@@ -148,21 +148,21 @@ do
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
-        Show-MainMenu}
-        }
-  '9'{ cls
+        Show-MainMenu
+    }
+
+    '9'{cls
        $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
        Invoke-Expression $($AdminMain.Content)
-  }
-  '10'{cls
-  $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
-  Invoke-Expression $($OSDownloads.Content)
-  }
-  '11' { exit
-        }
-  
+    }
+    '10'{cls
+        $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
+        Invoke-Expression $($OSDownloads.Content)
+    }
+    '11'{exit}
+
     }
     }
     until ($selection -eq '11'){exit}
     }
-Show-MainMenu
+    Show-MainMenu
