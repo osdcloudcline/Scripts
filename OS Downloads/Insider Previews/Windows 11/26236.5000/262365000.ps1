@@ -22,11 +22,11 @@ $WindowsIP262365000Downloader = "$ZIPDestination\uup_download_windows.cmd"
 
 Write-Host "Downloading Windows Insider Preview 26236.5000 ZIP File..." -ForegroundColor Cyan 
 
-Save-WebFile -SourceUrl $Windows10URL -DestinationDirectory $ZIPDestination
+Save-WebFile -SourceUrl $WindowsIP262365000URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Insider Preview 26236.5000 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\26235.5000/26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
 Write-Host "Downloading Windows Insider Preview 26236.5000..." -ForegroundColor Cyan 
 
