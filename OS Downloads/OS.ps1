@@ -479,7 +479,7 @@ do
         
         }
   '6' { cls
-        
+        Show-MainMenu
         }
   '7' { cls
         
