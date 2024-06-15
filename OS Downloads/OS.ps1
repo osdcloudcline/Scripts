@@ -438,12 +438,61 @@ do
     }
     until ($selection -eq '6'){}
     }
-    
-Function Show-ServerMenu(){}
 
-##########################################################
-# Main Menu
-##########################################################
+Function Show-PreviewsMainMenu{
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  OS Windows Insider Previews Download Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Download and Create Windows Insider Preview Build 26236.5000 ISO"
+Write-Host " 2. Download and Create Windows Insider Preview Build ISO"
+Write-Host " 3. Download and Create Windows Insider Preview Build ISO"
+Write-Host " 4. Download and Create Windows Insider Preview Build ISO"
+Write-Host " 5. Download and Create Windows Insider Preview Build ISO"
+Write-Host " 6. Return to OSD Downloads Main Menu"
+Write-Host " 7. Return to OSD Main Menu"
+Write-Host " 8. Exit PowerShell"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+       $WinIPBuild262365000 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/2022.ps1")
+       Invoke-Expression $($WinIPBuild262365000.Content)
+        }
+  '2' { cls
+        
+        }
+  '3' { cls
+        
+        }
+  '4' { cls
+        
+        }
+  '5' { cls
+        
+        }
+  '6' { cls
+        
+        }
+  '7' { cls
+        
+        }
+  '8' { cls
+        exit
+    
+        }
+     }
+    }
+    until ($selection -eq '8'){exit}
+    }
+    
 Function Show-ServerMainMenu{
     [CmdletBinding()]
     param(
