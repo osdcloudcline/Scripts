@@ -128,9 +128,11 @@ do
         Invoke-Expression $($OSDBuilder.Content)
         }
   '6'{cls
-     
+      $AuditMode = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
+      Invoke-Expression $($AuditMode.Content)
      }
   '7'{cls
+     
      }
   '8'{
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
