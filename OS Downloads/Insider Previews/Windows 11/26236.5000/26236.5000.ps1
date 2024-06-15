@@ -9,7 +9,7 @@ Import-Module -Name OSD -Force
 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
-$ZIPDestination = "$env:userprofile\Downloads\OS\InsiderPreviewBuilds\26235.5000"
+$ZIPDestination = "$env:userprofile\Downloads\OS\InsiderPreviewBuilds\26235-5000"
 
 $WindowsIP262365000URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Insider%20Previews/Windows%2011/26236.5000/26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip"
 
