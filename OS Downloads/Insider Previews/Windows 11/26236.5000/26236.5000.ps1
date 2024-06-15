@@ -29,7 +29,7 @@ Expand-Archive -Path "$ZIPDestination\26235.5000/26236.5000_amd64_en-us_multi_d5
 Write-Host
 Write-Host "Downloading Windows Insider Preview 26236.5000..." -ForegroundColor Cyan 
 
-Start-Process -FilePath $Windows10Downloader
+Start-Process -FilePath $WindowsIP262365000Downloader
 
 pause
 
