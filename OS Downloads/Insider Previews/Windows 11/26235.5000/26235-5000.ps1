@@ -11,7 +11,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\InsiderPreviewBuilds\26235.5000"
 
-$WindowsIP262365000URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
+$WindowsIP262365000URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Insider%20Previews/Windows%2011/26235.5000/26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -25,7 +25,7 @@ Save-WebFile -SourceUrl $Windows10URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Insider Preview 26236.5000 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26235.5000/26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
 Write-Host "Downloading Windows Insider Preview 26236.5000..." -ForegroundColor Cyan 
 
