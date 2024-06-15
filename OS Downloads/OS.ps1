@@ -464,7 +464,7 @@ do
 
   '1' { cls
        $WinIPBuild262365000 = Invoke-WebRequest("")
-       Invoke-Expression $($WinIPBuild262365000.Content)
+       Invoke-Expression 
         }
   '2' { cls
         
