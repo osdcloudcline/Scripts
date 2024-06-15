@@ -18,5 +18,5 @@ Invoke-Expression $($OS.Content)
 
 Write-Verbose "Step 4 - Software Installation..." -Verbose
 
-$WinGetSoftware = Invoke-WebRequest("")
+$WinGetSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
 Invoke-Expression $($WingetSoftware.Content)
