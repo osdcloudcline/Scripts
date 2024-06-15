@@ -22,7 +22,7 @@ $WindowsIP262365000Downloader = "$ZIPDestination\uup_download_windows.cmd"
 
 Write-Host "Downloading Windows Insider Preview 26236.5000 ZIP File..." -ForegroundColor Cyan 
 
-Save-WebFile -SourceUrl  -DestinationDirectory $ZIPDestination
+Save-WebFile -SourceUrl $WindowsIP262365000URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Insider Preview 26236.5000 ZIP File..." -ForegroundColor Cyan 
 
