@@ -97,10 +97,10 @@ Write-Host " 4. OSD Cloud"
 Write-Host " 5. OSD Builder"
 Write-Host " 6. Audit Mode Configuration Tasks"
 Write-Host " 7. Debloat Operating System"
-Write-Host " 6. Backup/Restore User Profile Data"
-Write-Host " 7. Administrative System Tasks"
-Write-Host " 8. Operating System Downloads and ISO Creation" 
-Write-Host " 9. Exit PowerShell"
+Write-Host " 8. Backup/Restore User Profile Data"
+Write-Host " 9. Administrative System Tasks"
+Write-Host " 10. Operating System Downloads and ISO Creation" 
+Write-Host " 11. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -127,8 +127,12 @@ do
         $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
         Invoke-Expression $($OSDBuilder.Content)
         }
-  '6' { cls
-        
+  '6'{cls
+     
+     }
+  '7'{cls
+     }
+  '8'{
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
@@ -141,21 +145,21 @@ do
         $UPBRNewName = "C:\OSDCloud\GitHub\downloads\UPBR.exe"
         Rename-Item -Path $UPBROrgName -NewName $UPBRNewName
         Start-Process -FilePath "C:\OSDCloud\GitHub\downloads\UPBR.exe"
-        Show-MainMenu
+        Show-MainMenu}
         }
-  '7'{ cls
+  '9'{ cls
        $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
        Invoke-Expression $($AdminMain.Content)
   }
-  '8'{cls
+  '10'{cls
   $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
   Invoke-Expression $($OSDownloads.Content)
   }
-  '9' { exit
+  '11' { exit
         }
   
     }
     }
-    until ($selection -eq '9'){}
+    until ($selection -eq '11'){exit}
     }
 Show-MainMenu
