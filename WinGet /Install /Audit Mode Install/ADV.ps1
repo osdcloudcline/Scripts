@@ -286,7 +286,7 @@ Write-Verbose "Installing $Utilitiesapp18..." -Verbose
 $GSkillWigiDashSoftwareURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/GSkill/WigiDash_Manager_Setup_v11889036668.zip"
 $WigiDashAIDA64ThemeURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/GSkill/gskill_wigidash_aida64_sensorpanel_theme_v1.4.zip"
 $WigiDashPDFURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Software/GSkill/wigidash-pc-command-panel-tutorial-guide-v2024.04.02i-eng.pdf"
-$WigiDashGettingStartedURL = ""
+$WigiDashGettingStartedURL = "https://github.com/osdcloudcline/OSDCloud/blob/main/Software/GSkill/wigidash-quick-start-guide.pdf"
 $OSDCloudGSkillWigiDashSWdownloads = "C:\OSDCloud\downloads\GSkill\WigiDash\Software"
 $WigiDashAIDA64Themedownloads = "C:\OSDCloud\downloads\GSkill\WigiDash\AIDA64\Theme"
 $WigiDashPDF = "C:\OSDCloud\downloads\GSkill\WigiDash"
@@ -298,8 +298,11 @@ Save-WebFile -SourceUrl $WigiDashAIDA64ThemeURL -DestinationDirectory $WigiDashA
 Write-Verbose "Downloading WigiDash en-US PDF Manual..." -Verbose
 Save-WebFile -SourceUrl $WigiDashPDFURL -DestinationDirectory $WigiDashPDF
 Write-Host
+Write-Verbose "Downloading WigiDash en-US Getting Started PDF Manual..." -Verbose
+Save-WebFile -SourceUrl $WigiDashGettingStartedURL -DestinationDirectory $WigiDashPDF
+Write-Host
 Write-Verbose "Expanding WigiDash Software ZIP file..." -Verbose
-Expand-Archive -Path "$OSDCloudGSkillWigiDashSWdownloads\WigiDash_Manager_Setup_v10883138720.zip" -Destination $OSDCloudGSkillWigiDashSWdownloads
+Expand-Archive -Path "$OSDCloudGSkillWigiDashSWdownloads\WigiDash_Manager_Setup_v11889036668.zip" -Destination $OSDCloudGSkillWigiDashSWdownloads
 Write-Verbose "Expanding WigiDash AIDA64 Theme ZIP file..." -Verbose
 Expand-Archive -Path "$WigiDashAIDA64Themedownloads\gskill_wigidash_aida64_sensorpanel_theme_v1.4.zip" -Destination $OSDCloudGSkillWigiDashSWdownloads
 
