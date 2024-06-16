@@ -283,7 +283,7 @@ winget install --id Elgato.StreamDeck --exact --accept-source-agreements  --acce
 Write-Host "Installing System Utilities Software 18 of 28..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp18..." -Verbose
-$GSkillWigiDashSoftwareURL = "https://www.gskill.com/gskill-device/wigidash/WigiDash_Manager_Setup_v10883138720.zip"
+$GSkillWigiDashSoftwareURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/GSkill/WigiDash_Manager_Setup_v11889036668.zip"
 $WigiDashAIDA64ThemeURL = "https://www.gskill.com/gskill-device/wigidash/gskill_wigidash_aida64_sensorpanel_theme_v1.4.zip"
 $WigiDashPDFURL = "https://www.gskill.com/wigidash-tutorial/pdf/wigidash-pc-command-panel-tutorial-guide-v2024.04.02i-eng.pdf"
 $OSDCloudGSkillWigiDashSWdownloads = "C:\OSDCloud\downloads\GSkill\WigiDash\Software"
