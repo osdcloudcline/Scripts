@@ -40,7 +40,7 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($VDISM.Content)
     }
  '5'{cls
-      $ManagementPCSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/ManagementPCSM.ps1")
+      $ManagementPCSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Management%20PC/ManagementPCSM.ps1")
       Invoke-Expression $($ManagementPCSM.Content)
  }
  '6'{cls
