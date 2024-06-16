@@ -24,7 +24,7 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       $StandardSM = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/StandardSM.ps1")
+       $StandardSM = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Standard/StandardSM.ps1")
        Invoke-Expression $($StandardSM.Content)
        }
  '2'{cls
