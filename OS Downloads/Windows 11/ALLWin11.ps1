@@ -181,12 +181,12 @@ Write-Host "Completed Processing: Windows 11 23H2 Build 22631.3668...." -Foregro
 pause
 
 Write-Host
-Write-Host "Processing: Windows 11 24H2 Build 26100.712...." -ForegroundColor Cyan 
+Write-Host "Processing: Windows 11 24H2 Build 26100.863...." -ForegroundColor Cyan 
 ################### ISO Download, Extraction and Creation Variables region ##########################
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\24H2"
 
-$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.712_amd64_en-us_multi_0c393b5f_convert_virtual.zip"
+$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.863_amd64_en-us_multi_ad1caad2_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -200,9 +200,9 @@ Save-WebFile -SourceUrl $Windows1124H2URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows 11 24H2 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\26100.712_amd64_en-us_multi_0c393b5f_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26100.863_amd64_en-us_multi_ad1caad2_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
-Write-Host "Downloading Windows 11 24H2 Build: 26100.712..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows 11 24H2 Build: 26100.863..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
@@ -235,7 +235,7 @@ Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
 Write-Host
-Write-Host "Completed Processing: Windows 11 24H2 Build 26100.712...." -ForegroundColor Green 
+Write-Host "Completed Processing: Windows 11 24H2 Build 26100.863...." -ForegroundColor Green 
 pause
 
 Write-Host
