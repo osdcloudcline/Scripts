@@ -28,7 +28,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($StandardSM.Content)
        }
  '2'{cls
-      $AdvancedSM = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/AdvancedSM.ps1")
+      $AdvancedSM = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/AdvancedSM/AdvancedSM.ps1")
       Invoke-Expression $($AdvancedSM.Content)
      }
  '3'{cls
