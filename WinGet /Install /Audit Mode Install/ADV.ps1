@@ -310,7 +310,7 @@ Expand-Archive -Path "$WigiDashAIDA64Themedownloads\gskill_wigidash_aida64_senso
 Write-Host "Installing System Utilities Software 19 of 28..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Utilitiesapp19..." -Verbose
-$GSkillRAMLightingSoftwareURL = "https://www.gskill.com/gskill-device/memory/G.SKILL-Trident-Z-Lighting-Control-v1.00.35.zip"
+$GSkillRAMLightingSoftwareURL = "https://github.com/osdcloudcline/OSDCloud/raw/main/Software/GSkill/G.SKILL-Trident-Z-Lighting-Control-v1.00.35.zip"
 $GSkillRAMLightingPDFURL = "https://www.gskill.com/gskill-device/memory/guides/Trident_Z_Lighting_Control_Software_Guide_1.19g.pdf"
 $OSDCloudGSkillRAMLightingSWdownloads = "C:\OSDCloud\downloads\GSkill\RAM Lighting\Software"
 $RAMLightinghPDF = "C:\OSDCloud\downloads\GSkill\RAM Lighting"
