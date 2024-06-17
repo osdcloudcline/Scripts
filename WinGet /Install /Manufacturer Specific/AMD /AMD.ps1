@@ -211,7 +211,7 @@ Write-Verbose "Installing: $VMModule1...Module No: 1 of 1" -Verbose
 Install-Module -Name WindowsImageBuilder -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name WindowsImageBuilder -Force
 
-$AMDSoftware1 = "AMD Ryzen Chi[set Drivers"
+$AMDSoftware1 = "AMD Ryzen Chipset Drivers"
 $AMDSoftware2 = "AMD Ryzen Master Software"
 
 
