@@ -9,4 +9,4 @@ Write-Host "Installing $app1 on $env:computername ..." -ForegroundColor Yellow
 winget install --id Microsoft.VisualStudioCode --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Installing $app2 on $env:computername ..." -ForegroundColor Yellow
-winget install --id Microsoft.VisualStudio.2022.Enterprise --exact --accept-source-agreements  --accept-source-agreements --force
+choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
