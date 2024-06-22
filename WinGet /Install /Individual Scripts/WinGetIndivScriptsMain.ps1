@@ -17,11 +17,12 @@ Write-Host " 4. Install Gaming Software"
 Write-Host " 5. Install Media Software"
 Write-Host " 6. Install Programming Software"
 Write-Host " 7. Install Productivity Software"
-Write-Host " 8. Download Security Software"
-Write-Host " 9. Manufacturer Specific Scripts"
-Write-Host " 10. Return to Winget Software Main Menu"
-Write-Host " 11. Return to OSD Git-Hub Main Menu"
-Write-Host " 12. Exit PowerShell"
+Write-Host " 8. Install Virtualization and Remote Desktop Software"
+Write-Host " 9. Download Security Software"
+Write-Host " 10. Manufacturer Specific Scripts"
+Write-Host " 11. Return to Winget Software Main Menu"
+Write-Host " 12. Return to OSD Git-Hub Main Menu"
+Write-Host " 13. Exit PowerShell"
 
 do
 {
@@ -52,20 +53,20 @@ $selection = Read-Host 'Please choose an option'
  '8'{cls
        
     }
-'9'{cls
+'10'{cls
     $Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
     Invoke-Expression $($Manufacturer.Content)  
     } 
- '10'{cls
+ '11'{cls
        $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
        Invoke-Expression $($WinGetMain.Content)
   }
-'11'{cls
+'12'{cls
     
   }
-'12'{exit}
+'13'{exit}
  }
  }
- until ($selection -eq '12'){exit}
+ until ($selection -eq '13'){exit}
 }
 Show-MainMenu 
