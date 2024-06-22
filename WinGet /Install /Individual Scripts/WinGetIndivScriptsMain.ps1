@@ -43,7 +43,7 @@ $selection = Read-Host 'Please choose an option'
     }
  '5'{cls
       
- }
+    }
  '6'{cls
        
     }
@@ -58,9 +58,9 @@ $selection = Read-Host 'Please choose an option'
     Invoke-Expression $($Manufacturer.Content)  
     } 
  '11'{cls
-       $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-       Invoke-Expression $($WinGetMain.Content)
-  }
+      $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+      Invoke-Expression $($WinGetMain.Content)
+     }
 '12'{cls
     
   }
