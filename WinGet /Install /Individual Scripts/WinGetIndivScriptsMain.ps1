@@ -74,7 +74,7 @@ Function Show-BrowsersMainMenu(){
 
     [CmdletBinding()]
     param(
-    [string]$Title = 'Web Browsers Installation Scripts - Software Installation Main Menu',
+    [string]$Title = 'Web Browsers Installation Scripts - Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 
