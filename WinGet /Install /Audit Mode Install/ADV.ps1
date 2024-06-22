@@ -386,7 +386,7 @@ Start-Transcript -Path $OSDProgrammingSoftwareLogs
 
 Write-Host
 Write-Host
-Write-Host "Step 4 : Programming Software" -ForegroundColor Cyan
+Write-Host "Step 4 : Programming and Dev/Coding Software" -ForegroundColor Cyan
 Write-Host
 Write-Host
 
