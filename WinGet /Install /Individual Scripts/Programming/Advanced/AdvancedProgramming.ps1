@@ -27,3 +27,4 @@ Write-Host
 Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
+choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
