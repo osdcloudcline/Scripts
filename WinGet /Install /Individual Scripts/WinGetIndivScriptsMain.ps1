@@ -30,7 +30,7 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       
+       Show-BrowsersMainMenu
        }
  '2'{cls
       
@@ -69,4 +69,6 @@ $selection = Read-Host 'Please choose an option'
  }
  until ($selection -eq '13'){exit}
 }
+
+Function Show-BrowsersMainMenu(){}
 Show-MainMenu 
