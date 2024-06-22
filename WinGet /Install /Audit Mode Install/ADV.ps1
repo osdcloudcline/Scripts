@@ -393,6 +393,7 @@ Write-Host
 $Programmingapp1 = "VS Code"
 $Programmingapp2 = "Visual Studio 2022 Enterprise"
 $Devapp1 = "GitHub Desktop"
+$Codingapp1 = "AI Cursor Editor"
 
 Write-Host "Installing Programming/Dev Applications on $env:computername..." -ForegroundColor Green
 
@@ -410,6 +411,11 @@ Write-Host "Installing Dev Software 1 of 1..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Devapp1..." -Verbose
 winget install --id GitHub.GitHubDesktop --exact --accept-source-agreements  --accept-source-agreements --force
+
+Write-Host "Installing Coding Software 1 of 1..." -ForegroundColor Cyan
+Write-Host
+Write-Verbose "Installing $Codingapp1..." -Verbose
+
 
 Stop-Transcript
 
