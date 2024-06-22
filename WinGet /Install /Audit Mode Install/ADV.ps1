@@ -415,7 +415,7 @@ winget install --id GitHub.GitHubDesktop --exact --accept-source-agreements  --a
 Write-Host "Installing Coding Software 1 of 1..." -ForegroundColor Cyan
 Write-Host
 Write-Verbose "Installing $Codingapp1..." -Verbose
-
+winget install --id CursorAI,Inc.Cursor --exact --accept-source-agreements  --accept-source-agreements --force
 
 Stop-Transcript
 
