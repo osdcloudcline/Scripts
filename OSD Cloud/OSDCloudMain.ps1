@@ -64,12 +64,12 @@ do
         Invoke-Expression $($MSSurfaceOSDCloudConfigScript.Content)
         }
    '10'{cls
-        $PCMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/PCMainMenu.ps1")
-        Invoke-Expression $($PCMain.Content)
+        $OSDMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
+        Invoke-Expression $($OSDMain.Content)
        }
     }
     }
-     until ($selection -eq '10'){Invoke-Expression $($PCMain.Content)}
+     until ($selection -eq '10'){Invoke-Expression $($OSDMain.Content)}
     }
 
     
