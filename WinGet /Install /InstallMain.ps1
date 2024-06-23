@@ -19,8 +19,9 @@ Write-Host " 6. Install Honeypot Configuration"
 Write-Host " 7. Install IT Tech Configuration"
 Write-Host " 8. Individual Install Scripts"
 Write-Host " 9. Manufacturer Specific Scripts"
-Write-Host " 10. Return to Winget Software Main Menu"
-Write-Host " 11. Exit PowerShell"
+Write-Host " 10. Apply Start2.bin Start Menu Configurations"
+Write-Host " 11. Return to Winget Software Main Menu"
+Write-Host " 12. Exit PowerShell"
 
 do
 {
@@ -63,13 +64,17 @@ $selection = Read-Host 'Please choose an option'
        $Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
        Invoke-Expression $($Manufacturer.Content)
     } 
- '10'{cls
+'10'{cls
+     $SMMain = Invoke-WebRequest("")
+     Invoke-Expression $($SMMain.Content)
+     }
+ '11'{cls
        $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
        Invoke-Expression $($WinGetMain.Content)
   }
-'11'{exit}
+'12'{exit}
  }
  }
- until ($selection -eq '11'){exit}
+ until ($selection -eq '12'){exit}
 }
 Show-MainMenu 
