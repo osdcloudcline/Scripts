@@ -11,7 +11,7 @@ Write-Host "Installing: $app1 on $env:computername..."  -ErrorAction SilentlyCon
 winget install --id Microsoft.RemoteDesktopClient --exact --accept-source-agreements --accept-source-agreements --force
 
 Write-Host "Installing: $app2 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
-winget install --id VMware.HorizonClient --exact --accept-source-agreements  --accept-source-agreements --force
+choco install vmware-horizon-client -y
 
 Write-Host "Installing: $app3 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id AnyDeskSoftwareGmbH.AnyDesk --exact --accept-source-agreements  --accept-source-agreements --force
