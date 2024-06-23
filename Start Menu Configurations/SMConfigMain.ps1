@@ -17,7 +17,8 @@ Write-Host " 4. VDI Configuration Start Menu"
 Write-Host " 5. Management PC Configuration Start Menu"
 Write-Host " 6. IT Tech Configuration Start Menu"
 Write-Host " 7. Honeypot Configuration Start Menu"
-Write-Host " 8. Exit PowerShell"
+Write-Host " 8. Custom User Start Menu Configurations"
+Write-Host " 9. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -51,9 +52,68 @@ $selection = Read-Host 'Please choose an option'
       $HoneypotSM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Honeypot/HoneypotSM.ps1")
       Invoke-Expression $($HoneypotSM.Content)
     }
- '8'{exit}
+ '8'{cls
+     Show-CustomSMMain
+     }
+ '9'{exit}
  }
  }
- until ($selection -eq '8'){exit}
+ until ($selection -eq '9'){exit}
 }
+
+Function Show-CustomSMMain(){
+
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'Windows 11 Start Menu User Configurations - Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Bryan Desktop Start Menu Configuration"
+Write-Host " 2. Bryan Laptop Start Menu Configuration"
+Write-Host " 3. Jess Work Laptop Start Menu Configuration"
+Write-Host " 4. Jenn Work 2nd Desktop Start Menu Configuration"
+Write-Host " 5. Chris Work 2nd Desktop Start Menu Configuration"
+Write-Host " 6. Billy Desktop Start Menu Configuration"
+Write-Host " 7. Dad Desktop Start Menu Configuration"
+Write-Host " 8. Mom Desktop Start Menu Configuration"
+Write-Host " 9. Return to Start Menu Configurations Main Menu"
+Write-Host " 10. Exit PowerShell"
+do
+{
+$selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+  '1' {cls
+       
+       }
+ '2'{cls
+      
+     }
+ '3'{cls
+      
+    }
+ '4'{cls
+      
+    }
+ '5'{cls
+      
+ }
+ '6'{cls
+      
+    }
+ '7'{cls
+      
+    }
+ '8'{}
+ '9'{cls
+     Show-MainMenu
+    }
+ '10'{exit}
+ }
+ }
+ until ($selection -eq '10'){exit}
+} 
 Show-MainMenu
