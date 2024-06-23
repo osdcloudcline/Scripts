@@ -10,7 +10,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\WindowsServer\2025"
 
-$WinServer2025URL = ""
+$WinServer2025URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2025/26100.1_amd64_en-us_multi_30da46b4_convert.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -24,9 +24,9 @@ Save-WebFile -SourceUrl WinServer2025URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows Server 2025 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26100.1_amd64_en-us_multi_30da46b4_convert.zip" -DestinationPath $ExtractionLocation
 Write-Host
-Write-Host "Downloading Windows Server 2025 Build: 20348.2461..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows Server 2025 Build: 26100.1..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
