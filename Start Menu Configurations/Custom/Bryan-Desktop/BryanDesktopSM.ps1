@@ -3,11 +3,11 @@ Import-Module -Name OSD -Force
 
 $ADVLogFileFolder = (Test-Path -Path "C:\OSDCloud\DeploymentLogs\ADV" -IsValid){
 $SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Custom\Bryan-Desktop"
-$BTDesktopSMFileURL = ""
+$BTDesktopSMFileURL = "https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Custom/Bryan-Desktop/start2.bin"
 
 Write-Host "This computer has been installed with the Advanced Configuration of software" -ForgroundColor Green
 Write-Host
-Write-Host "The Customized Start Menu for Bryan's Desktop layout will now be downloaded from $SMSource to $env:userprofile and configured on $env:computername..." -ForegroundColor Cyan
+Write-Host "A customized Start Menu for Bryan's Desktop layout will now be downloaded from $SMSource to $env:userprofile and configured on $env:computername..." -ForegroundColor Cyan
 
 $StartMenudownload = "C:\OSDCloud\GitHub\downloads\StartMenu\Custom\Bryan-Desktop"
 
