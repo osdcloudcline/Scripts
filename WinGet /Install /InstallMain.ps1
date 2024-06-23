@@ -65,7 +65,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Manufacturer.Content)
     } 
 '10'{cls
-     $SMMain = Invoke-WebRequest("")
+     $SMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
      Invoke-Expression $($SMMain.Content)
      }
  '11'{cls
