@@ -21,11 +21,13 @@ $WindowsServerDownloader = "$ZIPDestination\uup_download_windows.cmd"
 Write-Host "Downloading Windows Server 2025 ZIP File..." -ForegroundColor Cyan 
 Write-Host
 Save-WebFile -SourceUrl WinServer2025URL -DestinationDirectory $ZIPDestination
+pause
 
 Write-Host "Expanding Windows Server 2025 ZIP File..." -ForegroundColor Cyan 
 
 Expand-Archive -Path "$ZIPDestination\26100.1_amd64_en-us_multi_30da46b4_convert.zip" -DestinationPath $ExtractionLocation
 Write-Host
+pause
 Write-Host "Downloading Windows Server 2025 Build: 26100.1..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
