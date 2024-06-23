@@ -71,14 +71,14 @@ Function Show-CustomSMMain(){
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. Bryan Desktop Start Menu Configuration"
-Write-Host " 2. Bryan Laptop Start Menu Configuration"
-Write-Host " 3. Jess Work Laptop Start Menu Configuration"
-Write-Host " 4. Jenn Work 2nd Desktop Start Menu Configuration"
-Write-Host " 5. Chris Work 2nd Desktop Start Menu Configuration"
-Write-Host " 6. Billy Desktop Start Menu Configuration"
-Write-Host " 7. Dad Desktop Start Menu Configuration"
-Write-Host " 8. Mom Desktop Start Menu Configuration"
+Write-Host " 1. Apply Start Menu Configuration for Bryan Desktop"
+Write-Host " 2. Apply Start Menu Configuration for Bryan Laptop"
+Write-Host " 3. Apply Start Menu Configuration for Jess Work Laptop"
+Write-Host " 4. Apply Start Menu Configuration for Jenn Work 2nd Desktop"
+Write-Host " 5. Apply Start Menu Configuration for Chris Work 2nd Desktop"
+Write-Host " 6. Apply Start Menu Configuration for Billy Desktop"
+Write-Host " 7. Apply Start Menu Configuration for Dad Desktop"
+Write-Host " 8. Apply Start Menu Configuration for Mom Desktop"
 Write-Host " 9. Return to Start Menu Configurations Main Menu"
 Write-Host " 10. Exit PowerShell"
 do
