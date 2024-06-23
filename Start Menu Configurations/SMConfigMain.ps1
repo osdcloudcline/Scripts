@@ -87,7 +87,8 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       
+       $BTDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Custom/Bryan-Desktop/BryanDesktopSM.ps1")
+       Invoke-Expression $($BTDesktop.Content)
        }
  '2'{cls
       
