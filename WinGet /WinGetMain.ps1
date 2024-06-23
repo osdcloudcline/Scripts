@@ -13,7 +13,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Install Software - Main Menu"
 Write-Host " 2. Upgrade Software - Main Menu"
 Write-Host " 3. Uninstall Software - Main Menu" 
-Write-Host " 3. Apply Windows 11 Start Menu Configurations - Main Menu" 
+Write-Host " 4. Apply Windows 11 Start Menu Configurations - Main Menu" 
 Write-Host " 5. Return to Main Menu"
 Write-Host " 6. Exit PowerShell"
 do
@@ -34,7 +34,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Uninstall.Content)
     }
 '4'{cls
-    $SMMain = Invoke-WebRequest("")
+    $SMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
     Invoke-Expression $($SMMain.Content)
     }
 '5'{cls
