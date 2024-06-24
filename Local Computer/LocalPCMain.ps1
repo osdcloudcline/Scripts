@@ -100,6 +100,7 @@ do
         Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
+        $SelectAdapter  = Get-NetAdapter | Out-GridView -PassThru
         
         }
   '5' { cls
