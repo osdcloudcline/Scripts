@@ -138,11 +138,10 @@ regedit /s $SoftwareREG5PATH
 Write-Host
 Write-Verbose "Merging $SoftwareREG6 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $SoftwareREG6PATH
-
 Write-Verbose "Merging $SoftwareREG7 into $OSInfo1 $OSInfo2..." -Verbose
 regedit /s $SoftwareREG7PATH
 
-Write-Host "Merging Operating System-related Registry files into the operating system on $env:computername..." -ForegroundColor Cyan
+Write-Host "Merging Operating System-related Registry files into $OSInfo1 $OSInfo2 on $env:computername..." -ForegroundColor Cyan
 
 If(($OSInfo1 -eq "Microsoft Windows 11 Home") -or ($OSInfo1 -eq "Microsoft Windows 11 Pro") -or ($OSInfo1 -eq "Microsoft Windows 11 Pro for Workstations") -or ($OSInfo1 -eq "Microsoft Windows 11 Enterprise")){ 
 Save-WebFile -SourceUrl $W11OSModificationRegFileUrl -DestinationDirectory $REGFileDirectory
