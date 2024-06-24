@@ -100,8 +100,17 @@ do
         Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
-        $SelectAdapter  = Get-NetAdapter | Out-GridView -PassThru
-        
+       $SelectAdapter  = Get-NetAdapter | Out-GridView -PassThru
+       $ChosenAdapter = $SelectAdapter
+       $ChosenAdapterName = $($ChosenAdapter).Name
+       $ChosenAdapterInterfaceDescription = $($ChosenAdapter).InterfaceDescription
+       $IPAddress = Read-Host -Prompt 'Please enter the IP Address'
+       $GatewayRouter = Read-Host -Prompt 'Please enter the Gateway/Router address'
+       $DNSAddress = $GatewayRouter
+       Write-Verbose "Configuring Network Interface TCPIP v4 Settings for $ChosenAdapterName - $ChosenAdapterInterfaceDescription" -Verbose
+       New-NetIPAddress -InterfaceAlias $ChosenAdapterName -AddressFamily IPv4 -IPAddress $IPAddress -PrefixLength 24 -DefaultGateway $GatewayRouter
+       Write-Verbose "Configuring Network Interface DNS Server Settings for $ChosenAdapterName - $ChosenAdapterInterfaceDescription" -Verbose
+       Set-DnsClientServerAddress -InterfaceAlias $ChosenAdapterName -ServerAddress $DNSAddress -Verbose
         }
   '5' { cls
         $mssettings = "ms-settings:"
