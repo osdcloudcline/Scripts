@@ -11,12 +11,13 @@ cls
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. Install System Pre-Requisities"
-Write-Host " 2. Install Software"
-Write-Host " 3. Update Windows"
-Write-Host " 4. Update Software"
-Write-Host " 5. System Maintenance"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 1. Configure Client Desktops/Laptops/Thin Clients"
+Write-Host " 2. Configure Servers"
+Write-Host " 3. Install Software"
+Write-Host " 4. Update Windows"
+Write-Host " 5. Update Software"
+Write-Host " 6. System Maintenance"
+Write-Host " 7. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -24,31 +25,34 @@ do
   {
 
   '1' { cls
-        $SystemPreReqs = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1")
-        Invoke-Expression $($SystemPreReqs.Content)
+        $Clients = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureClients.ps1")
+        Invoke-Expression $($Clients.Content)
         }
-  '2' { cls
-        Show-SoftwareMainMenu
+  '2'{cls
+
         }
   '3' { cls
+        Show-SoftwareMainMenu
+        }
+  '4' { cls
         $OSUpdate = "ms-settings:windowsupdate"
         Start-Process $OSUpdate
         }
-  '4' { cls
+  '5' { cls
         $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
         Invoke-Expression $($WinGetUpdateMain.Content)
         }
-  '5' { cls
+  '6' { cls
         $sfc = "C:\Windows\System32\sfc.exe"
         Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
         Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
         }
-  '6' { exit
+  '7' { exit
         }
 
     }
     }
-    until ($selection -eq '8'){}
+    until ($selection -eq '7'){exit}
     }
 
  Function Show-SoftwareMainMenu(){
