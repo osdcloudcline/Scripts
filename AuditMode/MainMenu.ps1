@@ -114,7 +114,7 @@ do
   
     }
     }
-    until ($selection -eq '8'){}
+    until ($selection -eq '8'){Show-MainMenu}
     }
 
 Show-MainMenu
