@@ -8,8 +8,8 @@ Invoke-Expression $($PSModules.Content)
 
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
 
-$Registry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1")
-Invoke-Expression $($Registry.Content)
+$ClientRegistry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1")
+Invoke-Expression $($ClientRegistry.Content)
 
 Write-Verbose "Step 3 - Mandatory OS Pre-Requirements..." -Verbose
 
