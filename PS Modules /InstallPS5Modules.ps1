@@ -490,5 +490,3 @@ Write-Host
 
 Stop-Transcript 
 
-$PS7Modules = Invoke-WebRequest("")
-Invoke-Expression $($PS7Modules.Content)
