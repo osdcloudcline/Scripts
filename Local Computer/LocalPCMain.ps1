@@ -100,6 +100,7 @@ do
         Invoke-Expression $($WinGetMain.Content)
         }
   '4' { cls
+       $NetLogFile = ""
        $SelectAdapter  = Get-NetAdapter | Out-GridView -PassThru
        $ChosenAdapter = $SelectAdapter
        $ChosenAdapterName = $($ChosenAdapter).Name
@@ -111,6 +112,13 @@ do
        New-NetIPAddress -InterfaceAlias $ChosenAdapterName -AddressFamily IPv4 -IPAddress $IPAddress -PrefixLength 24 -DefaultGateway $GatewayRouter
        Write-Verbose "Configuring Network Interface DNS Server Settings for $ChosenAdapterName - $ChosenAdapterInterfaceDescription" -Verbose
        Set-DnsClientServerAddress -InterfaceAlias $ChosenAdapterName -ServerAddress $DNSAddress -Verbose
+       Write-Verbose "Disabling TCPIP v6 for $ChosenAdapterName - $ChosenAdapterInterfaceDescription" -Verbose
+       Disable-NetAdapterBinding -Name $ChosenAdapterName -ComponentID "ms_tcpip6"
+       Write-Verbose "Confirming TCPIP Settings for $ChosenAdapterName - $ChosenAdapterInterfaceDescription" -Verbose
+       Get-NetIPAddress -InterfaceAlias $ChosenAdapterName  -AddressFamily IPv4
+       Write-Verbose "Outputting and Saving TCPIP Settings for $ChosenAdapterName - $ChosenAdapterInterfaceDescription to a log file" -Verbose
+       Get-NetIPAddress -InterfaceAlias $ChosenAdapterName  -AddressFamily IPv4 | Out-File $NetLogFile
+       Show-MainMenu
         }
   '5' { cls
         $mssettings = "ms-settings:"
