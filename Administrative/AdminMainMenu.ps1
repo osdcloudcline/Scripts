@@ -56,7 +56,15 @@ do
         Invoke-Expression $($Drivers.Content)
         }
   '3' { cls
-       
+        $REGQuestion = Read-Host -Prompt 'Do you want to integrate for a Client OS or Server OS?'
+        If(($REGQuestion -eq "Client") -or ($REGQuestion -eq "client")){
+        $ClientRegistry = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1")
+        Invoke-Expression $($ClientRegistry.Content)
+        }
+        ElseIf(($REGQuestion -eq "Server") -or ($REGQuestion -eq "server")){
+        $ServerRegistry = Invoke-WebRequest("")
+        Invoke-Expression $($ServerRegistry.Content)
+        }
         }
   '4' { cls
         
