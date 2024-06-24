@@ -1,10 +1,15 @@
 Write-Host "Beginning System Configuration..." -ForegroundColor Cyan
 
 
-Write-Verbose "Step 1 - PowerShell Modules..." -Verbose
+Write-Verbose "Step 1 - Part 1 - PowerShell 5.1 Modules..." -Verbose 
 
-$PSModules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1")
-Invoke-Expression $($PSModules.Content)
+$PS5Modules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1")
+Invoke-Expression $($PS5Modules.Content)
+
+Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose 
+
+$PS7Modules = Invoke-WebRequest("")
+Invoke-Expression $($PS7Modules.Content)
 
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
 $ServerRegistry = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1")
