@@ -8,7 +8,7 @@ Invoke-Expression $($PS5Modules.Content)
 
 Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose 
 
-$PS7Modules = Invoke-WebRequest("")
+$PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1")
 Invoke-Expression $($PS7Modules.Content)
 
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
