@@ -62,7 +62,7 @@ do
         Invoke-Expression $($ClientRegistry.Content)
         }
         ElseIf(($REGQuestion -eq "Server") -or ($REGQuestion -eq "server")){
-        $ServerRegistry = Invoke-WebRequest("")
+        $ServerRegistry = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Server%20Operating%20System/ServerRegistry.ps1")
         Invoke-Expression $($ServerRegistry.Content)
         }
         }
