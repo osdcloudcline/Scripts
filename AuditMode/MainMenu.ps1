@@ -29,7 +29,8 @@ do
         Invoke-Expression $($Clients.Content)
         }
   '2'{cls
-
+        $Servers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureServers.ps1")
+        Invoke-Expression $($Servers.Content)
         }
   '3' { cls
         Show-SoftwareMainMenu
