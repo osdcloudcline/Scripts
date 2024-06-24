@@ -7,3 +7,6 @@ $PSModules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/ma
 Invoke-Expression $($PSModules.Content)
 
 Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
+$ServerRegistry = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1")
+Invoke-Expression $($ServerRegistry.Content)
+
