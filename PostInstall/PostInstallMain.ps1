@@ -36,11 +36,11 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($Debloat.Content)
      }
  '4'{cls
-      $ClientFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/CORPORATE.ps1")
+      $ClientFeatures = Invoke-WebRequest ("")
       Invoke-Expression $($ClientFeatures.Content)
     }
  '5'{cls
-      $ServerRolesFeatures = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/VDI.ps1")
+      $ServerRolesFeatures = Invoke-WebRequest ("")
       Invoke-Expression $($ServerRolesFeatures.Content)
     }
  '6'{cls
