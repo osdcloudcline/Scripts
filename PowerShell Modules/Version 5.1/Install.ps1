@@ -564,27 +564,34 @@ Start-Sleep -Seconds 5
 Write-Host
 
 $OEMManufacturer = (Get-CimInstance -Class Win32_ComputerSystemProduct).Vendor
+$PCModel = (Get-CimInstance -Class Win32_ComputerSystem).Model
 
 Write-Host "Determining PC System Vendor..." -ForegroundColor Cyan
 If($OEMManufacturer -eq "Dell"){
+Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
 $Dell = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Dell.ps1")
 Invoke-Expression $($Dell.Content)
 }
 ElseIf($OEMManufacturer -eq "HP"){
+Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
 $HP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/HP/HP.ps1")
 Invoke-Expression $($HP.Content)
 }
 ElseIf($OEMManufacturer -eq "ASUS"){
+Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
 $ASUS = Invoke-WebReques("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ASUS/ASUS.ps1")
 Invoke-Expression $($ASUS.Content)
 }
 ElseIf($OEMManufacturer -eq "Acer"){
+Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
 $Acer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Acer/Acer.ps1")
 Invoke-Expression $($Acer.Content)
 }
 ElseIf($OEMManufacturer -eq "Lenovo"){
+Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
 $Lenovo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Lenovo%20/Lenovo.ps1")
 Invoke-Expression $($Lenovo.Content)
+}
 
 Write-Host "Determining Central Processing Unit..." -ForegroundColor Cyan
 
