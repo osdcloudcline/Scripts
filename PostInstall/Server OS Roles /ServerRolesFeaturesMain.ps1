@@ -87,7 +87,7 @@ do
   {
 
   '1' { cls
-        Show-ServerRoles
+        Show-ServerRolesMenu
         }
   '2' { cls
         
@@ -99,7 +99,7 @@ do
     until ($selection -eq '3'){exit}
     }
 
-Function Show-ServerRoles(){
+Function Show-ServerRolesMenu(){
    [CmdletBinding()]
    param(
    [string]$Title = 'Operating System Administration & Deployment - Main Menu',
@@ -139,7 +139,13 @@ do
   {
 
   '1' { cls
-        
+        $ADCSLog = "C:\Logs\Roles\ADCS.log'
+        $ADCS = "Active Directory Certificate Services"
+        Start-Transcript $ADCSLog
+        Write-Verbose "Installing $ADCS..." -Verbose
+        Get-WindowsFeature -Name AD-Certificate | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '2' { cls
         
