@@ -76,11 +76,62 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. Add Server Roles"
-Write-Host " 2. Add Server Featuress"
-Write-Host " 3. Return to Main Menu"
-Write-Host " 4. Exit PowerShell"
+Write-Host " 1. Add Server Roles and Features"
+Write-Host " 2. Return to Main Menu"
+Write-Host " 3. Exit PowerShell"
 
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+        Show-ServerRoles
+        }
+  '2' { cls
+        
+        }
+  '3' {exit
+      }
+    }
+    }
+    until ($selection -eq '3'){exit}
+    }
+
+Function Show-ServerRoles(){
+   [CmdletBinding()]
+   param(
+   [string]$Title = 'Operating System Administration & Deployment - Main Menu',
+   [string]$Question = 'What type of role do you want to install?'
+   )
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Active Directory Certificates Services"
+Write-Host " 2. Active Directory Domain Services"
+Write-Host " 3. Active Directory Federation Services"
+Write-Host " 4. Active Directory LDS Services"
+Write-Host " 5. Active Directory Rights Management Services"
+Write-Host " 6. Device Health Attestation"
+Write-Host " 7. DHCP Server"
+Write-Host " 8. DNS Server"
+Write-Host " 9. Fax Server"
+Write-Host " 10. File and Storage Services"
+Write-Host " 11. Host Guardian Services"
+Write-Host " 12. Hyper-V"
+Write-Host " 13. Network Controller"
+Write-Host " 14. Network Policy and Access Services"
+Write-Host " 15. Print and Document Services"
+Write-Host " 16. Remote Access Server"
+Write-Host " 17. Remote Desktop Services"
+Write-Host " 18. Volume Activation Services"
+Write-Host " 19. IIS Web Server"
+Write-Host " 20. Windows Deployment Server Services"
+Write-Host " 21. Windows Server Update Server Services"
+Write-Host " 22. Install OS Pre-Reqs, System Software and Pre-Reqs for SQL/Exchange/MECM Server"
+Write-Host " 23. Return to Main Menu"
+Write-Host " 24. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -96,5 +147,69 @@ do
   '3' { cls
         
         }
-  '4' {exit
+  '4' {
       }
+  '5' { cls
+        
+        }
+  '6' { cls
+        
+        }
+  '7' { cls
+        
+        }
+  '8' {
+      }
+  '9' { cls
+        
+        }
+  '10' { cls
+        
+        }
+  '11' { cls
+        
+        }
+  '12' {
+      }
+  '13' { cls
+        
+        }
+  '14' { cls
+        
+        }
+  '15' { cls
+        
+        }
+  '16' {
+      }
+  '17' { cls
+        
+        }
+  '18' { cls
+        
+        }
+  '19' { cls
+        
+        }
+  '20' {
+      }
+  '21' { cls
+        
+        }
+  '22' { cls
+        
+        }
+  '23' { cls
+        
+        }
+  '24' {exit}
+    }
+    }
+    until ($selection -eq '24'){exit}
+    }
+
+
+
+
+
+}
