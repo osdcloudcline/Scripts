@@ -50,7 +50,7 @@ $OSDModule6 = "OSD CloudAzure"
 $OSDModule7 = "OSD Update"
 $OSDModule8 = "Autopilot OOBE"
 $OSDModule9 = "OSD Drivers"
-$OSDModule10 ="OSD Deploy"
+$OSDModule10 = "OSD Deploy"
 $OSDModule11 = "OSD Software"
 $OSDModule12 = "OSD Catalog"
 $OSDModule13 = "OSD Progress"
@@ -574,6 +574,29 @@ ElseIf($OEMManufacturer -eq "HP"){
 $HP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/HP/HP.ps1")
 Invoke-Expression $($HP.Content)
 }
+ElseIf($OEMManufacturer -eq "ASUS"){
+$ASUS = Invoke-WebReques("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ASUS/ASUS.ps1")
+Invoke-Expression $($ASUS.Content)
+}
+ElseIf($OEMManufacturer -eq "Acer"){
+$Acer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Acer/Acer.ps1")
+Invoke-Expression $($Acer.Content)
+}
+ElseIf($OEMManufacturer -eq "Lenovo"){
+$Lenovo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Lenovo%20/Lenovo.ps1")
+Invoke-Expression $($Lenovo.Content)
 
+Write-Host "Determining Central Processing Unit..." -ForegroundColor Cyan
+
+$CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
+
+If($CPU -eq "AuthenticAMD"){
+$AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/AMD%20/AMD.ps1")
+Invoke-Expression $($AMD.Content)
+}
+ElseIf($CPU -eq "GenuineIntel"){
+$Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Intel/Intel.ps1")
+Invoke-Expression $($Intel.Content)
+}
 Stop-Transcript 
 
