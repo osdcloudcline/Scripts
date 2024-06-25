@@ -72,4 +72,29 @@ Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
 Write-Host 
 
+pause
+Clear-Host
 
+Write-Host "======= $Title ======"
+Write-Host " 1. Add Server Roles"
+Write-Host " 2. Add Server Featuress"
+Write-Host " 3. Return to Main Menu"
+Write-Host " 4. Exit PowerShell"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+
+  '1' { cls
+        
+        }
+  '2' { cls
+        
+        }
+  '3' { cls
+        
+        }
+  '4' {exit
+      }
