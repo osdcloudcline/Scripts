@@ -44,7 +44,7 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($ServerRolesFeatures.Content)
     }
  '6'{cls
-      $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+      $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PC%20Name/ChangePCName.ps1")
       Invoke-Expression $($ChangePCName.Content)
  }
  '7'{$Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
