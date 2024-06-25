@@ -6,6 +6,8 @@ Get-Date
 ### PS Module Group Names ##
 ############################
 
+$PMGroup = "Operating System Package Managers"
+
 $OSDGroup1 = "OSD"
 $OSDGroup2 = "OSD: Configuration"
 $OSDGroup3 = "OSD: Cloud"
@@ -33,10 +35,11 @@ $OEMManufacturer5 = "VMWare, Inc"
 ## PS Modules to be installed ###
 #################################
 
-$PSModule9 = "NuGet"
-$PSModule10 = "OneGet"
-$PSModule11 = "WinGet"
-$PSModule12 = "Program Management Module"
+$SYSModule1 = "NuGet"
+$SYSModule2 = "OneGet"
+$SYSModule3 = "WinGet"
+$SYSModule4 = "Program Management"
+$SYSModule5 = "Choco"
 
 $OSDModule1 = "OSD"
 $OSDModule2 = "OSD Builder"
@@ -121,6 +124,57 @@ Write-Host
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
 Write-Host
 Write-Host
+
+# Package Manager Modules
+
+Write-Host "Installing $PMGroup Package Providers and Modules..." -ForegroundColor Cyan
+Write-Host
+Write-Host
+Write-Verbose "Installing: $SYSModule1..." -Verbose
+Install-PackageProvider -Name NuGet -Force
+Start-Sleep -Seconds 5
+Install-Module -Name NuGet -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name NuGet -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+Write-Verbose "Installing: $SYSModule2..." -Verbose
+Install-PackageProvider -Name PackageManagement -Force
+Start-Sleep -Seconds 5
+Install-Module -Name PackageManagement -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name PackageManagement -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+Write-Verbose "Installing: $SYSModule3..." -Verbose
+Install-PackageProvider -Name WinGet -Force
+Start-Sleep -Seconds 5
+Install-Module -Name WinGet -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name WinGet -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+Write-Verbose "Installing: $SYSModule4..." -Verbose
+Install-PackageProvider -Name ProgramManagement -Force
+Start-Sleep -Seconds 5
+Install-Module -Name ProgramManagement -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name ProgramManagement -Force
+Start-Sleep -Seconds 5
+Write-Host
+
+Write-Verbose "Installing: $SYSModule5..." -Verbose
+Install-PackageProvider -Name Choco -Force
+Start-Sleep -Seconds 5
+Install-Module -Name Choco -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Import-Module -Name Choco -Force
+Start-Sleep -Seconds 5
+Write-Host
+
 
 # MAIN OSD PowerShell Modules
 
@@ -508,6 +562,18 @@ Start-Sleep -Seconds 5
 Import-Module -Name 7Zip4Powershell -Force
 Start-Sleep -Seconds 5
 Write-Host
+
+$OEMManufacturer = (Get-CimInstance -Class Win32_ComputerSystemProduct).Vendor
+
+Write-Host "Determining PC System Vendor..." -ForegroundColor Cyan
+If($OEMManufacturer -eq "Dell"){
+$Dell = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Dell.ps1")
+Invoke-Expression $($Dell.Content)
+}
+ElseIf($OEMManufacturer -eq "HP"){
+$HP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/HP/HP.ps1")
+Invoke-Expression $($HP.Content)
+}
 
 Stop-Transcript 
 
