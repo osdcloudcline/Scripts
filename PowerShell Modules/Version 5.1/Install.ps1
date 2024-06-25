@@ -592,12 +592,12 @@ $CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
 $CPUName = (Get-CimInstance -Class Win32_Processor).Name
 
 If($CPU -eq "AuthenticAMD"){
-Write-Host '     This PC has an $CPU $CPUName installed                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host      "This PC has an $CPU $CPUName" -ForegroundColor DarkBlue -BackgroundColor White
 $AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/AMD%20/AMD.ps1")
 Invoke-Expression $($AMD.Content)
 }
 ElseIf($CPU -eq "GenuineIntel"){
-Write-Host '     This PC has an $CPU $CPUName installed                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host      "This PC has an $CPU $CPUName" -ForegroundColor DarkBlue -BackgroundColor White
 $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Intel/Intel.ps1")
 Invoke-Expression $($Intel.Content)
 }
