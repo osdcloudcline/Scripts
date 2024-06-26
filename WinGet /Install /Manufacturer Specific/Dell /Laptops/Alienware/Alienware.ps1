@@ -59,6 +59,7 @@ $AWDD3URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install
 # Dell Downloads Destination Directory
 
 $DellAWDownloads = "C:\OSDCloud\downloads\Dell\Alienware\Control Center"
+$DellAWDownloads1 = "C:\OSDCloud\downloads\Dell\Alienware\Digital Delivery"
 
 Write-Host "Processing: $AW1 File 1 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC1URL -DestinationDirectory $DellAWDownloads
@@ -177,9 +178,75 @@ Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.035
 Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.036" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
 Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.037" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
 Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.038" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
-Write-Host "Completed Processing: $AW1" -ForegroundColor Cyan
 
+Write-Host "Deleting all Compressed Files..." -ForegroundColor Yellow
+
+Remove-Item -Path "$DellAWDownloads\*.7z.001" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.002" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.003" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.004" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.005" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.006" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.007" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.008" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.009" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.010" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.011" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.012" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.013" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.014" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.015" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.016" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.017" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.018" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.019" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.020" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.021" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.022" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.023" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.024" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.025" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.026" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.027" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.028" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.029" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.030" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.031" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.032" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.033" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.034" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.035" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.036" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads\*.7z.037" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads\*.7z.038" -Force -Recurse 
+Write-Host
+Write-Host "Completed Processing: $AW1" -ForegroundColor Cyan
+Write-Host
+
+Write-Host "Processing: $AW2 File 1 of 3" -ForegroundColor Cyan
+Save-WebFile -SourceUrl $AWDD1URL -DestinationDirectory $DellAWDownloads1
+Write-Host "Processing: $AW2 File 2 of 3" -ForegroundColor Cyan
+Save-WebFile -SourceUrl $AWDD2URL -DestinationDirectory $DellAWDownloads1
+Write-Host "Processing: $AW2 File 3 of 3" -ForegroundColor Cyan
+Save-WebFile -SourceUrl $AWDD3URL -DestinationDirectory $DellAWDownloads1
+Write-Host 
+Write-Host "Processing: $AW2 File Extraction" -ForegroundColor Cyan
+Write-Host
+Expand-7Zip -ArchiveFileName "$DellAWDownloads1\AlienwareDigitalDelivery.7z.001" -TargetPath $DellAWDownloads1 -WarningAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads1\AlienwareDigitalDelivery.7z.002" -TargetPath $DellAWDownloads1 -WarningAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads1\AlienwareDigitalDelivery.7z.003" -TargetPath $DellAWDownloads1 -WarningAction SilentlyContinue 
+Write-Host 
+Write-Host "Deleting all Compressed Files..." -ForegroundColor Yellow
+Write-Host
+Remove-Item -Path "$DellAWDownloads1\*.7z.001" -Force -Recurse
+Remove-Item -Path "$DellAWDownloads1\*.7z.002" -Force -Recurse 
+Remove-Item -Path "$DellAWDownloads1\*.7z.003" -Force -Recurse
+Write-Host
+Write-Host "Completed Processing: $AW2" -ForegroundColor Cyan
+Write-Host
 Write-Host "Determining Central Processing Unit..." -ForegroundColor Cyan
+
+
 
 $CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
 $CPUName = (Get-CimInstance -Class Win32_Processor).Name
