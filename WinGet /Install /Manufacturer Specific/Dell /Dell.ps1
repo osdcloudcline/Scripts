@@ -110,7 +110,7 @@ Invoke-Expression $($GSeries.Content)
 }
 ElseIf($PCModel -lIKE "*Inspiron*"){
 Write-Verbose "Downloading Inspiron-related Dell Software..." -Verbose
-$Inspiron = Invoke-WebRequest("")
+$Inspiron = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Inspiron/Inspiron.ps1")
 Invoke-Expression $($Inspiron.Content)
 }
 ElseIf($PCModel -lIKE "*Latitude*"){
