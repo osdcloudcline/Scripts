@@ -8,7 +8,7 @@ Write-Host '    Dell Digital Delivery Manager                      ' -Foreground
 
 
 $AlienwareCC1 = "https://dl.dell.com/FOLDER11313113M/1/Alienware-Command-Center-Application-Full-Installer_09KMY_WIN_6.2.7.0_A00.EXE"
-$AlienwareCC2 = ""
+$AlienwareCC2 = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Alienware/AWCCInstallationManager.exe"
 $DellDigitalDelivery = "https://dl.dell.com/FOLDER11313029M/1/Dell-Alienware-Digital-Delivery-Application_PM4WF_WIN_5.0.86.0_A26.EXE"
 
 
