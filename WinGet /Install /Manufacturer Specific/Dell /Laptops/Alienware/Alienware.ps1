@@ -7,11 +7,52 @@ Write-Host '    Dell Digital Delivery Manager                      ' -Foreground
 
 
 
-$AlienwareCC1 = "https://dl.dell.com/FOLDER11313113M/1/Alienware-Command-Center-Application-Full-Installer_09KMY_WIN_6.2.7.0_A00.EXE"
-$AlienwareCC2 = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Alienware/AWCCInstallationManager.exe"
-$DellDigitalDelivery = "https://dl.dell.com/FOLDER11313029M/1/Dell-Alienware-Digital-Delivery-Application_PM4WF_WIN_5.0.86.0_A26.EXE"
+# Alienware Command Center - Full Installer
 
+$AWCC1URL = ""
+$AWCC2URL = ""
+$AWCC3URL = ""
+$AWCC4URL = ""
+$AWCC5URL = ""
+$AWCC6URL = ""
+$AWCC7URL = ""
+$AWCC8URL = ""
+$AWCC9URL = ""
+$AWCC10URL = ""
+$AWCC11URL = ""
+$AWCC12URL = ""
+$AWCC13URL = ""
+$AWCC14URL = ""
+$AWCC15URL = ""
+$AWCC16URL = ""
+$AWCC17URL = ""
+$AWCC18URL = ""
+$AWCC19URL = ""
+$AWCC20URL = ""
+$AWCC21URL = ""
+$AWCC22URL = ""
+$AWCC23URL = ""
+$AWCC24URL = ""
+$AWCC25URL = ""
+$AWCC26URL = ""
+$AWCC27URL = ""
+$AWCC28URL = ""
+$AWCC29URL = ""
+$AWCC30URL = ""
+$AWCC31URL = ""
+$AWCC32URL = ""
+$AWCC33URL = ""
+$AWCC34URL = ""
+$AWCC35URL = ""
+$AWCC36URL = ""
+$AWCC37URL = ""
+$AWCC38URL = ""
 
+# Dell Alienware Digital Delivery 
+
+$AWDD1URL =
+$AWDD2URL =
+$AWDD3URL =
 
 
 Write-Host "Determining Central Processing Unit..." -ForegroundColor Cyan
