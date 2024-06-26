@@ -98,4 +98,38 @@ Write-Verbose "Downloading Alienware-related Dell software..." -Verbose
 $Alienware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Alienware/Alienware.ps1")
 Invoke-Expression $($Alienware.Content)
 }
-
+ElseIf($PCModel -lIKE "*Copilot*"){
+Write-Verbose "Downloading Copilot + PC-related Dell Software..." -Verbose
+$Copilot = Invoke-WebRequest("")
+Invoke-Expression $($Copilot.Content)
+}
+ElseIf($PCModel -lIKE "*G-Series*"){
+Write-Verbose "Downloading G-Series PC-related Dell Software..." -Verbose
+$GSeries = Invoke-WebRequest("")
+Invoke-Expression $($GSeries.Content)
+}
+ElseIf($PCModel -lIKE "*Inspiron*"){
+Write-Verbose "Downloading Inspiron-related Dell Software..." -Verbose
+$Inspiron = Invoke-WebRequest("")
+Invoke-Expression $($Inspiron.Content)
+}
+ElseIf($PCModel -lIKE "*Latitude*"){
+Write-Verbose "Downloading Latitude-related Dell Software..." -Verbose
+$Latitude = Invoke-WebRequest("")
+Invoke-Expression $($Latitude.Content)
+}
+ElseIf($PCModel -lIKE "*Precision Mobile Workstation*"){
+Write-Verbose "Downloading Precision Mobile Workstation-related Dell Software..." -Verbose
+$PrecisionMobileWorkstation = Invoke-WebRequest("")
+Invoke-Expression $($PrecisionMobileWorkstation.Content)
+}
+ElseIf($PCModel -lIKE "*XPS*"){
+Write-Verbose "Downloading XPS-related Dell Software..." -Verbose
+$XPS = Invoke-WebRequest("")
+Invoke-Expression $($XPS.Content)
+}
+ElseIf($PCModel -lIKE "*Optiplex*"){
+Write-Verbose "Downloading Optiplex Micro Form Factor-related Dell Software..." -Verbose
+$OptiplexMFF = Invoke-WebRequest("")
+Invoke-Expression $($OptiplexMFF.Content)
+}
