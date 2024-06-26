@@ -90,10 +90,12 @@ Write-Verbose "Installing: $DellSoftware5...OEM Software No: 5 of 5" -Verbose
 winget install --id 9PPRLNT023WC --accept-source-agreements  --accept-source-agreements --force
 
 $PCModel = (Get-CimInstance -Class Win32_ComputerSystem).Model
+$CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
+$CPUName = (Get-CimInstance -Class Win32_Processor).Name
 
-If($PCModel -like "*Alienware*"){
+If(($PCModel -like "*Alienware*") -and ($CPU -eq "AuthenticAMD")){
 Write-Verbose "Downloading Alienware-related Dell software..." -Verbose
-$Alienware = Invoke-WebRequest("")
+$Alienware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Alienware/Alienware.ps1")
 Invoke-Expression $($Alienware.Content)
 }
 
