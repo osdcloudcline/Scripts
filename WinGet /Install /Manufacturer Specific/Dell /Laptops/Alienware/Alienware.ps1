@@ -60,86 +60,123 @@ $AWDD3URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install
 
 $DellAWDownloads = "C:\OSDCloud\downloads\Dell\Alienware\Control Center"
 
-Write-Host "Processing: $AW1 File Downloads" -ForegroundColor Cyan
+Write-Host "Processing: $AW1 File 1 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC1URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 2 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC2URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 3 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC3URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 4 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC4URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 5 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC5URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 6 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC6URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 7 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC7URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 8 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC8URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 9 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC9URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 10 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC10URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 11 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC11URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 12 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC12URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 13 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC13URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 14 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC14URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 15 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC15URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 16 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC16URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 17 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC17URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 18 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC18URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 19 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC19URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 20 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC20URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 21 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC21URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 22 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC22URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 23 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC23URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 24 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC24URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 25 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC25URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 26 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC26URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 27 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC27URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 28 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC28URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 29 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC29URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 30 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC30URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 31 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC31URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 32 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC32URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 33 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC33URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 34 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC34URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 35 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC35URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 36 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC36URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 37 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC37URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
+Write-Host "Processing: $AW1 File 38 of 38" -ForegroundColor Cyan
 Save-WebFile -SourceUrl $AWCC38URL -DestinationDirectory $DellAWDownloads
-Start-Sleep -Seconds 6
 Write-Host 
 Write-Host "Processing: $AW1 File Extraction" -ForegroundColor Cyan
-
+Write-Host 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.001" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.002" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.003" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue 
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.004" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.005" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.006" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.007" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.008" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.009" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.010" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.011" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.012" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.013" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.014" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.015" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.016" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.017" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.018" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.019" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.020" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.021" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.022" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.023" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.024" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.025" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.026" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.027" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.028" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.029" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.030" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.031" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.032" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.033" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.034" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.035" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.036" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.037" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
+Expand-7Zip -ArchiveFileName "$DellAWDownloads\DellAlienwareCommandCenter.7z.038" -TargetPath $DellAWDownloads -WarningAction SilentlyContinue
 Write-Host "Completed Processing: $AW1" -ForegroundColor Cyan
 
 Write-Host "Determining Central Processing Unit..." -ForegroundColor Cyan
