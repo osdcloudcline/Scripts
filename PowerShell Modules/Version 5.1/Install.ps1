@@ -579,7 +579,7 @@ Invoke-Expression $($HP.Content)
 }
 ElseIf($OEMManufacturer -eq "ASUS"){
 Write-Host      "This PC is $OEMManufacturer $PCModel" -ForegroundColor DarkBlue -BackgroundColor White
-$ASUS = Invoke-WebReques("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ASUS/ASUS.ps1")
+$ASUS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ASUS/ASUS.ps1")
 Invoke-Expression $($ASUS.Content)
 }
 ElseIf($OEMManufacturer -eq "Acer"){
