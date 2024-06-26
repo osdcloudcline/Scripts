@@ -120,7 +120,7 @@ Invoke-Expression $($Latitude.Content)
 }
 ElseIf($PCModel -lIKE "*Precision Mobile Workstation*"){
 Write-Verbose "Downloading Precision Mobile Workstation-related Dell Software..." -Verbose
-$PrecisionMobileWorkstation = Invoke-WebRequest("")
+$PrecisionMobileWorkstation = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Dell%20/Laptops/Precision%20Mobile%20Workstations/PMW.ps1")
 Invoke-Expression $($PrecisionMobileWorkstation.Content)
 }
 ElseIf($PCModel -lIKE "*XPS*"){
