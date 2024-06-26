@@ -13,6 +13,10 @@ $DellModule12 = "Dell Support Info"
 $DellModule13 = "Get Dell Driver Packs"
 $DellModule14 = "Dell BIOS Driver"
 
+
+Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Import-Module -Name OSD -Force
+
 $MfrGroup1 = "Dell PowerShell"
 
 
@@ -84,3 +88,12 @@ Write-Verbose "Installing: $DellSoftware4...OEM Software No: 4 of 5" -Verbose
 winget install --id Dell.CommandConfigure --accept-source-agreements  --accept-source-agreements --force
 Write-Verbose "Installing: $DellSoftware5...OEM Software No: 5 of 5" -Verbose
 winget install --id 9PPRLNT023WC --accept-source-agreements  --accept-source-agreements --force
+
+$PCModel = (Get-CimInstance -Class Win32_ComputerSystem).Model
+
+If($PCModel -like "*Alienware*"){
+Write-Verbose "Downloading Alienware-related Dell software..." -Verbose
+$Alienware = Invoke-WebRequest("")
+Invoke-Expression $($Alienware.Content)
+}
+
