@@ -139,7 +139,8 @@ do
   {
 
   '1' { cls
-        
+         $ServerRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Server%20OS%20Roles%20/InstallServerRSAT.ps1")
+         Invoke-Expression $($ServerRSAT.Content)
         }
   '2' { cls
         $ADDSLog = "C:\Logs\Server Roles\Install\ADDS.log"
