@@ -70,7 +70,6 @@ Write-Host "Today is:" "$Date"
 Write-Host
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
-Write-Host 
 
 pause
 Clear-Host
@@ -108,12 +107,12 @@ Function Show-ServerRolesMenu(){
 cls
 
 Write-Host "======= $Title ======"
-Write-Host " 1. Active Directory Certificates Services"
+Write-Host " 1. Windows Server RSAT Tools"
 Write-Host " 2. Active Directory Domain Services"
 Write-Host " 3. Active Directory Federation Services"
 Write-Host " 4. Active Directory LDS Services"
 Write-Host " 5. Active Directory Rights Management Services"
-Write-Host " 6. Application Server"
+Write-Host " 6. Active Directory Certificates Services"
 Write-Host " 7. Device Health Attestation"
 Write-Host " 8. DHCP Server"
 Write-Host " 9. DNS Server"
@@ -140,77 +139,12 @@ do
   {
 
   '1' { cls
-        $ADCSLog = "C:\Logs\Server Roles\Install\ADCS.log"
-        $ADCS = "Active Directory Certificate Services"
-        $RSAT = "Windows Server 2022/2025 RSAT Tools"
-        Start-Transcript $ADCSLog
-        Write-Verbose "Installing $ADCS..." -Verbose
-        Write-Host
-        Get-WindowsFeature -Name AD-Certificate | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Cert-Authority | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Enroll-Web-Pol | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Enroll-Web-Svc | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Web-Enrollment | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Device-Enrollment | Install-WindowsFeature
-        Get-WindowsFeature -Name ADCS-Online-Cert | Install-WindowsFeature
-        Write-Host
-        Write-Verbose "Installing $RSAT..." -Verbose
-        Get-WindowsFeature -Name RSAT | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Feature-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Bits-Server | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-DataCenterBridging-LLDP-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Clustering | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Clustering-Mgmt | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Clustering-PowerShell | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Clustering-AutomationServer | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Clustering-CmdInterface | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-NLB | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Shielded-VM-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-SNMP | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-SMS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Storage-Replica| Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-System-Insights | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-WINS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Role-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-AD-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-AD-PowerShell | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADDS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-AD-AdminCenter | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADDS-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADLDS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Hyper-V-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RDS-Tools | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RDS-Gateway | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RDS-Licebsing-Diagnosis-UI | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RDS-Licebsing-UI | Install-WindowsFeature
-        Get-WindowsFeature -Name UpdateServices-RSAT | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADCS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADCS-Mgmt | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Online-Responder | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-ADRMS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-DHCP | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-DNS-Server | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Fax | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-File-Services | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-DFS-Mgmt-Con | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-FSRM-Mgmt | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-NFS-Admin | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-NetworkController | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-NPAS | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-Print-Services | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RemoteAccess | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RemoteAccess-Mgmt | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-RemoteAccess-PowerShell | Install-WindowsFeature
-        Get-WindowsFeature -Name RSAT-VA-Tools | Install-WindowsFeature
         
-        Write-Host
-        Stop-Transcript
-        Show-ServerRolesMenu
         }
   '2' { cls
         $ADDSLog = "C:\Logs\Server Roles\Install\ADDS.log"
         $ADCS = "Active Directory Domain Services"
-        $RSAT = "Windows Server 2022/2025 RSAT Tools"
+       
         
         Start-Transcript $ADDSLog
         Write-Host
@@ -221,8 +155,6 @@ do
         Install-Module -Name ADDSDeployment -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name ADDSDeployment -Force
         Write-Host
-        Write-Verbose "Installing $RSAT..." -Verbose
-        
         Stop-Transcript
         Show-ServerRolesMenu
         }
@@ -256,7 +188,22 @@ do
         Show-ServerRolesMenu
         }
    '6' { cls
-        
+        $ADCSLog = "C:\Logs\Server Roles\Install\ADCS.log"
+        $ADCS = "Active Directory Certificate Services"
+        Start-Transcript $ADCSLog
+        Write-Verbose "Installing $ADCS..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name AD-Certificate | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Cert-Authority | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Enroll-Web-Pol | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Enroll-Web-Svc | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Web-Enrollment | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Device-Enrollment | Install-WindowsFeature
+        Get-WindowsFeature -Name ADCS-Online-Cert | Install-WindowsFeature
+        Write-Host
+        Write-Host
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '7' { cls
         $DHALog = "C:\Logs\Server Roles\Install\DHA.log"
