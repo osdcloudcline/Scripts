@@ -12,7 +12,7 @@ $PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/ma
 Invoke-Expression $($PS7Modules.Content)
 
 Write-Verbose "Step 2 - Windows Server RSAT Tools..." -Verbose
-$ServerRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1")
+$ServerRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Server%20OS%20Roles%20/InstallServerRSAT.ps1")
 Invoke-Expression $($ServerRSAT.Content)
 
 Write-Verbose "Step 3 - Merging Registry Entries..." -Verbose
