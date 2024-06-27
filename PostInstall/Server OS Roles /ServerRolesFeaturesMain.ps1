@@ -293,18 +293,78 @@ do
         Show-ServerRolesMenu
         }
   '16' { cls
-        
+        $PrintServicesLog = "C:\Logs\Server Roles\Install\PrintServices.log"
+        $Print = "Printer and Document Server Services"
+        Start-Transcript $PrintServicesLog
+        Write-Verbose "Installing $Print..." -Verbose
+        Get-WindowsFeature -Name Print-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name Print-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name Print-Internet | Install-WindowsFeature
+        Get-WindowsFeature -Name Print-LPD-Service | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
-  '17' {
+  '17' {cls
+        $RemoteAccessLog = "C:\Logs\Server Roles\Install\RemoteAccess.log"
+        $RemoteAccess = "Remote Access Server Services"
+        Start-Transcript $RemoteAccessLog
+        Write-Verbose "Installing $RemoteAccess..." -Verbose
+        Get-WindowsFeature -Name RemoteAccess | Install-WindowsFeature
+        Get-WindowsFeature -Name DirectAccess-VPN | Install-WindowsFeature
+        Get-WindowsFeature -Name Routing | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Application-Proxy | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
       }
   '18' { cls
-        
+        $RDSLog = "C:\Logs\Server Roles\Install\RDS.log"
+        $RDS = "Remote Desktop Server Services"
+        Start-Transcript $RDSLog
+        Write-Verbose "Installing $RDS..." -Verbose
+        Get-WindowsFeature -Name Remote-Desktop-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-Connection-Broker | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-Gateway | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-Licensing | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-RD-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-Virtualization | Install-WindowsFeature
+        Get-WindowsFeature -Name RDS-Web-Access | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '19' { cls
-        
+        $VolumeLog = "C:\Logs\Server Roles\Install\VolumeActivation.log"
+        $VolumeActivation = "Volume Activation Server Services"
+        Start-Transcript $VolumeLog
+        Write-Verbose "Installing $VolumeActivation..." -Verbose
+        Get-WindowsFeature -Name VolumeActivation | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '20' { cls
-        
+        $WebServerLog = "C:\Logs\Server Roles\Install\WebServer.log"
+        $WebServer = "IIS Web Server Services"
+        Start-Transcript $WebServerLog
+        Write-Verbose "Installing $WebServer..." -Verbose
+        Get-WindowsFeature -Name Web-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-WebServer | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Common-Http | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Default-Doc | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Dir-Browsing | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Http-Errors | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Static-Content | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Http-Redirect | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-DAV-Publishing | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Health | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Http-Logging | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Custom-Logging | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Log-Libraries  | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-ODBC-Logging | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Request-Monitor | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Http-Tracing | Install-WindowsFeature
+
+        Get-WindowsFeature -Name Web-Performance | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Stat-Compression | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Dyn-Compression | Install-WindowsFeature
         }
   '21' {
       }
