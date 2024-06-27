@@ -142,8 +142,10 @@ do
   '1' { cls
         $ADCSLog = "C:\Logs\Server Roles\Install\ADCS.log"
         $ADCS = "Active Directory Certificate Services"
+        $RSAT = "Windows Server 2022/2025 RSAT Tools"
         Start-Transcript $ADCSLog
         Write-Verbose "Installing $ADCS..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name AD-Certificate | Install-WindowsFeature
         Get-WindowsFeature -Name ADCS-Cert-Authority | Install-WindowsFeature
         Get-WindowsFeature -Name ADCS-Enroll-Web-Pol | Install-WindowsFeature
@@ -151,6 +153,34 @@ do
         Get-WindowsFeature -Name ADCS-Web-Enrollment | Install-WindowsFeature
         Get-WindowsFeature -Name ADCS-Device-Enrollment | Install-WindowsFeature
         Get-WindowsFeature -Name ADCS-Online-Cert | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $RSAT..." -Verbose
+        Get-WindowsFeature -Name RSAT | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Feature-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Bits-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-DataCenterBridging-LLDP-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Clustering | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Clustering-Mgmt | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Clustering-PowerShell | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Clustering-AutomationServer | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Clustering-CmdInterface | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-NLB | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Shielded-VM-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-SNMP | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-SMS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Storage-Replica| Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-System-Insights | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-WINS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Role-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-AD-Tools | Install-WindowsFeature
+
+        Get-WindowsFeature -Name RSAT-AD-PowerShell | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADDS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-AD-AdminCenter | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADDS-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADLDS | Install-WindowsFeature
+        
+        Write-Host
         Stop-Transcript
         Show-ServerRolesMenu
         }
@@ -353,6 +383,7 @@ do
         $WebMgmt = "IIS Web Server Management Tools Features"
         
         Start-Transcript $WebServerLog
+        Get-WindowsFeature -Name RDC | Install-WindowsFeature
         Write-Verbose "Installing $NET..." -Verbose
         Write-Host
         Get-WindowsFeature -Name NET-Framework-Features | Install-WindowsFeature
@@ -459,7 +490,16 @@ do
         Show-ServerRolesMenu
       }
   '22' { cls
-        
+        $WSUSLog = "C:\Logs\Server Roles\Install\WSUS.log"
+        $WSUS = "Windows Software Update Services"
+        Start-Transcript $WSUSLog
+        Write-Verbose "Installing $WSUS..." -Verbose
+        Get-WindowsFeature -Name UpdateServices | Install-WindowsFeature
+        Get-WindowsFeature -Name UpdateServices-WidDB | Install-WindowsFeature
+        Get-WindowsFeature -Name UpdateServices-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name UpdateServices-DB | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '23' { cls
         
