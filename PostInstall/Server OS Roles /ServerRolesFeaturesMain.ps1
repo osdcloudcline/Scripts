@@ -140,7 +140,7 @@ do
   {
 
   '1' { cls
-        $ADCSLog = "C:\Logs\Server Roles\ADCS.log'
+        $ADCSLog = "C:\Logs\Server Roles\ADCS.log"
         $ADCS = "Active Directory Certificate Services"
         Start-Transcript $ADCSLog
         Write-Verbose "Installing $ADCS..." -Verbose
@@ -155,7 +155,7 @@ do
         Show-ServerRolesMenu
         }
   '2' { cls
-        $ADDSLog = "C:\Logs\Server Roles\ADDS.log'
+        $ADDSLog = "C:\Logs\Server Roles\ADDS.log"
         $ADCS = "Active Directory Domain Services"
         Start-Transcript $ADDSLog
         Write-Verbose "Installing $ADDS..." -Verbose
@@ -167,7 +167,7 @@ do
         Show-ServerRolesMenu
         }
   '3' { cls
-        $ADFSLog = "C:\Logs\Server Roles\ADFS.log'
+        $ADFSLog = "C:\Logs\Server Roles\ADFS.log"
         $ADFS = "Active Directory Federation Services"
         Start-Transcript $ADFSLog
         Write-Verbose "Installing $ADFS..." -Verbose
@@ -185,7 +185,7 @@ do
         Show-ServerRolesMenu
       }
   '5' { cls
-        $ADRMSLog = "C:\Logs\Server Roles\ADRMS.log'
+        $ADRMSLog = "C:\Logs\Server Roles\ADRMS.log"
         $ADRMS = "Active Directory Rights Management Server Services"
         Start-Transcript $ADRMSLog
         Write-Verbose "Installing $ADRMS..." -Verbose
@@ -199,7 +199,7 @@ do
         
         }
   '7' { cls
-        $DHALog = "C:\Logs\Server Roles\DHA.log'
+        $DHALog = "C:\Logs\Server Roles\DHA.log"
         $DHA = "Device Health Attestation"
         Start-Transcript $DHALog
         Write-Verbose "Installing $DHA..." -Verbose
@@ -208,7 +208,7 @@ do
         Show-ServerRolesMenu
         }
   '8' { cls
-        $DHCPLog = "C:\Logs\Server Roles\DHCP.log'
+        $DHCPLog = "C:\Logs\Server Roles\DHCP.log"
         $DHCP = "DHCP Server"
         Start-Transcript $DHCPLog
         Write-Verbose "Installing $DHCP..." -Verbose
@@ -217,7 +217,7 @@ do
         Show-ServerRolesMenu
         }
   '9' {cls
-        $DNSLog = "C:\Logs\Server Roles\DNS.log'
+        $DNSLog = "C:\Logs\Server Roles\DNS.log"
         $DNS = "DNS Server"
         Start-Transcript $DNSLog
         Write-Verbose "Installing $DNS..." -Verbose
@@ -226,7 +226,7 @@ do
         Show-ServerRolesMenu
       }
   '10' { cls
-        $FaxLog = "C:\Logs\Server Roles\FaxServer.log'
+        $FaxLog = "C:\Logs\Server Roles\FaxServer.log"
         $FaxServer = "Fax Server"
         Start-Transcript $FaxLog
         Write-Verbose "Installing $FaxServer..." -Verbose
