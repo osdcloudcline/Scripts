@@ -101,7 +101,7 @@ do
 Function Show-ServerRolesMenu(){
    [CmdletBinding()]
    param(
-   [string]$Title = 'Operating System Administration & Deployment - Main Menu',
+   [string]$Title = 'Windows Server 2022/2025 Roles and Features - Main Menu',
    [string]$Question = 'What type of role do you want to install?'
    )
 cls
@@ -129,7 +129,7 @@ Write-Host " 19. Volume Activation Services"
 Write-Host " 20. IIS Web Server"
 Write-Host " 21. Windows Deployment Server Services"
 Write-Host " 22. Windows Server Update Server Services"
-Write-Host " 23. Install OS Pre-Reqs, System Software and Pre-Reqs for SQL/Exchange/MECM Server"
+Write-Host " 23. Add ALL Features and Roles needed for use as Workstation OS"
 Write-Host " 24. Return to Main Menu"
 Write-Host " 25. Exit PowerShell"
 do 
