@@ -343,10 +343,39 @@ do
   '20' { cls
         $WebServerLog = "C:\Logs\Server Roles\Install\WebServer.log"
         $WebServer = "IIS Web Server Services"
+        $NET = ".NET Framework 3.5, 4.5 and 4.8 Features"
+        $WebCommon = "IIS Web Server Common Features"
+        $WebHealth = "IIS Web Server Health Features"
+        $WebPerformance = "IIS Web Server Performance Features"
+        $WebSecurity = "IIS Web Server Security Features"
+        $WebApps = "IIS Web Server Application Dev Features"
+        $WebFTP = "IIS Web FTP Server Features"
+        $WebMgmt = "IIS Web Server Management Tools Features"
+        
         Start-Transcript $WebServerLog
+        Write-Verbose "Installing $NET..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name NET-Framework-Features | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-Framework-Core | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-HTTP-Activation | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-Non-HTTP-Activ | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-Framework-45-Features | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-Framework-45-Core | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-Framework-45-ASPNET | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-Services45 | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-HTTP-Activation45 | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-MSMQ-Activation45 | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-Pipe-Activation45 | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-TCP-Activation45 | Install-WindowsFeature
+        Get-WindowsFeature -Name NET-WCF-TCP-PortSharing45  | Install-WindowsFeature
+        Write-Host
         Write-Verbose "Installing $WebServer..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name Web-Server | Install-WindowsFeature
         Get-WindowsFeature -Name Web-WebServer | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebCommon..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name Web-Common-Http | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Default-Doc | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Dir-Browsing | Install-WindowsFeature
@@ -354,6 +383,9 @@ do
         Get-WindowsFeature -Name Web-Static-Content | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Http-Redirect | Install-WindowsFeature
         Get-WindowsFeature -Name Web-DAV-Publishing | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebHealth..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name Web-Health | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Http-Logging | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Custom-Logging | Install-WindowsFeature
@@ -361,12 +393,70 @@ do
         Get-WindowsFeature -Name Web-ODBC-Logging | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Request-Monitor | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Http-Tracing | Install-WindowsFeature
-
+        Write-Host
+        Write-Verbose "Installing $WebPerformance..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name Web-Performance | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Stat-Compression | Install-WindowsFeature
         Get-WindowsFeature -Name Web-Dyn-Compression | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebSecurity..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name Web-Security | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Filtering | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Basic-Auth | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-CerProvider | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Client-Auth | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Digest-Auth | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Cert-Auth | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-IP-Security | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Url-Auth | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Windows-Auth | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebApps..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name Web-App-Dev | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Net-Ext | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Net-Ext45 | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-AppInit | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-ASP | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Asp-Net | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Asp-Net45 | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-CGI | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-ISAPI-Ext | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-ISAPI-Filter | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Includes | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-WebSockets | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebFTP..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name Web-Ftp-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Ftp-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Ftp-Ext | Install-WindowsFeature
+        Write-Host
+        Write-Verbose "Installing $WebMgmt..." -Verbose
+        Write-Host
+        Get-WindowsFeature -Name Web-Mgmt-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Mgmt-Console | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Mgmt-Compat | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Metabase | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Lgcy-Scripting | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-WMI | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Scripting-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name Web-Mgmt-Service | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
-  '21' {
+  '21' {cls
+        $WDSLog = "C:\Logs\Server Roles\Install\WDS.log"
+        $WDS = "Windows Deployment Server Services"
+        Start-Transcript $WDSLog
+        Write-Verbose "Installing $WDS..." -Verbose
+        Get-WindowsFeature -Name WDS | Install-WindowsFeature
+        Get-WindowsFeature -Name WDS-Deployment | Install-WindowsFeature
+        Get-WindowsFeature -Name WDS-Transport | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
       }
   '22' { cls
         
