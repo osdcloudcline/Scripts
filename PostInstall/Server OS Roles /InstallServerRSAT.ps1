@@ -14,7 +14,8 @@
 
 
 $RSAT = "Windows Server 2022/2025 RSAT Tools"
-
+Write-Verbose "Installing $RSAT..." -Verbose
+Write-Host
 Get-WindowsFeature -Name RSAT | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-Feature-Tools | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-Bits-Server | Install-WindowsFeature
