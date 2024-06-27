@@ -11,12 +11,20 @@ Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose
 $PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1")
 Invoke-Expression $($PS7Modules.Content)
 
-Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
+Write-Verbose "Step 2 - Windows Server RSAT Tools..." -Verbose
+$ServerRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1")
+Invoke-Expression $($ServerRSAT.Content)
+
+Write-Verbose "Step 3 - Merging Registry Entries..." -Verbose
 $ServerRegistry = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1")
 Invoke-Expression $($ServerRegistry.Content)
 
-Write-Verbose "Step 3 - Mandatory OS Pre-Requirements..." -Verbose
+Write-Verbose "Step 4 - Mandatory OS Pre-Requirements..." -Verbose
 
 $OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
 Invoke-Expression $($OS.Content)
 
+Write-Verbose "Step 5 - Windows Server Roles and Fearures..." -Verbose
+
+$ServerRoles = Invoke-WebRequest("")
+Invoke-Expression $($ServerRoles.Content)
