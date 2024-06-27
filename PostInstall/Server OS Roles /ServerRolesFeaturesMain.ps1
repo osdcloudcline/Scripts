@@ -173,12 +173,35 @@ do
         Get-WindowsFeature -Name RSAT-WINS | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-Role-Tools | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-AD-Tools | Install-WindowsFeature
-
         Get-WindowsFeature -Name RSAT-AD-PowerShell | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-ADDS | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-AD-AdminCenter | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-ADDS-Tools | Install-WindowsFeature
         Get-WindowsFeature -Name RSAT-ADLDS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Hyper-V-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RDS-Tools | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RDS-Gateway | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RDS-Licebsing-Diagnosis-UI | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RDS-Licebsing-UI | Install-WindowsFeature
+        Get-WindowsFeature -Name UpdateServices-RSAT | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADCS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADCS-Mgmt | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Online-Responder | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-ADRMS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-DHCP | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-DNS-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Fax | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-File-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-DFS-Mgmt-Con | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-FSRM-Mgmt | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-NFS-Admin | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-NetworkController | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-NPAS | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-Print-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RemoteAccess | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RemoteAccess-Mgmt | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-RemoteAccess-PowerShell | Install-WindowsFeature
+        Get-WindowsFeature -Name RSAT-VA-Tools | Install-WindowsFeature
         
         Write-Host
         Stop-Transcript
@@ -187,12 +210,19 @@ do
   '2' { cls
         $ADDSLog = "C:\Logs\Server Roles\Install\ADDS.log"
         $ADCS = "Active Directory Domain Services"
+        $RSAT = "Windows Server 2022/2025 RSAT Tools"
+        
         Start-Transcript $ADDSLog
+        Write-Host
         Write-Verbose "Installing $ADDS..." -Verbose
+        Write-Host
         Get-WindowsFeature -Name AD-Domain-Services | Install-WindowsFeature
         Write-Verbose "Installing and Importing $ADDS Deployment PowerShell Module..." -Verbose
         Install-Module -Name ADDSDeployment -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name ADDSDeployment -Force
+        Write-Host
+        Write-Verbose "Installing $RSAT..." -Verbose
+        
         Stop-Transcript
         Show-ServerRolesMenu
         }
