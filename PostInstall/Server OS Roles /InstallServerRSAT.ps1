@@ -1,18 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $RSAT = "Windows Server 2022/2025 RSAT Tools"
 Write-Verbose "Installing $RSAT..." -Verbose
 Write-Host
