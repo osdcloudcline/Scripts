@@ -140,7 +140,7 @@ do
   {
 
   '1' { cls
-        $ADCSLog = "C:\Logs\Server Roles\ADCS.log"
+        $ADCSLog = "C:\Logs\Server Roles\Install\ADCS.log"
         $ADCS = "Active Directory Certificate Services"
         Start-Transcript $ADCSLog
         Write-Verbose "Installing $ADCS..." -Verbose
@@ -155,7 +155,7 @@ do
         Show-ServerRolesMenu
         }
   '2' { cls
-        $ADDSLog = "C:\Logs\Server Roles\ADDS.log"
+        $ADDSLog = "C:\Logs\Server Roles\Install\ADDS.log"
         $ADCS = "Active Directory Domain Services"
         Start-Transcript $ADDSLog
         Write-Verbose "Installing $ADDS..." -Verbose
@@ -167,7 +167,7 @@ do
         Show-ServerRolesMenu
         }
   '3' { cls
-        $ADFSLog = "C:\Logs\Server Roles\ADFS.log"
+        $ADFSLog = "C:\Logs\Server Roles\Install\ADFS.log"
         $ADFS = "Active Directory Federation Services"
         Start-Transcript $ADFSLog
         Write-Verbose "Installing $ADFS..." -Verbose
@@ -176,7 +176,7 @@ do
         Show-ServerRolesMenu
         }
   '4' {cls
-        $ADLDSLog = "C:\Logs\Server Roles\ADLDS.log'
+        $ADLDSLog = "C:\Logs\Server Roles\Install\ADLDS.log"
         $ADLDS = "Active Directory Lightweight Directory Services"
         Start-Transcript $ADLDSLog
         Write-Verbose "Installing $ADLDS..." -Verbose
@@ -185,7 +185,7 @@ do
         Show-ServerRolesMenu
       }
   '5' { cls
-        $ADRMSLog = "C:\Logs\Server Roles\ADRMS.log"
+        $ADRMSLog = "C:\Logs\Server Roles\Install\ADRMS.log"
         $ADRMS = "Active Directory Rights Management Server Services"
         Start-Transcript $ADRMSLog
         Write-Verbose "Installing $ADRMS..." -Verbose
@@ -199,7 +199,7 @@ do
         
         }
   '7' { cls
-        $DHALog = "C:\Logs\Server Roles\DHA.log"
+        $DHALog = "C:\Logs\Server Roles\Install\DHA.log"
         $DHA = "Device Health Attestation"
         Start-Transcript $DHALog
         Write-Verbose "Installing $DHA..." -Verbose
@@ -208,7 +208,7 @@ do
         Show-ServerRolesMenu
         }
   '8' { cls
-        $DHCPLog = "C:\Logs\Server Roles\DHCP.log"
+        $DHCPLog = "C:\Logs\Server Roles\Install\DHCP.log"
         $DHCP = "DHCP Server"
         Start-Transcript $DHCPLog
         Write-Verbose "Installing $DHCP..." -Verbose
@@ -217,7 +217,7 @@ do
         Show-ServerRolesMenu
         }
   '9' {cls
-        $DNSLog = "C:\Logs\Server Roles\DNS.log"
+        $DNSLog = "C:\Logs\Server Roles\Install\DNS.log"
         $DNS = "DNS Server"
         Start-Transcript $DNSLog
         Write-Verbose "Installing $DNS..." -Verbose
@@ -226,7 +226,7 @@ do
         Show-ServerRolesMenu
       }
   '10' { cls
-        $FaxLog = "C:\Logs\Server Roles\FaxServer.log"
+        $FaxLog = "C:\Logs\Server Roles\Install\FaxServer.log"
         $FaxServer = "Fax Server"
         Start-Transcript $FaxLog
         Write-Verbose "Installing $FaxServer..." -Verbose
@@ -235,18 +235,62 @@ do
         Show-ServerRolesMenu
         }
   '11' { cls
-        
+        $FileStorageLog = "C:\Logs\Server Roles\Install\FileStorageServer.log"
+        $FileStorageServer = "File and Storage Server"
+        Start-Transcript $FileStorageLog
+        Write-Verbose "Installing $FileStorageServer..." -Verbose
+        Get-WindowsFeature -Name FileAndStorage-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name File-Services | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-FileServer | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-BranchCache | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-Data-Deduplication | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-DFS-Namespace | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-DFS-Replication | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-Resource-Manager | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-VSS-Agent | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-iSCSITarget-Server | Install-WindowsFeature
+        Get-WindowsFeature -Name iSCSITarget-VSS-VDS | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-NFS-Service | Install-WindowsFeature
+        Get-WindowsFeature -Name FS-SyncShareService | Install-WindowsFeature
+        Get-WindowsFeature -Name Storage-Services | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '12' { cls
-        
+        $HostGuardianLog = "C:\Logs\Server Roles\Install\HostGuardian.log"
+        $HostGuardian = "Host Guardian Server"
+        Start-Transcript $HostGuardianLog
+        Write-Verbose "Installing $HostGuardian..." -Verbose
+        Get-WindowsFeature -Name HostGuardianServiceRole | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
-  '13' {
+  '13' { cls
+        $HyperVLog = "C:\Logs\Server Roles\Install\HyperV.log"
+        $HyperV = "Hyper-V Server"
+        Start-Transcript $HyperVLog
+        Write-Verbose "Installing $HyperV..." -Verbose
+        Get-WindowsFeature -Name Hyper-V | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
       }
   '14' { cls
-        
+        $NetworkControllerLog = "C:\Logs\Server Roles\Install\NetworkController.log"
+        $NetworkController = "Network Controller Server"
+        Start-Transcript $NetworkControllerLog
+        Write-Verbose "Installing $NetworkController..." -Verbose
+        Get-WindowsFeature -Name NetworkController | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '15' { cls
-        
+        $NPASLog = "C:\Logs\Server Roles\Install\NPAS.log"
+        $NPAS = "Network Policy and Access Server"
+        Start-Transcript $NPASLog
+        Write-Verbose "Installing $NPAS..." -Verbose
+        Get-WindowsFeature -Name NPAS | Install-WindowsFeature
+        Stop-Transcript
+        Show-ServerRolesMenu
         }
   '16' { cls
         
