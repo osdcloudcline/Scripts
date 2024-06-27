@@ -28,8 +28,8 @@ Get-WindowsFeature -Name RSAT-ADLDS | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-Hyper-V-Tools | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-RDS-Tools | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-RDS-Gateway | Install-WindowsFeature
-Get-WindowsFeature -Name RSAT-RDS-Licebsing-Diagnosis-UI | Install-WindowsFeature
-Get-WindowsFeature -Name RSAT-RDS-Licebsing-UI | Install-WindowsFeature
+Get-WindowsFeature -Name RSAT-RDS-Licensing-Diagnosis-UI | Install-WindowsFeature
+Get-WindowsFeature -Name RSAT-RDS-Licensing-UI | Install-WindowsFeature
 Get-WindowsFeature -Name UpdateServices-RSAT | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-ADCS | Install-WindowsFeature
 Get-WindowsFeature -Name RSAT-ADCS-Mgmt | Install-WindowsFeature
