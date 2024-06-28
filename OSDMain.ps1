@@ -90,52 +90,57 @@ pause
 Clear-Host
 
 Write-Host "======= $Title ======"
-Write-Host " 1. Windows Domain Administration Tasks"
-Write-Host " 2. Local Computer Administration Tasks"
-Write-Host " 3. Software Installation/Updates/Upgrades"
-Write-Host " 4. OSD Cloud"
-Write-Host " 5. OSD Builder"
-Write-Host " 6. Audit Mode Configuration Tasks"
-Write-Host " 7. Debloat Operating System"
-Write-Host " 8. Backup/Restore User Profile Data"
-Write-Host " 9. Administrative System Tasks"
-Write-Host " 10. Operating System Downloads and ISO Creation" 
-Write-Host " 11. Exit PowerShell"
+Write-Host " 1. Initial OS Installation FULL Configuration"
+Write-Host " 2. Windows Domain Administration Tasks"
+Write-Host " 3. Local Computer Administration Tasks"
+Write-Host " 4. Software Installation/Updates/Upgrades"
+Write-Host " 5. OSD Cloud"
+Write-Host " 6. OSD Builder"
+Write-Host " 7. Audit Mode Configuration Tasks"
+Write-Host " 8. Debloat Operating System"
+Write-Host " 9. Backup/Restore User Profile Data"
+Write-Host " 10. Administrative System Tasks"
+Write-Host " 11. Operating System Downloads and ISO Creation" 
+Write-Host " 12. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
-
-  '1' { cls
+  '1'{cls
+      $Initial = Invoke-WebRequest("")
+      Invoke-Expression $($Initial.Content)
+      
+      }
+  '2' { cls
         $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
         Invoke-Expression $($Domain.Content)
         }
-  '2' { cls
+  '3' { cls
         $Local = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Local%20Computer/LocalPCMain.ps1")
         Invoke-Expression $($Local.Content)
         }
-  '3' { cls
+  '4' { cls
         $WinGetMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
         Invoke-Expression $($WinGetMain.Content)
         }
-  '4' { cls
+  '5' { cls
         $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
         Invoke-Expression $($OSDCloud.Content)
         }
-  '5' { cls
+  '6' { cls
         $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
         Invoke-Expression $($OSDBuilder.Content)
         }
-  '6' {cls
+  '7' {cls
       $AuditMode = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
       Invoke-Expression $($AuditMode.Content)
      }
-  '7'{cls
+  '8'{cls
       $DebloatOS = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/OSDebloatMain.ps1")
       Invoke-Expression $($DebloatOS.Content)
      }
-  '8'{
+  '9'{
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
         $OSDCloudGHDownloads = "C:\OSDCloud\GitHub\downloads"
@@ -151,18 +156,18 @@ do
         Show-MainMenu
     }
 
-    '9'{cls
+    '10'{cls
        $AdminMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/AdminMainMenu.ps1")
        Invoke-Expression $($AdminMain.Content)
     }
-    '10'{cls
+    '11'{cls
         $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
         Invoke-Expression $($OSDownloads.Content)
     }
-    '11'{exit}
+    '12'{exit}
 
     }
     }
-    until ($selection -eq '11'){exit}
+    until ($selection -eq '12'){exit}
     }
     Show-MainMenu
