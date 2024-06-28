@@ -17,23 +17,33 @@ Write-Host '                                                                    
 
 
 ### Onboard Audio
+
 $OnboardAudio1URL = ""
 $OnboardAudio2URL = ""
-
 
 ### Onboard Video
 
 ### Onboard Network Card
+$OnboardNIC1URL = ""
+$OnboardNIC2URL = ""
+$OnboardNIC3URL = ""
 
 ### Storage Drivers
 
+
+
 ### System and Chipset Drivers
+
 
 ### Printer Drivers
 
+
 ### Dedicated Video card
 
+
 ### Dedicated Audio card
+
+$SounblasterAudioURL = ""
 
 ### Monitor Drivers
 
