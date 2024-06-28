@@ -17,7 +17,8 @@ Write-Host '                                                                    
 
 
 ### Onboard Audio
-
+$OnboardAudio1URL = ""
+$OnboardAudio2URL = ""
 
 
 ### Onboard Video
