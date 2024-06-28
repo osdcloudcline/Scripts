@@ -1,4 +1,4 @@
-cls
+
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '   The following Windows Server OS RSAT Tools will be installed: ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - Windows Server RSAT Tools                                   ' -ForegroundColor DarkBlue -BackgroundColor White
