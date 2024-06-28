@@ -8,3 +8,35 @@ Write-Host '  - System and Chipset Drivers                                      
 Write-Host '  - Printer Drivers                                                                                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Latest UEFI BIOS File                                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                                                           ' -BackgroundColor White 
+
+
+
+####################################
+##  Download File URLs 
+####################################
+
+
+### Onboard Audio
+
+
+
+### Onboard Video
+
+### Onboard Network Card
+
+### Storage Drivers
+
+### System and Chipset Drivers
+
+### Printer Drivers
+
+### Dedicated Video card
+
+### Dedicated Audio card
+
+### Monitor Drivers
+
+
+#################################################
+##  Extraction Locations
+#################################################
