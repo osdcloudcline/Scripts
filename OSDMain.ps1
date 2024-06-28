@@ -107,10 +107,9 @@ do
   $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
-  '1'{cls
-      $Initial = Invoke-WebRequest("")
-      Invoke-Expression $($Initial.Content)
-      
+  '1'{  cls
+        $Initial = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1")
+        Invoke-Expression $($Initial.Content)
       }
   '2' { cls
         $Domain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Domain%20Administration/DomainAdminMain.ps1")
