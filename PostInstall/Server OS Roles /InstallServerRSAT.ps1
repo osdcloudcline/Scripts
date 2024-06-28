@@ -1,4 +1,64 @@
 
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '   The following Windows Server OS RSAT Tools will be installed: '
+Write-Host '   - Windows Server RSAT Tools                                   ' 
+Write-Host '   - RSAT: Feature Tools                                         '
+Write-Host '   - RSAT: BITS Server Tools                                     '
+Write-Host '   - RSAT: Data Center Bridging LLDP Tools                       ' 
+Write-Host '   - RSAT: Clustering Tools                                      '
+Write-Host '   - RSAT: Clustering Management Tools                           '
+Write-Host '   - RSAT: Clustering PowerShell CLI Tools                       '
+Write-Host '   - RSAT: Clustering Automation Server Tools                    '
+Write-Host '   - RSAT: Clustering CLI Tools                                  ' 
+Write-Host '   - RSAT: Network Load Balancing Tools                          '
+Write-Host '   - RSAT: Shielded VM Tools                                     '
+Write-Host '   - RSAT: SNMP Tools                                            '
+Write-Host '   - RSAT: Storage Migration Service Management Tools            '
+Write-Host '   - RSAT: Storage Replica Tools                                 ' 
+Write-Host '   - RSAT: System Insights Tools                                 '
+Write-Host '   - RSAT: WINS Management Tools                                 '
+Write-Host '   - RSAT: Role Tools                                            '
+Write-Host '   - RSAT: Active Directory Tools                                '
+Write-Host '   - RSAT: Active Directory PowerShell Management Tools          ' 
+Write-Host '   - RSAT: Active Directory Domain Server Services               '
+Write-Host '                                                                 ' -BackgroundColor White 
+pause
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '   The following Windows Server OS RSAT Tools will be installed: '
+Write-Host '   - RSAT: Active Directory Domain Server Services Tools         '
+Write-Host '   - RSAT: Active Directory Admin Center Tools                   '
+Write-Host '   - RSAT: Active Directory LDS Tools                            '
+Write-Host '   - RSAT: Hyper-V Tools                                         '
+Write-Host '   - RSAT: Remote Desktop Services Server Tools                  ' 
+Write-Host '   - RSAT: Remote Desktop Services Server Gateway Tools          '
+Write-Host '   - RSAT: Remote Desktop Services Licensing Diagnosis Tools     '
+Write-Host '   - RSAT: Remote Desktop Services Licensing UI Tools            '
+Write-Host '   - RSAT: Windows Server Update Services Tools                  '
+Write-Host '   - RSAT: Windows Deployment Server Services Tools              ' 
+Write-Host '   - RSAT: Active Directory Certificate Server Services Tools    '
+Write-Host '   - RSAT: Online Responder Tools                                '
+Write-Host '   - RSAT: Active Directory Rights Management Server Tools       '
+Write-Host '   - RSAT: DHCP Server Tools                                     '
+Write-Host '   - RSAT: DNS Server Tools                                      ' 
+Write-Host '   - RSAT: Fax Server Tools                                      '
+Write-Host '   - RSAT: File and Storage Services Server Tools                '
+Write-Host '   - RSAT: DFS Management Tools                                  '
+Write-Host '   - RSAT: File Server Resource Management Tools                 '
+Write-Host '   - RSAT: Network File System (NFS) Management Tools            ' 
+Write-Host '                                                                 ' -BackgroundColor White 
+pause
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '   The following Windows Server OS RSAT Tools will be installed: '
+Write-Host '   - RSAT: Network Controller Management Tools                   '
+Write-Host '   - RSAT: NPAS Management Tools                                 '
+Write-Host '   - RSAT: Print Server Management Tools                         '
+Write-Host '   - RSAT: Remote Access Tools                                   '
+Write-Host '   - RSAT: Remote Access Management Tools                        '
+Write-Host '   - RSAT: Remote Access PowerShell CLI Tools                    '
+Write-Host '   - RSAT: Volume Activation Tools                               '
+Write-Host '                                                                 ' -BackgroundColor White 
+pause
+
 $RSAT = "Windows Server 2022/2025 RSAT Tools"
 Write-Verbose "Installing $RSAT..." -Verbose
 Write-Host
