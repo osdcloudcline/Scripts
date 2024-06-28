@@ -18,7 +18,7 @@ Invoke-Expression $($ClientRegistry.Content)
 
 Write-Verbose "Step 3 - Client Operating System RSAT Tools..." -Verbose
 
-$ClientRSAT = Invoke-WebRequest("")
+$ClientRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Client%20OS%20Roles%20/InstallClientRSAT.ps1")
 Invoke-Expression $($ClientRSAT.Content)
 
 Write-Verbose "Step 4 - Mandatory OS Pre-Requirements..." -Verbose
