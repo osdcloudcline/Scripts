@@ -16,12 +16,17 @@ Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
 $ClientRegistry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1")
 Invoke-Expression $($ClientRegistry.Content)
 
-Write-Verbose "Step 3 - Mandatory OS Pre-Requirements..." -Verbose
+Write-Verbose "Step 3 - Client Operating System RSAT Tools..." -Verbose
+
+$ClientRSAT = Invoke-WebRequest("")
+Invoke-Expression $($ClientRSAT.Content)
+
+Write-Verbose "Step 4 - Mandatory OS Pre-Requirements..." -Verbose
 
 $OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
 Invoke-Expression $($OS.Content)
 
-Write-Verbose "Step 4 - Software Installation..." -Verbose
+Write-Verbose "Step 5 - Software Installation..." -Verbose
 
 $WinGetSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
 Invoke-Expression $($WingetSoftware.Content)
