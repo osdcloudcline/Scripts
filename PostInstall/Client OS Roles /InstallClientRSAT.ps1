@@ -2,6 +2,7 @@ $RSAT = "Windows Client OS RSAT Tools"
 Write-Verbose "Installing $RSAT..." -Verbose
 Write-Host
 
+Write-Host '                                                                ' -BackgroundColor White 
 Write-Host '  The following Windows Client OS RSAT Tools will be installed: ' 
 Write-Host '  - RSAT: Active Directory Domain Services and LDS Tools        '
 Write-Host '  - RSAT: PowerShell Module for Azure Stack HCI                 '
