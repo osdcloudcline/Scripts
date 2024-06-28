@@ -29,3 +29,24 @@ pause
 $RSAT = "Windows Client OS RSAT Tools"
 Write-Verbose "Installing $RSAT..." -Verbose
 Write-Host
+
+Get-WindowsCapability -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.AzureStack.HCI.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.CertificateServices.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.DHCP.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.Dns.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.FailoverCluster.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.FileServices.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.GroupPolicy.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.IPAM.Client.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.LLDP.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.NetworkController.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.NetworkLoadBalancing.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.RemoteAccess.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.RemoteDesktop.Services.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.ServerManager.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.StorageMigrationService.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.StorageReplica.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.SystemInsights.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.VolumeActivation.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
+Get-WindowsCapability -Name Rsat.WSUS.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
