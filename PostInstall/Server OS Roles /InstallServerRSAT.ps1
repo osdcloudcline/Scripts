@@ -1,4 +1,4 @@
-
+cls
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '   The following Windows Server OS RSAT Tools will be installed: ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - Windows Server RSAT Tools                                   ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -21,10 +21,6 @@ Write-Host '   - RSAT: Role Tools                                            ' -
 Write-Host '   - RSAT: Active Directory Tools                                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Active Directory PowerShell Management Tools          ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Active Directory Domain Server Services               ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                 ' -BackgroundColor White 
-pause
-Write-Host '                                                                 ' -BackgroundColor White 
-Write-Host '   The following Windows Server OS RSAT Tools will be installed: ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Active Directory Domain Server Services Tools         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Active Directory Admin Center Tools                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Active Directory LDS Tools                            ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -45,10 +41,6 @@ Write-Host '   - RSAT: File and Storage Services Server Tools                ' -
 Write-Host '   - RSAT: DFS Management Tools                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: File Server Resource Management Tools                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Network File System (NFS) Management Tools            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                 ' -BackgroundColor White 
-pause
-Write-Host '                                                                 ' -BackgroundColor White 
-Write-Host '   The following Windows Server OS RSAT Tools will be installed: ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Network Controller Management Tools                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: NPAS Management Tools                                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '   - RSAT: Print Server Management Tools                         ' -ForegroundColor DarkBlue -BackgroundColor White
