@@ -1,5 +1,6 @@
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  The following software will be installed on $env:computername: ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  - Web Browsers: Google Chrome and Mozilla Firefox              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: One Drive, DropBox and NextCloud Client        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - File Transfer: Filezilla, PuTTY and WinSCP                   ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -22,3 +23,5 @@ Write-Host '  - Utilities: Smart Defrag, V2V Converter                       ' -
 Write-Host '  - Utilities: Windows 11 SDK, ADK, WinPE Add-On                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Security: DOWNLOAD ONLY - MalwareBytes, Norton360            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
+
+pause
