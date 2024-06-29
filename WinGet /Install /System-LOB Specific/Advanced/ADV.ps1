@@ -11,8 +11,8 @@ Write-Host '  - Media: Logitech MyHarmony, GIMP, Kodi,                       ' -
 Write-Host '  - Media: HD Video Converter Factory Pro, DVDFab                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Adobe Master Collection                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Network Controller Management Tools                   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Network Load Balancing Tools                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Programming: VS Code, AI Code Editor,                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Programming: Microsoft Visual Studio Enterprise 2022         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Remote Access Management Tools                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Remote Desktop Services Tools                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Server Manager                                        ' -ForegroundColor DarkBlue -BackgroundColor White
