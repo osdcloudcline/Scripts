@@ -9,8 +9,6 @@ Write-Host '  - Printer Drivers                                                 
 Write-Host '  - Latest UEFI BIOS File                                                                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                                                           ' -BackgroundColor White 
 
-
-
 ####################################
 ##  Download File URLs 
 ####################################
@@ -37,85 +35,90 @@ $OnboardVideo11URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%2
 $OnboardVideo12URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.012"
 $OnboardVideo13URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.013"
 $OnboardVideo14URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.014"
-$OnboardVideo15URL = ""
-$OnboardVideo16URL = ""
-$OnboardVideo17URL = ""
-$OnboardVideo18URL = ""
-$OnboardVideo19URL = ""
-$OnboardVideo20URL = ""
-$OnboardVideo21URL = ""
-$OnboardVideo22URL = ""
-$OnboardVideo23URL = ""
-$OnboardVideo24URL = ""
-$OnboardVideo25URL = ""
-$OnboardVideo26URL = ""
-$OnboardVideo27URL = ""
-$OnboardVideo28URL = ""
-$OnboardVideo29URL = ""
-$OnboardVideo30URL = ""
-$OnboardVideo31URL = ""
+$OnboardVideo15URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.015"
+$OnboardVideo16URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.016"
+$OnboardVideo17URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.017"
+$OnboardVideo18URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.018"
+$OnboardVideo19URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.019"
+$OnboardVideo20URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.020"
+$OnboardVideo21URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.021"
+$OnboardVideo22URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.022"
+$OnboardVideo23URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.023"
+$OnboardVideo24URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.024"
+$OnboardVideo25URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.025"
+$OnboardVideo26URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.026"
+$OnboardVideo27URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Graphics.zip.027"
+$OnboardVideo28URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Intel%20VGA%20Driver_31.0.101.4255.zip.001"
+$OnboardVideo29URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Intel%20VGA%20Driver_31.0.101.4255.zip.002"
+$OnboardVideo30URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Intel%20VGA%20Driver_31.0.101.4255.zip.003"
+$OnboardVideo31URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/On-Board/Intel%20VGA%20Driver_31.0.101.4255.zip.004"
 
 
 ### Onboard Network Card
-$OnboardNIC1URL = ""
-$OnboardNIC2URL = ""
-$OnboardNIC3URL = ""
+$OnboardNIC1URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Network/Intel_Network_inf_w11.zip"
+$OnboardNIC2URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Network/qualcomm_ncm865_bt.zip"
+$OnboardNIC3URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Network/qualcomm_ncm865_wifi.zip"
 
 ### Storage Drivers
 
-$Storage1URL = ""
-
+$Storage1URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Storage/intel_rst_19.5.zip"
 
 ### System and Chipset Drivers
 
-$SystemChipset1URL = ""
+$SystemChipset1URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/System%20and%20Chipset/10.1.19627.8423/intel_chipset_adl_rpl.zip"
 
 ### Printer Drivers
 
 
 ### Dedicated Video card
 
-$AMDRadeon1URL = ""
-$AMDRadeon2URL = ""
-$AMDRadeon3URL = ""
-$AMDRadeon4URL = ""
-$AMDRadeon5URL = ""
-$AMDRadeon6URL = ""
-$AMDRadeon7URL = ""
-$AMDRadeon8URL = ""
-$AMDRadeon9URL = ""
-$AMDRadeon10URL = ""
-$AMDRadeon11URL = ""
-$AMDRadeon12URL = ""
-$AMDRadeon13URL = ""
-$AMDRadeon14URL = ""
-$AMDRadeon15URL = ""
-$AMDRadeon16URL = ""
-$AMDRadeon17URL = ""
-$AMDRadeon18URL = ""
-$AMDRadeon19URL = ""
-$AMDRadeon20URL = ""
-$AMDRadeon21URL = ""
-$AMDRadeon22URL = ""
-$AMDRadeon23URL = ""
-$AMDRadeon24URL = ""
-$AMDRadeon25URL = ""
-$AMDRadeon26URL = ""
-$AMDRadeon27URL = ""
-$AMDRadeon28URL = ""
-$AMDRadeon29URL = ""
-$AMDRadeon30URL = ""
-$AMDRadeon31URL = ""
-$AMDRadeon32URL = ""
-$AMDRadeon33URL = ""
-$AMDRadeon34URL = ""
-$AMDRadeon35URL = ""
-$AMDRadeon36URL = ""
+$AMDRadeon1URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.001"
+$AMDRadeon2URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.002"
+$AMDRadeon3URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.003"
+$AMDRadeon4URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.004"
+$AMDRadeon5URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.005"
+$AMDRadeon6URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.006"
+$AMDRadeon7URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.007"
+$AMDRadeon8URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.008"
+$AMDRadeon9URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.009"
+$AMDRadeon10URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.010"
+$AMDRadeon11URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.011"
+$AMDRadeon12URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.012"
+$AMDRadeon13URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.013"
+$AMDRadeon14URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.014"
+$AMDRadeon15URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.015"
+$AMDRadeon16URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.016"
+$AMDRadeon17URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.017"
+$AMDRadeon18URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.018"
+$AMDRadeon19URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.019"
+$AMDRadeon20URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.020"
+$AMDRadeon21URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.021"
+$AMDRadeon22URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.022"
+$AMDRadeon23URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.023"
+$AMDRadeon24URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.024"
+$AMDRadeon25URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.025"
+$AMDRadeon26URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.026"
+$AMDRadeon27URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.027"
+$AMDRadeon28URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.028"
+$AMDRadeon29URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.029"
+$AMDRadeon30URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.030"
+$AMDRadeon31URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.031"
+$AMDRadeon32URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.032"
+$AMDRadeon33URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.033"
+$AMDRadeon34URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.034"
+$AMDRadeon35URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.035"
+$AMDRadeon36URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Video/Radeon%207900%20XT/24.6.1/whql-amd-software-adrenalin-edition-24.6.1-win10-win11-june27-rdna.zip.036"
 
 
 ### Dedicated Audio card
 
-$SounblasterAudioURL = ""
+$SoundBlasterAudio1URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.001"
+$SoundBlasterAudio2URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.002"
+$SoundBlasterAudio3URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.003"
+$SoundBlasterAudio4URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.004"
+$SoundBlasterAudio5URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.005"
+$SoundBlasterAudio6URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.006"
+$SoundBlasterAudio7URL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/MSI/Motherboards/Intel/LGA%201700/Z790%20Chipsets/MPG%20Z790%20Edge%20Ti%20MAX%20WiFi%207%20Gaming%20/Drivers/Audio/SoundBlaster%20AE-7/AECMDMasterInstaller_3.4.92.00.zip.007"
 
 ### Monitor Drivers
 
