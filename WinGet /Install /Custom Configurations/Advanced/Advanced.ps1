@@ -29,4 +29,5 @@ Write-Host '    will be available after script completes                     ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
-
+$Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/AdvancedBrowsers.ps1")
+Invoke-Expression $($Browsers.Content)
