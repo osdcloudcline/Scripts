@@ -47,4 +47,7 @@ Invoke-Expression $($Media.Content)
 $Productivity = Invoke-WebRequest("")
 Invoke-Expression $($Productivity.Content)
 
+$Programming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/AdvancedProgramming.ps1")
+Invoke-Expression $($Programming.Content)
+
 
