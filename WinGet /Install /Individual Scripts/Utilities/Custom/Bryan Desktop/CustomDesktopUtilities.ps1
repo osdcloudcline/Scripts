@@ -1,3 +1,22 @@
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '              CUSTOM UTILITIES CONFIGURATION                     ' -ForegroundColor DarkBlue -BackgroundColor White 
+Write-Host '          The following software will be installed:              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '  - AIDA64 Extreme, Windows Admin Center, Starwind V2V Converter,' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Cinebench 2024, Lian-Li L-Connect3, Fan Control,             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - 3DMark Professional, PC Mark10, Elgato Stream Deck,          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - G.Skill WigiDash, G.Skill Trident Z and Z5 Lightning Control ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Sapphire TriXX Software                                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Sonos Speaker Software                                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Soundblaster Command Software                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Crystral DiskInfo and Crystal DiskMark                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '    Uninstallation of software will be available                 ' -ForegroundColor DarkRed -BackgroundColor White
+Write-Host '    after script completes                                       ' -ForegroundColor DarkRed -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White
+pause
+
+
 $OSDUtilitiesSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OSDUtilitiesSoftware.log"
 Start-Transcript -Path $OSDUtilitiesSoftwareLogs
 
