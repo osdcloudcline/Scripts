@@ -56,7 +56,7 @@ Invoke-Expression $($VDI.Content)
 $Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/AdvancedVirtualization.ps1")
 Invoke-Expression $($Virtualization.Content)
 
-$Utilities = Invoke-WebRequest("")
+$Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
 $Security = Invoke-WebRequest("")
