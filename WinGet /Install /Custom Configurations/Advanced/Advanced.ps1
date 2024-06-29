@@ -29,10 +29,10 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
-$Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/AdvancedBrowsers.ps1")
+$Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/AdvancedBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
-$CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/AdvancedCloudBackup.ps1")
+$CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/AdvancedCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
 $FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/AdvancedFileTransfer.ps1")
@@ -53,11 +53,11 @@ Invoke-Expression $($Programming.Content)
 $VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AdvancedVDIRDC.ps1")
 Invoke-Expression $($VDI.Content)
 
-$Virtualization = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/AdvancedVirtualization.ps1")
+$Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/AdvancedVirtualization.ps1")
 Invoke-Expression $($Virtualization.Content)
 
 $Utilities = Invoke-WebRequest("")
 Invoke-Expression $($Utilities.Content)
 
-$Security = Invoke-WEbRequest("")
+$Security = Invoke-WebRequest("")
 Invoke-Expression $($Security.Content)
