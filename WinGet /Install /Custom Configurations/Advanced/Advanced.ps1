@@ -1,3 +1,4 @@
+Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '              ADVANCED SOFTWARE CONFIGURATION                    ' -ForegroundColor DarkBlue -BackgroundColor White 
 Write-Host '          The following software will be installed:              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
