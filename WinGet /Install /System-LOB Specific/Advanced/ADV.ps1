@@ -4,7 +4,7 @@ Write-Host '                                                                 ' -
 Write-Host '  - Web Browsers: Google Chrome and Mozilla Firefox              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: One Drive, DropBox and NextCloud Client        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - File Transfer: Filezilla, PuTTY and WinSCP                   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: DHCP Server Tools                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Gaming: Steam Client                                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: DNS Server Tools                                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Failover Clustering Tools                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: File Services Tools                                   ' -ForegroundColor DarkBlue -BackgroundColor White
