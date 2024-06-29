@@ -1,5 +1,6 @@
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  The following software will be installed on $env:computername: ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  - Web Browsers: Google Chrome and Mozilla Firefox              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: One Drive, DropBox and NextCloud Client        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - File Transfer: Filezilla, PuTTY and WinSCP                   ' -ForegroundColor DarkBlue -BackgroundColor White
