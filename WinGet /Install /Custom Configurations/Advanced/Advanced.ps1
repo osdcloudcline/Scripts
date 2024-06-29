@@ -50,4 +50,14 @@ Invoke-Expression $($Productivity.Content)
 $Programming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/AdvancedProgramming.ps1")
 Invoke-Expression $($Programming.Content)
 
+$VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AdvancedVDIRDC.ps1")
+Invoke-Expression $($VDI.Content)
 
+$Virtualization = Invoke-WebRequest ("")
+Invoke-Expression $($Virtualization.Content)
+
+$Utilities = Invoke-WebRequest("")
+Invoke-Expression $($Utilities.Content)
+
+$Security = Invoke-WEbRequest("")
+Invoke-Expression $($Security.Content)
