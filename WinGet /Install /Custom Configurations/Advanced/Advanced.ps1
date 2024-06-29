@@ -22,4 +22,4 @@ Write-Host '  - Utilities: DDU, Driver Booster 11,  CCleaner                 ' -
 Write-Host '  - Utilities: Smart Defrag, V2V Converter                       ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: Windows 11 SDK, ADK, WinPE Add-On                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Security: DOWNLOAD ONLY - MalwareBytes, Norton360            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '                                                                ' -BackgroundColor White 
+Write-Host '                                                                 ' -BackgroundColor White 
