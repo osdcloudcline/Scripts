@@ -2,7 +2,7 @@ Write-Host '                                                                 ' -
 Write-Host '  The following software will be installed on $env:computername: ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Web Browsers: Google Chrome and Mozilla Firefox              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: One Drive, DropBox and NextCloud Client        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Active Directory Certificate Server Services          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - File Transfer: Filezilla, PuTTY and WinSCP                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: DHCP Server Tools                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: DNS Server Tools                                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Failover Clustering Tools                             ' -ForegroundColor DarkBlue -BackgroundColor White
