@@ -33,16 +33,16 @@ pause
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/AdvancedBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
-$CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/AdvancedCloudBackup.ps1")
+$CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/AdvancedCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
-$FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/AdvancedFileTransfer.ps1")
+$FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/AdvancedFileTransfer.ps1")
 Invoke-Expression $($FileTransfer.Content)
 
-$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/AdvancedGaming.ps1")
+$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/AdvancedGaming.ps1")
 Invoke-Expression $($Gaming.Content)
 
-$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/AdvancedMedia.ps1")
+$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/AdvancedMedia.ps1")
 Invoke-Expression $($Media.Content)
 
 $Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/AdvancedProductivity.ps1")
@@ -60,5 +60,5 @@ Invoke-Expression $($Virtualization.Content)
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
-$Security = Invoke-WebRequest("")
+$Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
