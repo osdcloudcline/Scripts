@@ -18,7 +18,8 @@ Write-Host '  - VDI/Remote Connections: VMWare Horizon Client,               ' -
 Write-Host '  - VDI/Remote Connections: AnyDesk,                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - VDI/Remote Connections: Microsoft 365 VDI                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Virtualization: VMWare Workstation Pro                       ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Utilities:                      ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Volume Activation Tools                               ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Windows Server Update Services (WSUS) Tools           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Utilities: DDU, Driver Booster 11,  CCleaner                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Utilities: Smart Defrag, V2V Converter                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Utilities: Windows 11 SDK, ADK, WinPE Add-On                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Security: DOWNLOAD ONLY - MalwareBytes, Norton360            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                ' -BackgroundColor White 
