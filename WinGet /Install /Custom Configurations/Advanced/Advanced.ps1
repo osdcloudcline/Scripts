@@ -35,4 +35,7 @@ Invoke-Expression $($Browsers.Content)
 $CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/AdvancedCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
+$FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/AdvancedFileTransfer.ps1")
+Invoke-Expression $($FileTransfer.Content)
+
 
