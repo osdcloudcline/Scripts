@@ -24,7 +24,7 @@ Write-Host '  - Utilities: Smart Defrag, V2V Converter                       ' -
 Write-Host '  - Utilities: Windows 11 SDK, ADK, WinPE Add-On                 ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Security: DOWNLOAD ONLY - MalwareBytes, Norton360            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
-Write-Host '     "ATTN $env:username: Uninstallation of software"            ' -ForegroundColor DarkRed -BackgroundColor White
+Write-Host "     ATTN $env:username: Uninstallation of software              " -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '      will be available after script completes                   ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White
 pause
