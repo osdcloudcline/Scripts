@@ -9,8 +9,8 @@ Write-Host '  - Media: VLC Player, MediaInfo, MKVToolnix, iTunes,            ' -
 Write-Host '  - Media: MakeMKV, Handbrake, PowerISO, Audacity, FFMPEG        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Media: Logitech MyHarmony, GIMP, Kodi,                       ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Media: HD Video Converter Factory Pro, DVDFab                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: IP Address Management Client (IPAM)                   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Data Center Bridging LLDP Tools                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Productivity: Adobe Master Collection                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Network Controller Management Tools                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Network Load Balancing Tools                          ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Remote Access Management Tools                        ' -ForegroundColor DarkBlue -BackgroundColor White
