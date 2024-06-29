@@ -13,12 +13,12 @@ Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -
 Write-Host '  - Productivity: Adobe Master Collection                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Programming: VS Code, AI Code Editor,                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Programming: Microsoft Visual Studio Enterprise 2022         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Remote Access Management Tools                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Remote Desktop Services Tools                         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Server Manager                                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Storage Migration Service Management Tools            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: Storage Replica PowerShell Module                     ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - RSAT: System Insights PowerShell Module                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - VDI/Remote Connections: Microsoft Remote Desktop,            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - VDI/Remote Connections: VMWare Horizon Client,               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - VDI/Remote Connections: AnyDesk,                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - VDI/Remote Connections: Microsoft 365 VDI                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Virtualization: VMWare Workstation Pro                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Utilities:                      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Volume Activation Tools                               ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - RSAT: Windows Server Update Services (WSUS) Tools           ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                ' -BackgroundColor White 
