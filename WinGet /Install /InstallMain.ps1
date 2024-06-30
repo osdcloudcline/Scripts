@@ -47,7 +47,7 @@ $selection = Read-Host 'Please choose an option'
  '5'{cls
        $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Management%20PC/ManagementPC.ps1")
        Invoke-Expression $($ManagementPC.Content)
- }
+     }
  '6'{cls
        $Honeypot = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Honeypot/Honeypot.ps1")
        Invoke-Expression $($Honeypot.Content)
@@ -69,9 +69,9 @@ $selection = Read-Host 'Please choose an option'
      Invoke-Expression $($SMMain.Content)
      }
  '11'{cls
-       $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
-       Invoke-Expression $($WinGetMain.Content)
-  }
+     $WinGetMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
+     Invoke-Expression $($WinGetMain.Content)
+    }
 '12'{exit}
  }
  }
