@@ -23,6 +23,9 @@ Invoke-Expression $($PS7Modules.Content)
 $ClientRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Client%20OS%20Roles%20/InstallClientRSAT.ps1")
 Invoke-Expression $($ClientRSAT.Content)
 
+$OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
+Invoke-Expression $($OS.Content)
+
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Management%20PC/ManagementPCBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
