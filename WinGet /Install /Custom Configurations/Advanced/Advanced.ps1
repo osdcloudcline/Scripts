@@ -64,7 +64,9 @@ If($env:computername -eq "BTDESKTOP"){
 $BTDesktopUtils = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Custom/Bryan%20Desktop/CustomDesktopUtilities.ps1")
 Invoke-Expression $($BTDesktopUtils.Content)
 }
-else{ Write-Host "Skipping execution of a Custom Utilities Script"}
+else{ 
+Write-Host "Skipping execution of a Custom Utilities Script" -ForegroundColor DarkRed -BackgroundColor White
+}
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
