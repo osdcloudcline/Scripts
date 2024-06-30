@@ -21,3 +21,8 @@ Write-Host '    Uninstallation of software will be available                 ' -
 Write-Host '    after script completes                                       ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White
 pause
+
+
+$Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/CorporateBrowsers.ps1")
+Invoke-Expression $($Browsers.Content)
+
