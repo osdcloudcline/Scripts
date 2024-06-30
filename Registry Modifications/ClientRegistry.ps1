@@ -53,7 +53,7 @@ $REG14PATH = "$REGFileDirectory\Disable﻿WindowsCopilot.reg"
 
 # Software Registry URL Paths
 $AdobeRegFile1Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat1.reg"
-$AdobeRegFile2Url = ""
+$AdobeRegFile2Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat2.reg"
 $AdobeRegFile3Url = ""
 $AdobeRegFile4Url = ""
 $AdobeRegFile5Url = ""
