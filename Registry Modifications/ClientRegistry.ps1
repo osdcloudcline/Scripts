@@ -57,7 +57,7 @@ $AdobeRegFile2Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%
 $AdobeRegFile3Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC.reg"
 $AdobeRegFile4Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC2.reg"
 $AdobeRegFile5Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC3.reg"
-$PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
+$PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./PCMark10.reg"
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
 
 # Operating System Registry URL Paths
