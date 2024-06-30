@@ -85,10 +85,12 @@ do
         Import-Module -Name OSD -Force
         Write-Host 
         Write-Verbose "Downloading Audit Mode PowerShell Scripts from OSDCloudCline GitHub Repo..." -Verbose
-        $ConfigureScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/Configure.ps1"
+        $ConfigureClientsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureClients.ps1"
+        $ConfigureServersScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureServers.ps1"
         $MainMenuScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/MainMenu.ps1"
         $AuditModeDestination = "C:\scripts\backup\GitHubRepo\Audit Mode"
-        Save-WebFile -SourceUrl $ConfigureScriptURL -DestinationDirectory $AuditModeDestination
+        Save-WebFile -SourceUrl $ConfigureClientsScriptURL -DestinationDirectory $AuditModeDestination
+        Save-WebFile -SourceUrl $ConfigureServersScriptURL -DestinationDirectory $AuditModeDestination
         Save-WebFile -SourceUrl $MainMenuScriptURL -DestinationDirectory $AuditModeDestination
         Write-Host
         Write-Host "Script Backup Successfully..." -ForegroundColor Green
@@ -283,8 +285,8 @@ do
         $WinServer2022ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2022/20348.2461_amd64_en-us_multi_b9f1ddc0_convert.zip"
         $WinServer2022Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2022"
 
-        $WinServer2025ScriptURL = ""
-        $WinServer2025ZIPURL = ""
+        $WinServer2025ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2025/2025.ps1"
+        $WinServer2025ZIPURL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%20Server/2025/26100.1_amd64_en-us_multi_30da46b4_convert.zip"
         $WinServer2025Destination = "C:\scripts\backup\GitHubRepo\OS\Server\Windows Server\2025"
 
         $WinServer2028ScriptURL = ""
@@ -455,8 +457,8 @@ do
         Write-Host 
         Write-Host  "Processing: PowerShell Module installation scripts from OSDCloudCline\Scripts\PS Modules repo..." -ForegroundColor Cyan
         Write-Host
-        $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/Install.ps1"
-        $PS7ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PS%20Modules%20/InstallPS7.ps1"
+        $PS5ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1"
+        $PS7ModulesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1"
         $PSModulesScriptsDestination = "C:\scripts\backup\GitHubRepo\PS Modules"
         Write-Host
         Write-Verbose "Downloading and Saving PowerShell 5.1 and 7.x Module scripts..." -Verbose
@@ -483,21 +485,30 @@ do
         Write-Host 
         Write-Host  "Processing: Registry Files and installation scripts from OSDCloudCline\Scripts\REG Files repo..." -ForegroundColor Cyan
         Write-Host
-        $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
-        $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
-        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
-        $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
-        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
-        $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
-        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
-        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
+        $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
+        $AdobeREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat1.reg"
+        $AdobeREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat2.reg"
+        $AdobeREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC.reg"
+        $AdobeREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC2.reg"
+        $AdobeREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC3.reg"
+        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/DisableBitLockerDeviceEncryption.reg"
+        $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./PCMark10.reg"
+        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/SYSTEMDesktopIcons.reg"
+        $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/ShowHiddenFilesFolders.reg"
+        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows10-OSModifications.reg"
+        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows11-OSModifications.reg"
         $REGFilesZIPURL = ""
-        $REGFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1"
+        $REGFilesClientScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1"
+        $REGFilesServerScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1"
         $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
         Write-Host
         Write-Verbose "Downloading and Saving Registry Files..." -Verbose
         Save-WebFile -SourceUrl $3DMarkREGURL -DestinationDirectory $REGFilesScriptsDestination
-        Save-WebFile -SourceUrl $AdobeREGURL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG1URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG2URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG3URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG4URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG5URL  -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $BitLockerREGURL -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $PCMark10REGURL -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $SYSTEMDesktopREGURL -DestinationDirectory $REGFilesScriptsDestination
@@ -508,26 +519,10 @@ do
         Write-Verbose "Downloading and Saving Registry ZIP File..." -Verbose
         Save-WebFile -SourceUrl $REGFilesZIPURL -DestinationDirectory $REGFilesScriptsDestination
         Write-Host 
-        Write-Verbose "Downloading and Saving Registry Script File..." -Verbose
-        Save-WebFile -SourceUrl $REGFilesScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Write-Verbose "Downloading and Saving Registry Script Files..." -Verbose
+        Save-WebFile -SourceUrl $REGFilesClientScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $REGFilesServerScriptURL -DestinationDirectory $REGFilesScriptsDestination
         Write-Host
-        Write-Host
-        Write-Verbose "Downloading and Saving OFFLINE Registry Files..." -Verbose
-        $OfflineHKCRREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddCopyToMoveTo.reg"
-        $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
-        $OfflineHKLMREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AcrobatDisableCloudServices.reg"
-        $OfflineHKLMREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019-AcrobatREGEntries.reg"
-        $OfflineHKLMREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019.reg"
-        $OfflineHKLMREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg1.reg"
-        $OfflineHKLMREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg2.reg"
-        $OfflineREGDestination = "C:\scripts\backup\GitHubRepo\Registry Files\Offline"
-        Save-WebFile -SourceUrl $OfflineHKCRREG1URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKCRREG2URL  -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG1URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG2URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG3URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG4URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG5URL -DestinationDirectory $OfflineREGDestination
         Write-Host
         Write-Host "Registry Files and Script Backup is Successful..." -ForegroundColor Green
         Write-Host
@@ -967,21 +962,30 @@ do
         Write-Host 
         Write-Host  "Processing 9 of 12: Registry Files and installation scripts from OSDCloudCline\Scripts\REG Files repo..." -ForegroundColor Cyan
         Write-Host
-        $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/3DMark.reg"
-        $AdobeREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Adobe.reg"
-        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
-        $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/PCMark10.reg"
-        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
-        $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
-        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows10-OSModifications.reg"
-        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
+        $3DMarkREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
+        $AdobeREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat1.reg"
+        $AdobeREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat2.reg"
+        $AdobeREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC.reg"
+        $AdobeREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC2.reg"
+        $AdobeREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/AdobeCC3.reg"
+        $BitLockerREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/DisableBitLockerDeviceEncryption.reg"
+        $PCMark10REGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./PCMark10.reg"
+        $SYSTEMDesktopREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/SYSTEMDesktopIcons.reg"
+        $ShowHiddenFilesREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/ShowHiddenFilesFolders.reg"
+        $Win10OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows10-OSModifications.reg"
+        $Win11OSModificationsREGURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows11-OSModifications.reg"
         $REGFilesZIPURL = ""
-        $REGFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Registry.ps1"
+        $REGFilesClientScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1"
+        $REGFilesServerScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ServerRegistry.ps1"
         $REGFilesScriptsDestination = "C:\scripts\backup\GitHubRepo\Registry Files"
         Write-Host
         Write-Verbose "Downloading and Saving Registry Files..." -Verbose
         Save-WebFile -SourceUrl $3DMarkREGURL -DestinationDirectory $REGFilesScriptsDestination
-        Save-WebFile -SourceUrl $AdobeREGURL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG1URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG2URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG3URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG4URL  -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $AdobeREG5URL  -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $BitLockerREGURL -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $PCMark10REGURL -DestinationDirectory $REGFilesScriptsDestination
         Save-WebFile -SourceUrl $SYSTEMDesktopREGURL -DestinationDirectory $REGFilesScriptsDestination
@@ -993,25 +997,10 @@ do
         Save-WebFile -SourceUrl $REGFilesZIPURL -DestinationDirectory $REGFilesScriptsDestination
         Write-Host 
         Write-Verbose "Downloading and Saving Registry Script File..." -Verbose
-        Save-WebFile -SourceUrl $REGFilesScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $REGFilesClientScriptURL -DestinationDirectory $REGFilesScriptsDestination
+        Save-WebFile -SourceUrl $REGFilesServerScriptURL -DestinationDirectory $REGFilesScriptsDestination
         Write-Host
         Write-Host
-        Write-Verbose "Downloading and Saving OFFLINE Registry Files..." -Verbose
-        $OfflineHKCRREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddCopyToMoveTo.reg"
-        $OfflineHKCRREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKCR/AddSafeMode.reg"
-        $OfflineHKLMREG1URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AcrobatDisableCloudServices.reg"
-        $OfflineHKLMREG2URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019-AcrobatREGEntries.reg"
-        $OfflineHKLMREG3URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeCC2019.reg"
-        $OfflineHKLMREG4URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg1.reg"
-        $OfflineHKLMREG5URL = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Offline/HKLM/AdobeReg2.reg"
-        $OfflineREGDestination = "C:\scripts\backup\GitHubRepo\Registry Files\Offline"
-        Save-WebFile -SourceUrl $OfflineHKCRREG1URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKCRREG2URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG1URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG2URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG3URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG4URL -DestinationDirectory $OfflineREGDestination
-        Save-WebFile -SourceUrl $OfflineHKLMREG5URL -DestinationDirectory $OfflineREGDestination
         Write-Host
         Write-Host "Registry Files and Script Backup is Successful..." -ForegroundColor Green
         Write-Host
