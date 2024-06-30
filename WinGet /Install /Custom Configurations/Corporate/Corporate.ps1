@@ -26,3 +26,5 @@ pause
 $Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/CorporateBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
+$CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/CorporateCloudBackup.ps1")
+Invoke-Expression $($CloudBackup.Content)
