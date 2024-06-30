@@ -1,6 +1,6 @@
 Write-Host '                                                                 ' -BackgroundColor White 
-Write-Host '           MANAGEMENT PC SOFTWARE CONFIGURATION                  ' -ForegroundColor DarkBlue -BackgroundColor White 
-Write-Host '          The following software will be installed:              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '          MANAGEMENT PC SOFTWARE CONFIGURATION                   ' -ForegroundColor DarkBlue -BackgroundColor White 
+Write-Host '        The following software will be installed:                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  - Web Browsers: Google Chrome                                  ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Programming: VS Code, AI Code Editor,                        ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -19,3 +19,6 @@ Invoke-Expression $($Browsers.Content)
 
 $Programming = Invoke-WeBRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Management%20PC/ManagementPCProgramming.ps1")
 Invoke-Expression $($Programming.Content)
+
+$Utilities = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Management%20PC/ManagementPCUtilities.ps1")
+Invoke-Expression $($Utilities.Content)
