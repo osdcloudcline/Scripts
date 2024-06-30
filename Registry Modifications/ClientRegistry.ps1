@@ -61,7 +61,7 @@ $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registr
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
 
 # Operating System Registry URL Paths
-$W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Windows11-OSModifications.reg"
+$W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows11-OSModifications.reg"
 $W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows10-OSModifications.reg"
 $SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
 $HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
