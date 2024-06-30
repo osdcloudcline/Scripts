@@ -45,7 +45,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($VDI.Content)
     }
  '5'{cls
-       $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ManagementPC.ps1")
+       $ManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Management%20PC/ManagementPC.ps1")
        Invoke-Expression $($ManagementPC.Content)
  }
  '6'{cls
