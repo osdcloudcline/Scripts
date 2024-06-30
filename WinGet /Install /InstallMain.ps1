@@ -53,7 +53,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Honeypot.Content)
     }
  '7'{cls
-       $ITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/System-LOB%20Specific/ITTech.ps1")
+       $ITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/IT%20Tech/ITTech.ps1")
        Invoke-Expression $($ITTech.Content)
     }
  '8'{cls
