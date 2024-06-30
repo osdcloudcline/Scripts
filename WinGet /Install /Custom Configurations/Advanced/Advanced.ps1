@@ -60,5 +60,11 @@ Invoke-Expression $($Virtualization.Content)
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
+If($env:computername -eq "BTDESKTOP"){
+$BTDesktopUtils = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Custom/Bryan%20Desktop/CustomDesktopUtilities.ps1")
+Invoke-Expression $($BTDesktopUtils.Content)
+}
+else{ Write-Host "Skipping execution of a Custom Utilities Script"}
+
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
