@@ -23,9 +23,15 @@ Write-Host "Completed All Downloads..." -ForegroundColor Green
 
 Get-Win11SDK
 
+pause
+
 Get-Win11ADK
 
+pause
+
 Get-Win11PEADK
+
+pause
 
 Function Get-Win11SDK(){
 $SDKSetup = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
