@@ -14,6 +14,9 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
+
+Write-Host "Applying configuration to $env:computername..." -ForegroundColor DarkBlue -BackgroundColor White
+
 $PS5Modules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1")
 Invoke-Expression $($PS5Modules.Content)
 
