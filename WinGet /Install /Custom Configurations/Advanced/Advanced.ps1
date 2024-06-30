@@ -68,6 +68,20 @@ else{
 Write-Host "Skipping execution of a Custom Utilities Script" -ForegroundColor DarkRed -BackgroundColor White
 }
 
+If($env:computername -eq "BTDESKTOP"){
+$BTDesktopWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($BTDesktopWallpaper.Content)
+}
+ElseIf($env:computername -eq "BTLAPTOP"){
+$BTLaptopWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($BTLaptopWallpaper.Content)
+}
+else{
+Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundColor White
+$OtherWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($OtherWallpaper.Content)
+}
+
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
 
