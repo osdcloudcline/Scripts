@@ -130,4 +130,7 @@ Write-Host "Installing Lenovo Software...." -ForegroundColor Cyan
 $Lenovo = Invoke-WebRequest("")
 Invoke-Expression $($Lenovo.Content)
 }
-
+ElseIf($PCManufacturer -like "*HP*"){
+Write-Host "Installing HP Software...." -ForegroundColor Cyan
+$HP = Invoke-WebRequest("")
+Invoke-Expression $($HP.Content)
