@@ -27,11 +27,42 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
+Write-Verbose "Step 1 - Part 1 - PowerShell 5.x Modules..." -Verbose 
+
+$PS5Modules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1")
+Invoke-Expression $($PS5Modules.Content)
+
+Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose 
+
+$PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1")
+Invoke-Expression $($PS7Modules.Content)
+
+Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
+
+$ClientRegistry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1")
+Invoke-Expression $($ClientRegistry.Content)
+
+Write-Verbose "Step 3 - Client Operating System RSAT Tools..." -Verbose
+
+$ClientRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Client%20OS%20Roles%20/InstallClientRSAT.ps1")
+Invoke-Expression $($ClientRSAT.Content)
+
+Write-Verbose "Step 4 - Mandatory OS Pre-Requirements..." -Verbose
+
+$OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
+Invoke-Expression $($OS.Content)
+
+Write-Verbose "Step 5 - Installing Web Browsers..." -Verbose
+
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/StandardBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
+Write-Verbose "Step 6 - Installing Cloud Backup Software..." -Verbose
+
 $CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/StandardCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
+
+Write-Verbose "Step 7 - Installing File Transfer Software..." -Verbose
 
 $FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/StandardFileTransfer.ps1")
 Invoke-Expression $($FileTransfer.Content)
