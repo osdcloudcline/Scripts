@@ -57,7 +57,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($ITTech.Content)
     }
  '8'{cls
-       $Individual = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/WinGetIndivScriptsMain.ps1")
+       $Individual = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/IndividualScriptsMain.ps1")
        Invoke-Expression $($Individual.Content)
     }
 '9'{cls
