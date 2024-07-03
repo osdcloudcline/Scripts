@@ -36,7 +36,7 @@ do
         Show-CloudMenu
         }
   '3' { cls
-        
+        Show-FileTransferMenu
         }
   '4' { cls
         
