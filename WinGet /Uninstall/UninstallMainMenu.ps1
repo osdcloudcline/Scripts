@@ -360,7 +360,7 @@ do
 Function Show-FTPMenu(){
      [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Cloud -  Cloud Backup Uninstall Main Menu',
+    [string]$Title = 'OSD Cloud -  File Transfer Uninstall Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
