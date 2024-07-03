@@ -33,27 +33,41 @@ do
         Show-WebMenu
         }
   '2' { cls
-        winget list Microsoft
+        
         }
   '3' { cls
-        $WinTerminal = ""
-        Start-Process -FilePath $WinTerminal
-        winget list media
+        
         }
   '4' { cls
-        $WinTerminal = ""
-        Start-Process -FilePath $WinTerminal
-        winget list programming
+        
         }
   '5' { cls
-        winget list --source msstore
+        
         }
-  '6' { exit
+  '6' { cls
+       
+        }
+  '7' { cls
+        
+        }
+  '8' { cls
+        
+        }
+  '9' { cls
+        
+        }
+  '10' { cls
+        
+        }
+  '11' { cls
+        
+        }
+  '12' { exit
         }
 
     }
     }
-    until ($selection -eq '8'){}
+    until ($selection -eq '12'){exit}
     }
 
 Function Show-WebMenu(){
