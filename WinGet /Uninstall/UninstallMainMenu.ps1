@@ -428,5 +428,86 @@ do
     until ($selection -eq '7'){Show-MainMenu}
     }
 
-Function Show-MediaMenu(){}
+Function Show-MediaMenu(){
+     [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Media Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall ALL but VLC Player and MediaInfo"
+Write-Host " 2. Uninstall ALL Media creation software"
+Write-Host " 3. Uninstall Home Theater software, including Kodi"
+Write-Host " 4. Uninstall FileZilla"
+Write-Host " 5. Uninstall PuTTY"
+Write-Host " 6. Uninstall WinSCP"
+Write-Host " 7. Return to Main Menu"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+      Write-Host "Only VLC Player and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
+      $AudacityFFMPEG = Invoke-WebRequest("")
+      Invoke-Expression $($AudacityFFMPEG.Content)
+
+      $GIMP = Invoke-WebRequest("")
+      Invoke-Expression $($GIMP.Content)
+
+      $HDVideo = Invoke-WebRequest("")
+      Invoke-Expression $($HDVideo.Content)
+
+      $Handbrake = Invoke-WebRequest("")
+      Invoke-Expression $($Handbrake.Content)
+
+      $Kodi = Invoke-WebRequest("")
+      Invoke-Expression $($Kodi.Content)
+
+      $MKVToolnix = Invoke-WebRequest("")
+      Invoke-Expression $($MKVToolnix.Content)
+
+      $MakeMKV = Invoke-WebRequest("")
+      Invoke-Expression $($MakeMKV.Content)
+
+      $MyHarmony = Invoke-WebRequest("")
+      Invoke-Expression $($MyHarmony.Content)
+
+      $PowerISO = Invoke-WebRequest("")
+      Invoke-Expression $($PowerISO.Content)
+
+      $iTunes = Invoke-WebRequest("")
+      Invoke-Expression $($iTunes.Content)
+ }
+ '2'{ cls
+      Write-Host "Only Kodi, VLC Player, MyHarmony, PowerISO, iTunes and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
+      $AudacityFFMPEG = Invoke-WebRequest("")
+      Invoke-Expression $($AudacityFFMPEG.Content)
+
+      $GIMP = Invoke-WebRequest("")
+      Invoke-Expression $($GIMP.Content)
+
+      $HDVideo = Invoke-WebRequest("")
+      Invoke-Expression $($HDVideo.Content)
+
+      $Handbrake = Invoke-WebRequest("")
+      Invoke-Expression $($Handbrake.Content)
+
+      $MKVToolnix = Invoke-WebRequest("")
+      Invoke-Expression $($MKVToolnix.Content)
+      
+      $MakeMKV = Invoke-WebRequest("")
+      Invoke-Expression $($MakeMKV.Content)
+  }
+'3'{ cls
+     
+     $Kodi = Invoke-WebRequest("")
+     Invoke-Expression $($Kodi.Content)
+
+     $MyHarmony = Invoke-WebRequest("")
+     Invoke-Expression $($MyHarmony.Content)
+}
 Show-MainMenu
