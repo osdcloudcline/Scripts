@@ -148,18 +148,25 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall DropBox and Google Drive"
 Write-Host " 2. Uninstall Google Drive and Next Cloud"
 Write-Host " 3. Uninstall DropBox and Next Cloud"
-Write-Host " 4. Uninstall DropBox, Next Cloud, and Google Drive"
-Write-Host " 5. Uninstall One Drive and DropBox"
-Write-Host " 6. Uninstall One Drive and Google Drive"
-Write-Host " 7. Uninstall One Drive and Next Cloud"
-Write-Host " 8. Uninstall One Drive, Google Drive, and DropBox"
-Write-Host " 9. Uninstall One Drive, Google Drive, and Next Cloud"
-Write-Host " 10. Uninstall One Drive, DropBox, and Next Cloud"
-Write-Host " 11. Uninstall One Drive"
-Write-Host " 12. Uninstall DropBox"
-Write-Host " 13. Uninstall Google Drive"
-Write-Host " 14. Uninstall Next Cloud"
-Write-Host " 15. Return to Main Menu"
+Write-Host " 4. Uninstall DropBox and iCloud"
+Write-Host " 5. Uninstall Google Drive and iCloud"
+Write-Host " 6. Uninstall NextCloud and iCloud"
+Write-Host " 7. Uninstall DropBox, Next Cloud, and Google Drive"
+Write-Host " 8. Uninstall One Drive and DropBox"
+Write-Host " 9. Uninstall One Drive and Google Drive"
+Write-Host " 10. Uninstall One Drive and Next Cloud"
+Write-Host " 11. Uninstall One Drive, Google Drive, and DropBox"
+Write-Host " 12. Uninstall One Drive, Google Drive, and Next Cloud"
+Write-Host " 13. Uninstall One Drive, DropBox, and Next Cloud"
+Write-Host " 14. Uninstall One Drive, Google Drive, and iCloud"
+Write-Host " 15. Uninstall One Drive, iCloud, and Next Cloud"
+Write-Host " 16. Uninstall One Drive, DropBox, and iCloud"
+Write-Host " 17. Uninstall One Drive"
+Write-Host " 18. Uninstall DropBox"
+Write-Host " 19. Uninstall Google Drive"
+Write-Host " 20. Uninstall Next Cloud"
+Write-Host " 21. Uninstall iCloud"
+Write-Host " 22. Return to Main Menu"
 
 do 
 {
@@ -167,6 +174,7 @@ do
   switch($selection)
   {
 '1' { cls
+      Write-Host "OneDrive, Next Cloud and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $DropBox = Invoke-WebRequest("")
       Invoke-Expression $($DropBox.Content)
 
@@ -174,6 +182,7 @@ do
       Invoke-Expression $($GDrive.Content)
     }
 '2' { cls
+     Write-Host "OneDrive, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $GDrive = Invoke-WebRequest("")
       Invoke-Expression $($GDrive.Content)
 
@@ -181,13 +190,39 @@ do
       Invoke-Expression $($NextCloud.Content)
     }
 '3' { cls
+      Write-Host "OneDrive, Google Drive, and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $DropBox = Invoke-WebRequest("")
       Invoke-Expression $($DropBox.Content)
 
       $NextCloud = Invoke-WebRequest("")
       Invoke-Expression $($NextCloud.Content)
     }
-'4' { cls
+'4'{ cls
+      Write-Host "OneDrive, Next Cloud and Google Drive will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
+
+      $iCloud = Invoke-WebRequest("")
+      Invoke-Expression $($iCloud.Content)
+      }
+'5'{ cls
+     Write-Host "OneDrive, Next Cloud and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     $GDrive = Invoke-WebRequest("")
+     Invoke-Expression $($GDrive.Content)
+
+     $iCloud = Invoke-WebRequest("")
+     Invoke-Expression $($iCloud.Content)
+    }
+'6'{ cls
+     Write-Host "OneDrive, Google Drive and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     $NextCloud = Invoke-WebRequest("")
+     Invoke-Expression $($NextCloud.Content)
+
+     $iCloud = Invoke-WebRequest("")
+     Invoke-Expression $($iCloud.Content)
+    }
+'7' { cls
+      Write-Host "OneDrive and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $DropBox = Invoke-WebRequest("")
       Invoke-Expression $($DropBox.Content)
 
@@ -198,38 +233,43 @@ do
       Invoke-Expression $($GDrive.Content)
       
     }
-'5' { cls
-      $OneDrive = Invoke-WebRequest("")
-      Invoke-Expression $($OneDrive.Content)
-
-      $DropBox = Invoke-WebRequest("")
-      Invoke-Expression $($DropBox.Content)
-    }
-'6' { cls
-      $OneDrive = Invoke-WebRequest("")
-      Invoke-Expression $($OneDrive.Content)
-
-      $GDrive = Invoke-WebRequest("")
-      Invoke-Expression $($GDrive.Content)
-    }
-'7' { cls
-      $OneDrive = Invoke-WebRequest("")
-      Invoke-Expression $($OneDrive.Content)
-
-      $NextCloud = Invoke-WebRequest("")
-      Invoke-Expression $($NextCloud.Content)
-    }
 '8' { cls
+      Write-Host "Next Cloud, Google Drive and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $OneDrive = Invoke-WebRequest("")
       Invoke-Expression $($OneDrive.Content)
-
-      $GDrive = Invoke-WebRequest("")
-      Invoke-Expression $($GDrive.Content)
 
       $DropBox = Invoke-WebRequest("")
       Invoke-Expression $($DropBox.Content)
     }
 '9' { cls
+      Write-Host "Next Cloud, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
+
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
+    }
+'10' { cls
+      Write-Host "Google Drive, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
+
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
+    }
+'11' { cls
+      Write-Host "Next Cloud and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
+
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
+
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
+    }
+'12' { cls
+      Write-Host "DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
       $OneDrive = Invoke-WebRequest("")
       Invoke-Expression $($OneDrive.Content)
 
@@ -239,7 +279,8 @@ do
       $NextCloud = Invoke-WebRequest("")
       Invoke-Expression $($NextCloud.Content)
     }
-'10' { cls
+'13' { cls
+       Write-Host "Google Drive and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $OneDrive = Invoke-WebRequest("")
        Invoke-Expression $($OneDrive.Content)
 
@@ -249,28 +290,69 @@ do
        $NextCloud = Invoke-WebRequest("")
        Invoke-Expression $($NextCloud.Content)
     }
-'11' { cls
+'14' { cls
+       Write-Host "Next Cloud and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+       $OneDrive = Invoke-WebRequest("")
+       Invoke-Expression $($OneDrive.Content)
+
+       $GDrive = Invoke-WebRequest("")
+       Invoke-Expression $($GDrive.Content)
+
+       $iCloud = Invoke-WebRequest("")
+       Invoke-Expression $($iCloud.Content)
+'15' { cls
+       Write-Host "Google Drive and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+       $OneDrive = Invoke-WebRequest("")
+       Invoke-Expression $($OneDrive.Content)
+
+       $iCloud = Invoke-WebRequest("")
+       Invoke-Expression $($iCloud.Content)
+
+       $NextCloud = Invoke-WebRequest("")
+       Invoke-Expression $($NextCloud.Content)
+     }
+'16' { cls
+       Write-Host "Google Drive and Next Cloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+       $OneDrive = Invoke-WebRequest("")
+       Invoke-Expression $($OneDrive.Content)
+
+       $DropBox = Invoke-WebRequest("")
+       Invoke-Expression $($DropBox.Content)
+
+       $iCloud = Invoke-WebRequest("")
+       Invoke-Expression $($iCloud.Content)       
+     }
+'17' { cls
+       Write-Host "ALL BUT OneDrive will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $OneDrive = Invoke-WebRequest("")
        Invoke-Expression $($OneDrive.Content)
     }
-'12' { cls
+'18' { cls
+       Write-Host "ALL BUT DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $DropBox = Invoke-WebRequest("")
        Invoke-Expression $($DropBox.Content)
     }
-'13' { cls
+'19' { cls
+       Write-Host "ALL BUT Google Drive will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $GDrive = Invoke-WebRequest("")
        Invoke-Expression $($GDrive.Content)
     }
-'14' { cls
+'20' { cls
+       Write-Host "ALL BUT NextCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $NextCloud = Invoke-WebRequest("")
        Invoke-Expression $($NextCloud.Content)
     }
-'15' { 
+'21' { cls
+       Write-Host "ALL BUT iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+       $iCloud = Invoke-WebRequest("")
+       Invoke-Expression $($iCloud.Content)
+    }
+'22' { 
        Show-MainMenu
     }
     
     }
     }
-    until ($selection -eq '15'){Show-MainMenu}
+    until ($selection -eq '22'){Show-MainMenu}
     }
 Show-MainMenu
