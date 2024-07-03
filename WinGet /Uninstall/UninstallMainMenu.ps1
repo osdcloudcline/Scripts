@@ -427,4 +427,6 @@ do
     }
     until ($selection -eq '7'){Show-MainMenu}
     }
+
+Function Show-MediaMenu(){}
 Show-MainMenu
