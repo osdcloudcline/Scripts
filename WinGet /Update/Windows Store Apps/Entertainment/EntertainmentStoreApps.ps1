@@ -5,7 +5,7 @@ $StoreApp4 = "Disney +"
 $StoreApp5 = "Hulu"
 $StoreApp6 = "Apple TV +"
 $StoreApp7 = "Paramount +"
-
+$StoreApp8 = "Peacock TV"
 
 Write-Verbose "Updating $StoreApp1..." -Verbose
 winget upgrade --id 9WZDNCRFJ3TJ --source msstore
@@ -27,3 +27,6 @@ winget upgrade --id 9NM4T8B9JQZ1 --source msstore
 
 Write-Verbose "Updating $StoreApp7..." -Verbose
 winget upgrade --id 9WZDNCRFJ0WK --source msstore
+
+Write-Verbose "Updating $StoreApp8..." -Verbose
+winget upgrade --id 9PL67R4P9PG5 --source msstore
