@@ -367,8 +367,43 @@ cls
 
 Clear-Host
 Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall FileZilla and PuTTY"
+Write-Host " 2. Uninstall PuTTY and WinSCP"
+Write-Host " 3. Uninstall FileZilla and WinSCP"
+Write-Host " 4. Uninstall FileZilla"
+Write-Host " 5. Uninstall PuTTY"
+Write-Host " 6. Uninstall WinSCP"
 
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+      Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      
 
-
+      
+    }
+'2' { cls
+     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      
+    }
+'3' { cls
+      Write-Host "will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     
+    }
+'4'{ cls
+      Write-Host "will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      
+      }
+'5'{ cls
+     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     
+    }
+'6'{ cls
+     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+  
+    }
 }
 Show-MainMenu
