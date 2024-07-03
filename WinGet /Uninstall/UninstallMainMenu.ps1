@@ -66,3 +66,32 @@ do
     }
     until ($selection -eq '8'){}
     }
+
+Function Show-WebMenu(){
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Software Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall Chrome and Firefox"
+Write-Host " 2. Uninstall Chrome and Edge"
+Write-Host " 3. Uninstall Firefox and Edge"
+Write-Host " 4. Uninstall Chrome"
+Write-Host " 5. Uninstall Microsoft Edge"
+Write-Host " 6. Uninstall Firefox"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+      $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Chrome.ps1")
+      Invoke-Expression $(Chrome.Content)
+
+      
+     
