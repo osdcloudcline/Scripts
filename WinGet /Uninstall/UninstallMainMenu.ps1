@@ -33,7 +33,7 @@ do
         Show-WebMenu
         }
   '2' { cls
-        
+        Show-CloudMenu
         }
   '3' { cls
         
@@ -73,7 +73,7 @@ do
 Function Show-WebMenu(){
     [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Cloud -  Software Uninstall Main Menu',
+    [string]$Title = 'OSD Cloud -  Web Browser Uninstall Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
@@ -133,5 +133,87 @@ do
     }
     }
     until ($selection -eq '7'){Show-MainMenu}
+    }
+
+Function Show-CloudMenu(){
+     [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Cloud Backup Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall DropBox and Google Drive"
+Write-Host " 2. Uninstall Google Drive and Next Cloud"
+Write-Host " 3. Uninstall DropBox and Next Cloud"
+Write-Host " 4. Uninstall DropBox, Next Cloud, and Google Drive"
+Write-Host " 5. Uninstall One Drive and DropBox"
+Write-Host " 6. Uninstall One Drive and Google Drive"
+Write-Host " 7. Uninstall One Drive and Next Cloud"
+Write-Host " 8. Uninstall One Drive, Google Drive, and DropBox"
+Write-Host " 9. Uninstall One Drive, Google Drive, and Next Cloud"
+Write-Host " 10. Uninstall One Drive, DropBox, and Next Cloud"
+Write-Host " 11. Uninstall One Drive"
+Write-Host " 12. Uninstall DropBox"
+Write-Host " 13. Uninstall Google Drive"
+Write-Host " 14. Uninstall Next Cloud"
+Write-Host " 15. Return to Main Menu"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+
+    }
+'2' { cls
+
+    }
+'3' { cls
+
+    }
+'4' { cls
+
+    }
+'5' { cls
+
+    }
+'6' { cls
+
+    }
+'7' { cls
+
+    }
+'8' { cls
+
+    }
+'9' { cls
+
+    }
+'10' { cls
+
+    }
+'11' { cls
+
+    }
+'12' { cls
+
+    }
+'13' { cls
+
+    }
+'14' { cls
+
+    }
+'15' { 
+       Show-MainMenu
+    }
+    
+    }
+    }
+    until ($selection -eq '15'){Show-MainMenu}
     }
 Show-MainMenu
