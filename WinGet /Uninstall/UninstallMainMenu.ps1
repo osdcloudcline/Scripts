@@ -167,46 +167,103 @@ do
   switch($selection)
   {
 '1' { cls
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
 
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
     }
 '2' { cls
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
 
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
     }
 '3' { cls
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
 
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
     }
 '4' { cls
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
 
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
+
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
+      
     }
 '5' { cls
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
 
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
     }
 '6' { cls
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
 
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
     }
 '7' { cls
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
 
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
     }
 '8' { cls
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
 
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
+
+      $DropBox = Invoke-WebRequest("")
+      Invoke-Expression $($DropBox.Content)
     }
 '9' { cls
+      $OneDrive = Invoke-WebRequest("")
+      Invoke-Expression $($OneDrive.Content)
 
+      $GDrive = Invoke-WebRequest("")
+      Invoke-Expression $($GDrive.Content)
+
+      $NextCloud = Invoke-WebRequest("")
+      Invoke-Expression $($NextCloud.Content)
     }
 '10' { cls
+       $OneDrive = Invoke-WebRequest("")
+       Invoke-Expression $($OneDrive.Content)
 
+       $DropBox = Invoke-WebRequest("")
+       Invoke-Expression $($DropBox.Content)
+
+       $NextCloud = Invoke-WebRequest("")
+       Invoke-Expression $($NextCloud.Content)
     }
 '11' { cls
-
+       $OneDrive = Invoke-WebRequest("")
+       Invoke-Expression $($OneDrive.Content)
     }
 '12' { cls
-
+       $DropBox = Invoke-WebRequest("")
+       Invoke-Expression $($DropBox.Content)
     }
 '13' { cls
-
+       $GDrive = Invoke-WebRequest("")
+       Invoke-Expression $($GDrive.Content)
     }
 '14' { cls
-
+       $NextCloud = Invoke-WebRequest("")
+       Invoke-Expression $($NextCloud.Content)
     }
 '15' { 
        Show-MainMenu
