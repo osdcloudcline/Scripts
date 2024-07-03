@@ -96,4 +96,20 @@ do
       $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Firefox.ps1")
       Invoke-Expression $($Firefox.Content)
       }
-     
+'2' {cls
+
+    $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Edge.ps1")
+    Invoke-Expression $($Edge.Content)
+
+    $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Chrome.ps1")
+    Invoke-Expression $($Chrome.Content)
+    }
+'3' {cls
+     $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Firefox.ps1")
+     Invoke-Expression $($Firefox.Content)
+
+    $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Edge.ps1")
+    Invoke-Expression $($Edge.Content)
+
+}
+    
