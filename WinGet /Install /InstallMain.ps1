@@ -24,7 +24,7 @@ Write-Host " 11. Return to Winget Software Main Menu"
 Write-Host " 12. Exit PowerShell"
 
 do
-{
+{ 
 $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
