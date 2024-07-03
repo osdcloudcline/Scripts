@@ -356,4 +356,19 @@ do
     }
     until ($selection -eq '22'){Show-MainMenu}
     }
+
+Function Show-FileTransferMenu(){
+     [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Cloud Backup Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+
+
+
+}
 Show-MainMenu
