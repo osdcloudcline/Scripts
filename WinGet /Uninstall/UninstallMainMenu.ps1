@@ -373,37 +373,56 @@ Write-Host " 3. Uninstall FileZilla and WinSCP"
 Write-Host " 4. Uninstall FileZilla"
 Write-Host " 5. Uninstall PuTTY"
 Write-Host " 6. Uninstall WinSCP"
-
+Write-Host " 7. Return to Main Menu"
 do 
 {
   $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
 '1' { cls
-      Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      
+      Write-Host " WinSCP will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $FileZilla = Invoke-WebRequest("")
+      Invoke-Expression $($FileZilla.Content)
 
-      
+      $PuTTY = Invoke-WebRequest("")
+      Invoke-Expression $($PuTTY.Content)  
     }
 '2' { cls
-     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      
+     Write-Host "FileZilla will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     $PuTTY = Invoke-WebRequest("")
+     Invoke-Expression $($PuTTY.Content)
+
+     $WinSCP = Invoke-WebRequest("")
+     Invoke-Expression $($WinSCP.Content)
     }
 '3' { cls
-      Write-Host "will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-     
+      Write-Host "PuTTY will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $FileZilla = Invoke-WebRequest("")
+      Invoke-Expression $($FileZilla.Content)
+
+      $WinSCP = Invoke-WebRequest("")
+      Invoke-Expression $($WinSCP.Content)
     }
 '4'{ cls
-      Write-Host "will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      
+      Write-Host "PuTTY and WinSCP will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+      $FileZilla = Invoke-WebRequest("")
+      Invoke-Expression $($FileZilla.Content)
       }
 '5'{ cls
-     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-     
+     Write-Host "FileZilla and WinSCP will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     $PuTTY = Invoke-WebRequest("")
+     Invoke-Expression $($PuTTY.Content)
     }
 '6'{ cls
-     Write-Host " will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-  
+     Write-Host "FileZilla and PuTTY will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
+     $WinSCP = Invoke-WebRequest("")
+     Invoke-Expression $($WinSCP.Content)
     }
-}
+'7' {cls
+     Show-MainMenu
+     }
+       }
+    }
+    until ($selection -eq '7'){Show-MainMenu}
+    }
 Show-MainMenu
