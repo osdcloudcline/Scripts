@@ -15,7 +15,7 @@ Write-Host " 1. List all installed software on local PC"
 Write-Host " 2. List all installed Microsoft software"
 Write-Host " 3. List all installed Media-related software"
 Write-Host " 4. List all installed Programming-related software"
-Write-Host " 5. System Maintenance"
+Write-Host " 5. List all installed MS Store Apps"
 Write-Host " 6. Exit PowerShell"
 do 
 {
@@ -29,20 +29,20 @@ do
         Start-Process -FilePath $wingetpackages
         }
   '2' { cls
-        Show-SoftwareMainMenu
+        winget list Microsoft
         }
   '3' { cls
-        $OSUpdate = "ms-settings:windowsupdate"
-        Start-Process $OSUpdate
+        $WinTerminal = ""
+        Start-Process -FilePath $WinTerminal
+        winget list media
         }
   '4' { cls
-        $WinGetUpdateMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetUpdateMain.ps1")
-        Invoke-Expression $($WinGetUpdateMain.Content)
+        $WinTerminal = ""
+        Start-Process -FilePath $WinTerminal
+        winget list programming
         }
   '5' { cls
-        $sfc = "C:\Windows\System32\sfc.exe"
-        Write-Host "Scanning computer for corrupted system files..." -ForegroundColor Cyan
-        Start-Process -FilePath "C:\Windows\System32\sfc.exe" -ArgumentList "/scannow"
+        winget list --source msstore
         }
   '6' { exit
         }
