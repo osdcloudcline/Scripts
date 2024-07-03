@@ -35,7 +35,11 @@ do
         $firefox = "Mozilla Firefox" -or "Firefox" -or "firefox"
 
         $WebBrowsers = Read-Host -Prompt 'What browser do you want to remove?'
-        If($WebBrowsers -eq $chrome){}
+        If($WebBrowsers -eq $chrome){
+
+        $GoogleChrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Chrome.ps1")
+        Invoke-Expression $($GoogleChrome.Content)
+        }
         ElseIf($WebBrowsers -eq $edge){}
         ElseIf($WebBrowsers -eq $firefox){}
         }
