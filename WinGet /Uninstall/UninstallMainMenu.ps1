@@ -126,3 +126,8 @@ do
 '7'{cls
     Show-MainMenu
     }
+    
+    }
+    }
+    until ($selection -eq '7'){Show-MainMenu}
+    }
