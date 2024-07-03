@@ -120,3 +120,4 @@ do
     }
     until ($selection -eq '7'){Show-MainMenu}
     }
+Show-MainMenu
