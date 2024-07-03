@@ -83,6 +83,7 @@ Write-Host " 3. Uninstall Firefox and Edge"
 Write-Host " 4. Uninstall Chrome"
 Write-Host " 5. Uninstall Microsoft Edge"
 Write-Host " 6. Uninstall Firefox"
+Write-Host " 7. Return to Main Menu"
 
 do 
 {
@@ -97,7 +98,6 @@ do
       Invoke-Expression $($Firefox.Content)
       }
 '2' {cls
-
     $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Edge.ps1")
     Invoke-Expression $($Edge.Content)
 
@@ -110,6 +110,19 @@ do
 
     $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Edge.ps1")
     Invoke-Expression $($Edge.Content)
-
 }
-    
+'4'{cls
+    $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Chrome.ps1")
+    Invoke-Expression $($Chrome.Content)
+    }
+'5'{cls
+    $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Edge.ps1")
+    Invoke-Expression $($Edge.Content)
+    }
+'6'{cls
+    $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Firefox.ps1")
+    Invoke-Expression $($Firefox.Content)
+    }
+'7'{cls
+    Show-MainMenu
+    }
