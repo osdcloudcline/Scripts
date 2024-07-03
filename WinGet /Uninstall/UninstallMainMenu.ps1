@@ -91,7 +91,9 @@ do
   {
 '1' { cls
       $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Chrome.ps1")
-      Invoke-Expression $(Chrome.Content)
+      Invoke-Expression $($Chrome.Content)
 
-      
+      $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Browsers/Firefox.ps1")
+      Invoke-Expression $($Firefox.Content)
+      }
      
