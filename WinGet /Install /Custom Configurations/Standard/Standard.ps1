@@ -27,87 +27,42 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
-Write-Verbose "Step 1 - Part 1 - PowerShell 5.x Modules..." -Verbose 
 
-$PS5Modules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1")
-Invoke-Expression $($PS5Modules.Content)
-
-Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose 
-
-$PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1")
-Invoke-Expression $($PS7Modules.Content)
-
-Write-Verbose "Step 2 - Merging Registry Entries..." -Verbose
-
-$ClientRegistry = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/ClientRegistry.ps1")
-Invoke-Expression $($ClientRegistry.Content)
-
-Write-Verbose "Step 3 - Client Operating System RSAT Tools..." -Verbose
-
-$ClientRSAT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Client%20OS%20Roles%20/InstallClientRSAT.ps1")
-Invoke-Expression $($ClientRSAT.Content)
-
-Write-Verbose "Step 4 - Mandatory OS Pre-Requirements..." -Verbose
-
-$OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
-Invoke-Expression $($OS.Content)
-
-Write-Verbose "Step 5 - Installing Web Browsers..." -Verbose
 
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/StandardBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
-Write-Verbose "Step 6 - Installing Cloud Backup Software..." -Verbose
-
 $CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/StandardCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
-
-Write-Verbose "Step 7 - Installing File Transfer Software..." -Verbose
 
 $FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/StandardFileTransfer.ps1")
 Invoke-Expression $($FileTransfer.Content)
 
-Write-Verbose "Step 8 - Installing Gaming Software..." -Verbose
-
 $Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Standard/StandardGaming.ps1")
 Invoke-Expression $($Gaming.Content)
-
-Write-Verbose "Step 9 - Installing Media Software..." -Verbose
 
 $Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/StandardMedia.ps1")
 Invoke-Expression $($Media.Content)
 
-Write-Verbose "Step 10 - Installing Productivity Software..." -Verbose
-
 $Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/StandardProductivity.ps1")
 Invoke-Expression $($Productivity.Content)
-
-Write-Verbose "Step 11 - Installing Programming Software..." -Verbose
 
 $Programming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/StandardProgramming.ps1")
 Invoke-Expression $($Programming.Content)
 
-Write-Verbose "Step 12 - Installing VDI/Remote Desktop Software..." -Verbose
-
 $VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/StandardVDIRDC.ps1")
 Invoke-Expression $($VDI.Content)
-
-Write-Verbose "Step 13 - Installing Virtualization Software..." -Verbose
 
 $Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Standard/StandardVirtualization.ps1")
 Invoke-Expression $($Virtualization.Content)
 
-Write-Verbose "Step 14 - Installing Utilities Software..." -Verbose
-
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/StandardUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
-
-Write-Verbose "Step 15 - Downloading Security Software..." -Verbose
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/StandardSecurity.ps1")
 Invoke-Expression $($Security.Content)
 
-Write-Verbose "Step 16 - Detecting PC Manufacturer..." -Verbose
+Write-Verbose "Detecting PC Manufacturer..." -Verbose
 
 $PCManufacturer = (Get-CimInstance -Class Win32_ComputerSystem).Manufacturer
 If($PCManufacturer -like "*Dell*"){
