@@ -7,23 +7,23 @@ $StoreApp6 = "Apple TV +"
 $StoreApp7 = "Paramount +"
 
 
-Write-Verbose "Installing $StoreApp1..." -Verbose
+Write-Verbose "Uninstalling $StoreApp1..." -Verbose
 winget uninstall --id 9WZDNCRFJ3TJ --source msstore
 
-Write-Verbose "Installing $StoreApp2..." -Verbose
+Write-Verbose "Uninstalling $StoreApp2..." -Verbose
 winget uninstall --id 9NWD3S85MTFB --source msstore
 
-Write-Verbose "Installing $StoreApp3..." -Verbose
+Write-Verbose "Uninstalling $StoreApp3..." -Verbose
 winget uninstall --id 9P6RC76MSMMJ --source msstore
 
-Write-Verbose "Installing $StoreApp4..." -Verbose
+Write-Verbose "Uninstalling $StoreApp4..." -Verbose
 winget uninstall --id 9NXQXXLFST89 --source msstore
 
-Write-Verbose "Installing $StoreApp5..." -Verbose
+Write-Verbose "Uninstalling $StoreApp5..." -Verbose
 winget uninstall --id 9WZDNCRFJ3L1 --source msstore
 
-Write-Verbose "Installing $StoreApp6..." -Verbose
+Write-Verbose "Uninstalling $StoreApp6..." -Verbose
 winget uninstall --id 9NM4T8B9JQZ1 --source msstore
 
-Write-Verbose "Installing $StoreApp7..." -Verbose
+Write-Verbose "Uninstalling $StoreApp7..." -Verbose
 winget uninstall --id 9WZDNCRFJ0WK --source msstore
