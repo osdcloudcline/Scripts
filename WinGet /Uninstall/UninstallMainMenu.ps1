@@ -300,6 +300,7 @@ do
 
        $iCloud = Invoke-WebRequest("")
        Invoke-Expression $($iCloud.Content)
+     }
 '15' { cls
        Write-Host "Google Drive and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
        $OneDrive = Invoke-WebRequest("")
