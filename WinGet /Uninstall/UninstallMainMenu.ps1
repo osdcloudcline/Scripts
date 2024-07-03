@@ -348,7 +348,7 @@ do
        $iCloud = Invoke-WebRequest("")
        Invoke-Expression $($iCloud.Content)
     }
-'22' { 
+'22' { cls
        Show-MainMenu
     }
     
