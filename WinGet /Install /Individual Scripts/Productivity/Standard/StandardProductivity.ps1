@@ -20,4 +20,4 @@ $O21SetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
 Start-Process -FilePath $O21SetupCMD
 
 Write-Host "Processing: $app2..." -ForegroundColor Cyan
-winget install --id Adobe.Acrobat.Reader.64-bit 
+winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements --accept-source-agreements --force
