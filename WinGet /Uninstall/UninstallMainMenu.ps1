@@ -11,12 +11,18 @@ cls
 
 Clear-Host
 Write-Host "======= $Title ======"
-Write-Host " 1. List all installed software on local PC"
-Write-Host " 2. List all installed Microsoft software"
-Write-Host " 3. List all installed Media-related software"
-Write-Host " 4. List all installed Programming-related software"
-Write-Host " 5. List all installed MS Store Apps"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 1. Uninstall Web Browser Software"
+Write-Host " 2. Uninstall Cloud Backup Software"
+Write-Host " 3. Uninstall File Transfer Software"
+Write-Host " 4. Uninstall Gaming Software"
+Write-Host " 5. Uninstall Media Software"
+Write-Host " 6. Uninstall Productivity Software"
+Write-Host " 7. Uninstall Programming Software"
+Write-Host " 8. Uninstall Utilities Software"
+Write-Host " 9. Uninstall VDI/Remote Desktop Software"
+Write-Host " 10. Uninstall Virtualization Software"
+Write-Host " 11. Uninstall Windows Store Apps"
+Write-Host " 12. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -24,9 +30,14 @@ do
   {
 
   '1' { cls
-        winget list | Out-File C:\WinGetPackages.txt
-        $wingetpackages = "C:\WinGetPackages.txt"
-        Start-Process -FilePath $wingetpackages
+        $chrome = "Google Chrome" -or "Chrome" -or "chrome"
+        $edge = "Microsoft Edge" -or "Edge" -or "edge"
+        $firefox = "Mozilla Firefox" -or "Firefox" -or "firefox"
+
+        $WebBrowsers = Read-Host -Prompt 'What browser do you want to remove?'
+        If($WebBrowsers -eq $chrome){}
+        ElseIf($WebBrowsers -eq $edge){}
+        ElseIf($WebBrowsers -eq $firefox){}
         }
   '2' { cls
         winget list Microsoft
