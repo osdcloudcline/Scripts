@@ -36,7 +36,7 @@ do
         Show-CloudMenu
         }
   '3' { cls
-        Show-FileTransferMenu
+        Show-FTPMenu
         }
   '4' { cls
         
@@ -357,7 +357,7 @@ do
     until ($selection -eq '22'){Show-MainMenu}
     }
 
-Function Show-FileTransferMenu(){
+Function Show-FTPMenu(){
      [CmdletBinding()]
     param(
     [string]$Title = 'OSD Cloud -  Cloud Backup Uninstall Main Menu',
