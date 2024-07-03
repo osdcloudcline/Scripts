@@ -5,7 +5,7 @@ $StoreApp4 = "Disney +"
 $StoreApp5 = "Hulu"
 $StoreApp6 = "Apple TV +"
 $StoreApp7 = "Paramount +"
-
+$StoreApp8 = "Peacock TV"
 
 Write-Verbose "Uninstalling $StoreApp1..." -Verbose
 winget uninstall --id 9WZDNCRFJ3TJ --source msstore
@@ -27,3 +27,6 @@ winget uninstall --id 9NM4T8B9JQZ1 --source msstore
 
 Write-Verbose "Uninstalling $StoreApp7..." -Verbose
 winget uninstall --id 9WZDNCRFJ0WK --source msstore
+
+Write-Verbose "Uninstalling $StoreApp8..." -Verbose
+winget uninstall --id 9PL67R4P9PG5 --source msstore
