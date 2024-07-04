@@ -47,7 +47,7 @@ do
         Show-MediaMenu
         }
   '6' { cls
-       
+        Show-ProduvtivityMenu
         }
   '7' { cls
         
@@ -515,5 +515,57 @@ do
     }
     }
     until ($selection -eq '4'){Show-MainMenu}
+    } 
+
+Function Show-ProduvtivityMenu(){
+     [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Productivity Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall Office 2021"
+Write-Host " 2. Uninstall Office 2024"
+Write-Host " 3. Uninstall Office 365"
+Write-Host " 3. Uninstall Acrobat Reader"
+Write-Host " 4. Return to Main Menu"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+     
+      $Office2021 = Invoke-WebRequest("")
+      Invoke-Expression $($Office2021.Content)
+
+ }
+ '2'{ cls
+      
+      $Office2024 = Invoke-WebRequest("")
+      Invoke-Expression $($Office2024.Content)
+  }
+'3'{ cls
+     
+     $Office365 = Invoke-WebRequest("")
+     Invoke-Expression $($Office365.Content)
+
+}
+'4'{ cls
+     
+     $AcrobatReader = Invoke-WebRequest("")
+     Invoke-Expression $($AcrobatReader.Content)
+
+}
+'5'{ cls
+     Show-MainMenu
+     }
+
+    }
+    }
+    until ($selection -eq '5'){Show-MainMenu}
     } 
 Show-MainMenu
