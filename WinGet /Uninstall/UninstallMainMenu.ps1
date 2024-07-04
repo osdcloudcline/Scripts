@@ -464,7 +464,7 @@ do
       $Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Handbrake.ps1")
       Invoke-Expression $($Handbrake.Content)
 
-      $Kodi = Invoke-WebRequest("")
+      $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Kodi.ps1")
       Invoke-Expression $($Kodi.Content)
 
       $MKVToolnix = Invoke-WebRequest("")
@@ -504,7 +504,7 @@ do
   }
 '3'{ cls
      Write-Host "Only VLC Player, Audacity/FFMPEG, PowerISO, GIMP, HD Video Converter Pro, MakeMKV, Handbrake, MKVToolnix, iTunes and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
-     $Kodi = Invoke-WebRequest("")
+     $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Kodi.ps1")
      Invoke-Expression $($Kodi.Content)
 
      $MyHarmony = Invoke-WebRequest("")
