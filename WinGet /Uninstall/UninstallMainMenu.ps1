@@ -876,11 +876,16 @@ do
     
 }
 '13'{ cls
+      $StoreApp13 = "Microsoft PC Manager"
 
-    
+      Write-Verbose "Uninstalling $StoreApp13..." -Verbose
+      winget uninstall --id 9PM860492SZD --source msstore   
 }
 '14'{ cls
-     
+      $StoreApp14 = "Windows 365"
+
+      Write-Verbose "Uninstalling $StoreApp14..." -Verbose
+      winget uninstall --id 9N1F85V9T8BN --source msstore
      }
 '15'{ cls
      Show-StoreAppsMenu
