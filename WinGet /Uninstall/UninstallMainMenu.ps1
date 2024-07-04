@@ -530,8 +530,8 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall Office 2021"
 Write-Host " 2. Uninstall Office 2024"
 Write-Host " 3. Uninstall Office 365"
-Write-Host " 3. Uninstall Acrobat Reader"
-Write-Host " 4. Return to Main Menu"
+Write-Host " 4. Uninstall Acrobat Reader"
+Write-Host " 5. Return to Main Menu"
 do 
 {
   $selection = Read-Host 'Please choose an option'
