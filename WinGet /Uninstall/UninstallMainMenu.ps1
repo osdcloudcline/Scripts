@@ -659,7 +659,7 @@ do
  }
  '2'{ cls
       
-      $VMWareHorizon = Invoke-WebRequest("")
+      $VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/VMWareHorizon.ps1")
       Invoke-Expression $($VMWareHorizon.Content)
   }
 '3'{ cls
@@ -670,10 +670,10 @@ do
 }
 '4'{ cls
      
-     $MSRemoteDesktop = Invoke-WebRequest("")
+     $MSRemoteDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/MSRemoteDesktop.ps1")
      Invoke-Expression $($MSRemoteDesktop.Content)
 
-     $VMWareHorizon = Invoke-WebRequest("")
+     $VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/VMWareHorizon.ps1")
      Invoke-Expression $($VMWareHorizon.Content)
 
      $Windows365 = Invoke-WebRequest("")
