@@ -239,7 +239,7 @@ do
     }
 '8' { cls
       Write-Host "Next Cloud, Google Drive and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $OneDrive = Invoke-WebRequest("")
+      $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
       Invoke-Expression $($OneDrive.Content)
 
       $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
@@ -247,7 +247,7 @@ do
     }
 '9' { cls
       Write-Host "Next Cloud, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $OneDrive = Invoke-WebRequest("")
+      $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
       Invoke-Expression $($OneDrive.Content)
 
       $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
@@ -255,7 +255,7 @@ do
     }
 '10' { cls
       Write-Host "Google Drive, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $OneDrive = Invoke-WebRequest("")
+      $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
       Invoke-Expression $($OneDrive.Content)
 
       $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
@@ -263,7 +263,7 @@ do
     }
 '11' { cls
       Write-Host "Next Cloud and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $OneDrive = Invoke-WebRequest("")
+      $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
       Invoke-Expression $($OneDrive.Content)
 
       $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
@@ -274,7 +274,7 @@ do
     }
 '12' { cls
       Write-Host "DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $OneDrive = Invoke-WebRequest("")
+      $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
       Invoke-Expression $($OneDrive.Content)
 
       $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
@@ -285,7 +285,7 @@ do
     }
 '13' { cls
        Write-Host "Google Drive and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $OneDrive = Invoke-WebRequest("")
+       $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
 
        $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
@@ -296,7 +296,7 @@ do
     }
 '14' { cls
        Write-Host "Next Cloud and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $OneDrive = Invoke-WebRequest("")
+       $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
 
        $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
@@ -307,7 +307,7 @@ do
      }
 '15' { cls
        Write-Host "Google Drive and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $OneDrive = Invoke-WebRequest("")
+       $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
 
        $iCloud = Invoke-WebRequest("")
@@ -318,7 +318,7 @@ do
      }
 '16' { cls
        Write-Host "Google Drive and Next Cloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $OneDrive = Invoke-WebRequest("")
+       $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
 
        $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
@@ -329,7 +329,7 @@ do
      }
 '17' { cls
        Write-Host "ALL BUT OneDrive will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $OneDrive = Invoke-WebRequest("")
+       $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
     }
 '18' { cls
