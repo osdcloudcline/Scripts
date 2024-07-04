@@ -455,7 +455,7 @@ do
       $AudacityFFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/AudacityFFMPEG.ps1")
       Invoke-Expression $($AudacityFFMPEG.Content)
 
-      $GIMP = Invoke-WebRequest("")
+      $GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/GIMP.ps1")
       Invoke-Expression $($GIMP.Content)
 
       $HDVideo = Invoke-WebRequest("")
@@ -487,7 +487,7 @@ do
       $AudacityFFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/AudacityFFMPEG.ps1")
       Invoke-Expression $($AudacityFFMPEG.Content)
 
-      $GIMP = Invoke-WebRequest("")
+      $GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/GIMP.ps1")
       Invoke-Expression $($GIMP.Content)
 
       $HDVideo = Invoke-WebRequest("")
