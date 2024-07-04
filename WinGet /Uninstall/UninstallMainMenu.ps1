@@ -706,7 +706,8 @@ Write-Host " 3. Uninstall Entertainment Apps"
 Write-Host " 4. Uninstall Network Tools Apps"
 Write-Host " 5. Uninstall OS SYSTEM Tools Apps"
 Write-Host " 6. Uninstall ALL"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 7. Uninstall Individual Store Apps"
+Write-Host " 8. Return to Main Menu"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -755,12 +756,15 @@ do
      Invoke-Expression $($OSSYSTEMApps.Content)
 }
 '7'{ cls
+     
+     }
+'8'{ cls
      Show-MainMenu
      }
 
     }
     }
-    until ($selection -eq '7'){Show-MainMenu}
+    until ($selection -eq '8'){Show-MainMenu}
 
 }
 Show-MainMenu
