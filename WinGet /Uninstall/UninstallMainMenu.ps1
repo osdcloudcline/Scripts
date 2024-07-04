@@ -604,19 +604,19 @@ do
   }
 '3'{ cls
      
-     $VisualStudio2022 = Invoke-WebRequest("")
+     $VisualStudio2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/VisualStudio2022.ps1")
      Invoke-Expression $($VisualStudio2022.Content)
 
 }
 '4'{ cls
      
-     $AICoder = Invoke-WebRequest("")
+     $AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/AICoder.ps1")
      Invoke-Expression $($AICoder.Content)
 
-     $VSCode = Invoke-WebRequest("")
+     $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/VSCode.ps1")
      Invoke-Expression $($VSCode.Content)
 
-     $VisualStudio2022 = Invoke-WebRequest("")
+     $VisualStudio2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/VisualStudio2022.ps1")
      Invoke-Expression $($VisualStudio2022.Content)
 
 }
