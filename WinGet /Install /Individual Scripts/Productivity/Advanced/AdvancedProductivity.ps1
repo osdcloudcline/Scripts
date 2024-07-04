@@ -21,7 +21,7 @@ $O21SetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
 Start-Process -FilePath $O21SetupCMD
 
 Write-Host "Processing: $app2..." -ForegroundColor Cyan
-
+winget install --id Microsoft.Office
 
 Write-Host "Processing: $app3..." -ForegroundColor Cyan
 
