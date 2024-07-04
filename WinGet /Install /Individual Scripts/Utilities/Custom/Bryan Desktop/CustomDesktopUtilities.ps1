@@ -21,11 +21,6 @@ $OSDUtilitiesSoftwareLogs = "C:\OSDCloud\DeploymentLogs\ADV\$env:computername-OS
 Start-Transcript -Path $OSDUtilitiesSoftwareLogs
 
 # Utilities Software
-
-Write-Host
-Write-Host
-Write-Host "Step 3 : Sytem Utilities Software" -ForegroundColor Cyan
-Write-Host
 Write-Host
 
 $Utilitiesapp1 = "AIDA64 Engineer"
