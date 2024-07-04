@@ -385,7 +385,7 @@ do
   {
 '1' { cls
       Write-Host " WinSCP will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $FileZilla = Invoke-WebRequest("")
+      $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/File%20Transfer/FileZilla.ps1")
       Invoke-Expression $($FileZilla.Content)
 
       $PuTTY = Invoke-WebRequest("")
@@ -401,7 +401,7 @@ do
     }
 '3' { cls
       Write-Host "PuTTY will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $FileZilla = Invoke-WebRequest("")
+      $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/File%20Transfer/FileZilla.ps1")
       Invoke-Expression $($FileZilla.Content)
 
       $WinSCP = Invoke-WebRequest("")
@@ -409,7 +409,7 @@ do
     }
 '4'{ cls
       Write-Host "PuTTY and WinSCP will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $FileZilla = Invoke-WebRequest("")
+      $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/File%20Transfer/FileZilla.ps1")
       Invoke-Expression $($FileZilla.Content)
       }
 '5'{ cls
