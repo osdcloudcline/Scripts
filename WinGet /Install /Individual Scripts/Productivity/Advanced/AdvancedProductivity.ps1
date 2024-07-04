@@ -2,6 +2,7 @@ Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
 
 $app1 = "Microsoft Office 2021 LTSC"
+$app2 = "Microsoft Office 365 for enterprise"
 
 Write-Host "Processing: $app1..." -ForegroundColor Cyan
 $OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
