@@ -802,9 +802,7 @@ do
       $StoreApp1 = "Microsoft Office 365"
 
       Write-Verbose "Uninstalling $StoreApp1..." -Verbose
-      winget uninstall --id 9WZDNCRD29V9 --source msstore
-      
-     
+      winget uninstall --id 9WZDNCRD29V9 --source msstore   
  }
  '2'{ cls
       $StoreApp2 = "Company Portal"
@@ -816,8 +814,7 @@ do
      $StoreApp3 = "Python 3.12"
 
      Write-Verbose "Uninstalling $StoreApp3..." -Verbose
-     winget uninstall --id 9NCVDN91XZQP --source msstore
-    
+     winget uninstall --id 9NCVDN91XZQP --source msstore   
 }
 '4'{ cls
      $StoreApp4 = "Netflix"
@@ -859,8 +856,7 @@ do
       $StoreApp10 = "Paramount +"
 
       Write-Verbose "Uninstalling $StoreApp10..." -Verbose
-      winget uninstall --id 9WZDNCRFJ0WK --source msstore
-    
+      winget uninstall --id 9WZDNCRFJ0WK --source msstore 
 }
 '11'{ cls
       $StoreApp11 = "Peacock TV"
@@ -872,8 +868,7 @@ do
       $StoreApp12 = "Network Tools Desktop Edition"
 
       Write-Verbose "Unnstalling $StoreApp12..." -Verbose
-      winget uninstall --id 9NW6L8PLQMM4 --source msstore
-    
+      winget uninstall --id 9NW6L8PLQMM4 --source msstore    
 }
 '13'{ cls
       $StoreApp13 = "Microsoft PC Manager"
