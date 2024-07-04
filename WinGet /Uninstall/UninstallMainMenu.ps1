@@ -476,7 +476,7 @@ do
       $MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MyHarmony.ps1")
       Invoke-Expression $($MyHarmony.Content)
 
-      $PowerISO = Invoke-WebRequest("")
+      $PowerISO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/PowerISO.ps1")
       Invoke-Expression $($PowerISO.Content)
 
       $iTunes = Invoke-WebRequest("")
