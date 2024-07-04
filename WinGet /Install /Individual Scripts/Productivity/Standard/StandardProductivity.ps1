@@ -2,7 +2,8 @@ Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
 
 $app1 = "Microsoft Office 2021 LTSC"
-$app2 = "Adobe Acrobat Reader"
+$app2 = "Microsoft 365 (Office)"
+$app3 = "Adobe Acrobat Reader"
 
 Write-Host "Processing: $app1..." -ForegroundColor Cyan
 $OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
@@ -20,4 +21,7 @@ $O21SetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
 Start-Process -FilePath $O21SetupCMD
 
 Write-Host "Processing: $app2..." -ForegroundColor Cyan
-winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements --accept-source-agreements --force
+winget install --id 9WZDNCRD29V9 --source msstore
+
+Write-Host "Processing: $app3..." -ForegroundColor Cyan
+winget install --id Adobe.Acrobat.Reader.64-bit --exact --accept-source-agreements  --accept-source-agreements --force
