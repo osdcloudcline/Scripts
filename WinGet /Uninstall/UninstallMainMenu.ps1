@@ -653,7 +653,7 @@ do
   {
 '1' { cls
      
-      $MSRemoteDesktop = Invoke-WebRequest("")
+      $MSRemoteDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/MSRemoteDesktop.ps1")
       Invoke-Expression $($MSRemoteDesktop.Content)
 
  }
