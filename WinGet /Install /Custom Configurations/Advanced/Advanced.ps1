@@ -98,3 +98,9 @@ Write-Host      "This PC has an $CPU $CPUName" -ForegroundColor DarkBlue -Backgr
 $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Intel/Intel.ps1")
 Invoke-Expression $($Intel.Content)
 }
+
+
+
+
+$Uninstall = Invoke-WebRequest("")
+Invoke-Expression $($Uninstall.Content)
