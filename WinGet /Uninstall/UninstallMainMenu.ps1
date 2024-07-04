@@ -574,7 +574,7 @@ do
  Function Show-ProgrammingMenu(){
      [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Cloud -  Productivity Uninstall Main Menu',
+    [string]$Title = 'OSD Cloud -  Programming Uninstall Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
@@ -593,7 +593,7 @@ do
   {
 '1' { cls
      
-      $AICoder = Invoke-WebRequest("")
+      $AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/AICoder.ps1")
       Invoke-Expression $($AICoder.Content)
 
  }
