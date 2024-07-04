@@ -187,10 +187,10 @@ do
     }
 '2' { cls
      Write-Host "OneDrive, DropBox and iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-      $GDrive = Invoke-WebRequest("")
+      $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
       Invoke-Expression $($GDrive.Content)
 
-      $NextCloud = Invoke-WebRequest("")
+      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
       Invoke-Expression $($NextCloud.Content)
     }
 '3' { cls
@@ -198,7 +198,7 @@ do
       $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
       Invoke-Expression $($DropBox.Content)
 
-      $NextCloud = Invoke-WebRequest("")
+      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
       Invoke-Expression $($NextCloud.Content)
     }
 '4'{ cls
@@ -219,7 +219,7 @@ do
     }
 '6'{ cls
      Write-Host "OneDrive, Google Drive and DropBox will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-     $NextCloud = Invoke-WebRequest("")
+     $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
      Invoke-Expression $($NextCloud.Content)
 
      $iCloud = Invoke-WebRequest("")
@@ -230,7 +230,7 @@ do
       $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
       Invoke-Expression $($DropBox.Content)
 
-      $NextCloud = Invoke-WebRequest("")
+      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
       Invoke-Expression $($NextCloud.Content)
 
       $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
@@ -258,7 +258,7 @@ do
       $OneDrive = Invoke-WebRequest("")
       Invoke-Expression $($OneDrive.Content)
 
-      $NextCloud = Invoke-WebRequest("")
+      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
       Invoke-Expression $($NextCloud.Content)
     }
 '11' { cls
@@ -280,7 +280,7 @@ do
       $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
       Invoke-Expression $($GDrive.Content)
 
-      $NextCloud = Invoke-WebRequest("")
+      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
       Invoke-Expression $($NextCloud.Content)
     }
 '13' { cls
@@ -291,7 +291,7 @@ do
        $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
        Invoke-Expression $($DropBox.Content)
 
-       $NextCloud = Invoke-WebRequest("")
+       $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
        Invoke-Expression $($NextCloud.Content)
     }
 '14' { cls
@@ -313,7 +313,7 @@ do
        $iCloud = Invoke-WebRequest("")
        Invoke-Expression $($iCloud.Content)
 
-       $NextCloud = Invoke-WebRequest("")
+       $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
        Invoke-Expression $($NextCloud.Content)
      }
 '16' { cls
@@ -344,7 +344,7 @@ do
     }
 '20' { cls
        Write-Host "ALL BUT NextCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $NextCloud = Invoke-WebRequest("")
+       $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
        Invoke-Expression $($NextCloud.Content)
     }
 '21' { cls
