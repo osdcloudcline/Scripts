@@ -461,7 +461,7 @@ do
       $HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/HDVideoConverterFactoryPro.ps1")
       Invoke-Expression $($HDVideo.Content)
 
-      $Handbrake = Invoke-WebRequest("")
+      $Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Handbrake.ps1")
       Invoke-Expression $($Handbrake.Content)
 
       $Kodi = Invoke-WebRequest("")
@@ -493,7 +493,7 @@ do
       $HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/HDVideoConverterFactoryPro.ps1")
       Invoke-Expression $($HDVideo.Content)
 
-      $Handbrake = Invoke-WebRequest("")
+      $Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Handbrake.ps1")
       Invoke-Expression $($Handbrake.Content)
 
       $MKVToolnix = Invoke-WebRequest("")
