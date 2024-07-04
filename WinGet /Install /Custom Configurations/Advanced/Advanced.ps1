@@ -102,5 +102,5 @@ Invoke-Expression $($Intel.Content)
 
 
 
-$Uninstall = Invoke-WebRequest("")
+$Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
 Invoke-Expression $($Uninstall.Content)
