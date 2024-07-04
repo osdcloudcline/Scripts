@@ -50,7 +50,7 @@ do
         Show-ProduvtivityMenu
         }
   '7' { cls
-        
+        Show-ProgrammingMenu
         }
   '8' { cls
         
@@ -558,6 +558,58 @@ do
      
      $AcrobatReader = Invoke-WebRequest("")
      Invoke-Expression $($AcrobatReader.Content)
+
+}
+'5'{ cls
+     Show-MainMenu
+     }
+
+    }
+    }
+    until ($selection -eq '5'){Show-MainMenu}
+    } 
+
+ Function Show-ProgrammingMenu(){
+     [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Productivity Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall AI Coder"
+Write-Host " 2. Uninstall VS Code"
+Write-Host " 3. Uninstall Visual Studio 2022"
+Write-Host " 4. Uninstall ALL"
+Write-Host " 5. Return to Main Menu"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+     
+      $AICoder = Invoke-WebRequest("")
+      Invoke-Expression $($AICoder.Content)
+
+ }
+ '2'{ cls
+      
+      $VSCode = Invoke-WebRequest("")
+      Invoke-Expression $($VSCode.Content)
+  }
+'3'{ cls
+     
+     $VisualStudio2022 = Invoke-WebRequest("")
+     Invoke-Expression $($VisualStudio2022.Content)
+
+}
+'4'{ cls
+     
+     $ALLProgramming = Invoke-WebRequest("")
+     Invoke-Expression $($ALLProgramming.Content)
 
 }
 '5'{ cls
