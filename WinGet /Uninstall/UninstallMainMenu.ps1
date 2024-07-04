@@ -458,7 +458,7 @@ do
       $GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/GIMP.ps1")
       Invoke-Expression $($GIMP.Content)
 
-      $HDVideo = Invoke-WebRequest("")
+      $HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/HDVideoConverterFactoryPro.ps1")
       Invoke-Expression $($HDVideo.Content)
 
       $Handbrake = Invoke-WebRequest("")
@@ -490,7 +490,7 @@ do
       $GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/GIMP.ps1")
       Invoke-Expression $($GIMP.Content)
 
-      $HDVideo = Invoke-WebRequest("")
+      $HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/HDVideoConverterFactoryPro.ps1")
       Invoke-Expression $($HDVideo.Content)
 
       $Handbrake = Invoke-WebRequest("")
