@@ -547,7 +547,7 @@ do
  }
  '2'{ cls
       
-      $Office2024 = Invoke-WebRequest("")
+      $Office2024 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Productivity/Office2024.ps1")
       Invoke-Expression $($Office2024.Content)
   }
 '3'{ cls
