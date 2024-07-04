@@ -441,10 +441,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall ALL but VLC Player and MediaInfo"
 Write-Host " 2. Uninstall ALL Media creation software"
 Write-Host " 3. Uninstall Home Theater software, including Kodi"
-Write-Host " 4. Uninstall FileZilla"
-Write-Host " 5. Uninstall PuTTY"
-Write-Host " 6. Uninstall WinSCP"
-Write-Host " 7. Return to Main Menu"
+Write-Host " 4. Return to Main Menu"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -503,11 +500,19 @@ do
       Invoke-Expression $($MakeMKV.Content)
   }
 '3'{ cls
-     
+     Write-Host "Only VLC Player, Audacity/FFMPEG, PowerISO, GIMP, HD Video Converter Pro, MakeMKV, Handbrake, MKVToolnix, iTunes and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
      $Kodi = Invoke-WebRequest("")
      Invoke-Expression $($Kodi.Content)
 
      $MyHarmony = Invoke-WebRequest("")
      Invoke-Expression $($MyHarmony.Content)
 }
+'4'{ cls
+     Show-MainMenu
+     }
+
+    }
+    }
+    until ($selection -eq '4'){Show-MainMenu}
+    } 
 Show-MainMenu
