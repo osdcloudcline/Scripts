@@ -756,6 +756,84 @@ do
      Invoke-Expression $($OSSYSTEMApps.Content)
 }
 '7'{ cls
+     Show-StoreAppsSubMenu
+     }
+'8'{ cls
+     Show-MainMenu
+     }
+
+    }
+    }
+    until ($selection -eq '8'){Show-MainMenu}
+
+}
+
+Function Show-StoreAppsSubMenu(){
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  Microsoft Store Apps Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall Business Apps"
+Write-Host " 2. Uninstall Development Tools Apps"
+Write-Host " 3. Uninstall Entertainment Apps"
+Write-Host " 4. Uninstall Network Tools Apps"
+Write-Host " 5. Uninstall OS SYSTEM Tools Apps"
+Write-Host " 6. Uninstall ALL"
+Write-Host " 7. Uninstall Individual Store Apps"
+Write-Host " 8. Return to Store Apps Main Menu"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+     
+      $BusinessApps = Invoke-WebRequest("")
+      Invoke-Expression $($BusinessApps.Content)
+ }
+ '2'{ cls
+      
+      $DevToolsApps = Invoke-WebRequest("")
+      Invoke-Expression $($DevToolsApps.Content)
+  }
+'3'{ cls
+     
+     $EntertainmentApps = Invoke-WebRequest("")
+     Invoke-Expression $($EntertainmentApps.Content)
+}
+'4'{ cls
+     
+     $NetworkToolsApps = Invoke-WebRequest("")
+     Invoke-Expression $($NetworkToolsApps.Content)
+}
+'5'{ cls
+     
+     $OSSYSTEMApps = Invoke-WebRequest("")
+     Invoke-Expression $($OSSYSTEMApps.Content)
+}
+'6'{ cls
+
+     $BusinessApps = Invoke-WebRequest("")
+     Invoke-Expression $($BusinessApps.Content)
+
+     $DevToolsApps = Invoke-WebRequest("")
+     Invoke-Expression $($DevToolsApps.Content)
+
+     $EntertainmentApps = Invoke-WebRequest("")
+     Invoke-Expression $($EntertainmentApps.Content)
+
+     $NetworkToolsApps = Invoke-WebRequest("")
+     Invoke-Expression $($NetworkToolsApps.Content)
+     
+     $OSSYSTEMApps = Invoke-WebRequest("")
+     Invoke-Expression $($OSSYSTEMApps.Content)
+}
+'7'{ cls
      
      }
 '8'{ cls
