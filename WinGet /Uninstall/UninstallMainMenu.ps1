@@ -771,7 +771,7 @@ do
 Function Show-StoreAppsSubMenu(){
     [CmdletBinding()]
     param(
-    [string]$Title = 'OSD Cloud -  Microsoft Store Apps Uninstall Main Menu',
+    [string]$Title = 'OSD Cloud -  Individual Microsoft Store Apps Uninstall Main Menu',
     [string]$Question = 'What type of action do you want to perform?'
 )
 cls
@@ -789,7 +789,10 @@ Write-Host " 8. Uninstall Hulu"
 Write-Host " 9. Uninstall Apple TV +"
 Write-Host " 10. Uninstall Paramount +"
 Write-Host " 11. Uninstall Peacock TV"
-
+Write-Host " 12. Uninstall Network Tools Desktop Edition"
+Write-Host " 9. Uninstall Apple TV +"
+Write-Host " 10. Uninstall Paramount +"
+Write-Host " 11. Uninstall Ring Doorbell"
 Write-Host " 8. Return to Store Apps Main Menu"
 do 
 {
