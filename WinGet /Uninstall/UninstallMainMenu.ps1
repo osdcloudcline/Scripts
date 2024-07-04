@@ -452,7 +452,7 @@ do
   {
 '1' { cls
       Write-Host "Only VLC Player and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
-      $AudacityFFMPEG = Invoke-WebRequest("")
+      $AudacityFFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/AudacityFFMPEG.ps1")
       Invoke-Expression $($AudacityFFMPEG.Content)
 
       $GIMP = Invoke-WebRequest("")
@@ -484,7 +484,7 @@ do
  }
  '2'{ cls
       Write-Host "Only Kodi, VLC Player, MyHarmony, PowerISO, iTunes and MediaInfo WILL REMAIN INSTALLED" -ForegroundColor DarkRed BackgroundColor White
-      $AudacityFFMPEG = Invoke-WebRequest("")
+      $AudacityFFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/AudacityFFMPEG.ps1")
       Invoke-Expression $($AudacityFFMPEG.Content)
 
       $GIMP = Invoke-WebRequest("")
