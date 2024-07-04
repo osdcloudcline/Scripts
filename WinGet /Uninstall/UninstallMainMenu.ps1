@@ -599,7 +599,7 @@ do
  }
  '2'{ cls
       
-      $VSCode = Invoke-WebRequest("")
+      $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Programming/VSCode.ps1")
       Invoke-Expression $($VSCode.Content)
   }
 '3'{ cls
