@@ -39,7 +39,7 @@ do
         Show-FTPMenu
         }
   '4' { cls
-        $Steam = Invoke-WebRequest("")
+        $Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Gaming/Steam.ps1")
         Invoke-Expression $($Steam.Content)
         Show-MainMenu
         }
