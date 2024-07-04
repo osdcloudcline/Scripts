@@ -813,7 +813,10 @@ do
       winget uninstall --id 9WZDNCRFJ3PZ --source msstore
   }
 '3'{ cls
-     
+     $StoreApp3 = "Python 3.12"
+
+     Write-Verbose "Uninstalling $StoreApp3..." -Verbose
+     winget uninstall --id 9NCVDN91XZQP --source msstore
     
 }
 '4'{ cls
