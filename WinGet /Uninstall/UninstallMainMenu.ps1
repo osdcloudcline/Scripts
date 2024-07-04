@@ -56,10 +56,12 @@ do
         
         }
   '9' { cls
-        
+        Show-VDIMenu
         }
   '10' { cls
-        
+        $VMWareWSPro = Invoke-WebRequest
+        Invoke-Expression $($VMWareWSPro.Content)
+        Show-MainMenu
         }
   '11' { cls
         
@@ -620,4 +622,70 @@ do
     }
     until ($selection -eq '5'){Show-MainMenu}
     } 
+
+Function Show-UtilitiesMenu(){}
+
+Function Show-VDIMenu(){
+    [CmdletBinding()]
+    param(
+    [string]$Title = 'OSD Cloud -  VDI Uninstall Main Menu',
+    [string]$Question = 'What type of action do you want to perform?'
+)
+cls
+
+Clear-Host
+Write-Host "======= $Title ======"
+Write-Host " 1. Uninstall Microsoft Remote Desktop"
+Write-Host " 2. Uninstall VMWare Horizon"
+Write-Host " 3. Uninstall Windows 365 App"
+Write-Host " 4. Uninstall ALL"
+Write-Host " 5. Return to Main Menu"
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+'1' { cls
+     
+      $MSRemoteDesktop = Invoke-WebRequest("")
+      Invoke-Expression $($MSRemoteDesktop.Content)
+
+ }
+ '2'{ cls
+      
+      $VMWareHorizon = Invoke-WebRequest("")
+      Invoke-Expression $($VMWareHorizon.Content)
+  }
+'3'{ cls
+     
+     $Windows365 = Invoke-WebRequest("")
+     Invoke-Expression $($VWindows365.Content)
+
+}
+'4'{ cls
+     
+     $MSRemoteDesktop = Invoke-WebRequest("")
+     Invoke-Expression $($MSRemoteDesktop.Content)
+
+     $VMWareHorizon = Invoke-WebRequest("")
+     Invoke-Expression $($VMWareHorizon.Content)
+
+     $Windows365 = Invoke-WebRequest("")
+     Invoke-Expression $($VWindows365.Content)
+
+}
+'5'{ cls
+     Show-MainMenu
+     }
+
+    }
+    }
+    until ($selection -eq '5'){Show-MainMenu}
+    } 
+
+
+Function Show-StoreAppsMenu(){
+
+
+}
 Show-MainMenu
