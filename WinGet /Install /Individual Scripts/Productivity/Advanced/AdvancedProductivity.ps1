@@ -4,6 +4,7 @@ Import-Module -Name OSD -Force
 $app1 = "Microsoft Office 2021 LTSC"
 $app2 = "Microsoft Office 365 for enterprise"
 $app3 = "Microsoft 365 (Office)"
+$app4 = "Adobe Acrobat Reader"
 
 Write-Host "Processing: $app1..." -ForegroundColor Cyan
 $OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
