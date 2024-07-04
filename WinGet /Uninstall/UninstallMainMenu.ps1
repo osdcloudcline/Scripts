@@ -643,7 +643,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall Microsoft Remote Desktop"
 Write-Host " 2. Uninstall VMWare Horizon"
-Write-Host " 3. Uninstall Windows 365 App"
+Write-Host " 3. Uninstall Microsoft 365 (Windows) App"
 Write-Host " 4. Uninstall ALL"
 Write-Host " 5. Return to Main Menu"
 do 
@@ -664,7 +664,7 @@ do
   }
 '3'{ cls
      
-     $Windows365 = Invoke-WebRequest("")
+     $Windows365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/Microsoft365(Windows).ps1")
      Invoke-Expression $($VWindows365.Content)
 
 }
@@ -676,7 +676,7 @@ do
      $VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/VMWareHorizon.ps1")
      Invoke-Expression $($VMWareHorizon.Content)
 
-     $Windows365 = Invoke-WebRequest("")
+     $Windows365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/VDI-Remote%20Desktop/Microsoft365(Windows).ps1")
      Invoke-Expression $($VWindows365.Content)
 
 }
