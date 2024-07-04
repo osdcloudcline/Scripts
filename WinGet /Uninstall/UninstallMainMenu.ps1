@@ -820,35 +820,53 @@ do
     
 }
 '4'{ cls
-     
-     
+     $StoreApp4 = "Netflix"
+
+     Write-Verbose "Uninstalling $StoreApp4..." -Verbose
+     winget uninstall --id 9WZDNCRFJ3TJ --source msstore
 }
 '5'{ cls
-     
-     
+     $StoreApp5 = "ESPN"
+
+     Write-Verbose "Uninstalling $StoreApp5..." -Verbose
+     winget uninstall --id 9NWD3S85MTFB --source msstore
 }
 '6'{ cls
+     $StoreApp6 = "Amazon Prime Video"
 
-     
+     Write-Verbose "Uninstalling $StoreApp6..." -Verbose
+     winget uninstall --id 9P6RC76MSMMJ --source msstore     
 }
 '7'{ cls
-     
+     $StoreApp7 = "Disney +"
+
+     Write-Verbose "Uninstalling $StoreApp7..." -Verbose
+     winget uninstall --id 9NXQXXLFST89 --source msstore
      }
 '8' { cls
-     
-     
+      $StoreApp8 = "Hulu"
+
+      Write-Verbose "Uninstalling $StoreApp8..." -Verbose
+      winget uninstall --id 9WZDNCRFJ3L1 --source msstore
  }
 '9'{ cls
-      
-     
+      $StoreApp9 = "Apple TV +"
+
+      Write-Verbose "Uninstalling $StoreApp9..." -Verbose
+      winget uninstall --id 9NM4T8B9JQZ1 --source msstore
   }
 '10'{ cls
-     
+      $StoreApp10 = "Paramount +"
+
+      Write-Verbose "Uninstalling $StoreApp10..." -Verbose
+      winget uninstall --id 9WZDNCRFJ0WK --source msstore
     
 }
 '11'{ cls
-     
-     
+      $StoreApp11 = "Peacock TV"
+
+     Write-Verbose "Uninstalling $StoreApp11..." -Verbose
+     winget uninstall --id 9PL67R4P9PG5 --source msstore
 }
 '12'{ cls
      
