@@ -41,9 +41,10 @@ do
   '4' { cls
         $Steam = Invoke-WebRequest("")
         Invoke-Expression $($Steam.Content)
+        Show-MainMenu
         }
   '5' { cls
-        
+        Show-MediaMenu
         }
   '6' { cls
        
