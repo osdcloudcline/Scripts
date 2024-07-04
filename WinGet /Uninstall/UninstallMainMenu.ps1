@@ -467,7 +467,7 @@ do
       $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Kodi.ps1")
       Invoke-Expression $($Kodi.Content)
 
-      $MKVToolnix = Invoke-WebRequest("")
+      $MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MKVToolnix.ps1")
       Invoke-Expression $($MKVToolnix.Content)
 
       $MakeMKV = Invoke-WebRequest("")
@@ -496,7 +496,7 @@ do
       $Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Handbrake.ps1")
       Invoke-Expression $($Handbrake.Content)
 
-      $MKVToolnix = Invoke-WebRequest("")
+      $MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MKVToolnix.ps1")
       Invoke-Expression $($MKVToolnix.Content)
       
       $MakeMKV = Invoke-WebRequest("")
