@@ -780,7 +780,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall Microsoft 365 (Office)"
 Write-Host " 2. Uninstall Company Portal"
-Write-Host " 3. Uninstall Entertainment Apps"
+Write-Host " 3. Uninstall Python 3.12"
 Write-Host " 4. Uninstall Network Tools Apps"
 Write-Host " 5. Uninstall OS SYSTEM Tools Apps"
 Write-Host " 6. Uninstall ALL"
