@@ -473,7 +473,7 @@ do
       $MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MakeMKV.ps1")
       Invoke-Expression $($MakeMKV.Content)
 
-      $MyHarmony = Invoke-WebRequest("")
+      $MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MyHarmony.ps1")
       Invoke-Expression $($MyHarmony.Content)
 
       $PowerISO = Invoke-WebRequest("")
@@ -507,7 +507,7 @@ do
      $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/Kodi.ps1")
      Invoke-Expression $($Kodi.Content)
 
-     $MyHarmony = Invoke-WebRequest("")
+     $MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MyHarmony.ps1")
      Invoke-Expression $($MyHarmony.Content)
 }
 '4'{ cls
