@@ -59,7 +59,7 @@ do
         Show-VDIMenu
         }
   '10' { cls
-        $VMWareWSPro = Invoke-WebRequest
+        $VMWareWSPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Virtualization/VMWareWorkstation.ps1")
         Invoke-Expression $($VMWareWSPro.Content)
         Show-MainMenu
         }
