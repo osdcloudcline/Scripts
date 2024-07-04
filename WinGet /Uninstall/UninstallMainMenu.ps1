@@ -470,7 +470,7 @@ do
       $MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MKVToolnix.ps1")
       Invoke-Expression $($MKVToolnix.Content)
 
-      $MakeMKV = Invoke-WebRequest("")
+      $MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MakeMKV.ps1")
       Invoke-Expression $($MakeMKV.Content)
 
       $MyHarmony = Invoke-WebRequest("")
@@ -499,7 +499,7 @@ do
       $MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MKVToolnix.ps1")
       Invoke-Expression $($MKVToolnix.Content)
       
-      $MakeMKV = Invoke-WebRequest("")
+      $MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Media/MakeMKV.ps1")
       Invoke-Expression $($MakeMKV.Content)
   }
 '3'{ cls
