@@ -869,7 +869,10 @@ do
      winget uninstall --id 9PL67R4P9PG5 --source msstore
 }
 '12'{ cls
-     
+      $StoreApp12 = "Network Tools Desktop Edition"
+
+      Write-Verbose "Unnstalling $StoreApp12..." -Verbose
+      winget uninstall --id 9NW6L8PLQMM4 --source msstore
     
 }
 '13'{ cls
