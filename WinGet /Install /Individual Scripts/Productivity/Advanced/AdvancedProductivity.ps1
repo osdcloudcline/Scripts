@@ -3,6 +3,7 @@ Import-Module -Name OSD -Force
 
 $app1 = "Microsoft Office 2021 LTSC"
 $app2 = "Microsoft Office 365 for enterprise"
+$app3 = "Microsoft 365 (Office)"
 
 Write-Host "Processing: $app1..." -ForegroundColor Cyan
 $OfficeGHdownloads = "C:\OSDCloud\GitHub\downloads\Office" 
@@ -18,3 +19,11 @@ pause
 Write-Host "Processing: $app1 setup install..." -ForegroundColor Cyan
 $O21SetupCMD = "C:\OSDCloud\GitHub\downloads\Office\OfficeCDNSetup.cmd"
 Start-Process -FilePath $O21SetupCMD
+
+Write-Host "Processing: $app2..." -ForegroundColor Cyan
+
+
+Write-Host "Processing: $app3..." -ForegroundColor Cyan
+
+
+Write-Host "Processing: $app4..." -ForegroundColor Cyan
