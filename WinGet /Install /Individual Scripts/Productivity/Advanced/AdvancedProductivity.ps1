@@ -24,6 +24,6 @@ Write-Host "Processing: $app2..." -ForegroundColor Cyan
 winget install --id Microsoft.Office
 
 Write-Host "Processing: $app3..." -ForegroundColor Cyan
-
+winget install --id 9WZDNCRD29V9 --source msstore
 
 Write-Host "Processing: $app4..." -ForegroundColor Cyan
