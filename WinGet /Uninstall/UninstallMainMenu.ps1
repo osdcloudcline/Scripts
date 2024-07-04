@@ -552,7 +552,7 @@ do
   }
 '3'{ cls
      
-     $Office365 = Invoke-WebRequest("")
+     $Office365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Productivity/Office365.ps1")
      Invoke-Expression $($Office365.Content)
 
 }
