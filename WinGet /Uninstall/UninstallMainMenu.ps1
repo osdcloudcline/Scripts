@@ -790,10 +790,9 @@ Write-Host " 9. Uninstall Apple TV +"
 Write-Host " 10. Uninstall Paramount +"
 Write-Host " 11. Uninstall Peacock TV"
 Write-Host " 12. Uninstall Network Tools Desktop Edition"
-Write-Host " 9. Uninstall Apple TV +"
-Write-Host " 10. Uninstall Paramount +"
-Write-Host " 11. Uninstall Ring Doorbell"
-Write-Host " 8. Return to Store Apps Main Menu"
+Write-Host " 13. Uninstall Microsoft PC Manager"
+Write-Host " 14. Uninstall Microsoft 365 (Windows VDI)"
+Write-Host " 15. Return to Store Apps Main Menu"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -801,56 +800,65 @@ do
   {
 '1' { cls
      
-      $BusinessApps = Invoke-WebRequest("")
-      Invoke-Expression $($BusinessApps.Content)
+     
  }
  '2'{ cls
       
-      $DevToolsApps = Invoke-WebRequest("")
-      Invoke-Expression $($DevToolsApps.Content)
+     
   }
 '3'{ cls
      
-     $EntertainmentApps = Invoke-WebRequest("")
-     Invoke-Expression $($EntertainmentApps.Content)
+    
 }
 '4'{ cls
      
-     $NetworkToolsApps = Invoke-WebRequest("")
-     Invoke-Expression $($NetworkToolsApps.Content)
+     
 }
 '5'{ cls
      
-     $OSSYSTEMApps = Invoke-WebRequest("")
-     Invoke-Expression $($OSSYSTEMApps.Content)
+     
 }
 '6'{ cls
 
-     $BusinessApps = Invoke-WebRequest("")
-     Invoke-Expression $($BusinessApps.Content)
-
-     $DevToolsApps = Invoke-WebRequest("")
-     Invoke-Expression $($DevToolsApps.Content)
-
-     $EntertainmentApps = Invoke-WebRequest("")
-     Invoke-Expression $($EntertainmentApps.Content)
-
-     $NetworkToolsApps = Invoke-WebRequest("")
-     Invoke-Expression $($NetworkToolsApps.Content)
      
-     $OSSYSTEMApps = Invoke-WebRequest("")
-     Invoke-Expression $($OSSYSTEMApps.Content)
 }
 '7'{ cls
      
      }
-'8'{ cls
-     Show-MainMenu
+'8' { cls
+     
+     
+ }
+'9'{ cls
+      
+     
+  }
+'10'{ cls
+     
+    
+}
+'11'{ cls
+     
+     
+}
+'12'{ cls
+     
+    
+}
+'13'{ cls
+
+    
+}
+'14'{ cls
+     
+     }
+'15'{ cls
+     Show-StoreAppsMenu
      }
 
     }
     }
-    until ($selection -eq '8'){Show-MainMenu}
+    until ($selection -eq '15'){Show-StoreAppsMenu}
 
 }
 Show-MainMenu
