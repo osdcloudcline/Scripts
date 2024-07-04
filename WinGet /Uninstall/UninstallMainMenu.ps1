@@ -584,7 +584,7 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Uninstall AI Coder"
 Write-Host " 2. Uninstall VS Code"
 Write-Host " 3. Uninstall Visual Studio 2022"
-Write-Host " 4. Uninstall ALL"
+Write-Host " 4. Uninstall ALL Programming"
 Write-Host " 5. Return to Main Menu"
 do 
 {
@@ -610,8 +610,14 @@ do
 }
 '4'{ cls
      
-     $ALLProgramming = Invoke-WebRequest("")
-     Invoke-Expression $($ALLProgramming.Content)
+     $AICoder = Invoke-WebRequest("")
+     Invoke-Expression $($AICoder.Content)
+
+     $VSCode = Invoke-WebRequest("")
+     Invoke-Expression $($VSCode.Content)
+
+     $VisualStudio2022 = Invoke-WebRequest("")
+     Invoke-Expression $($VisualStudio2022.Content)
 
 }
 '5'{ cls
