@@ -206,7 +206,7 @@ do
       $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
       Invoke-Expression $($DropBox.Content)
 
-      $iCloud = Invoke-WebRequest("")
+      $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
       Invoke-Expression $($iCloud.Content)
       }
 '5'{ cls
@@ -214,7 +214,7 @@ do
      $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
      Invoke-Expression $($GDrive.Content)
 
-     $iCloud = Invoke-WebRequest("")
+     $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
      Invoke-Expression $($iCloud.Content)
     }
 '6'{ cls
@@ -222,7 +222,7 @@ do
      $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
      Invoke-Expression $($NextCloud.Content)
 
-     $iCloud = Invoke-WebRequest("")
+     $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
      Invoke-Expression $($iCloud.Content)
     }
 '7' { cls
@@ -302,7 +302,7 @@ do
        $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/GoogleDrive.ps1")
        Invoke-Expression $($GDrive.Content)
 
-       $iCloud = Invoke-WebRequest("")
+       $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
        Invoke-Expression $($iCloud.Content)
      }
 '15' { cls
@@ -310,7 +310,7 @@ do
        $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/OneDrive.ps1")
        Invoke-Expression $($OneDrive.Content)
 
-       $iCloud = Invoke-WebRequest("")
+       $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
        Invoke-Expression $($iCloud.Content)
 
        $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/NextCloud.ps1")
@@ -324,7 +324,7 @@ do
        $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/DropBox.ps1")
        Invoke-Expression $($DropBox.Content)
 
-       $iCloud = Invoke-WebRequest("")
+       $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
        Invoke-Expression $($iCloud.Content)       
      }
 '17' { cls
@@ -349,7 +349,7 @@ do
     }
 '21' { cls
        Write-Host "ALL BUT iCloud will REMAIN INSTALLED" -ForegroundColor DarkRed -BackgroundColor White
-       $iCloud = Invoke-WebRequest("")
+       $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/Cloud%20Backups/iCloud.ps1")
        Invoke-Expression $($iCloud.Content)
     }
 '22' { cls
