@@ -39,5 +39,4 @@ winget upgrade --id Audacity.Audacity
 choco upgrade audacity-ffmpeg -y
 
 Write-Host "Processing: $app9..." -ForegroundColor Cyan
-
 winget upgrade --id Logitech.MyHarmony
