@@ -29,6 +29,8 @@ Invoke-Expression $($Browsers.Content)
 $CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/CorporateCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
+$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/CorporateMedia.ps1")
+Invoke-Expression $($Media.Content)
 
 $Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
 Invoke-Expression $($Uninstall.Content)
