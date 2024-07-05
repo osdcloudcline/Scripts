@@ -30,3 +30,6 @@ winget upgrade --id GuinpinSoft.MakeMKV
 
 Write-Host "Processing: $app6..." -ForegroundColor Cyan
 winget upgrade --id HandBrake.HandBrake
+
+Write-Host "Processing: $app7..." -ForegroundColor Cyan
+winget upgrade --id PowerSoftware.PowerISO 
