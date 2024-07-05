@@ -27,3 +27,6 @@ winget upgrade --id Apple.iTunes
 
 Write-Host "Processing: $app5..." -ForegroundColor Cyan
 winget upgrade --id GuinpinSoft.MakeMKV
+
+Write-Host "Processing: $app6..." -ForegroundColor Cyan
+winget upgrade --id HandBrake.HandBrake
