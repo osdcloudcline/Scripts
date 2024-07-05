@@ -40,3 +40,6 @@ choco upgrade audacity-ffmpeg -y
 
 Write-Host "Processing: $app9..." -ForegroundColor Cyan
 winget upgrade --id Logitech.MyHarmony
+
+Write-Host "Processing: $app10..." -ForegroundColor Cyan
+winget upgrade --id GIMP.GIMP
