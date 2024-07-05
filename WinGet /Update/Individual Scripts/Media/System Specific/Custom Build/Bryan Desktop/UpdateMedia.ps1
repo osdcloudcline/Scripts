@@ -46,3 +46,22 @@ winget upgrade --id GIMP.GIMP
 
 Write-Host "Processing: $app11..." -ForegroundColor Cyan
 winget install --id XBMCFoundation.Kodi
+
+Write-Host "Processing: $app12..." -Verbose
+Write-Host 
+Write-Host "Acquiring $app12 from vendor website..." -ForegroundColor Cyan
+$HDVideoSource = "https://us.videoconverterfactory.com/download/hd-video-converter-pro.exe"
+$HDVideoDestination = "C:\OSDCloud\GitHub\downloads"
+$HDVideoSetup = "C:\OSDCloud\GitHub\downloads\hd-video-converter-pro.exe"
+$HDVideoSetupTP = [System.IO.File]::Exists("C:\OSDCloud\GitHub\downloads\hd-video-converter-pro.exe")
+If($HDVideoSetupTP -eq $false){
+Save-WebFile -SourceUrl $HDVideoSource  -DestinationDirectory $HDVideoDestination
+Write-Host "Installing $app12..." -ForegroundColor Cyan
+Start-Process -FilePath $HDVideoSetup
+}
+ElseIf($HDVideoSetupTP -eq $true){
+Remove-Item -Path $HDVideoSetup -Force
+Save-WebFile -SourceUrl $HDVideoSource  -DestinationDirectory $HDVideoDestination
+Write-Host "Installing $app12..." -ForegroundColor Cyan
+Start-Process -FilePath $HDVideoSetup
+}
