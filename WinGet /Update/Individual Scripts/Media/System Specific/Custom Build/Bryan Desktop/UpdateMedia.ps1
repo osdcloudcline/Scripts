@@ -21,3 +21,6 @@ winget upgrade --id MediaArea.MediaInfo.GUI
 
 Write-Host "Processing: $app3..." -ForegroundColor Cyan
 winget upgrade --id MoritzBunkus.MKVToolNix
+
+Write-Host "Processing: $app4..." -ForegroundColor Cyan
+winget upgrade --id Apple.iTunes
