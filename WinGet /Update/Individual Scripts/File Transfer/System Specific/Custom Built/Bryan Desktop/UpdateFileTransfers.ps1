@@ -1,4 +1,6 @@
 $app1 = "FileZilla"
+$app2 = "PuTTy"
+
 
 Write-Host "Processing updates: $app1 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 $FZSQLFile = "C:\Users\$env:username\AppData\Roaming\FileZilla\queue.sqlite3"
@@ -10,3 +12,9 @@ choco upgrade filezilla  -y
 Elseif ($FZSQLDetect -eq $false){
 choco upgrade filezilla  -y
 }
+
+
+
+Write-Host "Processing updates: $app2 on $env:computername..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
+winget upgrade --id PuTTY.PuTTY
+
