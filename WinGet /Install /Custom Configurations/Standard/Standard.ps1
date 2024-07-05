@@ -89,3 +89,6 @@ ElseIf($PCManufacturer -like "*HP*"){
 Write-Host "Installing HP Software...." -ForegroundColor Cyan
 $HP = Invoke-WebRequest("")
 Invoke-Expression $($HP.Content)
+
+$Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
+Invoke-Expression $($Uninstall.Content)
