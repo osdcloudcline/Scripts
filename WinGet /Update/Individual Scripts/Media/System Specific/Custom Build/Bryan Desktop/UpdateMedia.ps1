@@ -18,3 +18,6 @@ winget upgrade --id VideoLAN.VLC
 
 Write-Host "Processing: $app2..." -ForegroundColor Cyan
 winget upgrade --id MediaArea.MediaInfo.GUI
+
+Write-Host "Processing: $app3..." -ForegroundColor Cyan
+winget upgrade --id MoritzBunkus.MKVToolNix
