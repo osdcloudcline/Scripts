@@ -33,3 +33,6 @@ winget upgrade --id HandBrake.HandBrake
 
 Write-Host "Processing: $app7..." -ForegroundColor Cyan
 winget upgrade --id PowerSoftware.PowerISO 
+
+Write-Host "Processing: $app8..." -ForegroundColor Cyan
+winget upgrade --id Audacity.Audacity
