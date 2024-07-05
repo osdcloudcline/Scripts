@@ -43,3 +43,6 @@ winget upgrade --id Logitech.MyHarmony
 
 Write-Host "Processing: $app10..." -ForegroundColor Cyan
 winget upgrade --id GIMP.GIMP
+
+Write-Host "Processing: $app11..." -ForegroundColor Cyan
+winget install --id XBMCFoundation.Kodi
