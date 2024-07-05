@@ -41,5 +41,8 @@ Invoke-Expression $($VDI.Content)
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/CorporateUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
+$Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Corporate/CorporateSecurity.ps1")
+Invoke-Expression $($Security.Content)
+
 $Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
 Invoke-Expression $($Uninstall.Content)
