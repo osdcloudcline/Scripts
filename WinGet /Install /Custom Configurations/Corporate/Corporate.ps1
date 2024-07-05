@@ -38,5 +38,8 @@ Invoke-Expression $($Productivity.Content)
 $VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/CorporateVDIRDC.ps1")
 Invoke-Expression $($VDI.Content)
 
+$Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/CorporateUtilities.ps1")
+Invoke-Expression $($Utilities.Content)
+
 $Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
 Invoke-Expression $($Uninstall.Content)
