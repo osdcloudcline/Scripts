@@ -24,3 +24,6 @@ winget upgrade --id MoritzBunkus.MKVToolNix
 
 Write-Host "Processing: $app4..." -ForegroundColor Cyan
 winget upgrade --id Apple.iTunes
+
+Write-Host "Processing: $app5..." -ForegroundColor Cyan
+winget upgrade --id GuinpinSoft.MakeMKV
