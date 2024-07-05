@@ -11,10 +11,10 @@ $app10 = "GIMP"
 $app11 = "Kodi"
 $app12 = "HD Video Converter Factory Pro"
 
-Write-Host "Updating $app1..." -ForegroundColor Cyan
+Write-Verbose "Updating Media-related software..." -Verbose
+Write-Host
+Write-Host "Processing: $app1..." -ForegroundColor Cyan
 winget upgrade --id VideoLAN.VLC
 
-
-
-Write-Host "Updating $app2..." -ForegroundColor Cyan
+Write-Host "Processing: $app2..." -ForegroundColor Cyan
 winget upgrade --id MediaArea.MediaInfo.GUI
