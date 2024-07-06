@@ -26,7 +26,7 @@ Invoke-Expression $($Edge.Content)
 
 Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
 
-$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateDropBox.ps1")
+$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateDropBox.ps1")
 Invoke-Expression $($DropBox.Content) 
 
 $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateOneDrive.ps1")
