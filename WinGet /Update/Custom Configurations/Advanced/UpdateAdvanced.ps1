@@ -53,7 +53,7 @@ Invoke-Expression $($iCloud.Content)
 $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateGDrive.ps1")
 Invoke-Expression $($GDrive.Content)
 
-$NextCloud = Invoke-WebRequest("")
+$NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateNextCloud.ps1")
 Invoke-Expression $($NextCloud.Content)
 
 Write Verbose "Processing updates for installed File Transfer software..." -Verbose
