@@ -83,6 +83,9 @@ Invoke-Expression $($GIMP.Content)
 $HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateHDVideoConverterFactoryPro.ps1")
 Invoke-Expression $($HDVideo.Content)
 
+$Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateHandbrake.ps1")
+Invoke-Expression $($Handbrake.Content)
+
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
