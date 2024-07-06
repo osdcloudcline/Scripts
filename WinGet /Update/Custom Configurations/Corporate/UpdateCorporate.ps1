@@ -6,13 +6,10 @@ Write-Host '  - Web Browsers: Google Chrome and MS Edge                      ' -
 Write-Host '  - Cloud Backup: One Drive, DropBox,                            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: Google Drive                                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Media: VLC Player and MediaInfo                              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Productivity: Microsoft Office 365                           ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Adobe Reader DC                                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Programming: VS Code                                         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Utilities: 7-Zip, CCleaner, DDU, Driver Booster,             ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Utilities: Fan Control, Logitech Options,                    ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Utilities: Logitech Unifying Software, Rufus,                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Utilities: Wise Registry Cleaner                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Utilities: 7-Zip                                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
@@ -52,35 +49,8 @@ Invoke-Expression $($VSCode.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
-$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/Update7Zip.ps1")
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Corporate/Update7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
-
-$CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateCCleaner.ps1")
-Invoke-Expression $($CCleaner.Content)
-
-$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDDU.ps1")
-Invoke-Expression $($DDU.Content)
-
-$DriverBooster = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDriverBooster.ps1")
-Invoke-Expression $($DriverBooster.Content)
-
-$FanControl = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateFanControl.ps1")
-Invoke-Expression $($FanControl.Content)
-
-$LogitechOptions = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechOptions.ps1")
-Invoke-Expression $($LogitechOptions.Content)
-
-$LogitechUnifyingSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechUnifyingSoftware.ps1")
-Invoke-Expression $($LogitechUnifyingSoftware.Content)
-
-$Rufus = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateRufus.ps1")
-Invoke-Expression $($Rufus.Content)
-
-$SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateSamsungMagician.ps1")
-Invoke-Expression $($SamsungMagician.Content)
-
-$WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWiseRegistryCleaner.ps1")
-Invoke-Expression $($WiseRegistryCleaner.Content)
 
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
 
