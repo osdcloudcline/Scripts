@@ -150,7 +150,7 @@ Invoke-Expression $($7Zip.Content)
 $CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateCCleaner.ps1")
 Invoke-Expression $($CCleaner.Content)
 
-$DDU = Invoke-WebRequest("")
+$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDDU.ps1")
 Invoke-Expression $($DDU.Content)
 
 $DriverBooster = Invoke-WebRequest("")
