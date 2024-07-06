@@ -139,7 +139,7 @@ Invoke-Expression $($Win365.Content)
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
-$VMWareWorkstationPro = Invoke-WebRequest("")
+$VMWareWorkstationPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Virtualization/Advanced/UpdateVMWareWorkstationPro.ps1")
 Invoke-Expression $($VMWareWorkstationPro.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
