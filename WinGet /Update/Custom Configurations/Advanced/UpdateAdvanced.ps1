@@ -89,6 +89,9 @@ Invoke-Expression $($Handbrake.Content)
 $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateKodi.ps1")
 Invoke-Expression $($Kodi.Content)
 
+$MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMKVToolnix.ps1")
+Invoke-Expression $($MKVToolnix.Content)
+
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
