@@ -117,6 +117,12 @@ Write-Host "Processing updates for: Programming software..." -ForegroundColor Cy
 $AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateAICoder.ps1")
 Invoke-Expression $($AICoder.Content)
 
+$VSCode = Invoke-WebRequest("")
+Invoke-Expression $($VSCode.Content)
+
+$VisualStudio2022 = Invoke-WebRequest("")
+Invoke-Expression $($VisualStudio2022.Content)
+
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
