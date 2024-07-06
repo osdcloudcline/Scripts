@@ -131,7 +131,7 @@ Invoke-Expression $($AnyDesk.Content)
 $MSRDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateMSRDCSoftware.ps1")
 Invoke-Expression $($MSRDC.Content)
 
-$$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateVMWareHorizonClient.ps1")
+$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateVMWareHorizonClient.ps1")
 Invoke-Expression $($VMWareHorizon.Content)
 
 $Win365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateWindows365AzureClient.ps1")
