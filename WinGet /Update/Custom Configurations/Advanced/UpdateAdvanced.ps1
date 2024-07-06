@@ -168,7 +168,7 @@ Invoke-Expression $($LogitechUnifyingSoftware.Content)
 $Rufus = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateRufus.ps1")
 Invoke-Expression $($Rufus.Content)
 
-$SamsungMagician = Invoke-WebRequest("")
+$SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateSamsungMagician.ps1")
 Invoke-Expression $($SamsungMagician.Content)
 
 $WindowsAdminCenter = Invoke-WebRequest("")
