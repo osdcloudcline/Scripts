@@ -101,6 +101,9 @@ Invoke-Expression $($MediaInfo.Content)
 $MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMyHarmony.ps1")
 Invoke-Expression $($MyHarmony.Content) 
 
+$PowerISO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdatePowerISO.ps1")
+Invoke-Expression $($PowerISO.Content)
+
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
