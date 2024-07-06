@@ -47,7 +47,7 @@ Write-Host "Processing updates for: Productivity software..." -ForegroundColor C
 
 Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
 
-$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVSCode.ps1")
+$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Corporate/UpdateVSCode.ps1")
 Invoke-Expression $($VSCode.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
