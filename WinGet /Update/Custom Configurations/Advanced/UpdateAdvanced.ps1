@@ -144,6 +144,64 @@ Invoke-Expression $($VMWareWorkstationPro.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
+$7Zip = Invoke-WebRequest("")
+Invoke-Expression $($7Zip.Content)
+
+$CCleaner = Invoke-WebRequest("")
+Invoke-Expression $($CCleaner.Content)
+
+$DDU = Invoke-WebRequest("")
+Invoke-Expression $($DDU.Content)
+
+$DriverBooster = Invoke-WebRequest("")
+Invoke-Expression $($DriverBooster.Content)
+
+$FanControl = Invoke-WebRequest("")
+Invoke-Expression $($FanControl.Content)
+
+$LogitechOptions = Invoke-WebRequest("")
+Invoke-Expression $($LogitechOptions.Content)
+
+$LogitechUnifyingSoftware = Invoke-WebRequest("")
+Invoke-Expression $($LogitechUnifyingSoftware.Content)
+
+$Rufus = Invoke-WebRequest("")
+Invoke-Expression $($Rufus.Content)
+
+$SamsungMagician = Invoke-WebRequest("")
+Invoke-Expression $($SamsungMagician.Content)
+
+$WindowsAdminCenter = Invoke-WebRequest("")
+Invoke-Expression $($WindowsAdminCenter.Content)
+
+$WiseRegistryCleaner = Invoke-WebRequest("")
+Invoke-Expression $($WiseRegistryCleaner.Content)
+
+Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
+
+$WSBusiness = Invoke-WebRequest("")
+Invoke-Expression $($WSBusiness.Content)
+
+Write-Host "Processing updates for: Windows Store - Development Tools..." -ForegroundColor Cyan
+
+$WSDevelopmentTools = Invoke-WebRequest("")
+Invoke-Expression $($WSDevelopmentTools.Content)
+
+Write-Host "Processing updates for: Windows Store - Entertainment Apps..." -ForegroundColor Cyan
+
+$WSEntertainment = Invoke-WebRequest("")
+Invoke-Expression $($WSEntertainment.Content)
+
+Write-Host "Processing updates for: Windows Store - Network Tools..." -ForegroundColor Cyan
+
+$WSNetworkTools = Invoke-WebRequest("")
+Invoke-Expression $($WSNetworkTools.Content)
+
+Write-Host "Processing updates for: Windows Store - OS SYSTEM..." -ForegroundColor Cyan
+
+$WSOSSystem = Invoke-WebRequest("")
+Invoke-Expression $($WSOSSystem.Content)
+
 Write-Host "Processing updates for: OS SYSTEM software..." -ForegroundColor Cyan
 
 $OSSystem = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/ClientSystemUpdates.ps1")
