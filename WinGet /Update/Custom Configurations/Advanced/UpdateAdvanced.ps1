@@ -69,6 +69,9 @@ Invoke-Expression $($WinSCP.Content)
 
 Write Verbose "Processing updates for installed Gaming software..." -Verbose
 
+$Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Gaming/Advanced/UpdateSteam.ps1")
+Invoke-Expression $($Steam.Content)
+
 Write Verbose "Processing updates for installed Media software..." -Verbose
 
 Write Verbose "Processing updates for installed Productivity software..." -Verbose
