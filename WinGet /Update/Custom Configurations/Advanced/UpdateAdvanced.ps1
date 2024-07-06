@@ -121,3 +121,6 @@ Write-Host "Processing updates for: Virtualization software..." -ForegroundColor
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: OS SYSTEM software..." -ForegroundColor Cyan
+
+$OSSystem = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/ClientSystemUpdates.ps1")
+Invoke-Expression $($OSSystem.Content)
