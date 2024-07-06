@@ -80,6 +80,9 @@ Invoke-Expression $($AudacityFFMPEG.Content)
 $GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateGIMP.ps1")
 Invoke-Expression $($GIMP.Content)
 
+$HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateHDVideoConverterFactoryPro.ps1")
+Invoke-Expression $($HDVideo.Content)
+
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
