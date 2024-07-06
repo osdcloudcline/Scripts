@@ -27,3 +27,8 @@ Write-Host '  - Utilities: Samsung Magician, Windows Admin Center            ' -
 Write-Host '  - Utilities: Wise Registry Cleaner                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White
 pause
+
+Write Verbose "Processing Updates for installed Web Browsers..." -Verbose
+
+$Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateChrome.ps1")
+Invoke-Expression $($Chrome.Content)
