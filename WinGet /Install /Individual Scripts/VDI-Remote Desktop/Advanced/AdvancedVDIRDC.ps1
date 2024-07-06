@@ -1,7 +1,7 @@
 $app1 = "Microsoft Remote Desktop Client"
 $app2 = "VMWare Horizon Remote Desktop Connection Client"
 $app3 = "AnyDesk"
-$app4 = "Windows 365 Azure Virtual Desktop"
+
 
 # Virtualization related software
 Write-Host "Installing Virtualization and Remote Desktop Applications on $env:computername..." -ForegroundColor Green
@@ -15,5 +15,4 @@ choco install vmware-horizon-client -y
 Write-Host "Installing: $app3 on $env:computername..."  -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan 
 winget install --id AnyDeskSoftwareGmbH.AnyDesk --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing: $app4 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
-winget install --id 9N1F85V9T8BN --exact --accept-source-agreements  --accept-source-agreements --force
+
