@@ -189,7 +189,7 @@ Invoke-Expression $($WSBusiness.Content)
 
 Write-Host "Processing updates for: Windows Store - Development Tools..." -ForegroundColor Cyan
 
-$WSDevelopmentTools = Invoke-WebRequest("")
+$WSDevelopmentTools = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Windows%20Store%20Apps/Development%20Tools/DevStoreApps.ps1")
 Invoke-Expression $($WSDevelopmentTools.Content)
 
 Write-Host "Processing updates for: Windows Store - Entertainment Apps..." -ForegroundColor Cyan
