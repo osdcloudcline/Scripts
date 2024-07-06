@@ -8,7 +8,7 @@ Write-Host '  - Cloud Backup: Google Drive                                   ' -
 Write-Host '  - Media: VLC Player and MediaInfo                              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Adobe Reader DC                                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Programming: VS Code, AI Code Editor,                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Programming: VS Code                                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: 7-Zip, CCleaner, DDU, Driver Booster,             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: Fan Control, Logitech Options,                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: Logitech Unifying Software, Rufus,                ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -46,9 +46,6 @@ Invoke-Expression $($VLCPlayer.Content)
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
-
-$AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateAICoder.ps1")
-Invoke-Expression $($AICoder.Content)
 
 $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVSCode.ps1")
 Invoke-Expression $($VSCode.Content)
