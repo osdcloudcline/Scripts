@@ -139,6 +139,9 @@ Invoke-Expression $($Win365.Content)
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
+$VMWareWorkstationPro = Invoke-WebRequest("")
+Invoke-Expression $($VMWareWorkstationPro.Content)
+
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: OS SYSTEM software..." -ForegroundColor Cyan
