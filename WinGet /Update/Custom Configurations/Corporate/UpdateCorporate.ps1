@@ -37,7 +37,7 @@ Invoke-Expression $($GDrive.Content)
 
 Write-Host "Processing updates for: Media software..." -ForegroundColor Cyan
 
-$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMediaInfo.ps1")
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Corporate/UpdateMediaInfo.ps1")
 Invoke-Expression $($MediaInfo.Content)
 
 $VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateVLCPlayer.ps1")
