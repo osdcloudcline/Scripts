@@ -61,6 +61,9 @@ Write Verbose "Processing updates for installed File Transfer software..." -Verb
 $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateFilezilla.ps1")
 Invoke-Expression $($FileZilla.Content)
 
+$PuTTY = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdatePuTTY.ps1")
+Invoke-Expression $($PuTTY.Content)
+
 
 Write Verbose "Processing updates for installed Gaming software..." -Verbose
 
