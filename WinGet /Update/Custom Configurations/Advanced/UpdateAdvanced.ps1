@@ -171,7 +171,7 @@ Invoke-Expression $($Rufus.Content)
 $SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateSamsungMagician.ps1")
 Invoke-Expression $($SamsungMagician.Content)
 
-$WindowsAdminCenter = Invoke-WebRequest("")
+$WindowsAdminCenter = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWindowsAdminCenter.ps1")
 Invoke-Expression $($WindowsAdminCenter.Content)
 
 $WiseRegistryCleaner = Invoke-WebRequest("")
