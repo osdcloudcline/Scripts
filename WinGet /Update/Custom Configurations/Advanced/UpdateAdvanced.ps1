@@ -125,7 +125,7 @@ Invoke-Expression $($VisualStudio2022.Content)
 
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
-$AnyDesk = Invoke-WebRequest("")
+$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateAnyDesk.ps1")
 Invoke-Expression $($AnyDesk.Content)
 
 $MSRDC = Invoke-WebRequest("")
