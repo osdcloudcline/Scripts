@@ -156,7 +156,7 @@ Invoke-Expression $($DDU.Content)
 $DriverBooster = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDriverBooster.ps1")
 Invoke-Expression $($DriverBooster.Content)
 
-$FanControl = Invoke-WebRequest("")
+$FanControl = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateFanControl.ps1")
 Invoke-Expression $($FanControl.Content)
 
 $LogitechOptions = Invoke-WebRequest("")
