@@ -28,7 +28,7 @@ Write-Host '  - Utilities: Wise Registry Cleaner                             ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
-Write-Host "Processing updates for installed Web Browsers..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Web Browsers..." -ForegroundColor Cyan
 
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateChrome.ps1")
 Invoke-Expression $($Chrome.Content)
@@ -39,7 +39,7 @@ Invoke-Expression $($Edge.Content)
 $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateFirefox.ps1")
 Invoke-Expression $($Firefox.Content)
 
-Write-Host "Processing updates for installed Cloud Backup software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
 
 $Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateDropBox.ps1")
 Invoke-Expression $($DropBox.Content) 
@@ -56,7 +56,7 @@ Invoke-Expression $($GDrive.Content)
 $NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateNextCloud.ps1")
 Invoke-Expression $($NextCloud.Content)
 
-Write-Host "Processing updates for installed File Transfer software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: File Transfer software..." -ForegroundColor Cyan
 
 $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateFilezilla.ps1")
 Invoke-Expression $($FileZilla.Content)
@@ -67,19 +67,19 @@ Invoke-Expression $($PuTTY.Content)
 $WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateWinSCP.ps1")
 Invoke-Expression $($WinSCP.Content)
 
-Write-Host "Processing updates for installed Gaming software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Gaming software..." -ForegroundColor Cyan
 
 $Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Gaming/Advanced/UpdateSteam.ps1")
 Invoke-Expression $($Steam.Content)
 
-Write-Host "Processing updates for installed Media software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Media software..." -ForegroundColor Cyan
 
-Write-Host "Processing updates for installed Productivity software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
-Write-Host "Processing updates for installed Programming software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
 
-Write-Host "Processing updates for installed VDI/Remote Desktop software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
-Write-Host "Processing updates for installed Virtualization software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
-Write-Host "Processing updates for installed Utilities software..." -ForegroundColor Cyan
+Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
