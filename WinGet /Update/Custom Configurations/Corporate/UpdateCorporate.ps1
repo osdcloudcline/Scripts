@@ -29,7 +29,7 @@ Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor C
 $Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateDropBox.ps1")
 Invoke-Expression $($DropBox.Content) 
 
-$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateOneDrive.ps1")
+$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateOneDrive.ps1")
 Invoke-Expression $($OneDrive.Content)
 
 $GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateGDrive.ps1")
