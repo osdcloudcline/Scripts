@@ -134,7 +134,7 @@ Invoke-Expression $($MSRDC.Content)
 $$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateVMWareHorizonClient.ps1")
 Invoke-Expression $($VMWareHorizon.Content)
 
-$Win365 = Invoke-WebRequest("")
+$Win365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateWindows365AzureClient.ps1")
 Invoke-Expression $($Win365.Content)
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
