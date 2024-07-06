@@ -1,4 +1,4 @@
-$app2 = "Nextcloud Desktop Client"
+$app1 = "Nextcloud Desktop Client"
 
-Write-Host "Processing update: $app2..." -ForegroundColor Cyan
+Write-Host "Processing update: $app1..." -ForegroundColor Cyan
 winget upgrade --id Nextcloud.NextcloudDesktop
