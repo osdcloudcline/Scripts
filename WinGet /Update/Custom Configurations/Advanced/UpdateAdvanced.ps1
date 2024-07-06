@@ -184,7 +184,7 @@ If($env:computername -eq "BTDESKTOP"){
 }
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
 
-$WSBusiness = Invoke-WebRequest("")
+$WSBusiness = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Windows%20Store%20Apps/Business/BusinessStoreApps.ps1")
 Invoke-Expression $($WSBusiness.Content)
 
 Write-Host "Processing updates for: Windows Store - Development Tools..." -ForegroundColor Cyan
