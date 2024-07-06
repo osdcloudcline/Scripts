@@ -28,7 +28,7 @@ do
   {
 
   '1' { cls
-        $WinGetSTDSoftwareScript = Invoke-WebRequest ("")
+        $WinGetSTDSoftwareScript = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Custom%20Configurations/Standard/UpdateStandard.ps1")
         Invoke-Expression $($WinGetSTDSoftwareScript.Content)
         }
   '2' { cls
