@@ -162,7 +162,7 @@ Invoke-Expression $($FanControl.Content)
 $LogitechOptions = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechOptions.ps1")
 Invoke-Expression $($LogitechOptions.Content)
 
-$LogitechUnifyingSoftware = Invoke-WebRequest("")
+$LogitechUnifyingSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechUnifyingSoftware.ps1")
 Invoke-Expression $($LogitechUnifyingSoftware.Content)
 
 $Rufus = Invoke-WebRequest("")
