@@ -1,5 +1,5 @@
 $StoreApp1 = "Microsoft PC Manager"
-$StoreApp2 = "Windows 365"
+$StoreApp2 = "Windows 365 Azure Virtual Desktop"
 
 Write-Verbose "Updating $StoreApp1..." -Verbose
 winget upgrade --id 9PM860492SZD --source msstore
