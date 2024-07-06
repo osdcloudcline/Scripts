@@ -13,4 +13,4 @@ Write-Host "Processing updates: $app3 on $env:computername..."  -ErrorAction Sil
 winget upgrade --id AnyDeskSoftwareGmbH.AnyDesk 
 
 Write-Host "Processing updates: $app4 on $env:computername ..." -ErrorAction SilentlyContinue -WarningAction SilentlyContinue -InformationAction SilentlyContinue -ForegroundColor Cyan  
-winget upgrade --id 9N1F85V9T8BN 
+winget upgrade --id 9N1F85V9T8BN --source msstore
