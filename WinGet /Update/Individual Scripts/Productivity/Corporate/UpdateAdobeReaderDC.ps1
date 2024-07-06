@@ -1,4 +1,4 @@
-$app4 = "Adobe Acrobat Reader"
+$app1 = "Adobe Acrobat Reader"
 
 Write-Host "Processing update: $app1..." -ForegroundColor Cyan
 winget upgrade --id Adobe.Acrobat.Reader.64-bit
