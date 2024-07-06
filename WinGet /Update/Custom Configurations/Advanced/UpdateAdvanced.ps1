@@ -114,6 +114,9 @@ Write-Host "Processing updates for: Productivity software..." -ForegroundColor C
 
 Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
 
+$AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateAICoder.ps1")
+Invoke-Expression $($AICoder.Content)
+
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
