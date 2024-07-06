@@ -128,7 +128,7 @@ Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundC
 $AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateAnyDesk.ps1")
 Invoke-Expression $($AnyDesk.Content)
 
-$MSRDC = Invoke-WebRequest("")
+$MSRDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateMSRDCSoftware.ps1")
 Invoke-Expression $($MSRDC.Content)
 
 $$VMWareHorizon = Invoke-WebRequest("")
