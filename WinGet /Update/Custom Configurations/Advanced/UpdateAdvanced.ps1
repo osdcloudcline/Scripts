@@ -119,3 +119,5 @@ Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundC
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
+
+Write-Host "Processing updates for: OS SYSTEM software..." -ForegroundColor Cyan
