@@ -125,6 +125,18 @@ Invoke-Expression $($VisualStudio2022.Content)
 
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
+$AnyDesk = Invoke-WebRequest("")
+Invoke-Expression $($AnyDesk.Content)
+
+$MSRDC = Invoke-WebRequest("")
+Invoke-Expression $($MSRDC.Content)
+
+$$VMWareHorizon = Invoke-WebRequest("")
+Invoke-Expression $($VMWareHorizon.Content)
+
+$Win365 = Invoke-WebRequest("")
+Invoke-Expression $($Win365.Content)
+
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
