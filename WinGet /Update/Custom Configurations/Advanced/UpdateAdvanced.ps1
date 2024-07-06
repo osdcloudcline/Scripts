@@ -95,6 +95,9 @@ Invoke-Expression $($MKVToolnix.Content)
 $MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMakeMKV.ps1")
 Invoke-Expression $($MakeMKV.Content)
 
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMediaInfo.ps1")
+Invoke-Expression $($MediaInfo.Content)
+
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
