@@ -120,7 +120,7 @@ Invoke-Expression $($AICoder.Content)
 $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVSCode.ps1")
 Invoke-Expression $($VSCode.Content)
 
-$VisualStudio2022 = Invoke-WebRequest("")
+$VisualStudio2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVisualStudio2022.ps1")
 Invoke-Expression $($VisualStudio2022.Content)
 
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
