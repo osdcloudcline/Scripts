@@ -28,7 +28,7 @@ Write-Host '  - Utilities: Wise Registry Cleaner                             ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
-Write Verbose "Processing Updates for installed Web Browsers..." -Verbose
+Write Verbose "Processing updates for installed Web Browsers..." -Verbose
 
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateChrome.ps1")
 Invoke-Expression $($Chrome.Content)
@@ -36,3 +36,23 @@ Invoke-Expression $($Chrome.Content)
 $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateEdge.ps1")
 Invoke-Expression $($Edge.Content)
 
+$Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateFirefox.ps1")
+Invoke-Expression $($Firefox.Content)
+
+Write Verbose "Processing updates for installed Cloud Backup software..." -Verbose
+
+Write Verbose "Processing updates for installed File Transfer software..." -Verbose
+
+Write Verbose "Processing updates for installed Gaming software..." -Verbose
+
+Write Verbose "Processing updates for installed Media software..." -Verbose
+
+Write Verbose "Processing updates for installed Productivity software..." -Verbose
+
+Write Verbose "Processing updates for installed Programming software..." -Verbose
+
+Write Verbose "Processing updates for installed VDI/Remote Desktop software..." -Verbose
+
+Write Verbose "Processing updates for installed Virtualization software..." -Verbose
+
+Write Verbose "Processing updates for installed Utilities software..." -Verbose
