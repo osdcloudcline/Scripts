@@ -32,7 +32,7 @@ Invoke-Expression $($DropBox.Content)
 $OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateOneDrive.ps1")
 Invoke-Expression $($OneDrive.Content)
 
-$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateGDrive.ps1")
+$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateGDrive.ps1")
 Invoke-Expression $($GDrive.Content)
 
 Write-Host "Processing updates for: Media software..." -ForegroundColor Cyan
