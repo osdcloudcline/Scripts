@@ -64,6 +64,8 @@ Invoke-Expression $($FileZilla.Content)
 $PuTTY = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdatePuTTY.ps1")
 Invoke-Expression $($PuTTY.Content)
 
+$WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateWinSCP.ps1")
+Invoke-Expression $($WinSCP.Content)
 
 Write Verbose "Processing updates for installed Gaming software..." -Verbose
 
