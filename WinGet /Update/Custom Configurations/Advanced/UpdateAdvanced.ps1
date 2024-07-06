@@ -144,7 +144,7 @@ Invoke-Expression $($VMWareWorkstationPro.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
-$7Zip = Invoke-WebRequest("")
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/Update7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
 
 $CCleaner = Invoke-WebRequest("")
