@@ -199,7 +199,7 @@ Invoke-Expression $($WSEntertainment.Content)
 
 Write-Host "Processing updates for: Windows Store - Network Tools..." -ForegroundColor Cyan
 
-$WSNetworkTools = Invoke-WebRequest("")
+$WSNetworkTools = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Windows%20Store%20Apps/Network%20Tools/NetworkStoreApps.ps1")
 Invoke-Expression $($WSNetworkTools.Content)
 
 Write-Host "Processing updates for: Windows Store - OS SYSTEM..." -ForegroundColor Cyan
