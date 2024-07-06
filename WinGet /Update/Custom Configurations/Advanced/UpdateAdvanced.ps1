@@ -174,9 +174,14 @@ Invoke-Expression $($SamsungMagician.Content)
 $WindowsAdminCenter = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWindowsAdminCenter.ps1")
 Invoke-Expression $($WindowsAdminCenter.Content)
 
-$WiseRegistryCleaner = Invoke-WebRequest("")
+$WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWiseRegistryCleaner.ps1")
 Invoke-Expression $($WiseRegistryCleaner.Content)
 
+
+If($env:computername -eq "BTDESKTOP"){
+
+
+}
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
 
 $WSBusiness = Invoke-WebRequest("")
