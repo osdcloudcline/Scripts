@@ -35,8 +35,6 @@ $Utilitiesapp9 = "Windows 11 22H2 ADK PE Add-On"
 $Utilitiesapp10 = "Starwind V2V Converter"
 $Utilitiesapp11 = "Cinebench 2024"
 $Utilitiesapp12 = "Lian Li L-Connect 3"
-$Utilitiesapp13 = "Fan Control"
-$Utilitiesapp14 = "Samsung Magician"
 $Utilitiesapp15 = "3DMark Professional"
 $Utilitiesapp16 = "PCMark 10"
 $Utilitiesapp17 = "Elgato Stream Deck"
@@ -44,13 +42,11 @@ $Utilitiesapp18 = "G.Skill WigiDash"
 $Utilitiesapp19 = "G.Skill Trident Z and Z5 Lighting Control Software"
 $Utilitiesapp20 = "Sapphire TriXX Video Card Software"
 $Utilitiesapp21 = "Display Driver Uninstaller"
-$Utilitiesapp22 = "Rufus"
 $Utilitiesapp23 = "Sonos"
 $Utilitiesapp24 = "SoundBlaster Command"
 $Utilitiesapp25 = "Cystal Disk Info"
 $Utilitiesapp26 = "Crystal DiskMark"
-$Utilitiesapp27 = "Logitech Unifying Software"
-$Utilitiesapp28 = "Logitech Options"
+
 
 Write-Host "Installing System Utilities Applications on $env:computername..." -ForegroundColor Green
 
