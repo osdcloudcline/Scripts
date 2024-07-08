@@ -16,6 +16,9 @@ $CloudModule1 = "Windows 365 Cloud PC"
 
 # Cloud PowerShell Modules
 
+$OSapp = "Microsoft Windows Powershell"
+$OSappver = "Version: 7.4.3.0"	
+
 
 $PS7 = "pwsh.exe"
 Start-Process -FilePath $PS7
