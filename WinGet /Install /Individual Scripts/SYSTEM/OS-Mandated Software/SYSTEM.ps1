@@ -78,7 +78,7 @@ $OSapp2 = "Microsoft Windows Terminal"
 $OSapp2ver = "Version: 1.19.10302.0"
 
 $OSapp3 = "Microsoft Windows Powershell"
-$OSapp3ver = "Version: 7.4.1.0"	
+$OSapp3ver = "Version: 7.4.3.0"	
 
 $OSapp4 = "Microsoft PowerToys"
 $OSapp4ver = "Version 0.81.1"
