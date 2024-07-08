@@ -35,12 +35,6 @@ $OEMManufacturer5 = "VMWare, Inc"
 ## PS Modules to be installed ###
 #################################
 
-$SYSModule1 = "NuGet"
-$SYSModule2 = "OneGet"
-$SYSModule3 = "WinGet"
-$SYSModule4 = "Program Management"
-$SYSModule5 = "Choco"
-
 $OSDModule1 = "OSD"
 $OSDModule2 = "OSD Builder"
 $OSDModule3 = "OSD SUS"
@@ -124,57 +118,6 @@ Write-Host
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
 Write-Host
 Write-Host
-
-# Package Manager Modules
-
-Write-Host "Installing $PMGroup Package Providers and Modules..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-Write-Verbose "Installing: $SYSModule1..." -Verbose
-Install-PackageProvider -Name NuGet -Force
-Start-Sleep -Seconds 5
-Install-Module -Name NuGet -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name NuGet -Force
-Start-Sleep -Seconds 5
-Write-Host
-
-Write-Verbose "Installing: $SYSModule2..." -Verbose
-Install-PackageProvider -Name PackageManagement -Force
-Start-Sleep -Seconds 5
-Install-Module -Name PackageManagement -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name PackageManagement -Force
-Start-Sleep -Seconds 5
-Write-Host
-
-Write-Verbose "Installing: $SYSModule3..." -Verbose
-Install-PackageProvider -Name WinGet -Force
-Start-Sleep -Seconds 5
-Install-Module -Name WinGet -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name WinGet -Force
-Start-Sleep -Seconds 5
-Write-Host
-
-Write-Verbose "Installing: $SYSModule4..." -Verbose
-Install-PackageProvider -Name ProgramManagement -Force
-Start-Sleep -Seconds 5
-Install-Module -Name ProgramManagement -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name ProgramManagement -Force
-Start-Sleep -Seconds 5
-Write-Host
-
-Write-Verbose "Installing: $SYSModule5..." -Verbose
-Install-PackageProvider -Name Choco -Force
-Start-Sleep -Seconds 5
-Install-Module -Name Choco -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 5
-Import-Module -Name Choco -Force
-Start-Sleep -Seconds 5
-Write-Host
-
 
 # MAIN OSD PowerShell Modules
 
