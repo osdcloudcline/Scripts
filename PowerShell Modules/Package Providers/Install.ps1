@@ -19,26 +19,33 @@ $PSProvider4 = "chocolatey"
 
 Write-Verbose "Installing: $PSProvider1..." -Verbose
 Install-PackageProvider -Name PackageManagement -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Importing: $PSProvider1..." -Verbose
 Import-PackageProvider -Name PackageManagement -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $PSProvider2..." -Verbose
 Install-PackageProvider -Name nuget -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Importing: $PSProvider2..." -Verbose
 Import-PackageProvider -Name nuget -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $PSProvider3..." -Verbose
 Install-PackageProvider -Name WinGet -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Importing: $PSProvider3..." -Verbose
 Import-PackageProvider -Name WinGet -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Installing: $PSProvider4..." -Verbose
 Install-PackageProvider -Name chocolatey -Force -Source PSGallery
-
+Start-Sleep -Seconds 5
+Write-Host
 Write-Verbose "Importing: $PSProvider4..." -Verbose
 Import-PackageProvider -Name chocolatey -Force -Source PSGallery
-
+Write-Host
 Stop-Transcript
