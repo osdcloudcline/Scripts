@@ -182,9 +182,10 @@ Invoke-Expression $($WiseRegistryCleaner.Content)
 
 
 If($env:computername -eq "BTDESKTOP"){
-
-
+$BTUtilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/System%20Specific/Custom%20Built/Bryan%20Desktop/CustomUtilities.ps1")
+Invoke-Expression $($BTUtilities.Content)
 }
+
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
 
 $WSBusiness = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Windows%20Store%20Apps/Business/BusinessStoreApps.ps1")
