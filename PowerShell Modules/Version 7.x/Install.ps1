@@ -16,6 +16,7 @@ $CloudModule1 = "Windows 365 Cloud PC"
 
 # Cloud PowerShell Modules
 
+
 $PS7 = "pwsh.exe"
 Start-Process -FilePath $PS7
 
@@ -24,9 +25,9 @@ Write-Host
 Write-Host
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose
-Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
-Start-Sleep -Seconds 3
-Import-Module -Name PSCloudPC -Force
+Start-Process -FilePath $PS7 | Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
+Start-Sleep -Seconds 5
+Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
 Start-Sleep -Seconds 4
 Write-Host
 
