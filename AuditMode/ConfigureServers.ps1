@@ -1,12 +1,17 @@
 Write-Host "Beginning System Configuration..." -ForegroundColor Cyan
 
 
-Write-Verbose "Step 1 - Part 1 - PowerShell 5.1 Modules..." -Verbose 
+Write-Verbose "Step 1 - Part 1 - PowerShell Package Providers..." -Verbose
+
+$PSProviders = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Package%20Providers/Install.ps1")
+Invoke-Expression $($PSProviders.Content)
+
+Write-Verbose "Step 1 - Part 2 - PowerShell 5.1 Modules..." -Verbose
 
 $PS5Modules = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%205.1/Install.ps1")
 Invoke-Expression $($PS5Modules.Content)
 
-Write-Verbose "Step 1 - Part 2 - PowerShell 7.x Modules..." -Verbose 
+Write-Verbose "Step 1 - Part 3 - PowerShell 7.x Modules..." -Verbose 
 
 $PS7Modules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Version%207.x/Install.ps1")
 Invoke-Expression $($PS7Modules.Content)
