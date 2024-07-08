@@ -42,7 +42,6 @@ pwsh
 $CloudModule1 = "Windows 365 Cloud PC"
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
 Get-Module -ListAvailable | Where-Object {$_.Name -like '*PSCloud*'}
-pause
 Get-Process -name pwsh | Stop-Process -Force -WarningAction Ignore 
 
 pause
