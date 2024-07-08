@@ -19,16 +19,17 @@ $CloudModule1 = "Windows 365 Cloud PC"
 $OSapp = "Microsoft Windows Powershell"
 $OSappver = "Version: 7.4.3.0"	
 
+Write-Verbose "Installing $OSapp, $OSappver..." -Verbose
+winget install --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
 
 $PS7 = "pwsh.exe"
-Start-Process -FilePath $PS7
 
 Write-Host "Installing and Importing: $OSDGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose
-Start-Process -FilePath $PS7 | Install-Module -Name PSCloudPC -Force -AllowClobber -SkipPublisherCheck
+Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
 Start-Sleep -Seconds 5
 Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
 Start-Sleep -Seconds 4
