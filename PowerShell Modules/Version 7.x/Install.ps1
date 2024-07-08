@@ -38,6 +38,8 @@ Start-Sleep -Seconds 5
 Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force -PassThru
 Start-Sleep -Seconds 4
 Write-Host
+pwsh
+$CloudModule1 = "Windows 365 Cloud PC"
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
 Get-Module -ListAvailable | Where-Object {$_.Name -like '*PSCloud*'}
 pause
