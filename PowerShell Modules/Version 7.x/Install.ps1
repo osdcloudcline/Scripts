@@ -33,13 +33,15 @@ Write-Verbose "Installing: $CloudModule1..." -Verbose
 Install-Module -Name Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
 Start-Sleep -Seconds 3
 Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
-Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
+Start-Process -FilePath $PS7| Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense -Reinstall -PassThru
 Start-Sleep -Seconds 5
-Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
+Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force -PassThru
 Start-Sleep -Seconds 4
 Write-Host
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
 Get-Module -ListAvailable | Where-Object {$_.Name -like '*PSCloud*'}
+pause
+Get-Process -name pwsh | Stop-Process -Force -WarningAction Ignore 
 
 pause
 Write-Host
