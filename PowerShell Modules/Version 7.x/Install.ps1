@@ -28,7 +28,9 @@ Write-Host "Installing and Importing: $OSDGroup1 Modules..." -ForegroundColor Cy
 Write-Host
 Write-Host
 
+
 Write-Verbose "Installing: $CloudModule1..." -Verbose
+Install-Module Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
 Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
 Start-Sleep -Seconds 5
 Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
