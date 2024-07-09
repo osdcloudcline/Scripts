@@ -181,12 +181,6 @@ Invoke-Expression $($WindowsAdminCenter.Content)
 $WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWiseRegistryCleaner.ps1")
 Invoke-Expression $($WiseRegistryCleaner.Content)
 
-
-If($env:computername -eq "BTDESKTOP"){
-$BTUtilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/System%20Specific/Custom%20Built/Bryan%20Desktop/CustomUtilities.ps1")
-Invoke-Expression $($BTUtilities.Content)
-}
-
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
 
 $WSBusiness = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Windows%20Store%20Apps/Business/BusinessStoreApps.ps1")
@@ -216,3 +210,11 @@ Write-Host "Processing updates for: OS SYSTEM software..." -ForegroundColor Cyan
 
 $OSSystem = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/ClientSystemUpdates.ps1")
 Invoke-Expression $($OSSystem.Content)
+
+Write-Host "Processing: System-specific update scripts..." -ForegroundColor Cyan
+
+If($env:computername -eq "BTDESKTOP"){
+$BTUtilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/System%20Specific/Custom%20Built/Bryan%20Desktop/CustomUtilities.ps1")
+Invoke-Expression $($BTUtilities.Content)
+}
+
