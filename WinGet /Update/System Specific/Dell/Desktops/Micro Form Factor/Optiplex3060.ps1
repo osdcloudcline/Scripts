@@ -9,12 +9,8 @@ Write-Host '  - Messaging: Cisco Webex and WebEx Meetings                    ' -
 Write-Host '  - Productivity: Adobe Reader                                   ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - VDI/Remote Connections: Microsoft Remote Desktop,            ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: Driver Booster 11                `                ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - System: Windows Terminal, Microsoft PowerShell,              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - System: Visual C++ Redistributables                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - System: ALL OS SYSTEM Software                               ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
-Write-Host '    Uninstallation of software will be available                 ' -ForegroundColor DarkRed -BackgroundColor White
-Write-Host '    after script completes                                       ' -ForegroundColor DarkRed -BackgroundColor White
-Write-Host '                                                                 ' -BackgroundColor White
 pause
 
 $Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060Browsers.ps1")
@@ -38,5 +34,5 @@ Invoke-Expression $($VDI.Content)
 $Utilities = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060Utilties.ps1")
 Invoke-Expression $($Utilities.Content)
 
-$OSSystem = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060SYSTEM.ps1")
+$OSSystem = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/ClientSystemUpdates.ps1")
 Invoke-Expression $($OSSystem.Content)
