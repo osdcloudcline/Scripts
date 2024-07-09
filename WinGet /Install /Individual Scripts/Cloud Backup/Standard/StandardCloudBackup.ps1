@@ -8,7 +8,7 @@ $app1 = "Google Drive"
 $app2 = "DropBox"
 $app3 = "Microsoft OneDrive"
 $app4 = "User Profile Backup and Restore"
-$app6 = "Apple iCloud"
+$app5 = "Apple iCloud"
 
 Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
 
@@ -34,6 +34,8 @@ Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
+Write-Verbose "Processing: $app4..." -Verbose
+Write-Host
 Write-Host "Acquiring and Downloading $app4 from OSDCloudCline GitHub Repo..." -ForegroundColor Green
 
 $UPBR = "https://github.com/osdcloudcline/OSDCloud/raw/main/User%20Profile%20Backup%20Restore/UserProfileBackupRestore.exe"
@@ -46,5 +48,10 @@ $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UPBR.lnk")
 $Shortcut.TargetPath = "C:\downloads\UPBR.exe"
 $Shortcut.Save()
+
+Write-Verbose "Processing: $app5..." -Verbose
+Write-Host
+Write-Host "Installing $app5..." -ForegroundColor Cyan
+winget install --id Apple.iCloud --exact --accept-source-agreements  --accept-source-agreements --force
 
 Stop-Transcript
