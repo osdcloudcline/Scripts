@@ -1,4 +1,4 @@
 $app1 = "Kodi"
 
-Write-Host "Processing: $app1..." -ForegroundColor Cyan
+Write-Host "Checking for and processing update: $app1..." -ForegroundColor Cyan
 winget upgrade --id XBMCFoundation.Kodi
