@@ -6,23 +6,23 @@ $OSSystem5 = "Microsoft XNA Redistributable"
 $OSSystem6 = "Microsoft Windows Terminal"
 $OSSystem7 = "Microsoft Windows PowerShell 7.x.x"
 
-Write-Verbose "Updating $OSSystem1 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem1..." -Verbose
 winget upgrade --id Microsoft.AppInstaller
 
-Write-Verbose "Updating $OSSystem2 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem2e..." -Verbose
 winget upgrade --id Microsoft.Edge
 
-Write-Verbose "Updating $OSSystem3 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem3..." -Verbose
 winget upgrade --id Microsoft.VCRedist.2015+.x86
 
-Write-Verbose "Updating $OSSystem4 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem4..." -Verbose
 winget upgrade --id Microsoft.VCRedist.2015+.x64
 
-Write-Verbose "Updating $OSSystem5 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem5..." -Verbose
 winget upgrade --id Microsoft.XNARedist
 
-Write-Verbose "Updating $OSSystem6 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem6..." -Verbose
 winget upgrade --id Microsoft.WindowsTerminal
 
-Write-Verbose "Updating $OSSystem7 on $env:computername..." -Verbose
+Write-Verbose "Checking for and processing update: $OSSystem7..." -Verbose
 winget upgrade --id Microsoft.PowerShell
