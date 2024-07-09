@@ -1,6 +1,6 @@
 $app1 = "HD Video Converter Factory Pro"
 
-Write-Host "Processing: $app1..." -Verbose
+Write-Host "Checking for and processing update: $app1..." -Verbose
 Write-Host 
 Write-Host "Acquiring $app1 from vendor website..." -ForegroundColor Cyan
 $HDVideoSource = "https://us.videoconverterfactory.com/download/hd-video-converter-pro.exe"
