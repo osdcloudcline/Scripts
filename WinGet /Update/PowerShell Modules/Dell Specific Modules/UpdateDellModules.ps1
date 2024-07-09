@@ -1,9 +1,24 @@
-
-
-
-
-
-
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '              DELL PowerShell Modules Update                     ' -ForegroundColor DarkBlue -BackgroundColor White 
+Write-Host '          The following modules will be updated:                 ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White 
+Write-Host '                PowerShell Module Name:                          ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell BIOS Provider                                           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Get BIOS                                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Get Dell Warranty                                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Power Store                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Open Manage                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Warranty Service Tag                                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Unity                                                   ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Power Max                                               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell BIOS                                                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Set BIOS                                                     ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Warranty                                                ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell Support Info                                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Get Dell Driver Packs                                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Dell BIOS Driver                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                 ' -BackgroundColor White
+pause
 
 $MfrGroup1 = "Dell PowerShell"
 
