@@ -531,7 +531,14 @@ do
         Show-MainMenu
         }
   '11' { cls
-        
+         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
+
+
+
+         Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
+
+
+         Write-Verbose "Downloading and Saving WinGet UPDATE scripts..." -Verbose
         }
   '12' { cls
        
