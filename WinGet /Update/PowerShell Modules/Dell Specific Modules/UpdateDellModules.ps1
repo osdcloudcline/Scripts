@@ -5,7 +5,7 @@
 
 
 
-
+$MfrGroup1 = "Dell PowerShell"
 
 $DellModule1 = "Dell BIOS Provider"
 $DellModule2 = "Get BIOS"
