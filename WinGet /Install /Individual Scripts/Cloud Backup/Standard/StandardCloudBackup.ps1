@@ -8,13 +8,12 @@ $app1 = "Google Drive"
 $app2 = "DropBox"
 $app3 = "Microsoft OneDrive"
 $app4 = "User Profile Backup and Restore"
+$app6 = "Apple iCloud"
 
 Write-Host "Configuring OSD PowerShell Modules..." -ForegroundColor Green
 
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck -Verbose
 Import-Module -Name OSD -Force
-
-
 
 # Cloud Backup software
 Write-Host "Installing Cloud Backup Applications..." -ForegroundColor Green
@@ -22,20 +21,17 @@ Write-Host
 Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
 Write-Host "Installing $app1..." -ForegroundColor Cyan
-
 winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
 
 Write-Verbose "Processing: $app2..." -Verbose
 Write-Host
 Write-Host "Installing $app2..." -ForegroundColor Cyan
-
 winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
-
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
 Write-Host "Acquiring and Downloading $app4 from OSDCloudCline GitHub Repo..." -ForegroundColor Green
