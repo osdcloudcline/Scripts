@@ -80,13 +80,6 @@ Write-Host "Processing install for: System Utilities software..." -ForegroundCol
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
-
-else{
-Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundColor White
-$OtherWallpaper = Invoke-WebRequest("")
-Invoke-Expression $($OtherWallpaper.Content)
-}
-
 Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
@@ -164,8 +157,6 @@ Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundCol
 $OtherWallpaper = Invoke-WebRequest("")
 Invoke-Expression $($OtherWallpaper.Content)
 }
-
-
 
 # Sean PC
 
