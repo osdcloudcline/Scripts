@@ -30,60 +30,69 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
+Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
+
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/AdvancedBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
+
+Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
 
 $CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/AdvancedCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
+Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
+
 $FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/AdvancedFileTransfer.ps1")
 Invoke-Expression $($FileTransfer.Content)
+
+Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
 
 $Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/AdvancedGaming.ps1")
 Invoke-Expression $($Gaming.Content)
 
+Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+
 $Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/AdvancedMedia.ps1")
 Invoke-Expression $($Media.Content)
+
+Write-Host "Processing install for: Productivity software..." -ForegroundColor Cyan
 
 $Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/AdvancedProductivity.ps1")
 Invoke-Expression $($Productivity.Content)
 
+Write-Host "Processing install for: Programming software..." -ForegroundColor Cyan
+
 $Programming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/AdvancedProgramming.ps1")
 Invoke-Expression $($Programming.Content)
+
+Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
 
 $VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AdvancedVDIRDC.ps1")
 Invoke-Expression $($VDI.Content)
 
+Write-Host "Processing install for: Virtualization software..." -ForegroundColor Cyan
+
 $Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/AdvancedVirtualization.ps1")
 Invoke-Expression $($Virtualization.Content)
+
+Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
 
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
-If($env:computername -eq "BTDESKTOP"){
-$BTDesktopUtils = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Custom/Bryan%20Desktop/CustomDesktopUtilities.ps1")
-Invoke-Expression $($BTDesktopUtils.Content)
-}
-else{ 
-Write-Host "Skipping execution of a Custom Utilities Script" -ForegroundColor DarkRed -BackgroundColor White
-}
 
-If($env:computername -eq "BTDESKTOP"){
-$BTDesktopWallpaper = Invoke-WebRequest("")
-Invoke-Expression $($BTDesktopWallpaper.Content)
-}
-ElseIf($env:computername -eq "BTLAPTOP"){
-$BTLaptopWallpaper = Invoke-WebRequest("")
-Invoke-Expression $($BTLaptopWallpaper.Content)
-}
 else{
 Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundColor White
 $OtherWallpaper = Invoke-WebRequest("")
 Invoke-Expression $($OtherWallpaper.Content)
 }
 
+Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
+
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
+
+Write-Host "Detecting PC CPU to determine related file downloads..." -ForegroundColor Cyan 
 
 $CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
 $CPUName = (Get-CimInstance -Class Win32_Processor).Name
@@ -99,6 +108,68 @@ $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Wi
 Invoke-Expression $($Intel.Content)
 }
 
+Write-Host "Processing system specific custom scripts..." -ForegroundColor Cyan
+
+# Bryan Desktop 
+
+If($env:computername -eq "BTDESKTOP"){
+
+Write-Host "Processing install for: Bryan's Desktop Utilities software..." -ForegroundColor Cyan
+
+$BTDesktopUtils = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Custom/Bryan%20Desktop/CustomDesktopUtilities.ps1")
+Invoke-Expression $($BTDesktopUtils.Content)
+}
+else{ 
+Write-Host "Skipping execution of a Custom Utilities Script" -ForegroundColor DarkRed -BackgroundColor White
+}
+
+# Bryan Desktop Wallpaper 
+
+If($env:computername -eq "BTDESKTOP"){
+
+Write-Host "Processing downloads for: Bryan's Desktop wallpaper..." -ForegroundColor Cyan
+
+$BTDesktopWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($BTDesktopWallpaper.Content)
+}
+else{
+Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundColor White
+$OtherWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($OtherWallpaper.Content)
+}
+
+# Bryan Laptop
+
+If($env:computername -eq "BTLAPTOP"){
+
+Write-Host "Processing install for: Bryan's Laptop Utilities software..." -ForegroundColor Cyan
+
+$BTLaptopUtils = Invoke-WebRequest("")
+Invoke-Expression $($BTLaptopUtils.Content)
+}
+else{ 
+Write-Host "Skipping execution of a Custom Utilities Script" -ForegroundColor DarkRed -BackgroundColor White
+}
+
+# Bryan Laptop Wallpaper
+
+If($env:computername -eq "BTLAPTOP"){
+
+Write-Host "Processing downloads for: Bryan's Laptop wallpaper..." -ForegroundColor Cyan
+$BTLaptopWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($BTLaptopWallpaper.Content)
+}
+else{
+Write-Host "Downloading Other Wallpapers..." -ForegroundColor Cyan BackgroundColor White
+$OtherWallpaper = Invoke-WebRequest("")
+Invoke-Expression $($OtherWallpaper.Content)
+}
+
+
+
+# Sean PC
+
+# Billy PC
 
 
 
