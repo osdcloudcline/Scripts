@@ -18,26 +18,17 @@ Import-Module -Name OSD -Force
 
 
 # Cloud Backup software
-Write-Host "Installing Cloud Backup Applications..." -ForegroundColor Green
-Write-Host
-Write-Verbose "Processing: $app1..." -Verbose
 Write-Host
 Write-Host "Installing $app1..." -ForegroundColor Cyan
 winget install --id Google.GoogleDrive --exact --accept-source-agreements  --accept-source-agreements --force
 
-
-
-Write-Verbose "Processing: $app2..." -Verbose
-Write-Host
 Write-Host "Installing $app2..." -ForegroundColor Cyan
 winget install --id Nextcloud.NextcloudDesktop --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Verbose "Processing: $app3..." -Verbose
 Write-Host
 Write-Host "Installing $app3..." -ForegroundColor Cyan
 winget install --id Dropbox.Dropbox --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Verbose "Processing: $app4..." -Verbose
 Write-Host
 Write-Host "Installing $app4..." -ForegroundColor Cyan
 winget install --id Microsoft.OneDrive --exact --accept-source-agreements  --accept-source-agreements --force
@@ -57,7 +48,6 @@ $Shortcut = $WshShell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Men
 $Shortcut.TargetPath = "C:\downloads\UPBR.exe"
 $Shortcut.Save()
 
-Write-Verbose "Processing: $app6..." -Verbose
 Write-Host
 Write-Host "Installing $app6..." -ForegroundColor Cyan
 winget install --id Apple.iCloud --exact --accept-source-agreements  --accept-source-agreements --force
