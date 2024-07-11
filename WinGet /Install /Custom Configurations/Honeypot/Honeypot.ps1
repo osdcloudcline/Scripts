@@ -18,3 +18,6 @@ Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
 
 $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Honeypot/HoneypotBrowsers.ps1")
 Invoke-Expression $($Browsers.Content)
+
+$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/HoneypotMedia.ps1")
+Invoke-Expression $($Media.Content)
