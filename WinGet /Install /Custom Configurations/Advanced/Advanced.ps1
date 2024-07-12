@@ -164,8 +164,9 @@ Invoke-Expression $($VMWareHorizon.Content)
 
 Write-Host "Processing install for: Virtualization software..." -ForegroundColor Cyan
 
-$Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/AdvancedVirtualization.ps1")
-Invoke-Expression $($Virtualization.Content)
+$VMWareWSPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/VMWareWSPro.ps1")
+Invoke-Expression $($VMWareWSPro.Content)
+
 
 Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
 
