@@ -19,7 +19,7 @@ $PSProvider4 = "Chocolatier"
 $PSProvider5 = "Programs"
 
 Write-Verbose "Installing: $PSProvider1..." -Verbose
-Install-PackageProvider -Name PowerShellGet -RequiredVersion 2.2.5.0 -Force
+Install-PackageProvider -Name PowerShellGet -RequiredVersion 2.2.5.0 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Importing: $PSProvider1..." -Verbose
@@ -27,7 +27,7 @@ Import-PackageProvider -Name PowerShellGet -Force
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Installing: $PSProvider2..." -Verbose
-Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.208 -Force 
+Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.208 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Importing: $PSProvider2..." -Verbose
@@ -43,14 +43,14 @@ Import-PackageProvider -Name WinGet -Force
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Installing: $PSProvider4..." -Verbose
-Install-PackageProvider -Name Chocolatier -RequiredVersion 1.2.0.0 -Force 
+Install-PackageProvider -Name Chocolatier -RequiredVersion 1.2.0.0 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Importing: $PSProvider4..." -Verbose
 Import-PackageProvider -Name Chocolatier -Force 
 Write-Host
 Write-Verbose "Installing: $PSProvider5..." -Verbose
-Install-PackageProvider -Name Programs  -RequiredVersion 3.0.0.0 -Force 
+Install-PackageProvider -Name Programs  -RequiredVersion 3.0.0.0 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Importing: $PSProvider5..." -Verbose
