@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedGamingInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedGaming-SteamInstall.log"
 
 $Date = Get-Date
 
