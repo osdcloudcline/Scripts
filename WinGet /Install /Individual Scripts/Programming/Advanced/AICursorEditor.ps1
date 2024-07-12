@@ -3,3 +3,6 @@ Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedPr
 $Date = Get-Date
 
 Write-Host "Installed on: $Date"
+
+
+$app1 = "AI Cursor Editor"
