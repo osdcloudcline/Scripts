@@ -2,7 +2,7 @@ Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedPr
 
 
 
-$app1 = "Microsoft 365 (Office)"
+$app1 = "Microsoft Office 365 for enterprise"
 
 Write-Host "Processing: $app1..." -ForegroundColor Cyan
 winget install --id 9WZDNCRD29V9 --source msstore
