@@ -8,6 +8,6 @@ $app1 = "Microsoft Visual Studio Enterprise 2022"
 
 Write-Host
 Write-Host "Installing $app1..." -ForegroundColor Cyan
-winget install --id CursorAI,Inc.Cursor --exact --accept-source-agreements  --accept-source-agreements --force
+choco install visualstudio2022enterprise --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
 
 Stop-Transcript
