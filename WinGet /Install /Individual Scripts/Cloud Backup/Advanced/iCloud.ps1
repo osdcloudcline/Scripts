@@ -3,3 +3,5 @@ Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedCl
 $Date = Get-Date
 
 Write-Host "Installed on: $Date"
+
+$app1 = "Apple iCloud"
