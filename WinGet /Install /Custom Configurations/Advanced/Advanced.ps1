@@ -152,8 +152,15 @@ Invoke-Expression $($VS2022Enterprise.Content)
 
 Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
 
-$VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AdvancedVDIRDC.ps1")
-Invoke-Expression $($VDI.Content)
+$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AnyDesk.ps1")
+Invoke-Expression $($AnyDesk.Content)
+
+$MSRemoteDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/MSRemoteDesktop.ps1")
+Invoke-Expression $($MSRemoteDesktop.Content)
+
+$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/VMWareHorizon.ps1")
+Invoke-Expression $($VMWareHorizon.Content)
+
 
 Write-Host "Processing install for: Virtualization software..." -ForegroundColor Cyan
 
