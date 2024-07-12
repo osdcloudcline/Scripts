@@ -63,8 +63,14 @@ Invoke-Expression $($iCloud.Content)
 
 Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
 
-$FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/AdvancedFileTransfer.ps1")
-Invoke-Expression $($FileTransfer.Content)
+$FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/FileZilla.ps1")
+Invoke-Expression $($FileZilla.Content)
+
+$PuTTY = Invoke-WebRequest("")
+Invoke-Expression $($PuTTY.Content)
+
+$WinSCP = Invoke-WebRequest("")
+Invoke-Expression $($WinSCP.Content)
 
 Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
 
