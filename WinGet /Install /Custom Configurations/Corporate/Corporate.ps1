@@ -23,6 +23,8 @@ Write-Host '                                                                 ' -
 pause
 
 
+Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
+
 $Chrome = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
 
