@@ -11,4 +11,4 @@ Write-Host "Installing $app1..." -ForegroundColor Cyan
 winget install --id Google.Chrome --exact --accept-source-agreements  --accept-source-agreements --force
 Write-Host
 
-
+Stop-Transcript
