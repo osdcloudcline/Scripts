@@ -35,6 +35,9 @@ Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
 
+$Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Firefox.ps1")
+Invoke-Expression $($Firefox.Content)
+
 Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
 
 $CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/AdvancedCloudBackup.ps1")
