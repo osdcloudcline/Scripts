@@ -72,10 +72,12 @@ Invoke-Expression $($PuTTY.Content)
 $WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/WinSCP.ps1")
 Invoke-Expression $($WinSCP.Content)
 
+
 Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
 
-$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/AdvancedGaming.ps1")
-Invoke-Expression $($Gaming.Content)
+$Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/Steam.ps1")
+Invoke-Expression $($Steam.Content)
+
 
 Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
 
