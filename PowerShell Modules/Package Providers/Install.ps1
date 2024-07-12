@@ -27,7 +27,7 @@ Import-PackageProvider -Name PowerShellGet -Force
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Installing: $PSProvider2..." -Verbose
-Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.208 -Force -Source PSGallery
+Install-PackageProvider -Name NuGet -RequiredVersion 3.0.0.1 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Importing: $PSProvider2..." -Verbose
