@@ -66,7 +66,7 @@ Write-Host "Processing install for: File Transfer software..." -ForegroundColor 
 $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/FileZilla.ps1")
 Invoke-Expression $($FileZilla.Content)
 
-$PuTTY = Invoke-WebRequest("")
+$PuTTY = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/PuTTY.ps1")
 Invoke-Expression $($PuTTY.Content)
 
 $WinSCP = Invoke-WebRequest("")
