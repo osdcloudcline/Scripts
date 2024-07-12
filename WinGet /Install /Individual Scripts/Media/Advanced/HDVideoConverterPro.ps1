@@ -13,7 +13,7 @@ $HDVideoSource = "https://us.videoconverterfactory.com/download/hd-video-convert
 $HDVideoDestination = "C:\OSDCloud\GitHub\downloads"
 $HDVideoSetup = "C:\OSDCloud\GitHub\downloads\hd-video-converter-pro.exe"
 Save-WebFile -SourceUrl $HDVideoSource  -DestinationDirectory $HDVideoDestination
-Write-Host "Installing $app1..." -ForegroundColor Cyan
-Start-Process -FilePath $HDVideoSetup
+
+Write-Host ' ATTN: Manual install needed!  ' -ForegroundColor DarkRed -BackgroundColor White
 
 Stop-Transcript
