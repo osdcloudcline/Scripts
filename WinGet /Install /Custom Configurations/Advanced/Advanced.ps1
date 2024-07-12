@@ -30,6 +30,7 @@ Write-Host '    after script completes                                       ' -
 Write-Host '                                                                 ' -BackgroundColor White
 pause
 
+
 Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
 
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Chrome.ps1")
@@ -38,10 +39,27 @@ Invoke-Expression $($Chrome.Content)
 $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Firefox.ps1")
 Invoke-Expression $($Firefox.Content)
 
+
 Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
 
-$CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/AdvancedCloudBackup.ps1")
-Invoke-Expression $($CloudBackup.Content)
+$DropBox = Invoke-WebRequest("")
+Invoke-Expression $($DropBox.Content)
+
+$GDrive = Invoke-WebRequest("")
+Invoke-Expression $($GDrive.Content)
+
+$NextCloudClient = Invoke-WebRequest("")
+Invoke-Expression $($NextCloudClient.Content)
+
+$OneDrive = Invoke-WebRequest("")
+Invoke-Expression $($OneDrive.Content)
+
+$UPBR = Invoke-WebRequest("")
+Invoke-Expression $($UPBR.Content)
+
+$iCloud = Invoke-WebRequest("")
+Invoke-Expression $($iCloud.Content)
+
 
 Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
 
