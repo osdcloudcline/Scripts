@@ -224,6 +224,36 @@ $Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Wi
 Invoke-Expression $($Intel.Content)
 }
 
+
+Write-Verbose "Detecting PC Manufacturer..." -Verbose
+
+$PCManufacturer = (Get-CimInstance -Class Win32_ComputerSystem).Manufacturer
+If($PCManufacturer -like "*Dell*"){
+Write-Host "Installing Dell Software...." -ForegroundColor Cyan
+$Dell = Invoke-WebRequest("")
+Invoke-Expression $($Dell.Content)
+}
+ElseIf($PCManufacturer -like "*ASUS*"){
+Write-Host "Installing ASUS Software...." -ForegroundColor Cyan
+$ASUS = Invoke-WebRequest("")
+Invoke-Expression $($ASUS.Content)
+}
+ElseIf($PCManufacturer -like "*Acer*"){
+Write-Host "Installing Acer Software...." -ForegroundColor Cyan
+$Acer = Invoke-WebRequest("")
+Invoke-Expression $($Acer.Content)
+}
+ElseIf($PCManufacturer -like "*Lenovo*"){
+Write-Host "Installing Lenovo Software...." -ForegroundColor Cyan
+$Lenovo = Invoke-WebRequest("")
+Invoke-Expression $($Lenovo.Content)
+}
+ElseIf($PCManufacturer -like "*HP*"){
+Write-Host "Installing HP Software...." -ForegroundColor Cyan
+$HP = Invoke-WebRequest("")
+Invoke-Expression $($HP.Content)
+
+
 Write-Host "Processing system specific custom scripts..." -ForegroundColor Cyan
 
 # Bryan Desktop 
