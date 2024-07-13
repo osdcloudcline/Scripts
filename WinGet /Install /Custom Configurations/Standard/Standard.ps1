@@ -3,18 +3,14 @@ Write-Host '              STANDARD SOFTWARE CONFIGURATION                    ' -
 Write-Host '          The following software will be installed:              ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                 ' -BackgroundColor White 
 Write-Host '  - Web Browsers: Google Chrome and Mozilla Firefox              ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Cloud Backup: One Drive, DropBox,                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Cloud Backup: One Drive, DropBox, iCloud                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Cloud Backup: and Google Drive                               ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - File Transfer: Filezilla                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Gaming: Steam Client                                         ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Media: VLC Player, MediaInfo, MKVToolnix, iTunes,            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Media: MakeMKV, Handbrake, PowerISO, Audacity, FFMPEG        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Media: Logitech MyHarmony, GIMP, Kodi,                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Media: VLC Player, MediaInfo, iTunes and Kodi                ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Microsoft Office 2021 LTSC                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Productivity: Adobe Reader                                   ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - Programming: VS Code, AI Code Editor,                        ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - VDI/Remote Connections: Microsoft Remote Desktop,            ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '  - VDI/Remote Connections: VMWare Horizon Client,               ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '  - Programming: VS Code, AI Code Editor                        ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - VDI/Remote Connections: AnyDesk,                             ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - VDI/Remote Connections: Microsoft 365 VDI                    ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '  - Utilities: DDU, Driver Booster 11,  CCleaner                 ' -ForegroundColor DarkBlue -BackgroundColor White
@@ -36,32 +32,121 @@ Invoke-Expression $($Chrome.Content)
 $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/Firefox.ps1")
 Invoke-Expression $($Firefox.Content)
 
-$CloudBackup = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/StandardCloudBackup.ps1")
-Invoke-Expression $($CloudBackup.Content)
 
-$FileTransfer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/StandardFileTransfer.ps1")
-Invoke-Expression $($FileTransfer.Content)
+Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
 
-$Gaming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Standard/StandardGaming.ps1")
-Invoke-Expression $($Gaming.Content)
+$DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/DropBox.ps1")
+Invoke-Expression $($DropBox.Content)
 
-$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/StandardMedia.ps1")
-Invoke-Expression $($Media.Content)
+$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/GDrive.ps1")
+Invoke-Expression $($GDrive.Content)
 
-$Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/StandardProductivity.ps1")
-Invoke-Expression $($Productivity.Content)
+$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/OneDrive.ps1")
+Invoke-Expression $($OneDrive.Content)
 
-$Programming = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/StandardProgramming.ps1")
-Invoke-Expression $($Programming.Content)
+$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/UPBR.ps1")
+Invoke-Expression $($UPBR.Content)
 
-$VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/StandardVDIRDC.ps1")
-Invoke-Expression $($VDI.Content)
+$iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/iCloud.ps1")
+Invoke-Expression $($iCloud.Content)
 
-$Virtualization = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Standard/StandardVirtualization.ps1")
-Invoke-Expression $($Virtualization.Content)
 
-$Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/StandardUtilities.ps1")
-Invoke-Expression $($Utilities.Content)
+Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
+
+$FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/FileZilla.ps1")
+Invoke-Expression $($FileZilla.Content)
+
+
+Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
+
+$Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Standard/Steam.ps1")
+Invoke-Expression $($Steam.Content)
+
+
+Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+
+$Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/Kodi.ps1")
+Invoke-Expression $($Kodi.Content)
+
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/MediaInfo.ps1")
+Invoke-Expression $($MediaInfo.Content)
+
+$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/VLCMediaPlayer.ps1")
+Invoke-Expression $($VLCPlayer.Content)
+
+$iTunes = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/iTunes.ps1")
+Invoke-Expression $($iTunes.Content)
+
+
+Write-Host "Processing install for: Productivity software..." -ForegroundColor Cyan
+
+$AcrobatReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/AcrobatReaderDC,ps1")
+Invoke-Expression $($AcrobatReaderDC.Content)
+
+$MSO365 = = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/MSO365.ps1")
+Invoke-Expression $($MSO365.Content)
+
+$MSO365E = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office365AppsEnterprise.ps1")
+Invoke-Expression $($MSO365E.Content)
+
+$Office2021 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office2021.ps1")
+Invoke-Expression $($Office2021.Content)
+
+$Office2024 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office2024.ps1")
+Invoke-Expression $($Office2024.Content)
+
+
+Write-Host "Processing install for: Programming software..." -ForegroundColor Cyan
+
+$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/VSCode.ps1")
+Invoke-Expression $($VSCode.Content)
+
+$AICursor = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/AICursorEditor.ps1")
+Invoke-Expression $($AICursor.Content)
+
+
+Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
+
+$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/AnyDesk.ps1")
+Invoke-Expression $($AnyDesk.Content)
+
+$MSRemoteDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/MSRemoteDesktop.ps1")
+Invoke-Expression $($MSRemoteDesktop.Content)
+
+
+Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
+
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/7Zip.ps1")
+Invoke-Expression $($7Zip.Content)
+
+$CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/CCleaner.ps1")
+Invoke-Expression $($CCleaner.Content)
+
+$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/DDU.ps1")
+Invoke-Expression $($DDU.Content)
+
+$SmartDefrag = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/SmartDefrag.ps1")
+Invoke-Expression $($SmartDefrag.Content)
+
+$OSKits = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/Win11-22H2-OSKits.ps1")
+Invoke-Expression $($OSKits.Content)
+
+$LogitechOptions = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/LogitechOptions.ps1")
+Invoke-Expression $($LogitechOptions.Content)
+
+$LogitechUnifying = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/LogitechUnifyingSoftware.ps1")
+Invoke-Expression $($LogitechUnifying.Content)
+
+$SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/SamsungMagician.ps1")
+Invoke-Expression $($SamsungMagician.Content)
+
+$CrucialStorage = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/CrucialStorage.ps1")
+Invoke-Expression $($CrucialStorage.Content)
+
+$WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/WiseRegistryCleaner.ps1")
+Invoke-Expression $($WiseRegistryCleaner.Content)
+
+Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/StandardSecurity.ps1")
 Invoke-Expression $($Security.Content)
