@@ -9,3 +9,5 @@ $app1 = "CCleaner"
 Write-Host
 Write-Verbose "Installing $app1..." -Verbose
 winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
+
+Stop-Transcript
