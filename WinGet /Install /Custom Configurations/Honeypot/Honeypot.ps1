@@ -18,9 +18,13 @@ $Browsers = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main
 Invoke-Expression $($Browsers.Content)
 
 
+Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
 
 $Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/HoneypotMedia.ps1")
 Invoke-Expression $($Media.Content)
+
+
+Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
 
 $FileDLs = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Honeypot/VMFileDLs.ps1")
 Invoke-Expression $($FileDLs.Content)
