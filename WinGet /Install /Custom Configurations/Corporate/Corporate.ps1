@@ -34,8 +34,13 @@ Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor C
 $CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/CorporateCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
+
+Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+
 $Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/CorporateMedia.ps1")
 Invoke-Expression $($Media.Content)
+
+
 
 $Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/CorporateProductivity.ps1")
 Invoke-Expression $($Productivity.Content)
