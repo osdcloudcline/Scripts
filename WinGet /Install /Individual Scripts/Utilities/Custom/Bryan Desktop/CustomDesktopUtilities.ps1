@@ -24,14 +24,11 @@ Start-Transcript -Path $OSDUtilitiesSoftwareLogs
 Write-Host
 
 $Utilitiesapp1 = "AIDA64 Engineer"
-$Utilitiesapp2 = "7-Zip"
-$Utilitiesapp3 = "CCleaner"
+
+
 $Utilitiesapp4 = "IObit Driver Booster"
 $Utilitiesapp5 = "Wise Registry Cleaner"
 $Utilitiesapp6 = "Windows Admin Center"
-$Utilitiesapp7 = "Windows 11 22H2 SDK"
-$Utilitiesapp8 = "Windows 11 22H2 ADK"
-$Utilitiesapp9 = "Windows 11 22H2 ADK PE Add-On"
 $Utilitiesapp10 = "Starwind V2V Converter"
 $Utilitiesapp11 = "Cinebench 2024"
 $Utilitiesapp12 = "Lian Li L-Connect 3"
@@ -41,7 +38,7 @@ $Utilitiesapp17 = "Elgato Stream Deck"
 $Utilitiesapp18 = "G.Skill WigiDash"
 $Utilitiesapp19 = "G.Skill Trident Z and Z5 Lighting Control Software"
 $Utilitiesapp20 = "Sapphire TriXX Video Card Software"
-$Utilitiesapp21 = "Display Driver Uninstaller"
+
 $Utilitiesapp23 = "Sonos"
 $Utilitiesapp24 = "SoundBlaster Command"
 $Utilitiesapp25 = "Cystal Disk Info"
@@ -55,15 +52,8 @@ Write-Host
 Write-Verbose "Installing $Utilitiesapp1 on $env:computername..." -Verbose
 winget install --id FinalWire.AIDA64.Engineer --exact --accept-source-agreements  --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 2 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Verbose "Installing $Utilitiesapp2..." -Verbose
-winget install --id 7zip.7zip --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 3 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Verbose "Installing $Utilitiesapp3..." -Verbose
-winget install --id Piriform.CCleaner --exact --accept-source-agreements  --accept-source-agreements --force
+
 
 Write-Host "Installing System Utilities Software 4 of 28..." -ForegroundColor Cyan
 Write-Host
@@ -80,47 +70,7 @@ Write-Host
 Write-Verbose "Installing $Utilitiesapp6..." -Verbose
 winget install --id Microsoft.WindowsAdminCenter --exact --accept-source-agreements --accept-source-agreements --force
 
-Write-Host "Installing System Utilities Software 7 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2SDK = "C:\OSDCloud\GitHub\downloads\winsdksetup.exe"
-$Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
-Write-Verbose "Processing and Downloading: $Utilitiesapp7 Setup File..." -Verbose
-Save-WebFile -SourceUrl $Win11_22H2SDKUrl -DestinationDirectory $OSDCloudGHdownloads
 
-Start-Process -FilePath $Win11_22H2SDK
-
-pause
-
-Write-Host "Installing System Utilities Software 8 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-Write-Verbose "Acquiring $Utilitiesapp8 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose 
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2ADK = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
-$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
-Write-Verbose "Processing and Downloading: $Utilitiesapp8 Setup File..." -Verbose
-Save-WebFile -SourceUrl $Win11_22H2ADKUrl -DestinationDirectory $OSDCloudGHdownloads
-
-Start-Process -FilePath $Win11_22H2ADK
-
-pause
-
-Write-Host "Installing System Utilities Software 9 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-Write-Verbose "Acquiring $Utilitiesapp7 setup file from OSDCloudCline GitHub OSDCloud\OS Kits repository...." -Verbose
-$OSDCloudGHdownloads = "C:\OSDCloud\GitHub\downloads"
-$Win11_22H2PEADK = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
-$Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
-Write-Verbose "Processing and Downloading: $Utilitiesapp9 Setup File..." -Verbose
-Save-WebFile -SourceUrl $Win11_22H2PEADKUrl -DestinationDirectory $OSDCloudGHdownloads
-
-Start-Process -FilePath $Win11_22H2PEADK 
-
-pause
 
 Write-Host "Installing System Utilities Software 10 of 28..." -ForegroundColor Cyan
 Write-Host
@@ -230,10 +180,7 @@ Write-Host
 Write-Verbose "Expanding $Utilitiesapp20 ZIP file..." -Verbose
 Expand-Archive -Path "$OSDCloudSapphiredownloads\TRIXX_9.7.0.zip" -Destination $OSDCloudSapphiredownloads
 
-Write-Host "Installing System Utilities Software 21 of 28..." -ForegroundColor Cyan
-Write-Host
-Write-Verbose "Installing $Utilitiesapp21..." -Verbose
-winget install --id Wagnardsoft.DisplayDriverUninstaller --exact --accept-source-agreements  --accept-package-agreements --force
+
 
 Write-Host "Installing System Utilities Software 22 of 28..." -ForegroundColor Cyan
 Write-Host
