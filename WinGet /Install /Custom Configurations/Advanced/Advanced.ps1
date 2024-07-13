@@ -170,8 +170,20 @@ Invoke-Expression $($VMWareWSPro.Content)
 
 Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
 
-$Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/AdvancedUtilities.ps1")
-Invoke-Expression $($Utilities.Content)
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/7Zip.ps1")
+Invoke-Expression $($7Zip.Content)
+
+$CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/CCleaner.ps1")
+Invoke-Expression $($CCleaner.Content)
+
+$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/DDU.ps1")
+Invoke-Expression $($DDU.Content)
+
+$SmartDefrag = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/SmartDefrag.ps1")
+Invoke-Expression $($SmartDefrag.Content)
+
+$OSKits = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/Win11-22H2-OSKits.ps1")
+Invoke-Expression $($OSKits.Content)
 
 Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
 
