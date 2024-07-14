@@ -24,7 +24,7 @@ Write-Host '                                                                 ' -
 pause
 
 
-Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
+Write-Host "Processing install for: Web Browsers..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
@@ -33,7 +33,7 @@ $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/
 Invoke-Expression $($Firefox.Content)
 
 
-Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/DropBox.ps1")
 Invoke-Expression $($DropBox.Content)
@@ -51,19 +51,19 @@ $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/W
 Invoke-Expression $($iCloud.Content)
 
 
-Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
+Write-Host "Processing install for: File Transfer software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/FileZilla.ps1")
 Invoke-Expression $($FileZilla.Content)
 
 
-Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Gaming software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Standard/Steam.ps1")
 Invoke-Expression $($Steam.Content)
 
 
-Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Media software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/Kodi.ps1")
 Invoke-Expression $($Kodi.Content)
@@ -78,7 +78,7 @@ $iTunes = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/W
 Invoke-Expression $($iTunes.Content)
 
 
-Write-Host "Processing install for: Productivity software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Productivity software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $AcrobatReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/AcrobatReaderDC,ps1")
 Invoke-Expression $($AcrobatReaderDC.Content)
@@ -96,7 +96,7 @@ $Office2024 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/ma
 Invoke-Expression $($Office2024.Content)
 
 
-Write-Host "Processing install for: Programming software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Programming software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/VSCode.ps1")
 Invoke-Expression $($VSCode.Content)
@@ -105,7 +105,7 @@ $AICursor = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main
 Invoke-Expression $($AICursor.Content)
 
 
-Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/AnyDesk.ps1")
 Invoke-Expression $($AnyDesk.Content)
@@ -116,7 +116,8 @@ Invoke-Expression $($MSRemoteDesktop.Content)
 $VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/VMWareHorizon.ps1")
 Invoke-Expression $($VMWareHorizon.Content)
 
-Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
+
+Write-Host "Processing install for: System Utilities software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
@@ -148,7 +149,7 @@ Invoke-Expression $($CrucialStorage.Content)
 $WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/WiseRegistryCleaner.ps1")
 Invoke-Expression $($WiseRegistryCleaner.Content)
 
-Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
+Write-Host "Processing downloads for: Security software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/StandardSecurity.ps1")
 Invoke-Expression $($Security.Content)
