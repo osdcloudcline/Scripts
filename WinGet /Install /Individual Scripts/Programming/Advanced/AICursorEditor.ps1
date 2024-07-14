@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedProgramming-AICursorEditorInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Programming\$env:computername-AICursorEditorInstall.log"
 
 $Date = Get-Date
 
