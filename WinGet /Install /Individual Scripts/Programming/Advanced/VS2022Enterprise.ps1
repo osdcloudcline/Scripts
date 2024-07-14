@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedProgramming-VSEnterprise2022Install.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Programming\$env:computername-VSEnterprise2022Install.log"
 
 $Date = Get-Date
 
