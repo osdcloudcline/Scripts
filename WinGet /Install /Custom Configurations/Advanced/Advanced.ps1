@@ -34,7 +34,7 @@ Write-Host '                                                                 ' -
 pause
 
 
-Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
+Write-Host "Processing install for: Web Browsers..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
@@ -43,7 +43,7 @@ $Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/
 Invoke-Expression $($Firefox.Content)
 
 
-Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/DropBox.ps1")
 Invoke-Expression $($DropBox.Content)
@@ -64,7 +64,7 @@ $iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/W
 Invoke-Expression $($iCloud.Content)
 
 
-Write-Host "Processing install for: File Transfer software..." -ForegroundColor Cyan
+Write-Host "Processing install for: File Transfer software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/FileZilla.ps1")
 Invoke-Expression $($FileZilla.Content)
@@ -76,13 +76,13 @@ $WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/W
 Invoke-Expression $($WinSCP.Content)
 
 
-Write-Host "Processing install for: Gaming software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Gaming software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/Steam.ps1")
 Invoke-Expression $($Steam.Content)
 
 
-Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Media software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Audacity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/Audacity.ps1")
 Invoke-Expression $($Audacity.Content)
@@ -124,7 +124,7 @@ $iTunes = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/W
 Invoke-Expression $($iTunes.Content)
 
 
-Write-Host "Processing install for: Productivity software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Productivity software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $AcrobatReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/AcrobatReaderDC,ps1")
 Invoke-Expression $($AcrobatReaderDC.Content)
@@ -142,7 +142,7 @@ $Office2024 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/ma
 Invoke-Expression $($Office2024.Content)
 
 
-Write-Host "Processing install for: Programming software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Programming software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/VSCode.ps1")
 Invoke-Expression $($VSCode.Content)
@@ -153,7 +153,7 @@ Invoke-Expression $($AICursor.Content)
 $VS2022Enterprise = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/VS2022Enterprise.ps1")
 Invoke-Expression $($VS2022Enterprise.Content)
 
-Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AnyDesk.ps1")
 Invoke-Expression $($AnyDesk.Content)
@@ -165,13 +165,13 @@ $VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw
 Invoke-Expression $($VMWareHorizon.Content)
 
 
-Write-Host "Processing install for: Virtualization software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Virtualization software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $VMWareWSPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/VMWareWSPro.ps1")
 Invoke-Expression $($VMWareWSPro.Content)
 
 
-Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
+Write-Host "Processing install for: System Utilities software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
@@ -203,12 +203,12 @@ Invoke-Expression $($CrucialStorage.Content)
 $WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/WiseRegistryCleaner.ps1")
 Invoke-Expression $($WiseRegistryCleaner.Content)
 
-Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
+Write-Host "Processing downloads for: Security software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/AdvancedSecurity.ps1")
 Invoke-Expression $($Security.Content)
 
-Write-Host "Detecting PC CPU to determine related file downloads..." -ForegroundColor Cyan 
+Write-Host "Detecting PC CPU to determine related file downloads..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
 $CPUName = (Get-CimInstance -Class Win32_Processor).Name
