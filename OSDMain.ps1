@@ -106,7 +106,7 @@ Write-Host " 8. Debloat Operating System"
 Write-Host " 9. Backup/Restore User Profile Data"
 Write-Host " 10. Administrative System Tasks"
 Write-Host " 11. Operating System Downloads and ISO Creation" 
-Write-Host " 12. NAS File Inventory"
+Write-Host " 12. Computer File Inventory"
 Write-Host " 13. Exit PowerShell"
 do 
 {
@@ -169,13 +169,44 @@ do
         $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
         Invoke-Expression $($OSDownloads.Content)
     }
-    '12'{
-
-    
+    '12'{cls
+         Show-FileInventoryMenu
     }
     '13'{exit}
     }
     }
     until ($selection -eq '13'){exit}
     }
+
+Function Show-FileInventoryMenu(){
+  [CmdletBinding()]
+   param(
+   [string]$Title = 'Operating System Administration & Deployment - System File Inventory Main Menu',
+   [string]$Question = 'What type of action do you need to do?'
+   )
+cls
+
+Write-Host "======= $Title ======"
+Write-Host " 1. Inventory the Local PC"
+Write-Host " 2. Inventory a NAS, if applicable"
+Write-Host " 3. Return to Main Menu"
+
+do 
+{
+  $selection = Read-Host 'Please choose an option'
+  switch($selection)
+  {
+  '1'{  cls
+        
+      }
+  '2' { cls
+        
+        }
+  '3' { cls
+       
+        }
+         }
+    }
+    until ($selection -eq '3'){exit}
+}
     Show-MainMenu
