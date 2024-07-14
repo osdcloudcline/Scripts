@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedVDI-VMWAreHorizonInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\VDI\$env:computername-VMWareHorizonInstall.log"
 
 $Date = Get-Date
 
