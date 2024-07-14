@@ -89,6 +89,7 @@ Write-Host '     - Run OSD Builder to create an up to date OS ISO file          
 Write-Host '     - Debloat the OS                                                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Install Client and Server OS Roles                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Download Windows Client and Server ISO files                           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - File inventory of Network Attached Storage Devices, if applicable      ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
@@ -105,7 +106,8 @@ Write-Host " 8. Debloat Operating System"
 Write-Host " 9. Backup/Restore User Profile Data"
 Write-Host " 10. Administrative System Tasks"
 Write-Host " 11. Operating System Downloads and ISO Creation" 
-Write-Host " 12. Exit PowerShell"
+Write-Host " 12. NAS File Inventory"
+Write-Host " 13. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -167,10 +169,13 @@ do
         $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
         Invoke-Expression $($OSDownloads.Content)
     }
-    '12'{exit}
+    '12'{
 
+    
+    }
+    '13'{exit}
     }
     }
-    until ($selection -eq '12'){exit}
+    until ($selection -eq '13'){exit}
     }
     Show-MainMenu
