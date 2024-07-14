@@ -23,43 +23,43 @@ Write-Host '                                                                 ' -
 pause
 
 
-Write-Host "Processing install for: Web Browsers..." -ForegroundColor Cyan
+Write-Host "Processing install for: Web Browsers..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Chrome = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
 
 
-Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/CorporateCloudBackup.ps1")
 Invoke-Expression $($CloudBackup.Content)
 
 
-Write-Host "Processing install for: Media software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Media software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/CorporateMedia.ps1")
 Invoke-Expression $($Media.Content)
 
 
-Write-Host "Processing install for: Productivity software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Productivity software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/CorporateProductivity.ps1")
 Invoke-Expression $($Productivity.Content)
 
 
-Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor Cyan
+Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/CorporateVDIRDC.ps1")
 Invoke-Expression $($VDI.Content)
 
 
-Write-Host "Processing install for: System Utilities software..." -ForegroundColor Cyan
+Write-Host "Processing install for: System Utilities software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Utilities = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/CorporateUtilities.ps1")
 Invoke-Expression $($Utilities.Content)
 
 
-Write-Host "Processing downloads for: Security software..." -ForegroundColor Cyan
+Write-Host "Processing downloads for: Security software..." -ForegroundColor DarkBlue -BackgroundColor White
 
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Corporate/CorporateSecurity.ps1")
 Invoke-Expression $($Security.Content)
