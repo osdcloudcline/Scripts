@@ -89,7 +89,7 @@ Write-Host '     - Run OSD Builder to create an up to date OS ISO file          
 Write-Host '     - Debloat the OS                                                         ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Install Client and Server OS Roles                                     ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '     - Download Windows Client and Server ISO files                           ' -ForegroundColor DarkBlue -BackgroundColor White
-Write-Host '     - File inventory of Network Attached Storage Devices, if applicable      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - File inventory of Local PC or a Network Attached Storage Devices       ' -ForegroundColor DarkBlue -BackgroundColor White
 Write-Host '                                                                              ' -BackgroundColor White
 pause
 Clear-Host
@@ -203,7 +203,7 @@ do
         
         }
   '3' { cls
-       
+        Show-MainMenu
         }
          }
     }
