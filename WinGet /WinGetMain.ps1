@@ -37,6 +37,8 @@ $selection = Read-Host 'Please choose an option'
 '4'{cls
     $WingetPackage = Read-Host -Prompt 'Please enter a keyword or company name, EG: Adobe or Microsoft, that you want to search for'
     winget search $WingetPackage
+    pause
+    Show-MainMenu
     }
 '5'{cls
     $SMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
