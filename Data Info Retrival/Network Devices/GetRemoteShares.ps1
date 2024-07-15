@@ -6,7 +6,7 @@ Write-Host '                                                                    
 Write-Host '         This script maps the remote share to drive letter Z:                   ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                                ' -BackgroundColor White 
 Write-Host '      Manually typing the following removes the mapped drive share:             ' -ForegroundColor DarkRed -BackgroundColor White
-Write-Host '                  NET USE Z: /discard                                           ' -ForegroundColor DarkRed -BackgroundColor White
+Write-Host '                  NET USE Z: /delete                                           ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                                ' -BackgroundColor White 
 
 
