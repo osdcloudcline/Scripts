@@ -15,3 +15,16 @@ net view \\$PCName
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
 net use z: \\$PCName\$share
 cd z:
+
+$sharename = $share
+$InventoryDir = "C:\Inventory\NAS"
+
+$files = Get-ChildItem -Path 'Z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
+
+Write-Host "`n1Total : "$files.Count "mkv `n1"
+ForEach($n1 in $files){
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
+
+Net use z: /delete
