@@ -6,7 +6,7 @@ Write-Host '                                                                    
 Write-Host '         This script maps the remote share to drive letter Z:                   ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                                ' -BackgroundColor White 
 Write-Host '      Manually typing the following removes the mapped drive share:             ' -ForegroundColor DarkRed -BackgroundColor White
-Write-Host '                  NET USE Z: /delete                                           ' -ForegroundColor DarkRed -BackgroundColor White
+Write-Host '                  NET USE Z: /delete                                            ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                                ' -BackgroundColor White 
 
 
@@ -19,7 +19,7 @@ cd z:
 $sharename = $share
 $InventoryDir = "C:\Inventory\NAS"
 
-$files = Get-ChildItem -Path 'Z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
+$files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
 
 Write-Host "`n1Total : "$files.Count "mkv `n1"
 ForEach($n1 in $files){
