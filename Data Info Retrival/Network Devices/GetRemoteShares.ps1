@@ -8,3 +8,10 @@ Write-Host '                                                                    
 Write-Host '      Manually typing the following removes the mapped drive share:             ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                  NET USE Z: /discard                                           ' -ForegroundColor DarkRed -BackgroundColor White
 Write-Host '                                                                                ' -BackgroundColor White 
+
+
+$PCName = Read-Host 'Enter PC Name on the network'
+net view \\$PCName
+$share = Read-Host -Prompt 'Enter network share to map to a network drive'
+net use z: \\$PCName\$share
+cd z:
