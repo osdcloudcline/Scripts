@@ -26,10 +26,6 @@ $files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq 
 Write-Host "`n1Total : "$files.Count "mkv `n1"
 ForEach($n1 in $files){
 If($InventoryDirTestPath -eq $true){
-Write-Verbose "Scanning for previous Inventory TXT, CSV and XLS files..." -Verbose
-Remove-Item -Path "$InventoryDir\*.txt" -Recurse -Force
-Remove-Item -Path "$InventoryDir\*.csv" -Recurse -Force
-Remove-Item -Path "$InventoryDir\*.xls" -Recurse -Force
 Write-Verbose "Inventorying Remote Network Share - $PCName\$share..." -Verbose
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
@@ -44,6 +40,6 @@ $n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
 }
 }
-
+pause
 cd c:
 Net use z: /delete
