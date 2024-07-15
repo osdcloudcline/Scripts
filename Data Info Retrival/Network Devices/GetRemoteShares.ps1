@@ -23,6 +23,7 @@ $files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq 
 
 Write-Host "`n1Total : "$files.Count "mkv `n1"
 ForEach($n1 in $files){
+md $InventoryDir
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
