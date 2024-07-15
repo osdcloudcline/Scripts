@@ -26,5 +26,5 @@ ForEach($n1 in $files){
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
-
+}
 Net use z: /delete
