@@ -13,9 +13,10 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Install Software - Main Menu"
 Write-Host " 2. Upgrade Software - Main Menu"
 Write-Host " 3. Uninstall Software - Main Menu" 
-Write-Host " 4. Apply Windows 11 Start Menu Configurations - Main Menu" 
-Write-Host " 5. Return to Main Menu"
-Write-Host " 6. Exit PowerShell"
+Write-Host " 4. Search for packages with WinGet Package Manager"
+Write-Host " 5. Apply Windows 11 Start Menu Configurations - Main Menu" 
+Write-Host " 6. Return to Main Menu"
+Write-Host " 7. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -34,16 +35,19 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Uninstall.Content)
     }
 '4'{cls
+    $WingetPackage = Read-Host -Prompt 'Please enter a keyword or company name, EG: Adobe or Microsoft, that you want to search for'
+    winget search $WingetPackage
+'5'{cls
     $SMMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/SMConfigMain.ps1")
     Invoke-Expression $($SMMain.Content)
     }
-'5'{cls
+'6'{cls
        $Main = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
        Invoke-Expression $($Main.Content)
  }
- '6'{exit}
+ '7'{exit}
  }
  }
- until ($selection -eq '6'){exit}
+ until ($selection -eq '7'){exit}
 }
 Show-MainMenu 
