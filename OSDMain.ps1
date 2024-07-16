@@ -188,7 +188,7 @@ cls
 
 Write-Host "======= $Title ======"
 Write-Host " 1. Inventory the Local PC"
-Write-Host " 2. Inventory a NAS, if applicable"
+Write-Host " 2. Inventory Network Server"
 Write-Host " 3. Return to Main Menu"
 
 do 
@@ -200,7 +200,8 @@ do
         
       }
   '2' { cls
-        
+        $NetworkServer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1")
+        Invoke-Expression $($NetworkServer.Content)
         }
   '3' { cls
         Show-MainMenu
