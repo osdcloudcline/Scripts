@@ -14,8 +14,7 @@ $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
 
-
-Write-Host "Executing Operating System-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host "Executing $OSInfo1 $OSInfo2-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 
 $SafeMode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/AddSafeMode.ps1")
@@ -50,28 +49,20 @@ Write-Host
 $Adobe = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Scripts/Adobe.ps1")
 Invoke-Expression $($Adobe.Content) 
 
-$3DMark = Invoke-WebRequest("")
+$3DMark = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Scripts/3DMark.ps1")
 Invoke-Expression $($3DMark.Content) 
 
-$PCMark = Invoke-WebRequest("")
+$PCMark = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Scripts/PCMark10.ps1")
 Invoke-Expression $($PCMark.Content) 
 
-Write-Verbose "Obtaining $SoftwareREG1 ..." -Verbose
-
-Write-Verbose "Obtaining $SoftwareREG6 ..." -Verbose
-Save-WebFile -SourceUrl $PCMark10RegFileUrl -DestinationDirectory $REGFileDirectory
-Write-Host
-Write-Verbose "Obtaining $SoftwareREG7 ..." -Verbose
-Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectory
-Write-Host
 
 
 
 
-Write-Verbose "Merging $SoftwareREG6 into $OSInfo1 $OSInfo2..." -Verbose
-regedit /s $SoftwareREG6PATH
-Write-Verbose "Merging $SoftwareREG7 into $OSInfo1 $OSInfo2..." -Verbose
-regedit /s $SoftwareREG7PATH
+
+
+
+
 
 
 Stop-Transcript
