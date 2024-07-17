@@ -1,5 +1,6 @@
+$Software1 = "PC Mark 10 Benchmarking Software"
 
-
+Write-Verbose "Importing Client OS SOFTWARE: $Software1 to $env:computername..." -Verbose
 
 if((Test-Path -LiteralPath "HKCU:\Software\UL\PCMark 10") -ne $true) {  New-Item "HKCU:\Software\UL\PCMark 10" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKCU:\Software\UL\PCMark 10' -Name 'KeyCode' -Value 'PCM10-PRO-222PZ-JN2XD-6UUW7-63QHV' -PropertyType String -Force -ea SilentlyContinue;
