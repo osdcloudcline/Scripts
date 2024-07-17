@@ -24,14 +24,7 @@ $SoftwareREG5 = "Adobe Master Collection Suite Registry Entries"
 $SoftwareREG8 = "PC Mark 10 Registry Entries"
 $SoftwareREG9 = "3D Mark Registry Entries"
 
-# OS Registry Entries
-$REG6 = "Windows 11 OS Modifications Registry Entries"
-$REG7 = "Windows 10 OS Modifications Registry Entries" 
-$REG10 = "Show SYSTEM Desktop Icons Registry Entries"
-$REG11 = "Show Hidden Files and Folders"
-$REG12 = "Prevent Windows 11 24H2 BitLocker Drive Encryption"
-$REG13 = "Disable Windows AI: Windows Recall"
-$REG14 = "Disable Windows Copilot"
+
 
 # Software Registry Entries Paths
 $SoftwareREG1PATH = "$REGFileDirectory\Acrobat1.reg"
@@ -42,14 +35,7 @@ $SoftwareREG5PATH = "$REGFileDirectory\AdobeCC3.reg"
 $SoftwareREG6PATH = "$REGFileDirectory\PCMark10.reg"
 $SoftwareREG7PATH = "$REGFileDirectory\3DMark.reg"
 
-# Operating System Registry Entries Paths
-$REG6PATH = "$REGFileDirectory\Windows11-OSModifications.reg"
-$REG7PATH = "$REGFileDirectory\Windows10-OSModifications.reg"
-$REG10PATH = "$REGFileDirectory\SYSTEMDesktopIcons.reg"
-$REG11PATH = "$REGFileDirectory\ShowHiddenFilesFolders.reg"
-$REG12PATH = "$REGFileDirectory\DisableBitLockerDeviceEncryption.reg"
-$REG13PATH = "$REGFileDirectory\Disable﻿WindowsRecall.reg"
-$REG14PATH = "$REGFileDirectory\Disable﻿WindowsCopilot.reg"
+
 
 # Software Registry URL Paths
 $AdobeRegFile1Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Adobe/Acrobat1.reg"
@@ -60,14 +46,34 @@ $AdobeRegFile5Url = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%
 $PCMark10RegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./PCMark10.reg"
 $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
 
-# Operating System Registry URL Paths
-$W11OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows11-OSModifications.reg"
-$W10OSModificationRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Windows10-OSModifications.reg"
-$SYSTEMDesktopIconsRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/SYSTEMDesktopIcons.reg"
-$HiddenFilesFoldersRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/ShowHiddenFilesFolders.reg"
-$DisableBitLockerUrl = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/DisableBitLockerDeviceEncryption.reg"
-$DisableWindowsAI = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Disable%EF%BB%BFWindowsRecall.reg"
-$DisableWindowsCopilot = "https://github.com/osdcloudcline/Scripts/raw/main/REGFiles/Disable%EF%BB%BFWindowsCopilot.reg"
+Write-Host "Executing Operating System-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host
+
+$SafeMode = Invoke-WebRequest("")
+Invoke-Expression $($SafeMode.Content)
+
+$Updates = Invoke-WebRequest("")
+Invoke-Expression $($Updates.Content)
+
+$CopyMoveTo = Invoke-WebRequest("")
+Invoke-Expression $($CopyMoveTo.Content)
+
+$DisableBitLocker = Invoke-WebRequest("")
+Invoke-Expression $($DisableBitlocker.Content)
+
+$DisableCoPilot = Invoke-WebRequest("")
+Invoke-Expression $($DisableCoPilot.Content)
+
+$DisableRecall = Invoke-WebRequest("")
+Invoke-Expression $($DisableRecall.Content)
+
+$OSDesktop = Invoke-WebRequest("")
+Invoke-Expression $($OSDesktop.Content)
+
+$HiddenFilesFolders = Invoke-WebRequest("")
+Invoke-Expression $($HiddenFilesFolders.Content)
+
+
 
 Write-Host "Downloading Software-related Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
@@ -93,7 +99,7 @@ Write-Verbose "Obtaining $SoftwareREG7 ..." -Verbose
 Save-WebFile -SourceUrl $3DMarkRegFileUrl -DestinationDirectory $REGFileDirectory
 Write-Host
 
-Write-Host "Downloading Operating System-related Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host "Executing Operating System-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 
 
