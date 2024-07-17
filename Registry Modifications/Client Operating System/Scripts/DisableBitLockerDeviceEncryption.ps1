@@ -1,4 +1,4 @@
-
+$DisableBitLocker = "Disable Bitlocker OS Encryption"
 
 
 if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\BitLocker") -ne $true) {  New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\BitLocker" -force -ea SilentlyContinue };
