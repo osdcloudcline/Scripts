@@ -1,5 +1,6 @@
+$SystemFilesFolders = "Show Hidden Files and Folders"
 
-
+Write-Verbose "Importing Client OS SYSTEM: $SystemFilesFolders to $env:computername..." -Verbose
 
 if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'Start_SearchFiles' -Value 2 -PropertyType DWord -Force -ea SilentlyContinue;
