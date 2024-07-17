@@ -1,5 +1,7 @@
 $Software1 = "Adobe Master Collection Suite"
 
+Write-Verbose "Importing Client OS SOFTWARE: $Software1 to $env:computername..." -Verbose
+
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices") -ne $true) {  New-Item "HKLM:\SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\WOW6432Node\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown\cServices' -Name 'bToggleAdobeDocumentServices' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
 
