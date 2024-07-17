@@ -1,4 +1,6 @@
+$Software1 = "3DMark Benchmarking Software"
 
+Write-Verbose "Importing Client OS SOFTWARE: $Software1 to $env:computername..." -Verbose
 
 
 if((Test-Path -LiteralPath "HKCU:\Software\UL\3DMark") -ne $true) {  New-Item "HKCU:\Software\UL\3DMark" -force -ea SilentlyContinue };
