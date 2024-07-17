@@ -97,27 +97,43 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       
+       $Chrome = Invoke-WebRequest("")
+       Invoke-Expression $($Chrome.Content)
+
+       $Firefox = Invoke-WebRequest("")
+       Invoke-Expression $($Firefox.Content)
        }
  '2'{cls
-      
+      $Chrome = Invoke-WebRequest("")
+      Invoke-Expression $($Chrome.Content)
      }
  '3'{cls
-       
+     $Chrome = Invoke-WebRequest("")
+     Invoke-Expression $($Chrome.Content)
     }
  '4'{cls
-       
+    $Chrome = Invoke-WebRequest("")
+    Invoke-Expression $($Chrome.Content) 
     }
  '5'{cls
-      
+      $Chrome = Invoke-WebRequest("")
+      Invoke-Expression $($Chrome.Content)
     }
  '6'{cls
-       
+     $Chrome = Invoke-WebRequest("")
+     Invoke-Expression $($Chrome.Content)
+
+     $Firefox = Invoke-WebRequest("")
+     Invoke-Expression $($Firefox.Content)
     }
  '7'{cls
-       
+    $Chrome = Invoke-WebRequest("")
+    Invoke-Expression $($Chrome.Content)  
     }
  '8'{cls
+       
+    }
+ '9'{cls
        
     }
 '10'{exit}
