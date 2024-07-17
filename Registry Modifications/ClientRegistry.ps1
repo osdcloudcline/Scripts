@@ -14,7 +14,7 @@ $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
 $OSInfo2 = (Get-CimInstance -ClassName CIM_OperatingSystem).Version
 
 
-Write-Host "Executing $OSInfo1 $OSInfo2-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host "Executing $OSInfo1 $OSInfo2 Registry-related PowerShell scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 
 $SafeMode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/AddSafeMode.ps1")
@@ -43,7 +43,7 @@ Invoke-Expression $($HiddenFilesFolders.Content)
 
 
 
-Write-Host "Executing Software-related Registry Files from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
+Write-Host "Executing Software-related Registry PowerShell scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 
 $Adobe = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Scripts/Adobe.ps1")
