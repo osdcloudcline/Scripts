@@ -1,5 +1,6 @@
+$SystemDesktopIcons = "User Profile - Desktop Icons"
 
-
+Write-Verbose "Importing Client OS SYSTEM: $DisableBitLocker to $env:computername..." -Verbose
 
 if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel' -Name '{018D5C66-4533-4307-9B53-224DE2ED1FE6}' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
