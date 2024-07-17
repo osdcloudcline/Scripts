@@ -1,4 +1,6 @@
+$CheckForUpdates = "Check for OS Updates"
 
+Write-Verbose "Importing Client OS SYSTEM: $CheckForUpdates to $env:computername..." -Verbose
 
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Classes\DesktopBackground\Shell\Check for Updates") -ne $true) {  New-Item "HKLM:\SOFTWARE\Classes\DesktopBackground\Shell\Check for Updates" -force -ea SilentlyContinue };
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Classes\DesktopBackground\Shell\Check for Updates\command") -ne $true) {  New-Item "HKLM:\SOFTWARE\Classes\DesktopBackground\Shell\Check for Updates\command" -force -ea SilentlyContinue };
