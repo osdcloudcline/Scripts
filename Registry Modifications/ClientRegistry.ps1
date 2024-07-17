@@ -49,28 +49,28 @@ $3DMarkRegFileUrl = "https://github.com/osdcloudcline/Scripts/raw/main/Registry%
 Write-Host "Executing Operating System-related Registry scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
 
-$SafeMode = Invoke-WebRequest("")
+$SafeMode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/AddSafeMode.ps1")
 Invoke-Expression $($SafeMode.Content)
 
-$Updates = Invoke-WebRequest("")
+$Updates = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CheckForUpdates.ps1")
 Invoke-Expression $($Updates.Content)
 
-$CopyMoveTo = Invoke-WebRequest("")
+$CopyMoveTo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CopyToMoveTo.ps1")
 Invoke-Expression $($CopyMoveTo.Content)
 
-$DisableBitLocker = Invoke-WebRequest("")
+$DisableBitLocker = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableBitLockerDeviceEncryption.ps1")
 Invoke-Expression $($DisableBitlocker.Content)
 
-$DisableCoPilot = Invoke-WebRequest("")
+$DisableCoPilot = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsCopilot.ps1")
 Invoke-Expression $($DisableCoPilot.Content)
 
-$DisableRecall = Invoke-WebRequest("")
+$DisableRecall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsRecall.ps1")
 Invoke-Expression $($DisableRecall.Content)
 
-$OSDesktop = Invoke-WebRequest("")
+$OSDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/OSDesktopIcons.ps1")
 Invoke-Expression $($OSDesktop.Content)
 
-$HiddenFilesFolders = Invoke-WebRequest("")
+$HiddenFilesFolders = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/ShowHiddenFilesFolders.ps1")
 Invoke-Expression $($HiddenFilesFolders.Content)
 
 
