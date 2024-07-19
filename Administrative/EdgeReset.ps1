@@ -17,8 +17,10 @@ cd $EdgeSettingsPath
 $UserData1 = "$env:userprofile\AppData\Local\Microsoft\Edge\User Data"
 
 
-Write-Verbose "Deleting Edge User Data directories..." -Verbose
-rd $UserData1
+Write-Verbose "Deleting Edge User Data directory..." -Verbose
+rd $UserData1 -Recurse -Force
+
+Write-Verbose "Creating Edge User Data directory..." -Verbose
 md $UserData1
 
 Write-Verbose "Edge Browser Reset is complete. Any corruption is fixed" -Verbose
