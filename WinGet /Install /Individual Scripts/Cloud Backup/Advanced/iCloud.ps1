@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedCloudBackup-iCloudInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Cloud Backup\$env:computername-iCloudInstall.log"
 
 $Date = Get-Date
 
