@@ -8,6 +8,7 @@ Advanced Configuration includes
 - Logitech Unifying Software
 - Samsung Magician
 - Smart Defrag
+- Microsoft Mouse and Keyboard
 - OS Kits : Windows 11 22H2 SDK, ADK and PE Add-On
 - Wise Registry Cleaner
   
