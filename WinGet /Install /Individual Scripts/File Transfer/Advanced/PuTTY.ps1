@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedFileTransfer-PuTTYInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\File Transfer\$env:computername-PuTTYInstall.log"
 
 $Date = Get-Date
 
