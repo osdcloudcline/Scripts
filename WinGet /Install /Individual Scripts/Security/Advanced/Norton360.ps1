@@ -1,15 +1,15 @@
 Start-Transcript -Path "C:\Logs\Powershell\Advanced\Security\$env:computername-Norton360Download.log"
 
-$app1 = "MalwareBytes"
+$app1 = "Norton 360"
 
 Install-Module -Name OSD -AllowClobber -SkipPublisherCheck -Force
 Import-Module -Name OSD -Force
 
-$MBDLURL = "https://www.malwarebytes.com/mwb-download/thankyou"
+$N360DLURL = "https://github.com/osdcloudcline/Software/raw/main/Security/Norton%20360/N360Downloader.exe"
 
 $destination = "C:\downloads"
 
 Write-Verbose "Processing $app1 for download..." -Verbose
-Save-WebFile -SourceUrl $MBDLURL -DestinationDirectory $destination
+Save-WebFile -SourceUrl $N360DLURL -DestinationDirectory $destination
 
 Stop-Transcript
