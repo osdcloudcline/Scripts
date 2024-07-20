@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedMedia-HandbrakeInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Media\$env:computername-HandbrakeInstall.log"
 
 $Date = Get-Date
 
