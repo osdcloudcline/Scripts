@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedFileTransfer-FileZillaInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\File Transfer\$env:computername-FileZillaInstall.log"
 
 $Date = Get-Date
 
