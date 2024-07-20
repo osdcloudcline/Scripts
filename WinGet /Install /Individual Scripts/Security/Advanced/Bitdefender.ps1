@@ -11,3 +11,5 @@ $BDURLDL = ""
 $destination = "C:\downloads"
 
 Save-WebFile -SourceUrl $BDURLDL -DestinationDirectory $destination
+
+Stop-Transcript
