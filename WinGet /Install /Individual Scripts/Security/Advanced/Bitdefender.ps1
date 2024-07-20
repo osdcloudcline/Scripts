@@ -6,7 +6,7 @@ Install-Module -Name OSD -AllowClobber -SkipPublisherCheck -Force
 Import-Module -Name OSD -Force
 
 
-$BDURLDL = ""
+$BDURLDL = "https://github.com/osdcloudcline/Software/raw/main/Security/BitDefender/bitdefender_tsecurity.exe"
 
 $destination = "C:\downloads"
 
