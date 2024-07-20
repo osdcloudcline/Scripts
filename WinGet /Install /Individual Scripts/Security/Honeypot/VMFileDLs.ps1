@@ -6,7 +6,7 @@ Import-Module -Name OSD -Force
 
 $VPNURL = "https://www.ipvanish.com/software/setup-prod-v2/ipvanish-setup.exe"
 
-$MBDLURL = "https://www.malwarebytes.com/mwb-download/thankyou"
+$MBDLURL = "https://github.com/osdcloudcline/Software/raw/main/Security/MalwareBytes/MBSetup.exe"
 
 $destination = "C:\downloads"
 
