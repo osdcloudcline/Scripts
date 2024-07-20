@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedFileTransfer-WinSCPInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\File Transfer\$env:computername-WinSCPInstall.log"
 
 $Date = Get-Date
 
