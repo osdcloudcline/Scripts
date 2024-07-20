@@ -10,6 +10,7 @@ $BDURLDL = ""
 
 $destination = "C:\downloads"
 
+Write-Verbose "Processing $app1 for download..." -Verbose
 Save-WebFile -SourceUrl $BDURLDL -DestinationDirectory $destination
 
 Stop-Transcript
