@@ -7,3 +7,7 @@ Import-Module -Name OSD -Force
 
 
 $BDURLDL = ""
+
+$destination = "C:\downloads"
+
+Save-WebFile -SourceUrl $BDURLDL -DestinationDirectory $destination
