@@ -57,7 +57,7 @@ $VCRedistributableapp11 = "MS VS C++ Redistributable 2015-2022 x64"
 $VCRedistributableapp11ver = "Version: 14.38.33135.0"
 
 $VCRedistributableapp12 = "MS VS C++ Redistributable 2015-2022 x86"
-$VCRedistributableapp12ver = "Version: 14.38.33130.0"
+$VCRedistributableapp12ver = "Version: 14.38.33135.0"
 
 $VCRedistributableapp13 = "MS VS C++ Redistributable 2017"
 $VCRedistributableapp13ver = "Version: 14.16.27033"
