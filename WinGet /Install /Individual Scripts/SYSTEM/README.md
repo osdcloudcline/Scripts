@@ -25,4 +25,4 @@ Installs the following neccessary Operating System software:
 - Microsoft Edge, Version: Latest Available
 - Microsoft Windows Terminal, Version: 1.19.10302.0
 - Microsoft Windows PowerShell, Version: 7.4.3.0
-- Microsoft PowerToys Version: 0.81.1
+- Microsoft PowerToys, Version: 0.81.1
