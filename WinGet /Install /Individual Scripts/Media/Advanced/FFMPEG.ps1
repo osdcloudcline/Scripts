@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedMedia-FFMPEGInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Media\$env:computername-FFMPEGInstall.log"
 
 $Date = Get-Date
 
