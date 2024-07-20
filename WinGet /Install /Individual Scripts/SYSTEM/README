@@ -1,1 +1,28 @@
+Installs the following neccessary Operating System software:
 
+- .NET Runtime, Version: 3.1.32
+- .NET Runtime, Version: 5.0.17
+- .NET Runtime, Version: 6.0.26
+- .NET Runtime, Version: 7.0.15
+- .NET Runtime, Version: 8.0.1
+- .NET Framework, Version: 4.8.1
+- Microsoft Visual Studio C++ Redistributable 2005 x64, Version: 8.0.61000
+- Microsoft Visual Studio C++ Redistributable 2005 x86, Version: 8.0.61000
+- Microsoft Visual Studio C++ Redistributable 2008 x64, Version: 9.0.30729.6161
+- Microsoft Visual Studio C++ Redistributable 2008 x86, Version: 9.0.30729.6161
+- Microsoft Visual Studio C++ Redistributable 2010 x64, Version: 10.0.40219
+- Microsoft Visual Studio C++ Redistributable 2010 x86, Version: 10.0.40219
+- Microsoft Visual Studio C++ Redistributable 2012 x64, Version: 11.0.61030.0
+- Microsoft Visual Studio C++ Redistributable 2012 x86, Version: 11.0.61030.0
+- Microsoft Visual Studio C++ Redistributable 2013 x64, Version: 12.0.40664.0
+- Microsoft Visual Studio C++ Redistributable 2013 x86, Version: 12.0.40664.0
+- Microsoft Visual Studio C++ Redistributable 2017, Version: 14.16.27033
+- Microsoft Visual Studio C++ Redistributable 2015-2022 x64, Version: 14.38.33135.0
+- Microsoft Visual Studio C++ Redistributable 2015-2022 x86, Version: 14.38.33135.0
+- Oracle JAVA Runtime Environment (JRE), Version: 8.0.4010.10
+- Microsoft XNA Framework, Version: 4.0.30901.0
+- Open AL Framework, Version: 1.1
+- Microsoft Edge, Version: Latest Available
+- Microsoft Windows Terminal, Version: 1.19.10302.0
+- Microsoft Windows PowerShell, Version: 7.4.3.0
+- Microsoft PowerToys Version: 0.81.1
