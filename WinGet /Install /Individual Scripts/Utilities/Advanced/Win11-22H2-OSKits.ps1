@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedUtilities-OSADKSDKPEInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Utilities\$env:computername-OSADKSDKPEInstall.log"
 
 $Date = Get-Date
 
