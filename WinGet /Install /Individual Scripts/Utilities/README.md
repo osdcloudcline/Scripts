@@ -1,4 +1,4 @@
-Advanced Configuration:
+Standardized set of utilities for Advanced, Standard, Corporate, Management PC and IT Tech configurations:
 
 - 7-Zip
 - CCleaner
@@ -12,12 +12,7 @@ Advanced Configuration:
 - OS Kits : Windows 11 22H2 SDK, ADK and PE Add-On
 - Wise Registry Cleaner
 
-  Corporate Configuration includes
 
-- 7-Zip
-- Smart Defrag
-- OS Kits : Windows 11 22H2 SDK, ADK and PE Add-On
-- Wise Registry Cleaner
 
 
 
