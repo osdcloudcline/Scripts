@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\$env:computername-AdvancedUtilities-DDUInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\Advanced\Utilities\$env:computername-DDUInstall.log"
 
 $Date = Get-Date
 
