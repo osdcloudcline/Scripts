@@ -1,4 +1,4 @@
-# Web Browser - Uninstallation Scripts 
+# Web Browser software - Uninstallation Scripts 
 
 - Google Chrome
 - Mozilla Firefox
