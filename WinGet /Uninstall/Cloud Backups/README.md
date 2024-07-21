@@ -1,4 +1,4 @@
-# Cloud Backup - Uninstallation Scripts
+# Cloud Backup software - Uninstallation Scripts
 
 - DropBox
 - Google Drive
