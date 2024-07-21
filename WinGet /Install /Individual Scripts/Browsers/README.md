@@ -1,4 +1,4 @@
-#Includes Individual installation scripts for Internet Web Browsers: 
+Includes Individual installation scripts for Internet Web Browsers: 
 
 - Advanced Installation : Mozilla Firefox and Google Chrome
 - Corporate Installation : Google Chrome
