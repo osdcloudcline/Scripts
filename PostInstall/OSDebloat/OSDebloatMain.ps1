@@ -179,7 +179,7 @@ $selection = Read-Host 'Please choose an option'
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
        Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
-       $W1125H2 = Invoke-WebRequest("")
+       $W1125H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/Windows%2011%20/25H2/Debloat25H2.ps1")
        Invoke-Expression $($W1125H2.Content)
        }
  '7'{cls
