@@ -1,3 +1,3 @@
-Virtualization Software 
+Virtualization Software:
 
-VMWare Workstation Pro
+- VMWare Workstation Pro
