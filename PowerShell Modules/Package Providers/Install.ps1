@@ -15,7 +15,7 @@ $PMGroup = "Operating System Package Providers"
 $PSProvider1 = "PowerShellGet (Oneget)"
 $PSProvider2 = "NuGet"
 $PSProvider3 = "WinGet"
-$PSProvider4 = "Chocolatier"
+$PSProvider4 = "Chocolatey"
 $PSProvider5 = "Programs"
 
 Write-Verbose "Installing: $PSProvider1..." -Verbose
@@ -43,11 +43,8 @@ Import-PackageProvider -Name WinGet -Force
 Start-Sleep -Seconds 5
 Write-Host
 Write-Verbose "Installing: $PSProvider4..." -Verbose
-Install-PackageProvider -Name Chocolatier -RequiredVersion 1.2.0.0 -Force -Source PSGallery
+Set-ExecutionPolicy unrestricted -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 Start-Sleep -Seconds 5
-Write-Host
-Write-Verbose "Importing: $PSProvider4..." -Verbose
-Import-PackageProvider -Name Chocolatier -Force 
 Write-Host
 Write-Verbose "Installing: $PSProvider5..." -Verbose
 Install-PackageProvider -Name Programs  -RequiredVersion 3.0.0.0 -Force -Source PSGallery
