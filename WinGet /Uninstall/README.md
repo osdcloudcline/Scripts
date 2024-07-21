@@ -1,6 +1,6 @@
 # WinGet - Uninstallation Scripts
 
-- Web Browsers
+- Web Browsing software
 - Cloud Backup software
 - File Transfer software
 - Online Gaming software
