@@ -1,4 +1,4 @@
-# File Transfer - Uninstallation scripts
+# File Transfer software - Uninstallation scripts
 
 - FileZilla
 - PuTTy
