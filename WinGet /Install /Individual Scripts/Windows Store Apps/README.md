@@ -8,6 +8,14 @@ Windows Store Apps - Developer Tools-related
 
 Windows Store Apps - Entertainment-related
 
+- Netflix
+- ESPN
+- Amazon Prime Video
+- Disney +
+- Hulu
+- Apple TV +
+- Paramount +
+- Peacock TV
 
 Windows Store Apps - Network Tools-related
 
