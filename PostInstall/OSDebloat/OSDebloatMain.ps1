@@ -205,7 +205,7 @@ $selection = Read-Host 'Please choose an option'
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
        Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
-       $W12RTM = Invoke-WebRequest ("")
+       $W12RTM = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/Windows%2012/RTM%20/DebloatRTM.ps1")
        Invoke-Expression $($W12RTM.Content)
      }
  '8'{cls
