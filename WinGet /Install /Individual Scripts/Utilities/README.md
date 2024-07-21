@@ -1,4 +1,4 @@
-Standardized set of utilities for Advanced, Standard, Corporate, Management PC and IT Tech configurations:
+# Standardized set of utilities for Advanced, Standard, Corporate, Management PC and IT Tech configurations & Installation scripts:
 
 - 7-Zip
 - CCleaner
