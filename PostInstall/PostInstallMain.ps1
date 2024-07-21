@@ -13,11 +13,9 @@ Write-Host "======= $Title ======"
 Write-Host " 1. Windows 11 Start Menu Customization"
 Write-Host " 2. Windows 12 Start Menu Customization"
 Write-Host " 3. Debloat Operating System"
-Write-Host " 4. Add Client OS Features"
-Write-Host " 5. Configure Server OS Roles and Features"
-Write-Host " 6. Change Computer Name"
-Write-Host " 7. Install OEM Manufacturer Specific Software"
-Write-Host " 8. Exit PowerShell"
+Write-Host " 4. Change Computer Name"
+Write-Host " 5. Install OEM Manufacturer Specific Software"
+Write-Host " 6. Exit PowerShell"
 do
 {
 $selection = Read-Host 'Please choose an option'
@@ -36,24 +34,16 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($Debloat.Content)
      }
  '4'{cls
-      $ClientFeatures = Invoke-WebRequest ("")
-      Invoke-Expression $($ClientFeatures.Content)
-    }
- '5'{cls
-      $ServerRolesFeatures = Invoke-WebRequest ("")
-      Invoke-Expression $($ServerRolesFeatures.Content)
-    }
- '6'{cls
       $ChangePCName = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/PC%20Name/ChangePCName.ps1")
       Invoke-Expression $($ChangePCName.Content)
  }
- '7'{$Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
+ '5'{$Manufacturer = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/ManufacturerMain.ps1")
      Invoke-Expression $($Manufacturer.Content)
     }
- '8'{exit}
+ '6'{exit}
  }
  }
- until ($selection -eq '8'){exit}
+ until ($selection -eq '6'){exit}
 }
 
 Show-MainMenu 
