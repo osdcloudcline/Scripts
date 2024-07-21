@@ -1,3 +1,5 @@
-Virtualization Software:
+# Virtualization Software Configurations and Installation scripts:
 
-- VMWare Workstation Pro
+- Advanced configuration: VMWare Workstation Pro
+- IT Tech configuration: VMWare Workstation Pro
+- Standard configuration: VMWare Workstation Pro
