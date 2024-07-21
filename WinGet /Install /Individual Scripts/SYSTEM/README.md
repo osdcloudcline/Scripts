@@ -1,4 +1,4 @@
-Installs the following neccessary Operating System software:
+# Installs the following neccessary Operating System software:
 
 - .NET Runtime, Version: 3.1.32
 - .NET Runtime, Version: 5.0.17
