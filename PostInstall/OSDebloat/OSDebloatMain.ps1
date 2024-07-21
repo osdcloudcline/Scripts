@@ -45,7 +45,9 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
        $W1022H2 = InvokeWebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/OSDebloat/Windows%2010%20/DebloatWin10.ps1")
        Invoke-Expression $($W1022H2.Content)
@@ -69,8 +71,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose 
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
+       $W1123H2 = Invoke-WebRequest("")
+       Invoke-Expression $($W1123H2.Content)
      }
  '3'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -91,9 +97,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
-       
+       $W1124H1 = Invoke-WebRequest("")
+       Invoke-Expression $($W1124H1.Content)
     }
  '4'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -114,8 +123,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
+       $W1124H2 = Invoke-WebRequest("")
+       Invoke-Expression $($W1124H2.Content)
     }
  '5'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -136,8 +149,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
+       $W1125H1 = Invoke-WEbRequest("")
+       Invoke-Expression $($W1125H1.Content)
     }   
  '6' {cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -158,8 +175,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
+       $W1125H2 = Invoke-WebRequest("")
+       Invoke-Expression $($W1125H2.Content)
        }
  '7'{cls
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -180,8 +201,12 @@ $selection = Read-Host 'Please choose an option'
        Write-Verbose "Display Version: $DisplayVersion" -Verbose
        Write-Verbose "OS Edition: $EditionID" -Verbose 
        Write-Verbose "MS Edge Chromium Version: $EdgeBrowser" -Verbose
+       pause
        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+       Start-Sleep -Seconds 5
        Import-Module -Name OSD -Force
+       $W12RTM = Invoke-WebRequest ("")
+       Invoke-Expression $($W12RTM.Content)
      }
  '8'{cls
       
