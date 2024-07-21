@@ -1,12 +1,14 @@
-Windows Store Apps - Business-related 
+# Windows Store Apps and Installation scripts:
+
+ Business-related 
 
 - Company Portal
 
-Windows Store Apps - Developer Tools-related
+ Developer Tools-related
 
 - Python 3.12
 
-Windows Store Apps - Entertainment-related
+ Entertainment-related
 
 - Netflix
 - ESPN
@@ -17,11 +19,11 @@ Windows Store Apps - Entertainment-related
 - Paramount +
 - Peacock TV
 
-Windows Store Apps - Network Tools-related
+ Network Tools-related
 
 - Network Tools Desktop Edition
 
-Windows Store Apps - OS System-related
+ OS System-related
 
 - Microsoft PC Manager
 - Windows 365 Azure Virtual Desktop
