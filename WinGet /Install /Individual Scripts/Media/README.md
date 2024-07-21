@@ -1,4 +1,4 @@
-Media Software:
+# Media Software Configurations & Installation Scripts:
 
   - Advanced Configuration: Installs Audacity, FFMPEG for Audacity, GIMP, HD Video Converter Factory Pro, Handbrake, Kodi, MKVToolNix, MediaInfo, Logitech MyHarmony, PowerISO, Apple iTunes and VLC Player
   - Corporate Configuration: Installs MediaInfo and VLC Player
