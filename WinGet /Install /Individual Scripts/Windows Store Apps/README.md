@@ -4,6 +4,7 @@ Windows Store Apps - Business-related
 
 Windows Store Apps - Developer Tools-related
 
+- Python 3.12
 
 Windows Store Apps - Entertainment-related
 
