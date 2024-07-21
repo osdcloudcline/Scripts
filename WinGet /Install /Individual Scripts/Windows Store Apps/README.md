@@ -1,5 +1,6 @@
 Windows Store Apps - Business-related 
 
+- Company Portal
 
 Windows Store Apps - Developer Tools-related
 
