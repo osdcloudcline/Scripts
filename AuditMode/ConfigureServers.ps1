@@ -29,12 +29,14 @@ Write-Verbose "Step 6 - Mandatory OS Pre-Requirements..." -Verbose
 $OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
 Invoke-Expression $($OS.Content)
 
-Write-Verbose "Step 7 - Windows Server Roles and Fearures..." -Verbose
+Write-Verbose "Step 7 - Installing minimal software configuration..." -Verbose
+
+$ServerSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Server%20Systems/ServerSoftware.ps1")
+Invoke-Expression $($ServerSoftware.Content)
+
+Write-Verbose "Step 8 - Windows Server Roles and Fearures..." -Verbose
 
 $ServerRoles = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/PostInstall/Server%20OS%20Roles%20/ServerRolesFeaturesMain.ps1")
 Invoke-Expression $($ServerRoles.Content)
 
-Write-Verbose "Step 8 - Installing minimal software configuration..." -Verbose
 
-$ServerSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Server%20Systems/ServerSoftware.ps1")
-Invoke-Expression $($ServerSoftware.Content)
