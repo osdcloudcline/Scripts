@@ -1,10 +1,10 @@
 # Install scripts:
 
-- installs Advanced, Corporate, Honeypot, IT Tech, Management PC, Standard, Client or Server VDI, System-Specific, Server Software and Manufacturer specific configurations via a User Driven menu
+- installs software included in Advanced, Corporate, Honeypot, IT Tech, Management PC, Standard, Client or Server VDI, System-Specific, Server Software and Manufacturer specific configurations via a User Driven menu
 
-# Upgrade scripts:
+# Updade scripts:
 
-- upgrades Advanced, Corporate, Honeypot, IT Tech, Management PC, Standard, Client or Server VDI, System-Specific, Server Software and Manufacturer specific configurations via a User Driven menu
+- updades software included in Advanced, Corporate, Honeypot, IT Tech, Management PC, Standard, Client or Server VDI, System-Specific, Server Software and Manufacturer specific configurations via a User Driven menu
 
 # Uninstallation scripts:
 
