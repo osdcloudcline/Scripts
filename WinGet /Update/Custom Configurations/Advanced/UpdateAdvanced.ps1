@@ -42,105 +42,111 @@ Invoke-Expression $($Firefox.Content)
 
 Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
 
-$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateDropBox.ps1")
+$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/DropBox.ps1")
 Invoke-Expression $($DropBox.Content) 
 
-$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateOneDrive.ps1")
+$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/OneDrive.ps1")
 Invoke-Expression $($OneDrive.Content)
 
-$iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateiCloud.ps1")
+$iCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/iCloud.ps1")
 Invoke-Expression $($iCloud.Content)
 
-$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateGDrive.ps1")
+$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/GDrive.ps1")
 Invoke-Expression $($GDrive.Content)
 
-$NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/UpdateNextCloud.ps1")
+$NextCloud = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Advanced/NextCloud.ps1")
 Invoke-Expression $($NextCloud.Content)
 
 Write-Host "Processing updates for: File Transfer software..." -ForegroundColor Cyan
 
-$FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateFilezilla.ps1")
+$FileZilla = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/Filezilla.ps1")
 Invoke-Expression $($FileZilla.Content)
 
-$PuTTY = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdatePuTTY.ps1")
+$PuTTY = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/PuTTY.ps1")
 Invoke-Expression $($PuTTY.Content)
 
-$WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/UpdateWinSCP.ps1")
+$WinSCP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/File%20Transfer/Advanced/WinSCP.ps1")
 Invoke-Expression $($WinSCP.Content)
 
 Write-Host "Processing updates for: Gaming software..." -ForegroundColor Cyan
 
-$Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Gaming/Advanced/UpdateSteam.ps1")
+$Steam = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Gaming/Advanced/Steam.ps1")
 Invoke-Expression $($Steam.Content)
 
 Write-Host "Processing updates for: Media software..." -ForegroundColor Cyan
 
-$AudacityFFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateAudacityFFMPEG.ps1")
-Invoke-Expression $($AudacityFFMPEG.Content)
+$Audacity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/Audacity.ps1")
+Invoke-Expression $($Audacity.Content)
 
-$GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateGIMP.ps1")
+$FFMPEG = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/FFMPEG.ps1")
+Invoke-Expression $($FFMPEG.Content)
+
+$GIMP = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/GIMP.ps1")
 Invoke-Expression $($GIMP.Content)
 
-$HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateHDVideoConverterFactoryPro.ps1")
+$HDVideo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/HDVideoConverterFactoryPro.ps1")
 Invoke-Expression $($HDVideo.Content)
 
-$Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateHandbrake.ps1")
+$Handbrake = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/Handbrake.ps1")
 Invoke-Expression $($Handbrake.Content)
 
-$Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateKodi.ps1")
+$Kodi = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/Kodi.ps1")
 Invoke-Expression $($Kodi.Content)
 
-$MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMKVToolnix.ps1")
+$MKVToolnix = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/MKVToolnix.ps1")
 Invoke-Expression $($MKVToolnix.Content)
 
-$MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMakeMKV.ps1")
+$MakeMKV = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/MakeMKV.ps1")
 Invoke-Expression $($MakeMKV.Content)
 
-$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMediaInfo.ps1")
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/MediaInfo.ps1")
 Invoke-Expression $($MediaInfo.Content)
 
-$MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateMyHarmony.ps1")
+$MyHarmony = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/MyHarmony.ps1")
 Invoke-Expression $($MyHarmony.Content) 
 
-$PowerISO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdatePowerISO.ps1")
+$PowerISO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/PowerISO.ps1")
 Invoke-Expression $($PowerISO.Content)
 
-$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateVLCPlayer.ps1")
+$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/VLCPlayer.ps1")
 Invoke-Expression $($VLCPlayer.Content)
 
-$iTunes = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/UpdateiTunes.ps1")
+$iTunes = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Advanced/iTunes.ps1")
 Invoke-Expression $($iTunes.Content) 
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
+$AdobeReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Productivity/Advanced/AdobeReaderDC.ps1")
+Invoke-Expression $($AdobeReaderDC.Content)
+
 Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
 
-$AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateAICoder.ps1")
+$AICoder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/AICursorEditor.ps1")
 Invoke-Expression $($AICoder.Content)
 
-$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVSCode.ps1")
+$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/VSCode.ps1")
 Invoke-Expression $($VSCode.Content)
 
-$VisualStudio2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/UpdateVisualStudio2022.ps1")
+$VisualStudio2022 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Advanced/VisualStudio2022.ps1")
 Invoke-Expression $($VisualStudio2022.Content)
 
 Write-Host "Processing updates for: VDI/Remote Desktop software..." -ForegroundColor Cyan
 
-$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateAnyDesk.ps1")
+$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/AnyDesk.ps1")
 Invoke-Expression $($AnyDesk.Content)
 
-$MSRDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateMSRDCSoftware.ps1")
+$MSRDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/MSRDCSoftware.ps1")
 Invoke-Expression $($MSRDC.Content)
 
-$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateVMWareHorizonClient.ps1")
+$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/VMWareHorizonClient.ps1")
 Invoke-Expression $($VMWareHorizon.Content)
 
-$Win365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/UpdateWindows365AzureClient.ps1")
+$Win365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/Advanced/Windows365AzureClient.ps1")
 Invoke-Expression $($Win365.Content)
 
 Write-Host "Processing updates for: Virtualization software..." -ForegroundColor Cyan
 
-$VMWareWorkstationPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Virtualization/Advanced/UpdateVMWareWorkstationPro.ps1")
+$VMWareWorkstationPro = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Virtualization/Advanced/VMWareWorkstationPro.ps1")
 Invoke-Expression $($VMWareWorkstationPro.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
