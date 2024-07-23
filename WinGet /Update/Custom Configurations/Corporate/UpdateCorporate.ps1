@@ -15,10 +15,10 @@ pause
 
 Write-Host "Processing updates for: Web Browsers..." -ForegroundColor Cyan
 
-$Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Corporate/UpdateChrome.ps1")
+$Chrome = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Corporate/Chrome.ps1")
 Invoke-Expression $($Chrome.Content)
 
-$Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Corporate/UpdateEdge.ps1")
+$Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Corporate/Edge.ps1")
 Invoke-Expression $($Edge.Content)
 
 Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
