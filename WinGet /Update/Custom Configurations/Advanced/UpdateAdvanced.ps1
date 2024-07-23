@@ -37,7 +37,7 @@ Invoke-Expression $($Chrome.Content)
 $Edge = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/Edge.ps1")
 Invoke-Expression $($Edge.Content)
 
-$Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/UpdateFirefox.ps1")
+$Firefox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/Advanced/Firefox.ps1")
 Invoke-Expression $($Firefox.Content)
 
 Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
