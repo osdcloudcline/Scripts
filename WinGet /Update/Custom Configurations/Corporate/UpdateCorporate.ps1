@@ -23,33 +23,36 @@ Invoke-Expression $($Edge.Content)
 
 Write-Host "Processing updates for: Cloud Backup software..." -ForegroundColor Cyan
 
-$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateDropBox.ps1")
+$Dropbox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/DropBox.ps1")
 Invoke-Expression $($DropBox.Content) 
 
-$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateOneDrive.ps1")
+$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/OneDrive.ps1")
 Invoke-Expression $($OneDrive.Content)
 
-$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/UpdateGDrive.ps1")
+$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/Corporate/GDrive.ps1")
 Invoke-Expression $($GDrive.Content)
 
 Write-Host "Processing updates for: Media software..." -ForegroundColor Cyan
 
-$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Corporate/UpdateMediaInfo.ps1")
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Corporate/MediaInfo.ps1")
 Invoke-Expression $($MediaInfo.Content)
 
-$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Corporate/UpdateVLCPlayer.ps1")
+$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/Corporate/VLCPlayer.ps1")
 Invoke-Expression $($VLCPlayer.Content)
 
 Write-Host "Processing updates for: Productivity software..." -ForegroundColor Cyan
 
+$AdobeReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Productivity/Corporate/AdobeReaderDC.ps1")
+Invoke-Expression $($AdobeReaderDC.Content)
+
 Write-Host "Processing updates for: Programming software..." -ForegroundColor Cyan
 
-$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Corporate/UpdateVSCode.ps1")
+$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Programming/Corporate/VSCode.ps1")
 Invoke-Expression $($VSCode.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
-$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Corporate/Update7Zip.ps1")
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Corporate/7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
 
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
