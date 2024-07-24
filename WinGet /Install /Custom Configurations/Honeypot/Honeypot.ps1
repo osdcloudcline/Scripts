@@ -20,9 +20,11 @@ Invoke-Expression $($Browsers.Content)
 
 Write-Host "Processing install for: Media software..." -ForegroundColor DarkBlue -BackgroundColor White
 
-$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/HoneypotMedia.ps1")
-Invoke-Expression $($Media.Content)
+$MediaInfo = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/MediaInfo.ps1")
+Invoke-Expression $($MediaInfo.Content)
 
+$VLC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/MediaInfo.ps1")
+Invoke-Expression $($VLC.Content)
 
 Write-Host "Processing downloads for: Security software..." -ForegroundColor DarkBlue -BackgroundColor White
 
