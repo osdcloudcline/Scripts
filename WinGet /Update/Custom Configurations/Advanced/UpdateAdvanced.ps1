@@ -151,40 +151,40 @@ Invoke-Expression $($VMWareWorkstationPro.Content)
 
 Write-Host "Processing updates for: Utilities software..." -ForegroundColor Cyan
 
-$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/Update7Zip.ps1")
+$7Zip = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/7Zip.ps1")
 Invoke-Expression $($7Zip.Content)
 
-$CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateCCleaner.ps1")
+$CCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/CCleaner.ps1")
 Invoke-Expression $($CCleaner.Content)
 
-$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDDU.ps1")
+$DDU = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/DDU.ps1")
 Invoke-Expression $($DDU.Content)
 
-$DriverBooster = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateDriverBooster.ps1")
+$DriverBooster = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/DriverBooster.ps1")
 Invoke-Expression $($DriverBooster.Content)
 
-$FanControl = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateFanControl.ps1")
+$FanControl = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/FanControl.ps1")
 Invoke-Expression $($FanControl.Content)
 
-$LogitechOptions = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechOptions.ps1")
+$LogitechOptions = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/LogitechOptions.ps1")
 Invoke-Expression $($LogitechOptions.Content)
 
-$LogitechUnifyingSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateLogitechUnifyingSoftware.ps1")
+$LogitechUnifyingSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/LogitechUnifyingSoftware.ps1")
 Invoke-Expression $($LogitechUnifyingSoftware.Content)
 
-$MSMouseKB = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateMSMouseKeyboardCenter.ps1")
+$MSMouseKB = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/MSMouseKeyboardCenter.ps1")
 Invoke-Expression $($MSMouseKB.Content)
 
-$Rufus = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateRufus.ps1")
+$Rufus = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/Rufus.ps1")
 Invoke-Expression $($Rufus.Content)
 
-$SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateSamsungMagician.ps1")
+$SamsungMagician = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/SamsungMagician.ps1")
 Invoke-Expression $($SamsungMagician.Content)
 
-$WindowsAdminCenter = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWindowsAdminCenter.ps1")
+$WindowsAdminCenter = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/WindowsAdminCenter.ps1")
 Invoke-Expression $($WindowsAdminCenter.Content)
 
-$WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/UpdateWiseRegistryCleaner.ps1")
+$WiseRegistryCleaner = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/Advanced/WiseRegistryCleaner.ps1")
 Invoke-Expression $($WiseRegistryCleaner.Content)
 
 Write-Host "Processing updates for: Windows Store - Business Apps..." -ForegroundColor Cyan
