@@ -52,63 +52,63 @@ $ClientRSAT20 = "RSAT - Windows Software Update Services Tools"
 Write-Verbose "Installing $RSAT..." -Verbose
 Write-Host
 
-Write-Verbose "Installing $RSAT1..." -Verbose
+Write-Verbose "Installing $ClientRSAT1..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT2..." -Verbose
+Write-Verbose "Installing $ClientRSAT2..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.AzureStack.HCI.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT3..." -Verbose
+Write-Verbose "Installing $ClientRSAT3..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.CertificateServices.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT4..." -Verbose
+Write-Verbose "Installing $ClientRSAT4..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.DHCP.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT5..." -Verbose
+Write-Verbose "Installing $ClientRSAT5..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.Dns.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT6..." -Verbose
+Write-Verbose "Installing $ClientRSAT6..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.FailoverCluster.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT7..." -Verbose
+Write-Verbose "Installing $ClientRSAT7..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.FileServices.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT8..." -Verbose
+Write-Verbose "Installing $ClientRSAT8..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.GroupPolicy.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT9..." -Verbose
+Write-Verbose "Installing $ClientRSAT9..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.IPAM.Client.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT10..." -Verbose
+Write-Verbose "Installing $ClientRSAT10..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.LLDP.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT11..." -Verbose
+Write-Verbose "Installing $ClientRSAT11..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.NetworkController.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT12..." -Verbose
+Write-Verbose "Installing $ClientRSAT12..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.NetworkLoadBalancing.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT13..." -Verbose
+Write-Verbose "Installing $ClientRSAT13..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.RemoteAccess.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT14..." -Verbose
+Write-Verbose "Installing $ClientRSAT14..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.RemoteDesktop.Services.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT15..." -Verbose
+Write-Verbose "Installing $ClientRSAT15..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.ServerManager.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT16..." -Verbose
+Write-Verbose "Installing $ClientRSAT16..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.StorageMigrationService.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT17..." -Verbose
+Write-Verbose "Installing $ClientRSAT17..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.StorageReplica.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT18..." -Verbose
+Write-Verbose "Installing $ClientRSAT18..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.SystemInsights.Management.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT19..." -Verbose
+Write-Verbose "Installing $ClientRSAT19..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.VolumeActivation.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
-Write-Verbose "Installing $RSAT20..." -Verbose
+Write-Verbose "Installing $ClientRSAT20..." -Verbose
 Write-Host
 Get-WindowsCapability -Name Rsat.WSUS.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online
