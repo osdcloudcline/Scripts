@@ -30,6 +30,9 @@ Write-Verbose "Step 6 - Mandatory OS Pre-Requirements..." -Verbose
 $OS = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
 Invoke-Expression $($OS.Content)
 
+$EdgeExt = Invoke-WebRequest("")
+Invoke-Expression $($EdgeExt.Content)
+
 Write-Verbose "Step 7 - Software Installation..." -Verbose
 
 $WinGetSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
