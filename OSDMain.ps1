@@ -105,9 +105,10 @@ Write-Host " 7. Audit Mode Configuration Tasks"
 Write-Host " 8. Debloat Operating System"
 Write-Host " 9. Backup/Restore User Profile Data"
 Write-Host " 10. Administrative System Tasks"
-Write-Host " 11. Operating System Downloads and ISO Creation" 
-Write-Host " 12. Computer File Inventory"
-Write-Host " 13. Exit PowerShell"
+Write-Host " 11. Scan SYSTEM Firmware to find security vulneralbilities"
+Write-Host " 12. Operating System Downloads and ISO Creation" 
+Write-Host " 13. Computer File Inventory"
+Write-Host " 14. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -166,16 +167,22 @@ do
        Invoke-Expression $($AdminMain.Content)
     }
     '11'{cls
+
+    $ScanFW = "https://pk.fail/"
+    Write-Verbose "Accessing Website..." -Verbose
+    Start-Process -Path $ScanFW
+    }
+    '12'{cls
         $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
         Invoke-Expression $($OSDownloads.Content)
     }
-    '12'{cls
+    '13'{cls
          Show-FileInventoryMenu
     }
-    '13'{exit}
+    '14'{exit}
     }
     }
-    until ($selection -eq '13'){exit}
+    until ($selection -eq '14'){exit}
     }
 
 Function Show-FileInventoryMenu(){
