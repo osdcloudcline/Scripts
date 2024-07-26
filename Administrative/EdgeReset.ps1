@@ -25,6 +25,6 @@ md $UserData1
 
 Write-Verbose "Edge Browser Reset is complete. Any corruption is fixed" -Verbose
 
-$MBAM = Invoke-WebRequest("")
+$MBAM = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Browser%20Extensions/Edge/MalwareBytes%20BrowserGuard/MBAMExtension.ps1")
 Invoke-Expression $($MBAM.Content)
 Stop-Transcript 
