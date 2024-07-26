@@ -28,7 +28,7 @@ Invoke-Expression $($Messaging.Content)
 $Productivity = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Productivity/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/Productivity.ps1")
 Invoke-Expression $($Productivity.Content)
 
-$VDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060VDIRemote.ps1")
+$VDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/VDI%20Remote%20Connections/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/VDIRemote.ps1")
 Invoke-Expression $($VDI.Content)
 
 $Utilities = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Utilities/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060Utilties.ps1")
