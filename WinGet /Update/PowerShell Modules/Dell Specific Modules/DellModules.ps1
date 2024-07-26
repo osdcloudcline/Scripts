@@ -41,53 +41,53 @@ Write-Host "Updating $MfrGroup1 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $DellModule1...Module No: 1 of 14" -Verbose
-Update-Module -Name DellBIOSProvider -Force -Repository PSGallery
+Update-Module -Name DellBIOSProvider -Force 
 Import-Module -Name DellBIOSProvider -Force
 Write-Verbose "Updating: $DellModule2...Module No: 2 of 14" -Verbose
-Update-Module -Name GetBIOS -Force -Repository PSGallery
+Update-Module -Name GetBIOS -Force 
 Import-Module -Name GetBIOS -Force
 Write-Verbose "Updating: $DellModule3...Module No: 3 of 14" -Verbose
-Update-Module -Name Get-DellWarranty -Force -Repository PSGallery
+Update-Module -Name Get-DellWarranty -Force 
 Import-Module -Name Get-DellWarranty -Force
 Write-Verbose "Updating: $DellModule4...Module No: 4 of 14" -Verbose
-Update-Module -Name Dell.PowerStore -Force -Repository PSGallery
+Update-Module -Name Dell.PowerStore -Force 
 Import-Module -Name Dell.PowerStore -Force
 Write-Verbose "Updating: $DellModule5...Module No: 5 of 14" -Verbose
-Update-Module -Name DellOpenManage -Force -Repository PSGallery
+Update-Module -Name DellOpenManage -Force 
 Import-Module -Name DellOpenManage -Force
 Write-Verbose "Updating: $DellModule6...Module No: 6 of 14" -Verbose
-Update-Module -Name DellWarrantyServiceTag -Force -Repository PSGallery
+Update-Module -Name DellWarrantyServiceTag -Force 
 Import-Module -Name DellWarrantyServiceTag -Force
 Write-Verbose "Updating: $DellModule7...Module No: 7 of 14" -Verbose
-Update-Module -Name Dell.Unity -Force -Repository PSGallery
+Update-Module -Name Dell.Unity -Force 
 Import-Module -Name Dell.Unity -Force
 Write-Verbose "Updating: $DellModule8...Module No: 8 of 14" -Verbose
-Update-Module -Name Dell.PowerMax -Force -Repository PSGallery
+Update-Module -Name Dell.PowerMax -Force 
 Import-Module -Name Dell.PowerMax -Force
 Write-Verbose "Updating: $DellModule9...Module No: 9 of 14" -Verbose
-Update-Module -Name DellBios -Force -Repository PSGallery
+Update-Module -Name DellBios -Force 
 Import-Module -Name DellBios -Force
 Write-Verbose "Updating: $DellModule10...Module No: 10 of 14" -Verbose
-Update-Module -Name SetBIOS -Force -Repository PSGallery
+Update-Module -Name SetBIOS -Force 
 Import-Module -Name SetBIOS -Force
 Write-Verbose "Updating: $DellModule11...Module No: 11 of 14" -Verbose
-Update-Module -Name DellWarranty -Force -Repository PSGallery
+Update-Module -Name DellWarranty -Force 
 Import-Module -Name DellWarranty -Force
 Write-Verbose "Updating: $DellModule12...Module No: 12 of 14" -Verbose
-Update-Module -Name Get-DellSupportInfo -Force -Repository PSGallery
+Update-Module -Name Get-DellSupportInfo -Force
 Import-Module -Name Get-DellSupportInfo -Force
 Write-Verbose "Updating: $DellModule13...Module No: 13 of 14" -Verbose
-Update-Module -Name Get-DriversPackFromDell -Force -Repository PSGallery
+Update-Module -Name Get-DriversPackFromDell -Force 
 Import-Module -Name Get-DriversPackFromDell -Force
 Write-Verbose "Updating: $DellModule14...Module No: 14 of 14" -Verbose
-Update-Module -Name Dell-BIOSDriver -Force -Repository PSGallery
+Update-Module -Name Dell-BIOSDriver -Force 
 Import-Module -Name Dell-BIOSDriver -Force
 
 Write-Host "Updating $MfrGroup2 Modules..." -ForegroundColor Cyan
 Write-Host
 Write-Host
 Write-Verbose "Updating: $VMModule1...Module No: 1 of 1" -Verbose
-Update-Module -Name WindowsImageBuilder -Force -Repository PSGallery
+Update-Module -Name WindowsImageBuilder -Force 
 Import-Module -Name WindowsImageBuilder -Force
 
 $DellSoftware1 = "Dell Command | Update for Windows Universal Application"
