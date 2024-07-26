@@ -13,7 +13,7 @@ Write-Host '  - System: ALL OS SYSTEM Software                               ' -
 Write-Host '                                                                 ' -BackgroundColor White 
 pause
 
-$Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060Browsers.ps1")
+$Browsers = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Browsers/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/Browsers.ps1")
 Invoke-Expression $($Browsers.Content)
 
 $CloudBackups = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/CloudBackups.ps1")
