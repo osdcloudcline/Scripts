@@ -19,7 +19,7 @@ Invoke-Expression $($Browsers.Content)
 $CloudBackups = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Cloud%20Backups/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/CloudBackups.ps1")
 Invoke-Expression $($CloudBackups.Content)
 
-$Media = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060Media.ps1")
+$Media = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Media/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/Media.ps1")
 Invoke-Expression $($Media.Content)
 
 $Messaging = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/Messaging/System%20Specific/Dell/Desktops/Micro%20Form%20Factor/Optiplex/3060/3060Messaging.ps1")
