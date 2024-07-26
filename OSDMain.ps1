@@ -50,13 +50,9 @@ cls
       Write-Host 
       Write-Host         "Network Connection Info:" -ForegroundColor Green 
       Write-Verbose "System Hostname: $PCName" -Verbose
-      If(($IP1 -eq $true) -or ($IP2 -eq $true) -or ($IP1 -eq $true) -and ($IP2 -eq $true)){
       Write-Verbose "System IP Address 1: $IP1" -Verbose
       Write-Verbose "System IP Address 2: $IP2" -Verbose
-      }
-      ElseIf($IP3 -eq $true){
       Write-Verbose "System IP Address 3: $IP3" -Verbose
-      }
       Write-Verbose "Network Name: $NetName" -Verbose
       Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
       Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
