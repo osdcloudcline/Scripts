@@ -37,5 +37,5 @@ Invoke-Expression $($Utilities.Content)
 $OSSystem = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/Individual%20Scripts/OS%20SYSTEM/Clients/ClientSystemUpdates.ps1")
 Invoke-Expression $($OSSystem.Content)
 
-$DellPSModules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/PowerShell%20Modules/Dell%20Specific%20Modules/UpdateDellModules.ps1")
+$DellPSModules = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/PowerShell%20Modules/Dell%20Specific%20Modules/DellModules.ps1")
 Invoke-Expression $($DellPSModules.Content)
