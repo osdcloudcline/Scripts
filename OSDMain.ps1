@@ -169,8 +169,17 @@ do
     '11'{cls
 
     $ScanFW = "https://pk.fail/"
+    $CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK).bytes) -match "DO NOT TRUST|DO NOT SHIP"
+    
+    Write-Verbose "Checking $Baseboard1 $Baseboard2 for vulneralbilities..." -Verbose
+    If($CheckUEFIBoot -eq $false){
+    Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is not affected" -ForegroundColor DarkBlue -BackgroundColor White
+    }
+    ElseIf($CheckUEFIBoot -eq $true){
+    Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected" -ForegroundColor DarkRed -BackgroundColor White
     Write-Verbose "Accessing Website..." -Verbose
     Start-Process  $ScanFW
+    }
     Show-MainMenu
     }
     '12'{cls
