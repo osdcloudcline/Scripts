@@ -180,7 +180,7 @@ do
     Write-Verbose "Accessing Website..." -Verbose
     Start-Process  $ScanFW
     }
-    Show-MainMenu
+    
     }
     '12'{cls
         $OSDownloads = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/OS.ps1")
