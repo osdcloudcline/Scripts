@@ -37,7 +37,8 @@ cls
        $PCManufacturer = (Get-CimInstance -ClassName Win32_ComputerSystem).Manufacturer
        $BIOS1 = (Get-CimInstance -ClassName Win32_BIOS).Manufacturer
        $BIOS2 = (Get-CimInstance -ClassName Win32_BIOS).SMBIOSBIOSVersion
- 
+       $CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK).bytes) -match "DO NOT TRUST|DO NOT SHIP"
+       
        Write-Host
        Write-Host         "Running Computer Info:" -ForegroundColor Green 
        Write-Verbose "System Hostname: $PCName" -Verbose
@@ -56,7 +57,12 @@ cls
        Write-Verbose "Motherboard: $Baseboard1 $Baseboard2" -Verbose
        Write-Verbose "Manufacturer: $PCManufacturer" -Verbose
        Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
-       Write-Verbose "PKFail Vulneralbility Check: Get-UEFISecurity" -Verbose
+      If($CheckUEFIBoot -eq $false){
+       Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is NOT affected by PKFail security vulneralbility" -ForegroundColor DarkBlue -BackgroundColor White
+    }
+       ElseIf($CheckUEFIBoot -eq $true){
+       Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 IS affected by PKFail security vulneralbility" -ForegroundColor DarkRed -BackgroundColor White
+    }
        
        Write-Host 
        Write-Host         "Network Connection Info:" -ForegroundColor Green 
@@ -230,14 +236,4 @@ do
     until ($selection -eq '3'){exit}
 }
 
-Function Get-UEFISecurity(){
-$CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK).bytes) -match "DO NOT TRUST|DO NOT SHIP"
-
- If($CheckUEFIBoot -eq $false){
-    Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is not affected by PKFail security vulneralbility" -ForegroundColor DarkBlue -BackgroundColor White
-    }
- ElseIf($CheckUEFIBoot -eq $true){
-    Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected by PKFail security vulneralbility" -ForegroundColor DarkRed -BackgroundColor White
-    }
-    }
     Show-MainMenu
