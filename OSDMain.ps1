@@ -28,7 +28,8 @@ cls
        $NetName = (Get-NetconnectionProfile).Name
        $GatewayDNS = (Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName $env:computername).DefaultIPGateway
        $ExternalIP = (Invoke-WebRequest -uri "https://api.ipify.org/").Content
-
+       
+       
        $Baseboard1 = (Get-CimInstance -ClassName Win32_Baseboard).Manufacturer
        $Baseboard2 = (Get-CimInstance -ClassName Win32_Baseboard).Product
        $CPU = (Get-CimInstance -Class Win32_Processor -ComputerName "$env:computername").Name
@@ -55,16 +56,17 @@ cls
        Write-Verbose "Motherboard: $Baseboard1 $Baseboard2" -Verbose
        Write-Verbose "Manufacturer: $PCManufacturer" -Verbose
        Write-Verbose "System BIOS: $BIOS1 $BIOS2" -Verbose
-
-      Write-Host 
-      Write-Host         "Network Connection Info:" -ForegroundColor Green 
-      Write-Verbose "System Hostname: $PCName" -Verbose
-      Write-Verbose "System IP Address 1: $IP1" -Verbose
-      Write-Verbose "System IP Address 2: $IP2" -Verbose
-      Write-Verbose "System IP Address 3: $IP3" -Verbose
-      Write-Verbose "Network Name: $NetName" -Verbose
-      Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
-      Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
+       Write-Verbose "PKFail Vulneralbility Check: Get-UEFISecurity" -Verbose
+       
+       Write-Host 
+       Write-Host         "Network Connection Info:" -ForegroundColor Green 
+       Write-Verbose "System Hostname: $PCName" -Verbose
+       Write-Verbose "System IP Address 1: $IP1" -Verbose
+       Write-Verbose "System IP Address 2: $IP2" -Verbose
+       Write-Verbose "System IP Address 3: $IP3" -Verbose
+       Write-Verbose "Network Name: $NetName" -Verbose
+       Write-Verbose "System Gateway/DNS Server: $GatewayDNS" -Verbose
+       Write-Verbose "WAN or External IP Address: $ExternalIP" -Verbose
       
 Write-Host
 Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
@@ -171,12 +173,12 @@ do
     $ScanFW = "https://pk.fail/"
     $CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK).bytes) -match "DO NOT TRUST|DO NOT SHIP"
     
-    Write-Verbose "Checking $Baseboard1 $Baseboard2 for vulneralbilities..." -Verbose
+    Write-Verbose "Checking $Baseboard1 $Baseboard2 for PKFail security vulneralbility..." -Verbose
     If($CheckUEFIBoot -eq $false){
-    Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is not affected" -ForegroundColor DarkBlue -BackgroundColor White
+    Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is not affected by PKFail security vulneralbility" -ForegroundColor DarkBlue -BackgroundColor White
     }
     ElseIf($CheckUEFIBoot -eq $true){
-    Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected" -ForegroundColor DarkRed -BackgroundColor White
+    Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected by PKFail security vulneralbility" -ForegroundColor DarkRed -BackgroundColor White
     Write-Verbose "Accessing Website..." -Verbose
     Start-Process  $ScanFW
     }
@@ -227,4 +229,14 @@ do
     }
     until ($selection -eq '3'){exit}
 }
+
+Function Get-UEFISecurity(){
+$CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK).bytes) -match "DO NOT TRUST|DO NOT SHIP"
+
+ If($CheckUEFIBoot -eq $false){
+    Write-Host "Great news - $env:computername using $Baseboard1 $Baseboard2 is not affected by PKFail security vulneralbility" -ForegroundColor DarkBlue -BackgroundColor White
+    }
+ ElseIf($CheckUEFIBoot -eq $true){
+    Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected by PKFail security vulneralbility" -ForegroundColor DarkRed -BackgroundColor White
+    }
     Show-MainMenu
