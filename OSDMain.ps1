@@ -239,4 +239,5 @@ $CheckUEFIBoot = [System.Text.Encoding]::ASCII.GetString((Get-SecureBootUEFI PK)
  ElseIf($CheckUEFIBoot -eq $true){
     Write-Host "Bad news - $env:computername using $Baseboard1 $Baseboard2 is affected by PKFail security vulneralbility" -ForegroundColor DarkRed -BackgroundColor White
     }
+    }
     Show-MainMenu
