@@ -12,7 +12,7 @@ Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. Dell Laptops"
 Write-Host " 2. Dell Desktops"
-Write-Host " 3. Custom Built Desktops + ASUS AMD/Intel Motherboards"
+Write-Host " 3. Custom Built Desktops + AMD/Intel Motherboards"
 Write-Host " 4. HP Laptops"
 Write-Host " 5. ASUS Laptops"
 Write-Host " 6. Acer Laptops"
