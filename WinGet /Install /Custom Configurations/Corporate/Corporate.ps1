@@ -55,14 +55,29 @@ Invoke-Expression $($VLCPlayer.Content
 
 Write-Host "Processing install for: Productivity software..." -ForegroundColor DarkBlue -BackgroundColor White
 
-$Productivity = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/CorporateProductivity.ps1")
-Invoke-Expression $($Productivity.Content)
+$AdobeReaderDC = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/AcrobatReaderDC.ps1")
+Invoke-Expression $($AdobeReaderDC.Content)
+
+$MSO365 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/MSO365.ps1")
+Invoke-Expression $($MSO365.Content)
+
+$Office2021 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/Office2021.ps1")
+Invoke-Expression $($Office2021.Content)
+
+$Office365AppsENT = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/Office365AppsEnterprise.ps1")
+Invoke-Expression $($Office365AppsENT.Content)
 
 
 Write-Host "Processing install for: Vitual Desktop Interface software..." -ForegroundColor DarkBlue -BackgroundColor White
 
-$VDI = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/CorporateVDIRDC.ps1")
-Invoke-Expression $($VDI.Content)
+$AnyDesk = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/AnyDesk.ps1")
+Invoke-Expression $($AnyDesk.Content)
+
+$MSRemoteDesktop = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/MSRemoteDesktop.ps1")
+Invoke-Expression $($MSRemoteDesktop.Content)
+
+$VMWareHorizon = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/VMWareHorizon.ps1")
+Invoke-Expression $($VMWareHorizon.Content)
 
 
 Write-Host "Processing install for: System Utilities software..." -ForegroundColor DarkBlue -BackgroundColor White
