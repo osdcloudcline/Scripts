@@ -31,14 +31,26 @@ Invoke-Expression $($Chrome.Content)
 
 Write-Host "Processing install for: Cloud Backup software..." -ForegroundColor DarkBlue -BackgroundColor White
 
-$CloudBackup = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/CorporateCloudBackup.ps1")
-Invoke-Expression $($CloudBackup.Content)
+$DropBox = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/DropBox.ps1")
+Invoke-Expression $($DropBox.Content)
+
+$GDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/GDrive.ps1")
+Invoke-Expression $($GDrive.Content)
+
+$OneDrive = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/OneDrive.ps1")
+Invoke-Expression $($OneDrive.Content)
+
+$UPBR = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/UPBR.ps1")
+Invoke-Expression $($UPBR.Content)
 
 
 Write-Host "Processing install for: Media software..." -ForegroundColor DarkBlue -BackgroundColor White
 
-$Media = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/CorporateMedia.ps1")
-Invoke-Expression $($Media.Content)
+$MediaInfo = Invoke-WeBRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/MediaInfo.ps1")
+Invoke-Expression $($MediaInfo.Content)
+
+$VLCPlayer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/VLCPlayer.ps1")
+Invoke-Expression $($VLCPlayer.Content 
 
 
 Write-Host "Processing install for: Productivity software..." -ForegroundColor DarkBlue -BackgroundColor White
