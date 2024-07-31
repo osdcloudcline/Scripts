@@ -258,6 +258,9 @@ ElseIf($PCManufacturer -like "*HP*"){
 Write-Host "Installing HP Software...." -ForegroundColor Cyan
 $HP = Invoke-WebRequest("")
 Invoke-Expression $($HP.Content)
+ElseIf($PCManufacturer -like "*VMWare, Inc.*"){
+Write-Host "This PC is a virtual machine operating in a VDI environment. No OEM Software is needed" -ForegroundColor Cyan
+}
 
 
 Write-Host "Processing system specific custom scripts..." -ForegroundColor Cyan
