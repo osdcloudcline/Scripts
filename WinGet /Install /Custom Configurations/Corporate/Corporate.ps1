@@ -121,5 +121,54 @@ Write-Host "Processing downloads for: Security software..." -ForegroundColor Dar
 $Security = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Corporate/Anti-Malware/MalwareBytes.ps1")
 Invoke-Expression $($Security.Content)
 
+
+Write-Host "Detecting PC CPU to determine related file downloads..." -ForegroundColor DarkBlue -BackgroundColor White
+
+$CPU = (Get-CimInstance -Class Win32_Processor).Manufacturer
+$CPUName = (Get-CimInstance -Class Win32_Processor).Name
+
+If($CPU -eq "AuthenticAMD"){
+Write-Host      "This PC has an $CPU $CPUName" -ForegroundColor DarkBlue -BackgroundColor White
+$AMD = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/AMD%20/AMD.ps1")
+Invoke-Expression $($AMD.Content)
+}
+ElseIf($CPU -eq "GenuineIntel"){
+Write-Host      "This PC has an $CPU $CPUName" -ForegroundColor DarkBlue -BackgroundColor White
+$Intel = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Manufacturer%20Specific/Intel/Intel.ps1")
+Invoke-Expression $($Intel.Content)
+}
+
+
+Write-Verbose "Detecting PC Manufacturer..." -Verbose
+
+$PCManufacturer = (Get-CimInstance -Class Win32_ComputerSystem).Manufacturer
+If($PCManufacturer -like "*Dell*"){
+Write-Host "Installing Dell Software...." -ForegroundColor Cyan
+$Dell = Invoke-WebRequest("")
+Invoke-Expression $($Dell.Content)
+}
+ElseIf($PCManufacturer -like "*ASUS*"){
+Write-Host "Installing ASUS Software...." -ForegroundColor Cyan
+$ASUS = Invoke-WebRequest("")
+Invoke-Expression $($ASUS.Content)
+}
+ElseIf($PCManufacturer -like "*Acer*"){
+Write-Host "Installing Acer Software...." -ForegroundColor Cyan
+$Acer = Invoke-WebRequest("")
+Invoke-Expression $($Acer.Content)
+}
+ElseIf($PCManufacturer -like "*Lenovo*"){
+Write-Host "Installing Lenovo Software...." -ForegroundColor Cyan
+$Lenovo = Invoke-WebRequest("")
+Invoke-Expression $($Lenovo.Content)
+}
+ElseIf($PCManufacturer -like "*HP*"){
+Write-Host "Installing HP Software...." -ForegroundColor Cyan
+$HP = Invoke-WebRequest("")
+Invoke-Expression $($HP.Content)
+ElseIf($PCManufacturer -like "*VMWare, Inc.*"){
+Write-Host "This PC is a virtual machine operating in a VDI environment. No OEM Software is needed" -ForegroundColor Cyan
+}
+
 $Uninstall = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Uninstall/UninstallMainMenu.ps1")
 Invoke-Expression $($Uninstall.Content)
