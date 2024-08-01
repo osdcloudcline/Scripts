@@ -531,8 +531,43 @@ do
         Show-MainMenu
         }
   '11' { cls
-         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
+        $WingetBackupLog = "C:\OSD Cloud\Logs\Script Backups\WinGet.log"
+        Start-Transcript $WingetBackupLog
+        Get-Date
+        Write-Host 
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
 
+        # Custom Configurations - Main Scripts URLs
+        
+        $CustomCongigAdvancedScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Advanced/Advanced.ps1"
+        $CustomConfigCorporateScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Corporate/Corporate.ps1"
+        $CustomConfigHoneypotScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Honeypot/Honeypot.ps1"
+        $CustomConfigITTechScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/IT%20Tech/ITTech.ps1"
+        $CustomConfigManagementPCScriptURL= "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Management%20PC/ManagementPC.ps1"
+        $CustomConfigServerSystemsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Server%20Systems/ServerSoftware.ps1"
+        $CustomConfigStandardScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Standard/Standard.ps1"
+        $CustomConfigClientVDIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/VDI/ClientVirtualDesktopInterface.ps1"
+        $CustomConfigServerVDIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/VDI/ServerVirtualDesktopInterface.ps1"
+
+        # Individual Winget INSTALL Scripts - Browsers
+        
+        $AdvancedBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Chrome.ps1"
+        $AdvancedBrowser2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Advanced/Firefox.ps1"
+        $CorporateBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/Chrome.ps1"
+        $HoneypotBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Honeypot/Chrome.ps1"
+        $ITTechBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Honeypot/Chrome.ps1"
+        $ManagementPCBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Management%20PC/Chrome.ps1"
+        $StandardBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/Chrome.ps1"
+        $StandardBrowser2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Standard/Firefox.ps1"
+        $VDIBrowser1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/VDI/Chrome.ps1"
+
+        # Individual Winget INSTALL Scripts - Cloud Backups
+
+        
+        
+        Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
 
 
          Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
