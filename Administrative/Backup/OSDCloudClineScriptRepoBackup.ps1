@@ -771,11 +771,87 @@ do
 
         # Individual Winget INSTALL Scripts - VDI/Remote Desktop Software
 
-        
+        $AdvancedVDIRDC1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/AnyDesk.ps1"
+        $AdvancedVDIRDC2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/MSRemoteDesktop.ps1"
+        $AdvancedVDIRDC3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Advanced/VMWareHorizon.ps1"
 
- 
+        $CorporateVDIRDC1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/AnyDesk.ps1"
+        $CorporateVDIRDC2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/MSRemoteDesktop.ps1"
+        $CorporateVDIRDC3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Corporate/VMWareHorizon.ps1"
+
+        $ITTechVDIRDC1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/IT%20Tech/AnyDesk.ps1"
+        $ITTechVDIRDC2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/IT%20Tech/MSRemoteDesktop.ps1"
+        $ITTechVDIRDC3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/IT%20Tech/VMWareHorizon.ps1"
+
+        $StandardVDIRDC1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/AnyDesk.ps1"
+        $StandardVDIRDC2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/MSRemoteDesktop.ps1"
+        $StandardVDIRDC3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/VDI-Remote%20Desktop/Standard/VMWareHorizon.ps1"
+
+        # Individual Winget INSTALL Scripts - Virtualization Software
+
+        $AdvancedVirtualization1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Advanced/VMWareWSPro.ps1"
+
+        $ITTechVirtualization1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/IT%20Tech/VMWareWorkstationPro.ps1"
+
+        $StandardVirtualization1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Virtualization/Standard/VMWareWorkstationPro.ps1"
+
+        # Individual Winget INSTALL Scripts - Windows Store Software
+
+        $BusinessStoreApps = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Windows%20Store%20Apps/Business/BusinessStoreApps.ps1"
+
+        $DevToolsStoreApps = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Windows%20Store%20Apps/Development%20Tools/DevStoreApps.ps1"
+
+        $EntertainmentStoreApps = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Windows%20Store%20Apps/Entertainment/EntertainmentStoreApps.ps1"
+
+        $NetworkToolsStoreApps = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Windows%20Store%20Apps/Network%20Tools/NetworkStoreApps.ps1"
+
+        $OSSYSTEMStoreApps = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Windows%20Store%20Apps/OS%20SYSTEM/OSStoreApps.ps1"
+
+        # Individual Winget INSTALL Scripts - Manufacturer-specific scripts
+
+
+        # Individual Winget INSTALL Scripts - Scripts destination
+
+        $CustomConfig = "C:\scripts\backup\GitHubRepo\WinGet\Install"
+        $Browsers
+        $CloudBackup
+        $FileTransfer
+        $Gaming
+        $Media
+        $Productivity
+        $Programming
+        $OSSYSTEM
+        $Security
+        $SYSSpecific
+        $Utilities
+        $VDIRDC
+        $Virtualization
+        $WindowsStoreApps 
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
+        Write-Host 
+        Write-Host "Processing 1 of 15: Custom Config Scripts..." -ForegroundColor Cyan
+        
+        $Advanced = "C:\scripts\backup\GitHubRepo\WinGet\Install\Advanced"
+        $Corporate = "C:\scripts\backup\GitHubRepo\WinGet\Install\Corporate"
+        $Honeypot = "C:\scripts\backup\GitHubRepo\WinGet\Install\Honeypot"
+        $IT = "C:\scripts\backup\GitHubRepo\WinGet\Install\IT"
+        $ManagementPC = "C:\scripts\backup\GitHubRepo\WinGet\Install\Management PC"
+        $Servers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Servers"
+        $Standard = "C:\scripts\backup\GitHubRepo\WinGet\Install\Standard"
+        $SystemSpecific = "C:\scripts\backup\GitHubRepo\WinGet\Install\SystemSpecific"
+        $VDI = "C:\scripts\backup\GitHubRepo\WinGet\Install\VDI"
+
+        Write-Verbose "Installing and Importing OSD Module..." -Verbose
+        Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+        Import-Module -Name OSD -Force
+        Write-Host 
+
+        Save-WebFile -SourceUrl $CustomCongigAdvancedScriptURL -destination $Advanced
+
+        
+
+        
         Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
         Write-Verbose "Downloading and Saving WinGet UPDATE scripts..." -Verbose
        
