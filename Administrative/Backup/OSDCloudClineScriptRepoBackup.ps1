@@ -594,6 +594,61 @@ do
         
         # Individual Winget INSTALL Scripts - File Transfer Software
 
+        $AdvancedFileTransfer1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/FileZilla.ps1"
+        $AdvancedFileTransfer2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/PuTTY.ps1"
+        $AdvancedFileTransfer3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Advanced/WinSCP.ps1"
+
+        $ITTechFileTransfer1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/IT%20Tech%20/FileZilla.ps1"
+        $ITTechFileTransfer2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/IT%20Tech%20/PuTTY.ps1"
+        $ITTechFileTransfer3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/IT%20Tech%20/WinSCP.ps1"
+
+        $ManagementPCFileTransfer1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Management%20PC/FileZilla.ps1"
+        $ManagementPCFileTransfer2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Management%20PC/PuTTY.ps1"
+        $ManagementPCFileTransfer3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Management%20PC/WinSCP.ps1"
+
+        $StandardFileTransfer1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/File%20Transfer/Standard/FileZilla.ps1"
+
+        # Individual Winget INSTALL Scripts - Gaming Software
+
+        $AdvancedGamingScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Advanced/Steam.ps1"
+
+        $StandardGamingScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Gaming/Standard/Steam.ps1"
+
+        # Individual Winget INSTALL Scripts - Media Software
+
+        $AdvancedMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/Audacity.ps1"
+        $AdvancedMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/FFMPEG.ps1"
+        $AdvancedMedia3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/GIMP.ps1"
+        $AdvancedMedia4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/HDVideoConverterPro.ps1"
+        $AdvancedMedia5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/Handbrake.ps1"
+        $AdvancedMedia6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/Kodi.ps1"
+        $AdvancedMedia7ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/MKVToolNix.ps1"
+        $AdvancedMedia8ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/MakeMKV.ps1"
+        $AdvancedMedia9ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/MediaInfo.ps1"
+        $AdvancedMedia10ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/MyHarmony.ps1"
+        $AdvancedMedia11ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/PowerISO.ps1"
+        $AdvancedMedia12ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/VLCMediaPlayer.ps1"
+        $AdvancedMedia13ScriptURL = "hhttps://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Advanced/iTunes.ps1"
+
+        $CorporateMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/MediaInfo.ps1"
+        $CorporateMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Corporate/VLCPlayer.ps1"
+
+        $HoneypotMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/MediaInfo.ps1"
+        $HoneypotMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Honetypot/VLCPlayer.ps1"
+
+        $ITTechMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/IT%20Tech/MediaInfo.ps1"
+        $ITTechMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/IT%20Tech/VLCPlayer.ps1"
+
+        $StandardMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/Kodi.ps1"
+        $StandardMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/MediaInfo.ps1"
+        $StandardMedia3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/VLCPlayer.ps1"
+        $StandardMedia4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/Standard/iTunes.ps1"
+
+        $VDIMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/MediaInfo.ps1"
+        $VDIMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/VLCPlayer.ps1"
+
+        
+
         
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
