@@ -565,6 +565,35 @@ do
 
         # Individual Winget INSTALL Scripts - Cloud Backups
 
+        $AdvancedCloudBackup1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/DropBox.ps1"
+        $AdvancedCloudBackup2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/GDrive.ps1"
+        $AdvancedCloudBackup3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/NextCloudClient.ps1"
+        $AdvancedCloudBackup4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/OneDrive.ps1"
+        $AdvancedCloudBackup5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/UPBR.ps1"
+        $AdvancedCloudBackup6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Advanced/iCloud.ps1"
+
+        $CorporateCloudBackup1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/DropBox.ps1"
+        $CorporateCloudBackup2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/GDrive.ps1"
+        $CorporateCloudBackup3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/OneDrive.ps1"
+        $CorporateCloudBackup4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Corporate/UPBR.ps1"
+
+        $ITTechCloudBackup1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/DropBox.ps1"
+        $ITTechCloudBackup2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/GDrive.ps1"
+        $ITTechCloudBackup3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/NextCloudClient.ps1"
+        $ITTechCloudBackup4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/OneDrive.ps1"
+        $ITTechCloudBackup5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/UPBR.ps1"
+        $ITTechCloudBackup6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/IT%20Tech/iCloud.ps1"
+
+        $ManagementPCCloudBackup1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Management%20PC/UPBR.ps1"
+
+        $StandardCloudBackup1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/DropBox.ps1"
+        $StandardCloudBackup2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/GDrive.ps1"
+        $StandardCloudBackup3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/OneDrive.ps1"
+        $StandardCloudBackup4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/UPBR.ps1"
+        $StandardCloudBackup5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Cloud%20Backup/Standard/iCloud.ps1"
+        
+        # Individual Winget INSTALL Scripts - File Transfer Software
+
         
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
