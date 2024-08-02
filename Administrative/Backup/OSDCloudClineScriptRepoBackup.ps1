@@ -530,7 +530,10 @@ do
         Stop-Transcript
         Show-MainMenu
         }
-  '11' { cls
+  '11' {cls
+         
+        }
+  '12' {cls
         $WingetBackupLog = "C:\OSD Cloud\Logs\Script Backups\WinGet.log"
         Start-Transcript $WingetBackupLog
         Get-Date
@@ -646,20 +649,13 @@ do
 
         $VDIMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/MediaInfo.ps1"
         $VDIMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/VLCPlayer.ps1"
-
         
-
         
+        # Individual Winget INSTALL Scripts - Productivity Software
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
-
-
-         Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
-
-
-         Write-Verbose "Downloading and Saving WinGet UPDATE scripts..." -Verbose
-        }
-  '12' { cls
+        Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
+        Write-Verbose "Downloading and Saving WinGet UPDATE scripts..." -Verbose
        
         }
   '13' { cls
