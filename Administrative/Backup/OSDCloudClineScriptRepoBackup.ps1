@@ -812,7 +812,6 @@ do
 
         # Individual Winget INSTALL Scripts - Scripts destination
 
-        $CustomConfig = "C:\scripts\backup\GitHubRepo\WinGet\Install"
         $Browsers
         $CloudBackup
         $FileTransfer
@@ -830,24 +829,50 @@ do
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
         Write-Host 
-        Write-Host "Processing 1 of 15: Custom Config Scripts..." -ForegroundColor Cyan
-        
-        $Advanced = "C:\scripts\backup\GitHubRepo\WinGet\Install\Advanced"
-        $Corporate = "C:\scripts\backup\GitHubRepo\WinGet\Install\Corporate"
-        $Honeypot = "C:\scripts\backup\GitHubRepo\WinGet\Install\Honeypot"
-        $IT = "C:\scripts\backup\GitHubRepo\WinGet\Install\IT"
-        $ManagementPC = "C:\scripts\backup\GitHubRepo\WinGet\Install\Management PC"
-        $Servers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Servers"
-        $Standard = "C:\scripts\backup\GitHubRepo\WinGet\Install\Standard"
-        $SystemSpecific = "C:\scripts\backup\GitHubRepo\WinGet\Install\SystemSpecific"
-        $VDI = "C:\scripts\backup\GitHubRepo\WinGet\Install\VDI"
-
         Write-Verbose "Installing and Importing OSD Module..." -Verbose
         Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
         Import-Module -Name OSD -Force
-        Write-Host 
+        Write-Host
+        Write-Host "Processing 1 of 15: Custom Config Main Install Scripts..." -ForegroundColor Cyan
+        
+        $Advanced = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Advanced"
+        $Corporate = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Corporate"
+        $Honeypot = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Honeypot"
+        $IT = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\IT"
+        $ManagementPC = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Management PC"
+        $Servers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Servers"
+        $Standard = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\Standard"
+        $SystemSpecific = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\SystemSpecific"
+        $VDIClients = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\VDI\Clients"
+        $VDIServers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Custom Config\VDI\Servers"
 
-        Save-WebFile -SourceUrl $CustomCongigAdvancedScriptURL -destination $Advanced
+        Save-WebFile -SourceUrl $CustomCongigAdvancedScriptURL -DestinationDirectory $Advanced
+        Save-WebFile -SourceUrl $CustomConfigCorporateScriptURL -DestinationDirectorty $Corporate
+        Save-WebFile -SourceUrl $CustomConfigHoneypotScriptURL -DestinationDirectorty $Honeypot
+        Save-WebFile -SourceUrl $CustomConfigITTechScriptURL -DestinationDirectory $IT
+        Save-WebFile -SourceUrl $CustomConfigManagementPCScriptURL -DestinationDirectorty $ManagementPC
+        Save-WebFile -SourceUrl $CustomConfigServerSystemsScriptURL -DestinationDirectorty $Servers
+        Save-WebFile -SourceUrl $CustomConfigStandardScriptsURL -DestinationDirectory $Standard
+        Save-WebFile -SourceUrl $CustomConfigClientVDIScriptURL -DestinationDirectory $VDIClients
+        Save-WebFile -SourceUrl $CustomConfigServerVDIScriptURL -DestinationDirectorty $VDIServers
+        Save-WebFile -SourceUrl  -DestinationDirectorty $SystemSpecific
+        Write-Host
+        Write-Host "Processing 2 of 15: Web Browser Install Scripts..." -ForegroundColor Cyan
+
+        $AdvancedBrowsers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Individual Scripts\Advanced\Browsers"
+        $CorporateBrowsers = "C:\scripts\backup\GitHubRepo\WinGet\Install\Individual Scripts\Corporate\Browsers"
+        Write-Host
+        Write-Verbose "Processing: Advanced Web Browser Install scripts..." -Verbose
+        Write-Host
+        Save-WebFile -SourceUrl $AdvancedBrowser1ScriptURL -DestinationDirectory $AdvancedBrowsers
+        Save-WebFile -SourceUrl $AdvancedBrowser2ScriptURL -DestinationDirectorty $AdvancedBrowsers
+        Write-Host "Advanced Web Browser scripts successfully downloaded and saved..." -ForegroundColor Green 
+        Write-Host
+        Write-Verbose "Processing: Corporate Web Browser Install scripts..." -Verbose
+        Write-Host
+        Save-WebFile -SourceUrl $CorporateBrowser1ScriptURL -DestinationDirectory $CorporateBrowsers
+        Write-Host "Corporate Web Browser scripts successfully downloaded and saved..." -ForegroundColor Green 
+        
 
         
 
