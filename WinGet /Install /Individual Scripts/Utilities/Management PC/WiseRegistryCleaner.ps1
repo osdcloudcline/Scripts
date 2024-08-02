@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\Advanced\Utilities\$env:computername-WRCInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\ManagementPC\Utilities\$env:computername-WRCInstall.log"
 
 $Date = Get-Date
 
