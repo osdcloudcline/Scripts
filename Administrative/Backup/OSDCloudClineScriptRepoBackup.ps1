@@ -650,8 +650,130 @@ do
         $VDIMedia1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/MediaInfo.ps1"
         $VDIMedia2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Media/VDI/VLCPlayer.ps1"
         
-        
         # Individual Winget INSTALL Scripts - Productivity Software
+
+        $AdvancedProductivity1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/AcrobatReaderDC.ps1"
+        $AdvancedProductivity2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/MSO365.ps1"
+        $AdvancedProductivity3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/Office2021.ps1"
+        $AdvancedProductivity4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/Office2024.ps1"
+        $AdvancedProductivity5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/Office365AppsEnterprise.ps1"
+
+        $CorporateProductivity1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/AcrobatReaderDC.ps1"
+        $CorporateProductivity2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/MSO365.ps1"
+        $CorporateProductivity3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/Office2021.ps1"
+        $CorporateProductivity4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Corporate/Office365AppsEnterprise.ps1"
+
+        $ITTechProductivity1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/IT%20Tech/AcrobatReaderDC.ps1"
+        $ITTechProductivity2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/IT%20Tech/MSO365.ps1"
+        $ITTechProductivity3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/IT%20Tech/Office2021.ps1"
+        $ITTechProductivity4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/IT%20Tech/Office365AppsEnterprise.ps1"
+
+        $StandardProductivity1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/AcrobatReaderDC.ps1"
+        $StandardProductivity2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/MSO365.ps1"
+        $StandardProductivity3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office2021.ps1"
+        $StandardProductivity4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office2024.ps1"
+        $StandardProductivity5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Standard/Office365AppsEnterprise.ps1"
+
+        $VDIProductivity1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/VDI/AcrobatReaderDC.ps1"
+        $VDIProductivity2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/VDI/Office2021.ps1"
+
+        # Individual Winget INSTALL Scripts - Programming Software
+
+        $AdvancedProgramming1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/AICursorEditor.ps1"
+        $AdvancedProgramming2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/VS2022Enterprise.ps1"
+        $AdvancedProgramming3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/VSCode.ps1"
+
+        $ITTechProgramming1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/IT%20Tech/AICursorEditor.ps1"
+        $ITTechProgramming2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/IT%20Tech/VS2022Enterprise.ps1"
+        $ITTechProgramming3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/IT%20Tech/VSCode.ps1"
+
+        $ManagementPCProgramming1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Management%20PC/AICursorEditor.ps1"
+        $ManagementPCProgramming2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Management%20PC/VSCode.ps1"
+
+        $StandardProgramming1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/AICursorEditor.ps1"
+        $StandardProgramming2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Standard/VSCode.ps1"
+
+        # Individual Winget INSTALL Scripts - CLIENT/SERVER SYSTEM Software
+
+        $SYSTEM1ScriptURL =  "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1"
+
+        # Individual Winget INSTALL Scripts - Security Software
+
+        $AdvancedSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/Anti-Malware/MalwareBytes.ps1"
+        $AdvancedSecurity2ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/Anti-Virus/BitDefender.ps1"
+        $AdvancedSecurity3ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/Anti-Virus/Norton360.ps1"
+        $AdvancedSecurity4ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/Other/IPVanish.ps1"
+        $AdvancedSecurity5ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Advanced/Other/NordVPN.ps1"
+
+        $CorporateSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Corporate/Anti-Malware/MalwareBytes.ps1"
+
+        $HoneypotSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Honeypot/VMFileDLs.ps1"
+
+        $ITTechSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/IT%20Tech/Anti-Malware/MalwareBytes.ps1"
+
+        $ManagementPCSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Management%20PC/Anti-Malware/MalwareBytes.ps1"
+
+        $StandardSecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/Anti-Malware/MalwareBytes.ps1"
+        $StandardSecurity2ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/Anti-Virus/BitDefender.ps1"
+        $StandardSecurity3ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/Standard/Anti-Virus/Norton360.ps1"
+
+        $VDISecurity1ScriptsURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Security/VDI/Anti-Malware/MalwareBytes.ps1"
+
+        # Individual Winget INSTALL Scripts - System-Specific Scripts
+
+        # Individual Winget INSTALL Scripts - Utility Software
+
+        $AdvancedUtilities1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/7Zip.ps1"
+        $AdvancedUtilities2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/CCleaner.ps1"
+        $AdvancedUtilities3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/CrucialStorage.ps1"
+        $AdvancedUtilities4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/DDU.ps1"
+        $AdvancedUtilities5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/LogitechOptions.ps1"
+        $AdvancedUtilities6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/LogitechUnifyingSoftware.ps1"
+        $AdvancedUtilities7ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/MSMouseKeyboard.ps1"
+        $AdvancedUtilities8ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/SamsungMagician.ps1"
+        $AdvancedUtilities9ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/SmartDefrag.ps1"
+        $AdvancedUtilities10ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/Win11-22H2-OSKits.ps1"
+        $AdvancedUtilities11ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Advanced/WiseRegistryCleaner.ps1"
+
+        $CorporateUtilities1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/7Zip.ps1"
+        $CorporateUtilities2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/CCleaner.ps1"
+        $CorporateUtilities3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/CrucialStorage.ps1"
+        $CorporateUtilities4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/DDU.ps1"
+        $CorporateUtilities5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/LogitechOptions.ps1"
+        $CorporateUtilities6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/LogitechUnifyingSoftware.ps1"
+        $CorporateUtilities7ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/MSMouseKeyboard.ps1"
+        $CorporateUtilities8ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/SamsungMagician.ps1"
+        $CorporateUtilities9ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/SmartDefrag.ps1"
+        $CorporateUtilities10ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/Win11-22H2-OSKits.ps1"
+        $CorporateUtilities11ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Corporate/WiseRegistryCleaner.ps1"
+
+        $ManagementPCUtilities1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Management%20PC/7Zip.ps1"
+        $ManagementPCUtilities2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Management%20PC/Win11-22H2-OSKits.ps1"
+        $ManagementPCUtilities3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Management%20PC/WiseRegistryCleaner.ps1"
+
+        $StandardUtilities1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/7Zip.ps1"
+        $StandardUtilities2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/CCleaner.ps1"
+        $StandardUtilities3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/CrucialStorage.ps1"
+        $StandardUtilities4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/DDU.ps1"
+        $StandardUtilities5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/LogitechOptions.ps1"
+        $StandardUtilities6ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/LogitechUnifyingSoftware.ps1"
+        $StandardUtilities7ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/MSMouseKeyboard.ps1"
+        $StandardUtilities8ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/SamsungMagician.ps1"
+        $StandardUtilities9ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/SmartDefrag.ps1"
+        $StandardUtilities10ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/Win11-22H2-OSKits.ps1"
+        $StandardUtilities11ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/Standard/WiseRegistryCleaner.ps1"
+
+        $VDIUtilities1ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/VDI/7Zip.ps1"
+        $VDIUtilities2ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/VDI/CCleaner.ps1"
+        $VDIUtilities3ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/VDI/SmartDefrag.ps1"
+        $VDIUtilities4ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/VDI/Win11-22H2-OSKits.ps1"
+        $VDIUtilities5ScriptURL = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Utilities/VDI/WiseRegistryCleaner.ps1"
+
+        # Individual Winget INSTALL Scripts - VDI/Remote Desktop Software
+
+        
+
+ 
         
         Write-Verbose "Downloading and Saving WinGet INSTALL scripts..." -Verbose
         Write-Verbose "Downloading and Saving WinGet UNINSTALL scripts..." -Verbose
