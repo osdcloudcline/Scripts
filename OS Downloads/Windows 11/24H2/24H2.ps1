@@ -10,7 +10,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\24H2"
 
-$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.1000_amd64_en-us_multi_0cda15f9_convert_virtual.zip"
+$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.1301_amd64_en-us_multi_48ea7c96_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -26,12 +26,12 @@ pause
 
 Write-Host "Expanding Windows 11 24H2 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\26100.1000_amd64_en-us_multi_0cda15f9_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26100.1301_amd64_en-us_multi_48ea7c96_convert_virtual.zip" -DestinationPath $ExtractionLocation
 
 pause
 
 Write-Host
-Write-Host "Downloading Windows 11 24H2 Build: 26100.1000..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows 11 24H2 Build: 26100.1301..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
