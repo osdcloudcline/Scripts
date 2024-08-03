@@ -22,9 +22,14 @@ Write-Host "Downloading Windows 11 24H2 ZIP File..." -ForegroundColor Cyan
 
 Save-WebFile -SourceUrl $Windows1124H2URL -DestinationDirectory $ZIPDestination
 
+pause 
+
 Write-Host "Expanding Windows 11 24H2 ZIP File..." -ForegroundColor Cyan 
 
 Expand-Archive -Path "$ZIPDestination\26100.1000_amd64_en-us_multi_0cda15f9_convert_virtual.zip" -DestinationPath $ExtractionLocation
+
+pause
+
 Write-Host
 Write-Host "Downloading Windows 11 24H2 Build: 26100.1000..." -ForegroundColor Cyan 
 
