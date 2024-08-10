@@ -284,3 +284,19 @@ Mount-WindowsImage -ImagePath $WimFolder\Sources\install.wim -Index $Index -Path
 Write-Host
 Write-Host ' Image mounted.'
 Write-Host
+
+
+pause
+
+##########################################################
+# Dismount Windows image saving updated install.wim. Using
+# $EmptySpace variable again to push output from under
+# PowerShell progressbar to visible area under it
+##########################################################
+
+cls
+Write-Host $EmptySpace
+Write-Host ' Dismounting Windows image, saving updated install.wim.'
+Write-Host ' This will take a minute or two.'
+Dismount-WindowsImage -Path $Mount -Save | Out-Null
+cls
