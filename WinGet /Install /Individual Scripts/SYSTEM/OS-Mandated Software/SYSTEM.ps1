@@ -230,4 +230,4 @@ Write-Host "Finished Installing System related software..." -ForegroundColor Yel
 
 Stop-Transcript
 
-exit
+
