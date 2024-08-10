@@ -38,9 +38,10 @@ Write-Host " 1. Integrate Updates into Offline/Mounted OS Image"
 Write-Host " 2. Integrate Drivers into Offline/Mounted OS Image"
 Write-Host " 3. Integrate Registry Entries into Offline/Mounted OS Image"
 Write-Host " 4. Remove Built-In Apps from Offline/Mounted OS Image"
-Write-Host " 5. Start OSD Builder"
-Write-Host " 6. Return to Main Menu"
-Write-Host " 7. Exit PowerShell"
+Write-Host " 5. Add Extra Files to Windows Image"
+Write-Host " 6. Start OSD Builder"
+Write-Host " 7. Return to Main Menu"
+Write-Host " 8. Exit PowerShell"
 do 
 {
   $selection = Read-Host 'Please choose an option'
@@ -69,22 +70,25 @@ do
   '4' { cls
         
         }
-  '5' { cls
+   '5'{ cls
+
+      }
+  '6' { cls
         $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
         Invoke-Expression $($OSDBuilder.Content)
         }
-  '6' { cls
+  '7' { cls
         $OSDMain = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDMain.ps1")
         Invoke-Expression $($OSDMain.Content)
         }
-  '7' { cls
+  '8' { cls
         exit
         }
 
   
     }
     }
-    until ($selection -eq '7'){}
+    until ($selection -eq '8'){exit}
     }
 
 Show-MainMenu
