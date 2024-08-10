@@ -300,3 +300,41 @@ Write-Host ' Dismounting Windows image, saving updated install.wim.'
 Write-Host ' This will take a minute or two.'
 Dismount-WindowsImage -Path $Mount -Save | Out-Null
 cls
+
+##########################################################
+# End credits
+##########################################################
+
+Write-Host                                                                        
+Write-Host ' Windows image (install.wim) has been updated.'
+Write-Host 
+Write-Host ' If your source was a bootable USB drive, it is now updated.'
+Write-Host  
+Write-Host ' If you started this script by copying Windows install files'
+Write-Host ' from an ISO or DVD to a folder on hard disk, it now contains.'
+Write-Host ' everything required to create updated ISO image.'
+Write-Host 
+Write-Host ' Creating ISO tutorial on TenForums:'
+Write-Host ' w10g.eu/iso' -ForegroundColor Yellow
+Write-Host   
+Write-Host ' More Windows 10 tips, tricks, videos & tutorials at'
+Write-Host ' TenForums.com' -ForegroundColor Yellow
+Write-Host
+Write-Host ' * Twitter.com/TenForums * Facebook.com/TenForums * ' -ForegroundColor Yellow
+Write-Host 
+Write-Host ' Script by Kari'
+Write-Host ' - TenForums.com/members/kari.html'
+Write-Host ' - Twitter.com/KariTheFinn'
+Write-Host ' - YouTube.com/KariTheFinn'
+Write-Host  
+Write-Host ' Logs were saved on C: drive. They can be opened with Notepad:'
+Write-Host ' - C:\WUSuccess.log > lists applied updates'
+Write-Host ' - C:\WUFail.log > lists failed updates'
+Write-Host
+
+
+
+
+##########################################################
+# End of script
+##########################################################
