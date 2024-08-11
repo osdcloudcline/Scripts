@@ -316,14 +316,15 @@ pause
 # 
 ##########################################################
 
-$ExtraFilesScriptsDestination = "$Mount\scripts"
-$ExtraFilesIconDestination = "$Mount\downloads"
+
+md "$Mount\scripts"
+md "$Mount\downloads"
 Write-Host "Copying PS1 scripts..." -ForegroundColor Cyan 
-Copy-Item  -Path "$ExtraFilesFolder\*.ps1" -Recurse -Force -Destination $ExtraFilesScriptsDestination
+Copy-Item  -Path "$ExtraFilesFolder\*.ps1" -Destination "$Mount\scripts" -Recurse -Force
 Write-Host
 Write-Host
 Write-Host "Copying ICO files..." -ForegroundColor Cyan 
-Copy-Item  -Path "$ExtraFilesFolder1\*.ico" -Recurse -Force -Destination $ExtraFilesIconDestination
+Copy-Item  -Path "$ExtraFilesFolder1\*.ico"  -Destination "$Mount\downloads" -Recurse -Force
 
 ##########################################################
 # Dismount Windows image saving updated install.wim. Using
