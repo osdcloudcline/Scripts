@@ -71,7 +71,8 @@ do
         
         }
    '5'{ cls
-
+        $ExtraFiles = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Administrative/OS%20Integration/ExtraFiles.ps1")
+        Invoke-Expression $($ExtraFiles.Content)
       }
   '6' { cls
         $OSDBuilder = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/OSDBuilderMain.ps1")
