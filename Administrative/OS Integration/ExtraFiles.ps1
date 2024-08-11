@@ -192,21 +192,33 @@ $FileCount = 0
 while ($FileCount -eq 0) {
 cls
 Write-Host 
-Write-Host '  Enter path to folder containing downloaded Windows Update'
-Write-Host '  *.cab and / or *.msu files.'
+Write-Host '  Enter path to folder containing the extra files you want to add'
 Write-Host 
 Write-Host '  Be sure to enter correct path / folder!'
 Write-Host                                                                       
 
-$WUFolder = Read-Host -Prompt ' Path to folder containing downloaded Windows Update files'
-
-if (Test-Path $WUFolder)
+$ExtraFilesFolder = Read-Host -Prompt ' Path to folder containing the extra script files you want to add'
+$ExtraFilesFolder1 = Read-Host -Prompt ' Path to folder containing the extra icon files you want to add'
+if (Test-Path $ExtraFilesFolder)
     {
-    $FileCount = (Get-ChildItem $WUFolder\* -Include *.msu,*.cab).Count
+    $FileCount = (Get-ChildItem $ExtraFilesFolder\* -Include *.ps1).Count
     if ($FileCount -eq 0)
         {
         Write-Host
-        Write-Host ' No Windows Update files found in given folder.' 
+        Write-Host ' No PS1 scripts files found in given folder.' 
+        Write-Host ' Check the path and try again.'
+        Write-Host
+        Write-Host ' ' -NoNewline
+        pause
+        }
+    }
+    elseif (Test-Path $ExtraFilesFolder1)
+    {
+    $FileCount = (Get-ChildItem $ExtraFilesFolder1\* -Include *.ico).Count
+    if ($FileCount -eq 0)
+        {
+        Write-Host
+        Write-Host ' No ICO files found in given folder.' 
         Write-Host ' Check the path and try again.'
         Write-Host
         Write-Host ' ' -NoNewline
@@ -218,17 +230,27 @@ if (Test-Path $WUFolder)
         $FileCount = 0
         cls
         Write-Host
-        Write-Host ' Path'$WUFolder 'does not exist.'
+        Write-Host ' Path'$ExtraFilesFolder 'does not exist.'
+        Write-Host ' Path'$ExtraFilesFolder1 'does not exist.'
         Write-Host
         Write-Host ' ' -NoNewline
         Pause
         }
   }
-$WUFiles = Get-ChildItem -Path "$WUFolder" -Recurse -Include *.cab, *.msu | Sort LastWriteTime 
+$ExtraFiles = Get-ChildItem -Path "$ExtraFilesFolder" -Recurse -Include *.ps1 | Sort LastWriteTime 
 Write-Host
-Write-Host ' Found following' $FileCount 'Windows Update files:'
+Write-Host ' Found following' $FileCount 'PowerShell Script files:'
 Write-Host
-ForEach ($File in $WUFiles)
+ForEach ($File in $ExtraFiles)
+    {Write-Host ' '$File}
+Write-Host
+Write-Host ' ' -NoNewline
+
+$ExtraFiles1 = Get-ChildItem -Path "$ExtraFilesFolder1" -Recurse -Include *.ico | Sort LastWriteTime 
+Write-Host
+Write-Host ' Found following' $FileCount 'Icon files:'
+Write-Host
+ForEach ($File in $ExtraFiles1)
     {Write-Host ' '$File}
 Write-Host
 Write-Host ' ' -NoNewline
@@ -287,6 +309,21 @@ Write-Host
 
 
 pause
+
+##########################################################
+# Copy PS1/ICO files
+# 
+# 
+##########################################################
+
+$ExtraFilesScriptsDestination = "$Mount\scripts"
+$ExtraFilesIconDestination = "$Mount\downloads"
+Write-Host "Copying PS1 scripts..." -ForegroundColor Cyan 
+Copy-Item  -Path "$ExtraFilesFolder\*.ps1" -Recurse -Force -Destination $ExtraFilesScriptsDestination
+Write-Host
+Write-Host
+Write-Host "Copying ICO files..." -ForegroundColor Cyan 
+Copy-Item  -Path "$ExtraFilesFolder1\*.ico" -Recurse -Force -Destination $ExtraFilesIconDestination
 
 ##########################################################
 # Dismount Windows image saving updated install.wim. Using
