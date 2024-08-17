@@ -59,7 +59,6 @@ $selection = Read-Host 'Please choose an option'
     $GUIITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/IT%20Tech/ITTech.ps1")
     Invoke-Expression $($GUIITTech.Content)
     }
-     }
  '9'{cls
      $OSDMain = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/WinGetMain.ps1")
      Invoke-Expression $($OSDMain.Content)
