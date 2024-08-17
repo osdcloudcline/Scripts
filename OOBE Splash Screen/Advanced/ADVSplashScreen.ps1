@@ -1,1 +1,3 @@
-
+$ADVprocesses = @(
+  @{
+    Name = "Microsoft Windows "
