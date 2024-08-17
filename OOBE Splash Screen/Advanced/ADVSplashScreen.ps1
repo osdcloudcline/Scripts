@@ -33,6 +33,6 @@ $ADVprocesses = @(
   }
   )
 
-  Start-SplashScreen -Processes $ADVprocesses -MessageHeading "Windows OOBE System Configuration"
+  Start-SplashScreen -Processes $ADVprocesses -MessageHeading "Windows OOBE System Advanced Configuration"
  
   
