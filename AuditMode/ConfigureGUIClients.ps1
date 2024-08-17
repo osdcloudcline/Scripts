@@ -32,7 +32,7 @@ $selection = Read-Host 'Please choose an option'
       Invoke-Expression $($GUIStandard.Content)
        }
  '2'{cls
-      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Advanced/Advanced.ps1")
+      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/GUI/Advanced.ps1")
       Invoke-Expression $($GUIAdvanced.Content)
      }
  '3'{cls
