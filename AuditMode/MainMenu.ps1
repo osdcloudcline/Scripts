@@ -28,7 +28,7 @@ do
         $CLIClients = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureCLIClients.ps1")
         Invoke-Expression $($CLIClients.Content)
         }
- '1' { cls
+ '2' { cls
         $GUIClients = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/AuditMode/ConfigureGUIClients.ps1")
         Invoke-Expression $($GUIClients.Content)
         }   
