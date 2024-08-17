@@ -25,7 +25,7 @@ $ADVprocesses = @(
   },
   @{
   Name = "Advanced Client Software Installation Package"
-  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Advanced/Advanced.ps1"
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/GUI/Advanced.ps1"
   },
   @{
   Name = " Updating Windows"
