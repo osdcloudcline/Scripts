@@ -25,7 +25,7 @@ $ClientVDIprocesses = @(
   },
   @{
   Name = "Client Virtual Desktop Interface Software Installation Package"
-  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Standard/Standard.ps1"
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/VDI/ClientVirtualDesktopInterface.ps1"
   },
   @{
   Name = " Updating Windows"
