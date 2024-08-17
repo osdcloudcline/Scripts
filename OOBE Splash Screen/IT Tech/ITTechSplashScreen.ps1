@@ -1,4 +1,4 @@
-$ADVprocesses = @(
+$ITprocesses = @(
   @{
     Name = "Microsoft Windows PowerShell Providers"
     Script = "https://github.com/osdcloudcline/Scripts/raw/main/PowerShell%20Modules/Package%20Providers/Install.ps1"
@@ -33,4 +33,4 @@ $ADVprocesses = @(
   }
   )
 
-  Start-SplashScreen -Processes $ADVprocesses -MessageHeading "Windows OOBE System Configuration"
+  Start-SplashScreen -Processes $ITprocesses -MessageHeading "Windows OOBE System IT Help Desk Technician Configuration"
