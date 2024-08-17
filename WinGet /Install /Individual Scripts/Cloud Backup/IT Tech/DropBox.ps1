@@ -1,4 +1,4 @@
-Start-Transcript -Path "C:\Logs\Powershell\IT Tech\Cloud Backup\$env:computername-DropBoxInstall.log"
+Start-Transcript -Path "C:\Logs\Powershell\IT\Cloud Backup\$env:computername-DropBoxInstall.log"
 
 $Date = Get-Date
 
