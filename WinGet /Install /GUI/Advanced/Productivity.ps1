@@ -13,5 +13,4 @@ Invoke-Expression $($Office2021.Content)
 $Office2024 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/Office2024.ps1")
 Invoke-Expression $($Office2024.Content)
 
-$VSCode = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Programming/Advanced/VSCode.ps1")
-Invoke-Expression $($VSCode.Content)
+
