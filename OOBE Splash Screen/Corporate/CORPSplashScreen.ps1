@@ -29,7 +29,7 @@ $CORPprocesses = @(
   },
   @{
   Name = "Processing: Cloud Backup Software" 
-  Script = ""
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/GUI/Corporate/CloudBackups.ps1"
   },
   @{
   Name = "Processing: File Transfer Software"
