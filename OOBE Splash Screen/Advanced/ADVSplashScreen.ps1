@@ -57,7 +57,7 @@ $ADVprocesses = @(
   },
   @{
   Name = "Processing: Microsoft Office 2021 LTSC"
-  Script = ""
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/GUI%20Scripts/Office2021Install.ps1"
   },
   @{
   Name = "Processing: Programming Software"
