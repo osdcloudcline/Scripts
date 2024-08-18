@@ -25,7 +25,7 @@ $CORPprocesses = @(
   },
   @{
   Name = "Processing: Web Browser Software"
-  Script = ""
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Browsers/Corporate/GUI%20Scripts/Chrome.ps1"
   },
   @{
   Name = "Processing: Cloud Backup Software" 
