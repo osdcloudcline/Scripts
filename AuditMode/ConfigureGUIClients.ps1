@@ -28,34 +28,42 @@ $selection = Read-Host 'Please choose an option'
   {
 
  '1' {cls
+      Install-Script -Name Start-SplashScreen
       $GUIStandard = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Standard/Standard.ps1")
       Invoke-Expression $($GUIStandard.Content)
        }
  '2'{cls
-      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/GUI/Advanced.ps1")
+      Install-Script -Name Start-SplashScreen
+      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OOBE%20Splash%20Screen/Advanced/ADVSplashScreen.ps1")
       Invoke-Expression $($GUIAdvanced.Content)
      }
  '3'{cls
+     Install-Script -Name Start-SplashScreen
      $GUICorporate = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Corporate/Corporate.ps1")
      Invoke-Expression $($GUICorporate.Content)
     }
  '4'{cls
+    Install-Script -Name Start-SplashScreen
     $GUIClientVDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/VDI/ClientVirtualDesktopInterface.ps1")
     Invoke-Expression $($GUIClientVDI.Content)
     }
  '5'{cls
+    Install-Script -Name Start-SplashScreen
     $GUIServerVDI = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/VDI/ServerVirtualDesktopInterface.ps1")
     Invoke-Expression $($GUIServerVDI.Content)
     } 
  '6'{cls
+    Install-Script -Name Start-SplashScreen
     $GUIManagementPC = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Management%20PC/ManagementPC.ps1")
     Invoke-Expression $($GUIManagementPC.Content)
      }
  '7'{cls
+    Install-Script -Name Start-SplashScreen
     $GUIHoneypot = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Honeypot/Honeypot.ps1")
     Invoke-Expression $($GUIHoneypot.Content)
     }
  '8'{cls
+    Install-Script -Name Start-SplashScreen
     $GUIITTech = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/IT%20Tech/ITTech.ps1")
     Invoke-Expression $($GUIITTech.Content)
     }
