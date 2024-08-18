@@ -50,10 +50,12 @@ $ADVprocesses = @(
   @{
   Name = "Processing: Downloading Microsoft Office 2021 GitHub Files"
   Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/GUI%20Scripts/Office2021GHDownload.ps1"
+  Start-Sleep -Seconds 10
   },
   @{
   Name = "Processing: Downloading Microsoft Office 2021 LTSC"
   Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/GUI%20Scripts/Office2021Download.ps1"
+  Start-Sleep -Seconds 45
   },
   @{
   Name = "Processing: Microsoft Office 2021 LTSC"
