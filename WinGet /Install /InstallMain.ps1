@@ -70,11 +70,13 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($ITTech.Content)
     }
  '9' {cls
+      Install-Script -Name Start-SplashScreen
       $GUIStandard = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Standard/Standard.ps1")
       Invoke-Expression $($GUIStandard.Content)
        }
  '10'{cls
-      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Custom%20Configurations/Advanced/Advanced.ps1")
+      Install-Script -Name Start-SplashScreen
+      $GUIAdvanced = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OOBE%20Splash%20Screen/Advanced/ADVSplashScreen.ps1")
       Invoke-Expression $($GUIAdvanced.Content)
      }
  '11'{cls
