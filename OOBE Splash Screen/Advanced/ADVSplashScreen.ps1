@@ -49,7 +49,7 @@ $ADVprocesses = @(
   },
   @{
   Name = "Processing: Downloading Microsoft Office 2021 GitHub Files"
-  Script = ""
+  Script = "https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/Individual%20Scripts/Productivity/Advanced/GUI%20Scripts/Office2021GHDownload.ps1"
   },
   @{
   Name = "Processing: Downloading Microsoft Office 2021 LTSC"
