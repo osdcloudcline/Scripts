@@ -40,7 +40,7 @@ $CORPprocesses = @(
   Script = ""
   },
   @{
-  Name = "Processing: Microsoft Office 2021 LTSC Download"
+  Name = "Processing: Downloading Microsoft Office 2021 LTSC "
   Script = ""
   },
   @{
