@@ -23,7 +23,7 @@ $selection = Read-Host 'Please choose an option'
   switch($selection)
   {
   '1' {cls
-       $Install = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Install%20/InstallMain.ps1")
+       $Install = Invoke-WebRequest("https://github.com/osdcloudcline/Install-Scripts/raw/main/InstallMain.ps1")
        Invoke-Expression $($Install.Content)
        }
  '2'{cls
