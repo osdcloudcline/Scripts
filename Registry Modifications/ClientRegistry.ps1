@@ -36,6 +36,14 @@ Invoke-Expression $($OSDesktop.Content)
 $HiddenFilesFolders = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/ShowHiddenFilesFolders.ps1")
 Invoke-Expression $($HiddenFilesFolders.Content)
 
+$EnableSUDO = Invoke-WebRequest("")
+Invoke-Expression $($EnableSUDO.Content)
+
+$DisableWinDefender = Invoke-WebRequest("")
+Invoke-Expression $($DisableWinDefender.Content)
+
+$RemoveSMRecommended = Invoke-WebRequest("")
+Invoke-Expression $($RemoveSMRecommended.Content)
 
 
 Write-Host "Executing Software-related Registry PowerShell scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
