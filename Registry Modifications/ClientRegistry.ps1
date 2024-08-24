@@ -39,7 +39,7 @@ Invoke-Expression $($HiddenFilesFolders.Content)
 $EnableSUDO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/EnableSUDO.ps1")
 Invoke-Expression $($EnableSUDO.Content)
 
-$DisableWinDefender = Invoke-WebRequest("")
+$DisableWinDefender = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsDefender.ps1")
 Invoke-Expression $($DisableWinDefender.Content)
 
 $RemoveSMRecommended = Invoke-WebRequest("")
