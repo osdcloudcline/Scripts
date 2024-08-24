@@ -1,7 +1,7 @@
 Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
 Import-Module -Name OSD -Force
 
-$ADVLogFileFolder = (Test-Path -Path "C:\OSDCloud\DeploymentLogs\ADV" -IsValid){
+$ADVLogFileFolder = (Test-Path -Path "C:\Logs\Powershell\Install\Advanced" -IsValid){
 $SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Advanced"
 
 Write-Host "This computer has been installed with the Advanced Configuration of software" -ForgroundColor Green
