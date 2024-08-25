@@ -27,7 +27,7 @@ $selection = Read-Host 'Please choose an option'
        Invoke-Expression $($Install.Content)
        }
  '2'{cls
-      $Update = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/WinGet%20/Update/UpdateMain.ps1")
+      $Update = Invoke-WebRequest("https://github.com/osdcloudcline/Update-Scripts/raw/main/UpdateMain.ps1")
       Invoke-Expression $($Update.Content)
      }
  '3'{cls
