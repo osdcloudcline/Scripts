@@ -1,6 +1,6 @@
+$Software1 = "VMWare Workstation Pro 17.6 Build 24238078"
 
-
-
+Write-Verbose "Importing Client OS SOFTWARE: $Software1 to $env:computername..." -Verbose
 
 
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\WOW6432Node\VMware, Inc.\VMware Workstation\License.ws.17.0.e5.202208") -ne $true) {  New-Item "HKLM:\SOFTWARE\WOW6432Node\VMware, Inc.\VMware Workstation\License.ws.17.0.e5.202208" -force -ea SilentlyContinue };
