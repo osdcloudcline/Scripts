@@ -106,12 +106,12 @@ Write-Host "Processing and Downloading: Windows 11 22H2 SDK Setup File..." -Fore
 $Win11_22H2SDKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe'
 Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/winsdksetup.exe' -DestinationDirectory "C:\OSDCloud\GitHub\downloads"
 
-Write-Host "Processing and Downloading: Windows 11 22H2 ADK Setup File..." -ForegroundColor Cyan
-$Win11_22H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
+Write-Host "Processing and Downloading: Windows 11 24H2 ADK Setup File..." -ForegroundColor Cyan
+$Win11_24H2ADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe'
 Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adksetup.exe' -DestinationDirectory "C:\OSDCloud\GitHub\downloads"
 
-Write-Host "Processing and Downloading: Windows 11 22H2 PE ADK Add-On Setup File..." -ForegroundColor Cyan
-$Win11_22H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
+Write-Host "Processing and Downloading: Windows 11 24H2 PE ADK Add-On Setup File..." -ForegroundColor Cyan
+$Win11_24H2PEADKUrl = 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe'
 Save-WebFile 'https://github.com/osdcloudcline/OSDCloud/raw/main/OS%20Kits/adkwinpesetup.exe' -DestinationDirectory "C:\OSDCloud\GitHub\downloads"
 
 Write-Host "Completed All Downloads..." -ForegroundColor Green
@@ -131,14 +131,14 @@ Write-Host "Windows 11 SDK 22H2 10.0.22621 installed successfully" -ForegroundCo
 
 Function Get-Win11ADK(){
 $ADKSetup = "C:\OSDCloud\GitHub\downloads\adksetup.exe"
-Write-Host "Installing Windows 11 ADK 22H2 10.0.22621" -ForegroundColor Green
+Write-Host "Installing Windows 11 ADK 24H2 10.1.26100.1" -ForegroundColor Green
 Start-Process -FilePath $ADKSetup
-Write-Host "Windows 11 ADK 22H2 10.0.22621 installed successfully" -ForegroundColor Green
+Write-Host "Windows 11 ADK 24H2 10.1.26100.1 installed successfully" -ForegroundColor Green
 }
 
 Function Get-Win11PEADK(){
 $ADKPESetup = "C:\OSDCloud\GitHub\downloads\adkwinpesetup.exe"
-Write-Host "Installing Windows 11 ADK PE Add-On 22H2 10.0.22621" -ForegroundColor Green
+Write-Host "Installing Windows 11 ADK PE Add-On 24H2 10.1.26100.1" -ForegroundColor Green
 Start-Process -FilePath $ADKPESetup
-Write-Host "Windows 11 ADK PE Add-On 22H2 10.0.22621 installed successfully" -ForegroundColor Green
+Write-Host "Windows 11 ADK PE Add-On 24H2 10.1.26100.1 installed successfully" -ForegroundColor Green
 }
