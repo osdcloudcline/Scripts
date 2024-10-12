@@ -46,6 +46,8 @@ $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
 pause
 cd c:
 Net use z: /delete
+cls
+Get-RemoteShares
 }
 
 Get-RemoteShares
