@@ -10,6 +10,9 @@ Write-Host '                  NET USE Z: /delete                                
 Write-Host '                                                                                ' -BackgroundColor White 
 
 
+
+Function Get-RemoteShares(){
+
 $PCName = Read-Host 'Enter PC Name on the network'
 net view \\$PCName
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
@@ -43,3 +46,6 @@ $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
 pause
 cd c:
 Net use z: /delete
+}
+
+Get-RemoteShares
