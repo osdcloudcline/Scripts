@@ -13,6 +13,11 @@ Write-Host '                                                                    
 
 Function Get-RemoteShares(){
 
+$InventoryDir = "C:\Inventory\NAS"
+
+Write-Verbose "Creating $InventoryDir, which will have the inventory TXT, CSV and XLS files saved in" -Verbose
+md $InventoryDir
+
 $PCName = Read-Host 'Enter PC Name on the network'
 net view \\$PCName
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
@@ -20,28 +25,18 @@ net use z: \\$PCName\$share
 cd z:
 
 $sharename = $share
-$InventoryDir = "C:\Inventory\NAS"
-$InventoryDirTestPath = (Test-Path -Path $InventoryDir -IsValid)
 
+$InventoryDirTestPath = (Test-Path -Path $InventoryDir -IsValid)
 
 $files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
 
 Write-Host "`n1Total : "$files.Count "mkv `n1"
 ForEach($n1 in $files){
-If($InventoryDirTestPath -eq $true){
+
 Write-Verbose "Inventorying Remote Network Share - $PCName\$share..." -Verbose
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
 $n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
-}
-ElseIf($InventoryDirTestPath -eq $false){
-Write-Verbose "Creating $InventoryDir, which will have the inventory TXT, CSV and XLS files saved in" -Verbose
-md $InventoryDir
-Write-Verbose "Inventorying Remote Network Share - $PCName\$share..." -Verbose
-$n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
-$n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
-$n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
-}
 }
 pause
 cd c:
