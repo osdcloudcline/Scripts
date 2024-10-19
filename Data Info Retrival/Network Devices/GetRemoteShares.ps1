@@ -16,7 +16,7 @@ Function Get-RemoteShares(){
 $InventoryDir = "C:\Inventory\NAS"
 
 Write-Verbose "Creating $InventoryDir, which will have the inventory TXT, CSV and XLS files saved in" -Verbose
-md $InventoryDir
+New-Item -Path $InventoryDir -ItemType Directory -Force
 
 $PCName = Read-Host 'Enter PC Name on the network'
 net view \\$PCName
@@ -25,8 +25,6 @@ net use z: \\$PCName\$share
 cd z:
 
 $sharename = $share
-
-$InventoryDirTestPath = (Test-Path -Path $InventoryDir -IsValid)
 
 $files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
 
