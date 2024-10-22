@@ -229,20 +229,11 @@ do
 	Invoke-Expression $($SoftwareEXEInventory.Content)
      }
  '2' {
-       $SystemFileInventoryLog = "C:\Logs\Audit\EXE\SystemFiles.log""
-       Start-Transcript -Path $SystemFileInventoryLog
-       $prog1 = "C:\Program Files"
-       $prog2 = "C:\Program Files (x86)"
-       Get-ChildItem -Path "$env:SystemRoot" -Include *EXE* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
-      Stop-Transcript
+       $SystemEXEInventory = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemEXEFiles.ps1")
+       Invoke-Expression $($SystemEXEInventory.Content)
       }
 '3'{  cls
-        $AppFileInventoryLog = "C:\Logs\Audit\DLL\ApplicationFiles.log"
-        Start-Transcript -Path $AppFileInventoryLog
-        $prog1 = "C:\Program Files"
-        $prog2 = "C:\Program Files (x86)"
-        Get-ChildItem -Path "$prog1", "$prog2" -Include *DLL* -Exclude $env:SystemRoot -Recurse -ErrorAction SilentlyContinue | Select-Object -Property Name, VersionInfo | Out-GridView
-		  Stop-Transcript
+        
      }
  '4' {
        $SystemFileInventoryLog = "C:\Logs\Audit\DLL\SystemFiles.log""
