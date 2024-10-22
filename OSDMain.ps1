@@ -237,7 +237,8 @@ do
        Invoke-Expression $($SoftwareDLLInventory.Content)
      }
  '4' {
-       
+      $SystemDLLInventory = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemDLLFiles.ps1")
+      Invoke-Expression $($SystemDLLInventory.Content)
       }
 '5' { cls
         $NetworkServer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1")
