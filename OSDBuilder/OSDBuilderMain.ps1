@@ -184,6 +184,9 @@ do
       Write-Host "Processing: $W11Home21H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Home21H2 -RemoveCapability
       pause
+
+      $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
+      Invoke-Expression $($21H2.Content)
       }
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
