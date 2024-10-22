@@ -233,15 +233,11 @@ do
        Invoke-Expression $($SystemEXEInventory.Content)
       }
 '3'{  cls
-        
+       $SoftwareDLLInventory = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSoftwareDLLFiles.ps1")
+       Invoke-Expression $($SoftwareDLLInventory.Content)
      }
  '4' {
-       $SystemFileInventoryLog = "C:\Logs\Audit\DLL\SystemFiles.log""
-       Start-Transcript -Path $SystemFileInventoryLog
-       $prog1 = "C:\Program Files"
-		 $prog2 = "C:\Program Files (x86)"
-		 Get-ChildItem -Path "$env:SystemRoot" -Include *DLL* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
-		 Stop-Transcript
+       
       }
 '5' { cls
         $NetworkServer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1")
