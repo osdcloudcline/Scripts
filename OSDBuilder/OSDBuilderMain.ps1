@@ -767,36 +767,9 @@ do
       Invoke-Expression $($25H2.Content)
       }
       }
-'3' { cls
-      $W12Ver = Read-Host -Prompt 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
-      If($W12Ver -eq "RTM"){}
-      }
-      
-'4' {cls
-      $W13Ver = Read-Host -Prompt 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
-      If($W13Ver -eq "RTM"){}
-      
-      }
-     
-'5' {cls
-      $W14Ver = Read-Host -Prompt 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
-      If($W14Ver -eq "RTM"){}
-      
-      }
-'6' {cls
-      $W15Ver = Read-Host -Prompt 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
-      If($W15Ver -eq "RTM"){}
-      
-      }
-'7' {cls
-      $W16Ver = Read-Host -Prompt 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
-      If($W16Ver -eq "RTM"){}
-      }
-'8' { cls
-       Show-MainMenu
-      }
-'9' {exit 
-      }
+'3'{
+
+}
 
  
    }
