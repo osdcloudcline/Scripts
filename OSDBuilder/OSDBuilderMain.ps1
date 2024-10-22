@@ -35,7 +35,7 @@ pause
 Clear-Host
 Write-Host "======= $Title ======"
 Write-Host " 1. OSD Builder - Set Working Directory Path"
-Write-Host " 2. New OSD Builder Build - Import OS Media"
+Write-Host " 2. New OSD Builder Build"
 Write-Host " 3. Create New OSD Builder Task"
 Write-Host " 4. Execute OSD Builder Task"
 Write-Host " 5. Return to Main Menu" 
@@ -147,11 +147,11 @@ do
   switch($selection)
   {
 
-  '1' { cls
+  '1' {cls
       $Win10OSDBuilder = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/OSDBuilder/Client/Windows10/22H2.ps1")
       Invoke-Expression $($Win10OSDBuilder.Content)
       }
- '2' { cls
+ '2' {cls
       $W11Ver = Read-Host 'What Version of Windows 11 do you want to create a new OSD Builder Configuration for?(Please enter: 21H2, 22H2, 23H2, 24H2 or 25H2)' 
       If($W11Ver -eq "21H2"){
       
@@ -188,6 +188,7 @@ do
       $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
       Invoke-Expression $($21H2.Content)
       }
+
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -210,6 +211,7 @@ do
       $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
       Invoke-Expression $($21H2.Content)
       }
+
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11ProWorkstation21H2
@@ -230,6 +232,7 @@ do
       $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
       Invoke-Expression $($21H2.Content)
       }
+
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11VDI21H2
@@ -250,6 +253,7 @@ do
       $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
       Invoke-Expression $($21H2.Content)
       }
+
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Enterprise21H2
@@ -271,6 +275,7 @@ do
       Invoke-Expression $($21H2.Content)
       }
       }
+
       ElseIf($W11Ver -eq "22H2"){
 
       # OSDBuilder Task name region
@@ -306,6 +311,7 @@ do
       $22H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/22H2.ps1")
       Invoke-Expression $($22H2.Content)
       }
+
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -328,6 +334,7 @@ do
       $22H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/22H2.ps1")
       Invoke-Expression $($22H2.Content)
       }
+
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation22H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11ProWorkstation22H2
@@ -348,6 +355,7 @@ do
       $22H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/22H2.ps1")
       Invoke-Expression $($22H2.Content)
       }
+
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI22H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11VDI22H2
@@ -368,6 +376,7 @@ do
       $22H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/22H2.ps1")
       Invoke-Expression $($22H2.Content)
       }
+
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise22H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Enterprise22H2
@@ -389,6 +398,7 @@ do
       Invoke-Expression $($22H2.Content)
       }
       }
+
       ElseIf($W11Ver -eq "23H2"){
 
       # OSDBuilder Task name region
@@ -423,7 +433,8 @@ do
 
       $23H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/23H2.ps1")
       Invoke-Expression $($23H2.Content)
-      
+      }
+
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -446,6 +457,7 @@ do
       $23H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/23H2.ps1")
       Invoke-Expression $($23H2.Content)
       }
+
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation23H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11ProWorkstation23H2
@@ -466,6 +478,7 @@ do
       $23H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/23H2.ps1")
       Invoke-Expression $($23H2.Content)
       }
+
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI23H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11VDI23H2
@@ -486,6 +499,7 @@ do
       $23H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/23H2.ps1")
       Invoke-Expression $($23H2.Content)
       }
+
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise23H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Enterprise23H2
@@ -507,6 +521,7 @@ do
       Invoke-Expression $($23H2.Content)
       }
       }
+
       ElseIf($W11Ver -eq "24H2"){
 
       # OSDBuilder Task name region
@@ -539,9 +554,10 @@ do
       New-OSBuildTask -TaskName $W11Home24H2 -RemoveCapability
       pause
 
-      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
       Invoke-Expression $($24H2.Content)
       }
+
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -561,9 +577,10 @@ do
       New-OSBuildTask -TaskName $W11Pro24H2 -RemoveCapability
       pause
 
-      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
       Invoke-Expression $($24H2.Content)
       }
+
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11ProWorkstation24H2
@@ -581,9 +598,10 @@ do
       New-OSBuildTask -TaskName $W11ProWorkstation24H2 -RemoveCapability
       pause
 
-      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
       Invoke-Expression $($24H2.Content)
       }
+
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11VDI24H2
@@ -601,9 +619,10 @@ do
       New-OSBuildTask -TaskName $W11VDI24H2 -RemoveCapability
       pause
 
-      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
       Invoke-Expression $($24H2.Content)
       }
+
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Enterprise24H2
@@ -621,10 +640,11 @@ do
       New-OSBuildTask -TaskName $W11Enterprise24H2 -RemoveCapability
       pause
 
-      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
       Invoke-Expression $($24H2.Content)
       }
       }
+
       ElseIf($W11Ver -eq "25H2"){
 
       # OSDBuilder Task name region
@@ -660,6 +680,7 @@ do
       $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
       Invoke-Expression $($25H2.Content)
       }
+
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
@@ -682,6 +703,7 @@ do
       $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
       Invoke-Expression $($25H2.Content)
       }
+
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11ProWorkstation25H2
@@ -702,6 +724,7 @@ do
       $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
       Invoke-Expression $($25H2.Content)
       }
+
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11VDI25H2
@@ -722,6 +745,7 @@ do
       $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
       Invoke-Expression $($25H2.Content)
       }
+
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
       New-OSDBuildTask -TaskName $W11Enterprise25H2
@@ -744,43 +768,43 @@ do
       }
       }
 '3' { cls
-      $W12Ver = Read-Host 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+      $W12Ver = Read-Host -Prompt 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W12Ver -eq "RTM"){}
-     
       }
       
-'4' { cls
-      $W13Ver = Read-Host 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+'4' {cls
+      $W13Ver = Read-Host -Prompt 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W13Ver -eq "RTM"){}
       
-     
       }
      
-'5' { cls
-      $W14Ver = Read-Host 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+'5' {cls
+      $W14Ver = Read-Host -Prompt 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W14Ver -eq "RTM"){}
       
       }
-'6' { cls
-      $W15Ver = Read-Host 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+'6' {cls
+      $W15Ver = Read-Host -Prompt 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W15Ver -eq "RTM"){}
       
       }
-'7' { cls
-      $W16Ver = Read-Host 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
+'7' {cls
+      $W16Ver = Read-Host -Prompt 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)' 
       If($W16Ver -eq "RTM"){}
-      
       }
 '8' { cls
        Show-MainMenu
       }
-'9' { cls
-      exit 
+'9' {exit 
       }
-}
-    }
-    until ($selection -eq '9'){exit}
-    }
+
+ 
+   }
+   }
+   }
+     until ($selection -eq '9'){exit} 
+     }
+
 
 Function Show-NewSVROSD(){
 
@@ -827,9 +851,8 @@ do
 '7' { cls
       exit 
       }
-}
-    }
-    until ($selection -eq '7'){exit}
-    }
-
-Show-MainMenu
+      }
+      }
+      until ($selection -eq '7'){exit}
+      }
+      Show-MainMenu
