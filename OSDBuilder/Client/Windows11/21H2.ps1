@@ -1,5 +1,3 @@
-$ISO = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1")
-Invoke-Expression $($ISO.Content)
 
 $21H2OSDBuildLog = "C:\Logs\OSDBuilder\OS\Clients\Windows11\21H2.log"
 
