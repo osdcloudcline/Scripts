@@ -420,7 +420,9 @@ do
       Write-Host "Processing: $W11Home23H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Home23H2 -RemoveCapability
       pause
-      }
+
+      $23H2 = Invoke-WebRequest("")
+      
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
