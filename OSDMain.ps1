@@ -225,20 +225,16 @@ do
   switch($selection)
   {
   '1'{  cls
-        $AppFileInventoryLog = "C:\Logs\Audit\EXE\ApplicationFiles.log"
-        Start-Transcript -Path $AppFileInventoryLog
-        $prog1 = "C:\Program Files"
-        $prog2 = "C:\Program Files (x86)"
-        Get-ChildItem -Path "$prog1", "$prog2" -Include *EXE* -Exclude $env:SystemRoot -Recurse -ErrorAction SilentlyContinue | Select-Object -Property Name, VersionInfo | Out-GridView
-		  Stop-Transcript
+        $SoftwareEXEInventory = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSoftwareEXEFiles.ps1")
+	Invoke-Expression $($SoftwareEXEInventory.Content)
      }
  '2' {
        $SystemFileInventoryLog = "C:\Logs\Audit\EXE\SystemFiles.log""
        Start-Transcript -Path $SystemFileInventoryLog
        $prog1 = "C:\Program Files"
-		 $prog2 = "C:\Program Files (x86)"
-		 Get-ChildItem -Path "$env:SystemRoot" -Include *EXE* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
-		 Stop-Transcript
+       $prog2 = "C:\Program Files (x86)"
+       Get-ChildItem -Path "$env:SystemRoot" -Include *EXE* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
+      Stop-Transcript
       }
 '3'{  cls
         $AppFileInventoryLog = "C:\Logs\Audit\DLL\ApplicationFiles.log"
