@@ -212,9 +212,12 @@ Function Show-FileInventoryMenu(){
 cls
 
 Write-Host "======= $Title ======"
-Write-Host " 1. Inventory the Local PC"
-Write-Host " 2. Inventory Network Server"
-Write-Host " 3. Return to Main Menu"
+Write-Host " 1. Inventory the Local PC - Program EXE Files"
+Write-Host " 2. Inventory the Local PC - SYSTEM EXE Files"
+Write-Host " 3. Inventory the Local PC - Program DLL Files"
+Write-Host " 4. Inventory the Local PC - SYSTEM DLL Files"
+Write-Host " 5. Inventory Network Server"
+Write-Host " 6. Return to Main Menu"
 
 do 
 {
@@ -222,18 +225,47 @@ do
   switch($selection)
   {
   '1'{  cls
-        
+        $AppFileInventoryLog = "C:\Logs\Audit\EXE\ApplicationFiles.log"
+        Start-Transcript -Path $AppFileInventoryLog
+        $prog1 = "C:\Program Files"
+        $prog2 = "C:\Program Files (x86)"
+        Get-ChildItem -Path "$prog1", "$prog2" -Include *EXE* -Exclude $env:SystemRoot -Recurse -ErrorAction SilentlyContinue | Select-Object -Property Name, VersionInfo | Out-GridView
+		  Stop-Transcript
+     }
+ '2' {
+       $SystemFileInventoryLog = "C:\Logs\Audit\EXE\SystemFiles.log""
+       Start-Transcript -Path $SystemFileInventoryLog
+       $prog1 = "C:\Program Files"
+		 $prog2 = "C:\Program Files (x86)"
+		 Get-ChildItem -Path "$env:SystemRoot" -Include *EXE* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
+		 Stop-Transcript
       }
-  '2' { cls
+'3'{  cls
+        $AppFileInventoryLog = "C:\Logs\Audit\DLL\ApplicationFiles.log"
+        Start-Transcript -Path $AppFileInventoryLog
+        $prog1 = "C:\Program Files"
+        $prog2 = "C:\Program Files (x86)"
+        Get-ChildItem -Path "$prog1", "$prog2" -Include *DLL* -Exclude $env:SystemRoot -Recurse -ErrorAction SilentlyContinue | Select-Object -Property Name, VersionInfo | Out-GridView
+		  Stop-Transcript
+     }
+ '4' {
+       $SystemFileInventoryLog = "C:\Logs\Audit\DLL\SystemFiles.log""
+       Start-Transcript -Path $SystemFileInventoryLog
+       $prog1 = "C:\Program Files"
+		 $prog2 = "C:\Program Files (x86)"
+		 Get-ChildItem -Path "$env:SystemRoot" -Include *DLL* -Exclude $prog1, $prog2 -Recurse -ErrorAction Ignore | Select-Object -Property Name, VersionInfo | Out-GridView 
+		 Stop-Transcript
+      }
+'5' { cls
         $NetworkServer = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1")
         Invoke-Expression $($NetworkServer.Content)
         }
-  '3' { cls
+'6' { cls
         Show-MainMenu
         }
          }
     }
-    until ($selection -eq '3'){exit}
+    until ($selection -eq '6'){exit}
 }
 
     Show-MainMenu
