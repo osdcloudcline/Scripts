@@ -767,9 +767,10 @@ do
       Invoke-Expression $($25H2.Content)
       }
       }
-'3'{
-
-}
+ '3'{cls
+     $W12Ver = Read-Host -Prompt 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
+     
+     }
 
  
    }
