@@ -538,6 +538,9 @@ do
       Write-Host "Processing: $W11Home24H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Home24H2 -RemoveCapability
       pause
+
+      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      Invoke-Expression $($24H2.Content)
       }
       ElseIf($OSVersion -eq "Pro"){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
@@ -557,6 +560,9 @@ do
       Write-Host "Processing: $W11Pro24H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Pro24H2 -RemoveCapability
       pause
+
+      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      Invoke-Expression $($24H2.Content)
       }
       ElseIf($OSVersion -eq "ProWorkstation"){
       Write-Host "Processing: $W11ProWorkstation24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
@@ -574,6 +580,9 @@ do
       Write-Host "Processing: $W11ProWorkstation24H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11ProWorkstation24H2 -RemoveCapability
       pause
+
+      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      Invoke-Expression $($24H2.Content)
       }
       ElseIf($OSVersion -eq "VDI"){
       Write-Host "Processing: $W11VDI24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
@@ -591,6 +600,9 @@ do
       Write-Host "Processing: $W11VDI24H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11VDI24H2 -RemoveCapability
       pause
+
+      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      Invoke-Expression $($24H2.Content)
       }
       ElseIf($OSVersion -eq "Enterprise"){
       Write-Host "Processing: $W11Enterprise24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
@@ -608,6 +620,9 @@ do
       Write-Host "Processing: $W11Enterprise24H2 Operating System Capability Removal..." -ForegroundColor Yellow
       New-OSBuildTask -TaskName $W11Enterprise24H2 -RemoveCapability
       pause
+
+      $24H2 = Invoke-WebRequest('https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
+      Invoke-Expression $($24H2.Content)
       }
       }
       ElseIf($W11Ver -eq "25H2"){
