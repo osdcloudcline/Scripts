@@ -217,125 +217,28 @@ do
       Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "24H2") -and ($OSVersion -eq "Home")){
-      Write-Host "Processing: $W11Home24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home24H2 
-      pause
-      Write-Host "Processing: $W11Home24H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home24H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Home24H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home24H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Home24H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Home24H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Home24H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home24H2 -RemoveCapability
-      pause
-
-      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
-      Invoke-Expression $($24H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2024H2/Home.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "24H2") -and ($OSVersion -eq "Pro")){
-      
-      Write-Host "Processing: $W11Pro24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro24H2
-      pause
-      Write-Host "Processing: $W11Pro24H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro24H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Pro24H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro24H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Pro24H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro24H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Pro24H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro24H2 -RemoveCapability
-      pause
-
-      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
-      Invoke-Expression $($24H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2024H2/Pro.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "24H2") -and ($OSVersion -eq "ProWorkstation")){
-      Write-Host "Processing: $W11ProWorkstation24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11ProWorkstation24H2
-      pause
-      Write-Host "Processing: $W11ProWorkstation24H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation24H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11ProWorkstation24H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation24H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11ProWorkstation24H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation24H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11ProWorkstation24H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation24H2 -RemoveCapability
-      pause
-
-      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
-      Invoke-Expression $($24H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2024H2/ProWorkstations.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "24H2") -and ($OSVersion -eq "VDI")){
-      Write-Host "Processing: $W11VDI24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11VDI24H2
-      pause
-      Write-Host "Processing: $W11VDI24H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI24H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11VDI24H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI24H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11VDI24H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI24H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11VDI24H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI24H2 -RemoveCapability
-      pause
-
-      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
-      Invoke-Expression $($24H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2024H2/VDI.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "24H2") -and ($OSVersion -eq "Enterprise")){
-      Write-Host "Processing: $W11Enterprise24H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Enterprise24H2
-      pause
-      Write-Host "Processing: $W11Enterprise24H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise24H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Enterprise24H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise24H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Enterprise24H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise24H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Enterprise24H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise24H2 -RemoveCapability
-      pause
-
-      $24H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/24H2.ps1")
-      Invoke-Expression $($24H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2024H2/Enterprise.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "25H2") -and ($OSVersion -eq "Home")){
-      Write-Host "Processing: $W11Home25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home25H2 
-      pause
-      Write-Host "Processing: $W11Home25H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home25H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Home25H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home25H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Home25H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Home25H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Home25H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Home25H2 -RemoveCapability
-      pause
-
-      $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
-      Invoke-Expression $($25H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2025H2/Home.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "25H2") -and ($OSVersion -eq "Pro")){
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
