@@ -260,12 +260,22 @@ do
  '3'{cls
      $W12Ver = Read-Host -Prompt 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
      }
- '4'{}
- '5'{}
- '6'{}
- '7'{}
- '8'{}
- '9'{}
+ '4'{cls
+     $W13Ver = Read-Host -Prompt 'What Version of Windows 13 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
+     }
+ '5'{cls
+     $W14Ver = Read-Host -Prompt 'What Version of Windows 14 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
+     }
+ '6'{cls
+     $W15Ver = Read-Host -Prompt 'What Version of Windows 15 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
+     }
+ '7'{cls
+     $W16Ver = Read-Host -Prompt 'What Version of Windows 16 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
+     }
+ '8'{cls
+     Show-MainMenu
+     }
+ '9'{exit}
 
  
    }
