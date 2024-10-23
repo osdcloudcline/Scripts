@@ -58,6 +58,8 @@ do
         Write-Verbose "Setting OSDBuilder working directory..." -Verbose
         Get-OSDBuilder -SetPath $OSDBuilderPath
         Get-OSDBuilder -CreatePath
+        Get-OSDBuilder
+        pause
         cls
         Show-MainMenu
         }
