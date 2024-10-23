@@ -1,3 +1,10 @@
+# OSDBuilder Task name region
+      
+$W11Pro21H2 = "Windows 11 Professional 21H2"
+      
+# end region
+
+
 Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
 Import-Module -Name OSDBuilder -Force
 Write-Host "Processing: $W11Pro21H2 OSDBuild Task Creation..." -ForegroundColor Yellow
