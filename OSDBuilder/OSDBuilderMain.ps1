@@ -241,86 +241,20 @@ do
       Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "25H2") -and ($OSVersion -eq "Pro")){
-      Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
-      Import-Module -Name OSDBuilder -Force
-      Write-Host "Processing: $W11Pro25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro25H2
-      pause
-      Write-Host "Processing: $W11Pro25H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro25H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Pro25H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro25H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Pro25H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro25H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Pro25H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Pro25H2 -RemoveCapability
-      pause
-
-      $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
-      Invoke-Expression $($25H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2025H2/Pro.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "25H2") -and ($OSVersion -eq "ProWorkstation")){
-      Write-Host "Processing: $W11ProWorkstation25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11ProWorkstation25H2
-      pause
-      Write-Host "Processing: $W11ProWorkstation25H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation25H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11ProWorkstation25H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation25H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11ProWorkstation25H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation25H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11ProWorkstation25H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11ProWorkstation25H2 -RemoveCapability
-      pause
-
-      $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
-      Invoke-Expression $($25H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2025H2/ProWorkstations.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "25H2") -and ($OSVersion -eq "VDI")){
-      Write-Host "Processing: $W11VDI25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11VDI25H2
-      pause
-      Write-Host "Processing: $W11VDI25H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI25H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11VDI25H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI25H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11VDI25H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI25H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11VDI25H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11VDI25H2 -RemoveCapability
-      pause
-
-      $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
-      Invoke-Expression $($25H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2025H2/VDI.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf (($W11Ver -eq "25H2") -and ($OSVersion -eq "Enterprise")){
-      Write-Host "Processing: $W11Enterprise25H2 OSDBuild Task Creation..." -ForegroundColor Yellow
-      New-OSDBuildTask -TaskName $W11Enterprise25H2
-      pause
-      Write-Host "Processing: $W11Enterprise25H2 .NET Framework 3.5 Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise25H2 -EnableNetFX3 
-      pause
-      Write-Host "Processing: $W11Enterprise25H2 Operating System Feature Enablement..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise25H2 -EnableFeature
-      pause
-      Write-Host "Processing: $W11Enterprise25H2 Operating System AppX Package Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise25H2 -RemoveAppx
-      pause
-      Write-Host "Processing: $W11Enterprise25H2 Operating System Capability Removal..." -ForegroundColor Yellow
-      New-OSBuildTask -TaskName $W11Enterprise25H2 -RemoveCapability
-      pause
-
-      $25H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/25H2.ps1")
-      Invoke-Expression $($25H2.Content)
+      $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2025H2/Enterprise.ps1")
+      Invoke-Expression $($OSDBuild.Content)
       }
       }
  '3'{cls
