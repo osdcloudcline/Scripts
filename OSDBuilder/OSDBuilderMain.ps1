@@ -159,10 +159,15 @@ do
       Write-Host "Importing OSDBuilder PowerShell Module..." -ForegroundColor Cyan
       Import-Module -Name OSDBuilder -Force
       If(($W11Ver -eq "21H2") -and ($OSVersion -eq "Home")){
+      $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
+      Invoke-Expression $($21H2.Content)
+
       $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2021H2/Home.ps1")
       Invoke-Expression $($OSDBuild.Content)
       }
       ElseIf(($W11Ver -eq "21H2") -and ($OSVersion -eq "Pro")){
+      $21H2 = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/Windows11/21H2.ps1")
+      Invoke-Expression $($21H2.Content)
       $OSDBuild = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDBuilder/Client/OSD%20Build%20Tasks/Windows%2011%2021H2/Pro.ps1")
       Invoke-Expression $($OSDBuild.Content)
       }
