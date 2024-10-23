@@ -259,8 +259,13 @@ do
       }
  '3'{cls
      $W12Ver = Read-Host -Prompt 'What Version of Windows 12 do you want to create a new OSD Builder Configuration for?(Please enter: RTM)'
-     
      }
+ '4'{}
+ '5'{}
+ '6'{}
+ '7'{}
+ '8'{}
+ '9'{}
 
  
    }
