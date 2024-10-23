@@ -65,7 +65,7 @@ do
         Show-OSDBuildMainMenu
         }
   '3' { cls
-        
+        Show-OSDBuildMainMenu
         }
   '4' { cls
         
