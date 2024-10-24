@@ -186,7 +186,7 @@ Write-Host "Processing: Windows 11 24H2 Build 26100.863...." -ForegroundColor Cy
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows11\24H2"
 
-$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.1000_amd64_en-us_multi_0cda15f9_convert_virtual.zip"
+$Windows1124H2URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2011/24H2/26100.2033_amd64_en-us_multi_7a25f043_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -198,11 +198,16 @@ Write-Host "Downloading Windows 11 24H2 ZIP File..." -ForegroundColor Cyan
 
 Save-WebFile -SourceUrl $Windows1124H2URL -DestinationDirectory $ZIPDestination
 
+pause 
+
 Write-Host "Expanding Windows 11 24H2 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\26100.1000_amd64_en-us_multi_0cda15f9_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\26100.2033_amd64_en-us_multi_7a25f043_convert_virtual.zip" -DestinationPath $ZIPDestination
+
+pause
+
 Write-Host
-Write-Host "Downloading Windows 11 24H2 Build: 26100.863..." -ForegroundColor Cyan 
+Write-Host "Downloading Windows 11 24H2 Build: RTM 26100.2033..." -ForegroundColor Cyan 
 
 Start-Process -FilePath $Windows11Downloader
 
