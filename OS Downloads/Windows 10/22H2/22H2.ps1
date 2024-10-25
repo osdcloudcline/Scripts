@@ -58,16 +58,7 @@ Remove-Item -Path "$ZIPDestination\*.sh" -Recurse -Force
 Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
-pause
-Write-Host
-$ISODestination = "C:\ISOs\OS\Clients\Win10\22H2"
 
-Write-Host "Copying ISO to $ISODestination..." -ForegroundColor Cyan
-New-Item -Path $ISODestination -ItemType Directory
-$ISOFile = "$ZIPDestination\19045.4472.240510-1751.22H2_RELEASE_SVC_PROD2_CLIENTMULTI_X64FRE_EN-US.iso"
-
-
-Copy-Item -Path $ISOFile -Destination $ISODestination -Force
 
 Stop-Transcript
 
