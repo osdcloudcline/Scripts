@@ -10,7 +10,7 @@ Import-Module -Name OSD -Force
 
 $ZIPDestination = "$env:userprofile\Downloads\OS\Windows10\22H2"
 
-$Windows10URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip"
+$Windows10URL = "https://github.com/osdcloudcline/Scripts/raw/main/OS%20Downloads/Windows%2010/22H2/19045.5073_amd64_en-us_multi_60d84f07_convert_virtual.zip"
 
 $ExtractionLocation = $ZIPDestination
 
@@ -24,7 +24,7 @@ Save-WebFile -SourceUrl $Windows10URL -DestinationDirectory $ZIPDestination
 
 Write-Host "Expanding Windows 10 22H2 ZIP File..." -ForegroundColor Cyan 
 
-Expand-Archive -Path "$ZIPDestination\19045.4472_amd64_en-us_multi_39143328_convert_virtual.zip" -DestinationPath $ExtractionLocation
+Expand-Archive -Path "$ZIPDestination\19045.5073_amd64_en-us_multi_60d84f07_convert_virtual.zip" -DestinationPath $ExtractionLocation
 Write-Host
 Write-Host "Downloading Windows 10 22H2..." -ForegroundColor Cyan 
 
@@ -58,7 +58,7 @@ Remove-Item -Path "$ZIPDestination\*.sh" -Recurse -Force
 Remove-Item -Path "$ZIPDestination\*.zip" -Recurse -Force
 
 Write-Host "Excess Files and folders have been successfully deleted..." -ForegroundColor Green 
-
+pause
 Write-Host
 $ISODestination = "C:\ISOs\OS\Clients\Win10\22H2"
 
