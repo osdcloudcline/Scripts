@@ -10,18 +10,6 @@ Function Show-MainMenu{
 
 Clear-Host
 
-#################################################################
-# Main Menu
-#################################################################
-
-Function Show-MainMenu{
-   [CmdletBinding()]
-   param(
-   [string]$Title = 'Operating System Administration & Deployment - Main Menu',
-   [string]$Question = 'What type of action do you need to do?' 
-   )
-cls
-
        $os = Get-CimInstance -ClassName Win32_OperatingSystem
        $PCName = "$env:computername"
        $OSVerison = $($os.Version)
@@ -169,6 +157,6 @@ do
     }
      until ($selection -eq '10'){Invoke-Expression $($OSDMain.Content)}
     }
-}
+
     
 Show-MainMenu
