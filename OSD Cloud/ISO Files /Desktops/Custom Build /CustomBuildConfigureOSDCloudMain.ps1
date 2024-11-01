@@ -82,8 +82,17 @@ Write-Host "Today is:" "$Date"
 Write-Host
 Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
 Write-Host
-
-
+Write-Host 
+Write-Host '                                                                                              ' -BackgroundColor White                                                              
+Write-Host ' This section of this Git Hub-based deployment scripting solution allows the user to perform: ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud creation - generic                                                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud creation - OEM Laptptops                                                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud creation - OEM Desktops                                                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud creation - OEM Micro-Form Factor                                              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud creation - Custom built PCs                                                   ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                                              ' -BackgroundColor White
+pause
+Clear-Host
 
 
 }
