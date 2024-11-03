@@ -139,7 +139,7 @@ do
         Invoke-Expression $($WinGetMain.Content)
         }
   '5' { cls
-        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/Scripts/raw/main/OSD%20Cloud/OSDCloudMain.ps1")
+        $OSDCloud = Invoke-WebRequest ("https://github.com/osdcloudcline/OSDCloud/raw/refs/heads/main/Scripts/NEW-OSDCloudMain.ps1")
         Invoke-Expression $($OSDCloud.Content)
         }
   '6' { cls
