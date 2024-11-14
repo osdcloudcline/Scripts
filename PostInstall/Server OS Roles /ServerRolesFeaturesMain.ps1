@@ -490,3 +490,5 @@ do
     }
     until ($selection -eq '25'){exit}
     }
+
+Show-MainMenu
