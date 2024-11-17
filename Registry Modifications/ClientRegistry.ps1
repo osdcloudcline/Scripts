@@ -61,15 +61,7 @@ Invoke-Expression $($PCMark.Content)
 $VMWare = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Scripts/VMWare.ps1")
 Invoke-Expression $($VMWare.Content)
 
-$Glary = Invoke-WEbRequest("")
+$Glary = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Scripts/GlaryUtilities.ps1")
 Invoke-Expression $($Glary.Content)
-
-
-
-
-
-
-
-
 
 Stop-Transcript
