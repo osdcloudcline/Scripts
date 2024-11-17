@@ -58,7 +58,7 @@ Invoke-Expression $($3DMark.Content)
 $PCMark = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Software/Scripts/PCMark10.ps1")
 Invoke-Expression $($PCMark.Content) 
 
-$VMWare = Invoke-WebRequest("")
+$VMWare = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Scripts/VMWare.ps1")
 Invoke-Expression $($VMWare.Content)
 
 $Glary = Invoke-WEbRequest("")
