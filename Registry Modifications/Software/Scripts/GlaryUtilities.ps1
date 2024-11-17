@@ -1,6 +1,6 @@
+$Software1 = "Glary Utilities Professional"
 
-
-
+Write-Verbose "Importing Client OS SOFTWARE: $Software1 to $env:computername..." -Verbose
 
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\WOW6432Node\Glarysoft\Glary Utilities") -ne $true) {  New-Item "HKLM:\SOFTWARE\WOW6432Node\Glarysoft\Glary Utilities" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\WOW6432Node\Glarysoft\Glary Utilities' -Name 'ProductID' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
