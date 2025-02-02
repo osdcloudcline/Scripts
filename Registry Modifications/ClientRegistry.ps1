@@ -45,6 +45,8 @@ Invoke-Expression $($DisableWinDefender.Content)
 $RemoveSMRecommended = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/main/Registry%20Modifications/Client%20Operating%20System/Scripts/RemoveRecommendedStartMenu.ps1")
 Invoke-Expression $($RemoveSMRecommended.Content)
 
+$DisableBSODReboots = Invoke-WebRequest("https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/PreventBSODReboots.ps1")
+Invoke-Expression $($DisableBSODReboots.Content)
 
 Write-Host "Executing Software-related Registry PowerShell scripts from OSDCloudCline GitHub repo..." -ForegroundColor Cyan
 Write-Host
