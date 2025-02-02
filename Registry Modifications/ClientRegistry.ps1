@@ -2,7 +2,7 @@
 # Registry Files 
 ##################################
 
-$REGLog = "C:\OSDCloud\DeploymentLogs\Registry\$env:computername-Registry.log"
+$REGLog = "C:\Logs\OSDCloud\Registry\$env:computername-Registry.log"
 Start-Transcript -Path $REGLog
 
 $OSInfo1 = (Get-CimInstance -ClassName CIM_OperatingSystem).Caption
