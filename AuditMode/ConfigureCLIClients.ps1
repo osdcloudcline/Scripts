@@ -30,6 +30,12 @@ Write-Verbose "Step 6 - Mandatory OS Pre-Requirements..." -Verbose
 $OS = Invoke-WebRequest("https://github.com/osdcloudcline/Install-Scripts/raw/main/SYSTEM/OS-Mandated%20Software/SYSTEM.ps1")
 Invoke-Expression $($OS.Content)
 
+$OSThemePacks = Invoke-WebRequest("https://github.com/osdcloudcline/Install-Scripts/raw/refs/heads/main/SYSTEM/OS-Mandated%20Software/OS-ThemePacks.ps1")
+Invoke-Expression $($OSThemePacks.Content)
+
+$CustomOSThemePacks = Invoke-WebRequest("https://github.com/osdcloudcline/Install-Scripts/raw/refs/heads/main/SYSTEM/OS-Mandated%20Software/Custom-OS-ThemePacks.ps1")
+Invoke-Expression $($CustomOSThemePacks.Content)
+
 Write-Verbose "Step 7 - Software Installation..." -Verbose
 
 $WinGetSoftware = Invoke-WebRequest("https://github.com/osdcloudcline/Install-Scripts/raw/main/InstallMain.ps1")
