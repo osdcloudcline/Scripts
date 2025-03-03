@@ -52,6 +52,50 @@ Function Get-ScriptsRepo(){
 Import-Module -Name OSD -Force
 Import-Module -Name 7Zip4Powershell -Force
 
+##############################
+# OS Integration Scripts
+###############################
+
+$DriversScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/OS%20Integration/Drivers.ps1"
+$ExtraFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/OS%20Integration/ExtraFiles.ps1"
+$RegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/OS%20Integration/Registry.ps1"
+$UpdatesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/OS%20Integration/Updates.ps1"
+
+####################################
+# System Hardware Inventory  Scripts
+#####################################
+
+$HWInventoryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/System%20Hardware%20Inventory/HardwareInfo.ps1"
+
+Write-Host
+[System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
+Write-Host
+Write-Host ' Above is a list of all hard disk partitions showing available'
+Write-Host ' free space on each of them. Select a partition for backup'
+Write-Host ' storage for repository.                                  '
+Write-Host
+
+$Drive = Read-Host -Prompt ' Enter drive letter and press Enter'
+$BackupFolder = $Drive.Substring(0,1) + ':\OSDCloudCline-GitHubBackup'
+
+if (Test-Path $BackupFolder){Remove-Item $BackupFolder}
+$BackupFolder = New-Item -ItemType Directory -Path $BackupFolder
+
+Write-Verbose "Processing: OS Integration scripts...." -Verbose
+
+$OSIntegrationDestination = "$BackupFolder\Scripts\OS Integration" 
+
+Save-WebFile -SourceUrl $DriversScriptsURL -DestinationDirectory $OSIntegrationDestination
+Save-WebFile -SourceUrl $ExtraFilesScriptURL -DestinationDirectory $OSIntegrationDestination
+Save-WebFile -SourceUrl $RegistryScriptURL -DestinationDirectory $OSIntegrationDestination
+Save-WebFile -SourceUrl $UpdatesScriptURL -DestinationDirectory $OSIntegrationDestination
+
+Write-Verbose "Processing: System Hardware Inventory scripts...." -Verbose
+
+$PCHardwareInventoryDestination = "$BackupFolder\Scripts\PC Hardware Inventory" 
+
+Save-WebFile -SourceUrl $HWInventoryScriptURL -DestinationDirectory $PCHardwareInventoryDestination
+
 }
 
 Function Get-OSDCloudDriversRepo(){
@@ -123,6 +167,7 @@ Get-Date
 Write-Verbose "Processing: OSDCloudCline - Scripts Repository..." -Verbose
 Write-Host
 
+Get-ScriptsRepo
 
 Write-Verbose "Processing: OSDCloudCline - OSDCloud Drivers Repository..." -Verbose
 Write-Host
