@@ -21,5 +21,29 @@
 pause
 Clear-Host
 
-
+Write-Host
+Write-Host "Hello, $env:username..." -ForegroundColor Cyan 
+Write-Host
+$Date = Get-Date
+Write-Host "Today is:" "$Date"
+Write-Host
+Write-Verbose "Your user profile is located at $env:userprofile" -Verbose
+Write-Host
+Write-Host 
+Write-Host '                                                                              ' -BackgroundColor White                                                              
+Write-Host ' This Git Hub-based script will perform the following:                        ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Scripts repository backup                                              ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloudDrivers repository backup                                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Update-Scripts repository backup                                       ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Uninstall-Scripts repository backup                                    ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Install-Scripts repository backup                                      ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDBuilder repository backup                                           ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud repository backup                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - Software repository backup                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OS-Items repository backup                                             ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDCloud 2.0 repository backup                                         ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '     - OSDDocker repository backup                                            ' -ForegroundColor DarkBlue -BackgroundColor White
+Write-Host '                                                                              ' -BackgroundColor White
+pause
+Clear-Host
 
