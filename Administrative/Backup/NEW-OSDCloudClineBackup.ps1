@@ -76,6 +76,16 @@ $AuditModeGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/head
 $AuditModeServersScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/ConfigureServers.ps1"
 $AuditModeMainScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/MainMenu.ps1"
 
+
+#######################################
+# Data Info Retrival Scripts - Local PC
+########################################
+
+$SoftwareDLLFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSoftwareDLLFiles.ps1"
+$SoftwareEXEFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSoftwareEXEFiles.ps1"
+$SystemDLLFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemDLLFiles.ps1"
+$SystemEXEFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemEXEFiles.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -113,6 +123,15 @@ Save-WebFile -SourceUrl $AuditModeCLIScriptURL -DestinationDirectory $AuditModeD
 Save-WebFile -SourceUrl $AuditModeGUIScriptURL -DestinationDirectory $AuditModeDestination
 Save-WebFile -SourceUrl $AuditModeServersScriptURL -DestinationDirectory $AuditModeDestination
 Save-WebFile -SourceUrl $AuditModeMainScriptURL -DestinationDirectory $AuditModeDestination
+
+Write-Verbose "Processing: Data Info Retrival scripts - Local PC...." -Verbose
+
+$LocalPCDataInfoDestination = "$BackupFolder\Scripts\Data Info Retrival\Local PC" 
+
+Save-WebFile -SourceUrl $SoftwareDLLFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
+Save-WebFile -SourceUrl $SoftwareEXEFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
+Save-WebFile -SourceUrl $SystemDLLFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
+Save-WebFile -SourceUrl $SystemEXEFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
 }
 
 Function Get-OSDCloudDriversRepo(){
