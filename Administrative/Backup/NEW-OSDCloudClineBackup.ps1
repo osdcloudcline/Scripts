@@ -120,45 +120,45 @@ Start-Transcript -Path $GitHubBackupLog
 
 Get-Date 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - Scripts Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - Scripts Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud Drivers Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - OSDCloud Drivers Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - Update Scripts Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - Update Scripts Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - Uninstall Scripts Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - Uninstall Scripts Repository..." -Verbose
 Write-Host
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - Install Scripts Repository..." -Verbose
-Write-Host
-
-
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDBuilder Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - Install Scripts Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - OSDBuilder Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - Software Repository..." -Verbose
-Write-Host
-
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OS Items Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - OSDCloud Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud 2.0 Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - Software Repository..." -Verbose
+Write-Host
+
+Write-Verbose "Processing: OSDCloudCline - OS Items Repository..." -Verbose
 Write-Host
 
 
-Write-Verbose "Processing: ALL Files in OSDCloudCline - OSD Docker Repository..." -Verbose
+Write-Verbose "Processing: OSDCloudCline - OSDCloud 2.0 Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: OSDCloudCline - OSD Docker Repository..." -Verbose
 Write-Host
 
 Stop-Transcript
