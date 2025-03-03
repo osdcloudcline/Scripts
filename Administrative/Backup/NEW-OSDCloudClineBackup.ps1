@@ -67,6 +67,15 @@ $UpdatesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/mai
 
 $HWInventoryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Administrative/System%20Hardware%20Inventory/HardwareInfo.ps1"
 
+####################################
+# Audit Mode  Scripts
+#####################################
+
+$AuditModeCLIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/ConfigureCLIClients.ps1"
+$AuditModeGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/ConfigureGUIClients.ps1"
+$AuditModeServersScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/ConfigureServers.ps1"
+$AuditModeMainScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/AuditMode/MainMenu.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -96,6 +105,14 @@ $PCHardwareInventoryDestination = "$BackupFolder\Scripts\PC Hardware Inventory"
 
 Save-WebFile -SourceUrl $HWInventoryScriptURL -DestinationDirectory $PCHardwareInventoryDestination
 
+Write-Verbose "Processing: Audit Mode scripts...." -Verbose
+
+$AuditModeDestination = "$BackupFolder\Scripts\Audit Mode" 
+
+Save-WebFile -SourceUrl $AuditModeCLIScriptURL -DestinationDirectory $AuditModeDestination
+Save-WebFile -SourceUrl $AuditModeGUIScriptURL -DestinationDirectory $AuditModeDestination
+Save-WebFile -SourceUrl $AuditModeServersScriptURL -DestinationDirectory $AuditModeDestination
+Save-WebFile -SourceUrl $AuditModeMainScriptURL -DestinationDirectory $AuditModeDestination
 }
 
 Function Get-OSDCloudDriversRepo(){
