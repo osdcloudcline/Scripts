@@ -86,6 +86,13 @@ $SoftwareEXEFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/
 $SystemDLLFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemDLLFiles.ps1"
 $SystemEXEFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Local%20PC/GetSystemEXEFiles.ps1"
 
+#######################################
+# Data Info Retrival Scripts - Network Devives
+########################################
+
+$RemoteNetworkDevicesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1"
+
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -132,6 +139,13 @@ Save-WebFile -SourceUrl $SoftwareDLLFilesScriptURL -DestinationDirectory $LocalP
 Save-WebFile -SourceUrl $SoftwareEXEFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
 Save-WebFile -SourceUrl $SystemDLLFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
 Save-WebFile -SourceUrl $SystemEXEFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
+
+Write-Verbose "Processing: Data Info Retrival scripts - Network Devices...." -Verbose
+
+$NetworkDevicesDataInfoDestination = "$BackupFolder\Scripts\Data Info Retrival\Network Devices" 
+
+Save-WebFile -SourceUrl $RemoteNetworkDevicesScriptURL -DestinationDirectory $NetworkDevicesDataInfoDestination
+
 }
 
 Function Get-OSDCloudDriversRepo(){
