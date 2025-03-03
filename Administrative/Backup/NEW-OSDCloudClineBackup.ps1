@@ -47,3 +47,118 @@ Write-Host '                                                                    
 pause
 Clear-Host
 
+
+Function Get-ScriptsRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSDCloudDriversRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-UpdateScriptsRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-UninstallScriptsRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-InstallScriptsRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSDBuilderRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSDCloudRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-SoftwareRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSItemsRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSDCloud2Repo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+Function Get-OSDDockerRepo(){
+Import-Module -Name OSD -Force
+Import-Module -Name 7Zip4Powershell -Force
+
+}
+
+$GitHubBackupLog = "C:\Logs\OSDCloudCline\OSDCloudCline-GitHubBackup.log
+
+Start-Transcript -Path $GitHubBackupLog
+
+Get-Date 
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - Scripts Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud Drivers Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - Update Scripts Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - Uninstall Scripts Repository..." -Verbose
+Write-Host
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - Install Scripts Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDBuilder Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - Software Repository..." -Verbose
+Write-Host
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OS Items Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OSDCloud 2.0 Repository..." -Verbose
+Write-Host
+
+
+Write-Verbose "Processing: ALL Files in OSDCloudCline - OSD Docker Repository..." -Verbose
+Write-Host
+
+Stop-Transcript
