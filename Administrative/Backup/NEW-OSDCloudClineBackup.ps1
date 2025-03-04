@@ -300,6 +300,41 @@ $WinServerALLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/mai
 
 $OSDLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/OS.ps1"
 
+####################################################
+## Post - Install - Client OS Roles - RSAT
+####################################################
+
+$ClientOSRSATURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/Client%20OS%20Roles%20/InstallClientRSAT.ps1"
+$ClientOSRSATReadmeURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/Client%20OS%20Roles%20/README.md"
+
+####################################################
+## Post - Install - Client OS Roles - Rename PC
+####################################################
+
+$ClientOSRenamePCURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/PC%20Name/ChangePCName.ps1"
+$ClientOSRenamePCReadmeURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/PC%20Name/README.md"
+
+####################################################
+## Post - Install - Server OS Roles
+####################################################
+
+$ServerOSRSATURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/Server%20OS%20Roles%20/InstallServerRSAT.ps1"
+$ServerOSReadmeURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/Server%20OS%20Roles%20/README.md"
+$ServerRolesMainURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/Server%20OS%20Roles%20/ServerRolesFeaturesMain.ps1"
+
+####################################################
+## Post - Install - Custom Wallpaper
+####################################################
+
+$BryanDesktopURL = ""
+$BryanLaptopURL = ""
+
+################################################
+## Post - Install - Post-Install Main Menu 
+################################################
+
+$PostInstallURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/PostInstallMain.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -549,6 +584,50 @@ $OSDownloadsMainMenuScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Mai
 
 Save-WebFile -SourceUrl $OSDLURL1 -DestinationDirectory $OSDownloadsMainMenuScriptsDestination
 
+Write-Verbose "Processing: Point-Install scripts - Client OS RSAT...." -Verbose
+Write-Host
+
+$PostOSClientScriptsDestination1 = "$BackupFolder\Scripts\Post-Install\Client OS\RSAT" 
+$PostOSClientScriptsDestination2 = "$BackupFolder\Scripts\Post-Install\Client OS" 
+
+Save-WebFile -SourceUrl $ClientOSRSATURL -DestinationDirectory $PostOSClientScriptsDestination1
+Save-WebFile -SourceUrl $ClientOSRSATReadmeURL -DestinationDirectory $PostOSClientScriptsDestination2
+
+Write-Verbose "Processing: Point-Install scripts - Rename PC...." -Verbose
+Write-Host
+
+$PostOSClientScriptsDestination3 = "$BackupFolder\Scripts\Post-Install\Client OS\Rename PC" 
+$PostOSClientScriptsDestination4 = "$BackupFolder\Scripts\Post-Install\Client OS" 
+
+Save-WebFile -SourceUrl $ClientOSRenamePCURL -DestinationDirectory $PostOSClientScriptsDestination3
+Save-WebFile -SourceUrl $ClientOSRenamePCReadmeURL -DestinationDirectory $PostOSClientScriptsDestination4
+
+Write-Verbose "Processing: Point-Install scripts - Server OS RSAT and Roles and Features...." -Verbose
+Write-Host
+
+$PostOSServerScriptsDestination1 = "$BackupFolder\Scripts\Post-Install\Server OS\RSAT" 
+$PostOSServerScriptsDestination2 = "$BackupFolder\Scripts\Post-Install\Server OS" 
+$PostOSServerScriptsDestination3 = "$BackupFolder\Scripts\Post-Install\Server OS\Roles and Features" 
+
+Save-WebFile -SourceUrl $ServerOSRSATURL -DestinationDirectory $PostOSServerScriptsDestination1
+Save-WebFile -SourceUrl $ServerOSReadmeURL -DestinationDirectory $PostOSServerScriptsDestination2
+Save-WebFile -SourceUrl $ServerRolesMainURL -DestinationDirectory $PostOSServerScriptsDestination3
+
+Write-Verbose "Processing: Point-Install scripts - System-specific Wallpaper...." -Verbose
+Write-Host
+
+$BryanDesktopWallpaperScriptsDestination1 = "$BackupFolder\Scripts\Post-Install\Wallpaper\Bryan Desktop" 
+$BryanLaptopWallpaperScriptsDestination2 = "$BackupFolder\Scripts\Post-Install\Wallpaper\Bryan Laptop" 
+
+Save-WebFile -SourceUrl $BryanDesktopURL -DestinationDirectory $BryanDesktopWallpaperScriptsDestination1
+Save-WebFile -SourceUrl $BryanLaptopURL -DestinationDirectory $BryanLaptopWallpaperScriptsDestination2
+
+Write-Verbose "Processing: Post-Install Scripts - Main Menu script...." -Verbose
+Write-Host
+
+$PostInstallMainMenuScriptsDestination = "$BackupFolder\Scripts\Post-Install\Main Menu" 
+
+Save-WebFile -SourceUrl $PostInstallURL -DestinationDirectory $PostInstallMainMenuScriptsDestination
 }
 
 Function Get-OSDCloudDriversRepo(){
