@@ -1,0 +1,8 @@
+﻿Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: February 8, 2024
+; Tutorial: https://www.elevenforum.com/t/enable-or-disable-sudo-command-in-windows-11.22329/
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Sudo]
+"Enabled"=dword:00000001
