@@ -335,6 +335,30 @@ $BryanLaptopURL = ""
 
 $PostInstallURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PostInstall/PostInstallMain.ps1"
 
+################################################
+## Powershell Modules - Package Providers 
+################################################
+
+$PSProvidersInstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Package%20Providers/Install.ps1"
+
+################################################
+## Powershell Modules - PowerShell version 5.1 
+################################################
+
+$PS51InstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%205.1/Install.ps1"
+
+################################################
+## Powershell Modules - PowerShell version 7.x 
+################################################
+
+$PS7InstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%207.x/Install.ps1"
+
+################################################
+## Powershell Modules - PowerShell version 8.x 
+################################################
+
+$PS8InstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%208.x/Install.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -628,6 +652,35 @@ Write-Host
 $PostInstallMainMenuScriptsDestination = "$BackupFolder\Scripts\Post-Install\Main Menu" 
 
 Save-WebFile -SourceUrl $PostInstallURL -DestinationDirectory $PostInstallMainMenuScriptsDestination
+
+Write-Verbose "Processing: PowerShell Modules Scripts - Package Provider...." -Verbose
+Write-Host
+
+$PSPackageProviderScriptsDestination = "$BackupFolder\Scripts\Powershell\Package Providers" 
+
+Save-WebFile -SourceUrl $PSProvidersInstallScriptURL -DestinationDirectory $PSPackageProviderScriptsDestination
+
+Write-Verbose "Processing: PowerShell Modules Scripts - PowerShell 5.1...." -Verbose
+Write-Host
+
+$PS51ScriptsDestination = "$BackupFolder\Scripts\Powershell\version 5.1" 
+
+Save-WebFile -SourceUrl $PS51InstallScriptURL -DestinationDirectory $PS51ScriptsDestination
+
+Write-Verbose "Processing: PowerShell Modules Scripts - PowerShell 7.x...." -Verbose
+Write-Host
+
+$PS7ScriptsDestination = "$BackupFolder\Scripts\Powershell\version 7.x" 
+
+Save-WebFile -SourceUrl $PS7InstallScriptURL -DestinationDirectory $PS7ScriptsDestination
+
+Write-Verbose "Processing: PowerShell Modules Scripts - PowerShell 8.x...." -Verbose
+Write-Host
+
+$PS8ScriptsDestination = "$BackupFolder\Scripts\Powershell\version 8.x" 
+
+Save-WebFile -SourceUrl $PS8InstallScriptURL -DestinationDirectory $PS8ScriptsDestination
+
 }
 
 Function Get-OSDCloudDriversRepo(){
