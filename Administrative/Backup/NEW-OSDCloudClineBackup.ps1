@@ -377,8 +377,29 @@ $SYSTEMDesktopIconsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/head
 $ShowHiddenFilesURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/ShowHiddenFilesFolders.reg"
 $Win11VerboseURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/W11VerboseStatus.reg"
 $Windows10OSModsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/Windows10-OSModifications.reg"
-$Windows11ModsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableWindowsRecall.reg"
+$Windows11ModsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/Windows11-OSModifications.reg"
 $RegistryREADMEURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/README.md"
+
+################################################
+## Registry Files - Client OS Scripts
+################################################
+
+$SafeModeScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/AddSafeMode.ps1"
+$CheckForUpdatesURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CheckForUpdates.ps1"
+$CopyMoveToScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CopyToMoveTo.ps1"
+$DisableBitLockerScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableBitLockerDeviceEncryption.ps1"
+$DisableBSODRebootScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/PreventBSODReboots.ps1"
+$DisableWindowsDefenderScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsDefender.ps1"
+$DisableWindowsCoPilotScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsCopilot.ps1"
+$DisableWindowsRecallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableWindowsRecall.ps1"
+$EnableSUDOScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/EnableSUDO.ps1"
+$RemoveRecommendedSMScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/RemoveRecommendedStartMenu.ps1"
+$SYSTEMDesktopIconsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/OSDesktopIcons.ps1"
+$ShowHiddenFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/ShowHiddenFilesFolders.ps1"
+$Win11VerboseScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/EnableWindows11VerboseStatus.ps1"
+$Windows10OSModsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/Windows10OSMods.ps1"
+$Windows11ModsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/Windows11OSMods.ps1"
+$RegistryREADMEScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/README.md"
 
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
@@ -702,6 +723,47 @@ $PS8ScriptsDestination = "$BackupFolder\Scripts\Powershell\version 8.x"
 
 Save-WebFile -SourceUrl $PS8InstallScriptURL -DestinationDirectory $PS8ScriptsDestination
 
+Write-Verbose "Processing: Registry Files - Client OS REG Files...." -Verbose
+Write-Host
+
+$ClientOSREGFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\REG Files" 
+
+Save-WebFile -SourceUrl $SafeModeURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $CopyToURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $DisableBitLockerURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $DisableBSODRebootURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsDefenderURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsCoPilotURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsRecallURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $EnableSUDOURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $MoveToURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $RemoveRecommendedSMURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $SYSTEMDesktopIconsURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $ShowHiddenFilesURL  -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $Win11VerboseURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $Windows10OSModsURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $Windows11ModsURL -DestinationDirectory $ClientOSREGFilesDestination
+Save-WebFile -SourceUrl $RegistryREADMEURL -DestinationDirectory $ClientOSREGFilesDestination
+
+Write-Verbose "Processing: Registry Files - Client OS Script Files...." -Verbose
+Write-Host
+
+$ClientOSScriptFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\Script Files" 
+
+Save-WebFile -SourceUrl $SafeModeURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $CopyToURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableBitLockerURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableBSODRebootURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsDefenderURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsCoPilotURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsRecallURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $EnableSUDOURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $MoveToURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $RemoveRecommendedSMURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $SYSTEMDesktopIconsURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $ShowHiddenFilesURL  -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $Win11VerboseURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $Windows10OSModsURL -DestinationDirectory $ClientOSScriptFilesDestination
 }
 
 Function Get-OSDCloudDriversRepo(){
