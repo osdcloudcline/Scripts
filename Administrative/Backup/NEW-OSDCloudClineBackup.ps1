@@ -359,6 +359,27 @@ $PS7InstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/
 
 $PS8InstallScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%208.x/Install.ps1"
 
+################################################
+## Registry Files - Client OS
+################################################
+
+$SafeModeURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/AddSafeMode.reg"
+$CopyToURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/CopyTo.reg"
+$DisableBitLockerURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableBitLockerDeviceEncryption.reg"
+$DisableBSODRebootURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableBSODAutoRestart.reg"
+$DisableWindowsDefenderURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableMicrosoftDefender.reg"
+$DisableWindowsCoPilotURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableWindowsCopilot.reg"
+$DisableWindowsRecallURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableWindowsRecall.reg"
+$EnableSUDOURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/EnableSUDO.reg"
+$MoveToURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/MoveTo.reg"
+$RemoveRecommendedSMURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/RemoveRecommendedFromStartMenu-ALLUsers.reg"
+$SYSTEMDesktopIconsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/SYSTEMDesktopIcons.reg"
+$ShowHiddenFilesURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/ShowHiddenFilesFolders.reg"
+$Win11VerboseURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/W11VerboseStatus.reg"
+$Windows10OSModsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/Windows10-OSModifications.reg"
+$Windows11ModsURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/DisableWindowsRecall.reg"
+$RegistryREADMEURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Registry%20Files/README.md"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
