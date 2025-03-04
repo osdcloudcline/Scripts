@@ -1,0 +1,12 @@
+﻿Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: January 27, 2022
+; Tutorial: https://www.elevenforum.com/t/enable-or-disable-microsoft-defender-antivirus-in-windows-11.4269/
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:00000001
+
+
+
