@@ -401,6 +401,39 @@ $Windows10OSModsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/h
 $Windows11ModsScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/Windows11OSMods.ps1"
 $RegistryREADMEScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/README.md"
 
+
+################################################
+## Registry Files - Software
+################################################
+
+$Adobe1URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Adobe/Acrobat1.reg"
+$Adobe2URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Adobe/Acrobat2.reg"
+$Adobe3URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Adobe/AdobeCC.reg"
+$Adobe4URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Adobe/AdobeCC2.reg"
+$Adobe5URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Adobe/AdobeCC3.reg"
+$GlaryUtilitiesURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/Glary%20Utilities/GlaryUtilities.reg"
+$3DMarkURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/UL%20Inc./3DMark.reg"
+$PCMark10URL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/UL%20Inc./PCMark10.reg"
+$VMWareWorkstationProURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Software/VMWare/VMWareWSPro.reg"
+
+################################################
+## Registry Files - Client Registry Script
+################################################
+
+$ClientRegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/ClientRegistry.ps1"
+
+################################################
+## Registry Files - Server Registry Script
+################################################
+
+$ServerRegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/ServerRegistry.ps1"
+
+################################################
+## Registry Files - Registy Modifications README.md
+################################################
+
+$REGModsREADMEURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/README.md"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
