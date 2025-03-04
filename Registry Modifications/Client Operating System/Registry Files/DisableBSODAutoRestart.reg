@@ -1,0 +1,10 @@
+﻿Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 2, 2022
+: Tutorial: https://www.elevenforum.com/t/enable-or-disable-bsod-automatic-restart-in-windows-11.8084/
+
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
+"AutoReboot"=dword:00000000
+
