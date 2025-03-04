@@ -385,7 +385,7 @@ $RegistryREADMEURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/ma
 ################################################
 
 $SafeModeScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/AddSafeMode.ps1"
-$CheckForUpdatesURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CheckForUpdates.ps1"
+$CheckForUpdatesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CheckForUpdates.ps1"
 $CopyMoveToScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/CopyToMoveTo.ps1"
 $DisableBitLockerScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/DisableBitLockerDeviceEncryption.ps1"
 $DisableBSODRebootScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/Client%20Operating%20System/Scripts/PreventBSODReboots.ps1"
@@ -750,20 +750,21 @@ Write-Host
 
 $ClientOSScriptFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\Script Files" 
 
-Save-WebFile -SourceUrl $SafeModeURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $CopyToURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $DisableBitLockerURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $DisableBSODRebootURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $DisableWindowsDefenderURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $DisableWindowsCoPilotURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $DisableWindowsRecallURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $EnableSUDOURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $MoveToURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $RemoveRecommendedSMURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $SYSTEMDesktopIconsURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $ShowHiddenFilesURL  -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $Win11VerboseURL -DestinationDirectory $ClientOSScriptFilesDestination
-Save-WebFile -SourceUrl $Windows10OSModsURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $SafeModeScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $CheckForUpdatesScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $CopyMoveToScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableBitLockerScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableBSODRebootScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsDefenderScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsCoPilotScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $DisableWindowsRecallScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $EnableSUDOScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $RemoveRecommendedSMScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $SYSTEMDesktopIconsScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $ShowHiddenFilesScriptURL  -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $Windows10OSModsScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $Windows11ModsScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+Save-WebFile -SourceUrl $RegistryREADMEScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
 }
 
 Function Get-OSDCloudDriversRepo(){
