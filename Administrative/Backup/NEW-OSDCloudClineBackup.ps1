@@ -159,6 +159,128 @@ $OOBEStandardGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/h
 $OOBEClientVDIGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/VDI/ClientVDISplashScreen.ps1"
 $OOBEServerVDIGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/VDI/ServerVDISplashScreen.ps1"
 
+################################################
+## OS Downloads - Windows 11 Insider Preview Builds
+################################################
+
+$IP262365000URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Insider%20Previews/Windows%2011/26236.5000/26236.5000_amd64_en-us_multi_d55ca98b_convert_virtual.zip"
+$IP262365000URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Insider%20Previews/Windows%2011/26236.5000/262365000.ps1"
+
+$IP277641000URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Insider%20Previews/Windows%2011/27764.1000/27764.1000_amd64_en-us_multi_5444b584_convert_virtual.zip"
+$IP277641000URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Insider%20Previews/Windows%2011/27764.1000/277641000.ps1"
+
+################################################
+## OS Downloads - Windows 10 22H2
+################################################
+
+$Windows1022H2URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2010/22H2/19045.5073_amd64_en-us_multi_60d84f07_convert_virtual.zip"
+$Windows1022H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2010/22H2/22H2.ps1"
+
+################################################
+## OS Downloads - Windows 11 21H2
+################################################
+
+$Windows1121H2URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/21H2/22000.2960_amd64_en-us_multi_1843eef2_convert_virtual.zip"
+$Windows1121H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/21H2/21H2.PS1"
+
+################################################
+## OS Downloads - Windows 11 22H2
+################################################
+
+$Windows1122H2URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/22H2/22621.3668_amd64_en-us_multi_354f5027_convert_virtual.zip"
+$Windows1122H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/22H2/22H2.ps1"
+
+################################################
+## OS Downloads - Windows 11 23H2
+################################################
+
+$Windows1123H2URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/23H2/22631.3668_amd64_en-us_multi_593f698d_convert_virtual.zip"
+$Windows1123H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/23H2/23H2.ps1"
+
+################################################
+## OS Downloads - Windows 11 24H2
+################################################
+
+$Windows1124H2URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/24H2/26100.2033_amd64_en-us_multi_7a25f043_convert_virtual.zip"
+$Windows1124H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/24H2/24H2.ps1"
+
+################################################
+## OS Downloads - Windows 11 25H2
+################################################
+
+$Windows1125H2URL1 = ""
+$Windows1125H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/25H2/25H2.ps1"
+
+################################################
+## OS Downloads - Windows 12 RTM
+################################################
+
+$Windows12RTMURL1 = ""
+$Windows12RTMURL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2012/RTM/RTM.ps1"
+
+################################################
+## OS Downloads - Windows 13 RTM
+################################################
+
+$Windows13RTMURL1 = ""
+$Windows13RTMURL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2013/RTM/RTM.ps1"
+
+################################################
+## OS Downloads - Windows 14 RTM
+################################################
+
+$Windows14RTMURL1 = ""
+$Windows14RTMURL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2014/RTM/RTM.ps1"
+
+################################################
+## OS Downloads - Windows 15 RTM
+################################################
+
+$Windows15RTMURL1 = ""
+$Windows15RTMURL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2015/RTM/RTM.ps1"
+
+################################################
+## OS Downloads - Windows 16 RTM
+################################################
+
+$Windows16RTMURL1 = ""
+$Windows16RTMURL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2016/RTM/RTM.ps1"
+
+################################################
+## OS Downloads - Windows Server 2022
+################################################
+
+$WinServer2022URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2022/20348.2461_amd64_en-us_multi_b9f1ddc0_convert.zip"
+$WinServer2022URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2022/2022.ps1"
+
+################################################
+## OS Downloads - Windows Server 2025
+################################################
+
+$WinServer2025URL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2025/26100.2314_amd64_en-us_multi_c4bd87c1_convert.zip"
+$WinServer2025URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2025/2025.ps1"
+
+################################################
+## OS Downloads - Windows Server 2028
+################################################
+
+$WinServer2028URL1 = ""
+$WinServer2028URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2028/2028.ps1"
+
+################################################
+## OS Downloads - Windows Server 2031
+################################################
+
+$WinServer2031URL1 = ""
+$WinServer2031URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2031/2031.ps1"
+
+################################################
+## OS Downloads - Windows Server 2034
+################################################
+
+$WinServer2034URL1 = ""
+$WinServer2034URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2034/2034.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
