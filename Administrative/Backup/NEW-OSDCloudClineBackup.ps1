@@ -92,6 +92,72 @@ $SystemEXEFilesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/he
 
 $RemoteNetworkDevicesScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Data%20Info%20Retrival/Network%20Devices/GetRemoteShares.ps1"
 
+#######################################
+# Domain Administration Scripts 
+########################################
+
+$DomainAdministrationScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Domain%20Administration/DomainAdminMain.ps1"
+
+#######################################
+# Local PC Scripts 
+########################################
+
+$LocalPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Local%20Computer/LocalPCMain.ps1"
+
+#######################################
+# Local PC Scripts 
+########################################
+
+$LocalPCScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Local%20Computer/LocalPCMain.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Advanced 
+########################################
+
+$OOBEAdvancedGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Advanced/ADVSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Corporate 
+########################################
+
+$OOBECorporateGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Corporate/CORPSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Honeypot 
+########################################
+
+$OOBEHoneypotGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Honeypot/HONEYPOTSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - IT Tech 
+########################################
+
+$OOBEITGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/IT%20Tech/ITTechSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Management PC 
+########################################
+
+$OOBEMPCGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Management%20PC/ManagementPCSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Servers 
+########################################
+
+$OOBEServersGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Server/Server.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - Standard 
+########################################
+
+$OOBEStandardGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/Standard/StandardSplashScreen.ps1"
+
+#######################################
+# OOBE Splash Screen Scripts - VDI 
+########################################
+
+$OOBEClientVDIGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/VDI/ClientVDISplashScreen.ps1"
+$OOBEServerVDIGUIScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OOBE%20Splash%20Screen/VDI/ServerVDISplashScreen.ps1"
 
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
@@ -108,6 +174,7 @@ if (Test-Path $BackupFolder){Remove-Item $BackupFolder}
 $BackupFolder = New-Item -ItemType Directory -Path $BackupFolder
 
 Write-Verbose "Processing: OS Integration scripts...." -Verbose
+Write-Host 
 
 $OSIntegrationDestination = "$BackupFolder\Scripts\OS Integration" 
 
@@ -117,12 +184,14 @@ Save-WebFile -SourceUrl $RegistryScriptURL -DestinationDirectory $OSIntegrationD
 Save-WebFile -SourceUrl $UpdatesScriptURL -DestinationDirectory $OSIntegrationDestination
 
 Write-Verbose "Processing: System Hardware Inventory scripts...." -Verbose
+Write-Host
 
 $PCHardwareInventoryDestination = "$BackupFolder\Scripts\PC Hardware Inventory" 
 
 Save-WebFile -SourceUrl $HWInventoryScriptURL -DestinationDirectory $PCHardwareInventoryDestination
 
 Write-Verbose "Processing: Audit Mode scripts...." -Verbose
+Write-Host
 
 $AuditModeDestination = "$BackupFolder\Scripts\Audit Mode" 
 
@@ -132,6 +201,7 @@ Save-WebFile -SourceUrl $AuditModeServersScriptURL -DestinationDirectory $AuditM
 Save-WebFile -SourceUrl $AuditModeMainScriptURL -DestinationDirectory $AuditModeDestination
 
 Write-Verbose "Processing: Data Info Retrival scripts - Local PC...." -Verbose
+Write-Host
 
 $LocalPCDataInfoDestination = "$BackupFolder\Scripts\Data Info Retrival\Local PC" 
 
@@ -141,10 +211,40 @@ Save-WebFile -SourceUrl $SystemDLLFilesScriptURL -DestinationDirectory $LocalPCD
 Save-WebFile -SourceUrl $SystemEXEFilesScriptURL -DestinationDirectory $LocalPCDataInfoDestination
 
 Write-Verbose "Processing: Data Info Retrival scripts - Network Devices...." -Verbose
+Write-Host
 
 $NetworkDevicesDataInfoDestination = "$BackupFolder\Scripts\Data Info Retrival\Network Devices" 
 
 Save-WebFile -SourceUrl $RemoteNetworkDevicesScriptURL -DestinationDirectory $NetworkDevicesDataInfoDestination
+
+Write-Verbose "Processing: Domain Administration scripts...." -Verbose
+Write-Host
+
+$DomainAdminDestination = "$BackupFolder\Scripts\Domain Administration"
+
+Save-WebFile -SourceUrl $DomainAdministrationScriptURL -DestinationDirectory $DomainAdminDestination
+
+Write-Verbose "Processing: Local PC scripts...." -Verbose
+Write-Host
+
+$LocalPCDestination = "$BackupFolder\Scripts\Local PC" 
+
+Save-WebFile -SourceUrl $LocalPCScriptURL -DestinationDirectory $LocalPCDestination
+
+Write-Verbose "Processing: OOBE Splash Screen scripts...." -Verbose
+Write-Host
+
+$OOBEScriptsDestination = "$BackupFolder\Scripts\OOBE Splash Screen" 
+
+Save-WebFile -SourceUrl $OOBEAdvancedGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBECorporateGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEHoneypotGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEITGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEMPCGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEServersGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEStandardGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEClientVDIGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+Save-WebFile -SourceUrl $OOBEServerVDIGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
 
 }
 
