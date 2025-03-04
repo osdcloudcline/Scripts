@@ -21,9 +21,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\OFFLINE\SOFTWARE\Wow6432Node\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cServices]
 "bToggleSendAndTrack"=dword:00000001
-" bTogglePrefsSync"=dword:00000001
+"bTogglePrefsSync"=dword:00000001
 "bToggleFillSign"=dword:00000001
-" bToggleAdobeSign"=dword:00000001
+"bToggleAdobeSign"=dword:00000001
 "bToggleWebConnectors"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\OFFLINE\SOFTWARE\Wow6432Node\Policies\Adobe\Acrobat Reader\DC\FeatureLockDown\cSharePoint]
