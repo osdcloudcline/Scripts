@@ -212,6 +212,13 @@ $Windows1125H2URL1 = ""
 $Windows1125H2URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/25H2/25H2.ps1"
 
 ################################################
+## OS Downloads - ALL Windows 11
+################################################
+
+$Win11ALLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/ALLWin11.ps1"
+$Win11NetworkALLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%2011/ALLWin11-Network.ps1"
+
+################################################
 ## OS Downloads - Windows 12 RTM
 ################################################
 
@@ -280,6 +287,18 @@ $WinServer2031URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/ma
 
 $WinServer2034URL1 = ""
 $WinServer2034URL2 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/2034/2034.ps1"
+
+################################################
+## OS Downloads - ALL Windows Server 
+################################################
+
+$WinServerALLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/Windows%20Server/ALLWinServer.ps1"
+
+################################################
+## OS Downloads - OS Downloads Main Menu 
+################################################
+
+$OSDLURL1 = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OS%20Downloads/OS.ps1"
 
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
@@ -367,6 +386,168 @@ Save-WebFile -SourceUrl $OOBEServersGUIScriptURL -DestinationDirectory $OOBEScri
 Save-WebFile -SourceUrl $OOBEStandardGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
 Save-WebFile -SourceUrl $OOBEClientVDIGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
 Save-WebFile -SourceUrl $OOBEServerVDIGUIScriptURL -DestinationDirectory $OOBEScriptsDestination
+
+
+Write-Verbose "Processing: OS Downloads - Windows 11 Insider Preview Builds scripts...." -Verbose
+Write-Host
+
+$W11IPScriptsDestination1 = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\Insider Preview Builds\26236.5000" 
+$W11IPScriptsDestination2 = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\Insider Preview Builds\27764.1000" 
+
+Save-WebFile -SourceUrl $IP262365000URL1 -DestinationDirectory $W11IPScriptsDestination1
+Save-WebFile -SourceUrl $IP262365000URL2 -DestinationDirectory $W11IPScriptsDestination1
+Save-WebFile -SourceUrl $IP277641000URL1 -DestinationDirectory $W11IPScriptsDestination2
+Save-WebFile -SourceUrl $IP277641000URL2 -DestinationDirectory $W11IPScriptsDestination2
+
+Write-Verbose "Processing: OS Downloads - Windows 10 22H2 scripts...." -Verbose
+Write-Host
+
+$W1022H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 10\22H2" 
+
+Save-WebFile -SourceUrl $Windows1022H2URL1 -DestinationDirectory $W1022H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1022H2URL2 -DestinationDirectory $W1022H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 11 21H2 scripts...." -Verbose
+Write-Host
+
+$W1121H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\21H2" 
+
+Save-WebFile -SourceUrl $Windows1121H2URL1 -DestinationDirectory $W1121H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1121H2URL2 -DestinationDirectory $W1121H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 11 22H2 scripts...." -Verbose
+Write-Host
+
+$W1122H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\22H2" 
+
+Save-WebFile -SourceUrl $Windows1122H2URL1 -DestinationDirectory $W1122H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1122H2URL2 -DestinationDirectory $W1122H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 11 23H2 scripts...." -Verbose
+Write-Host
+
+$W1123H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\23H2" 
+
+Save-WebFile -SourceUrl $Windows1123H2URL1 -DestinationDirectory $W1123H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1123H2URL2 -DestinationDirectory $W1123H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 11 24H2 scripts...." -Verbose
+Write-Host
+
+$W1124H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\24H2" 
+
+Save-WebFile -SourceUrl $Windows1124H2URL1 -DestinationDirectory $W1123H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1124H2URL2 -DestinationDirectory $W1123H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 11 25H2 scripts...." -Verbose
+Write-Host
+
+$W1125H2ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\25H2" 
+
+Save-WebFile -SourceUrl $Windows1125H2URL1 -DestinationDirectory $W1123H2ScriptsDestination
+Save-WebFile -SourceUrl $Windows1125H2URL2 -DestinationDirectory $W1123H2ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - ALL Windows 11 script...." -Verbose
+Write-Host
+
+$Win11ALLScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 11\ALL" 
+
+Save-WebFile -SourceUrl $Win11ALLURL1 -DestinationDirectory $Win11ALLScriptsDestination
+Save-WebFile -SourceUrl $Win11ALLURL2 -DestinationDirectory $Win11ALLScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 12 RTM scripts...." -Verbose
+Write-Host
+
+$W12RTMScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 12\RTM" 
+
+Save-WebFile -SourceUrl $Windows12RTMURL1 -DestinationDirectory $W12RTMScriptsDestination
+Save-WebFile -SourceUrl $Windows12RTMURL2 -DestinationDirectory $W12RTMScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 13 RTM scripts...." -Verbose
+Write-Host
+
+$W13RTMScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 13\RTM" 
+
+Save-WebFile -SourceUrl $Windows13RTMURL1 -DestinationDirectory $W13RTMScriptsDestination
+Save-WebFile -SourceUrl $Windows13RTMURL2 -DestinationDirectory $W13RTMScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 14 RTM scripts...." -Verbose
+Write-Host
+
+$W14RTMScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 14\RTM" 
+
+Save-WebFile -SourceUrl $Windows14RTMURL1 -DestinationDirectory $W14RTMScriptsDestination
+Save-WebFile -SourceUrl $Windows14RTMURL2 -DestinationDirectory $W14RTMScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 15 RTM scripts...." -Verbose
+Write-Host
+
+$W15RTMScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 15\RTM" 
+
+Save-WebFile -SourceUrl $Windows15RTMURL1 -DestinationDirectory $W15RTMScriptsDestination
+Save-WebFile -SourceUrl $Windows15RTMURL2 -DestinationDirectory $W15RTMScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows 16 RTM scripts...." -Verbose
+Write-Host
+
+$W16RTMScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Client OS\Windows 16\RTM" 
+
+Save-WebFile -SourceUrl $Windows16RTMURL1 -DestinationDirectory $W16RTMScriptsDestination
+Save-WebFile -SourceUrl $Windows16RTMURL2 -DestinationDirectory $W16RTMScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows Server 2022 RTM scripts...." -Verbose
+Write-Host
+
+$WS2022ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server 2022" 
+
+Save-WebFile -SourceUrl $WinServer2022URL1 -DestinationDirectory $WS2022ScriptsDestination
+Save-WebFile -SourceUrl $WinServer2022URL2 -DestinationDirectory $WS2022ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows Server 2025 scripts...." -Verbose
+Write-Host
+
+$WS2025ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server 2025" 
+
+Save-WebFile -SourceUrl $WinServer2025URL1 -DestinationDirectory $WS2025ScriptsDestination
+Save-WebFile -SourceUrl $WinServer2025URL2 -DestinationDirectory $WS2025ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows Server 2028 scripts...." -Verbose
+Write-Host
+
+$WS2028ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server 2028" 
+
+Save-WebFile -SourceUrl $WinServer2028URL1 -DestinationDirectory $WS2028ScriptsDestination
+Save-WebFile -SourceUrl $WinServer2028URL2 -DestinationDirectory $WS2028ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows Server 2031 scripts...." -Verbose
+Write-Host
+
+$WS2031ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server 2031" 
+
+Save-WebFile -SourceUrl $WinServer2031URL1 -DestinationDirectory $WS2031ScriptsDestination
+Save-WebFile -SourceUrl $WinServer2031URL2 -DestinationDirectory $WS2031ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Windows Server 2034 scripts...." -Verbose
+Write-Host
+
+$WS2034ScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server 2034" 
+
+Save-WebFile -SourceUrl $WinServer2034URL1 -DestinationDirectory $WS2034ScriptsDestination
+Save-WebFile -SourceUrl $WinServer2034URL2 -DestinationDirectory $WS2034ScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - ALL Windows Server script...." -Verbose
+Write-Host
+
+$WSALLScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Server OS\Windows Server\ALL" 
+
+Save-WebFile -SourceUrl $WinServerALLURL1 -DestinationDirectory $WSALLScriptsDestination
+
+Write-Verbose "Processing: OS Downloads - Main Menu script...." -Verbose
+Write-Host
+
+$OSDownloadsMainMenuScriptsDestination = "$BackupFolder\Scripts\OS Downloads\Main Menu" 
+
+Save-WebFile -SourceUrl $OSDLURL1 -DestinationDirectory $OSDownloadsMainMenuScriptsDestination
 
 }
 
