@@ -756,7 +756,7 @@ $PS8ScriptsDestination = "$BackupFolder\Scripts\Powershell\version 8.x"
 
 Save-WebFile -SourceUrl $PS8InstallScriptURL -DestinationDirectory $PS8ScriptsDestination
 
-Write-Verbose "Processing: Registry Files - Client OS REG Files...." -Verbose
+Write-Verbose "Processing: Registry Modifications - Client OS REG Files...." -Verbose
 Write-Host
 
 $ClientOSREGFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\REG Files" 
@@ -778,7 +778,7 @@ Save-WebFile -SourceUrl $Windows10OSModsURL -DestinationDirectory $ClientOSREGFi
 Save-WebFile -SourceUrl $Windows11ModsURL -DestinationDirectory $ClientOSREGFilesDestination
 Save-WebFile -SourceUrl $RegistryREADMEURL -DestinationDirectory $ClientOSREGFilesDestination
 
-Write-Verbose "Processing: Registry Files - Client OS Script Files...." -Verbose
+Write-Verbose "Processing: Registry Modifications - Client OS Script Files...." -Verbose
 Write-Host
 
 $ClientOSScriptFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\Script Files" 
@@ -798,6 +798,43 @@ Save-WebFile -SourceUrl $ShowHiddenFilesScriptURL  -DestinationDirectory $Client
 Save-WebFile -SourceUrl $Windows10OSModsScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
 Save-WebFile -SourceUrl $Windows11ModsScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
 Save-WebFile -SourceUrl $RegistryREADMEScriptURL -DestinationDirectory $ClientOSScriptFilesDestination
+
+Write-Verbose "Processing: Registry Modifications - Client OS Software REG Files...." -Verbose
+Write-Host
+
+$ClientOSSoftwareREGFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\Software REG Files" 
+
+Save-WebFile -SourceUrl $Adobe1URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $Adobe2URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $Adobe3URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $Adobe4URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $Adobe5URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $GlaryUtilitiesURL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $3DMarkURL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $PCMark10URL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+Save-WebFile -SourceUrl $VMWareWorkstationProURL -DestinationDirectory $ClientOSSoftwareREGFilesDestination
+
+Write-Verbose "Processing: Registry Modifications - Client OS Main Script File...." -Verbose
+Write-Host
+
+$ClientOSMainScriptFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Client OS\Main Script Files" 
+
+Save-WebFile -SourceUrl $ClientRegistryScriptURL -DestinationDirectory $ClientOSMainScriptFilesDestination
+
+Write-Verbose "Processing: Registry Modifications - Server OS Main Script File...." -Verbose
+Write-Host
+
+$ServertOSMainScriptFilesDestination = "$BackupFolder\Scripts\Registry Modifications\Server OS\Main Script Files" 
+
+Save-WebFile -SourceUrl $ServerRegistryScriptURL -DestinationDirectory $ServertOSMainScriptFilesDestination
+
+Write-Verbose "Processing: Registry Modifications - Main README.md File...." -Verbose
+Write-Host
+
+$RegistryModsMainREADMEFilesDestination = "$BackupFolder\Scripts\Registry Modifications\README" 
+
+Save-WebFile -SourceUrl $REGModsREADMEURL -DestinationDirectory $RegistryModsMainREADMEFilesDestination
+
 }
 
 Function Get-OSDCloudDriversRepo(){
