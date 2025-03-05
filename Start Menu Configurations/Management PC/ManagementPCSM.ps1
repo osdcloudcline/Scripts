@@ -9,7 +9,7 @@ Write-Host "The MANAGEMENT PC Start Menu layout will now be downloaded from $SMS
 
 $StartMenudownload = "C:\downloads\StartMenu\Management PC"
 
-$MPCSMBINFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Honeypot/start2.bin"
+$MPCSMBINFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Management%20PC/start2.bin"
 
 Write-Verbose "Acquiring MANAGEMENT PC start2.bin for Start Menu Configuration..." -Verbose
 Save-WebFile -SourceUrl $HoneypotSMBINFileURL -DestinationDirectory $StartMenudownload
