@@ -12,7 +12,7 @@ $StartMenudownload = "C:\downloads\StartMenu\Management PC"
 $MPCSMBINFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Management%20PC/start2.bin"
 
 Write-Verbose "Acquiring MANAGEMENT PC start2.bin for Start Menu Configuration..." -Verbose
-Save-WebFile -SourceUrl $HoneypotSMBINFileURL -DestinationDirectory $StartMenudownload
+Save-WebFile -SourceUrl $MPCSMBINFileURL -DestinationDirectory $StartMenudownload
 
 Write-Host "Applying changes to Start Menu on $env:computername..." -ForegroundColor Cyan 
 $StartMenuBINFile = "C:\downloads\StartMenu\Management PC\start2.bin"
