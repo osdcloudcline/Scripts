@@ -448,6 +448,64 @@ $AdvancedSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/he
 $CorporateSMFileURL = ""
 $CorporateSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Corporate/CorporateSM.ps1"
 
+################################################
+## Windows 11 Start Menu Configurations - Honeypot
+################################################
+
+$HoneypotSMFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Honeypot/start2.bin"
+$HoneypotSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Honeypot/HoneypotSM.ps1"
+
+################################################
+## Windows 11 Start Menu Configurations - IT Tech
+################################################
+
+$ITSMFileURL = ""
+$ITSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/IT%20Tech/ITTechSM.ps1"
+
+#######################################################
+## Windows 11 Start Menu Configurations - Management PC
+#######################################################
+
+$MPCSMFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Management%20PC/start2.bin"
+$MPCSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Management%20PC/ManagementPCSM.ps1"
+
+################################################
+## Windows 11 Start Menu Configurations - Standard
+################################################
+
+$StandardSMFileURL = ""
+$StandardSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Standard/StandardSM.ps1"
+
+################################################
+## Windows 11 Start Menu Configurations - VDI Client OS
+################################################
+
+$ClientVDISMFileURL = ""
+$ClientVDISMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/VDI/ClientOS-VDISM.ps1"
+
+################################################
+## Windows Server Start Menu Configurations 
+################################################
+
+$WinServerSMFileURL = ""
+$WinServerSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Windows%20Server/ServerSM.ps1"
+
+################################################
+## Custom Start Menu Configurations 
+################################################
+
+$BTCDesktopSMFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Bryan-Desktop/start2.bin"
+$BTCDesktopSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Bryan-Desktop/BryanDesktopSM.ps1"
+
+$BTCLaptopSMFileURL = ""
+$BTCLaptopSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Bryan-Laptop/BryanLaptopSM.ps1"
+
+$JTDellOptiplexSMFileURL = ""
+$JTDellOptiplexSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Jenn%20Work%202nd%20Desktop/JTDellOptiplex.ps1"
+
+$JBDellLaptopSMFileURL = ""
+$JBDellLaptopSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Jess%20Work%20Laptop/JBDell.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
