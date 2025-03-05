@@ -9,8 +9,10 @@ Write-Host "The Honeypot Start Menu layout will now be downloaded from $SMSource
 
 $StartMenudownload = "C:\downloads\StartMenu\Honeypot"
 
+$HoneypotSMBINFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Honeypot/start2.bin"
+
 Write-Verbose "Acquiring HONEYPOT start2.bin for Start Menu Configuration..." -Verbose
-Save-WebFile -SourceUrl -DestinationDirectory $StartMenudownload
+Save-WebFile -SourceUrl $HoneypotSMBINFileURL -DestinationDirectory $StartMenudownload
 
 Write-Host "Applying changes to Start Menu on $env:computername..." -ForegroundColor Cyan 
 $StartMenuBINFile = "C:\downloads\StartMenu\Honeypot\start2.bin"
