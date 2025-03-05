@@ -1,9 +1,8 @@
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+
 Import-Module -Name OSD -Force
 
 
-
-$SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\VDI"
+$SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Client OS\VDI"
 
 Write-Host "This computer has been installed with the VDI Remote Desktop Configuration of software" -ForgroundColor Green
 Write-Host
