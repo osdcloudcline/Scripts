@@ -6,7 +6,7 @@ Import-Module -Name OSD -Force
 
 
 $SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Custom\JT Dell Optiplex"
-$JTDellOptiplexSMFileURL = "https://github.com/osdcloudcline/Scripts/raw/main/Start%20Menu%20Configurations/Custom/Bryan-Desktop/start2.bin"
+$JTDellOptiplexSMFileURL = ""
 
 Write-Host
 Write-Host "A customized Start Menu for this PC will now be downloaded from $SMSource to $env:userprofile and configured on $env:computername..." -ForegroundColor Cyan
