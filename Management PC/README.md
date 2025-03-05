@@ -1,2 +1,0 @@
-- scripts to configure Management PCs, physical or VM
-- scripts to build and configure OSDCloud ISO for specific LOB computers (EG Dell XPS etc)
