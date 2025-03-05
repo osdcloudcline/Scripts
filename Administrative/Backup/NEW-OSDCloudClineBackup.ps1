@@ -434,6 +434,20 @@ $ServerRegistryScriptURL = "https://github.com/osdcloudcline/Scripts/raw/refs/he
 
 $REGModsREADMEURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Registry%20Modifications/README.md"
 
+################################################
+## Windows 11 Start Menu Configurations - Advanced
+################################################
+
+$AdvancedSMFileURL = ""
+$AdvancedSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Advanced/AdvancedSM.ps1"
+
+################################################
+## Windows 11 Start Menu Configurations - Corporate
+################################################
+
+$CorporateSMFileURL = ""
+$CorporateSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Corporate/CorporateSM.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
