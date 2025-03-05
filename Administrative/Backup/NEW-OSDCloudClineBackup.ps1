@@ -512,6 +512,13 @@ $JBDellLaptopSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/ref
 
 $SMMainScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/SMConfigMain.ps1"
 
+################################################
+## Scripts Repo -  OSD Main Menu 
+################################################
+
+$MainScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/OSDMain.ps1"
+$MainREADMEFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/README.md"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -943,6 +950,14 @@ Save-WebFile -SourceUrl $ClientVDISMScriptFileURL -DestinationDirectory $W11VDIC
 Save-WebFile -SourceUrl $WinServerSMFileURL -DestinationDirectory $WindowsServerSMFilesDestination
 Save-WebFile -SourceUrl $WinServerSMScriptFileURL -DestinationDirectory $WindowsServerSMFilesDestination
 Save-WebFile -SourceUrl $SMMainScriptFileURL -DestinationDirectory $SMMainFilesDestination
+
+Write-Verbose "Processing: Script Repo - Main Menu and README.md files...." -Verbose
+Write-Host
+
+$MainFilesDestination = "$BackupFolder\Scripts\Main Menu" 
+
+Save-WebFile -SourceUrl $MainScriptFileURL -DestinationDirectory $MainFilesDestination
+Save-WebFile -SourceUrl $MainREADMEFileURL -DestinationDirectory $MainFilesDestination
 
 }
 
