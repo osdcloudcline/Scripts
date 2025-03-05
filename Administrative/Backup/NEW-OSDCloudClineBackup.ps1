@@ -506,6 +506,12 @@ $JTDellOptiplexSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/r
 $JBDellLaptopSMFileURL = ""
 $JBDellLaptopSMScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/Custom/Jess%20Work%20Laptop/JBDell.ps1"
 
+################################################
+## Start Menu Configuration - Main Menu 
+################################################
+
+$SMMainScriptFileURL = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/Start%20Menu%20Configurations/SMConfigMain.ps1"
+
 Write-Host
 [System.IO.DriveInfo]::GetDrives() | Where-Object {$_.DriveType -eq 'Fixed'} | Format-Table @{n='Drive ID';e={($_.Name)}}, @{n='Label';e={($_.VolumeLabel)}}, @{n='Free (GB)';e={[int]($_.AvailableFreeSpace/1GB)}}
 Write-Host
@@ -906,6 +912,37 @@ Write-Host
 $RegistryModsMainREADMEFilesDestination = "$BackupFolder\Scripts\Registry Modifications\README" 
 
 Save-WebFile -SourceUrl $REGModsREADMEURL -DestinationDirectory $RegistryModsMainREADMEFilesDestination
+
+Write-Verbose "Processing: Start Menu Configuration Files...." -Verbose
+Write-Host
+
+$W11AdvancedSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\Advanced" 
+$W11CorporateSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\Corporate" 
+$W11HoneypotSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\Honeypot" 
+$W11ITSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\IT" 
+$W11ManagementPCSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\Management PC" 
+$W11StandardSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\Standard" 
+$W11VDIClientSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows 11\VDI Client" 
+$WindowsServerSMFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Windows Server" 
+$SMMainFilesDestination = "$BackupFolder\Scripts\Start Menu Configurations\Main Menu" 
+
+Save-WebFile -SourceUrl $AdvancedSMFileURL -DestinationDirectory $W11AdvancedSMFilesDestination
+Save-WebFile -SourceUrl $AdvancedSMScriptFileURL -DestinationDirectory $W11AdvancedSMFilesDestination
+Save-WebFile -SourceUrl $CorporateSMFileURL -DestinationDirectory $W11CorporateSMFilesDestination
+Save-WebFile -SourceUrl $CorporateSMScriptFileURL -DestinationDirectory $W11CorporateSMFilesDestination
+Save-WebFile -SourceUrl $HoneypotSMFileURL -DestinationDirectory $W11HoneypotSMFilesDestination
+Save-WebFile -SourceUrl $HoneypotSMScriptFileURL -DestinationDirectory $W11HoneypotSMFilesDestination
+Save-WebFile -SourceUrl $ITSMFileURL -DestinationDirectory $W11ITSMFilesDestination
+Save-WebFile -SourceUrl $ITSMScriptFileURL -DestinationDirectory $W11ITSMFilesDestination
+Save-WebFile -SourceUrl $MPCSMFileURL -DestinationDirectory $W11ManagementPCSMFilesDestination
+Save-WebFile -SourceUrl $MPCSMScriptFileURL -DestinationDirectory $W11ManagementPCSMFilesDestination
+Save-WebFile -SourceUrl $StandardSMFileURL -DestinationDirectory $W11StandardSMFilesDestination
+Save-WebFile -SourceUrl $StandardSMScriptFileURL -DestinationDirectory $W11StandardSMFilesDestination
+Save-WebFile -SourceUrl $ClientVDISMFileURL -DestinationDirectory $W11VDIClientSMFilesDestination
+Save-WebFile -SourceUrl $ClientVDISMScriptFileURL -DestinationDirectory $W11VDIClientSMFilesDestination
+Save-WebFile -SourceUrl $WinServerSMFileURL -DestinationDirectory $WindowsServerSMFilesDestination
+Save-WebFile -SourceUrl $WinServerSMScriptFileURL -DestinationDirectory $WindowsServerSMFilesDestination
+Save-WebFile -SourceUrl $SMMainScriptFileURL -DestinationDirectory $SMMainFilesDestination
 
 }
 
