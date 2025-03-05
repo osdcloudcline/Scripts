@@ -1,4 +1,4 @@
-$SMAdvancedLog = "C:\Logs\OSDCloud\Start Menu\Advanced.log"
+$SMAdvancedLog = "C:\Logs\OSDCloud\Start Menu\$env:computername-Advanced.log"
 
 Start-Transcript -FilePath $SMAdvancedLog
 
