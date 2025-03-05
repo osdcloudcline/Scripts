@@ -1,3 +1,6 @@
+$SMBTCDesktopLog = "C:\Logs\OSDCloud\Start Menu\$env:computername-BTCDesktop.log"
+
+Start-Transcript -FilePath $SMBTCDesktopLog
 
 Import-Module -Name OSD -Force
 
@@ -20,4 +23,4 @@ $SMDestination = "C:\Users\$env:username\AppData\Local\Packages\Microsoft.Window
 Write-Verbose "Copying Start Menu file to $SMDestination...." -Verbose
 Copy-Item -Path $StartMenuBINFile -Destination $SMDestination -Force 
 
-
+Stop-Transcript
