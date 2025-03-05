@@ -1,6 +1,8 @@
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
-Import-Module -Name OSD -Force
+$SMAdvancedLog = "C:\Logs\OSDCloud\Start Menu\Advanced.log"
 
+Start-Transcript -FilePath $SMAdvancedLog
+
+Import-Module -Name OSD -Force
 
 $SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Advanced"
 
@@ -19,3 +21,4 @@ $SMDestination = "C:\Users\$env:username\AppData\Local\Packages\Microsoft.Window
 Write-Verbose "Copying Start Menu file to $SMDestination...." -Verbose
 Copy-Item -Path $StartMenuBINFile -Destination $SMDestination -Force 
 
+Stop-Transcript
