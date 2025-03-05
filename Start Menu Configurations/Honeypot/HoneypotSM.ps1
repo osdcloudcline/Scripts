@@ -1,4 +1,7 @@
-Install-Module -Name OSD -Force -AllowClobber -SkipPublisherCheck
+$SMHoneypotLog = "C:\Logs\OSDCloud\Start Menu\$env:computername-Honeypot.log"
+
+Start-Transcript -FilePath $SMHoneypotLog
+
 Import-Module -Name OSD -Force
 
 $SMSource = "OSDCloud Cline\Scripts\Start Menu Configurations\Honeypot"
@@ -19,3 +22,5 @@ $StartMenuBINFile = "C:\downloads\StartMenu\Honeypot\start2.bin"
 $SMDestination = "C:\Users\$env:username\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState"
 Write-Verbose "Copying Start Menu file to $SMDestination...." -Verbose
 Copy-Item -Path $StartMenuBINFile -Destination $SMDestination -Force 
+
+Stop-Transcript
