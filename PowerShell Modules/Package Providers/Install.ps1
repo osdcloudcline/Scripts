@@ -12,16 +12,24 @@ $PMGroup = "Operating System Package Providers"
 ## PS Package Providers   ##
 #############################
 
+$PSPackageModule = "Package Management"
 $PSProvider1 = "PowerShellGet (Oneget)"
 $PSProvider2 = "NuGet"
 $PSProvider3 = "WinGet"
 $PSProvider4 = "Chocolatey"
 $PSProvider5 = "Programs"
 
+
+Write-Verbose "Installing: $PSPackageModule..." -Verbose
+Install-Module -Name PackageManagement -Force -Source PSGallery
+Start-Sleep -Seconds 5
+Write-Host
+
 Write-Verbose "Installing: $PSProvider1..." -Verbose
 Install-PackageProvider -Name PowerShellGet -RequiredVersion 2.2.5.0 -Force -Source PSGallery
 Start-Sleep -Seconds 5
 Write-Host
+
 Write-Verbose "Importing: $PSProvider1..." -Verbose
 Import-PackageProvider -Name PowerShellGet -Force 
 Start-Sleep -Seconds 5
