@@ -41,3 +41,19 @@ Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublish
 Write-Host
 Write-Verbose "Installing: $OSDModule2..." -Verbose 
 Install-Module -Name OSDBuilder -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+
+Write-Verbose "Installing: $OSDModule3..." -Verbose
+Install-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule4..." -Verbose
+Install-Module -Name OSDCloudCLI -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule5..." -Verbose
+Install-Module -Name OSDCloudGUI -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule6..." -Verbose
+Install-Module -Name OSDCloudAzure -Force -AllowClobber -SkipPublisherCheck
+
