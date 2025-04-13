@@ -16,11 +16,7 @@ $OSDModule14 = "PS Windows Update"
 $MSGraphModule1 = "Microsoft Graph"
 
 $CloudModule1 = "Azure"
-$CloudModule2 = "Azure AD"
-$CloudModule3 = "Azure Accounts"
-$CloudModule4 = "Azure Storage"
-$CloudModule5 = "Azure Resources"
-$CloudModule6 = "Azure Key Vault"
+
 
 Write-Host
 Write-Host
@@ -92,30 +88,4 @@ Install-Module -Name PSWindowsUpdate -Force -AllowClobber -SkipPublisherCheck
 Write-Verbose "Installing: $CloudModule1..." -Verbose	
 Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
 
-Write-Host
-Write-Verbose "Installing: $MSGraphModule1..." -Verbose
-Install-Module -Name Microsoft.Graph -Force -AllowClobber -SkipPublisherCheck
 
-Write-Host
-Write-Verbose "Installing: $CloudModule1..." -Verbose	
-Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-
-Write-Host
-Write-Verbose "Installing: $CloudModule2..." -Verbose			
-Install-Module -Name AzureAD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
-
-Write-Host
-Write-Verbose "Installing: $CloudModule3..." -Verbose	
-Install-Module -Name Az.Accounts -Force -AllowClobber -SkipPublisherCheck
-
-Write-Host
-Write-Verbose "Installing: $CloudModule4..." -Verbose
-Install-Module -Name Az.Storage -Force -AllowClobber -SkipPublisherCheck
-
-Write-Host
-Write-Verbose "Installing: $CloudModule5..." -Verbose
-Install-Module -Name Az.Resources -Force -AllowClobber -SkipPublisherCheck
-
-Write-Host
-Write-Verbose "Installing: $CloudModule6..." -Verbose
-Install-Module -Name Az.KeyVault -Force -AllowClobber -SkipPublisherCheck
