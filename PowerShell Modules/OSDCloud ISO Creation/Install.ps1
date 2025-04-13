@@ -14,3 +14,11 @@ $OSDModule13 = "OSD Progress"
 $OSDModule14 = "PS Windows Update"
 
 $MSGraphModule1 = "Microsoft Graph"
+
+$CloudModule1 = "Azure"
+$CloudModule2 = "Azure AD"
+$CloudModule3 = "Azure Accounts"
+$CloudModule4 = "Azure Storage"
+$CloudModule5 = "Azure Resources"
+$CloudModule6 = "Azure Key Vault"
+
