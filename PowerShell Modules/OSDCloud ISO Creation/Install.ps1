@@ -38,3 +38,6 @@ Write-Host
 Write-Verbose "Installing: $OSDModule1..." -Verbose
 Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
 
+Write-Host
+Write-Verbose "Installing: $OSDModule2..." -Verbose 
+Install-Module -Name OSDBuilder -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
