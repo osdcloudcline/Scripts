@@ -16,11 +16,7 @@ $OSDModule14 = "PS Windows Update"
 $MSGraphModule1 = "Microsoft Graph"
 
 $CloudModule1 = "Azure"
-$CloudModule2 = "Azure AD"
-$CloudModule3 = "Azure Accounts"
-$CloudModule4 = "Azure Storage"
-$CloudModule5 = "Azure Resources"
-$CloudModule6 = "Azure Key Vault"
+
 
 Write-Host
 Write-Host
@@ -83,9 +79,6 @@ Write-Host
 Write-Verbose "Importing: $OSDModule14..." -Verbose
 Import-Module -Name PSWindowsUpdate -Force
 
-Write-Verbose "Importing: $CloudModule1..." -Verbose	
-Import-Module -Name Azure -Repository PSGallery -Force
-
 Write-Host
 Write-Verbose "Importing: $MSGraphModule1..." -Verbose
 Import-Module -Name Microsoft.Graph -Force
@@ -94,22 +87,3 @@ Write-Host
 Write-Verbose "Importing: $CloudModule1..." -Verbose	
 Import-Module -Name Azure -Repository PSGallery -Force
 
-Write-Host
-Write-Verbose "Importing: $CloudModule2..." -Verbose			
-Import-Module -Name AzureAD -Repository PSGallery -Force
-
-Write-Host
-Write-Verbose "Importing: $CloudModule3..." -Verbose	
-Import-Module -Name Az.Accounts -Force
-
-Write-Host
-Write-Verbose "Importing: $CloudModule4..." -Verbose
-Import-Module -Name Az.Storage -Force
-
-Write-Host
-Write-Verbose "Importing: $CloudModule5..." -Verbose
-Import-Module -Name Az.Resources -Force
-
-Write-Host
-Write-Verbose "Importing: $CloudModule6..." -Verbose
-Import-Module -Name Az.KeyVault -Force
