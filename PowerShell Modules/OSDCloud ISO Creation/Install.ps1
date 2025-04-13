@@ -1,0 +1,7 @@
+$OSDModule1 = "OSD"
+$OSDModule2 = "OSD Builder"
+$OSDModule3 = "OSD SUS"
+$OSDModule4 = "OSD CloudCLI"
+$OSDModule5 = "OSD CloudGUI"
+$OSDModule6 = "OSD CloudAzure"
+$OSDModule7 = "OSD Update"
