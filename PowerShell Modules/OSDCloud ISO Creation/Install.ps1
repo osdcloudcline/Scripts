@@ -22,3 +22,14 @@ $CloudModule4 = "Azure Storage"
 $CloudModule5 = "Azure Resources"
 $CloudModule6 = "Azure Key Vault"
 
+Write-Host
+Write-Host
+Write-Host "Installing Chocolatey Package Manager..." -ForegroundColor Cyan 
+Write-Host
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Write-Host
+Write-Host
+Write-Host
+Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
+Write-Host
+Write-Host
