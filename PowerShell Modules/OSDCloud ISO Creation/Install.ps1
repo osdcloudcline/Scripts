@@ -36,7 +36,7 @@ Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublish
 
 Write-Host
 Write-Verbose "Installing: $OSDModule2..." -Verbose 
-Install-Module -Name OSDBuilder -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Install-Module -Name OSDBuilder  -Force -AllowClobber -SkipPublisherCheck
 
 Write-Verbose "Installing: $OSDModule3..." -Verbose
 Install-Module -Name OSDSUS -Force -AllowClobber -SkipPublisherCheck
@@ -86,6 +86,6 @@ Write-Verbose "Installing: $OSDModule14..." -Verbose
 Install-Module -Name PSWindowsUpdate -Force -AllowClobber -SkipPublisherCheck
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose	
-Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+Install-Module -Name Azure -Force -AllowClobber -SkipPublisherCheck
 
 
