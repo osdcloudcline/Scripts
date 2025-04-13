@@ -30,11 +30,11 @@ Write-Host
 
 Write-Host
 Write-Verbose "Importing: $OSDModule1..." -Verbose
-Import-Module -Name OSD -Repository PSGallery -Force
+Import-Module -Name OSD  -Force
 
 Write-Host
 Write-Verbose "Importing: $OSDModule2..." -Verbose 
-Import-Module -Name OSDBuilder -Repository PSGallery -Force
+Import-Module -Name OSDBuilder  -Force
 
 Write-Verbose "Importing: $OSDModule3..." -Verbose
 Import-Module -Name OSDSUS -Force
