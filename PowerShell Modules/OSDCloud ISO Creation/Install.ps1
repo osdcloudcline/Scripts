@@ -57,3 +57,38 @@ Write-Host
 Write-Verbose "Installing: $OSDModule6..." -Verbose
 Install-Module -Name OSDCloudAzure -Force -AllowClobber -SkipPublisherCheck
 
+Write-Host
+Write-Verbose "Installing: $OSDModule7..." -Verbose
+Install-Module -Name OSDUpdate -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule8..." -Verbose
+Install-Module -Name AutopilotOOBE -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule9..." -Verbose
+Install-Module -Name OSDDrivers -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule10..." -Verbose
+Install-Module -Name OSDeploy -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule11..." -Verbose
+Install-Module -Name OSDSoftware -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule12..." -Verbose
+Install-Module -Name OSDCatalog -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule13..." -Verbose
+Install-Module -Name OSDProgress -Force -AllowClobber -SkipPublisherCheck
+
+Write-Host
+Write-Verbose "Installing: $OSDModule14..." -Verbose
+Install-Module -Name PSWindowsUpdate -Force -AllowClobber -SkipPublisherCheck
+
+Write-Verbose "Installing: $CloudModule1..." -Verbose	
+Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+
