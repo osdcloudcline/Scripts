@@ -33,3 +33,8 @@ Write-Host
 Write-Host "Accessing www.powershellgallery.com package database to install Powershell Modules..." -ForegroundColor Green
 Write-Host
 Write-Host
+
+Write-Host
+Write-Verbose "Installing: $OSDModule1..." -Verbose
+Install-Module -Name OSD -Repository PSGallery -Force -AllowClobber -SkipPublisherCheck
+
