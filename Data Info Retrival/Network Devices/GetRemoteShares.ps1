@@ -44,7 +44,7 @@ Net use z: /delete
 cls
 Get-RemoteShares
 }
-ElseIf(($ServerNameQuestion -eq "QNAP") -or ($ServerNameQuestion -eq "qnap") -or ($ServerNameQuestion -eq "Synology") -or ($ServerNameQuestion -eq "synology") -or ($ServerNameQuestion -eq "TrueNAS")){
+elseif(($ServerNameQuestion -eq "QNAP") -or ($ServerNameQuestion -eq "qnap") -or ($ServerNameQuestion -eq "Synology") -or ($ServerNameQuestion -eq "synology") -or ($ServerNameQuestion -eq "TrueNAS")){
 $PCName = Read-Host 'Enter PC Name on the network'
 $IPAddress = (Resolve-DnsName -Name $PCName).IPAddress
 Write-Verbose: The IP Address of $PCName is $IPAddress
