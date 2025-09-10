@@ -18,10 +18,40 @@ $InventoryDir = "C:\Inventory\NAS"
 Write-Verbose "Creating $InventoryDir, which will have the inventory TXT, CSV and XLS files saved in" -Verbose
 New-Item -Path $InventoryDir -ItemType Directory -Force
 
+$ServerNameQuestion = Read-Host -Prompt 'Is your NAS a QNAP, Synology, TrueNAS or Unraid server?' 
+If(($ServerNameQuestion -eq "Unraid") -or ($ServerNameQuestion -eq "unraid"){
 $PCName = Read-Host 'Enter PC Name on the network'
 net view \\$PCName
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
 net use z: \\$PCName\$share
+cd z:
+
+$sharename = $share
+
+$files = Get-ChildItem -Path 'z:' -Recurse | Where-Object {$_.PSIsContainer -eq $false -and $_.Extension -ne '.srt'}
+
+Write-Host "`n1Total : "$files.Count "mkv `n1"
+ForEach($n1 in $files){
+
+Write-Verbose "Inventorying Remote Network Share - $PCName\$share..." -Verbose
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.txt"
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.csv"
+$n1.Name | Out-File -Append "$InventoryDir\$sharename.xls"
+}
+pause
+cd c:
+Net use z: /delete
+cls
+Get-RemoteShares
+}
+
+ElseIf(($ServerNameQuestion -eq "QNAP") -or ($ServerNameQuestion -eq "qnap") -or ($ServerNameQuestion -eq "Synology") -or ($ServerNameQuestion -eq "synology") -or ($ServerNameQuestion -eq "TrueNAS")){
+$PCName = Read-Host 'Enter PC Name on the network'
+$IPAddress = (Resolve-DnsName -Name $PCName).IPAddress
+Write-Verbose: The IP Address of $PCName is $IPAddress
+net view \\$IPAddress
+$share = Read-Host -Prompt 'Enter network share to map to a network drive'
+net use z: \\$IPAddress\$share
 cd z:
 
 $sharename = $share
