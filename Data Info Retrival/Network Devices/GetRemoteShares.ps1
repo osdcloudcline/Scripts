@@ -47,7 +47,7 @@ Get-RemoteShares
 elseif(($ServerNameQuestion -eq "QNAP") -or ($ServerNameQuestion -eq "qnap") -or ($ServerNameQuestion -eq "Synology") -or ($ServerNameQuestion -eq "synology") -or ($ServerNameQuestion -eq "TrueNAS")){
 $PCName = Read-Host 'Enter PC Name on the network'
 $IPAddress = (Resolve-DnsName -Name $PCName).IPAddress
-Write-Verbose: The IP Address of $PCName is $IPAddress
+Write-Verbose  The IP Address of $PCName is $IPAddress -Verbose
 net view \\$IPAddress
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
 net use z: \\$IPAddress\$share
