@@ -19,7 +19,7 @@ Write-Verbose "Creating $InventoryDir, which will have the inventory TXT, CSV an
 New-Item -Path $InventoryDir -ItemType Directory -Force
 
 $ServerNameQuestion = Read-Host -Prompt 'Is your NAS a QNAP, Synology, TrueNAS or Unraid server?' 
-If(($ServerNameQuestion -eq "Unraid") -or ($ServerNameQuestion -eq "unraid"){
+If(($ServerNameQuestion -eq "Unraid") -or ($ServerNameQuestion -eq "unraid")){
 $PCName = Read-Host 'Enter PC Name on the network'
 net view \\$PCName
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
