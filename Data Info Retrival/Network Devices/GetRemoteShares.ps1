@@ -21,9 +21,11 @@ New-Item -Path $InventoryDir -ItemType Directory -Force
 $ServerNameQuestion = Read-Host -Prompt 'Is your NAS a QNAP, Synology, TrueNAS or Unraid server?' 
 If(($ServerNameQuestion -eq "Unraid") -or ($ServerNameQuestion -eq "unraid")){
 $PCName = Read-Host 'Enter PC Name on the network'
-net view \\$PCName
+$IPAddress = (Resolve-DnsName -Name $PCName).IPAddress
+Write-Host  "The IP Address of $PCName is $IPAddress" -ForegroundColor Cyan
+net view \\$IPAddress
 $share = Read-Host -Prompt 'Enter network share to map to a network drive'
-net use z: \\$PCName\$share
+net use z: \\$IPAddress\$share
 cd z:
 
 $sharename = $share
