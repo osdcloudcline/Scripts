@@ -1,4 +1,4 @@
-$SystemFileInventoryLog = "C:\Logs\Audit\DLL\SystemFiles.log""
+$SystemFileInventoryLog = "C:\Logs\Audit\DLL\SystemFiles.log"
 Start-Transcript -Path $SystemFileInventoryLog
 $prog1 = "C:\Program Files"
 $prog2 = "C:\Program Files (x86)"
