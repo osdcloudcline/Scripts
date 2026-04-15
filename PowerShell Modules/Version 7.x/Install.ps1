@@ -1,49 +1,23 @@
-$PSModsLogs = "C:\OSDCloud\DeploymentLogs\PSModules\$env:computername-PS7Modules.log"
-Start-Transcript -Path $PSModsLogs
-Get-Date 
-
-############################
-### PS Module Group Names ##
-############################
-
-$OSDGroup1 = "OSD: Cloud"
-
-#################################
-## PS Modules to be installed ###
-#################################
-
+# 1. Define variables first
 $CloudModule1 = "Windows 365 Cloud PC"
-
-# Cloud PowerShell Modules
-
-$OSapp = "Microsoft Windows Powershell"
-$OSappver = "Version: 7.4.3.0"	
-
-Write-Verbose "Installing $OSapp, $OSappver..." -Verbose
-winget install --id Microsoft.PowerShell --exact --accept-source-agreements --accept-source-agreements --force
-
-$PS7 = "pwsh.exe"
-
-Write-Host "Installing and Importing: $OSDGroup1 Modules..." -ForegroundColor Cyan
-Write-Host
-Write-Host
-
+$ModuleName = "PSCloudPC"
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose
+
+# 2. Ensure PSResourceGet is present
 Install-Module -Name Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
-Start-Sleep -Seconds 3
 Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
-Start-Process -FilePath $PS7| Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense -Reinstall -PassThru
-Start-Sleep -Seconds 5
-Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force -PassThru
-Start-Sleep -Seconds 4
-Write-Host
-$CloudModule1 = "Windows 365 Cloud PC"
+
+# 3. Install the Cloud PC module directly
+# Using -TrustRepository and -AcceptLicense for silent automation
+Install-PSResource -Name $ModuleName -Repository PSGallery -TrustRepository -AcceptLicense -Reinstall
+
+# 4. Verification
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
-Get-Module -ListAvailable | Where-Object {$_.Name -like '*PSCloud*'}
-Get-Process -name pwsh | Stop-Process -Force -WarningAction Ignore 
+$installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
 
-pause
-Write-Host
-
-Stop-Transcript
+if ($installedModule) {
+    Write-Host "Successfully installed $ModuleName" -ForegroundColor Green
+} else {
+    Write-Warning "Module $ModuleName was not found after installation."
+}
