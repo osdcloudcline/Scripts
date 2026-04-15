@@ -13,14 +13,15 @@ Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
 Install-PSResource -Name $ModuleName -Repository PSGallery -TrustRepository -AcceptLicense -Reinstall
 
 # 4. Verification
-
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
 $PS7 = "C:\Program Files\PowerShell\7\pwsh.exe" 
 $installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
-Start-Process -FilePath $PS7 -PassThru $installedModule
 
 if ($installedModule) {
     Write-Host "Successfully installed $ModuleName" -ForegroundColor Green
+    
+    # Launch a new PS7 window and Import the module inside it
+    Start-Process -FilePath $PS7 -ArgumentList "-NoExit", "-Command", "Import-Module $ModuleName; Write-Host '$ModuleName Loaded' -Fore Cyan"
 } else {
     Write-Warning "Module $ModuleName was not found after installation."
 }
