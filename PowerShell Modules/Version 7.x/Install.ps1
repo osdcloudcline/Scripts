@@ -3,9 +3,9 @@ $CloudModule1 = "Windows 365 Cloud PC"
 $ModuleName = "PSCloudPC"
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose
-
+$PS7 = "C:\Program Files\PowerShell\7\pwsh.exe" 
 # 2. Ensure PSResourceGet is present
-Install-Module -Name Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
+Start-Process -FilePath $PS7 | | Install-Module -Name Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
 Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
 
 # 3. Install the Cloud PC module directly
@@ -13,9 +13,9 @@ Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
 Install-PSResource -Name $ModuleName -Repository PSGallery -TrustRepository -AcceptLicense -Reinstall
 
 # 4. Verification
-$PS7 = "C:\Program Files\PowerShell\7\pwsh.exe"
+
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
-Start-Process -FilePath $PS7 | $installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
+ $installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
 
 if ($installedModule) {
     Write-Host "Successfully installed $ModuleName" -ForegroundColor Green
