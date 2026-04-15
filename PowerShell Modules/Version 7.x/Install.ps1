@@ -14,9 +14,8 @@ Install-PSResource -Name $ModuleName -Repository PSGallery -TrustRepository -Acc
 
 # 4. Verification
 $PS7 = "C:\Program Files\PowerShell\7\pwsh.exe"
-Start-Process -FilePath $PS7 |
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
-$installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
+Start-Process -FilePath $PS7 | $installedModule = Get-Module -ListAvailable | Where-Object {$_.Name -eq $ModuleName}
 
 if ($installedModule) {
     Write-Host "Successfully installed $ModuleName" -ForegroundColor Green
