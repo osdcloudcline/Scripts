@@ -11,9 +11,7 @@ Write-Verbose "Installing: $CloudModule1..." -Verbose
 
 
 Install-Module Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
-Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
-Start-Sleep -Seconds 5
-Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
+Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense | Import-Module -Name PSCloudPC -Force
 
 # 4. Verification
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
