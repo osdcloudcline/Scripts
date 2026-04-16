@@ -15,7 +15,7 @@ Import-Module -Name Microsoft.PowerShell.PSResourceGet -Force
 
 # 3. Install the Cloud PC module directly
 # Using -TrustRepository and -AcceptLicense for silent automation
-Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Version 1.0.17
+Start-Process -FilePath $PS7 -PassThru | Install-PSResource -Name PSCloudPC -Version 1.0.17
 
 # 4. Verification
 Write-Verbose "Verifying Module: $CloudModule1..." -Verbose
