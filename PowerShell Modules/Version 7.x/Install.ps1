@@ -4,7 +4,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
     # Re-launch this script using pwsh.exe
     $script = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%207.x/Install.ps1"
     
-    Start-Process -FilePath "pwsh.exe" -ArgumentList "-File `"$($script.Content)`"" 
+    Start-Process -FilePath "pwsh.exe" -ArgumentList " $script 
    pause
 }
 
@@ -23,7 +23,7 @@ Import-Module Microsoft.PowerShell.PSResourceGet
 # Reinstall the PSCloudPC module using the new package manager
 # The -Reinstall parameter ensures a fresh copy even if it already exists
 Install-PSResource -Name $ModuleName -Reinstall
-.\pwsh.exe
+
 # Verify installation
 Get-Module -ListAvailable -Name $ModuleName
 
