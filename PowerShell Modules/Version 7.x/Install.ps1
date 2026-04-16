@@ -6,10 +6,9 @@ $ModuleName = "PSCloudPC"
 $PS7 = "pwsh.exe"
 Start-Process -FilePath $PS7
 
-Write-Host  "Installing: $CloudModule1..." -ForegroundColor Cyan
-Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -Reinstall
-Start-Sleep -Seconds 3
-Write-Host
-
-Start-Process -FilePath $PS7 -PassThru | Get-Command -Module PSCloudPC | Out-Host
+Write-Verbose "Installing: $CloudModule1..." -Verbose
+Install-Module Microsoft.PowerShell.PSResourceGet -AllowClobber -SkipPublisherCheck -Force
+Start-Process -FilePath $PS7 | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
+Start-Sleep -Seconds 5
+Start-Process -FilePath $PS7 | Import-Module -Name PSCloudPC -Force
+Get-Module -ListAvailable | Where-Object {$_.Name -eq "PSCloudPC"}
