@@ -2,7 +2,9 @@
 if ($PSVersionTable.PSVersion.Major -lt 6) {
     Write-Host "Switching to pwsh..."
     # Re-launch this script using pwsh.exe
-    Start-Process -FilePath "pwsh.exe" -ArgumentList "-File `"$($MyInvocation.MyCommand.Path)`"" -Wait
+    $script = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%207.x/Install.ps1"
+    
+    Start-Process -FilePath "pwsh.exe" -ArgumentList "-File `"$($script.Content)`"" -Wait
     Exit
 }
 
