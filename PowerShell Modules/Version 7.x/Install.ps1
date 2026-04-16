@@ -12,4 +12,4 @@ Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -Reins
 Start-Sleep -Seconds 3
 Write-Host
 
-Start-Process -FilePath $PS7 -PassThru | Get-Command -Module PSCloudPC
+Start-Process -FilePath $PS7 -PassThru | Get-Command -Module PSCloudPC | Out-Host
