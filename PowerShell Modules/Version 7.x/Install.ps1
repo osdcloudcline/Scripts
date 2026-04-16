@@ -12,3 +12,5 @@ Start-Sleep -Seconds 3
 Import-Module -Name PSCloudPC -Force
 Start-Sleep -Seconds 4
 Write-Host
+
+Get-Command -Module PSCloudPC
