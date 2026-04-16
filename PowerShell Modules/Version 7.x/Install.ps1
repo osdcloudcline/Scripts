@@ -13,7 +13,7 @@ Import-Module Microsoft.PowerShell.PSResourceGet
 # Reinstall the PSCloudPC module using the new package manager
 # The -Reinstall parameter ensures a fresh copy even if it already exists
 Install-PSResource -Name $ModuleName -Reinstall
-
+.\pwsh.exe
 # Verify installation
 Get-Module -ListAvailable -Name $ModuleName
 
