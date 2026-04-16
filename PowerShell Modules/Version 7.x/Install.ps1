@@ -9,6 +9,6 @@ Write-Verbose "Installing: $CloudModule1..." -Verbose
 Install-Module -Name Microsoft.PowerShell.PSResourceGet -Force
 Import-Module Microsoft.PowerShell.PSResourceGet
 Get-Module Microsoft.PowerShell.PSResourceGet -ListAvailable
-Install-PSResource -Name PSCloudPC -PassThru -Verbose
+Install-PSResource -Name PSCloudPC -PassThru -TrustRepository -Verbose
 Get-Module -ListAvailable | Where-Object {$_.Name -eq "PSCloudPC"}
-pwsh -PassThru | Connect-Windows365
+Connect-Windows365
