@@ -1,3 +1,11 @@
+# Check if running in Windows PowerShell (v5.1 or older)
+if ($PSVersionTable.PSVersion.Major -lt 6) {
+    Write-Host "Switching to pwsh..."
+    # Re-launch this script using pwsh.exe
+    Start-Process -FilePath "pwsh.exe" -ArgumentList "-File `"$($MyInvocation.MyCommand.Path)`"" -Wait
+    Exit
+}
+
 # Define variables
 $ModuleName = "PSCloudPC"
 
