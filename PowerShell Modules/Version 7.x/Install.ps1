@@ -1,13 +1,3 @@
-# Check if running in Windows PowerShell (v5.1 or older)
-if ($PSVersionTable.PSVersion.Major -lt 6) {
-    Write-Host "Switching to pwsh..."
-    # Re-launch this script using pwsh.exe
-    $script = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%207.x/Install.ps1"
-    
-    Start-Process -FilePath "pwsh.exe" -ArgumentList $script 
-   pause
-}
-
 # Define variables
 $ModuleName = "PSCloudPC"
 
