@@ -7,7 +7,8 @@ $PS7 = "pwsh.exe"
 Start-Process -FilePath $PS7
 
 Write-Host  "Installing: $CloudModule1..." -ForegroundColor Cyan
-Install-PSResource -Name PSCloudPC 
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+Install-PSResource -Name PSCloudPC -Reinstall-
 Start-Sleep -Seconds 3
 Write-Host
 
