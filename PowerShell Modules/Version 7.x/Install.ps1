@@ -1,15 +1,19 @@
-# 1. Define variables first
-$CloudModule1 = "Windows 365 Cloud PC"
+# Define variables
 $ModuleName = "PSCloudPC"
 
+# Ensure PSResourceGet is available and trust the gallery
 Set-PSResourceRepository -Name PSGallery -Trusted
 
+Write-Verbose "Installing: $ModuleName..." -Verbose
 
-Write-Verbose "Installing: $CloudModule1..." -Verbose
-Install-Module -Name Microsoft.PowerShell.PSResourceGet -Force
+# Install the PSResourceGet package manager itself if needed
+Install-Module -Name Microsoft.PowerShell.PSResourceGet -Force -AllowClobber
 Import-Module Microsoft.PowerShell.PSResourceGet
-Get-Module Microsoft.PowerShell.PSResourceGet -ListAvailable
-pwsh
-Install-PSResource -Name PSCloudPC -PassThru -Reinstall
-Get-Module -ListAvailable | Where-Object {$_.Name -eq "PSCloudPC"}
+
+# Reinstall the PSCloudPC module using the new package manager
+# The -Reinstall parameter ensures a fresh copy even if it already exists
+Install-PSResource -Name $ModuleName -Reinstall
+
+# Verify installation
+Get-Module -ListAvailable -Name $ModuleName
 
