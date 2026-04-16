@@ -3,12 +3,13 @@ $CloudModule1 = "Windows 365 Cloud PC"
 $ModuleName = "PSCloudPC"
 
 
-$PS7 = "pwsh.exe"
-Start-Process -FilePath $PS7
+
 
 Write-Verbose "Installing: $CloudModule1..." -Verbose
-pwsh | Install-PSResource -Name Microsoft.PowerShell.PSResourceGet Repository PSGallery -TrustRepository -AcceptLicense
-pwsh | Install-PSResource -Name PSCloudPC -Repository PSGallery -TrustRepository -AcceptLicense
-Start-Sleep -Seconds 5
-pwsh | Import-Module -Name PSCloudPC -Force
+Install-Module -Name Microsoft.PowerShell.PSResourceGet -Force
+Import-Module Microsoft.PowerShell.PSResourceGet
+Get-Module Microsoft.PowerShell.PSResourceGet -ListAvailable
+Install-Module -Name PSCloudPC -Verbose
+Import-Module PSCloudPC -Verbose -Force
 Get-Module -ListAvailable | Where-Object {$_.Name -eq "PSCloudPC"}
+pwsh -PassThru | Connect-Windows365
