@@ -5,7 +5,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
     $script = "https://github.com/osdcloudcline/Scripts/raw/refs/heads/main/PowerShell%20Modules/Version%207.x/Install.ps1"
     
     Start-Process -FilePath "pwsh.exe" -ArgumentList "-File `"$($script.Content)`"" 
-   
+   pause
 }
 
 # Define variables
